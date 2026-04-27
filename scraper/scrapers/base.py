@@ -11,6 +11,7 @@ class ScrapedProduct:
     has_online_delivery: bool
     online_url: Optional[str]
     online_price: Optional[float] = None
+    cmr_price: Optional[float] = None
     active_ingredient: Optional[str] = None
     concentration: Optional[str] = None
     form: Optional[str] = None

@@ -60,13 +60,29 @@ class AhumadaScraper(BaseScraper):
                 if not name:
                     continue
 
+                is_cmr = bool(re.search(r'badge_30x40_cmr_falabella', block))
+
                 badge_m = _BADGE_RE.search(block)
-                if not badge_m:
-                    continue
-                price_m = _PRICE_RE.search(badge_m.group(1))
-                if not price_m:
-                    continue
-                price = _parse_clp(price_m.group(1))
+                badge_price = None
+                if badge_m:
+                    price_m = _PRICE_RE.search(badge_m.group(1))
+                    if price_m:
+                        badge_price = _parse_clp(price_m.group(1))
+
+                # Precio normal tachado (solo para tiles CMR)
+                normal_price = None
+                del_m = re.search(r'class="[^"]*precio-normal[^"]*"[\s\S]{0,400}?content="(\d+)"', block)
+                if del_m:
+                    v = int(del_m.group(1))
+                    normal_price = v if v > 100 else None
+
+                if is_cmr:
+                    price = normal_price or badge_price
+                    cmr_price = badge_price if badge_price and price and badge_price < price else None
+                else:
+                    price = badge_price
+                    cmr_price = None
+
                 if not price:
                     continue
 
@@ -76,6 +92,7 @@ class AhumadaScraper(BaseScraper):
                 results.append(ScrapedProduct(
                     name=name,
                     price=price,
+                    cmr_price=cmr_price,
                     has_stock=True,
                     has_online_delivery=True,
                     online_url=url,

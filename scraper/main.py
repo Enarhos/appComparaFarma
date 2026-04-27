@@ -69,6 +69,7 @@ async def scrape_medication(query: str, conn):
                     pharmacy_id=pharmacy_id,
                     price=product.price,
                     online_price=product.online_price,
+                    cmr_price=product.cmr_price,
                     has_stock=product.has_stock,
                     has_online_delivery=product.has_online_delivery,
                     online_url=product.online_url,

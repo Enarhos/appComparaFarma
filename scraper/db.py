@@ -34,19 +34,21 @@ def upsert_medication(conn, name: str, active_ingredient: str = None,
 
 def save_price(conn, medication_id: int, pharmacy_id: int, price: float,
                has_stock: bool = True, has_online_delivery: bool = False,
-               online_url: str = None, online_price: float = None):
+               online_url: str = None, online_price: float = None,
+               cmr_price: float = None):
     with conn.cursor() as cur:
         cur.execute(
-            """INSERT INTO prices (medication_id, pharmacy_id, price, online_price, has_stock, has_online_delivery, online_url, scraped_at)
-               VALUES (%s, %s, %s, %s, %s, %s, %s, NOW())
+            """INSERT INTO prices (medication_id, pharmacy_id, price, online_price, cmr_price, has_stock, has_online_delivery, online_url, scraped_at)
+               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, NOW())
                ON DUPLICATE KEY UPDATE
                  price               = VALUES(price),
                  online_price        = VALUES(online_price),
+                 cmr_price           = VALUES(cmr_price),
                  has_stock           = VALUES(has_stock),
                  has_online_delivery = VALUES(has_online_delivery),
                  online_url          = VALUES(online_url),
                  scraped_at          = NOW()""",
-            (medication_id, pharmacy_id, price, online_price, int(has_stock), int(has_online_delivery), online_url)
+            (medication_id, pharmacy_id, price, online_price, cmr_price, int(has_stock), int(has_online_delivery), online_url)
         )
 
 def get_pharmacy_id(conn, slug: str) -> int:

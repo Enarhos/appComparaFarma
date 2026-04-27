@@ -8,10 +8,10 @@ const PHARMACY_COLORS: Record<string, { bg: string; text: string }> = {
 };
 
 const PHARMACY_PRICES: Record<string, { online: boolean; cmr: boolean }> = {
-  "cruz-verde": { online: true,  cmr: false },
+  "cruz-verde": { online: false, cmr: false },
   salcobrand:   { online: true,  cmr: false },
-  ahumada:      { online: true,  cmr: true  },
-  "dr-simi":    { online: false, cmr: false },
+  ahumada:      { online: false, cmr: true  },
+  "dr-simi":    { online: true,  cmr: false },
 };
 
 interface Price {
