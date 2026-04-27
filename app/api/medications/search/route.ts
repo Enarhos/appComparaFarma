@@ -120,7 +120,10 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ medications: [], source: "db" });
   }
 
-  const searchQuery = cleanQuery(rawQuery) || rawQuery;
+  const searchQuery = cleanQuery(rawQuery);
+  if (!searchQuery) {
+    return NextResponse.json({ medications: [], source: "db" });
+  }
 
   try {
     // 1. Buscar en DB
