@@ -2,7 +2,7 @@ name: Daily Price Scrape
 
 on:
   schedule:
-    - cron: "0 9 * * *"   # 06:00 Chile (UTC-3)
+    - cron: "0 8 * * *"   # 04:00 Chile invierno (UTC-4) / 05:00 verano (UTC-3)
   workflow_dispatch:        # permite correrlo manualmente desde GitHub
 
 jobs:
