@@ -50,6 +50,92 @@ function cleanQuery(raw: string): string {
   return [...new Set(words)].join(" ").trim();
 }
 
+const STOP_WORDS = new Set([
+  "x", "de", "la", "el", "los", "las", "con", "para", "sin", "por",
+  "comp", "comprimido", "comprimidos", "capsula", "capsulas", "tab",
+  "tableta", "tabletas", "sol", "solucion", "jarabe", "suspension",
+  "crema", "gel", "gotas", "ampolla", "inyectable", "recubierto",
+  "liberacion", "prolongada", "inhalador", "aerosol", "polvo",
+  "parche", "supositorio", "colirio", "nasal", "ocular", "rectal",
+  "mg", "ml", "mcg", "g", "ui", "iu", "infantil", "adulto", "forte",
+  "plus", "pediatrico", "nino",
+]);
+
+function matchKey(name: string): string {
+  const raw = name.toLowerCase();
+  // Run dose regex on raw (preserves "2,5 mg" before comma is stripped)
+  const mlHits  = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*ml\b/gi)];
+  const mgHits  = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*mg\b/gi)];
+  const mcgHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:mcg|µg|ug)\b/gi)];
+  // Clean for word extraction
+  const lower = raw.replace(/[^\w\s]/g, " ").replace(/\s+/g, " ").trim();
+  const words = lower.split(" ");
+
+  let first = "";
+  for (const w of words) {
+    if (w.length >= 2 && !STOP_WORDS.has(w) && !/^\d/.test(w)) {
+      first = w;
+      break;
+    }
+  }
+
+  let dose = "";
+  if (mlHits.length) {
+    const max = Math.max(...mlHits.map((m) => parseFloat(m[1].replace(",", "."))));
+    dose = `${max}ml`;
+  } else if (mcgHits.length) {
+    dose = `${parseFloat(mcgHits[0][1].replace(",", "."))}mcg`;
+  } else if (mgHits.length) {
+    dose = `${parseFloat(mgHits[0][1].replace(",", "."))}mg`;
+  }
+
+  return first ? (dose ? `${first}|${dose}` : first) : lower.slice(0, 30);
+}
+
+type MedRow = {
+  id: number;
+  name: unknown;
+  active_ingredient: unknown;
+  concentration: unknown;
+  form: unknown;
+  laboratory: unknown;
+  is_bioequivalent: boolean;
+  prices: { pharmacy_id: number; scraped_at: string; price: number; online_price: number | null; cmr_price: number | null }[];
+};
+
+function mergeDuplicates(meds: MedRow[]): MedRow[] {
+  const groups = new Map<string, MedRow[]>();
+  for (const med of meds) {
+    const key = matchKey(med.name as string);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(med);
+  }
+
+  return [...groups.values()].map((group) => {
+    if (group.length === 1) return group[0];
+
+    // Pick canonical: prefer one with active_ingredient, then shortest name
+    const canonical = group.reduce((best, cur) => {
+      if (!best.active_ingredient && cur.active_ingredient) return cur;
+      if (best.active_ingredient && !cur.active_ingredient) return best;
+      return (cur.name as string).length < (best.name as string).length ? cur : best;
+    });
+
+    // Merge prices: dedup by pharmacy_id, keep most recent scraped_at
+    const byPharmacy = new Map<number, MedRow["prices"][number]>();
+    for (const med of group) {
+      for (const p of med.prices) {
+        const ex = byPharmacy.get(p.pharmacy_id);
+        if (!ex || new Date(p.scraped_at) > new Date(ex.scraped_at)) {
+          byPharmacy.set(p.pharmacy_id, p);
+        }
+      }
+    }
+
+    return { ...canonical, prices: [...byPharmacy.values()] };
+  });
+}
+
 async function queryDB(searchQuery: string) {
   const terms = searchQuery.split(/\s+/).filter((w) => w.length >= 2);
   const firstLike = `%${terms[0]}%`;
@@ -133,7 +219,7 @@ export async function GET(request: NextRequest) {
     if (medications.length === 0) {
       await liveSearch(searchQuery);
       medications = await queryDB(searchQuery);
-      return NextResponse.json({ medications, source: "live", cleanedQuery: searchQuery });
+      return NextResponse.json({ medications: mergeDuplicates(medications as MedRow[]), source: "live", cleanedQuery: searchQuery });
     }
 
     // 3. Hay resultados pero algún precio no tiene URL: refrescar en background
@@ -144,7 +230,7 @@ export async function GET(request: NextRequest) {
       liveSearch(searchQuery).catch(() => {});
     }
 
-    return NextResponse.json({ medications, source: "db", cleanedQuery: searchQuery });
+    return NextResponse.json({ medications: mergeDuplicates(medications as MedRow[]), source: "db", cleanedQuery: searchQuery });
   } catch (error) {
     console.error("Error buscando medicamentos:", error);
     return NextResponse.json({ error: "Error al buscar medicamentos" }, { status: 500 });
