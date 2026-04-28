@@ -63,18 +63,19 @@ export async function searchAhumada(query: string): Promise<ScrapedProduct[]> {
         if (priceM) badgePrice = clp(priceM[1]);
       }
 
-      // Precio normal tachado: <del class="...precio-normal"> con content="XXXX"
-      let normalPrice: number | null = null;
-      const delM = block.match(/class="[^"]*precio-normal[^"]*"[\s\S]{0,400}?content="(\d+)"/);
-      if (delM) normalPrice = parseInt(delM[1], 10) || null;
-
       let price: number | null;
       let cmrPrice: number | null = null;
 
-      if (isCmr) {
-        // Badge muestra el precio CMR; precio presencial es el tachado
-        price = normalPrice ?? badgePrice;
-        cmrPrice = badgePrice && price && badgePrice < price ? badgePrice : null;
+      if (isCmr && badgePrice) {
+        // Todos los content= del tile > 1000 son precios CLP
+        const contentVals = [...block.matchAll(/content="(\d+)"/g)]
+          .map((m) => parseInt(m[1], 10))
+          .filter((v) => v > 1000);
+        // El presencial es el menor content= que supere al precio CMR
+        const saleCandidates = contentVals.filter((v) => v > badgePrice);
+        const salePrice = saleCandidates.length ? Math.min(...saleCandidates) : null;
+        price = salePrice ?? badgePrice;
+        cmrPrice = salePrice && badgePrice < salePrice ? badgePrice : null;
       } else {
         price = badgePrice;
       }

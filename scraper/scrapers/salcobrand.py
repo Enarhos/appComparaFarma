@@ -30,12 +30,17 @@ class SalcobrandScraper(BaseScraper):
                 hits = r.json().get("hits", [])
 
             for hit in hits:
-                # Usar precio con descuento si existe, si no el normal
-                direct = hit.get("direct_discount")
+                # normal_price = precio internet (único disponible vía Algolia)
+                # direct_discount = descuento adicional (si existe y es menor)
                 normal = hit.get("normal_price")
-                price = float(direct) if direct else (float(normal) if normal else None)
+                price = float(normal) if normal else None
                 if not price:
                     continue
+
+                direct = hit.get("direct_discount")
+                direct_num = float(direct) if direct else None
+                # online_price solo si hay un descuento menor al precio base
+                online_price = direct_num if direct_num and direct_num < price else None
 
                 slug = hit.get("slug", "")
                 sku  = hit.get("sku", "")
@@ -45,6 +50,7 @@ class SalcobrandScraper(BaseScraper):
                 results.append(ScrapedProduct(
                     name=hit.get("name", query),
                     price=price,
+                    online_price=online_price,
                     has_stock=bool(hit.get("has_stock", True)),
                     has_online_delivery=bool(hit.get("package_delivery", True)),
                     online_url=url,

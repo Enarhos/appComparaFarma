@@ -69,16 +69,15 @@ class AhumadaScraper(BaseScraper):
                     if price_m:
                         badge_price = _parse_clp(price_m.group(1))
 
-                # Precio normal tachado (solo para tiles CMR)
-                normal_price = None
-                del_m = re.search(r'class="[^"]*precio-normal[^"]*"[\s\S]{0,400}?content="(\d+)"', block)
-                if del_m:
-                    v = int(del_m.group(1))
-                    normal_price = v if v > 100 else None
-
-                if is_cmr:
-                    price = normal_price or badge_price
-                    cmr_price = badge_price if badge_price and price and badge_price < price else None
+                if is_cmr and badge_price:
+                    # Buscar todos los content= del tile (>1000 = precio CLP)
+                    content_vals = [int(m.group(1)) for m in re.finditer(r'content="(\d+)"', block)
+                                    if int(m.group(1)) > 1000]
+                    # El precio presencial es el menor content= que sea mayor al badge (CMR)
+                    sale_candidates = [v for v in content_vals if v > badge_price]
+                    sale_price = min(sale_candidates) if sale_candidates else None
+                    price = sale_price or badge_price
+                    cmr_price = badge_price if sale_price and badge_price < sale_price else None
                 else:
                     price = badge_price
                     cmr_price = None
