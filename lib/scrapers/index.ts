@@ -41,34 +41,36 @@ async function savePrice(medicationId: number, pharmacyId: number, product: Scra
   );
 }
 
+const SCRAPERS: Array<{ fn: (q: string) => Promise<ScrapedProduct[]>; slug: string }> = [
+  { fn: searchSalcobrand, slug: "salcobrand" },
+  { fn: searchCruzVerde,  slug: "cruz-verde" },
+  { fn: searchAhumada,    slug: "ahumada"    },
+  { fn: searchDrSimi,     slug: "dr-simi"    },
+];
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 export async function liveSearch(query: string): Promise<void> {
   const pharmacies = await getPharmacies();
   const pharmacyMap = Object.fromEntries(pharmacies.map((p) => [p.slug, p.id]));
 
-  const [salco, cv, ahu, simi] = await Promise.all([
-    searchSalcobrand(query),
-    searchCruzVerde(query),
-    searchAhumada(query),
-    searchDrSimi(query),
-  ]);
-
-  const results: Array<{ products: ScrapedProduct[]; slug: string }> = [
-    { products: salco, slug: "salcobrand" },
-    { products: cv,    slug: "cruz-verde" },
-    { products: ahu,   slug: "ahumada"    },
-    { products: simi,  slug: "dr-simi"    },
-  ];
-
-  for (const { products, slug } of results) {
+  for (let i = 0; i < SCRAPERS.length; i++) {
+    if (i > 0) await sleep(800);   // 800ms entre farmacias
+    const { fn, slug } = SCRAPERS[i];
     const pharmacyId = pharmacyMap[slug];
     if (!pharmacyId) continue;
-    for (const product of products) {
-      try {
-        const medId = await saveMedication(product.name, product.laboratory, product.isBioequivalent);
-        await savePrice(medId, pharmacyId, product);
-      } catch {
-        // Ignorar duplicados o errores individuales
+    try {
+      const products = await fn(query);
+      for (const product of products) {
+        try {
+          const medId = await saveMedication(product.name, product.laboratory, product.isBioequivalent);
+          await savePrice(medId, pharmacyId, product);
+        } catch {
+          // ignorar duplicados o errores individuales
+        }
       }
+    } catch {
+      // scraper falló, continuar con la siguiente farmacia
     }
   }
 }

@@ -47,11 +47,20 @@ COMMON_MEDICATIONS = [
 ]
 
 
-async def scrape_medication(query: str, conn):
-    print(f"\n[Buscando] {query}")
-    for scraper in ALL_SCRAPERS:
+DELAY_BETWEEN_SCRAPERS  = 2.0   # segundos entre farmacias (mismo medicamento)
+DELAY_BETWEEN_QUERIES   = 3.0   # segundos entre medicamentos
+RETRY_DELAYS            = [10, 30]  # backoff en segundos si hay error
+
+
+async def scrape_one(scraper, query: str, conn) -> int:
+    """Intenta scrapear un medicamento de una farmacia, con reintentos."""
+    pharmacy_id = get_pharmacy_id(conn, scraper.slug)
+    last_error = None
+    for attempt, wait in enumerate([0] + RETRY_DELAYS):
+        if wait:
+            print(f"  [{scraper.name}] reintentando en {wait}s...")
+            await asyncio.sleep(wait)
         try:
-            pharmacy_id = get_pharmacy_id(conn, scraper.slug)
             results = await scraper.search(query)
             for product in results:
                 med_id = upsert_medication(
@@ -75,10 +84,21 @@ async def scrape_medication(query: str, conn):
                     online_url=product.online_url,
                 )
             conn.commit()
-            print(f"  [{scraper.name}] {len(results)} resultado(s)")
+            return len(results)
         except Exception as e:
             conn.rollback()
-            print(f"  [{scraper.name}] Error: {e}")
+            last_error = e
+    print(f"  [{scraper.name}] Error tras {len(RETRY_DELAYS)+1} intentos: {last_error}")
+    return 0
+
+
+async def scrape_medication(query: str, conn):
+    print(f"\n[Buscando] {query}")
+    for i, scraper in enumerate(ALL_SCRAPERS):
+        if i > 0:
+            await asyncio.sleep(DELAY_BETWEEN_SCRAPERS)
+        n = await scrape_one(scraper, query, conn)
+        print(f"  [{scraper.name}] {n} resultado(s)")
 
 
 async def main(queries: list[str]):
@@ -86,7 +106,9 @@ async def main(queries: list[str]):
     try:
         print(f"Limpiando precios antiguos...")
         clean_old_prices(conn)
-        for query in queries:
+        for i, query in enumerate(queries):
+            if i > 0:
+                await asyncio.sleep(DELAY_BETWEEN_QUERIES)
             await scrape_medication(query, conn)
         print(f"\nScraping completado. {len(queries)} medicamento(s) procesado(s).")
     finally:
