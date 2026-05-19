@@ -21,8 +21,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#16a34a"
       },
-      "package": "cl.comparafarma.app",
-      "versionCode": 3
+      "package": "mla.app.comparafarma",
+      "versionCode": 4
     },
     "web": {
       "bundler": "metro"
