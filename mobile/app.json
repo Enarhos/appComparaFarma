@@ -22,14 +22,13 @@
         "backgroundColor": "#16a34a"
       },
       "package": "cl.comparafarma.app",
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router",
-      ["@sentry/react-native", { "uploadSourceMaps": false }]
+      "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
