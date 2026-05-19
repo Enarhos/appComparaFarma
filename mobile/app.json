@@ -14,7 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "cl.comparafarma.app"
+      "bundleIdentifier": "mla.app.comparafarma"
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +22,7 @@
         "backgroundColor": "#16a34a"
       },
       "package": "mla.app.comparafarma",
-      "versionCode": 4
+      "versionCode": 5
     },
     "web": {
       "bundler": "metro"
