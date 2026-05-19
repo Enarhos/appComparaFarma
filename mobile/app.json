@@ -21,14 +21,15 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#16a34a"
       },
-      "package": "cl.comparafarma.app"
+      "package": "cl.comparafarma.app",
+      "versionCode": 2
     },
     "web": {
       "bundler": "metro"
     },
     "plugins": [
       "expo-router",
-      "@sentry/react-native"
+      ["@sentry/react-native", { "uploadSourceMaps": false }]
     ],
     "experiments": {
       "typedRoutes": true
