@@ -1,34 +1,16 @@
-# Dependencies
 node_modules/
-__pycache__/
-*.pyc
-.venv/
-
-# Next.js
-.next/
-out/
-
-# Environment
 .env
 .env.local
-.env.*.local
-scraper/.env
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
+.env*.local
+dist/
+.next/
+.expo/
+.vercel/
 *.log
-npm-debug.log*
-
-# Claude Code
+.DS_Store
+android/
+ios/
+.venv/
+__pycache__/
 .claude/
-
-# Archivos de desarrollo/exploración
-scraper/ahumada_search.html
-scraper/test_apis*.py
-scraper/find_*.py
-scraper/discover_endpoints.py
-scraper/inspect_sites.py
-scraper/check_ahumada_html.py
+api/

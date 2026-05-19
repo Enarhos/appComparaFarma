@@ -1,28 +1,18 @@
 {
-  "name": "app-farmacy",
-  "version": "0.1.0",
+  "name": "compara-farma",
   "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "pnpm --filter mobile start",
+    "android": "pnpm --filter mobile android",
+    "ios": "pnpm --filter mobile ios",
+    "typecheck": "pnpm --filter \"*\" typecheck",
+    "lint": "pnpm --filter \"*\" lint",
+    "test": "pnpm --filter \"*\" test"
   },
-  "dependencies": {
-    "mysql2": "^3.22.2",
-    "next": "^16.2.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.1.0",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+  "workspaces": [
+    "packages/*",
+    "mobile"
+  ]
 }
