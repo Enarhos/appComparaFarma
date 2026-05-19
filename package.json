@@ -12,7 +12,6 @@
     "test": "pnpm --filter \"*\" test"
   },
   "workspaces": [
-    "packages/*",
     "mobile"
   ]
 }
