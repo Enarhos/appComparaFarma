@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ScrollView, View, Text, TouchableOpacity, Linking, SafeAreaView, Image } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useSearchStore } from "@/store/searchStore";
@@ -19,6 +20,7 @@ export default function MedicationScreen() {
   }
 
   const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, bestPharmacy, imageUrl } = medication;
+  const [imgError, setImgError] = useState(false);
 
   return (
     <SafeAreaView className="flex-1 bg-gray-50">
@@ -27,12 +29,13 @@ export default function MedicationScreen() {
 
         {/* Encabezado */}
         <View className="bg-white rounded-2xl border border-gray-100 p-4 gap-2">
-          {imageUrl && (
+          {imageUrl && !imgError && (
             <Image
               source={{ uri: imageUrl }}
               style={{ width: 120, height: 120, alignSelf: "center" }}
               className="bg-gray-50 rounded-xl mb-2"
               resizeMode="contain"
+              onError={() => setImgError(true)}
             />
           )}
           <Text className="text-xl font-bold text-gray-900">{canonicalName}</Text>
@@ -47,7 +50,7 @@ export default function MedicationScreen() {
             )}
             <View className="bg-green-50 border border-green-200 rounded-full px-3 py-0.5">
               <Text className="text-green-700 text-xs font-medium">
-                Desde {formatCLP(bestPrice)} en {bestPharmacy}
+                Desde {formatCLP(bestPrice)} en {PHARMACIES[bestPharmacy]?.name ?? bestPharmacy}
               </Text>
             </View>
           </View>

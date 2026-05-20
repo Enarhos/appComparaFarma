@@ -6,7 +6,6 @@ import { PriceChannel } from "./PriceChannel";
 
 interface PriceRowProps {
   pharmacyPrice: PharmacyPrice;
-  isBestOverall?: boolean;
 }
 
 export function PriceRow({ pharmacyPrice }: PriceRowProps) {

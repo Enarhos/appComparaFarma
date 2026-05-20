@@ -27,7 +27,7 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false }: SearchBar
 
   function handleSubmit() {
     const trimmed = value.trim();
-    if (trimmed.length >= 2) onSearch(trimmed);
+    if (trimmed.length >= MIN_CHARS) onSearch(trimmed);
   }
 
   function handleClear() {
@@ -58,7 +58,7 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false }: SearchBar
       )}
       <TouchableOpacity
         onPress={handleSubmit}
-        disabled={value.trim().length < 2}
+        disabled={value.trim().length < MIN_CHARS}
         className="bg-green-600 rounded-xl px-4 py-1.5 disabled:opacity-40"
       >
         <Text className="text-white font-semibold text-sm">Buscar</Text>

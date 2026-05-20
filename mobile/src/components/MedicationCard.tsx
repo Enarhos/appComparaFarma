@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
 import type { MedicationResult } from "@/lib/types";
@@ -11,6 +12,7 @@ interface MedicationCardProps {
 export function MedicationCard({ medication }: MedicationCardProps) {
   const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, matchKey, imageUrl } = medication;
   const router = useRouter();
+  const [imgError, setImgError] = useState(false);
 
   function handlePress() {
     router.push({ pathname: "/medication", params: { key: matchKey } });
@@ -21,12 +23,13 @@ export function MedicationCard({ medication }: MedicationCardProps) {
     <View className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
       <View className="px-4 pt-4 pb-2">
         <View className="flex-row items-start justify-between gap-2">
-          {imageUrl && (
+          {imageUrl && !imgError && (
             <Image
               source={{ uri: imageUrl }}
               style={{ width: 56, height: 56 }}
               className="rounded-lg bg-gray-50"
               resizeMode="contain"
+              onError={() => setImgError(true)}
             />
           )}
           <View className="flex-1">

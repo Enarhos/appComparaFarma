@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useCallback } from "react";
 import * as Sentry from "@sentry/react-native";
 import { cleanQuery } from "@/lib/normalization";
 import { searchMedications } from "@/lib/search";
@@ -9,7 +9,7 @@ export function useSearch() {
   const abortRef = useRef<AbortController | null>(null);
   const { setLoading, setResults, setError, setQuery } = useSearchStore();
 
-  async function search(rawQuery: string, bypassCache = false) {
+  const search = useCallback(async function search(rawQuery: string, bypassCache = false) {
     abortRef.current?.abort();
     abortRef.current = new AbortController();
 
@@ -40,7 +40,7 @@ export function useSearch() {
       Sentry.captureException(err, { extra: { query } });
       setError("No se pudo obtener los precios. Verifica tu conexión e intenta de nuevo.");
     }
-  }
+  }, [setLoading, setResults, setError, setQuery]);
 
   return { search };
 }

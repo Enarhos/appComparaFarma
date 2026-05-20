@@ -22,7 +22,7 @@ export default function ResultsScreen() {
       search(q);
       addToHistory(q);
     }
-  }, [q]);
+  }, [q, search, addToHistory]);
 
   function handleRefresh() {
     if (q) search(q, true);
