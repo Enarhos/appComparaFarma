@@ -2,6 +2,14 @@ import type { ScrapedProduct } from "@/lib/types";
 
 const BASE = "https://www.drsimi.cl";
 
+// Palabras del query que deben aparecer en el nombre del producto (min 3 chars)
+function isRelevant(productName: string, query: string): boolean {
+  const nameLower = productName.toLowerCase();
+  const queryWords = query.toLowerCase().replace(/[-_]/g, " ").split(/\s+/).filter((w) => w.length >= 3);
+  if (queryWords.length === 0) return true;
+  return queryWords.some((w) => nameLower.includes(w));
+}
+
 export async function searchDrSimi(
   query: string,
   signal?: AbortSignal
@@ -41,8 +49,11 @@ export async function searchDrSimi(
     const bioArr = product.Bioequivalente as string[] | undefined;
     const isBioequivalent = (bioArr?.[0] ?? "").toUpperCase() === "SI";
 
+    const name = String(product.productName ?? query);
+    if (!isRelevant(name, query)) return [];
+
     return [{
-      name: String(product.productName ?? query),
+      name,
       price: storePrice,
       onlinePrice,
       cmrPrice: null,
