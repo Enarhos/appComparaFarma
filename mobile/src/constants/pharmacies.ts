@@ -39,4 +39,12 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     sbpayLabel: null,
     channels: { store: true, online: false, card: true, sbpay: false },
   },
+  "dr-simi": {
+    name: "Dr. Simi",
+    color: "#e2001a",
+    bgLight: "#fff0f0",
+    cardLabel: null,
+    sbpayLabel: null,
+    channels: { store: true, online: true, card: false, sbpay: false },
+  },
 };

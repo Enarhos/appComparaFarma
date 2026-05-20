@@ -1,34 +1,59 @@
 import { useState } from "react";
-import { ScrollView, View, Text, TouchableOpacity, Linking, SafeAreaView, Image } from "react-native";
+import { ScrollView, View, Text, TouchableOpacity, Linking, SafeAreaView, Image, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 import { useSearchStore } from "@/store/searchStore";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP, scrapedAgo } from "@/lib/formatters";
-import type { PharmacyPrice } from "@/lib/types";
+import type { PharmacyPrice, PharmacySlug } from "@/lib/types";
+
+function getBestChannelLabel(prices: PharmacyPrice[], bestPharmacy: PharmacySlug, bestPrice: number): string | null {
+  const p = prices.find((p) => p.pharmacySlug === bestPharmacy);
+  if (!p) return null;
+  const config = PHARMACIES[bestPharmacy];
+  if (p.channels.sbpay === bestPrice && config.sbpayLabel) return config.sbpayLabel;
+  if (p.channels.cmr === bestPrice && config.cardLabel) return config.cardLabel;
+  if (p.channels.online === bestPrice) return "Online";
+  return null;
+}
 
 export default function MedicationScreen() {
   const { key } = useLocalSearchParams<{ key: string }>();
   const results = useSearchStore((s) => s.results);
+  const [imgError, setImgError] = useState(false);
+
   const medication = results.find((r) => r.matchKey === key);
 
   if (!medication) {
     return (
-      <SafeAreaView className="flex-1 bg-gray-50 items-center justify-center">
+      <SafeAreaView className="flex-1 bg-gray-50 dark:bg-gray-900 items-center justify-center">
         <Text className="text-gray-400">Medicamento no encontrado</Text>
       </SafeAreaView>
     );
   }
 
   const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, bestPharmacy, imageUrl } = medication;
-  const [imgError, setImgError] = useState(false);
+
+  async function handleShare() {
+    const channelLabel = getBestChannelLabel(prices, bestPharmacy as PharmacySlug, bestPrice);
+    const pharmacyName = PHARMACIES[bestPharmacy as PharmacySlug]?.name ?? bestPharmacy;
+    const suffix = channelLabel ? ` (${channelLabel})` : "";
+    try {
+      await Share.share({
+        message: `${canonicalName} — desde ${formatCLP(bestPrice)} en ${pharmacyName}${suffix} | ComparaFarma`,
+      });
+    } catch {
+      // user cancelled
+    }
+  }
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-50">
+    <SafeAreaView className="flex-1 bg-gray-50 dark:bg-gray-900">
       <Stack.Screen options={{ title: canonicalName, headerTintColor: "#16a34a" }} />
       <ScrollView contentContainerClassName="px-4 py-4 gap-4">
 
         {/* Encabezado */}
-        <View className="bg-white rounded-2xl border border-gray-100 p-4 gap-2">
+        <View className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-4 gap-2">
           {imageUrl && !imgError && (
             <Image
               source={{ uri: imageUrl }}
@@ -38,7 +63,12 @@ export default function MedicationScreen() {
               onError={() => setImgError(true)}
             />
           )}
-          <Text className="text-xl font-bold text-gray-900">{canonicalName}</Text>
+          <View className="flex-row items-start justify-between">
+            <Text className="text-xl font-bold text-gray-900 dark:text-white flex-1 mr-2">{canonicalName}</Text>
+            <TouchableOpacity onPress={handleShare} hitSlop={8} className="mt-1">
+              <Ionicons name="share-outline" size={22} color="#9ca3af" />
+            </TouchableOpacity>
+          </View>
           {laboratory && (
             <Text className="text-sm text-gray-400">{laboratory}</Text>
           )}
@@ -50,7 +80,7 @@ export default function MedicationScreen() {
             )}
             <View className="bg-green-50 border border-green-200 rounded-full px-3 py-0.5">
               <Text className="text-green-700 text-xs font-medium">
-                Desde {formatCLP(bestPrice)} en {PHARMACIES[bestPharmacy]?.name ?? bestPharmacy}
+                Desde {formatCLP(bestPrice)} en {PHARMACIES[bestPharmacy as PharmacySlug]?.name ?? bestPharmacy}
               </Text>
             </View>
           </View>

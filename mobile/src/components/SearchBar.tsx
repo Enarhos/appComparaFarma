@@ -36,11 +36,11 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false }: SearchBar
   }
 
   return (
-    <View className="flex-row items-center bg-gray-100 rounded-2xl px-4 py-3 gap-3">
+    <View className="flex-row items-center bg-gray-100 dark:bg-gray-700 rounded-2xl px-4 py-3 gap-3">
       <Text className="text-gray-400 text-lg">🔍</Text>
       <TextInput
         ref={inputRef}
-        className="flex-1 text-base text-gray-900"
+        className="flex-1 text-base text-gray-900 dark:text-white"
         placeholder="Buscar medicamento..."
         placeholderTextColor="#9ca3af"
         value={value}

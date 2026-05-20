@@ -1,3 +1,4 @@
+import { useColorScheme } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import * as Sentry from "@sentry/react-native";
@@ -11,26 +12,17 @@ Sentry.init({
 });
 
 function RootLayout() {
+  const colorScheme = useColorScheme();
+  const isDark = colorScheme === "dark";
+  const headerBg = isDark ? "#111827" : "#ffffff";
+
   return (
     <>
       <StatusBar style="auto" />
-      <Stack>
-        <Stack.Screen name="index" options={{ title: "ComparaFarma", headerShown: false }} />
-        <Stack.Screen
-          name="results"
-          options={{
-            title: "Resultados",
-            headerBackTitle: "Buscar",
-            headerTintColor: "#16a34a",
-          }}
-        />
-        <Stack.Screen
-          name="medication"
-          options={{
-            headerBackTitle: "Resultados",
-            headerTintColor: "#16a34a",
-          }}
-        />
+      <Stack screenOptions={{ headerStyle: { backgroundColor: headerBg }, headerTintColor: "#16a34a" }}>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="results" options={{ title: "Resultados", headerBackTitle: "Buscar" }} />
+        <Stack.Screen name="medication" options={{ headerBackTitle: "Resultados" }} />
       </Stack>
     </>
   );

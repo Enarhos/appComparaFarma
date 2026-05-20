@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
+import * as Haptics from "expo-haptics";
 import type { MedicationResult } from "@/lib/types";
 import { PriceRow } from "./PriceRow";
 import { formatCLP } from "@/lib/formatters";
+import { useFavoritesStore } from "@/store/favoritesStore";
 
 interface MedicationCardProps {
   medication: MedicationResult;
@@ -13,6 +16,13 @@ export function MedicationCard({ medication }: MedicationCardProps) {
   const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, matchKey, imageUrl } = medication;
   const router = useRouter();
   const [imgError, setImgError] = useState(false);
+  const { toggle, isFavorite } = useFavoritesStore();
+  const favorited = isFavorite(matchKey);
+
+  function handleFavorite() {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    toggle(medication);
+  }
 
   function handlePress() {
     router.push({ pathname: "/medication", params: { key: matchKey } });
@@ -20,7 +30,7 @@ export function MedicationCard({ medication }: MedicationCardProps) {
 
   return (
     <TouchableOpacity onPress={handlePress} activeOpacity={0.7}>
-    <View className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+    <View className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
       <View className="px-4 pt-4 pb-2">
         <View className="flex-row items-start justify-between gap-2">
           {imageUrl && !imgError && (
@@ -33,14 +43,21 @@ export function MedicationCard({ medication }: MedicationCardProps) {
             />
           )}
           <View className="flex-1">
-            <Text className="text-base font-bold text-gray-900" numberOfLines={2}>
+            <Text className="text-base font-bold text-gray-900 dark:text-white" numberOfLines={2}>
               {canonicalName}
             </Text>
             {laboratory && (
               <Text className="text-xs text-gray-400 mt-0.5">{laboratory}</Text>
             )}
           </View>
-          <View className="items-end">
+          <View className="items-end gap-1">
+            <TouchableOpacity onPress={handleFavorite} hitSlop={8}>
+              <Ionicons
+                name={favorited ? "heart" : "heart-outline"}
+                size={20}
+                color={favorited ? "#e11d48" : "#d1d5db"}
+              />
+            </TouchableOpacity>
             <Text className="text-xs text-gray-400">desde</Text>
             <Text className="text-lg font-extrabold text-green-600">
               {formatCLP(bestPrice)}
@@ -54,7 +71,7 @@ export function MedicationCard({ medication }: MedicationCardProps) {
         )}
       </View>
 
-      <View className="px-4 pb-3 border-t border-gray-50 mt-1">
+      <View className="px-4 pb-3 border-t border-gray-50 dark:border-gray-700 mt-1">
         {prices.map((p) => (
           <PriceRow key={p.pharmacySlug} pharmacyPrice={p} />
         ))}
