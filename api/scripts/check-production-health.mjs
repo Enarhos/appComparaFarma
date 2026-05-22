@@ -3,6 +3,7 @@ const QUERIES = (process.env.HEALTHCHECK_QUERIES ?? "paracetamol,ibuprofeno")
   .split(",")
   .map((value) => value.trim())
   .filter(Boolean);
+const OUTPUT_FILE = process.env.HEALTHCHECK_OUTPUT_FILE ?? "";
 
 async function main() {
   const health = await fetchJson(`${API_URL}/api/health`);
@@ -54,14 +55,21 @@ async function main() {
     }
   }
 
-  console.log(JSON.stringify({
+  const summary = {
     ok: failures.length === 0,
     apiUrl: API_URL,
     queries: QUERIES,
     summaries,
     aggregate: Object.fromEntries(aggregate),
     failures,
-  }, null, 2));
+  };
+
+  const json = JSON.stringify(summary, null, 2);
+  console.log(json);
+
+  if (OUTPUT_FILE) {
+    await writeFile(OUTPUT_FILE, `${json}\n`, "utf8");
+  }
 
   if (failures.length > 0) {
     process.exitCode = 1;
@@ -82,3 +90,10 @@ main().catch((error) => {
   console.error(error instanceof Error ? error.message : String(error));
   process.exitCode = 1;
 });
+
+async function writeFile(path, content, encoding) {
+  const { mkdir, writeFile } = await import("node:fs/promises");
+  const { dirname } = await import("node:path");
+  await mkdir(dirname(path), { recursive: true });
+  await writeFile(path, content, encoding);
+}

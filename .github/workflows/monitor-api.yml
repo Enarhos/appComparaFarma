@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "0 */6 * * *"
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   production-healthcheck:
     runs-on: ubuntu-latest
@@ -23,4 +27,39 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - name: Check production API and pharmacy coverage
+        id: healthcheck
         run: pnpm --filter api healthcheck:prod
+        env:
+          HEALTHCHECK_OUTPUT_FILE: api/reports/api-healthcheck.json
+        continue-on-error: true
+
+      - name: Upload healthcheck artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-healthcheck-report
+          path: api/reports/api-healthcheck.json
+          if-no-files-found: error
+
+      - name: Create issue on healthcheck failure
+        if: steps.healthcheck.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs');
+            const path = 'api/reports/api-healthcheck.json';
+            const body = fs.existsSync(path)
+              ? `Se detectó una falla en el monitoreo de producción.\n\n\`\`\`json\n${fs.readFileSync(path, 'utf8')}\n\`\`\``
+              : 'Se detectó una falla en el monitoreo de producción, pero no se encontró el reporte JSON.';
+            const title = `API monitor failure - ${new Date().toISOString().slice(0, 16)}`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['monitoring', 'bug']
+            });
+
+      - name: Fail job if healthcheck failed
+        if: steps.healthcheck.outcome == 'failure'
+        run: exit 1
