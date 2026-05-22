@@ -1,0 +1,46 @@
+[
+  {
+    "productName": "Paracetamol 500 mg 16 comprimidos",
+    "brand": "ANDRÓMACO",
+    "link": "https://www.drsimi.cl/paracetamol-500-mg-16-comprimidos/p",
+    "Bioequivalente": ["SI"],
+    "items": [
+      {
+        "images": [
+          {
+            "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157731/BE0039-1.jpg"
+          }
+        ],
+        "sellers": [
+          {
+            "commertialOffer": {
+              "Price": 480,
+              "ListPrice": 550,
+              "IsAvailable": true,
+              "AvailableQuantity": 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "productName": "Producto irrelevante",
+    "brand": "X",
+    "items": [
+      {
+        "images": [],
+        "sellers": [
+          {
+            "commertialOffer": {
+              "Price": 999,
+              "ListPrice": 999,
+              "IsAvailable": true,
+              "AvailableQuantity": 10
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

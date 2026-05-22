@@ -13,4 +13,3 @@ ios/
 .venv/
 __pycache__/
 .claude/
-api/

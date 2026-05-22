@@ -1,0 +1,19 @@
+{
+  "hits": [
+    {
+      "product_id": "272241",
+      "product_name": "Paracetamol 500 mg 16 Comprimidos",
+      "price": 840,
+      "orderable": true,
+      "image": {
+        "dis_base_link": "https://beta.cruzverde.cl/images/272241.jpg"
+      }
+    },
+    {
+      "product_id": "000000",
+      "product_name": "Producto sin precio",
+      "price": null,
+      "orderable": true
+    }
+  ]
+}
