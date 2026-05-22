@@ -6,6 +6,8 @@ dist/
 .next/
 .expo/
 .vercel/
+api/reports/
+api/api/reports/
 *.log
 .DS_Store
 android/

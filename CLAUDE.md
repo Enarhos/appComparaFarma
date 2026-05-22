@@ -4,24 +4,25 @@ App móvil (React Native + Expo) que compara en tiempo real los precios de medic
 
 ## Arquitectura
 
-El repo ahora soporta dos modos:
+El repo ahora funciona en un solo modo:
 
-- **Preferido**: `mobile` consulta el backend `api/` (`/api/search`) y el backend consulta las farmacias.
-- **Fallback**: si `EXPO_PUBLIC_API_URL` no está definido, la app vuelve a consultar las farmacias directamente desde el dispositivo.
+- `mobile` consulta siempre el backend `api/` mediante `EXPO_PUBLIC_API_URL`
+- `api/` consulta las farmacias, normaliza, deduplica y responde a la app
+- si `EXPO_PUBLIC_API_URL` no está definido, la búsqueda falla explícitamente
 
 ```
-App móvil (Expo)                     Backend opcional (Vercel)
-      ↓                                         ↓
- searchMedications() ───────────────→  GET /api/search?q=...
-      │                                         ↓
-                                             Promise.allSettled([
-                                               searchCruzVerde(),
-                                               searchSalcobrand(),
-                                               searchAhumada(),
-                                               searchDrSimi(),
-                                             ])
-                                                       ↓
-                                          mergeDuplicates() → MedicationResult[]
+App móvil (Expo)                     Backend (Vercel)
+      ↓                                   ↓
+ searchMedications() ─────────────→ GET /api/search?q=...
+                                          ↓
+                                     Promise.allSettled([
+                                       searchCruzVerde(),
+                                       searchSalcobrand(),
+                                       searchAhumada(),
+                                       searchDrSimi(),
+                                     ])
+                                              ↓
+                                  mergeDuplicates() → MedicationResult[]
 ```
 
 Puntos de entrada:
@@ -33,7 +34,7 @@ Puntos de entrada:
 ```
 compara-farma/
 ├── CLAUDE.md
-├── package.json                 ← pnpm workspaces: mobile
+├── package.json                 ← pnpm workspaces: mobile + api
 ├── pnpm-workspace.yaml
 ├── api/                         ← backend mínimo para Vercel
 │   ├── api/                     ← entrypoints serverless: search.ts, health.ts
@@ -47,7 +48,7 @@ compara-farma/
 │   ├── pharmacy-apis.md         ← endpoints, auth, response schemas por farmacia
 │   ├── price-channels.md        ← semántica de presencial/online/CMR/SBPay
 │   ├── normalization.md         ← cleanQuery(), matchKey(), mergeDuplicates()
-│   ├── deployment.md            ← EAS Build, EAS Submit
+│   ├── deployment.md            ← Vercel, GitHub Actions, EAS, monitoreo
 │   ├── privacy-policy.html      ← política de privacidad (publicada en GitHub Pages)
 │   └── screenshots/             ← capturas para Play Store
 └── mobile/                      ← Expo app (React Native + Expo Router v3)
@@ -57,7 +58,7 @@ compara-farma/
         │                           PharmacyBadge, EmptyState, SkeletonCard
         ├── lib/
         │   ├── search.ts        ← client HTTP al backend `/api/search`
-        │   ├── normalization.ts ← cleanQuery(), matchKey(), mergeDuplicates(), effectivePrice()
+        │   ├── normalization.ts ← cleanQuery(), matchKey(), effectivePrice()
         │   ├── cache.ts         ← AsyncStorage LRU, TTL 30 min, prefijo search_cache_v4_
         │   └── formatters.ts    ← formatCLP(), scrapedAgo()
         ├── store/               ← Zustand: searchStore, historyStore, favoritesStore
@@ -133,6 +134,21 @@ interface MedicationResult {
 - **Skeleton loading**: 3 placeholders animados con Reanimated durante la búsqueda
 - **Historial**: últimas 10 búsquedas, eliminar individual o todo, con hápticos
 
+## Estado Actual
+
+- Producción backend: `https://comparafarma-api.vercel.app`
+- Endpoint principal app: `GET /api/search?q=...`
+- Healthcheck: `GET /api/health`
+- Diagnóstico: `GET /api/search?q=paracetamol&debug=1`
+- CI GitHub: `.github/workflows/ci.yml`
+- Monitor productivo: `.github/workflows/monitor-api.yml`
+- Deploy automático del backend: push a `main`
+- Runtime móvil recomendado: development build, porque el proyecto usa `expo-dev-client`
+- Expo/React Native actuales en `mobile/package.json`:
+  - `expo ~54.0.34`
+  - `react-native 0.81.5`
+  - `react 19.1.0`
+
 ## Stores Zustand
 
 | Store | Persistencia | Propósito |
@@ -149,10 +165,9 @@ Usuario escribe "paracetamol 500"
   → check AsyncStorage cache (TTL 30 min, prefijo search_cache_v4_)
       [HIT]  → mostrar resultados cacheados
       [MISS] → searchMedications("paracetamol")
-               → Promise.allSettled([cruzverde, salcobrand, ahumada, drsimi])
-               → toMedicationResult() por cada resultado
-               → mergeDuplicates() por matchKey
-               → sort por bestPrice ASC
+               → fetch /api/search?q=paracetamol
+               → backend consulta farmacias
+               → backend normaliza, deduplica y ordena
              → guardar en AsyncStorage
              → mostrar en pantalla Results
 ```
@@ -166,6 +181,8 @@ pnpm dev:api           # iniciar backend con vercel dev
 pnpm android           # iniciar en Android
 pnpm ios               # iniciar en iOS
 pnpm typecheck         # type check completo
+pnpm --filter api test # tests backend
+pnpm --filter api healthcheck:prod # check productivo manual
 ```
 
 ## Publicación
@@ -191,6 +208,17 @@ eas update --branch production --message "fix: ..."
 Señal de alerta: búsquedas de medicamentos comunes no retornan resultados de Ahumada.
 
 Acción: revisar el HTML actual del sitio, actualizar los regex `tileRe`, `linkM`, `badgeM` y publicar OTA update (`eas update`).
+
+## Operación GitHub/Vercel
+
+- `CI` corre en push y PR a `main`
+- jobs actuales: `typecheck`, `api-tests`, `deploy-api`
+- `deploy-api` usa `VERCEL_TOKEN` y despliega `api/` a producción
+- `Monitor API` corre cada 6 horas y también manualmente
+- si el monitor falla:
+  - sube artefacto `api-healthcheck-report`
+  - crea un issue con etiqueta `monitoring`
+  - deja la corrida en rojo
 
 ## Cache Versioning
 

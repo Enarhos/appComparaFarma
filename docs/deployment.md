@@ -1,6 +1,6 @@
 # Deployment — Guía Actual
 
-Instrucciones para publicar el backend `api/` en Vercel y la app móvil en EAS.
+Instrucciones para operar el backend `api/` en Vercel, la app móvil en Expo/EAS y la automatización en GitHub Actions.
 
 ---
 
@@ -42,12 +42,16 @@ SEARCH_CACHE_TTL_MS=300000
 Mobile `mobile/`:
 
 ```bash
-EXPO_PUBLIC_API_URL=https://tu-proyecto.vercel.app
+EXPO_PUBLIC_API_URL=https://comparafarma-api.vercel.app
 EXPO_PUBLIC_API_KEY=
 EXPO_PUBLIC_SENTRY_DSN=...
 ```
 
 `EXPO_PUBLIC_API_KEY` es opcional y solo se usa si configuras `API_SECRET_KEY` en el backend.
+
+Nota importante:
+- la app móvil ya no tiene fallback local de búsqueda
+- si `EXPO_PUBLIC_API_URL` falta, `mobile` falla al buscar
 
 ---
 
@@ -60,6 +64,8 @@ pnpm install
 pnpm dev
 pnpm dev:api
 ```
+
+Para pruebas en dispositivo, hoy conviene asumir development build y no Expo Go, porque el proyecto usa `expo-dev-client`.
 
 Comandos útiles:
 
@@ -106,7 +112,13 @@ El primer submit requiere credenciales de cada tienda. EAS las pedirá de forma 
 
 ## Deploy del Backend en Vercel
 
-### Primera vez
+### Estado actual
+
+- proyecto productivo: `comparafarma-api`
+- URL de producción: `https://comparafarma-api.vercel.app`
+- Root Directory en Vercel: `api/`
+
+### Primera vez o relink local
 
 ```bash
 cd api
@@ -114,8 +126,6 @@ vercel link
 vercel deploy
 vercel deploy --prod
 ```
-
-Configura el proyecto en Vercel usando `api/` como Root Directory.
 
 ### Deploy automático desde GitHub Actions
 
@@ -142,6 +152,13 @@ VERCEL_PROJECT_ID=prj_zvHG2urEOjMM770FPy6B2fdhk915
 
 No hace falta configurarlos como secrets mientras no cambien.
 
+El workflow actual hace:
+- `typecheck`
+- `api-tests`
+- `deploy-api`
+
+`deploy-api` instala Vercel CLI y ejecuta deploy productivo de `api/`.
+
 ### Endpoints
 
 - `GET /api/health`
@@ -150,8 +167,9 @@ No hace falta configurarlos como secrets mientras no cambien.
 ### Verificación rápida
 
 ```bash
-curl "https://tu-proyecto.vercel.app/api/health"
-curl "https://tu-proyecto.vercel.app/api/search?q=paracetamol"
+curl "https://comparafarma-api.vercel.app/api/health"
+curl "https://comparafarma-api.vercel.app/api/search?q=paracetamol"
+curl "https://comparafarma-api.vercel.app/api/search?q=paracetamol&debug=1"
 ```
 
 ### Verificar que el deploy automático funciona
@@ -201,6 +219,10 @@ HEALTHCHECK_QUERIES=paracetamol,ibuprofeno
 
 Si el workflow falla, GitHub marcará la corrida en rojo y puede notificar por correo según la configuración de la cuenta.
 
+Además:
+- sube el artefacto `api-healthcheck-report`
+- crea un issue automático con el JSON del fallo
+
 ---
 
 ## OTA Updates
@@ -234,6 +256,14 @@ En esos casos corresponde un nuevo build completo.
 4. Probar en TestFlight y/o Play Internal Testing.
 5. Publicar con `eas submit`.
 6. Para fixes no nativos posteriores, usar `eas update`.
+
+## Checklist para retomar mañana
+
+1. Confirmar `main` en verde en `Actions -> CI`.
+2. Confirmar `Monitor API` sin issues nuevos.
+3. Verificar `mobile/.env.local` con `EXPO_PUBLIC_API_URL=https://comparafarma-api.vercel.app`.
+4. Si se prueba en teléfono, usar development build actualizado.
+5. Si Ahumada falla, mirar primero `api/src/clients/ahumada.ts` y luego el reporte del monitor.
 
 ---
 
