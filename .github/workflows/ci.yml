@@ -69,22 +69,6 @@ jobs:
       - name: Install Vercel CLI
         run: pnpm add -g vercel@latest
 
-      - name: Link Vercel project metadata
-        run: |
-          mkdir -p .vercel
-          cat > .vercel/project.json <<'EOF'
-          {"projectId":"prj_zvHG2urEOjMM770FPy6B2fdhk915","orgId":"team_QtbvbI6hTSxxSJ9qDFTv9z6S","projectName":"comparafarma-api"}
-          EOF
-        working-directory: api
-
-      - name: Pull Vercel environment information
-        run: vercel pull --yes --environment=production --scope=mariolillo-1620s-projects --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: api
-
-      - name: Build Vercel project artifacts
-        run: vercel build --prod --scope=mariolillo-1620s-projects --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: api
-
       - name: Deploy API to Vercel
-        run: vercel deploy --prebuilt --prod --scope=mariolillo-1620s-projects --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
         working-directory: api
