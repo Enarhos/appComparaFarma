@@ -1,16 +1,16 @@
 # Canales de Precio — Contexto Chileno
 
-Explica la semántica de los tres canales de precio que maneja la app y su disponibilidad por farmacia.
+Explica la semántica de los cuatro canales de precio que maneja la app y su disponibilidad por farmacia.
 
 ---
 
-## Los Tres Canales
+## Los Cuatro Canales
 
 ### 1. Presencial (`store`)
 
 **Qué es**: El precio que pagas al ir físicamente a la farmacia y comprar en caja. También llamado "precio de vitrina" o "precio normal".
 
-**Disponibilidad**: Presente en las **3 farmacias**.
+**Disponibilidad**: Presente en las **4 farmacias**.
 
 **En el modelo**: Campo `channels.store: number` — siempre presente, nunca null.
 
@@ -23,7 +23,8 @@ Explica la semántica de los tres canales de precio que maneja la app y su dispo
 **Disponibilidad**:
 - **Cruz Verde**: ❌ No disponible. La API de Demandware expone un solo precio unificado.
 - **Salcobrand**: ✅ Campo `direct_discount` en Algolia cuando es menor que `normal_price`.
-- **Ahumada**: ✅ Se detecta mediante badges alternativos en el HTML del storefront.
+- **Ahumada**: ❌ No disponible en el scraper actual.
+- **Dr. Simi**: ✅ Se usa `Price` cuando es menor que `ListPrice`.
 
 **En el modelo**: Campo `channels.online: number | null`.
 
@@ -33,14 +34,29 @@ Explica la semántica de los tres canales de precio que maneja la app y su dispo
 
 **Qué es**: Precio exclusivo para clientes que pagan con **Tarjeta CMR Falabella** (tarjeta de crédito de tiendas Falabella). Es el precio más bajo disponible cuando existe, pero requiere tener y usar la tarjeta al momento de pago.
 
-**Contexto chileno**: El Grupo Falabella es dueño tanto de Farmacias Ahumada como de CMR (tarjeta de crédito). Esta integración explica por qué Ahumada es la única que tiene este canal. Salcobrand también pertenece a un grupo que tiene tarjeta propia, pero los datos de CMR no están expuestos en su índice de Algolia.
+**Contexto chileno**: Farmacias Ahumada puede mostrar precio CMR en su storefront. En la implementación actual, Salcobrand usa `cmr_price` como precio de Tarjeta Más cuando viene informado, aunque el naming del campo conserve esa etiqueta.
 
 **Disponibilidad**:
 - **Cruz Verde**: ❌ No aplica.
-- **Salcobrand**: ❌ El campo `cmr_price` existe en el objeto del producto pero **no está disponible en el índice de búsqueda de Algolia** (siempre null). Solo se obtiene en la página de producto con sesión activa (fuera del alcance del MVP).
+- **Salcobrand**: ✅ Se toma desde `cmr_price` cuando existe.
 - **Ahumada**: ✅ Detectado mediante la presencia de la imagen `badge_30x40_cmr_falabella` en el tile y el atributo `content=` de esa imagen.
+- **Dr. Simi**: ❌ No aplica.
 
 **En el modelo**: Campo `channels.cmr: number | null`.
+
+---
+
+### 4. SBPay (`sbpay`)
+
+**Qué es**: Precio asociado al medio de pago SBPay o beneficio equivalente expuesto por Salcobrand.
+
+**Disponibilidad**:
+- **Cruz Verde**: ❌ No aplica.
+- **Salcobrand**: ✅ Se toma desde `direct_discount_sbpay` cuando mejora el precio presencial.
+- **Ahumada**: ❌ No aplica.
+- **Dr. Simi**: ❌ No aplica.
+
+**En el modelo**: Campo `channels.sbpay: number | null`.
 
 ---
 
@@ -52,7 +68,8 @@ El campo `channels.effective` representa **el mejor precio real disponible** par
 effective = Math.min(
   channels.store,
   channels.online ?? channels.store,
-  channels.cmr ?? channels.store
+  channels.cmr ?? channels.store,
+  channels.sbpay ?? channels.store
 )
 ```
 
@@ -67,25 +84,26 @@ Se usa para:
 
 ## Matriz de Disponibilidad por Farmacia
 
-| Farmacia | `store` | `online` | `cmr` | `effective` |
-|---|---|---|---|---|
-| Cruz Verde | ✅ | ❌ null | ❌ null | = store |
-| Salcobrand | ✅ | ✅ si < store | ❌ null (MVP) | min(store, online) |
-| Ahumada | ✅ | ❌ null (MVP) | ✅ si hay badge | min(store, cmr) |
+| Farmacia | `store` | `online` | `cmr` | `sbpay` | `effective` |
+|---|---|---|---|---|---|
+| Cruz Verde | ✅ | ❌ null | ❌ null | ❌ null | = store |
+| Salcobrand | ✅ | ✅ si < store | ✅ si viene `cmr_price` | ✅ si mejora `direct_discount_sbpay` | min(store, online, cmr, sbpay) |
+| Ahumada | ✅ | ❌ null | ✅ si hay badge | ❌ null | min(store, cmr) |
+| Dr. Simi | ✅ | ✅ si `Price < ListPrice` | ❌ null | ❌ null | min(store, online) |
 
 ---
 
 ## Representación en la UI
 
-Cada fila de farmacia en `PriceRow` muestra hasta 3 columnas de precio:
+Cada fila de farmacia en `PriceRow` muestra hasta 4 columnas de precio:
 
 ```
 ┌─────────────────────────────────────────┐
 │ 🟢 SALCOBRAND                           │
 │                                         │
-│  Presencial    Online      CMR          │
-│   $3.290       $2.490 ✓    —            │
-│              (mejor precio)             │
+│  Presencial    Online      CMR      SBPay│
+│   $3.290       $2.490      —        $2.290✓│
+│                          (mejor precio)   │
 └─────────────────────────────────────────┘
 ```
 
@@ -101,4 +119,4 @@ Cada fila de farmacia en `PriceRow` muestra hasta 3 columnas de precio:
 El producto se muestra con los precios en gris y una etiqueta "Sin stock". Se incluye en la comparación para que el usuario sepa el precio de referencia aunque no esté disponible hoy.
 
 ### Farmacia sin resultados (error de scraping)
-Si un scraper falla (timeout, cambio de API, etc.), la farmacia simplemente no aparece en los resultados de ese medicamento. `Promise.allSettled()` en el API garantiza que la falla de una no cancele las otras dos.
+Si un client falla (timeout, cambio de API, etc.), la farmacia simplemente no aparece en los resultados de ese medicamento. `Promise.allSettled()` en `mobile/src/lib/search.ts` garantiza que la falla de una no cancele las otras.

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { View, Text, FlatList, RefreshControl, SafeAreaView, TouchableOpacity } from "react-native";
+import { View, Text, FlatList, RefreshControl, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import type { MedicationResult } from "@/lib/types";
 import { useLocalSearchParams } from "expo-router";
 import { MedicationCard } from "@/components/MedicationCard";

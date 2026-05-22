@@ -22,7 +22,7 @@
         "backgroundColor": "#16a34a"
       },
       "package": "mla.app.comparafarma",
-      "versionCode": 5
+      "versionCode": 6
     },
     "web": {
       "bundler": "metro"
@@ -41,6 +41,12 @@
         "projectId": "4de81d7d-c9ab-470c-be3c-04eb43047e59"
       }
     },
-    "owner": "belford"
+    "owner": "belford",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4de81d7d-c9ab-470c-be3c-04eb43047e59"
+    }
   }
 }

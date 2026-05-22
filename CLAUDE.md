@@ -4,22 +4,29 @@ App móvil (React Native + Expo) que compara en tiempo real los precios de medic
 
 ## Arquitectura
 
-La app llama **directamente** a las APIs de cada farmacia desde el dispositivo móvil — sin backend ni servidor intermedio. React Native no tiene restricciones CORS (no es un browser).
+El repo ahora soporta dos modos:
+
+- **Preferido**: `mobile` consulta el backend `api/` (`/api/search`) y el backend consulta las farmacias.
+- **Fallback**: si `EXPO_PUBLIC_API_URL` no está definido, la app vuelve a consultar las farmacias directamente desde el dispositivo.
 
 ```
-App móvil (Expo)
-      ↓
- Promise.allSettled([
-   searchCruzVerde(),    ← REST JSON (Demandware)
-   searchSalcobrand(),   ← Algolia Search API
-   searchAhumada(),      ← HTML scraping (fetch + regex)
-   searchDrSimi(),       ← REST JSON (VTEX Catalog API)
- ])
-      ↓
- mergeDuplicates() → MedicationResult[]
+App móvil (Expo)                     Backend opcional (Vercel)
+      ↓                                         ↓
+ searchMedications() ───────────────→  GET /api/search?q=...
+      │                                         ↓
+                                             Promise.allSettled([
+                                               searchCruzVerde(),
+                                               searchSalcobrand(),
+                                               searchAhumada(),
+                                               searchDrSimi(),
+                                             ])
+                                                       ↓
+                                          mergeDuplicates() → MedicationResult[]
 ```
 
-El punto de entrada es `mobile/src/lib/search.ts → searchMedications()`.
+Puntos de entrada:
+- `mobile/src/lib/search.ts → searchMedications()`
+- `api/api/search.ts → /api/search`
 
 ## Estructura del Repositorio (Monorepo pnpm)
 
@@ -28,6 +35,14 @@ compara-farma/
 ├── CLAUDE.md
 ├── package.json                 ← pnpm workspaces: mobile
 ├── pnpm-workspace.yaml
+├── api/                         ← backend mínimo para Vercel
+│   ├── api/                     ← entrypoints serverless: search.ts, health.ts
+│   └── src/
+│       ├── routes/              ← handlers HTTP
+│       ├── services/            ← searchService
+│       ├── clients/             ← integraciones con farmacias
+│       ├── lib/                 ← tipos, normalización, cache, http helpers
+│       └── middleware/          ← auth, rate limit, request id
 ├── docs/
 │   ├── pharmacy-apis.md         ← endpoints, auth, response schemas por farmacia
 │   ├── price-channels.md        ← semántica de presencial/online/CMR/SBPay
@@ -41,12 +56,7 @@ compara-farma/
         ├── components/          ← SearchBar, MedicationCard, PriceRow, PriceChannel,
         │                           PharmacyBadge, EmptyState, SkeletonCard
         ├── lib/
-        │   ├── search.ts        ← orquestador principal: llama a los 4 clients
-        │   ├── clients/
-        │   │   ├── cruzverde.ts ← Cruz Verde Demandware API
-        │   │   ├── salcobrand.ts← Salcobrand Algolia
-        │   │   ├── ahumada.ts   ← Ahumada HTML scraping
-        │   │   └── drsimi.ts    ← Dr. Simi VTEX Catalog API
+        │   ├── search.ts        ← client HTTP al backend `/api/search`
         │   ├── normalization.ts ← cleanQuery(), matchKey(), mergeDuplicates(), effectivePrice()
         │   ├── cache.ts         ← AsyncStorage LRU, TTL 30 min, prefijo search_cache_v4_
         │   └── formatters.ts    ← formatCLP(), scrapedAgo()
@@ -152,6 +162,7 @@ Usuario escribe "paracetamol 500"
 ```bash
 pnpm install           # instalar todas las dependencias (raíz)
 pnpm dev               # iniciar Expo (equivale a expo start)
+pnpm dev:api           # iniciar backend con vercel dev
 pnpm android           # iniciar en Android
 pnpm ios               # iniciar en iOS
 pnpm typecheck         # type check completo
@@ -171,11 +182,11 @@ eas update --branch production --message "fix: ..."
 - **Bundle ID iOS**: `mla.app.comparafarma`
 - **Categoría**: Health & Fitness
 - **Política de privacidad**: `https://enarhos.github.io/appComparaFarma/privacy-policy.html`
-- **versionCode actual**: 5 (auto-increment en producción)
+- **versionCode actual**: 6
 
 ## Advertencia: Fragilidad del Scraper de Ahumada
 
-`mobile/src/lib/clients/ahumada.ts` extrae precios con regex sobre HTML del storefront de Demandware. Si Ahumada actualiza su layout, el scraper puede fallar silenciosamente (devuelve array vacío).
+`api/src/clients/ahumada.ts` extrae precios con regex sobre HTML del storefront de Demandware. Si Ahumada actualiza su layout, el scraper puede fallar silenciosamente (devuelve array vacío).
 
 Señal de alerta: búsquedas de medicamentos comunes no retornan resultados de Ahumada.
 

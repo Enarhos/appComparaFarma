@@ -1,36 +1,29 @@
-import { mergeDuplicates, toMedicationResult } from "@/lib/normalization";
 import type { MedicationResult } from "@/lib/types";
-import { PHARMACIES } from "@/constants/pharmacies";
-import { searchCruzVerde } from "./clients/cruzverde";
-import { searchSalcobrand } from "./clients/salcobrand";
-import { searchAhumada } from "./clients/ahumada";
-import { searchDrSimi } from "./clients/drsimi";
+
+const API_URL = process.env.EXPO_PUBLIC_API_URL?.trim() ?? "";
+const API_KEY = process.env.EXPO_PUBLIC_API_KEY?.trim() ?? "";
+
+async function searchViaBackend(query: string, signal?: AbortSignal): Promise<MedicationResult[]> {
+  const params = new URLSearchParams({ q: query });
+  const res = await fetch(`${API_URL.replace(/\/$/, "")}/api/search?${params.toString()}`, {
+    signal,
+    headers: API_KEY ? { "x-api-key": API_KEY } : undefined,
+  });
+
+  if (!res.ok) {
+    throw new Error(`API search failed with status ${res.status}`);
+  }
+
+  return await res.json() as MedicationResult[];
+}
 
 export async function searchMedications(
   query: string,
   signal?: AbortSignal
 ): Promise<MedicationResult[]> {
-  const [cvResult, sbResult, ahResult, dsResult] = await Promise.allSettled([
-    searchCruzVerde(query, signal),
-    searchSalcobrand(query, signal),
-    searchAhumada(query, signal),
-    searchDrSimi(query, signal),
-  ]);
+  if (!API_URL) {
+    throw new Error("EXPO_PUBLIC_API_URL is required for mobile search.");
+  }
 
-  const all: MedicationResult[] = [];
-
-  if (cvResult.status === "fulfilled")
-    for (const p of cvResult.value)
-      all.push(toMedicationResult(p, "cruz-verde", PHARMACIES["cruz-verde"].name));
-  if (sbResult.status === "fulfilled")
-    for (const p of sbResult.value)
-      all.push(toMedicationResult(p, "salcobrand", PHARMACIES["salcobrand"].name));
-  if (ahResult.status === "fulfilled")
-    for (const p of ahResult.value)
-      all.push(toMedicationResult(p, "ahumada", PHARMACIES["ahumada"].name));
-  if (dsResult.status === "fulfilled")
-    for (const p of dsResult.value)
-      all.push(toMedicationResult(p, "dr-simi", PHARMACIES["dr-simi"].name));
-
-  return mergeDuplicates(all).sort((a, b) => a.bestPrice - b.bestPrice);
+  return searchViaBackend(query, signal);
 }

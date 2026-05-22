@@ -1,6 +1,6 @@
 # Pharmacy APIs — Referencia Técnica
 
-Documentación de los endpoints usados para scraping de precios. Todos son consumidos desde `api/src/api/clients/` (nunca desde el mobile directamente).
+Documentación de los endpoints usados por el backend en `api/src/clients/`. La app móvil puede seguir usando sus clients locales como fallback si `EXPO_PUBLIC_API_URL` no está configurado.
 
 ---
 
@@ -115,7 +115,8 @@ Content-Type: application/json
 |---|---|---|
 | `hit.normal_price` | `channels.store` | Precio presencial (siempre presente) |
 | `hit.direct_discount` | `channels.online` | Solo si `parseFloat(direct_discount) < normal_price` |
-| `hit.cmr_price` | `channels.cmr` | Precio Tarjeta Más — presente en algunos productos; null si no aplica |
+| `hit.cmr_price` | `channels.cmr` | Precio Tarjeta Más cuando viene informado |
+| `hit.direct_discount_sbpay` | `channels.sbpay` | Solo si es menor a `normal_price` |
 | `hit.internet_price` | *(ignorar)* | Campo presente pero siempre null en el índice |
 | `hit.has_stock` | `hasStock` | |
 | `hit.package_delivery` | `hasOnlineDelivery` | |
@@ -128,8 +129,10 @@ Si solo hay `slug` sin `sku`: `https://salcobrand.cl/products/{slug}`
 
 ### Quirks conocidos
 - `direct_discount` es un **string** (`"2490.0"`), no number — usar `parseFloat()`
-- `cmr_price` corresponde al precio **Tarjeta Más Salcobrand**. Aparece para algunos productos; null cuando no aplica el descuento. El campo `internet_price` siempre es null en el índice.
-- La clave `X-Algolia-API-Key` es una search-only key (solo lectura). Aún así no debe ir en el binario de la app.
+- `cmr_price` corresponde al precio **Tarjeta Más Salcobrand**. Puede venir null.
+- `direct_discount_sbpay` puede venir como string o number; se parsea y se usa solo si mejora el precio presencial.
+- El campo `internet_price` no se usa en la implementación actual.
+- La clave `X-Algolia-API-Key` es search-only y hoy está embebida en el cliente móvil.
 
 ---
 
@@ -173,7 +176,7 @@ El HTML devuelve una lista de "product tiles". Cada tile tiene la forma:
 
 ### Lógica de extracción de precios (CRÍTICA)
 
-La lógica más compleja del proyecto. Ver `api/src/api/clients/ahumada.ts` para el código exacto.
+La lógica más compleja del proyecto. Ver `api/src/clients/ahumada.ts` para el código exacto.
 
 **Caso 1: Tile sin badge CMR**
 - `promotion-badge-container` contiene directamente el precio presencial
@@ -220,20 +223,16 @@ Cuando el scraper devuelve 0 resultados para Ahumada (y debería devolver algo):
 
 1. Abrir `https://www.farmaciasahumada.cl/on/demandware.store/Sites-ahumada-cl-Site/es_CL/Search-Show?q=paracetamol&start=0&sz=10` en browser → Guardar HTML
 2. Buscar en el HTML los containers de precio actuales
-3. Actualizar los regex en `api/src/api/clients/ahumada.ts`:
+3. Actualizar los regex en `api/src/clients/ahumada.ts`:
    - `tileRe` — regex del div wrapper de cada producto
    - `linkM` — regex para extraer nombre y URL
    - `badgeM` — regex del container de precio
-4. Actualizar el fixture de test en `api/src/api/clients/__tests__/ahumada.test.ts`
+4. Si se agregan tests en el futuro, crear o actualizar fixtures contra el HTML real de Ahumada
 
 ---
 
-## Variables de Entorno (Vercel)
+## Notas de Arquitectura
 
-```
-CRUZVERDE_CLIENT_ID=c19ce24d-1677-4754-b9f7-c193997c5a92
-ALGOLIA_APP_ID=GM3RP06HJG
-ALGOLIA_API_KEY=0259fe250b3be4b1326eb85e47aa7d81
-```
-
-Todas se configuran en el dashboard de Vercel, nunca en archivos commiteados.
+- El backend preferido vive en `api/` y hoy se despliega en Vercel
+- `mobile/` mantiene clients locales como fallback de desarrollo
+- Sigue existiendo riesgo de cambios en endpoints, rate limiting o bloqueo por parte de terceros
