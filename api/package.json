@@ -6,6 +6,7 @@
     "dev": "pnpm dlx vercel dev",
     "deploy:preview": "pnpm dlx vercel deploy",
     "deploy:prod": "pnpm dlx vercel deploy --prod",
+    "healthcheck:prod": "node scripts/check-production-health.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },

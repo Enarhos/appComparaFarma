@@ -173,6 +173,36 @@ Si responde `ok: true`, el alias de producción quedó actualizado.
 
 ---
 
+## Monitoreo Operativo
+
+Hay un workflow separado `.github/workflows/monitor-api.yml` que ejecuta un healthcheck de producción:
+
+- manualmente con `workflow_dispatch`
+- automáticamente cada 6 horas
+
+El check:
+
+- consulta `https://comparafarma-api.vercel.app/api/health`
+- consulta `/api/search?debug=1` con queries reales
+- valida que cada farmacia responda al menos una vez y que no devuelva `0` resultados en todas las queries monitoreadas
+
+Comando local equivalente:
+
+```bash
+pnpm --filter api healthcheck:prod
+```
+
+Variables opcionales:
+
+```bash
+API_URL=https://comparafarma-api.vercel.app
+HEALTHCHECK_QUERIES=paracetamol,ibuprofeno
+```
+
+Si el workflow falla, GitHub marcará la corrida en rojo y puede notificar por correo según la configuración de la cuenta.
+
+---
+
 ## OTA Updates
 
 Para cambios solo de JavaScript/TypeScript, sin modificaciones nativas:
