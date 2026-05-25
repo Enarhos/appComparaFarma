@@ -55,6 +55,15 @@ export default function HomeScreen() {
           <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1">
             Compara precios en Cruz Verde, Salcobrand, Ahumada y Dr. Simi
           </Text>
+          <TouchableOpacity
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            onPress={() => router.push("/about" as any)}
+            className="absolute right-0 top-1 p-1"
+            hitSlop={10}
+            accessibilityLabel="Acerca de y sugerencias"
+          >
+            <Ionicons name="information-circle-outline" size={22} color="#9ca3af" />
+          </TouchableOpacity>
         </View>
 
         <SearchBar onSearch={handleSearch} autoFocus />
