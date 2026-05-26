@@ -1,8 +1,11 @@
+import { useEffect, useState } from "react";
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { ONBOARDING_KEY } from "./onboarding";
 import { SearchBar } from "@/components/SearchBar";
 import { useHistoryStore } from "@/store/historyStore";
 import { useFavoritesStore } from "@/store/favoritesStore";
@@ -15,6 +18,18 @@ const QUICK_SEARCHES = ["Paracetamol", "Ibuprofeno", "Amoxicilina", "Metformina"
 
 export default function HomeScreen() {
   const router = useRouter();
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    AsyncStorage.getItem(ONBOARDING_KEY).then((val) => {
+      if (!val) {
+        router.replace("/onboarding" as any);
+      } else {
+        setReady(true);
+      }
+    });
+  }, []);
+
   const { items: recentSearches, remove, clear } = useHistoryStore();
   const { keys: favKeys, cachedResults } = useFavoritesStore();
   const setResults = useSearchStore((s) => s.setResults);
@@ -42,6 +57,8 @@ export default function HomeScreen() {
   }
 
   const favMeds = favKeys.map((k) => cachedResults[k]).filter(Boolean);
+
+  if (!ready) return null;
 
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">

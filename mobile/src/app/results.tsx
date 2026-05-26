@@ -6,6 +6,7 @@ import {
   RefreshControl,
   TouchableOpacity,
   ScrollView,
+  ActivityIndicator,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -178,6 +179,16 @@ export default function ResultsScreen() {
               })}
             </View>
           </ScrollView>
+        </View>
+      )}
+
+      {/* Estado de carga descriptivo */}
+      {isLoading && (
+        <View className="flex-row items-center gap-2 px-4 py-3">
+          <ActivityIndicator size="small" color="#16a34a" />
+          <Text className="text-sm text-gray-400 dark:text-gray-500">
+            Consultando Cruz Verde, Salcobrand, Ahumada y Dr. Simi...
+          </Text>
         </View>
       )}
 

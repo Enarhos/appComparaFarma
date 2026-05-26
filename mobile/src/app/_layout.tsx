@@ -24,6 +24,7 @@ function RootLayout() {
         <Stack.Screen name="results" options={{ title: "Resultados", headerBackTitle: "Buscar" }} />
         <Stack.Screen name="medication" options={{ headerBackTitle: "Resultados" }} />
         <Stack.Screen name="about" options={{ title: "Acerca de", headerBackTitle: "Inicio" }} />
+        <Stack.Screen name="onboarding" options={{ headerShown: false }} />
       </Stack>
     </>
   );

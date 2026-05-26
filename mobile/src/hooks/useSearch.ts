@@ -38,7 +38,16 @@ export function useSearch() {
     } catch (err) {
       if ((err as Error).name === "AbortError") return;
       Sentry.captureException(err, { extra: { query } });
-      setError("No se pudo obtener los precios. Verifica tu conexión e intenta de nuevo.");
+      const isNetworkError =
+        err instanceof TypeError &&
+        (err.message.includes("Network") ||
+          err.message.includes("fetch") ||
+          err.message.includes("Failed"));
+      setError(
+        isNetworkError
+          ? "Sin conexión a internet. Verifica tu red e intenta de nuevo."
+          : "No se pudo consultar las farmacias. Intenta de nuevo en un momento."
+      );
     }
   }, [setLoading, setResults, setError, setQuery]);
 
