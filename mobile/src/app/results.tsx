@@ -227,7 +227,7 @@ export default function ResultsScreen() {
         data={(isLoading ? SKELETON_KEYS : displayResults) as (string | MedicationResult)[]}
         keyExtractor={(item) => (typeof item === "string" ? item : item.matchKey)}
         renderItem={({ item }) =>
-          typeof item === "string" ? <SkeletonCard /> : <MedicationCard medication={item} />
+          typeof item === "string" ? <SkeletonCard /> : <MedicationCard medication={item} activePharmacies={activePharmacies} />
         }
         ListEmptyComponent={
           !isLoading ? (

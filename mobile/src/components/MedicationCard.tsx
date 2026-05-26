@@ -3,17 +3,27 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
-import type { MedicationResult } from "@/lib/types";
+import type { MedicationResult, PharmacySlug } from "@/lib/types";
 import { PriceRow } from "./PriceRow";
 import { formatCLP } from "@/lib/formatters";
 import { useFavoritesStore } from "@/store/favoritesStore";
 
 interface MedicationCardProps {
   medication: MedicationResult;
+  activePharmacies?: Set<PharmacySlug>;
 }
 
-export function MedicationCard({ medication }: MedicationCardProps) {
+export function MedicationCard({ medication, activePharmacies }: MedicationCardProps) {
   const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, matchKey, imageUrl } = medication;
+
+  const visiblePrices = activePharmacies
+    ? prices.filter((p) => activePharmacies.has(p.pharmacySlug))
+    : prices;
+
+  const visibleBestPrice =
+    visiblePrices.length > 0
+      ? Math.min(...visiblePrices.map((p) => p.channels.effective))
+      : bestPrice;
   const router = useRouter();
   const [imgError, setImgError] = useState(false);
   const { toggle, isFavorite } = useFavoritesStore();
@@ -60,7 +70,7 @@ export function MedicationCard({ medication }: MedicationCardProps) {
             </TouchableOpacity>
             <Text className="text-xs text-gray-400">desde</Text>
             <Text className="text-lg font-extrabold text-green-600">
-              {formatCLP(bestPrice)}
+              {formatCLP(visibleBestPrice)}
             </Text>
           </View>
         </View>
@@ -72,7 +82,7 @@ export function MedicationCard({ medication }: MedicationCardProps) {
       </View>
 
       <View className="px-4 pb-3 border-t border-gray-50 dark:border-gray-700 mt-1">
-        {prices.map((p) => (
+        {visiblePrices.map((p) => (
           <PriceRow key={p.pharmacySlug} pharmacyPrice={p} />
         ))}
       </View>
