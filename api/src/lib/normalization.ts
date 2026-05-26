@@ -56,7 +56,11 @@ export function matchKey(name: string): string {
   const mgHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*mg\b/gi)];
   const mcgHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:mcg|µg|ug)\b/gi)];
   const gHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*g\b/gi)];
-  const lower = raw.replace(/[^\w\s]/g, " ").replace(/\s+/g, " ").trim();
+  const lower = raw
+    .replace(/(\w)-(\w)/g, "$1$2") // Trio-Val → TrioVal, Co-Amoxiclav → CoAmoxiclav
+    .replace(/[^\w\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
   const words = lower.split(" ");
   let first = "";
   for (const w of words) {
