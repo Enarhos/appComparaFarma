@@ -161,7 +161,7 @@ export default function HomeScreen() {
         {/* Pie de página */}
         <View className="items-center mt-8 mb-2">
           <Text className="text-xs text-gray-300 dark:text-gray-600">
-            Hecho con cariño para los chilenos 🇨🇱
+            Hecho con ❤️ para los chilenos 🇨🇱
           </Text>
         </View>
       </ScrollView>
