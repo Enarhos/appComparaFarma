@@ -12,6 +12,8 @@ api/api/reports/
 .DS_Store
 android/
 ios/
+*.jks
+*.keystore
 .venv/
 __pycache__/
 .claude/
