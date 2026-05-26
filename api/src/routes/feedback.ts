@@ -75,7 +75,7 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
       `Email del usuario: ${userEmail || "(no proporcionado)"}`,
     ];
 
-    await fetch("https://api.resend.com/emails", {
+    const resendRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${RESEND_API_KEY}`,
@@ -88,9 +88,12 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
         text: lines.join("\n"),
       }),
     });
+
+    const resendBody = await resendRes.json().catch(() => ({}));
+    console.log("[feedback] resend status:", resendRes.status, JSON.stringify(resendBody));
   } else {
     // Sin clave configurada: log en consola (útil en dev)
-    console.log("[feedback]", { message, email: userEmail, ip });
+    console.log("[feedback] sin RESEND_API_KEY", { message, email: userEmail, ip });
   }
 
   return json(response, 200, { ok: true });

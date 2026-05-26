@@ -55,15 +55,6 @@ export default function HomeScreen() {
           <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1">
             Compara precios en Cruz Verde, Salcobrand, Ahumada y Dr. Simi
           </Text>
-          <TouchableOpacity
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            onPress={() => router.push("/about" as any)}
-            className="absolute right-0 top-1 p-1"
-            hitSlop={10}
-            accessibilityLabel="Acerca de y sugerencias"
-          >
-            <Ionicons name="information-circle-outline" size={22} color="#9ca3af" />
-          </TouchableOpacity>
         </View>
 
         <SearchBar onSearch={handleSearch} autoFocus />
@@ -146,6 +137,26 @@ export default function HomeScreen() {
             ))}
           </View>
         )}
+        {/* Banner: Ayúdanos a mejorar */}
+        <TouchableOpacity
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          onPress={() => router.push("/about" as any)}
+          activeOpacity={0.8}
+          className="mt-8 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-2xl px-4 py-4 flex-row items-center"
+        >
+          <View className="bg-green-100 dark:bg-green-900 rounded-full p-2 mr-3">
+            <Ionicons name="chatbubble-ellipses-outline" size={20} color="#16a34a" />
+          </View>
+          <View className="flex-1">
+            <Text className="text-sm font-semibold text-green-800 dark:text-green-300">
+              Ayúdanos a mejorar
+            </Text>
+            <Text className="text-xs text-green-600 dark:text-green-500 mt-0.5">
+              Envíanos tus sugerencias o comentarios
+            </Text>
+          </View>
+          <Ionicons name="chevron-forward" size={18} color="#16a34a" />
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
