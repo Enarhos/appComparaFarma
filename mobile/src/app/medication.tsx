@@ -87,6 +87,9 @@ export default function MedicationScreen() {
           </View>
         </View>
 
+        {/* Calculadora de ahorro */}
+        <SavingsCard prices={prices} />
+
         {/* Una card por farmacia */}
         {prices.map((p) => (
           <PharmacyDetail key={p.pharmacySlug} pharmacyPrice={p} />
@@ -148,6 +151,68 @@ function PharmacyDetail({ pharmacyPrice }: { pharmacyPrice: PharmacyPrice }) {
             <Text className="text-white text-xs font-semibold">Ver en farmacia →</Text>
           </TouchableOpacity>
         )}
+      </View>
+    </View>
+  );
+}
+
+function SavingsCard({ prices }: { prices: PharmacyPrice[] }) {
+  if (prices.length < 2) return null;
+
+  const sorted = [...prices].sort((a, b) => a.channels.effective - b.channels.effective);
+  const cheapest = sorted[0]!;
+  const priciest = sorted[sorted.length - 1]!;
+  const savings = priciest.channels.effective - cheapest.channels.effective;
+
+  if (savings <= 0) return null;
+
+  const pct = Math.round((savings / priciest.channels.effective) * 100);
+  const cheapestName = PHARMACIES[cheapest.pharmacySlug]?.name ?? cheapest.pharmacySlug;
+  const priestName = PHARMACIES[priciest.pharmacySlug]?.name.replace("Farmacias ", "") ?? priciest.pharmacySlug;
+
+  return (
+    <View className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-2xl p-4">
+      <View className="flex-row items-center gap-2 mb-3">
+        <Ionicons name="calculator-outline" size={16} color="#16a34a" />
+        <Text className="text-sm font-bold text-green-800 dark:text-green-300">
+          Calculadora de ahorro
+        </Text>
+      </View>
+
+      <View className="flex-row justify-between mb-3">
+        <View className="flex-1">
+          <Text className="text-xs text-gray-500 dark:text-gray-400 mb-0.5">Más barato</Text>
+          <Text className="text-lg font-extrabold text-green-600">
+            {formatCLP(cheapest.channels.effective)}
+          </Text>
+          <Text className="text-xs text-gray-500 dark:text-gray-400" numberOfLines={1}>
+            {cheapestName}
+          </Text>
+        </View>
+
+        <View className="items-center justify-center px-3">
+          <Ionicons name="arrow-forward" size={16} color="#9ca3af" />
+        </View>
+
+        <View className="flex-1 items-end">
+          <Text className="text-xs text-gray-400 mb-0.5">Más caro</Text>
+          <Text className="text-lg font-bold text-gray-400 line-through">
+            {formatCLP(priciest.channels.effective)}
+          </Text>
+          <Text className="text-xs text-gray-400" numberOfLines={1}>
+            {priestName}
+          </Text>
+        </View>
+      </View>
+
+      <View className="bg-green-600 rounded-xl px-4 py-2.5 flex-row items-center justify-between">
+        <Text className="text-white text-sm font-medium">
+          Ahorras eligiendo {cheapestName.replace("Farmacias ", "")}
+        </Text>
+        <Text className="text-white font-extrabold text-base">
+          {formatCLP(savings)}{" "}
+          <Text className="text-green-200 text-xs font-medium">({pct}%)</Text>
+        </Text>
       </View>
     </View>
   );

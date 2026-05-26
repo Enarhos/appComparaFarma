@@ -157,6 +157,13 @@ export default function HomeScreen() {
           </View>
           <Ionicons name="chevron-forward" size={18} color="#16a34a" />
         </TouchableOpacity>
+
+        {/* Pie de página */}
+        <View className="items-center mt-8 mb-2">
+          <Text className="text-xs text-gray-300 dark:text-gray-600">
+            Hecho con cariño para los chilenos 🇨🇱
+          </Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
