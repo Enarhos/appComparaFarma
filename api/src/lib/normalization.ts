@@ -48,6 +48,7 @@ const STOP_WORDS = new Set([
   "parche", "supositorio", "colirio", "nasal", "ocular", "rectal",
   "mg", "ml", "mcg", "g", "ui", "iu", "infantil", "adulto", "forte",
   "plus", "pediatrico", "nino",
+  "dia", "noche", "dn", "yn",   // descriptores de turno, no parte del nombre de marca
 ]);
 
 export function matchKey(name: string): string {
@@ -62,11 +63,26 @@ export function matchKey(name: string): string {
     .replace(/\s+/g, " ")
     .trim();
   const words = lower.split(" ");
-  let first = "";
-  for (const w of words) {
-    if (w.length >= 2 && !STOP_WORDS.has(w) && !/^\d/.test(w)) {
-      first = w;
-      break;
+
+  // Palabras de marca: solo letras, no stop words, no empiezan con dígito
+  const brandWords = words.filter(
+    (w) => w.length >= 2 && !STOP_WORDS.has(w) && !/^\d/.test(w) && /^[a-z]+$/.test(w)
+  );
+
+  let first = brandWords[0] ?? "";
+  // Si la primera palabra es corta (≤4 letras), unirla con la siguiente corta
+  // para normalizar "Trio Val" → "trioval" igual que "Trioval"
+  if (first.length >= 2 && first.length <= 4 && brandWords[1] && brandWords[1].length <= 4) {
+    first = first + brandWords[1];
+  }
+
+  // Fallback: si no hay palabra puramente alfabética (nombre empieza con número)
+  if (!first) {
+    for (const w of words) {
+      if (w.length >= 2 && !STOP_WORDS.has(w) && !/^\d/.test(w)) {
+        first = w;
+        break;
+      }
     }
   }
 
