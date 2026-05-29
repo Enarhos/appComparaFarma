@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { View } from "react-native";
+import { View, type DimensionValue } from "react-native";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -8,8 +8,13 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
-function Block({ w, h = 12 }: { w: number; h?: number }) {
-  return <View style={{ width: `${w}%`, height: h }} className="bg-gray-200 rounded" />;
+function Block({ w, h = 12 }: { w: DimensionValue; h?: number }) {
+  return (
+    <View
+      style={{ width: w, height: h }}
+      className="bg-gray-200 dark:bg-gray-700 rounded-lg"
+    />
+  );
 }
 
 export function SkeletonCard() {
@@ -31,35 +36,23 @@ export function SkeletonCard() {
   return (
     <Animated.View
       style={animStyle}
-      className="bg-white rounded-2xl border border-gray-100 overflow-hidden"
+      className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 px-4 py-3 flex-row items-center gap-3"
     >
-      {/* Encabezado: nombre + precio */}
-      <View className="px-4 pt-4 pb-2 flex-row items-start justify-between gap-2">
-        <View className="flex-1 gap-2">
-          <Block w={72} h={14} />
-          <Block w={40} h={10} />
-        </View>
-        <View className="items-end gap-1">
-          <Block w={100} h={10} />
-          <Block w={100} h={18} />
+      {/* Placeholder imagen */}
+      <View className="w-[52px] h-[52px] rounded-xl bg-gray-200 dark:bg-gray-700" />
+
+      {/* Placeholder texto */}
+      <View className="flex-1 gap-2">
+        <Block w="75%" h={14} />
+        <Block w="45%" h={10} />
+        <View className="flex-row gap-2 mt-1">
+          <Block w={90} h={20} />
+          <Block w={80} h={20} />
         </View>
       </View>
 
-      {/* Filas de farmacia */}
-      <View className="px-4 pb-3 border-t border-gray-50 mt-1">
-        {[0, 1, 2].map((i) => (
-          <View key={i} className="py-3 border-b border-gray-50">
-            <View className="mb-2">
-              <Block w={35} h={16} />
-            </View>
-            <View className="flex-row gap-3">
-              <Block w={28} h={12} />
-              <Block w={28} h={12} />
-              <Block w={28} h={12} />
-            </View>
-          </View>
-        ))}
-      </View>
+      {/* Placeholder chevron */}
+      <View className="w-4 h-4 rounded bg-gray-200 dark:bg-gray-700" />
     </Animated.View>
   );
 }

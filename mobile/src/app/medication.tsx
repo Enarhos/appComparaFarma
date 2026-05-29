@@ -4,6 +4,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useSearchStore } from "@/store/searchStore";
+import { useCartStore } from "@/store/cartStore";
+import { useConfigStore } from "@/store/configStore";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP, scrapedAgo } from "@/lib/formatters";
 import type { PharmacyPrice, PharmacySlug } from "@/lib/types";
@@ -22,8 +24,11 @@ export default function MedicationScreen() {
   const { key } = useLocalSearchParams<{ key: string }>();
   const results = useSearchStore((s) => s.results);
   const [imgError, setImgError] = useState(false);
+  const { add, remove, isInCart } = useCartStore();
+  const isActive = useConfigStore((s) => s.isActive);
 
   const medication = results.find((r) => r.matchKey === key);
+  const inCart = medication ? isInCart(medication.matchKey) : false;
 
   if (!medication) {
     return (
@@ -33,7 +38,17 @@ export default function MedicationScreen() {
     );
   }
 
-  const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, bestPharmacy, imageUrl } = medication;
+  // Rebinding para que TypeScript entienda que es no-null dentro de closures
+  const med = medication;
+  const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, bestPharmacy, imageUrl } = med;
+
+  function handleCartToggle() {
+    if (inCart) {
+      remove(med.matchKey);
+    } else {
+      add(med);
+    }
+  }
 
   async function handleShare() {
     const channelLabel = getBestChannelLabel(prices, bestPharmacy as PharmacySlug, bestPrice);
@@ -66,9 +81,18 @@ export default function MedicationScreen() {
           )}
           <View className="flex-row items-start justify-between">
             <Text className="text-xl font-bold text-gray-900 dark:text-white flex-1 mr-2">{canonicalName}</Text>
-            <TouchableOpacity onPress={handleShare} hitSlop={8} className="mt-1">
-              <Ionicons name="share-outline" size={22} color="#9ca3af" />
-            </TouchableOpacity>
+            <View className="flex-row items-center gap-3 mt-1">
+              <TouchableOpacity onPress={handleCartToggle} hitSlop={8}>
+                <Ionicons
+                  name={inCart ? "cart" : "cart-outline"}
+                  size={22}
+                  color={inCart ? "#16a34a" : "#9ca3af"}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={handleShare} hitSlop={8}>
+                <Ionicons name="share-outline" size={22} color="#9ca3af" />
+              </TouchableOpacity>
+            </View>
           </View>
           {laboratory && (
             <Text className="text-sm text-gray-400">{laboratory}</Text>
@@ -88,10 +112,10 @@ export default function MedicationScreen() {
         </View>
 
         {/* Calculadora de ahorro */}
-        <SavingsCard prices={prices} />
+        <SavingsCard prices={prices.filter((p) => isActive(p.pharmacySlug))} />
 
-        {/* Una card por farmacia */}
-        {prices.map((p) => (
+        {/* Una card por farmacia — solo farmacias activas */}
+        {prices.filter((p) => isActive(p.pharmacySlug)).map((p) => (
           <PharmacyDetail key={p.pharmacySlug} pharmacyPrice={p} />
         ))}
 

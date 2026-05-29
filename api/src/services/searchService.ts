@@ -4,6 +4,7 @@ import { searchDrSimi } from "../clients/drsimi.js";
 import { searchSalcobrand } from "../clients/salcobrand.js";
 import { mergeDuplicates, toMedicationResult } from "../lib/normalization.js";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
+import { getDisabledPharmacies } from "../lib/pharmacyFlags.js";
 import type {
   MedicationResult,
   PharmacySearchDiagnostic,
@@ -60,28 +61,31 @@ export async function searchMedications(query: string): Promise<MedicationResult
   return execution.results;
 }
 
+const ALL_SOURCES: Array<{
+  slug: PharmacySlug;
+  fn: (query: string) => Promise<ScrapedProduct[]>;
+}> = [
+  { slug: "cruz-verde", fn: searchCruzVerde },
+  { slug: "salcobrand", fn: searchSalcobrand },
+  { slug: "ahumada",    fn: searchAhumada    },
+  { slug: "dr-simi",   fn: searchDrSimi     },
+];
+
 export async function searchMedicationsDetailed(query: string): Promise<SearchExecution> {
   const startedAt = Date.now();
-  const [cvResult, sbResult, ahResult, dsResult] = await Promise.all([
-    runSource("cruz-verde", searchCruzVerde, query),
-    runSource("salcobrand", searchSalcobrand, query),
-    runSource("ahumada", searchAhumada, query),
-    runSource("dr-simi", searchDrSimi, query),
-  ]);
+  const disabled = getDisabledPharmacies();
+
+  const activeSources = ALL_SOURCES.filter((s) => !disabled.has(s.slug));
+
+  const sourceResults = await Promise.all(
+    activeSources.map((s) => runSource(s.slug, s.fn, query))
+  );
 
   const all: MedicationResult[] = [];
-
-  for (const product of cvResult.products) {
-    all.push(toMedicationResult(product, "cruz-verde", PHARMACY_NAMES["cruz-verde"]));
-  }
-  for (const product of sbResult.products) {
-    all.push(toMedicationResult(product, "salcobrand", PHARMACY_NAMES.salcobrand));
-  }
-  for (const product of ahResult.products) {
-    all.push(toMedicationResult(product, "ahumada", PHARMACY_NAMES.ahumada));
-  }
-  for (const product of dsResult.products) {
-    all.push(toMedicationResult(product, "dr-simi", PHARMACY_NAMES["dr-simi"]));
+  for (const { slug, products } of sourceResults) {
+    for (const product of products) {
+      all.push(toMedicationResult(product, slug, PHARMACY_NAMES[slug]));
+    }
   }
 
   const results = mergeDuplicates(all).sort((a, b) => a.bestPrice - b.bestPrice);
@@ -92,12 +96,7 @@ export async function searchMedicationsDetailed(query: string): Promise<SearchEx
       totalResults: all.length,
       mergedResults: results.length,
       durationMs: Date.now() - startedAt,
-      pharmacies: [
-        cvResult.diagnostic,
-        sbResult.diagnostic,
-        ahResult.diagnostic,
-        dsResult.diagnostic,
-      ],
-    }
+      pharmacies: sourceResults.map((r) => r.diagnostic),
+    },
   };
 }

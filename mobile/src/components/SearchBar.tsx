@@ -5,16 +5,19 @@ import { useDebounce } from "@/hooks/useDebounce";
 
 const DEBOUNCE_MS = 500;
 const MIN_CHARS = 3;
+const MAX_SUGGESTIONS = 5;
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
   autoFocus?: boolean;
   liveSearch?: boolean;
+  suggestions?: string[];
 }
 
-export function SearchBar({ onSearch, autoFocus, liveSearch = false }: SearchBarProps) {
+export function SearchBar({ onSearch, autoFocus, liveSearch = false, suggestions = [] }: SearchBarProps) {
   const [value, setValue] = useState("");
   const [showVoiceTip, setShowVoiceTip] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<TextInput>(null);
 
   useDebounce(
@@ -27,9 +30,28 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false }: SearchBar
     [value]
   );
 
+  // Sugerencias filtradas según lo que el usuario escribe
+  const trimmedLower = value.trim().toLowerCase();
+  const filteredSuggestions =
+    trimmedLower.length >= 1
+      ? [...new Set(suggestions)]
+          .filter(
+            (s) =>
+              s.toLowerCase().includes(trimmedLower) &&
+              s.toLowerCase() !== trimmedLower
+          )
+          .slice(0, MAX_SUGGESTIONS)
+      : [];
+
+  const showSuggestions = isFocused && filteredSuggestions.length > 0;
+
   function handleSubmit() {
     const trimmed = value.trim();
-    if (trimmed.length >= MIN_CHARS) onSearch(trimmed);
+    if (trimmed.length >= MIN_CHARS) {
+      setIsFocused(false);
+      Keyboard.dismiss();
+      onSearch(trimmed);
+    }
   }
 
   function handleClear() {
@@ -37,8 +59,14 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false }: SearchBar
     inputRef.current?.focus();
   }
 
+  function handleSelectSuggestion(suggestion: string) {
+    setValue(suggestion);
+    setIsFocused(false);
+    Keyboard.dismiss();
+    onSearch(suggestion);
+  }
+
   function handleMic() {
-    // Abre el teclado y muestra el tip del micrófono nativo
     inputRef.current?.focus();
     Keyboard.dismiss();
     setTimeout(() => {
@@ -60,6 +88,8 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false }: SearchBar
           value={value}
           onChangeText={setValue}
           onSubmitEditing={handleSubmit}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setTimeout(() => setIsFocused(false), 150)}
           returnKeyType="search"
           autoFocus={autoFocus}
           autoCapitalize="none"
@@ -82,6 +112,30 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false }: SearchBar
           <Text className="text-white font-semibold text-sm">Buscar</Text>
         </TouchableOpacity>
       </View>
+
+      {/* Dropdown de sugerencias */}
+      {showSuggestions && (
+        <View className="mt-1 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+          {filteredSuggestions.map((suggestion, index) => (
+            <TouchableOpacity
+              key={suggestion}
+              onPress={() => handleSelectSuggestion(suggestion)}
+              activeOpacity={0.7}
+              className={`flex-row items-center gap-3 px-4 py-3 ${
+                index < filteredSuggestions.length - 1
+                  ? "border-b border-gray-50 dark:border-gray-700"
+                  : ""
+              }`}
+            >
+              <Ionicons name="search-outline" size={15} color="#9ca3af" />
+              <Text className="flex-1 text-gray-700 dark:text-gray-300 text-sm">
+                {suggestion}
+              </Text>
+              <Ionicons name="return-down-back-outline" size={14} color="#d1d5db" />
+            </TouchableOpacity>
+          ))}
+        </View>
+      )}
 
       {/* Tip micrófono */}
       {showVoiceTip && (

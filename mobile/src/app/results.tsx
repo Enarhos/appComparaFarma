@@ -10,19 +10,22 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { MedicationResult } from "@/lib/types";
 import type { PharmacySlug } from "@/lib/types";
 import { useLocalSearchParams } from "expo-router";
-import { MedicationCard } from "@/components/MedicationCard";
+import { MedicationListItem } from "@/components/MedicationListItem";
 import { SkeletonCard } from "@/components/SkeletonCard";
 import { EmptyState } from "@/components/EmptyState";
 import { useSearchStore } from "@/store/searchStore";
 import { useHistoryStore } from "@/store/historyStore";
+import { useConfigStore } from "@/store/configStore";
 import { useSearch } from "@/hooks/useSearch";
 import { PHARMACIES } from "@/constants/pharmacies";
 
+const TOOLTIP_KEY = "results_tooltip_v1_seen";
+
 const SKELETON_KEYS = ["sk-0", "sk-1", "sk-2"];
-const ALL_PHARMACIES = Object.keys(PHARMACIES) as PharmacySlug[];
 
 type SortOption = "price" | "name";
 
@@ -31,11 +34,14 @@ export default function ResultsScreen() {
   const { results, status, errorMessage } = useSearchStore();
   const { add: addToHistory } = useHistoryStore();
   const { search } = useSearch();
+  const activePharmacySlugs = useConfigStore((s) => s.activePharmacySlugs);
+
   const [bioOnly, setBioOnly] = useState(false);
   const [sortBy, setSortBy] = useState<SortOption>("price");
   const [activePharmacies, setActivePharmacies] = useState<Set<PharmacySlug>>(
-    new Set(ALL_PHARMACIES)
+    () => new Set(activePharmacySlugs())
   );
+  const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
     if (q) {
@@ -43,6 +49,14 @@ export default function ResultsScreen() {
       addToHistory(q);
     }
   }, [q, search, addToHistory]);
+
+  // Mostrar tooltip la primera vez que hay resultados
+  useEffect(() => {
+    if (status !== "success" || results.length === 0) return;
+    AsyncStorage.getItem(TOOLTIP_KEY).then((seen) => {
+      if (!seen) setShowTooltip(true);
+    });
+  }, [status, results.length]);
 
   function handleRefresh() {
     if (q) search(q, true);
@@ -151,7 +165,7 @@ export default function ResultsScreen() {
             className="px-4 pb-2"
           >
             <View className="flex-row gap-2">
-              {ALL_PHARMACIES.map((slug) => {
+              {(Object.keys(PHARMACIES) as PharmacySlug[]).filter((slug) => activePharmacySlugs().includes(slug)).map((slug) => {
                 const ph = PHARMACIES[slug];
                 const active = activePharmacies.has(slug);
                 return (
@@ -234,11 +248,34 @@ export default function ResultsScreen() {
         </View>
       )}
 
+      {/* Tooltip primera vez */}
+      {showTooltip && (
+        <TouchableOpacity
+          onPress={() => {
+            setShowTooltip(false);
+            AsyncStorage.setItem(TOOLTIP_KEY, "1");
+          }}
+          activeOpacity={0.9}
+          className="mx-4 mt-3 bg-gray-900 dark:bg-gray-700 rounded-2xl px-4 py-3 flex-row items-center gap-3"
+        >
+          <Text className="text-xl">👆</Text>
+          <View className="flex-1">
+            <Text className="text-white text-sm font-semibold">
+              Toca un medicamento para ver los precios
+            </Text>
+            <Text className="text-gray-400 text-xs mt-0.5">
+              Compara por farmacia y canal de compra
+            </Text>
+          </View>
+          <Ionicons name="close" size={16} color="#6b7280" />
+        </TouchableOpacity>
+      )}
+
       <FlatList
         data={(isLoading ? SKELETON_KEYS : displayResults) as (string | MedicationResult)[]}
         keyExtractor={(item) => (typeof item === "string" ? item : item.matchKey)}
         renderItem={({ item }) =>
-          typeof item === "string" ? <SkeletonCard /> : <MedicationCard medication={item} activePharmacies={activePharmacies} />
+          typeof item === "string" ? <SkeletonCard /> : <MedicationListItem medication={item} activePharmacies={activePharmacies} />
         }
         ListEmptyComponent={
           !isLoading ? (

@@ -1,13 +1,13 @@
 import { useState, useRef } from "react";
-import { View, Text, TouchableOpacity, ScrollView, Dimensions, Platform } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useRouter } from "expo-router";
+import { useRouter, useLocalSearchParams } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
-export const ONBOARDING_KEY = "onboarding_v1_done";
+export const ONBOARDING_KEY = "onboarding_v2_done";
 
 const SLIDES = [
   {
@@ -15,6 +15,12 @@ const SLIDES = [
     iconColor: "#16a34a",
     title: "Compara precios al instante",
     body: "Busca cualquier medicamento y ve en segundos cuánto cuesta en Cruz Verde, Salcobrand, Farmacias Ahumada y Dr. Simi.",
+  },
+  {
+    icon: "list-outline" as const,
+    iconColor: "#7c3aed",
+    title: "Elige primero, compara después",
+    body: "La búsqueda muestra todos los resultados con nombre y laboratorio. Toca el que te interesa para ver los precios por farmacia y canal.",
   },
   {
     icon: "pricetag-outline" as const,
@@ -25,13 +31,21 @@ const SLIDES = [
   {
     icon: "heart-outline" as const,
     iconColor: "#e11d48",
-    title: "Guarda y comparte",
-    body: "Marca tus medicamentos favoritos con ❤️ para acceder rápido. Comparte el mejor precio con tus contactos con un toque.",
+    title: "Favoritos y compartir",
+    body: "Toca ❤️ en cualquier medicamento para guardarlo. Accede a tus favoritos desde el inicio sin volver a buscar. Comparte el mejor precio con un toque.",
+  },
+  {
+    icon: "cart-outline" as const,
+    iconColor: "#d97706",
+    title: "Lista de compras inteligente",
+    body: "¿Necesitas varios medicamentos? Agrega cada uno con 🛒 desde su detalle. ComparaFarma calcula en qué farmacia te sale más barato comprarlos todos juntos.",
   },
 ];
 
 export default function OnboardingScreen() {
   const router = useRouter();
+  const { mode } = useLocalSearchParams<{ mode?: string }>();
+  const isHelpMode = mode === "help";
   const scrollRef = useRef<ScrollView>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -41,8 +55,12 @@ export default function OnboardingScreen() {
       scrollRef.current?.scrollTo({ x: SCREEN_WIDTH * next, animated: true });
       setCurrentIndex(next);
     } else {
-      await AsyncStorage.setItem(ONBOARDING_KEY, "1");
-      router.replace("/" as any);
+      if (!isHelpMode) {
+        await AsyncStorage.setItem(ONBOARDING_KEY, "1");
+        router.replace("/" as any);
+      } else {
+        router.back();
+      }
     }
   }
 
@@ -106,10 +124,10 @@ export default function OnboardingScreen() {
           activeOpacity={0.8}
         >
           <Text className="text-white font-bold text-base">
-            {isLast ? "¡Comenzar!" : "Siguiente"}
+            {isLast ? (isHelpMode ? "Entendido" : "¡Comenzar!") : "Siguiente"}
           </Text>
           <Ionicons
-            name={isLast ? "rocket-outline" : "arrow-forward"}
+            name={isLast ? (isHelpMode ? "checkmark-outline" : "rocket-outline") : "arrow-forward"}
             size={18}
             color="#fff"
           />
@@ -118,12 +136,18 @@ export default function OnboardingScreen() {
         {!isLast && (
           <TouchableOpacity
             onPress={async () => {
-              await AsyncStorage.setItem(ONBOARDING_KEY, "1");
-              router.replace("/" as any);
+              if (!isHelpMode) {
+                await AsyncStorage.setItem(ONBOARDING_KEY, "1");
+                router.replace("/" as any);
+              } else {
+                router.back();
+              }
             }}
             className="mt-3 items-center"
           >
-            <Text className="text-gray-400 text-sm">Saltar</Text>
+            <Text className="text-gray-400 text-sm">
+              {isHelpMode ? "Cerrar" : "Saltar"}
+            </Text>
           </TouchableOpacity>
         )}
       </View>

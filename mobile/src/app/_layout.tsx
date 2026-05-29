@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { useColorScheme } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import * as Sentry from "@sentry/react-native";
+import { useConfigStore } from "@/store/configStore";
 import "../../global.css";
 
 Sentry.init({
@@ -14,6 +16,11 @@ Sentry.init({
 function RootLayout() {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === "dark";
+  const fetchConfig = useConfigStore((s) => s.fetch);
+
+  useEffect(() => {
+    fetchConfig();
+  }, [fetchConfig]);
   const headerBg = isDark ? "#111827" : "#ffffff";
 
   return (

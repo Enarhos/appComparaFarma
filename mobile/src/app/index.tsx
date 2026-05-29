@@ -10,11 +10,12 @@ import { SearchBar } from "@/components/SearchBar";
 import { useHistoryStore } from "@/store/historyStore";
 import { useFavoritesStore } from "@/store/favoritesStore";
 import { useSearchStore } from "@/store/searchStore";
+import { useCartStore } from "@/store/cartStore";
 import { formatCLP } from "@/lib/formatters";
 import { PHARMACIES } from "@/constants/pharmacies";
 import type { PharmacySlug } from "@/lib/types";
 
-const QUICK_SEARCHES = ["Paracetamol", "Ibuprofeno", "Amoxicilina", "Metformina"];
+const QUICK_SEARCHES = ["Paracetamol", "Ibuprofeno", "Amoxicilina", "Metformina", "Losartán", "Atorvastatina", "Omeprazol", "Sertralina"];
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -33,6 +34,7 @@ export default function HomeScreen() {
   const { items: recentSearches, remove, clear } = useHistoryStore();
   const { keys: favKeys, cachedResults } = useFavoritesStore();
   const setResults = useSearchStore((s) => s.setResults);
+  const cartCount = useCartStore((s) => s.items.length);
 
   function handleRemove(term: string) {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -67,14 +69,45 @@ export default function HomeScreen() {
         contentContainerClassName="px-4 pt-12 pb-8"
         keyboardShouldPersistTaps="handled"
       >
-        <View className="items-center mb-8">
-          <Text className="text-3xl font-bold text-green-700">ComparaFarma</Text>
-          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        <View className="mb-8">
+          <View className="flex-row items-center">
+            <View className="flex-1" />
+            <Text className="text-3xl font-bold text-green-700">ComparaFarma</Text>
+            <View className="flex-1 items-end flex-row justify-end gap-3">
+              {/* Ayuda */}
+              <TouchableOpacity
+                onPress={() => router.push({ pathname: "/onboarding" as any, params: { mode: "help" } })}
+                hitSlop={8}
+              >
+                <Ionicons name="help-circle-outline" size={26} color="#9ca3af" />
+              </TouchableOpacity>
+              {/* Carrito */}
+              <TouchableOpacity
+                onPress={() => router.push("/cart" as any)}
+                hitSlop={8}
+                className="relative"
+              >
+                <Ionicons name="cart-outline" size={26} color="#16a34a" />
+                {cartCount > 0 && (
+                  <View className="absolute -top-1 -right-1 bg-green-600 rounded-full w-4 h-4 items-center justify-center">
+                    <Text className="text-white text-xs font-bold leading-none">
+                      {cartCount}
+                    </Text>
+                  </View>
+                )}
+              </TouchableOpacity>
+            </View>
+          </View>
+          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 text-center">
             Compara precios en Cruz Verde, Salcobrand, Ahumada y Dr. Simi
           </Text>
         </View>
 
-        <SearchBar onSearch={handleSearch} autoFocus />
+        <SearchBar
+          onSearch={handleSearch}
+          autoFocus
+          suggestions={[...recentSearches, ...QUICK_SEARCHES]}
+        />
 
         {/* Favoritos */}
         {favMeds.length > 0 && (
@@ -175,13 +208,14 @@ export default function HomeScreen() {
           <Ionicons name="chevron-forward" size={18} color="#16a34a" />
         </TouchableOpacity>
 
-        {/* Pie de página */}
-        <View className="items-center mt-8 mb-2">
-          <Text className="text-xs text-gray-300 dark:text-gray-600">
-            Hecho con ❤️ para los chilenos 🇨🇱
-          </Text>
-        </View>
       </ScrollView>
+
+      {/* Footer fijo */}
+      <View className="border-t border-gray-100 dark:border-gray-800 py-3 items-center bg-white dark:bg-gray-900">
+        <Text className="text-xs text-gray-300 dark:text-gray-600">
+          Hecho con ❤️ para los chilenos 🇨🇱
+        </Text>
+      </View>
     </SafeAreaView>
   );
 }
