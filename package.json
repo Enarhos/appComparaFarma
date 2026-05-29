@@ -10,7 +10,8 @@
     "ios": "pnpm --filter mobile ios",
     "typecheck": "pnpm --filter \"*\" typecheck",
     "lint": "pnpm --filter \"*\" lint",
-    "test": "pnpm --filter \"*\" test"
+    "test": "pnpm --filter \"*\" test",
+    "build:android": "pwsh scripts-temp/build-android-release.ps1"
   },
   "workspaces": [
     "mobile",
