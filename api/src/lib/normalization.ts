@@ -102,7 +102,10 @@ export function matchKey(name: string): string {
     /(?:x\s*(\d+)|\b(\d+)\s*(?:sobres?|comprimidos?|comp|c[aá]psulas?|cap|tab|tabletas?|amp(?:ollas?)?|parches?|grageas?|sachets?|unidades?))\b/i
   );
   const qty = qtyM ? (qtyM[1] ?? qtyM[2] ?? "") : "";
-  return first ? [first, dose, qty].filter(Boolean).join("|") : lower.slice(0, 30);
+  // qty=1 es la unidad singular implícita — no añade información discriminatoria.
+  // "Tapsin Instaflu 1 Sobre" y "Tapsin Insta Flu Polvo" deben fusionarse.
+  const normalizedQty = qty === "1" ? "" : qty;
+  return first ? [first, dose, normalizedQty].filter(Boolean).join("|") : lower.slice(0, 30);
 }
 
 export function effectivePrice(channels: {

@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { MedicationResult } from "@/lib/types";
 
-const CACHE_PREFIX = "search_cache_v4_"; // v4: added dr-simi pharmacy
+const CACHE_PREFIX = "search_cache_v5_"; // v5: qty=1 normalized in matchKey, count 10→24
 const TTL_MS = 30 * 60 * 1000; // 30 min
 
 interface CacheEntry {
