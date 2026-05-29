@@ -52,7 +52,8 @@ const STOP_WORDS = new Set([
 ]);
 
 export function matchKey(name: string): string {
-  const raw = name.toLowerCase();
+  // Normalizar acentos primero: "Día"→"Dia"→"dia", "Noche" queda igual
+  const raw = name.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const mlHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*ml\b/gi)];
   const mgHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*mg\b/gi)];
   const mcgHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:mcg|µg|ug)\b/gi)];
@@ -105,7 +106,13 @@ export function matchKey(name: string): string {
   // qty=1 es la unidad singular implícita — no añade información discriminatoria.
   // "Tapsin Instaflu 1 Sobre" y "Tapsin Insta Flu Polvo" deben fusionarse.
   const normalizedQty = qty === "1" ? "" : qty;
-  return first ? [first, dose, normalizedQty].filter(Boolean).join("|") : lower.slice(0, 30);
+
+  // Indicador día/noche: diferenciador clave para multicomponentes antigripales.
+  // "Tapsin Plus Día" y "Tapsin Plus Noche" son productos distintos (diferentes
+  // principios activos) y deben tener matchKeys separados.
+  const turn = /\bnoche\b/.test(raw) ? "n" : /\bdia\b/.test(raw) ? "d" : "";
+
+  return first ? [first, dose, turn, normalizedQty].filter(Boolean).join("|") : lower.slice(0, 30);
 }
 
 export function effectivePrice(channels: {

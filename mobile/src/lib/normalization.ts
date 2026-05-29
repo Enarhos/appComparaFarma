@@ -46,10 +46,12 @@ const STOP_WORDS = new Set([
   "parche", "supositorio", "colirio", "nasal", "ocular", "rectal",
   "mg", "ml", "mcg", "g", "ui", "iu", "infantil", "adulto", "forte",
   "plus", "pediatrico", "nino",
+  "dia", "noche", "dn", "yn",  // descriptores de turno — se capturan como campo separado
 ]);
 
 export function matchKey(name: string): string {
-  const raw = name.toLowerCase();
+  // Normalizar acentos primero: "Día"→"Dia"→"dia", "Noche" queda igual
+  const raw = name.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const mlHits  = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*ml\b/gi)];
   const mgHits  = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*mg\b/gi)];
   const mcgHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:mcg|µg|ug)\b/gi)];
@@ -78,10 +80,11 @@ export function matchKey(name: string): string {
   );
   const qty = qtyM ? (qtyM[1] ?? qtyM[2] ?? "") : "";
   // qty=1 es la unidad singular implícita — no añade información discriminatoria.
-  // "Tapsin Instaflu 1 Sobre" y "Tapsin Insta Flu Polvo" deben fusionarse.
   const normalizedQty = qty === "1" ? "" : qty;
+  // Indicador día/noche: diferenciador clave para multicomponentes antigripales.
+  const turn = /\bnoche\b/.test(raw) ? "n" : /\bdia\b/.test(raw) ? "d" : "";
   return first
-    ? [first, dose, normalizedQty].filter(Boolean).join("|")
+    ? [first, dose, turn, normalizedQty].filter(Boolean).join("|")
     : lower.slice(0, 30);
 }
 
