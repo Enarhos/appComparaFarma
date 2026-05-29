@@ -3,7 +3,7 @@
     "name": "ComparaFarma",
     "slug": "compara-farma",
     "scheme": "comparafarma",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -22,7 +22,7 @@
         "backgroundColor": "#16a34a"
       },
       "package": "mla.app.comparafarma",
-      "versionCode": 8
+      "versionCode": 9
     },
     "web": {
       "bundler": "metro"
