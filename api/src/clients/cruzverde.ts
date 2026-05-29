@@ -48,7 +48,7 @@ export function parseCruzVerdeResponse(
 export async function searchCruzVerde(query: string): Promise<ScrapedProduct[]> {
   const params = new URLSearchParams({
     q: query,
-    count: "10",
+    count: "24",
     expand: "prices,availability,images",
     client_id: CID,
   });

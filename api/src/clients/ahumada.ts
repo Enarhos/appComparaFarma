@@ -88,7 +88,7 @@ export function parseAhumadaHtml(html: string): ScrapedProduct[] {
 }
 
 export async function searchAhumada(query: string): Promise<ScrapedProduct[]> {
-  const params = new URLSearchParams({ q: query, start: "0", sz: "10" });
+  const params = new URLSearchParams({ q: query, start: "0", sz: "24" });
   const res = await fetchWithTimeout(`${SEARCH}?${params}`, {
     headers: {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",

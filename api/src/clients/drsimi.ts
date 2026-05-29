@@ -52,7 +52,7 @@ export function parseDrSimiResponse(
 }
 
 export async function searchDrSimi(query: string): Promise<ScrapedProduct[]> {
-  const params = new URLSearchParams({ _from: "0", _to: "9" });
+  const params = new URLSearchParams({ _from: "0", _to: "23" });
   const res = await fetchWithTimeout(
     `${BASE}/api/catalog_system/pub/products/search/${encodeURIComponent(query)}?${params}`,
     {

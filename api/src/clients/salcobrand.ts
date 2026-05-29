@@ -62,7 +62,7 @@ export async function searchSalcobrand(query: string): Promise<ScrapedProduct[]>
         "Origin": BASE,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ query, hitsPerPage: 10 }),
+      body: JSON.stringify({ query, hitsPerPage: 24 }),
     }
   );
 
