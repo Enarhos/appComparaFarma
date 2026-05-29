@@ -188,10 +188,16 @@ pnpm --filter api healthcheck:prod # check productivo manual
 ## Publicación
 
 ```bash
-# Build de producción (Android AAB)
+# Build de producción Android AAB — método preferido (sin cuota EAS)
+pnpm build:android
+# → genera mobile/android/app/build/outputs/bundle/release/app-release.aab
+# El script parchea versionCode/versionName en build.gradle automáticamente desde app.json
+# Requiere: Android Studio instalado; EXPO_NO_METRO_WORKSPACE_ROOT=1 (lo setea el script)
+
+# Build via EAS cloud (requiere cuota mensual free)
 eas build --platform android --profile production --non-interactive
 
-# Fix urgente sin nuevo build (solo cambios JS)
+# Fix urgente sin nuevo build (solo cambios JS/TS)
 eas update --branch production --message "fix: ..."
 ```
 

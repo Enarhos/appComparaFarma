@@ -37,6 +37,7 @@ API_SECRET_KEY=
 RATE_LIMIT_MAX=60
 RATE_LIMIT_WINDOW_MS=60000
 SEARCH_CACHE_TTL_MS=300000
+DISABLED_PHARMACIES=          # Opcional: "ahumada,dr-simi" para desactivar farmacias
 ```
 
 Mobile `mobile/`:
@@ -46,12 +47,6 @@ EXPO_PUBLIC_API_URL=https://comparafarma-api.vercel.app
 EXPO_PUBLIC_API_KEY=
 EXPO_PUBLIC_SENTRY_DSN=...
 ```
-
-`EXPO_PUBLIC_API_KEY` es opcional y solo se usa si configuras `API_SECRET_KEY` en el backend.
-
-Nota importante:
-- la app móvil ya no tiene fallback local de búsqueda
-- si `EXPO_PUBLIC_API_URL` falta, `mobile` falla al buscar
 
 ---
 
@@ -65,221 +60,169 @@ pnpm dev
 pnpm dev:api
 ```
 
-Para pruebas en dispositivo, hoy conviene asumir development build y no Expo Go, porque el proyecto usa `expo-dev-client`.
-
-Comandos útiles:
+Para pruebas en dispositivo, usar development build (no Expo Go) porque el proyecto usa `expo-dev-client`.
 
 ```bash
-pnpm android
-pnpm ios
-pnpm typecheck
+pnpm android        # emulador Android
+pnpm ios            # simulador iOS
+pnpm typecheck      # type check completo
 pnpm lint
 ```
 
 ---
 
-## Build con EAS
+## Build Android para Google Play
 
-### Primera vez
+### Opción A — Build local con Gradle (sin cuota EAS)
+
+Este es el método preferido cuando el plan free de EAS está agotado.
+
+```powershell
+# Desde la raíz del monorepo:
+pnpm build:android
+```
+
+El script `scripts-temp/build-android-release.ps1`:
+1. Lee `version` y `versionCode` de `mobile/app.json`
+2. Parchea `android/app/build.gradle` automáticamente
+3. Configura `JAVA_HOME`, `ANDROID_HOME`, `EXPO_NO_METRO_WORKSPACE_ROOT=1`
+4. Corre `gradlew bundleRelease`
+
+**Salida**: `mobile/android/app/build/outputs/bundle/release/app-release.aab`
+
+> ⚠️ `EXPO_NO_METRO_WORKSPACE_ROOT=1` es obligatorio para el monorepo pnpm.
+> Sin él, Metro intenta resolver el entry file desde el root del monorepo y falla.
+
+**Requisitos del sistema**:
+- Android Studio instalado en `C:\Program Files\Android\Android Studio\`
+- `ANDROID_HOME` configurado (o SDK en `%LOCALAPPDATA%\Android\Sdk`)
+
+### Opción B — Build remoto con EAS
 
 ```bash
 cd mobile
-eas login
-eas build:configure
+eas build --platform android --profile production --non-interactive
 ```
 
-### Profiles disponibles
+> El plan free tiene límite mensual de builds Android. Se resetea el 1º de cada mes.
+> Ver cuota en: https://expo.dev/accounts/belford/settings/billing
 
-Los perfiles viven en `mobile/eas.json`. Usar el que corresponda:
+### Subir a Google Play
+
+1. Abrir [Google Play Console](https://play.google.com/console) → ComparaFarma
+2. **Producción** → **Crear nueva versión**
+3. Subir el `.aab`
+4. Completar novedades de versión y publicar
+
+### Versionado
+
+Antes de cada build:
+1. Incrementar `versionCode` (entero, siempre mayor al anterior) en `mobile/app.json`
+2. Actualizar `version` (semver) si corresponde
+3. El script `pnpm build:android` parchea `build.gradle` automáticamente
+
+Historial:
+
+| versionCode | version | Novedades principales |
+|-------------|---------|----------------------|
+| 8 | 1.0.0 | Lanzamiento inicial Play Store |
+| 10 | 1.1.0 | Lista de compras, feature flags farmacias, onboarding v2, matchKey mejorado |
+
+> El plan EAS `autoIncrement: true` puede auto-bumpar el versionCode en `app.json`.
+> Después de un build EAS, confirmar qué valor quedó antes del siguiente build local.
+
+---
+
+## OTA Updates (sin nuevo build)
+
+Para cambios solo de JavaScript/TypeScript — sin modificaciones nativas:
 
 ```bash
-eas build --platform android --profile production
-eas build --platform ios --profile production
+cd mobile
+eas update --branch production --message "fix: descripción del cambio"
 ```
 
-Para builds internos o pruebas, revisar `development` y `preview` en `mobile/eas.json`.
+Usar OTA para:
+- Fixes en lógica de UI, stores, hooks
+- Cambios en normalización (`matchKey`, etc.)
+- Fixes en scrapers del backend (el backend se deploya vía Vercel, no OTA)
 
-### Submit a tiendas
-
-```bash
-eas submit --platform android --latest
-eas submit --platform ios --latest
-```
-
-El primer submit requiere credenciales de cada tienda. EAS las pedirá de forma interactiva.
+**No usar OTA** si cambiaste:
+- Dependencias nativas o plugins de Expo
+- `mobile/app.json` (versión, permisos, etc.)
+- Archivos en `mobile/android/` o `mobile/ios/`
 
 ---
 
 ## Deploy del Backend en Vercel
 
-### Estado actual
-
-- proyecto productivo: `comparafarma-api`
-- URL de producción: `https://comparafarma-api.vercel.app`
-- Root Directory en Vercel: `api/`
-
-### Primera vez o relink local
-
-```bash
-cd api
-vercel link
-vercel deploy
-vercel deploy --prod
-```
-
-### Deploy automático desde GitHub Actions
-
-El workflow `.github/workflows/ci.yml` ya incluye deploy automático de `api/` en cada push a `main`.
-
-Debes configurar este secret en GitHub:
-
-- `VERCEL_TOKEN`
-
-Ruta:
-
-```txt
-GitHub -> Settings -> Secrets and variables -> Actions -> New repository secret
-```
-
-El token se obtiene desde Vercel en la cuenta que administra el proyecto.
-
-Además, el workflow ya usa estos IDs del proyecto enlazado:
-
-```txt
-VERCEL_ORG_ID=team_QtbvbI6hTSxxSJ9qDFTv9z6S
-VERCEL_PROJECT_ID=prj_zvHG2urEOjMM770FPy6B2fdhk915
-```
-
-No hace falta configurarlos como secrets mientras no cambien.
-
-El workflow actual hace:
-- `typecheck`
-- `api-tests`
-- `deploy-api`
-
-`deploy-api` instala Vercel CLI y ejecuta deploy productivo de `api/`.
-
-### Endpoints
-
-- `GET /api/health`
-- `GET /api/search?q=paracetamol`
+### Deploy automático
+El workflow `.github/workflows/ci.yml` deploya `api/` automáticamente en cada push a `main`.
 
 ### Verificación rápida
-
 ```bash
 curl "https://comparafarma-api.vercel.app/api/health"
-curl "https://comparafarma-api.vercel.app/api/search?q=paracetamol"
+curl "https://comparafarma-api.vercel.app/api/config"
 curl "https://comparafarma-api.vercel.app/api/search?q=paracetamol&debug=1"
 ```
 
-### Verificar que el deploy automático funciona
-
-1. Hacer push a `main`
-2. Abrir la pestaña `Actions` del repositorio
-3. Verificar que el workflow `CI` ejecute:
-   - `typecheck`
-   - `api-tests`
-   - `deploy-api`
-4. Confirmar que `deploy-api` termine en verde
-5. Probar:
-
-```bash
-curl "https://comparafarma-api.vercel.app/api/health"
-```
-
-Si responde `ok: true`, el alias de producción quedó actualizado.
+### Feature flags de farmacias
+Ver [`docs/pharmacy-flags.md`](pharmacy-flags.md) para activar/desactivar farmacias sin nuevo build.
 
 ---
 
-## Monitoreo Operativo
+## Monitoreo
 
-Hay un workflow separado `.github/workflows/monitor-api.yml` que ejecuta un healthcheck de producción:
-
-- manualmente con `workflow_dispatch`
-- automáticamente cada 6 horas
-
-El check:
-
-- consulta `https://comparafarma-api.vercel.app/api/health`
-- consulta `/api/search?debug=1` con queries reales
-- valida que cada farmacia responda al menos una vez y que no devuelva `0` resultados en todas las queries monitoreadas
-
-Comando local equivalente:
+Workflow `.github/workflows/monitor-api.yml` — corre cada 6 horas:
+- Consulta `/api/health` y `/api/search?debug=1`
+- Si falla: crea un issue en GitHub con el reporte
 
 ```bash
-pnpm --filter api healthcheck:prod
+pnpm --filter api healthcheck:prod   # verificación manual
 ```
-
-Variables opcionales:
-
-```bash
-API_URL=https://comparafarma-api.vercel.app
-HEALTHCHECK_QUERIES=paracetamol,ibuprofeno
-```
-
-Si el workflow falla, GitHub marcará la corrida en rojo y puede notificar por correo según la configuración de la cuenta.
-
-Además:
-- sube el artefacto `api-healthcheck-report`
-- crea un issue automático con el JSON del fallo
 
 ---
 
-## OTA Updates
+## Proceso de Release Completo
 
-Para cambios solo de JavaScript/TypeScript, sin modificaciones nativas:
-
-```bash
-eas update --branch production --message "fix: ..."
 ```
-
-Usar OTA para cambios como:
-- ajustes de UI
-- fixes en scrapers
-- cambios en hooks, stores o normalización
-
-No usar OTA si cambias:
-- dependencias nativas
-- `mobile/app.json`
-- plugins de Expo
-- permisos o configuración nativa
-
-En esos casos corresponde un nuevo build completo.
-
----
-
-## Proceso de Release
-
-1. Actualizar versión en `mobile/app.json` si corresponde.
-2. Ejecutar al menos `pnpm typecheck`.
-3. Generar build con `eas build`.
-4. Probar en TestFlight y/o Play Internal Testing.
-5. Publicar con `eas submit`.
-6. Para fixes no nativos posteriores, usar `eas update`.
-
-## Checklist para retomar mañana
-
-1. Confirmar `main` en verde en `Actions -> CI`.
-2. Confirmar `Monitor API` sin issues nuevos.
-3. Verificar `mobile/.env.local` con `EXPO_PUBLIC_API_URL=https://comparafarma-api.vercel.app`.
-4. Si se prueba en teléfono, usar development build actualizado.
-5. Si Ahumada falla, mirar primero `api/src/clients/ahumada.ts` y luego el reporte del monitor.
+1. Cerrar PRs pendientes y mergear a main
+2. Incrementar versionCode y version en mobile/app.json
+3. pnpm typecheck                           (verificar tipos)
+4. pnpm build:android                       (genera AAB local)
+   — o: eas build --platform android ...   (si hay cuota EAS)
+5. Subir AAB a Google Play Console
+6. Para fixes JS posteriores: eas update --branch production
+```
 
 ---
 
 ## Troubleshooting
 
+### "El código de versión X ya se ha usado" en Play Console
+El `build.gradle` tiene versionCode hardcodeado de un prebuild anterior.
+El script `pnpm build:android` lo parchea automáticamente desde `app.json`.
+Si se construyó con Gradle directamente: verificar/actualizar `android/app/build.gradle`.
+
+### Gradle: "Unable to resolve module ./../node_modules/expo-router/entry.js"
+Falta `EXPO_NO_METRO_WORKSPACE_ROOT=1`. El script lo incluye automáticamente.
+Causa: pnpm workspaces pone `node_modules` en la raíz, no en `mobile/`.
+
+### EAS build agota cuota mensual
+Usar `pnpm build:android` (build local). La cuota free se resetea el 1º de cada mes.
+
 ### Ahumada deja de devolver resultados
-1. Verificar el HTML en `https://www.farmaciasahumada.cl/on/demandware.store/Sites-ahumada-cl-Site/es_CL/Search-Show?q=paracetamol&start=0&sz=10`
-2. Si cambió la estructura, actualizar `api/src/clients/ahumada.ts`
-3. Publicar el fix con `eas update` si el cambio es solo JS/TS
+El scraper depende del HTML del storefront Demandware — puede romperse si cambian el layout.
+1. Revisar HTML en `https://www.farmaciasahumada.cl/...Search-Show?q=paracetamol&start=0&sz=24`
+2. Actualizar regex en `api/src/clients/ahumada.ts`
+3. Desactivar temporalmente: `DISABLED_PHARMACIES=ahumada` en Vercel
+4. Publicar fix con push a main (Vercel autodeploy)
 
 ### Build de EAS falla
-- Revisar `mobile/eas.json`
-- Revisar logs en Expo dashboard
-- Confirmar que no haya cambios nativos sin credenciales o perfiles correctos
+- Revisar `mobile/eas.json` y logs en Expo dashboard
+- Confirmar cambios nativos correctamente configurados
 
 ### App Store / Play pide aclaraciones
-- Categoría sugerida: "Health & Fitness"
-- Aclarar que la app compara precios y no entrega diagnóstico ni consejo médico
-- Verificar que la política de privacidad publicada siga vigente
+- Categoría: "Health & Fitness"
+- Aclarar que solo compara precios, no entrega diagnóstico ni consejo médico
+- Política de privacidad: `https://enarhos.github.io/appComparaFarma/privacy-policy.html`
