@@ -22,7 +22,7 @@
         "backgroundColor": "#16a34a"
       },
       "package": "mla.app.comparafarma",
-      "versionCode": 9
+      "versionCode": 10
     },
     "web": {
       "bundler": "metro"

@@ -199,7 +199,7 @@ eas update --branch production --message "fix: ..."
 - **Bundle ID iOS**: `mla.app.comparafarma`
 - **Categoría**: Health & Fitness
 - **Política de privacidad**: `https://enarhos.github.io/appComparaFarma/privacy-policy.html`
-- **versionCode actual**: 9
+- **versionCode actual**: 10
 
 ## Advertencia: Fragilidad del Scraper de Ahumada
 
