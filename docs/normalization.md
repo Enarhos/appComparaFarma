@@ -1,6 +1,8 @@
 # Normalización de Búsqueda y Deduplicación
 
-Documentación de los algoritmos clave en `mobile/src/lib/normalization.ts`. Son críticos para que la búsqueda funcione bien y para que el mismo medicamento vendido bajo nombres distintos en cada farmacia aparezca agrupado correctamente.
+Documentación de los algoritmos clave en `api/src/lib/normalization.ts` y `mobile/src/lib/normalization.ts`. Son críticos para que la búsqueda funcione bien y para que el mismo medicamento vendido bajo nombres distintos en cada farmacia aparezca agrupado correctamente.
+
+> **Nota**: Ambos archivos deben mantenerse en sincronía — aplica cualquier cambio en los dos.
 
 ---
 
@@ -31,93 +33,113 @@ Documentación de los algoritmos clave en `mobile/src/lib/normalization.ts`. Son
 "FRENALER-D (R) Comp."                    → "FRENALER-D"
 ```
 
-### Comportamiento con tildes y mayúsculas
-`cleanQuery` conserva el texto tal como entra, salvo limpieza de ruido, puntuación y palabras genéricas. No hace transliteración de tildes ni lowercasing global.
-
 ---
 
 ## 2. `matchKey(name: string): string`
 
 **Propósito**: Generar una clave de deduplicación que agrupe medicamentos equivalentes aunque tengan nombres distintos entre farmacias.
 
-### Algoritmo
+### Algoritmo (v6)
 
-1. Convertir a minúsculas
-2. Extraer dosis en `ml`, `mg`, `mcg/ug/µg` y `g`
-3. Si la dosis viene en gramos, convertirla a miligramos
-4. Limpiar puntuación y split por espacios
-5. Encontrar el primer token que NO sea stop-word y NO empiece con dígito → `first`
-6. Detectar cantidad de unidades cuando aparezca como `x20`, `20 comprimidos`, `30 sobres`, etc.
-7. Retornar `"${first}|${dose}|${qty}"`, omitiendo partes vacías
+1. **Normalizar acentos** (NFD): "Día" → "dia", "Ácido" → "acido"
+2. Convertir a minúsculas
+3. Extraer dosis en `ml`, `mg`, `mcg/ug/µg` y `g`; si viene en gramos, convertir a mg
+4. Reemplazar guiones entre letras por concatenación: "Co-Amoxiclav" → "Coamoxiclav"
+5. Limpiar puntuación y split por espacios
+6. Encontrar la primera palabra brand (no stop-word, no empieza con dígito, solo [a-z]) → `first`
+   - Si `first` tiene ≤4 letras y la siguiente también, unirlas: "Trio Val" → "trioval"
+7. Detectar **indicador de turno** día/noche: `\bdia\b` → `"d"`, `\bnoche\b` → `"n"`, ausente → `""`
+8. Detectar cantidad de unidades: `x20`, `20 comprimidos`, `6 sobres`, etc.
+9. Normalizar qty=1 a vacío (1 unidad es la presentación singular implícita)
+10. Retornar `"${first}|${dose}|${turn}|${qty}"`, omitiendo partes vacías
 
-### Ejemplos
+### Ejemplos completos
 
 ```
-"Paracetamol 500 mg Comprimidos x20"      → "paracetamol|500mg|20"
-"PARACETAMOL 500MG COMP"                  → "paracetamol|500mg"
-"Paracetamol 500 mg cap"                  → "paracetamol|500mg"
-"PARACETAMOL INF GOTAS 100mg/ml 15ml"     → "paracetamol|15ml"
-"Ibuprofeno 400 mg"                       → "ibuprofeno|400mg"
-"Ibuprofeno Forte 400mg Tabletas x10"     → "ibuprofeno|400mg|10"
-"Metformina 850 mg comp recubierto"       → "metformina|850mg"
-"Amoxicilina Potásica 0.5 g cápsulas"     → "amoxicilina|500mg"
+"Paracetamol 500 mg Comprimidos x20"              → "paracetamol|500mg|20"
+"PARACETAMOL 500MG COMP"                          → "paracetamol|500mg"
+"Paracetamol 500 mg cap"                          → "paracetamol|500mg"
+"PARACETAMOL INF GOTAS 100mg/ml 15ml"             → "paracetamol|15ml"
+"Ibuprofeno 400 mg"                               → "ibuprofeno|400mg"
+"Amoxicilina 0.5 g cápsulas"                      → "amoxicilina|500mg"
+
+"Tapsin Plus Día Paracetamol 650 mg 1 Sobre"      → "tapsin|650mg|d"
+"Tapsin Plus Noche Paracetamol 650 mg 1 Sobre"    → "tapsin|650mg|n"
+"Tapsin Limonada (B) Paracetamol Día 5g"          → "tapsin|5000mg|d"
+"Tapsín Limonada Noche (B) Paracetamol 5g"        → "tapsin|5000mg|n"
+"Tapsin Instaflu (B) Paracetamol Polvo Día 1 Sob" → "tapsin|d"
+"Tapsin Insta Flu Polvo Día"                       → "tapsin|d"   ← mismo key → fusión ✅
 ```
 
-### Caso especial: sin dosis
+### Por qué qty=1 se normaliza a vacío
 
-Si el nombre no contiene dosis reconocible, `matchKey` retorna solo el primer token no-stop-word:
+Cruz Verde suele omitir "1 Sobre" del nombre del producto; Salcobrand lo escribe explícitamente. Sin esta normalización, productos idénticos generaban claves distintas:
+
 ```
-"Betametasona crema"                      → "betametasona"
-"Vitamina C"                              → "vitamina"   ← impreciso
+Cruz Verde:   "Tapsin Insta Flu Polvo Día"            → "tapsin"   ❌
+Salcobrand:   "Tapsin Instaflu Polvo Día 1 Sobre"     → "tapsin|1" ❌
+            (no fusionaban → "1 farmacia" en ambos)
+
+Con qty=1→"":
+Cruz Verde:   → "tapsin|d" ✅
+Salcobrand:   → "tapsin|d" ✅  (fusionan → "2 farmacias")
 ```
 
-Para vitaminas y suplementos sin dosis explícita, la deduplicación es menos precisa.
+### Por qué día/noche son un campo separado (no stop-word simple)
+
+Los multicomponentes antigripales Día/Noche son **productos distintos** (el Noche lleva antihistamínico, el Día no). Tratarlos como stop-words los fusionaba incorrectamente:
+
+```
+Sin indicador de turno:
+  "Tapsin Plus Día 650mg"   → "tapsin|650mg"  ← misma clave ❌
+  "Tapsin Plus Noche 650mg" → "tapsin|650mg"  ← fusión incorrecta
+
+Con indicador de turno:
+  "Tapsin Plus Día 650mg"   → "tapsin|650mg|d" ✅
+  "Tapsin Plus Noche 650mg" → "tapsin|650mg|n" ✅ (separados)
+```
+
+`dia`/`noche` siguen en STOP_WORDS para que no contaminen `first`, pero se capturan por separado vía regex `\bdia\b` / `\bnoche\b` sobre el nombre ya normalizado sin acentos.
 
 ---
 
 ## 3. `mergeDuplicates(results: MedicationResult[]): MedicationResult[]`
 
-**Propósito**: Agrupar resultados con el mismo `matchKey` (mismo principio activo y dosis encontrado en múltiples farmacias) en un solo `MedicationResult` con todos los precios.
+**Propósito**: Agrupar resultados con el mismo `matchKey` en un solo `MedicationResult` con todos los precios.
 
 ### Algoritmo
 
 1. Agrupar resultados por `matchKey`
-2. Para cada grupo (si solo tiene un elemento, no hacer nada):
+2. Para cada grupo con más de un elemento:
    - **Elegir nombre canónico**: preferir el que tiene `laboratory` no-null, luego el de nombre más corto
-   - **Fusionar precios**: combinar los arrays `prices[]` de todos los miembros del grupo, manteniendo el más reciente por `pharmacySlug` (basado en `fetchedAt`)
+   - **Fusionar precios**: combinar `prices[]` de todos los miembros, manteniendo el más reciente por farmacia (`fetchedAt`)
+   - **Ordenar precios** por `channels.effective` ASC
 3. Retornar un array de `MedicationResult` con precios fusionados
 
 ### Ejemplo visual
 
 ```
-Cruz Verde devuelve:   { name: "Paracetamol 500 mg",      matchKey: "paracetamol|500mg", prices: [{ slug: "cruz-verde", store: 2990 }] }
-Salcobrand devuelve:   { name: "PARACETAMOL 500MG COMP",  matchKey: "paracetamol|500mg", prices: [{ slug: "salcobrand", store: 3290, online: 2490, sbpay: 2290 }] }
-Ahumada devuelve:      { name: "Paracetamol 500 mg Comp", matchKey: "paracetamol|500mg", prices: [{ slug: "ahumada", store: 3150, cmr: 2650 }] }
-Dr. Simi devuelve:     { name: "Paracetamol 500 mg",      matchKey: "paracetamol|500mg", prices: [{ slug: "dr-simi", store: 2890, online: 2590 }] }
+Cruz Verde:  { name: "Paracetamol 500 mg",     matchKey: "paracetamol|500mg", prices: [{ slug: "cruz-verde",  store: 2990 }] }
+Salcobrand:  { name: "PARACETAMOL 500MG COMP", matchKey: "paracetamol|500mg", prices: [{ slug: "salcobrand", store: 3290, sbpay: 2290 }] }
+Dr. Simi:    { name: "Paracetamol 500 mg",     matchKey: "paracetamol|500mg", prices: [{ slug: "dr-simi",    store: 2890 }] }
 
 Resultado merged:
 {
-  matchKey: "paracetamol|500mg",
-  canonicalName: "Paracetamol 500 mg",    ← más corto con lab/info
+  matchKey:      "paracetamol|500mg",
+  canonicalName: "Paracetamol 500 mg",
   prices: [
-    { slug: "cruz-verde",  channels: { store: 2990, effective: 2990 } },
-    { slug: "salcobrand",  channels: { store: 3290, online: 2490, sbpay: 2290, effective: 2290 } },
-    { slug: "dr-simi",     channels: { store: 2890, online: 2590, effective: 2590 } },
-    { slug: "ahumada",     channels: { store: 3150, cmr: 2650, effective: 2650 } },
-  ]
-  bestPrice: 2290,
+    { slug: "salcobrand", channels: { store: 3290, sbpay: 2290, effective: 2290 } },
+    { slug: "dr-simi",    channels: { store: 2890,              effective: 2890 } },
+    { slug: "cruz-verde", channels: { store: 2990,              effective: 2990 } },
+  ],
+  bestPrice:    2290,
   bestPharmacy: "salcobrand"
 }
 ```
 
-### Límites conocidos
-
-- Si dos medicamentos distintos tienen el mismo `matchKey` (ej: "Paracetamol 500 mg comp" y "Paracetamol 500 mg efervescente"), se fusionarán incorrectamente. La forma farmacéutica se ignora por diseño para maximizar los matches entre farmacias.
-- Medicamentos con nombres muy distintos para el mismo principio activo (nombre comercial vs genérico) no se deduplican: ej: "Tylenol 500 mg" y "Paracetamol 500 mg" generan matchKeys distintos.
-
 ---
 
-## Stop Words para matchKey
+## 4. Stop Words para `matchKey`
 
 ```typescript
 const STOP_WORDS = new Set([
@@ -129,16 +151,32 @@ const STOP_WORDS = new Set([
   "parche", "supositorio", "colirio", "nasal", "ocular", "rectal",
   "mg", "ml", "mcg", "g", "ui", "iu", "infantil", "adulto", "forte",
   "plus", "pediatrico", "nino",
+  "dia", "noche", "dn", "yn",  // turno — se capturan como campo separado, no como brand word
 ]);
 ```
 
 ---
 
-## Generic Words para cleanQuery
+## 5. Versioning del caché
 
-Ver la lista completa en `mobile/src/lib/normalization.ts`. Incluye:
-- Formas farmacéuticas (comp, cap, tab, sol, jbe, amp, sus, crm, gts, iny, etc.)
-- Vías de administración
-- Unidades de medida (mg, ml, mcg, g, ui)
-- Palabras conectoras (x, de, la, el, con, para)
-- Descriptores de receta (cada, vía, dosis, día, horas)
+El prefijo de caché AsyncStorage en `mobile/src/lib/cache.ts` debe **incrementarse cada vez que cambie la estructura de `MedicationResult`, `PharmacyPrice` o el algoritmo `matchKey`**. Si no se incrementa, la app puede mostrar datos con claves obsoletas.
+
+| Versión | Motivo del cambio |
+|---------|------------------|
+| `v1` | Inicial |
+| `v2` | Agregado `imageUrl` |
+| `v3` | Agregado `isBioequivalent` |
+| `v4` | Agregado Dr. Simi |
+| `v5` | qty=1 normalizado en matchKey; count scrapers 10→24 |
+| `v6` | Indicador turno día/noche en matchKey |
+
+Prefijo actual: `search_cache_v6_`
+
+---
+
+## Límites conocidos
+
+- Medicamentos con **forma farmacéutica distinta** para la misma dosis ("comp" vs "efervescente") pueden fusionarse incorrectamente. La forma farmacéutica se ignora por diseño para maximizar matches entre farmacias.
+- Nombres **comercial vs genérico** no se fusionan: "Tylenol 500 mg" y "Paracetamol 500 mg" generan matchKeys distintos.
+- Productos **sin dosis explícita en el nombre** (suplementos, vitaminas): la deduplicación es menos precisa, depende solo del nombre de marca.
+- **Sin dosis y sin turno**: si two farmacias tienen el mismo producto (ej: "Tapsin" sin dose ni turno) pero con distinta cantidad implícita, pueden fusionarse. En la práctica raro.

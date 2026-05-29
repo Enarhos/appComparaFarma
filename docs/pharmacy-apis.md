@@ -23,8 +23,8 @@ Referer: https://www.cruzverde.cl/
 ### Query params
 ```
 q=paracetamol
-count=10
-expand=prices,availability
+count=24
+expand=prices,availability,images
 client_id=c19ce24d-1677-4754-b9f7-c193997c5a92
 ```
 
@@ -58,7 +58,7 @@ Donde `slug-del-nombre` normaliza el nombre: lowercase, sin tildes, espacios →
 
 ### Quirks conocidos
 - El campo `price` puede ser `null` para productos sin precio configurado — filtrar con `if (!price) return []`
-- La API devuelve ~10 hits por defecto; con `count=10` es suficiente para búsqueda
+- La API puede tener el mismo producto en posiciones 15-20+ (ej: variantes Insta Flu). Usar `count=24` para capturar el catálogo relevante
 - `beta.cruzverde.cl` es el dominio real de producción (no es staging)
 
 ---
@@ -85,7 +85,7 @@ Content-Type: application/json
 ```json
 {
   "query": "paracetamol",
-  "hitsPerPage": 10
+  "hitsPerPage": 24
 }
 ```
 
@@ -144,7 +144,7 @@ Si solo hay `slug` sin `sku`: `https://salcobrand.cl/products/{slug}`
 
 ### Endpoint
 ```
-GET https://www.farmaciasahumada.cl/on/demandware.store/Sites-ahumada-cl-Site/es_CL/Search-Show?q=paracetamol&start=0&sz=10
+GET https://www.farmaciasahumada.cl/on/demandware.store/Sites-ahumada-cl-Site/es_CL/Search-Show?q=paracetamol&start=0&sz=24
 ```
 
 ### Headers requeridos

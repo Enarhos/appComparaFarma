@@ -59,7 +59,7 @@ compara-farma/
         ├── lib/
         │   ├── search.ts        ← client HTTP al backend `/api/search`
         │   ├── normalization.ts ← cleanQuery(), matchKey(), effectivePrice()
-        │   ├── cache.ts         ← AsyncStorage LRU, TTL 30 min, prefijo search_cache_v4_
+        │   ├── cache.ts         ← AsyncStorage LRU, TTL 30 min, prefijo search_cache_v6_
         │   └── formatters.ts    ← formatCLP(), scrapedAgo()
         ├── store/               ← Zustand: searchStore, historyStore, favoritesStore
         ├── hooks/               ← useSearch.ts (useCallback), useDebounce.ts
@@ -162,7 +162,7 @@ interface MedicationResult {
 ```
 Usuario escribe "paracetamol 500"
   → cleanQuery() → "paracetamol"
-  → check AsyncStorage cache (TTL 30 min, prefijo search_cache_v4_)
+  → check AsyncStorage cache (TTL 30 min, prefijo search_cache_v6_)
       [HIT]  → mostrar resultados cacheados
       [MISS] → searchMedications("paracetamol")
                → fetch /api/search?q=paracetamol
@@ -224,5 +224,5 @@ Acción: revisar el HTML actual del sitio, actualizar los regex `tileRe`, `linkM
 
 Al agregar campos a `MedicationResult` o `PharmacyPrice`, incrementar el prefijo en `mobile/src/lib/cache.ts`:
 ```typescript
-const CACHE_PREFIX = "search_cache_v4_"; // incrementar al cambiar la estructura
+const CACHE_PREFIX = "search_cache_v6_"; // incrementar al cambiar la estructura
 ```
