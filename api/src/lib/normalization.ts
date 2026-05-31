@@ -153,6 +153,7 @@ export function toPharmacyPrice(product: ScrapedProduct, pharmacySlug: PharmacyS
     onlineUrl: product.onlineUrl,
     imageUrl: product.imageUrl,
     fetchedAt: new Date().toISOString(),
+    nearExpiry: product.nearExpiry ?? false,
   };
 }
 

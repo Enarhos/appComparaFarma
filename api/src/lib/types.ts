@@ -1,4 +1,4 @@
-export type PharmacySlug = "cruz-verde" | "salcobrand" | "ahumada" | "dr-simi";
+export type PharmacySlug = "cruz-verde" | "salcobrand" | "ahumada" | "dr-simi" | "farmamarket";
 
 export interface PriceChannels {
   store: number;
@@ -18,6 +18,7 @@ export interface PharmacyPrice {
   onlineUrl: string | null;
   imageUrl: string | null;
   fetchedAt: string;
+  nearExpiry: boolean;
 }
 
 export interface MedicationResult {
@@ -43,6 +44,7 @@ export interface ScrapedProduct {
   imageUrl: string | null;
   laboratory: string | null;
   isBioequivalent: boolean;
+  nearExpiry?: boolean;
 }
 
 export interface SearchRequestContext {

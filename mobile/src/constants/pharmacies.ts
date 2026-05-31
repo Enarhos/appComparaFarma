@@ -47,4 +47,12 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     sbpayLabel: null,
     channels: { store: true, online: true, card: false, sbpay: false },
   },
+  farmamarket: {
+    name: "FarmaMarket",
+    color: "#d97706",
+    bgLight: "#fffbeb",
+    cardLabel: null,
+    sbpayLabel: null,
+    channels: { store: true, online: false, card: false, sbpay: false },
+  },
 };

@@ -45,7 +45,7 @@ export const useConfigStore = create<ConfigState>((set, get) => ({
   activePharmacySlugs: () => {
     const { pharmacies, loaded } = get();
     if (!loaded || pharmacies.length === 0) {
-      return ["cruz-verde", "salcobrand", "ahumada", "dr-simi"];
+      return ["cruz-verde", "salcobrand", "ahumada", "dr-simi", "farmamarket"];
     }
     return pharmacies.filter((p) => p.active).map((p) => p.slug);
   },
