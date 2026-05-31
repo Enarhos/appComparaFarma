@@ -105,7 +105,7 @@ export function toPharmacyPrice(product: ScrapedProduct, pharmacySlug: PharmacyS
     sbpay: product.sbpayPrice,
     effective: effectivePrice({ store: product.price, online: product.onlinePrice, cmr: product.cmrPrice, sbpay: product.sbpayPrice }),
   };
-  return { pharmacySlug, pharmacyName, productName: product.name, channels, hasStock: product.hasStock, hasOnlineDelivery: product.hasOnlineDelivery, onlineUrl: product.onlineUrl, imageUrl: product.imageUrl, fetchedAt: new Date().toISOString(), nearExpiry: product.nearExpiry ?? false };
+  return { pharmacySlug, pharmacyName, productName: product.name, channels, hasStock: product.hasStock, hasOnlineDelivery: product.hasOnlineDelivery, onlineUrl: product.onlineUrl, imageUrl: product.imageUrl, fetchedAt: new Date().toISOString() };
 }
 
 export function toMedicationResult(product: ScrapedProduct, pharmacySlug: PharmacySlug, pharmacyName: string): MedicationResult {

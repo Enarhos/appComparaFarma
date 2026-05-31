@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { MedicationResult } from "@/lib/types";
 
-const CACHE_PREFIX = "search_cache_v7_"; // v7: nearExpiry field in PharmacyPrice + farmamarket
+const CACHE_PREFIX = "search_cache_v6_"; // v6: dia/noche turn indicator in matchKey
 const TTL_MS = 30 * 60 * 1000; // 30 min
 
 interface CacheEntry {

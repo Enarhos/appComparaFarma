@@ -5,5 +5,4 @@ export const PHARMACY_NAMES: Record<PharmacySlug, string> = {
   salcobrand: "Salcobrand",
   ahumada: "Farmacias Ahumada",
   "dr-simi": "Dr. Simi",
-  farmamarket: "FarmaMarket",
 };

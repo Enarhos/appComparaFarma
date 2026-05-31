@@ -1,7 +1,6 @@
 import { searchAhumada } from "../clients/ahumada.js";
 import { searchCruzVerde } from "../clients/cruzverde.js";
 import { searchDrSimi } from "../clients/drsimi.js";
-import { searchFarmaMarket } from "../clients/farmamarket.js";
 import { searchSalcobrand } from "../clients/salcobrand.js";
 import { mergeDuplicates, toMedicationResult } from "../lib/normalization.js";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
@@ -66,11 +65,10 @@ const ALL_SOURCES: Array<{
   slug: PharmacySlug;
   fn: (query: string) => Promise<ScrapedProduct[]>;
 }> = [
-  { slug: "cruz-verde",  fn: searchCruzVerde  },
-  { slug: "salcobrand",  fn: searchSalcobrand },
-  { slug: "ahumada",     fn: searchAhumada    },
-  { slug: "dr-simi",    fn: searchDrSimi     },
-  { slug: "farmamarket", fn: searchFarmaMarket },
+  { slug: "cruz-verde", fn: searchCruzVerde },
+  { slug: "salcobrand", fn: searchSalcobrand },
+  { slug: "ahumada",    fn: searchAhumada    },
+  { slug: "dr-simi",   fn: searchDrSimi     },
 ];
 
 export async function searchMedicationsDetailed(query: string): Promise<SearchExecution> {
