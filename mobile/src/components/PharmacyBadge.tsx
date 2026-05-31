@@ -8,6 +8,7 @@ interface PharmacyBadgeProps {
 
 export function PharmacyBadge({ slug }: PharmacyBadgeProps) {
   const config = PHARMACIES[slug];
+  if (!config) return null;
   return (
     <View
       style={{ backgroundColor: config.bgLight, borderColor: config.color }}

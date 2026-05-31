@@ -11,6 +11,7 @@ interface PriceRowProps {
 export function PriceRow({ pharmacyPrice }: PriceRowProps) {
   const { pharmacySlug, channels, onlineUrl } = pharmacyPrice;
   const config = PHARMACIES[pharmacySlug];
+  if (!config) return null;
   const effective = channels.effective;
 
   const storeBest  = effective === channels.store;
