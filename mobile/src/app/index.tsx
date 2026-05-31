@@ -55,7 +55,7 @@ export default function HomeScreen() {
     const med = cachedResults[matchKey];
     if (!med) return;
     setResults([med]);
-    router.push({ pathname: "/medication", params: { key: matchKey } });
+    router.push({ pathname: "/medication", params: { matchKey } });
   }
 
   const favMeds = favKeys.map((k) => cachedResults[k]).filter(Boolean);

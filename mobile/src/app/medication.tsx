@@ -22,7 +22,7 @@ function getBestChannelLabel(prices: PharmacyPrice[], bestPharmacy: PharmacySlug
 }
 
 export default function MedicationScreen() {
-  const { key } = useLocalSearchParams<{ key: string }>();
+  const { matchKey: key } = useLocalSearchParams<{ matchKey: string }>();
   const results = useSearchStore((s) => s.results);
   const [imgError, setImgError] = useState(false);
   const { add, remove, isInCart } = useCartStore();

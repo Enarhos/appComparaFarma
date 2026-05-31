@@ -76,7 +76,7 @@ export function matchKey(name: string): string {
   }
   // cantidad de unidades: "30 sobres", "x20", "10 comprimidos", etc.
   const qtyM = raw.match(
-    /(?:x\s*(\d+)|\b(\d+)\s*(?:sobres?|comprimidos?|comp|c[aá]psulas?|cap|tab|tabletas?|amp(?:ollas?)?|parches?|grageas?|sachets?|unidades?))\b/i
+    /(?:\bx\s*(\d+)|\b(\d+)\s*(?:sobres?|comprimidos?|comp|c[aá]psulas?|cap|tab|tabletas?|amp(?:ollas?)?|parches?|grageas?|sachets?|unidades?)\b)/i
   );
   const qty = qtyM ? (qtyM[1] ?? qtyM[2] ?? "") : "";
   // qty=1 es la unidad singular implícita — no añade información discriminatoria.

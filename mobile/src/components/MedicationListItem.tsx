@@ -23,7 +23,7 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
   const pharmacyCount = visiblePrices.length;
 
   function handlePress() {
-    router.push({ pathname: "/medication", params: { key: matchKey } });
+    router.push({ pathname: "/medication", params: { matchKey } });
   }
 
   return (
