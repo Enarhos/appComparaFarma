@@ -111,6 +111,7 @@ export default function CartScreen() {
           <View className="gap-2">
             {totals.map((t, index) => {
               const ph = PHARMACIES[t.slug];
+              if (!ph) return null;
               const isWinner = index === 0 && t.missing === 0;
               return (
                 <View
@@ -187,10 +188,10 @@ export default function CartScreen() {
             <View className="flex-1">
               <Text className="text-sm font-bold text-green-800 dark:text-green-300">
                 Ahorras {formatCLP(savings)} comprando todo en{" "}
-                {PHARMACIES[best.slug].name.replace("Farmacias ", "")}
+                {(PHARMACIES[best.slug]?.name ?? best.slug).replace("Farmacias ", "")}
               </Text>
               <Text className="text-xs text-green-600 dark:text-green-500 mt-0.5">
-                vs {PHARMACIES[second.slug].name.replace("Farmacias ", "")} (
+                vs {(PHARMACIES[second.slug]?.name ?? second.slug).replace("Farmacias ", "")} (
                 {formatCLP(second.total)})
               </Text>
             </View>

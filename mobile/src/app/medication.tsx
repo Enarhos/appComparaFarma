@@ -14,6 +14,7 @@ function getBestChannelLabel(prices: PharmacyPrice[], bestPharmacy: PharmacySlug
   const p = prices.find((p) => p.pharmacySlug === bestPharmacy);
   if (!p) return null;
   const config = PHARMACIES[bestPharmacy];
+  if (!config) return null;
   if (p.channels.sbpay === bestPrice && config.sbpayLabel) return config.sbpayLabel;
   if (p.channels.cmr === bestPrice && config.cardLabel) return config.cardLabel;
   if (p.channels.online === bestPrice) return "Online";
@@ -127,6 +128,7 @@ export default function MedicationScreen() {
 function PharmacyDetail({ pharmacyPrice }: { pharmacyPrice: PharmacyPrice }) {
   const { pharmacySlug, channels, hasStock, onlineUrl, fetchedAt, productName } = pharmacyPrice;
   const config = PHARMACIES[pharmacySlug];
+  if (!config) return null;
   const effective = channels.effective;
 
   function openUrl() {
