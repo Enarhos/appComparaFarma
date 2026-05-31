@@ -1,4 +1,5 @@
 import { searchAhumada } from "../clients/ahumada.js";
+import { searchAraucoMed } from "../clients/araucomed.js";
 import { searchCruzVerde } from "../clients/cruzverde.js";
 import { searchDrSimi } from "../clients/drsimi.js";
 import { searchSalcobrand } from "../clients/salcobrand.js";
@@ -69,6 +70,7 @@ const ALL_SOURCES: Array<{
   { slug: "salcobrand", fn: searchSalcobrand },
   { slug: "ahumada",    fn: searchAhumada    },
   { slug: "dr-simi",   fn: searchDrSimi     },
+  { slug: "araucomed",  fn: searchAraucoMed  },
 ];
 
 export async function searchMedicationsDetailed(query: string): Promise<SearchExecution> {

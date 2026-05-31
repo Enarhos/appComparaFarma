@@ -47,4 +47,12 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     sbpayLabel: null,
     channels: { store: true, online: true, card: false, sbpay: false },
   },
+  araucomed: {
+    name: "AraucoMed",
+    color: "#1d6fa4",
+    bgLight: "#e8f3fb",
+    cardLabel: null,
+    sbpayLabel: null,
+    channels: { store: true, online: false, card: false, sbpay: false },
+  },
 };

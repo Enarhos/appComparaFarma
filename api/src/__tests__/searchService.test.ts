@@ -7,12 +7,14 @@ const mocks = vi.hoisted(() => ({
   searchSalcobrand: vi.fn<() => Promise<ScrapedProduct[]>>(),
   searchAhumada: vi.fn<() => Promise<ScrapedProduct[]>>(),
   searchDrSimi: vi.fn<() => Promise<ScrapedProduct[]>>(),
+  searchAraucoMed: vi.fn<() => Promise<ScrapedProduct[]>>(),
 }));
 
 vi.mock("../clients/cruzverde.js", () => ({ searchCruzVerde: mocks.searchCruzVerde }));
 vi.mock("../clients/salcobrand.js", () => ({ searchSalcobrand: mocks.searchSalcobrand }));
 vi.mock("../clients/ahumada.js", () => ({ searchAhumada: mocks.searchAhumada }));
 vi.mock("../clients/drsimi.js", () => ({ searchDrSimi: mocks.searchDrSimi }));
+vi.mock("../clients/araucomed.js", () => ({ searchAraucoMed: mocks.searchAraucoMed }));
 
 import { searchMedicationsDetailed } from "../services/searchService.js";
 
@@ -26,12 +28,13 @@ describe("searchMedicationsDetailed", () => {
     mocks.searchSalcobrand.mockResolvedValue([makeProduct("Paracetamol 500mg 16 Comprimidos", 1299, 1143)]);
     mocks.searchAhumada.mockRejectedValue(new Error("timeout"));
     mocks.searchDrSimi.mockResolvedValue([makeProduct("Paracetamol 500 mg 16 comprimidos", 480)]);
+    mocks.searchAraucoMed.mockResolvedValue([]);
 
     const execution = await searchMedicationsDetailed("paracetamol");
 
     expect(execution.results.length).toBeGreaterThan(0);
     expect(execution.diagnostics.query).toBe("paracetamol");
-    expect(execution.diagnostics.pharmacies).toHaveLength(4);
+    expect(execution.diagnostics.pharmacies).toHaveLength(5);
     expect(execution.diagnostics.pharmacies.find((item) => item.pharmacySlug === "ahumada")).toMatchObject({
       status: "rejected",
       resultCount: 0,
