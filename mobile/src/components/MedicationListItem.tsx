@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 import { useConfigStore } from "@/store/configStore";
 import type { MedicationResult, PharmacySlug } from "@/lib/types";
+import { PHARMACIES } from "@/constants/pharmacies";
+import { formatCLP } from "@/lib/formatters";
 
 interface Props {
   medication: MedicationResult;
@@ -11,7 +12,7 @@ interface Props {
 }
 
 export function MedicationListItem({ medication, activePharmacies }: Props) {
-  const { canonicalName, laboratory, isBioequivalent, prices, matchKey, imageUrl } = medication;
+  const { canonicalName, laboratory, isBioequivalent, prices, matchKey, imageUrl, bestPrice, bestPharmacy } = medication;
   const router = useRouter();
   const [imgError, setImgError] = useState(false);
   const isActive = useConfigStore((s) => s.isActive);
@@ -20,7 +21,16 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
     (p) => isActive(p.pharmacySlug) && (!activePharmacies || activePharmacies.has(p.pharmacySlug))
   );
 
-  const pharmacyCount = visiblePrices.length;
+  // Mejor precio entre las farmacias visibles
+  const visibleBest = visiblePrices.reduce<typeof visiblePrices[0] | null>((acc, p) => {
+    if (!acc || p.channels.effective < acc.channels.effective) return p;
+    return acc;
+  }, null);
+
+  const displayPrice = visibleBest?.channels.effective ?? bestPrice;
+  const displayPharmacy = visibleBest
+    ? (PHARMACIES[visibleBest.pharmacySlug]?.name ?? visibleBest.pharmacySlug)
+    : (PHARMACIES[bestPharmacy as PharmacySlug]?.name ?? bestPharmacy);
 
   function handlePress() {
     router.push({ pathname: "/medication", params: { matchKey } });
@@ -43,11 +53,11 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
         />
       ) : (
         <View className="w-[52px] h-[52px] rounded-xl bg-gray-100 dark:bg-gray-700 items-center justify-center">
-          <Ionicons name="medkit-outline" size={24} color="#9ca3af" />
+          <Text className="text-2xl">💊</Text>
         </View>
       )}
 
-      {/* Nombre + lab + badges */}
+      {/* Nombre + lab + dots + bio */}
       <View className="flex-1 gap-0.5">
         <Text
           className="text-sm font-bold text-gray-900 dark:text-white leading-snug"
@@ -60,26 +70,46 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
             {laboratory}
           </Text>
         )}
-        <View className="flex-row flex-wrap gap-1.5 mt-1">
+        <View className="flex-row items-center gap-2 mt-1 flex-wrap">
+          {/* Puntos de color por farmacia disponible */}
+          {visiblePrices.length > 0 && (
+            <View className="flex-row gap-1 items-center">
+              {visiblePrices.map((p) => {
+                const ph = PHARMACIES[p.pharmacySlug];
+                if (!ph) return null;
+                return (
+                  <View
+                    key={p.pharmacySlug}
+                    style={{ backgroundColor: ph.color }}
+                    className="w-2 h-2 rounded-full"
+                  />
+                );
+              })}
+            </View>
+          )}
           {isBioequivalent && (
             <View className="bg-emerald-50 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 rounded-full px-2 py-0.5">
               <Text className="text-emerald-700 dark:text-emerald-400 text-xs font-medium">
-                Bioequivalente
-              </Text>
-            </View>
-          )}
-          {pharmacyCount > 0 && (
-            <View className="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full px-2 py-0.5">
-              <Text className="text-gray-500 dark:text-gray-400 text-xs">
-                {pharmacyCount} farmacia{pharmacyCount !== 1 ? "s" : ""}
+                Bio
               </Text>
             </View>
           )}
         </View>
       </View>
 
-      {/* Chevron */}
-      <Ionicons name="chevron-forward" size={18} color="#d1d5db" />
+      {/* Precio + farmacia */}
+      {visiblePrices.length > 0 && (
+        <View className="items-end gap-0.5">
+          <Text className="text-base font-extrabold text-green-600">
+            {formatCLP(displayPrice)}
+          </Text>
+          <Text className="text-xs text-gray-400 text-right" numberOfLines={1} style={{ maxWidth: 90 }}>
+            {displayPharmacy.replace("Farmacias ", "")}
+          </Text>
+        </View>
+      )}
+
+      <Text className="text-gray-300 dark:text-gray-600 text-base">›</Text>
     </TouchableOpacity>
   );
 }

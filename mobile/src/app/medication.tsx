@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ScrollView, View, Text, TouchableOpacity, Linking, Image, Share } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useLocalSearchParams, Stack } from "expo-router";
+import { useLocalSearchParams, Stack, useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useSearchStore } from "@/store/searchStore";
 import { useCartStore } from "@/store/cartStore";
@@ -21,12 +21,23 @@ function getBestChannelLabel(prices: PharmacyPrice[], bestPharmacy: PharmacySlug
   return null;
 }
 
+function parseUnitQty(matchKey: string): { qty: number; perUnitLabel: string } | null {
+  const parts = matchKey.split("|");
+  if (parts.length < 3) return null;
+  const qty = parseInt(parts[2], 10);
+  if (isNaN(qty) || qty <= 1) return null;
+  const dose = parts[1] ?? "";
+  const perUnitLabel = dose.endsWith("ml") ? "c/ml" : "c/u";
+  return { qty, perUnitLabel };
+}
+
 export default function MedicationScreen() {
   const { matchKey: key } = useLocalSearchParams<{ matchKey: string }>();
   const results = useSearchStore((s) => s.results);
   const [imgError, setImgError] = useState(false);
   const { add, remove, isInCart } = useCartStore();
   const isActive = useConfigStore((s) => s.isActive);
+  const router = useRouter();
 
   const medication = results.find((r) => r.matchKey === key);
   const inCart = medication ? isInCart(medication.matchKey) : false;
@@ -39,9 +50,10 @@ export default function MedicationScreen() {
     );
   }
 
-  // Rebinding para que TypeScript entienda que es no-null dentro de closures
   const med = medication;
-  const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, bestPharmacy, imageUrl } = med;
+  const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, bestPharmacy, imageUrl, matchKey: medMatchKey } = med;
+  const activePrices = prices.filter((p) => isActive(p.pharmacySlug));
+  const unitQty = parseUnitQty(medMatchKey);
 
   function handleCartToggle() {
     if (inCart) {
@@ -112,12 +124,32 @@ export default function MedicationScreen() {
           </View>
         </View>
 
+        {/* Banner: solo una farmacia tiene esta presentación */}
+        {activePrices.length === 1 && (
+          <TouchableOpacity
+            onPress={() => router.back()}
+            activeOpacity={0.8}
+            className="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-2xl px-4 py-3 flex-row items-start gap-3"
+          >
+            <Ionicons name="information-circle-outline" size={18} color="#d97706" style={{ marginTop: 1 }} />
+            <View className="flex-1">
+              <Text className="text-sm font-semibold text-amber-800 dark:text-amber-300">
+                Solo disponible en una farmacia
+              </Text>
+              <Text className="text-xs text-amber-700 dark:text-amber-400 mt-0.5 leading-4">
+                Otras farmacias pueden tener esta molécula en distinta cantidad de unidades. Volver a resultados para comparar.
+              </Text>
+            </View>
+            <Ionicons name="chevron-back" size={16} color="#d97706" style={{ marginTop: 1 }} />
+          </TouchableOpacity>
+        )}
+
         {/* Calculadora de ahorro */}
-        <SavingsCard prices={prices.filter((p) => isActive(p.pharmacySlug))} />
+        <SavingsCard prices={activePrices} />
 
         {/* Una card por farmacia — solo farmacias activas */}
-        {prices.filter((p) => isActive(p.pharmacySlug)).map((p) => (
-          <PharmacyDetail key={p.pharmacySlug} pharmacyPrice={p} />
+        {activePrices.map((p) => (
+          <PharmacyDetail key={p.pharmacySlug} pharmacyPrice={p} unitQty={unitQty} />
         ))}
 
       </ScrollView>
@@ -125,7 +157,7 @@ export default function MedicationScreen() {
   );
 }
 
-function PharmacyDetail({ pharmacyPrice }: { pharmacyPrice: PharmacyPrice }) {
+function PharmacyDetail({ pharmacyPrice, unitQty }: { pharmacyPrice: PharmacyPrice; unitQty: { qty: number; perUnitLabel: string } | null }) {
   const { pharmacySlug, channels, hasStock, onlineUrl, fetchedAt, productName } = pharmacyPrice;
   const config = PHARMACIES[pharmacySlug];
   if (!config) return null;
@@ -156,15 +188,15 @@ function PharmacyDetail({ pharmacyPrice }: { pharmacyPrice: PharmacyPrice }) {
       {/* Canales de precio */}
       <View className="px-4 py-3">
         <View className="flex-row">
-          <PriceCol label="Presencial" price={channels.store} isBest={effective === channels.store} />
+          <PriceCol label="Presencial" price={channels.store} isBest={effective === channels.store} unitQty={unitQty} />
           {channels.online !== null && (
-            <PriceCol label="Online" price={channels.online} isBest={effective === channels.online} />
+            <PriceCol label="Online" price={channels.online} isBest={effective === channels.online} unitQty={unitQty} />
           )}
           {channels.cmr !== null && config.cardLabel && (
-            <PriceCol label={config.cardLabel} price={channels.cmr} isBest={effective === channels.cmr} />
+            <PriceCol label={config.cardLabel} price={channels.cmr} isBest={effective === channels.cmr} unitQty={unitQty} />
           )}
           {channels.sbpay !== null && config.sbpayLabel && (
-            <PriceCol label={config.sbpayLabel} price={channels.sbpay} isBest={effective === channels.sbpay} />
+            <PriceCol label={config.sbpayLabel} price={channels.sbpay} isBest={effective === channels.sbpay} unitQty={unitQty} />
           )}
         </View>
       </View>
@@ -244,15 +276,26 @@ function SavingsCard({ prices }: { prices: PharmacyPrice[] }) {
   );
 }
 
-function PriceCol({ label, price, isBest }: { label: string; price: number | null; isBest: boolean }) {
+function PriceCol({ label, price, isBest, unitQty }: {
+  label: string;
+  price: number | null;
+  isBest: boolean;
+  unitQty: { qty: number; perUnitLabel: string } | null;
+}) {
+  const perUnit = unitQty && price ? Math.round(price / unitQty.qty) : null;
   return (
     <View className="flex-1 items-center">
       <Text className="text-xs text-gray-400 mb-1">{label}</Text>
       {price !== null ? (
         <>
-          <Text className={`text-base font-bold ${isBest ? "text-green-600" : "text-gray-800"}`}>
+          <Text className={`text-base font-bold ${isBest ? "text-green-600" : "text-gray-800 dark:text-gray-200"}`}>
             {formatCLP(price)}
           </Text>
+          {perUnit && (
+            <Text className="text-xs text-gray-400 mt-0.5">
+              {formatCLP(perUnit)}{unitQty!.perUnitLabel}
+            </Text>
+          )}
           {isBest && (
             <View className="bg-green-100 rounded px-1 mt-0.5">
               <Text className="text-green-700 text-xs">✓ mejor</Text>

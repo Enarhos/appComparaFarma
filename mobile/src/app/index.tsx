@@ -17,6 +17,10 @@ import type { PharmacySlug } from "@/lib/types";
 
 const QUICK_SEARCHES = ["Paracetamol", "Ibuprofeno", "Amoxicilina", "Metformina", "Losartán", "Atorvastatina", "Omeprazol", "Sertralina"];
 
+const _pharmNames = Object.values(PHARMACIES).map((p) => p.name.replace("Farmacias ", ""));
+const PHARMACY_SUBTITLE =
+  _pharmNames.slice(0, -1).join(", ") + " y " + _pharmNames[_pharmNames.length - 1];
+
 export default function HomeScreen() {
   const router = useRouter();
   const [ready, setReady] = useState(false);
@@ -99,7 +103,7 @@ export default function HomeScreen() {
             </View>
           </View>
           <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 text-center">
-            Compara precios en Cruz Verde, Salcobrand, Ahumada y Dr. Simi
+            Compara precios en {PHARMACY_SUBTITLE}
           </Text>
         </View>
 
