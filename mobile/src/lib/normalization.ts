@@ -131,7 +131,7 @@ export function mergeDuplicates(results: MedicationResult[]): MedicationResult[]
     for (const med of group) {
       for (const p of med.prices) {
         const ex = byPharmacy.get(p.pharmacySlug);
-        if (!ex || new Date(p.fetchedAt) > new Date(ex.fetchedAt)) byPharmacy.set(p.pharmacySlug, p);
+        if (!ex || p.channels.effective < ex.channels.effective) byPharmacy.set(p.pharmacySlug, p);
       }
     }
     const prices = [...byPharmacy.values()].sort((a, b) => a.channels.effective - b.channels.effective);
