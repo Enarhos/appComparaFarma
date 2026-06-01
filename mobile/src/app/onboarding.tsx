@@ -14,7 +14,7 @@ const SLIDES = [
     icon: "storefront-outline" as const,
     iconColor: "#16a34a",
     title: "Compara precios al instante",
-    body: "Busca cualquier medicamento y ve en segundos cuánto cuesta en Cruz Verde, Salcobrand, Farmacias Ahumada y Dr. Simi.",
+    body: "Busca cualquier medicamento y ve en segundos cuánto cuesta en Cruz Verde, Salcobrand, Ahumada, Dr. Simi y AraucoMed.",
   },
   {
     icon: "list-outline" as const,

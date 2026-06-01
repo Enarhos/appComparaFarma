@@ -3,11 +3,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useCartStore } from "@/store/cartStore";
+import { useConfigStore } from "@/store/configStore";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/formatters";
 import type { MedicationResult, PharmacySlug } from "@/lib/types";
-
-const PHARMACY_SLUGS: PharmacySlug[] = ["cruz-verde", "salcobrand", "ahumada", "dr-simi"];
 
 type PharmacyTotal = {
   slug: PharmacySlug;
@@ -16,8 +15,8 @@ type PharmacyTotal = {
   missing: number;
 };
 
-function calcTotals(items: MedicationResult[]): PharmacyTotal[] {
-  return PHARMACY_SLUGS
+function calcTotals(items: MedicationResult[], slugs: PharmacySlug[]): PharmacyTotal[] {
+  return slugs
     .map((slug) => {
       let total = 0;
       let found = 0;
@@ -38,8 +37,9 @@ function calcTotals(items: MedicationResult[]): PharmacyTotal[] {
 
 export default function CartScreen() {
   const { items, remove, clear } = useCartStore();
+  const activePharmacySlugs = useConfigStore((s) => s.activePharmacySlugs);
 
-  const totals = calcTotals(items);
+  const totals = calcTotals(items, activePharmacySlugs());
   const completeTotals = totals.filter((t) => t.missing === 0);
   const best = completeTotals[0];
   const second = completeTotals[1];

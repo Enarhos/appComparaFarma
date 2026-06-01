@@ -3,6 +3,15 @@ import { fetchWithTimeout } from "../lib/timeout.js";
 
 const BASE = "https://farmacia.araucomed.com";
 
+function decodeHtml(str: string): string {
+  return str
+    .replace(/&amp;/g, "&").replace(/&nbsp;/g, " ")
+    .replace(/&aacute;/g, "á").replace(/&eacute;/g, "é")
+    .replace(/&iacute;/g, "í").replace(/&oacute;/g, "ó")
+    .replace(/&uacute;/g, "ú").replace(/&ntilde;/g, "ñ")
+    .replace(/&#(\d+);/g, (_, n: string) => String.fromCharCode(Number(n)));
+}
+
 // Regex sobre el bloque <article> de cada producto PrestaShop
 const articleRe  = /<article[^>]*product-miniature[^>]*>[\s\S]*?<\/article>/g;
 const nameUrlRe  = /product-title[^>]*itemprop="name"[^>]*>\s*<a href="([^"]+)">([^<]+)<\/a>/;
@@ -26,7 +35,7 @@ export function parseAraucoMedResponse(html: string): ScrapedProduct[] {
     const imageM = imageRe.exec(block);
 
     results.push({
-      name: nameM[2].trim(),
+      name: decodeHtml(nameM[2].trim()),
       price,
       onlinePrice: null,
       cmrPrice: null,
@@ -50,6 +59,7 @@ export async function searchAraucoMed(query: string): Promise<ScrapedProduct[]> 
       "Accept": "text/html",
     },
   });
+  if (!res.ok) throw new Error(`AraucoMed HTTP ${res.status}`);
   const html = await res.text();
   return parseAraucoMedResponse(html);
 }

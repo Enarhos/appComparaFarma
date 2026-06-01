@@ -97,6 +97,7 @@ export async function searchAhumada(query: string): Promise<ScrapedProduct[]> {
     },
   });
 
+  if (!res.ok) throw new Error(`Ahumada HTTP ${res.status}`);
   const html = await res.text();
   return parseAhumadaHtml(html);
 }

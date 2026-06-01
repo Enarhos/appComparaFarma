@@ -11,10 +11,11 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
+import { PHARMACIES as PHARMACIES_CONFIG } from "@/constants/pharmacies";
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "";
 
-const PHARMACIES = ["Cruz Verde", "Salcobrand", "Ahumada", "Dr. Simi"];
+const PHARMACY_NAMES = Object.values(PHARMACIES_CONFIG).map((p) => p.name.replace("Farmacias ", ""));
 
 type SubmitState = "idle" | "sending" | "success" | "error";
 
@@ -71,7 +72,7 @@ export default function AboutScreen() {
             <Text className="text-2xl font-bold text-green-700">ComparaFarma</Text>
             <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 text-center">
               Compara precios de medicamentos en{"\n"}
-              {PHARMACIES.join(" · ")}
+              {PHARMACY_NAMES.join(" · ")}
             </Text>
           </View>
 
@@ -172,7 +173,7 @@ export default function AboutScreen() {
           <View className="items-center">
             <Text className="text-xs text-gray-400 dark:text-gray-600 text-center">
               Comparamos precios en tiempo real en{"\n"}
-              {PHARMACIES.join(", ")}
+              {PHARMACY_NAMES.join(", ")}
             </Text>
             <Text className="text-xs text-gray-300 dark:text-gray-700 mt-3">
               ComparaFarma · Chile

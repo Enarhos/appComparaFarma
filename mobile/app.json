@@ -3,7 +3,7 @@
     "name": "ComparaFarma",
     "slug": "compara-farma",
     "scheme": "comparafarma",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -13,8 +13,17 @@
       "backgroundColor": "#16a34a"
     },
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "mla.app.comparafarma"
+      "supportsTablet": false,
+      "bundleIdentifier": "mla.app.comparafarma",
+      "buildNumber": "13",
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+            "NSPrivacyAccessedAPITypeReasons": ["CA92.1"]
+          }
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +31,8 @@
         "backgroundColor": "#16a34a"
       },
       "package": "mla.app.comparafarma",
-      "versionCode": 12
+      "versionCode": 13,
+      "permissions": []
     },
     "web": {
       "bundler": "metro"

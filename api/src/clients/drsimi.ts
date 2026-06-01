@@ -64,6 +64,7 @@ export async function searchDrSimi(query: string): Promise<ScrapedProduct[]> {
     }
   );
 
+  if (!res.ok) throw new Error(`Dr. Simi HTTP ${res.status}`);
   const products = await res.json() as Record<string, unknown>[];
   return parseDrSimiResponse(products, query);
 }

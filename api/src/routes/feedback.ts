@@ -63,8 +63,15 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
   if (message.length < 5) {
     return json(response, 400, { error: "El mensaje debe tener al menos 5 caracteres." });
   }
+  if (message.length > 2000) {
+    return json(response, 400, { error: "El mensaje no puede superar los 2000 caracteres." });
+  }
 
-  const userEmail = body.email?.trim() ?? "";
+  const rawEmail = body.email?.trim() ?? "";
+  // Solo aceptar emails con formato básico válido; eliminar cualquier carácter de control
+  const userEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rawEmail)
+    ? rawEmail.replace(/[\r\n]/g, "")
+    : "";
 
   if (RESEND_API_KEY) {
     const lines = [
@@ -75,24 +82,26 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
       `Email del usuario: ${userEmail || "(no proporcionado)"}`,
     ];
 
-    const resendRes = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "ComparaFarma <onboarding@resend.dev>",
-        to: [FEEDBACK_EMAIL],
-        subject: "[ComparaFarma] Nueva sugerencia",
-        text: lines.join("\n"),
-      }),
-    });
-
-    const resendBody = await resendRes.json().catch(() => ({}));
-    console.log("[feedback] resend status:", resendRes.status, JSON.stringify(resendBody));
+    try {
+      const resendRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "ComparaFarma <onboarding@resend.dev>",
+          to: [FEEDBACK_EMAIL],
+          subject: "[ComparaFarma] Nueva sugerencia",
+          text: lines.join("\n"),
+        }),
+      });
+      const resendBody = await resendRes.json().catch(() => ({}));
+      console.log("[feedback] resend status:", resendRes.status, JSON.stringify(resendBody));
+    } catch (err) {
+      console.error("[feedback] resend error:", err instanceof Error ? err.message : err);
+    }
   } else {
-    // Sin clave configurada: log en consola (útil en dev)
     console.log("[feedback] sin RESEND_API_KEY", { message, email: userEmail, ip });
   }
 

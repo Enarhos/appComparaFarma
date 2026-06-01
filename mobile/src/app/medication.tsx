@@ -23,8 +23,9 @@ function getBestChannelLabel(prices: PharmacyPrice[], bestPharmacy: PharmacySlug
 
 function parseUnitQty(matchKey: string): { qty: number; perUnitLabel: string } | null {
   const parts = matchKey.split("|");
-  if (parts.length < 3) return null;
-  const qty = parseInt(parts[2], 10);
+  // format: activo|dosis[|turno][|cantidad] — cantidad es siempre el último segmento numérico
+  const last = parts[parts.length - 1] ?? "";
+  const qty = parseInt(last, 10);
   if (isNaN(qty) || qty <= 1) return null;
   const dose = parts[1] ?? "";
   const perUnitLabel = dose.endsWith("ml") ? "c/ml" : "c/u";

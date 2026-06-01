@@ -22,6 +22,9 @@ export function setJsonHeaders(res: ResponseLike): void {
 export function json(res: ResponseLike, statusCode: number, body: unknown): void {
   res.statusCode = statusCode;
   setJsonHeaders(res);
+  if (statusCode >= 400) {
+    res.setHeader("Cache-Control", "no-store");
+  }
   res.end(JSON.stringify(body));
 }
 

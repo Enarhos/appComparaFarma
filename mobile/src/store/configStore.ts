@@ -23,13 +23,17 @@ export const useConfigStore = create<ConfigState>((set, get) => ({
 
   fetch: async () => {
     if (!API_URL) return;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
     try {
-      const res = await fetch(`${API_URL.replace(/\/$/, "")}/api/config`);
+      const res = await fetch(`${API_URL.replace(/\/$/, "")}/api/config`, { signal: controller.signal });
       if (!res.ok) return;
       const data = (await res.json()) as { pharmacies: PharmacyConfig[] };
       set({ pharmacies: data.pharmacies, loaded: true });
     } catch {
       // Falla silenciosamente — la app asume todas las farmacias activas
+    } finally {
+      clearTimeout(timeout);
     }
   },
 

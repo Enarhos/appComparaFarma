@@ -66,6 +66,7 @@ export async function searchSalcobrand(query: string): Promise<ScrapedProduct[]>
     }
   );
 
+  if (!res.ok) throw new Error(`Salcobrand HTTP ${res.status}`);
   const data = await res.json() as { hits?: Record<string, unknown>[] };
   return parseSalcobrandResponse(data, query);
 }

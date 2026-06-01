@@ -39,8 +39,8 @@ export function parseCruzVerdeResponse(
       hasOnlineDelivery: true,
       onlineUrl: id ? `${BASE}/${toSlug(name)}/${id}.html` : `${BASE}/search?q=${encodeURIComponent(name)}`,
       imageUrl,
-      laboratory: null,
-      isBioequivalent: false,
+      laboratory: (hit.brand as string) ?? null,
+      isBioequivalent: Boolean(hit.bioequivalent_indicator ?? hit.c_bioequivalente ?? false),
     }];
   });
 }
@@ -61,6 +61,7 @@ export async function searchCruzVerde(query: string): Promise<ScrapedProduct[]> 
     },
   });
 
+  if (!res.ok) throw new Error(`Cruz Verde HTTP ${res.status}`);
   const data = await res.json() as { hits?: Record<string, unknown>[] };
   return parseCruzVerdeResponse(data, query);
 }

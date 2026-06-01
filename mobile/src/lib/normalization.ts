@@ -97,22 +97,6 @@ export function effectivePrice(channels: { store: number; online: number | null;
   );
 }
 
-export function toPharmacyPrice(product: ScrapedProduct, pharmacySlug: PharmacySlug, pharmacyName: string): PharmacyPrice {
-  const channels = {
-    store: product.price,
-    online: product.onlinePrice,
-    cmr: product.cmrPrice,
-    sbpay: product.sbpayPrice,
-    effective: effectivePrice({ store: product.price, online: product.onlinePrice, cmr: product.cmrPrice, sbpay: product.sbpayPrice }),
-  };
-  return { pharmacySlug, pharmacyName, productName: product.name, channels, hasStock: product.hasStock, hasOnlineDelivery: product.hasOnlineDelivery, onlineUrl: product.onlineUrl, imageUrl: product.imageUrl, fetchedAt: new Date().toISOString() };
-}
-
-export function toMedicationResult(product: ScrapedProduct, pharmacySlug: PharmacySlug, pharmacyName: string): MedicationResult {
-  const price = toPharmacyPrice(product, pharmacySlug, pharmacyName);
-  return { matchKey: matchKey(product.name), canonicalName: product.name, laboratory: product.laboratory, isBioequivalent: product.isBioequivalent, prices: [price], bestPrice: price.channels.effective, bestPharmacy: pharmacySlug, imageUrl: product.imageUrl };
-}
-
 export function mergeDuplicates(results: MedicationResult[]): MedicationResult[] {
   const groups = new Map<string, MedicationResult[]>();
   for (const r of results) {

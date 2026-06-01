@@ -18,12 +18,13 @@ export const useFavoritesStore = create<FavoritesState>()(
       toggle: (med) =>
         set((state) => {
           const exists = state.keys.includes(med.matchKey);
-          return {
-            keys: exists
-              ? state.keys.filter((k) => k !== med.matchKey)
-              : [med.matchKey, ...state.keys],
-            cachedResults: { ...state.cachedResults, [med.matchKey]: med },
-          };
+          const keys = exists
+            ? state.keys.filter((k) => k !== med.matchKey)
+            : [med.matchKey, ...state.keys];
+          const cachedResults = exists
+            ? Object.fromEntries(Object.entries(state.cachedResults).filter(([k]) => k !== med.matchKey))
+            : { ...state.cachedResults, [med.matchKey]: med };
+          return { keys, cachedResults };
         }),
       isFavorite: (key) => get().keys.includes(key),
     }),

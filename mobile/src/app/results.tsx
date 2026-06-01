@@ -11,8 +11,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import type { MedicationResult } from "@/lib/types";
-import type { PharmacySlug } from "@/lib/types";
+import type { MedicationResult, PharmacySlug } from "@/lib/types";
 import { useLocalSearchParams } from "expo-router";
 import { MedicationListItem } from "@/components/MedicationListItem";
 import { SkeletonCard } from "@/components/SkeletonCard";
@@ -35,12 +34,18 @@ export default function ResultsScreen() {
   const { add: addToHistory } = useHistoryStore();
   const { search } = useSearch();
   const activePharmacySlugs = useConfigStore((s) => s.activePharmacySlugs);
+  const configLoaded = useConfigStore((s) => s.loaded);
 
   const [bioOnly, setBioOnly] = useState(false);
   const [sortBy, setSortBy] = useState<SortOption>("price");
   const [activePharmacies, setActivePharmacies] = useState<Set<PharmacySlug>>(
     () => new Set(activePharmacySlugs())
   );
+
+  // Sincronizar chips cuando configStore termina de cargar desde el backend
+  useEffect(() => {
+    setActivePharmacies(new Set(activePharmacySlugs()));
+  }, [configLoaded]);
   const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
@@ -201,7 +206,7 @@ export default function ResultsScreen() {
         <View className="flex-row items-center gap-2 px-4 py-3">
           <ActivityIndicator size="small" color="#16a34a" />
           <Text className="text-sm text-gray-400 dark:text-gray-500">
-            Consultando Cruz Verde, Salcobrand, Ahumada y Dr. Simi...
+            Consultando {Object.values(PHARMACIES).map(p => p.name.replace("Farmacias ", "")).join(", ")}...
           </Text>
         </View>
       )}
@@ -301,7 +306,7 @@ export default function ResultsScreen() {
         }
         refreshControl={
           <RefreshControl
-            refreshing={false}
+            refreshing={isLoading}
             onRefresh={handleRefresh}
             tintColor="#16a34a"
             colors={["#16a34a"]}

@@ -34,12 +34,14 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false, suggestions
   const trimmedLower = value.trim().toLowerCase();
   const filteredSuggestions =
     trimmedLower.length >= 1
-      ? [...new Set(suggestions)]
+      ? suggestions
           .filter(
             (s) =>
               s.toLowerCase().includes(trimmedLower) &&
               s.toLowerCase() !== trimmedLower
           )
+          // dedup case-insensitive: keep first occurrence of each lowercase value
+          .filter((s, i, arr) => arr.findIndex((x) => x.toLowerCase() === s.toLowerCase()) === i)
           .slice(0, MAX_SUGGESTIONS)
       : [];
 
