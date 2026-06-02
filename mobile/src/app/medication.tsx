@@ -6,6 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useSearchStore } from "@/store/searchStore";
 import { useCartStore } from "@/store/cartStore";
 import { useConfigStore } from "@/store/configStore";
+import { useFilterStore } from "@/store/filterStore";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP, scrapedAgo } from "@/lib/formatters";
 import type { PharmacyPrice, PharmacySlug } from "@/lib/types";
@@ -38,6 +39,7 @@ export default function MedicationScreen() {
   const [imgError, setImgError] = useState(false);
   const { add, remove, isInCart } = useCartStore();
   const isActive = useConfigStore((s) => s.isActive);
+  const isPharmacyVisible = useFilterStore((s) => s.isPharmacyVisible);
   const router = useRouter();
 
   const medication = results.find((r) => r.matchKey === key);
@@ -53,7 +55,9 @@ export default function MedicationScreen() {
 
   const med = medication;
   const { canonicalName, laboratory, isBioequivalent, prices, bestPrice, bestPharmacy, imageUrl, matchKey: medMatchKey } = med;
-  const activePrices = prices.filter((p) => isActive(p.pharmacySlug));
+  const activePrices = prices.filter(
+    (p) => isActive(p.pharmacySlug) && isPharmacyVisible(p.pharmacySlug)
+  );
   const unitQty = parseUnitQty(medMatchKey);
 
   function handleCartToggle() {

@@ -19,6 +19,7 @@ import { FilterSheet } from "@/components/FilterSheet";
 import { useSearchStore } from "@/store/searchStore";
 import { useHistoryStore } from "@/store/historyStore";
 import { useConfigStore } from "@/store/configStore";
+import { useFilterStore } from "@/store/filterStore";
 import { useSearch } from "@/hooks/useSearch";
 import { PHARMACIES } from "@/constants/pharmacies";
 
@@ -35,6 +36,7 @@ export default function ResultsScreen() {
   const { search } = useSearch();
   const activePharmacySlugs = useConfigStore((s) => s.activePharmacySlugs);
   const configLoaded = useConfigStore((s) => s.loaded);
+  const setFilterStore = useFilterStore((s) => s.setActivePharmacies);
 
   const [bioOnly, setBioOnly] = useState(false);
   const [sortBy, setSortBy] = useState<SortOption>("price");
@@ -77,19 +79,18 @@ export default function ResultsScreen() {
       } else {
         next.add(slug);
       }
+      setFilterStore(next);
       return next;
     });
   }
 
   function selectAllPharmacies() {
-    const all = new Set(activePharmacySlugs() as PharmacySlug[]);
     const allActive = availableSlugs.every((s) => activePharmacies.has(s));
-    if (allActive) {
-      // Dejar solo la primera activa (no puede quedar ninguna desactivada)
-      setActivePharmacies(new Set([availableSlugs[0]]));
-    } else {
-      setActivePharmacies(all);
-    }
+    const next = allActive
+      ? new Set([availableSlugs[0]] as PharmacySlug[])
+      : new Set(activePharmacySlugs() as PharmacySlug[]);
+    setActivePharmacies(next);
+    setFilterStore(next);
   }
 
   const availableSlugs = (Object.keys(PHARMACIES) as PharmacySlug[]).filter((slug) =>
