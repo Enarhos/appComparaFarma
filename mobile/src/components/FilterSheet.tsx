@@ -148,13 +148,15 @@ export function FilterSheet({
                       {ph.name}
                     </Text>
                   </View>
-                  <Switch
-                    value={isActive}
-                    onValueChange={() => onTogglePharmacy(slug)}
-                    trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
-                    thumbColor="#ffffff"
-                    ios_backgroundColor="#e5e7eb"
-                  />
+                  {/* pointerEvents="none" evita el double-toggle Switch+TouchableOpacity */}
+                  <View pointerEvents="none">
+                    <Switch
+                      value={isActive}
+                      trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
+                      thumbColor="#ffffff"
+                      ios_backgroundColor="#e5e7eb"
+                    />
+                  </View>
                 </TouchableOpacity>
               );
             })}
