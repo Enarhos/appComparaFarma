@@ -8,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Switch,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { PHARMACIES } from "@/constants/pharmacies";
@@ -147,23 +148,13 @@ export function FilterSheet({
                       {ph.name}
                     </Text>
                   </View>
-                  {/* Checkmark custom — evita conflicto de gestos con Switch nativo */}
-                  <View
-                    style={{
-                      width: 26,
-                      height: 26,
-                      borderRadius: 13,
-                      backgroundColor: isActive ? "#16a34a" : "transparent",
-                      borderWidth: 2,
-                      borderColor: isActive ? "#16a34a" : "#d1d5db",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {isActive && (
-                      <Ionicons name="checkmark" size={15} color="#ffffff" />
-                    )}
-                  </View>
+                  {/* Switch sin onValueChange — puramente visual, el TouchableOpacity maneja el toggle */}
+                  <Switch
+                    value={isActive}
+                    trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
+                    thumbColor="#ffffff"
+                    ios_backgroundColor="#e5e7eb"
+                  />
                 </TouchableOpacity>
               );
             })}

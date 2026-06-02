@@ -5,7 +5,6 @@ import {
   FlatList,
   RefreshControl,
   TouchableOpacity,
-  ScrollView,
   ActivityIndicator,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -16,6 +15,7 @@ import { useLocalSearchParams } from "expo-router";
 import { MedicationListItem } from "@/components/MedicationListItem";
 import { SkeletonCard } from "@/components/SkeletonCard";
 import { EmptyState } from "@/components/EmptyState";
+import { FilterSheet } from "@/components/FilterSheet";
 import { useSearchStore } from "@/store/searchStore";
 import { useHistoryStore } from "@/store/historyStore";
 import { useConfigStore } from "@/store/configStore";
@@ -43,6 +43,7 @@ export default function ResultsScreen() {
   const [activePharmacies, setActivePharmacies] = useState<Set<PharmacySlug>>(
     () => new Set(activePharmacySlugs())
   );
+  const [showFilters, setShowFilters] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
 
   // Sincronizar chips cuando configStore termina de cargar desde el backend
@@ -132,74 +133,71 @@ export default function ResultsScreen() {
 
       {/* Filtros + Orden */}
       {status === "success" && results.length > 0 && (
-        <View className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
-          {/* Fila 1: Bioequivalente + Ordenar */}
-          <View className="flex-row items-center gap-2 px-4 pt-2 pb-1">
-            <TouchableOpacity
-              onPress={() => setBioOnly((v) => !v)}
-              className={`rounded-full px-3 py-1.5 border ${
-                bioOnly
-                  ? "bg-emerald-50 border-emerald-500 dark:bg-emerald-950"
-                  : "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600"
-              }`}
-            >
-              <Text className={`text-xs font-medium ${
-                bioOnly ? "text-emerald-700 dark:text-emerald-400" : "text-gray-500 dark:text-gray-300"
-              }`}>
-                🌿 Bio ({bioCount})
-              </Text>
-            </TouchableOpacity>
-            <View className="flex-1" />
-            <Text className="text-xs text-gray-400">Ordenar:</Text>
-            {(["price", "name"] as SortOption[]).map((opt) => (
-              <TouchableOpacity
-                key={opt}
-                onPress={() => setSortBy(opt)}
-                className={`rounded-full px-3 py-1.5 border ${
-                  sortBy === opt
-                    ? "bg-green-50 border-green-500 dark:bg-green-950"
-                    : "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600"
-                }`}
-              >
-                <Text className={`text-xs font-medium ${
-                  sortBy === opt ? "text-green-700 dark:text-green-400" : "text-gray-500 dark:text-gray-300"
-                }`}>
-                  {opt === "price" ? "Precio ↑" : "Nombre"}
-                </Text>
-              </TouchableOpacity>
-            ))}
+        <View className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 px-4 py-2 flex-row items-center gap-2">
+          <TouchableOpacity
+            onPress={() => setBioOnly((v) => !v)}
+            className={`rounded-full px-3 py-1.5 border ${
+              bioOnly
+                ? "bg-emerald-50 border-emerald-500 dark:bg-emerald-950"
+                : "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600"
+            }`}
+          >
+            <Text className={`text-xs font-medium ${
+              bioOnly ? "text-emerald-700 dark:text-emerald-400" : "text-gray-500 dark:text-gray-300"
+            }`}>
+              🌿 Bio ({bioCount})
+            </Text>
+          </TouchableOpacity>
+
+          <View className="flex-1" />
+
+          {/* Dots indicadores de farmacias activas */}
+          <View className="flex-row gap-1 items-center">
+            {availableSlugs.map((slug) => {
+              const ph = PHARMACIES[slug];
+              if (!ph) return null;
+              return (
+                <View
+                  key={slug}
+                  style={{ backgroundColor: activePharmacies.has(slug) ? ph.color : "#e5e7eb" }}
+                  className="w-2 h-2 rounded-full"
+                />
+              );
+            })}
           </View>
 
-          {/* Fila 2: Chips de farmacia */}
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} className="px-4 pb-2">
-            <View className="flex-row gap-2">
-              {availableSlugs.map((slug) => {
-                const ph = PHARMACIES[slug];
-                const active = activePharmacies.has(slug);
-                return (
-                  <TouchableOpacity
-                    key={slug}
-                    onPress={() => togglePharmacy(slug)}
-                    style={{
-                      borderColor: active ? ph.color : "#d1d5db",
-                      backgroundColor: active ? ph.bgLight : "transparent",
-                    }}
-                    className="rounded-full px-3 py-1.5 border flex-row items-center gap-1.5"
-                  >
-                    <View
-                      style={{ backgroundColor: active ? ph.color : "#d1d5db" }}
-                      className="w-2 h-2 rounded-full"
-                    />
-                    <Text style={{ color: active ? ph.color : "#9ca3af" }} className="text-xs font-medium">
-                      {ph.name.replace("Farmacias ", "")}
-                    </Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
-          </ScrollView>
+          <TouchableOpacity
+            onPress={() => setShowFilters(true)}
+            className={`flex-row items-center gap-1.5 rounded-full px-3 py-1.5 border ${
+              filteredOutCount > 0
+                ? "bg-green-50 border-green-500 dark:bg-green-950"
+                : "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600"
+            }`}
+          >
+            <Ionicons
+              name="options-outline"
+              size={13}
+              color={filteredOutCount > 0 ? "#16a34a" : "#9ca3af"}
+            />
+            <Text className={`text-xs font-medium ${
+              filteredOutCount > 0 ? "text-green-700 dark:text-green-400" : "text-gray-500 dark:text-gray-300"
+            }`}>
+              {filteredOutCount > 0 ? `Filtros (${filteredOutCount})` : "Filtrar"}
+            </Text>
+          </TouchableOpacity>
         </View>
       )}
+
+      <FilterSheet
+        visible={showFilters}
+        onClose={() => setShowFilters(false)}
+        activePharmacies={activePharmacies}
+        onTogglePharmacy={togglePharmacy}
+        onSelectAll={selectAllPharmacies}
+        sortBy={sortBy}
+        onSortChange={setSortBy}
+        availableSlugs={availableSlugs}
+      />
 
       {/* Estado de carga descriptivo */}
       {isLoading && (
