@@ -5,7 +5,6 @@ import {
   Modal,
   Pressable,
   ScrollView,
-  Switch,
   Text,
   TouchableOpacity,
   View,
@@ -148,14 +147,22 @@ export function FilterSheet({
                       {ph.name}
                     </Text>
                   </View>
-                  {/* pointerEvents="none" evita el double-toggle Switch+TouchableOpacity */}
-                  <View pointerEvents="none">
-                    <Switch
-                      value={isActive}
-                      trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
-                      thumbColor="#ffffff"
-                      ios_backgroundColor="#e5e7eb"
-                    />
+                  {/* Checkmark custom — evita conflicto de gestos con Switch nativo */}
+                  <View
+                    style={{
+                      width: 26,
+                      height: 26,
+                      borderRadius: 13,
+                      backgroundColor: isActive ? "#16a34a" : "transparent",
+                      borderWidth: 2,
+                      borderColor: isActive ? "#16a34a" : "#d1d5db",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {isActive && (
+                      <Ionicons name="checkmark" size={15} color="#ffffff" />
+                    )}
                   </View>
                 </TouchableOpacity>
               );
