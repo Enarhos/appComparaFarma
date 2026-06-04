@@ -89,4 +89,17 @@ $result = [ordered]@{
 $json = $result | ConvertTo-Json -Depth 5 -Compress
 Set-Content -Path $outFile -Value $json -Encoding UTF8
 
-Write-Host "✅ $outFile generado — $($communes.Count) comunas, $($byCommune.Count) con farmacias de cadena"
+# También genera el módulo TypeScript (para que Vercel lo bundlee correctamente)
+$tsFile = Join-Path $outDir "branches-data.ts"
+$tsContent = @"
+// AUTO-GENERADO por scripts-temp/fetch-branches.ps1 -- no editar manualmente
+import type { BranchIndex } from "../clients/minsal.js";
+
+export const BRANCH_INDEX: BranchIndex = $json;
+"@
+Set-Content -Path $tsFile -Value $tsContent -Encoding UTF8
+
+Write-Host "✅ Generados:"
+Write-Host "   $outFile"
+Write-Host "   $tsFile"
+Write-Host "   $($communes.Count) comunas con farmacias de cadena"
