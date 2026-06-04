@@ -45,12 +45,15 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 - Mensaje "Sin farmacias en [comuna]" si la búsqueda no encuentra nada con ese filtro
 - Farmacias `onlineOnly` (sin presencia física) se marcan con badge 🌐 cuando hay filtro de comuna
 
-**Fuente de datos:**
-- MINSAL `getLocales.php` — farmacias registradas en el sistema de turnos
-- 130 comunas con presencia de cadenas (Cruz Verde, Salcobrand, Ahumada, Dr. Simi, AraucoMed, EcoFarmacias)
-- Los datos se generan localmente con `scripts-temp/fetch-branches.ps1` y se commitean como `api/src/data/branches-data.ts`
-- MINSAL bloquea IPs de Vercel en runtime → datos embebidos como módulo TypeScript en el bundle
-- Refrescar los datos: ejecutar `.\scripts-temp\fetch-branches.ps1` y hacer commit
+**Fuente de datos — MINSAL `getLocales.php`:**
+- Devuelve las farmacias de turno del **día actual** (~2.090 registros/día)
+- Para cobertura completa se necesitan los 7 días de la semana acumulados
+- GitHub Action `.github/workflows/update-branches.yml` ejecuta el script diariamente a las 06:00 Chile
+- Después de 7 ejecuciones se tiene cobertura completa (~280 comunas estimadas)
+- Los datos se acumulan en `api/src/data/branches.json` (merge, no reemplaza)
+- MINSAL bloquea IPs de Vercel en runtime → datos embebidos como módulo TypeScript en el bundle (`branches-data.ts`)
+- Actualización manual: `node scripts-temp/fetch-branches.js && git add api/src/data && git commit -m "data: update branches"`
+- Campo real de la API: `local_nombre` (no `cadena_nombre`); región como `fk_region` (ID numérico)
 
 **Archivos clave:**
 - `api/src/clients/minsal.ts` — tipos, mapeo local_nombre→PharmacySlug, normalización
