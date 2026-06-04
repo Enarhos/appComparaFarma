@@ -34,14 +34,31 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 - Cuando una farmacia tiene múltiples marcas con el mismo formato, muestra la más barata
 - Normalización de acentos y formatos de nombre entre farmacias
 
-### 🕐 Búsqueda geográfica por comuna
-- Campo de búsqueda con autocompletado para seleccionar la comuna antes de buscar
-- Filtra la búsqueda solo a farmacias que tienen sucursal en la comuna elegida
-- Farmacias online (sin presencia física) se marcan con ícono distintivo y siempre aparecen
-- La comuna seleccionada persiste entre búsquedas (sesión + AsyncStorage)
-- Mensaje "sin farmacias registradas en esta comuna" si aplica
-- Datos de sucursales desde API MINSAL `getLocales.php` (~12.000 farmacias, CC Attribution)
-- Fuente: `https://midas.minsal.cl/farmacia_v2/WS/getLocales.php`
+### ✅ Búsqueda geográfica por comuna
+- `CommuneSelector` en el Home: chip que abre modal con búsqueda de texto libre
+- Autocompletado por nombre de comuna y región (ej: "Providencia — Metropolitana")
+- Opción "Todas las comunas" para quitar el filtro
+- La comuna seleccionada persiste entre sesiones (AsyncStorage `location-v1`)
+- Banner informativo en Home y Results cuando hay una comuna activa
+- Al buscar con comuna activa, solo se consultan las farmacias con sucursal en esa zona
+- El backend acepta `?pharmacies=cruz-verde,dr-simi` para filtrar qué APIs consulta
+- Mensaje "Sin farmacias en [comuna]" si la búsqueda no encuentra nada con ese filtro
+- Farmacias `onlineOnly` (sin presencia física) se marcan con badge 🌐 cuando hay filtro de comuna
+
+**Fuente de datos:**
+- MINSAL `getLocales.php` — farmacias registradas en el sistema de turnos
+- 130 comunas con presencia de cadenas (Cruz Verde, Salcobrand, Ahumada, Dr. Simi, AraucoMed, EcoFarmacias)
+- Los datos se generan localmente con `scripts-temp/fetch-branches.ps1` y se commitean como `api/src/data/branches-data.ts`
+- MINSAL bloquea IPs de Vercel en runtime → datos embebidos como módulo TypeScript en el bundle
+- Refrescar los datos: ejecutar `.\scripts-temp\fetch-branches.ps1` y hacer commit
+
+**Archivos clave:**
+- `api/src/clients/minsal.ts` — tipos, mapeo local_nombre→PharmacySlug, normalización
+- `api/src/data/branches-data.ts` — JSON embebido (auto-generado, no editar manualmente)
+- `api/src/routes/branches.ts` — endpoint `GET /api/branches`
+- `mobile/src/store/locationStore.ts` — selectedCommune persistido
+- `mobile/src/lib/branches.ts` — fetch + caché AsyncStorage 24h
+- `mobile/src/components/CommuneSelector.tsx` — UI del selector
 
 ---
 
@@ -286,3 +303,4 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 | 1.2.0 | 11 | AraucoMed (5ta farmacia), guards slugs desconocidos |
 | 1.2.1 | 12 | Fix matchKey qty regex (x30comp, esoflux), rename param key→matchKey |
 | 1.2.2 | 13 | Code review completo (22 fixes), UX improvements, permisos Android, iOS config |
+| 1.2.3 | — | Búsqueda geográfica por comuna (MINSAL), FilterSheet con Switches, filterStore compartido |
