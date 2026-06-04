@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { PharmacySlug } from "@/lib/types";
 
-const CACHE_KEY = "branches_v1";
+const CACHE_KEY = "branches_v2";
 const TTL_MS = 24 * 60 * 60 * 1000;
 
 export interface BranchIndex {
