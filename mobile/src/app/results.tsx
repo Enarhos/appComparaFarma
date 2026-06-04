@@ -20,6 +20,7 @@ import { useSearchStore } from "@/store/searchStore";
 import { useHistoryStore } from "@/store/historyStore";
 import { useConfigStore } from "@/store/configStore";
 import { useFilterStore } from "@/store/filterStore";
+import { useLocationStore } from "@/store/locationStore";
 import { useSearch } from "@/hooks/useSearch";
 import { PHARMACIES } from "@/constants/pharmacies";
 
@@ -37,6 +38,7 @@ export default function ResultsScreen() {
   const activePharmacySlugs = useConfigStore((s) => s.activePharmacySlugs);
   const configLoaded = useConfigStore((s) => s.loaded);
   const setFilterStore = useFilterStore((s) => s.setActivePharmacies);
+  const selectedCommuneName = useLocationStore((s) => s.selectedCommuneName);
 
   const [bioOnly, setBioOnly] = useState(false);
   const [sortBy, setSortBy] = useState<SortOption>("price");
@@ -282,7 +284,18 @@ export default function ResultsScreen() {
         }
         ListEmptyComponent={
           !isLoading ? (
-            bioOnly && results.length > 0 ? (
+            results.length === 0 && selectedCommuneName && status === "success" ? (
+              <View className="items-center px-8 py-16">
+                <Text className="text-5xl mb-4">📍</Text>
+                <Text className="text-base font-semibold text-gray-700 dark:text-gray-300 text-center mb-2">
+                  Sin farmacias en {selectedCommuneName}
+                </Text>
+                <Text className="text-sm text-gray-400 text-center">
+                  No encontramos farmacias con registros en esta comuna.
+                  Prueba buscando en "Todas las comunas".
+                </Text>
+              </View>
+            ) : bioOnly && results.length > 0 ? (
               <View className="items-center px-8 py-16">
                 <Text className="text-5xl mb-4">🌿</Text>
                 <Text className="text-base font-semibold text-gray-600 dark:text-gray-300 text-center">
@@ -301,6 +314,7 @@ export default function ResultsScreen() {
               <EmptyState query={q ?? ""} onRetry={handleRefresh} />
             )
           ) : null
+
         }
         refreshControl={
           <RefreshControl

@@ -4,10 +4,13 @@ import { cleanQuery } from "@/lib/normalization";
 import { searchMedications } from "@/lib/search";
 import { getCached, setCached } from "@/lib/cache";
 import { useSearchStore } from "@/store/searchStore";
+import { useLocationStore } from "@/store/locationStore";
+import { getBranchIndex, getPharmaciesForCommune } from "@/lib/branches";
 
 export function useSearch() {
   const abortRef = useRef<AbortController | null>(null);
   const { setLoading, setResults, setError, setQuery } = useSearchStore();
+  const selectedCommune = useLocationStore((s) => s.selectedCommune);
 
   const search = useCallback(async function search(rawQuery: string, bypassCache = false) {
     abortRef.current?.abort();
@@ -22,7 +25,22 @@ export function useSearch() {
     setQuery(rawQuery);
     setLoading();
 
-    const cacheKey = query.toLowerCase().trim();
+    // Determinar farmacias según la comuna seleccionada
+    let onlyPharmacies: string[] | undefined;
+    if (selectedCommune) {
+      const index = await getBranchIndex();
+      if (index) {
+        const slugs = getPharmaciesForCommune(selectedCommune, index);
+        if (slugs.length === 0) {
+          // Comuna sin farmacias registradas
+          setResults([]);
+          return;
+        }
+        onlyPharmacies = slugs;
+      }
+    }
+
+    const cacheKey = (query.toLowerCase().trim()) + (onlyPharmacies ? `:${[...onlyPharmacies].sort().join(",")}` : "");
     if (!bypassCache) {
       const cached = await getCached(cacheKey);
       if (cached) {
@@ -32,7 +50,7 @@ export function useSearch() {
     }
 
     try {
-      const results = await searchMedications(query, abortRef.current.signal);
+      const results = await searchMedications(query, abortRef.current.signal, onlyPharmacies);
       await setCached(cacheKey, results);
       setResults(results);
     } catch (err) {

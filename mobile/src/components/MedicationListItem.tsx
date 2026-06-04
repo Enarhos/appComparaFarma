@@ -2,6 +2,7 @@ import { useState } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
 import { useConfigStore } from "@/store/configStore";
+import { useLocationStore } from "@/store/locationStore";
 import type { MedicationResult, PharmacySlug } from "@/lib/types";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/formatters";
@@ -16,6 +17,7 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
   const router = useRouter();
   const [imgError, setImgError] = useState(false);
   const isActive = useConfigStore((s) => s.isActive);
+  const selectedCommune = useLocationStore((s) => s.selectedCommune);
 
   const visiblePrices = prices.filter(
     (p) => isActive(p.pharmacySlug) && (!activePharmacies || activePharmacies.has(p.pharmacySlug))
@@ -73,11 +75,16 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
         <View className="flex-row items-center gap-2 mt-1 flex-wrap">
           {/* Puntos de color por farmacia disponible */}
           {visiblePrices.length > 0 && (
-            <View className="flex-row gap-1 items-center">
+            <View className="flex-row gap-1 items-center flex-wrap">
               {visiblePrices.map((p) => {
                 const ph = PHARMACIES[p.pharmacySlug];
                 if (!ph) return null;
-                return (
+                return ph.onlineOnly && selectedCommune ? (
+                  <View key={p.pharmacySlug} className="flex-row items-center gap-0.5 bg-blue-50 rounded-full px-1.5 py-0.5">
+                    <Text style={{ fontSize: 9, color: ph.color }}>🌐</Text>
+                    <Text style={{ fontSize: 9, color: ph.color }}>{ph.name}</Text>
+                  </View>
+                ) : (
                   <View
                     key={p.pharmacySlug}
                     style={{ backgroundColor: ph.color }}

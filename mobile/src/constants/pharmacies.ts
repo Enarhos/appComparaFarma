@@ -6,6 +6,7 @@ interface PharmacyConfig {
   bgLight: string;
   cardLabel: string | null;
   sbpayLabel: string | null;
+  onlineOnly: boolean; // true = sin sucursal física (solo despacho online)
   channels: {
     store: boolean;
     online: boolean;
@@ -21,6 +22,7 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     bgLight: "#e6f5ec",
     cardLabel: null,
     sbpayLabel: null,
+    onlineOnly: false,
     channels: { store: true, online: false, card: false, sbpay: false },
   },
   salcobrand: {
@@ -29,6 +31,7 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     bgLight: "#e6eaf5",
     cardLabel: "T. Más",
     sbpayLabel: "SBPay",
+    onlineOnly: false,
     channels: { store: true, online: true, card: true, sbpay: true },
   },
   ahumada: {
@@ -37,6 +40,7 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     bgLight: "#fde8eb",
     cardLabel: "CMR",
     sbpayLabel: null,
+    onlineOnly: false,
     channels: { store: true, online: false, card: true, sbpay: false },
   },
   "dr-simi": {
@@ -45,6 +49,7 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     bgLight: "#fff0f0",
     cardLabel: null,
     sbpayLabel: null,
+    onlineOnly: false,
     channels: { store: true, online: true, card: false, sbpay: false },
   },
   araucomed: {
@@ -53,6 +58,7 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     bgLight: "#e8f3fb",
     cardLabel: null,
     sbpayLabel: null,
+    onlineOnly: false,
     channels: { store: true, online: false, card: false, sbpay: false },
   },
 };

@@ -48,7 +48,14 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
 
     const debugMode = isDebugMode(req);
     const query = validateQuery(getSearchParam(req, "q"));
-    const cacheKey = query.toLowerCase();
+
+    // Filtro geográfico: ?pharmacies=cruz-verde,dr-simi
+    const pharmaciesParam = getSearchParam(req, "pharmacies");
+    const onlySlugs = pharmaciesParam
+      ? (pharmaciesParam.split(",").map((s) => s.trim()).filter(Boolean) as import("../lib/types.js").PharmacySlug[])
+      : undefined;
+
+    const cacheKey = query.toLowerCase() + (onlySlugs ? `:${[...onlySlugs].sort().join(",")}` : "");
     if (!debugMode) {
       const cached = getCachedSearch(cacheKey);
       if (cached) {
@@ -68,7 +75,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
     res.setHeader("x-search-cache", "miss");
 
     if (debugMode) {
-      const execution = await searchMedicationsDetailed(query);
+      const execution = await searchMedicationsDetailed(query, onlySlugs);
       console.info(JSON.stringify({
         requestId,
         route: "/api/search",
@@ -80,7 +87,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       return;
     }
 
-    const results = await searchMedications(query);
+    const results = await searchMedications(query, onlySlugs);
     setCachedSearch(cacheKey, results);
     console.info(JSON.stringify({
       requestId,

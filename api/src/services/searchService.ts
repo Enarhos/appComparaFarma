@@ -57,8 +57,11 @@ async function runSource(
   }
 }
 
-export async function searchMedications(query: string): Promise<MedicationResult[]> {
-  const execution = await searchMedicationsDetailed(query);
+export async function searchMedications(
+  query: string,
+  onlySlugs?: PharmacySlug[]
+): Promise<MedicationResult[]> {
+  const execution = await searchMedicationsDetailed(query, onlySlugs);
   return execution.results;
 }
 
@@ -73,11 +76,16 @@ const ALL_SOURCES: Array<{
   { slug: "araucomed",  fn: searchAraucoMed  },
 ];
 
-export async function searchMedicationsDetailed(query: string): Promise<SearchExecution> {
+export async function searchMedicationsDetailed(
+  query: string,
+  onlySlugs?: PharmacySlug[]
+): Promise<SearchExecution> {
   const startedAt = Date.now();
   const disabled = getDisabledPharmacies();
 
-  const activeSources = ALL_SOURCES.filter((s) => !disabled.has(s.slug));
+  const activeSources = ALL_SOURCES.filter(
+    (s) => !disabled.has(s.slug) && (!onlySlugs || onlySlugs.includes(s.slug))
+  );
 
   const sourceResults = await Promise.all(
     activeSources.map((s) => runSource(s.slug, s.fn, query))

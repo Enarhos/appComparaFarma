@@ -7,7 +7,9 @@ import * as Haptics from "expo-haptics";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ONBOARDING_KEY } from "./onboarding";
 import { SearchBar } from "@/components/SearchBar";
+import { CommuneSelector } from "@/components/CommuneSelector";
 import { useHistoryStore } from "@/store/historyStore";
+import { useLocationStore } from "@/store/locationStore";
 import { useFavoritesStore } from "@/store/favoritesStore";
 import { useSearchStore } from "@/store/searchStore";
 import { useCartStore } from "@/store/cartStore";
@@ -36,6 +38,7 @@ export default function HomeScreen() {
   }, []);
 
   const { items: recentSearches, remove, clear } = useHistoryStore();
+  const selectedCommuneName = useLocationStore((s) => s.selectedCommuneName);
   const { keys: favKeys, cachedResults } = useFavoritesStore();
   const setResults = useSearchStore((s) => s.setResults);
   const cartCount = useCartStore((s) => s.items.length);
@@ -106,6 +109,21 @@ export default function HomeScreen() {
             Compara precios en {PHARMACY_SUBTITLE}
           </Text>
         </View>
+
+        {/* Selector de comuna */}
+        <View className="mb-3">
+          <CommuneSelector />
+        </View>
+
+        {selectedCommuneName && (
+          <View className="mb-3 bg-green-50 dark:bg-green-950 border border-green-100 dark:border-green-900 rounded-xl px-3 py-2 flex-row items-center gap-2">
+            <Ionicons name="storefront-outline" size={14} color="#16a34a" />
+            <Text className="text-xs text-green-700 dark:text-green-400 flex-1">
+              Buscando solo en farmacias de{" "}
+              <Text className="font-semibold">{selectedCommuneName}</Text>
+            </Text>
+          </View>
+        )}
 
         <SearchBar
           onSearch={handleSearch}
