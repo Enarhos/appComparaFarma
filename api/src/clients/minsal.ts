@@ -24,11 +24,24 @@ export interface BranchIndex {
   fetchedAt: string;
 }
 
+// IDs reales del sistema MINSAL (NO coinciden con numeración estándar de regiones)
 export const REGION_NAMES: Record<string, string> = {
-  "1": "Tarapacá", "2": "Antofagasta", "3": "Atacama", "4": "Coquimbo",
-  "5": "Valparaíso", "6": "O'Higgins", "7": "Maule", "8": "Biobío",
-  "9": "La Araucanía", "10": "Los Lagos", "11": "Aysén", "12": "Magallanes",
-  "13": "Metropolitana", "14": "Los Ríos", "15": "Arica y Parinacota", "16": "Ñuble",
+  "1": "Arica y Parinacota",
+  "2": "Tarapacá",
+  "3": "Antofagasta",
+  "4": "Atacama",
+  "5": "Coquimbo",
+  "6": "Valparaíso",
+  "7": "Metropolitana",
+  "8": "O'Higgins",
+  "9": "Maule",
+  "10": "Biobío",
+  "11": "La Araucanía",
+  "12": "Los Ríos",
+  "13": "Los Lagos",
+  "14": "Aysén",
+  "15": "Magallanes",
+  "16": "Ñuble",
 };
 
 const CADENA_MAP: Array<{ pattern: RegExp; slug: PharmacySlug }> = [
