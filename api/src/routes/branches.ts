@@ -1,19 +1,28 @@
+import { readFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { join, dirname } from "path";
 import { json, type RequestLike, type ResponseLike } from "../lib/http.js";
-import { fetchMinsalBranches, type BranchIndex } from "../clients/minsal.js";
+import type { BranchIndex } from "../clients/minsal.js";
 
-const TTL_MS = 24 * 60 * 60 * 1000; // 24 horas
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = dirname(__filename);
 
-let cache: { index: BranchIndex; expiresAt: number } | null = null;
+// Cargado una vez al inicio — JSON estático generado por scripts-temp/fetch-branches.ps1
+let branchIndex: BranchIndex | null = null;
 
-async function getBranchIndex(): Promise<BranchIndex> {
-  const now = Date.now();
-  if (cache && now < cache.expiresAt) return cache.index;
-  const index = await fetchMinsalBranches();
-  cache = { index, expiresAt: now + TTL_MS };
-  return index;
+function loadIndex(): BranchIndex | null {
+  if (branchIndex) return branchIndex;
+  try {
+    const dataPath = join(__dirname, "../data/branches.json");
+    const raw = readFileSync(dataPath, "utf-8");
+    branchIndex = JSON.parse(raw) as BranchIndex;
+    return branchIndex;
+  } catch {
+    return null;
+  }
 }
 
-export async function handleBranchesRoute(reqLike: unknown, resLike: unknown): Promise<void> {
+export function handleBranchesRoute(reqLike: unknown, resLike: unknown): void {
   const req = reqLike as RequestLike;
   const res = resLike as ResponseLike;
 
@@ -23,11 +32,11 @@ export async function handleBranchesRoute(reqLike: unknown, resLike: unknown): P
     return;
   }
 
-  try {
-    const index = await getBranchIndex();
-    json(res, 200, index);
-  } catch (err) {
-    console.error("[branches]", err instanceof Error ? err.message : err);
-    json(res, 503, { error: "No se pudo obtener el índice de sucursales." });
+  const index = loadIndex();
+  if (!index) {
+    json(res, 503, { error: "Índice de sucursales no disponible." });
+    return;
   }
+
+  json(res, 200, index);
 }
