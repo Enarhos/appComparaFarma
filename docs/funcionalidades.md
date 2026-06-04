@@ -306,4 +306,4 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 | 1.2.0 | 11 | AraucoMed (5ta farmacia), guards slugs desconocidos |
 | 1.2.1 | 12 | Fix matchKey qty regex (x30comp, esoflux), rename param key→matchKey |
 | 1.2.2 | 13 | Code review completo (22 fixes), UX improvements, permisos Android, iOS config |
-| 1.2.3 | — | Búsqueda geográfica por comuna (MINSAL), FilterSheet con Switches, filterStore compartido |
+| 1.2.3 | 14 | Búsqueda geográfica por comuna (MINSAL), FilterSheet con Switches, filterStore, regiones corregidas |
