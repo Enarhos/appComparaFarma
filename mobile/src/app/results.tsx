@@ -18,40 +18,26 @@ import { EmptyState } from "@/components/EmptyState";
 import { FilterSheet } from "@/components/FilterSheet";
 import { useSearchStore } from "@/store/searchStore";
 import { useHistoryStore } from "@/store/historyStore";
-import { useConfigStore } from "@/store/configStore";
 import { useFilterStore } from "@/store/filterStore";
 import { useLocationStore } from "@/store/locationStore";
 import { useSearch } from "@/hooks/useSearch";
 import { PHARMACIES } from "@/constants/pharmacies";
 
 const TOOLTIP_KEY = "results_tooltip_v1_seen";
-
 const SKELETON_KEYS = ["sk-0", "sk-1", "sk-2"];
-
-type SortOption = "price" | "name";
+const ALL_SLUGS = Object.keys(PHARMACIES) as PharmacySlug[];
 
 export default function ResultsScreen() {
   const { q } = useLocalSearchParams<{ q: string }>();
   const { results, status, errorMessage } = useSearchStore();
   const { add: addToHistory } = useHistoryStore();
   const { search } = useSearch();
-  const activePharmacySlugs = useConfigStore((s) => s.activePharmacySlugs);
-  const configLoaded = useConfigStore((s) => s.loaded);
-  const setFilterStore = useFilterStore((s) => s.setActivePharmacies);
+  const { activePharmacies, isPharmacyVisible, sortBy } = useFilterStore();
   const selectedCommuneName = useLocationStore((s) => s.selectedCommuneName);
 
   const [bioOnly, setBioOnly] = useState(false);
-  const [sortBy, setSortBy] = useState<SortOption>("price");
-  const [activePharmacies, setActivePharmacies] = useState<Set<PharmacySlug>>(
-    () => new Set(activePharmacySlugs())
-  );
   const [showFilters, setShowFilters] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
-
-  // Sincronizar chips cuando configStore termina de cargar desde el backend
-  useEffect(() => {
-    setActivePharmacies(new Set(activePharmacySlugs()));
-  }, [configLoaded]);
 
   useEffect(() => {
     if (q) {
@@ -72,41 +58,17 @@ export default function ResultsScreen() {
     if (q) search(q, true);
   }
 
-  function togglePharmacy(slug: PharmacySlug) {
-    setActivePharmacies((prev) => {
-      const next = new Set(prev);
-      if (next.has(slug)) {
-        if (next.size === 1) return prev;
-        next.delete(slug);
-      } else {
-        next.add(slug);
-      }
-      setFilterStore(next);
-      return next;
-    });
-  }
-
-  function selectAllPharmacies() {
-    const allActive = availableSlugs.every((s) => activePharmacies.has(s));
-    const next = allActive
-      ? new Set([availableSlugs[0]] as PharmacySlug[])
-      : new Set(activePharmacySlugs() as PharmacySlug[]);
-    setActivePharmacies(next);
-    setFilterStore(next);
-  }
-
-  const availableSlugs = (Object.keys(PHARMACIES) as PharmacySlug[]).filter((slug) =>
-    activePharmacySlugs().includes(slug)
-  );
-  const filteredOutCount = availableSlugs.filter((s) => !activePharmacies.has(s)).length;
-
   const isLoading = status === "loading";
   const bioCount = results.filter((r) => r.isBioequivalent).length;
+
+  // Conteo de filtros activos para el badge del botón
+  const filteredOutCount = ALL_SLUGS.filter((s) => !isPharmacyVisible(s)).length;
+  const totalFilterCount = filteredOutCount + (selectedCommuneName ? 1 : 0);
 
   // Filtrar + ordenar
   let displayResults = bioOnly ? results.filter((r) => r.isBioequivalent) : results;
   displayResults = displayResults.filter((med) =>
-    med.prices.some((p) => activePharmacies.has(p.pharmacySlug))
+    med.prices.some((p) => isPharmacyVisible(p.pharmacySlug))
   );
   displayResults = [...displayResults].sort((a, b) =>
     sortBy === "name"
@@ -133,9 +95,10 @@ export default function ResultsScreen() {
         )}
       </View>
 
-      {/* Filtros + Orden */}
+      {/* Barra de filtros */}
       {status === "success" && results.length > 0 && (
         <View className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 px-4 py-2 flex-row items-center gap-2">
+          {/* Toggle bio */}
           <TouchableOpacity
             onPress={() => setBioOnly((v) => !v)}
             className={`rounded-full px-3 py-1.5 border ${
@@ -144,9 +107,13 @@ export default function ResultsScreen() {
                 : "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600"
             }`}
           >
-            <Text className={`text-xs font-medium ${
-              bioOnly ? "text-emerald-700 dark:text-emerald-400" : "text-gray-500 dark:text-gray-300"
-            }`}>
+            <Text
+              className={`text-xs font-medium ${
+                bioOnly
+                  ? "text-emerald-700 dark:text-emerald-400"
+                  : "text-gray-500 dark:text-gray-300"
+              }`}
+            >
               🌿 Bio ({bioCount})
             </Text>
           </TouchableOpacity>
@@ -155,23 +122,28 @@ export default function ResultsScreen() {
 
           {/* Dots indicadores de farmacias activas */}
           <View className="flex-row gap-1 items-center">
-            {availableSlugs.map((slug) => {
+            {ALL_SLUGS.map((slug) => {
               const ph = PHARMACIES[slug];
               if (!ph) return null;
               return (
                 <View
                   key={slug}
-                  style={{ backgroundColor: activePharmacies.has(slug) ? ph.color : "#e5e7eb" }}
-                  className="w-2 h-2 rounded-full"
+                  style={{
+                    backgroundColor: isPharmacyVisible(slug) ? ph.color : "#e5e7eb",
+                    width: 8,
+                    height: 8,
+                    borderRadius: 4,
+                  }}
                 />
               );
             })}
           </View>
 
+          {/* Botón Filtros */}
           <TouchableOpacity
             onPress={() => setShowFilters(true)}
             className={`flex-row items-center gap-1.5 rounded-full px-3 py-1.5 border ${
-              filteredOutCount > 0
+              totalFilterCount > 0
                 ? "bg-green-50 border-green-500 dark:bg-green-950"
                 : "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600"
             }`}
@@ -179,34 +151,33 @@ export default function ResultsScreen() {
             <Ionicons
               name="options-outline"
               size={13}
-              color={filteredOutCount > 0 ? "#16a34a" : "#9ca3af"}
+              color={totalFilterCount > 0 ? "#16a34a" : "#9ca3af"}
             />
-            <Text className={`text-xs font-medium ${
-              filteredOutCount > 0 ? "text-green-700 dark:text-green-400" : "text-gray-500 dark:text-gray-300"
-            }`}>
-              {filteredOutCount > 0 ? `Filtros (${filteredOutCount})` : "Filtrar"}
+            <Text
+              className={`text-xs font-medium ${
+                totalFilterCount > 0
+                  ? "text-green-700 dark:text-green-400"
+                  : "text-gray-500 dark:text-gray-300"
+              }`}
+            >
+              {totalFilterCount > 0 ? `Filtros (${totalFilterCount})` : "Filtrar"}
             </Text>
           </TouchableOpacity>
         </View>
       )}
 
-      <FilterSheet
-        visible={showFilters}
-        onClose={() => setShowFilters(false)}
-        activePharmacies={activePharmacies}
-        onTogglePharmacy={togglePharmacy}
-        onSelectAll={selectAllPharmacies}
-        sortBy={sortBy}
-        onSortChange={setSortBy}
-        availableSlugs={availableSlugs}
-      />
+      <FilterSheet visible={showFilters} onClose={() => setShowFilters(false)} />
 
-      {/* Estado de carga descriptivo */}
+      {/* Estado de carga */}
       {isLoading && (
         <View className="flex-row items-center gap-2 px-4 py-3">
           <ActivityIndicator size="small" color="#16a34a" />
           <Text className="text-sm text-gray-400 dark:text-gray-500">
-            Consultando {Object.values(PHARMACIES).map(p => p.name.replace("Farmacias ", "")).join(", ")}...
+            Consultando{" "}
+            {Object.values(PHARMACIES)
+              .map((p) => p.name.replace("Farmacias ", ""))
+              .join(", ")}
+            ...
           </Text>
         </View>
       )}
@@ -231,7 +202,7 @@ export default function ResultsScreen() {
         </TouchableOpacity>
       )}
 
-      {/* Error mejorado */}
+      {/* Error */}
       {status === "error" && (
         <View className="mx-4 mt-4 bg-red-50 dark:bg-red-950 rounded-xl border border-red-200 dark:border-red-900 p-4">
           <View className="flex-row items-center gap-2 mb-1">
@@ -280,7 +251,14 @@ export default function ResultsScreen() {
         data={(isLoading ? SKELETON_KEYS : displayResults) as (string | MedicationResult)[]}
         keyExtractor={(item) => (typeof item === "string" ? item : item.matchKey)}
         renderItem={({ item }) =>
-          typeof item === "string" ? <SkeletonCard /> : <MedicationListItem medication={item} activePharmacies={activePharmacies} />
+          typeof item === "string" ? (
+            <SkeletonCard />
+          ) : (
+            <MedicationListItem
+              medication={item}
+              activePharmacies={activePharmacies ?? new Set(ALL_SLUGS)}
+            />
+          )
         }
         ListEmptyComponent={
           !isLoading ? (
@@ -314,7 +292,6 @@ export default function ResultsScreen() {
               <EmptyState query={q ?? ""} onRetry={handleRefresh} />
             )
           ) : null
-
         }
         refreshControl={
           <RefreshControl

@@ -3,7 +3,7 @@
     "name": "ComparaFarma",
     "slug": "compara-farma",
     "scheme": "comparafarma",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -15,7 +15,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "mla.app.comparafarma",
-      "buildNumber": "14",
+      "buildNumber": "15",
       "privacyManifests": {
         "NSPrivacyAccessedAPITypes": [
           {
@@ -31,7 +31,7 @@
         "backgroundColor": "#16a34a"
       },
       "package": "mla.app.comparafarma",
-      "versionCode": 14,
+      "versionCode": 15,
       "permissions": []
     },
     "web": {

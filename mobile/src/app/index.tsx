@@ -7,9 +7,10 @@ import * as Haptics from "expo-haptics";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ONBOARDING_KEY } from "./onboarding";
 import { SearchBar } from "@/components/SearchBar";
-import { CommuneSelector } from "@/components/CommuneSelector";
+import { FilterSheet } from "@/components/FilterSheet";
 import { useHistoryStore } from "@/store/historyStore";
 import { useLocationStore } from "@/store/locationStore";
+import { useFilterStore } from "@/store/filterStore";
 import { useFavoritesStore } from "@/store/favoritesStore";
 import { useSearchStore } from "@/store/searchStore";
 import { useCartStore } from "@/store/cartStore";
@@ -26,6 +27,7 @@ const PHARMACY_SUBTITLE =
 export default function HomeScreen() {
   const router = useRouter();
   const [ready, setReady] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     AsyncStorage.getItem(ONBOARDING_KEY).then((val) => {
@@ -38,10 +40,16 @@ export default function HomeScreen() {
   }, []);
 
   const { items: recentSearches, remove, clear } = useHistoryStore();
-  const selectedCommuneName = useLocationStore((s) => s.selectedCommuneName);
+  const { selectedCommuneName, selectedRegion } = useLocationStore();
+  const { isPharmacyVisible } = useFilterStore();
   const { keys: favKeys, cachedResults } = useFavoritesStore();
   const setResults = useSearchStore((s) => s.setResults);
   const cartCount = useCartStore((s) => s.items.length);
+
+  const filteredOutCount = (Object.keys(PHARMACIES) as PharmacySlug[]).filter(
+    (s) => !isPharmacyVisible(s)
+  ).length;
+  const totalFilterCount = filteredOutCount + (selectedCommuneName ? 1 : 0);
 
   function handleRemove(term: string) {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -110,20 +118,44 @@ export default function HomeScreen() {
           </Text>
         </View>
 
-        {/* Selector de comuna */}
-        <View className="mb-3">
-          <CommuneSelector />
-        </View>
-
-        {selectedCommuneName && (
-          <View className="mb-3 bg-green-50 dark:bg-green-950 border border-green-100 dark:border-green-900 rounded-xl px-3 py-2 flex-row items-center gap-2">
-            <Ionicons name="storefront-outline" size={14} color="#16a34a" />
-            <Text className="text-xs text-green-700 dark:text-green-400 flex-1">
-              Buscando solo en farmacias de{" "}
-              <Text className="font-semibold">{selectedCommuneName}</Text>
-            </Text>
+        {/* Botón de filtros unificado */}
+        <TouchableOpacity
+          onPress={() => setShowFilters(true)}
+          activeOpacity={0.7}
+          className={`mb-3 flex-row items-center gap-2 rounded-2xl px-4 py-3 border ${
+            totalFilterCount > 0
+              ? "bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800"
+              : "bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+          }`}
+        >
+          <Ionicons
+            name="options-outline"
+            size={16}
+            color={totalFilterCount > 0 ? "#16a34a" : "#9ca3af"}
+          />
+          <View className="flex-1">
+            {selectedCommuneName ? (
+              <>
+                <Text className="text-sm font-semibold text-green-700 dark:text-green-400">
+                  📍 {selectedCommuneName}
+                </Text>
+                {selectedRegion && (
+                  <Text className="text-xs text-gray-400" numberOfLines={1}>
+                    {selectedRegion}
+                  </Text>
+                )}
+              </>
+            ) : (
+              <Text className="text-sm text-gray-400">Sin filtros activos</Text>
+            )}
           </View>
-        )}
+          {totalFilterCount > 0 ? (
+            <View className="bg-green-600 rounded-full px-2 py-0.5">
+              <Text className="text-white text-xs font-bold">{totalFilterCount}</Text>
+            </View>
+          ) : null}
+          <Ionicons name="chevron-down" size={14} color="#9ca3af" />
+        </TouchableOpacity>
 
         <SearchBar
           onSearch={handleSearch}
@@ -238,6 +270,8 @@ export default function HomeScreen() {
           Hecho con ❤️ para los chilenos 🇨🇱
         </Text>
       </View>
+
+      <FilterSheet visible={showFilters} onClose={() => setShowFilters(false)} />
     </SafeAreaView>
   );
 }
