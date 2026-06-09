@@ -21,6 +21,7 @@ const CADENA_MAP = [
   { pattern: /dr\.?\s*simi|doctor\s*simi|del\s+dr/i,  slug: "dr-simi"      },
   { pattern: /araucomed/i,                             slug: "araucomed"    },
   { pattern: /ecofarmacias?/i,                         slug: "ecofarmacias" },
+  { pattern: /farmex/i,                               slug: "farmex"       },
 ];
 
 // IDs reales del sistema MINSAL (NO coinciden con numeración estándar de regiones)
@@ -100,13 +101,10 @@ async function main() {
   let newCommunes = 0, newPharmacies = 0;
 
   for (const local of locals) {
-    const slug = toSlug(local.local_nombre);
-    if (!slug) continue;
-
     const key = normalizeCommune(local.comuna_nombre);
     if (!key) continue;
 
-    // Agregar comuna si no existe
+    // Agregar TODAS las comunas al índice (no solo las que tienen cadenas)
     if (!communes[key]) {
       communes[key] = {
         nombre: titleCase(local.comuna_nombre),
@@ -115,7 +113,10 @@ async function main() {
       newCommunes++;
     }
 
-    // Agregar slug si no está en esa comuna
+    // Solo agregar slug si la farmacia es una de nuestras cadenas
+    const slug = toSlug(local.local_nombre);
+    if (!slug) continue;
+
     if (!byCommune[key]) byCommune[key] = [];
     if (!byCommune[key].includes(slug)) {
       byCommune[key].push(slug);
