@@ -61,4 +61,22 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     onlineOnly: false,
     channels: { store: true, online: false, card: false, sbpay: false },
   },
+  ecofarmacias: {
+    name: "EcoFarmacias",
+    color: "#0d9488",
+    bgLight: "#e6f7f6",
+    cardLabel: null,
+    sbpayLabel: null,
+    onlineOnly: true,
+    channels: { store: true, online: false, card: false, sbpay: false },
+  },
+  farmex: {
+    name: "Farmex",
+    color: "#7c3aed",
+    bgLight: "#f3effe",
+    cardLabel: "Fonasa",
+    sbpayLabel: null,
+    onlineOnly: false,
+    channels: { store: true, online: false, card: true, sbpay: false },
+  },
 };

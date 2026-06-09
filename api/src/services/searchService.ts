@@ -2,6 +2,8 @@ import { searchAhumada } from "../clients/ahumada.js";
 import { searchAraucoMed } from "../clients/araucomed.js";
 import { searchCruzVerde } from "../clients/cruzverde.js";
 import { searchDrSimi } from "../clients/drsimi.js";
+import { searchEcoFarmacias } from "../clients/ecofarmacias.js";
+import { searchFarmex } from "../clients/farmex.js";
 import { searchSalcobrand } from "../clients/salcobrand.js";
 import { mergeDuplicates, toMedicationResult } from "../lib/normalization.js";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
@@ -69,11 +71,13 @@ const ALL_SOURCES: Array<{
   slug: PharmacySlug;
   fn: (query: string) => Promise<ScrapedProduct[]>;
 }> = [
-  { slug: "cruz-verde", fn: searchCruzVerde },
-  { slug: "salcobrand", fn: searchSalcobrand },
-  { slug: "ahumada",    fn: searchAhumada    },
-  { slug: "dr-simi",   fn: searchDrSimi     },
-  { slug: "araucomed",  fn: searchAraucoMed  },
+  { slug: "cruz-verde",   fn: searchCruzVerde    },
+  { slug: "salcobrand",   fn: searchSalcobrand   },
+  { slug: "ahumada",      fn: searchAhumada      },
+  { slug: "dr-simi",      fn: searchDrSimi       },
+  { slug: "araucomed",    fn: searchAraucoMed    },
+  { slug: "ecofarmacias", fn: searchEcoFarmacias },
+  { slug: "farmex",       fn: searchFarmex       },
 ];
 
 export async function searchMedicationsDetailed(

@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { MedicationResult } from "@/lib/types";
 
-const CACHE_PREFIX = "search_cache_v8_"; // v8: fix matchKey qty regex (x30comp, esoflux)
+const CACHE_PREFIX = "search_cache_v9_"; // v8: fix matchKey qty regex (x30comp, esoflux)
 const TTL_MS = 30 * 60 * 1000; // 30 min
 
 interface CacheEntry {

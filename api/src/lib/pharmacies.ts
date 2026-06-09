@@ -6,4 +6,6 @@ export const PHARMACY_NAMES: Record<PharmacySlug, string> = {
   ahumada: "Farmacias Ahumada",
   "dr-simi": "Dr. Simi",
   araucomed: "AraucoMed",
+  ecofarmacias: "EcoFarmacias",
+  farmex: "Farmex",
 };
