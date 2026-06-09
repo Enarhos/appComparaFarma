@@ -54,6 +54,7 @@ export function FilterSheet({ visible, onClose }: Props) {
   // Commune search state
   const [communeQuery, setCommuneQuery] = useState("");
   const [showCommuneList, setShowCommuneList] = useState(false);
+  const [showUnavailable, setShowUnavailable] = useState(false);
 
   // Carga el índice al abrir
   useEffect(() => {
@@ -84,14 +85,29 @@ export function FilterSheet({ visible, onClose }: Props) {
         setMounted(false);
         setShowCommuneList(false);
         setCommuneQuery("");
+        setShowUnavailable(false);
       });
     }
   }, [visible]);
 
   // Conjunto activo (null = todas)
   const activeSet = activePharmacies ?? new Set(ALL_SLUGS);
-  const allActive = ALL_SLUGS.every((s) => activeSet.has(s));
-  const activeCount = ALL_SLUGS.filter((s) => activeSet.has(s)).length;
+
+  // Precalcular disponibilidad por comuna (una sola llamada)
+  const communeAvailable =
+    selectedCommune && branchIndex
+      ? getPharmaciesForCommune(selectedCommune, branchIndex)
+      : null;
+
+  function isCommuneDisabled(slug: PharmacySlug): boolean {
+    if (!communeAvailable || PHARMACIES[slug].onlineOnly) return false;
+    return communeAvailable.length > 0 && !communeAvailable.includes(slug);
+  }
+
+  const disabledSlugs = ALL_SLUGS.filter(isCommuneDisabled);
+  const availableSlugs = ALL_SLUGS.filter((s) => !isCommuneDisabled(s));
+  const allActive = availableSlugs.every((s) => activeSet.has(s));
+  const activeCount = availableSlugs.filter((s) => activeSet.has(s)).length;
 
   // Comunas filtradas para el dropdown
   const communes: CommuneItem[] = branchIndex ? getCommuneList(branchIndex) : [];
@@ -119,7 +135,7 @@ export function FilterSheet({ visible, onClose }: Props) {
 
   function selectAllPharmacies() {
     if (allActive) {
-      setActivePharmacies(new Set([ALL_SLUGS[0]]));
+      setActivePharmacies(new Set([availableSlugs[0]]));
     } else {
       setActivePharmacies(null); // null = todas
     }
@@ -148,13 +164,6 @@ export function FilterSheet({ visible, onClose }: Props) {
     setCommuneQuery("");
     setShowCommuneList(false);
     setActivePharmacies(null); // re-habilitar todas
-  }
-
-  // Determina si una farmacia está deshabilitada por la comuna seleccionada
-  function isCommuneDisabled(slug: PharmacySlug): boolean {
-    if (!selectedCommune || !branchIndex || PHARMACIES[slug].onlineOnly) return false;
-    const available = getPharmaciesForCommune(selectedCommune, branchIndex);
-    return available.length > 0 && !available.includes(slug);
   }
 
   return (
@@ -352,18 +361,17 @@ export function FilterSheet({ visible, onClose }: Props) {
               </TouchableOpacity>
             </View>
 
-            {ALL_SLUGS.map((slug, i) => {
+            {/* Farmacias disponibles en la comuna (o todas si no hay comuna) */}
+            {availableSlugs.map((slug, i) => {
               const ph = PHARMACIES[slug];
               if (!ph) return null;
-              const communeDisabled = isCommuneDisabled(slug);
-              const isActive = activeSet.has(slug) && !communeDisabled;
-              const isLast = i === ALL_SLUGS.length - 1;
-
+              const isActive = activeSet.has(slug);
+              const isLast = i === availableSlugs.length - 1 && disabledSlugs.length === 0;
               return (
                 <TouchableOpacity
                   key={slug}
-                  onPress={() => !communeDisabled && togglePharmacy(slug)}
-                  activeOpacity={communeDisabled ? 1 : 0.7}
+                  onPress={() => togglePharmacy(slug)}
+                  activeOpacity={0.7}
                   className={`flex-row items-center py-3.5 ${
                     !isLast ? "border-b border-gray-50" : ""
                   }`}
@@ -377,35 +385,72 @@ export function FilterSheet({ visible, onClose }: Props) {
                       marginRight: 12,
                     }}
                   />
-                  <View className="flex-1">
-                    <Text
-                      className={`text-base ${
-                        isActive ? "text-gray-900" : "text-gray-400"
-                      }`}
-                    >
-                      {ph.name}
-                    </Text>
-                    {communeDisabled && (
-                      <Text className="text-xs text-gray-400 mt-0.5">
-                        Sin sucursal en {selectedCommuneName}
-                      </Text>
-                    )}
-                  </View>
+                  <Text
+                    className={`flex-1 text-base ${
+                      isActive ? "text-gray-900" : "text-gray-400"
+                    }`}
+                  >
+                    {ph.name}
+                  </Text>
                   <Switch
                     value={isActive}
                     trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
                     thumbColor="#ffffff"
                     ios_backgroundColor="#e5e7eb"
-                    disabled={communeDisabled}
                   />
                 </TouchableOpacity>
               );
             })}
 
-            {activeCount < ALL_SLUGS.length && (
+            {/* Colapsible: sin sucursal en la comuna */}
+            {disabledSlugs.length > 0 && (
+              <>
+                <TouchableOpacity
+                  onPress={() => setShowUnavailable((v) => !v)}
+                  activeOpacity={0.7}
+                  className="flex-row items-center gap-2 py-3 mt-0.5"
+                >
+                  <Ionicons name="storefront-outline" size={13} color="#9ca3af" />
+                  <Text className="flex-1 text-xs text-gray-400">
+                    {disabledSlugs.length} sin sucursal en {selectedCommuneName}
+                  </Text>
+                  <Ionicons
+                    name={showUnavailable ? "chevron-up" : "chevron-down"}
+                    size={13}
+                    color="#9ca3af"
+                  />
+                </TouchableOpacity>
+
+                {showUnavailable &&
+                  disabledSlugs.map((slug) => {
+                    const ph = PHARMACIES[slug];
+                    if (!ph) return null;
+                    return (
+                      <View
+                        key={slug}
+                        className="flex-row items-center py-2.5 pl-1 border-b border-gray-50"
+                      >
+                        <View
+                          style={{
+                            width: 8,
+                            height: 8,
+                            borderRadius: 4,
+                            backgroundColor: "#e5e7eb",
+                            marginRight: 10,
+                          }}
+                        />
+                        <Text className="text-sm text-gray-300">{ph.name}</Text>
+                      </View>
+                    );
+                  })}
+              </>
+            )}
+
+            {/* Banner: farmacias manualmente desactivadas */}
+            {activeCount < availableSlugs.length && (
               <View className="mt-2 bg-amber-50 border border-amber-100 rounded-xl px-3 py-2">
                 <Text className="text-xs text-amber-700">
-                  Mostrando {activeCount} de {ALL_SLUGS.length} farmacias
+                  Mostrando {activeCount} de {availableSlugs.length} farmacias disponibles
                 </Text>
               </View>
             )}
