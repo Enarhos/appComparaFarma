@@ -69,7 +69,7 @@ export function useSearch() {
           : "No se pudo consultar las farmacias. Intenta de nuevo en un momento."
       );
     }
-  }, [setLoading, setResults, setError, setQuery]);
+  }, [setLoading, setResults, setError, setQuery, selectedCommune]);
 
   return { search };
 }

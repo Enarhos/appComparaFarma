@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import type { PharmacySlug } from "@/lib/types";
+import { PHARMACIES } from "@/constants/pharmacies";
 
 export interface PharmacyConfig {
   slug: PharmacySlug;
@@ -49,7 +50,7 @@ export const useConfigStore = create<ConfigState>((set, get) => ({
   activePharmacySlugs: () => {
     const { pharmacies, loaded } = get();
     if (!loaded || pharmacies.length === 0) {
-      return ["cruz-verde", "salcobrand", "ahumada", "dr-simi", "araucomed"];
+      return Object.keys(PHARMACIES) as PharmacySlug[];
     }
     return pharmacies.filter((p) => p.active).map((p) => p.slug);
   },

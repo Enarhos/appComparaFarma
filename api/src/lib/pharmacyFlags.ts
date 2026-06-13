@@ -7,7 +7,7 @@ export interface PharmacyConfig {
   active: boolean;
 }
 
-const ALL_SLUGS: PharmacySlug[] = ["cruz-verde", "salcobrand", "ahumada", "dr-simi", "araucomed"];
+const ALL_SLUGS: PharmacySlug[] = ["cruz-verde", "salcobrand", "ahumada", "dr-simi", "araucomed", "ecofarmacias", "farmex"];
 
 /**
  * Lee la variable de entorno DISABLED_PHARMACIES (comma-separated).
