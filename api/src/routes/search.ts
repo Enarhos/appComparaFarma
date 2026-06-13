@@ -57,7 +57,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
 
     const cacheKey = query.toLowerCase() + (onlySlugs ? `:${[...onlySlugs].sort().join(",")}` : "");
     if (!debugMode) {
-      const cached = getCachedSearch(cacheKey);
+      const cached = await getCachedSearch(cacheKey);
       if (cached) {
         res.setHeader("x-search-cache", "hit");
         console.info(JSON.stringify({
@@ -88,7 +88,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
     }
 
     const results = await searchMedications(query, onlySlugs);
-    setCachedSearch(cacheKey, results);
+    await setCachedSearch(cacheKey, results);
     console.info(JSON.stringify({
       requestId,
       route: "/api/search",
