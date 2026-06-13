@@ -43,7 +43,7 @@ export function FilterSheet({ visible, onClose }: Props) {
   const [mounted, setMounted] = useState(false);
 
   // Stores
-  const { activePharmacies, setActivePharmacies, sortBy, setSortBy } = useFilterStore();
+  const { activePharmacies, setActivePharmacies, sortBy, setSortBy, onlineSalesOnly, setOnlineSalesOnly } = useFilterStore();
   const { selectedCommune, selectedCommuneName, selectedRegion, setCommune, clearCommune } =
     useLocationStore();
 
@@ -454,6 +454,32 @@ export function FilterSheet({ visible, onClose }: Props) {
                 </Text>
               </View>
             )}
+          </View>
+
+          {/* ─── SECCIÓN COMPRA ONLINE ─── */}
+          <View className="px-6 pt-5">
+            <Text className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+              Modo de compra
+            </Text>
+            <TouchableOpacity
+              onPress={() => setOnlineSalesOnly(!onlineSalesOnly)}
+              activeOpacity={0.7}
+              className="flex-row items-center py-3.5"
+            >
+              <View className="flex-1">
+                <Text className="text-base text-gray-900">Solo con despacho a domicilio</Text>
+                <Text className="text-xs text-gray-400 mt-0.5">
+                  Salcobrand, Dr. Simi, AraucoMed, EcoFarmacias, Farmex
+                </Text>
+              </View>
+              <Switch
+                value={onlineSalesOnly}
+                onValueChange={setOnlineSalesOnly}
+                trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
+                thumbColor="#ffffff"
+                ios_backgroundColor="#e5e7eb"
+              />
+            </TouchableOpacity>
           </View>
 
           {/* ─── SECCIÓN ORDENAR ─── */}

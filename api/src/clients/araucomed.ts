@@ -36,7 +36,7 @@ export function parseAraucoMedResponse(data: SearchResponse): ScrapedProduct[] {
       cmrPrice: null,
       sbpayPrice: null,
       hasStock: p.active === 1,
-      hasOnlineDelivery: false,
+      hasOnlineDelivery: true,
       onlineUrl: p.url ?? null,
       imageUrl: p.cover?.bySize?.home_default?.url ?? null,
       laboratory: p.manufacturer_name ?? null,

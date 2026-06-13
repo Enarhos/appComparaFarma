@@ -76,7 +76,7 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     bgLight: "#f3effe",
     cardLabel: "Fonasa",
     sbpayLabel: null,
-    onlineOnly: false,
+    onlineOnly: true,
     channels: { store: true, online: false, card: true, sbpay: false },
   },
 };

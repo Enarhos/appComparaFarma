@@ -32,7 +32,7 @@ export default function ResultsScreen() {
   const { results, status, errorMessage } = useSearchStore();
   const { add: addToHistory } = useHistoryStore();
   const { search } = useSearch();
-  const { activePharmacies, isPharmacyVisible, sortBy } = useFilterStore();
+  const { activePharmacies, isPharmacyVisible, sortBy, onlineSalesOnly } = useFilterStore();
   const selectedCommuneName = useLocationStore((s) => s.selectedCommuneName);
 
   const [bioOnly, setBioOnly] = useState(false);
@@ -61,15 +61,26 @@ export default function ResultsScreen() {
   const isLoading = status === "loading";
   const bioCount = results.filter((r) => r.isBioequivalent).length;
 
+  // Slugs con capacidad de despacho online (según config)
+  const onlineSlugs = ALL_SLUGS.filter(
+    (s) => PHARMACIES[s].onlineOnly || PHARMACIES[s].channels.online
+  );
+
   // Conteo de filtros activos para el badge del botón
   const filteredOutCount = ALL_SLUGS.filter((s) => !isPharmacyVisible(s)).length;
-  const totalFilterCount = filteredOutCount + (selectedCommuneName ? 1 : 0);
+  const totalFilterCount =
+    filteredOutCount + (selectedCommuneName ? 1 : 0) + (onlineSalesOnly ? 1 : 0);
 
   // Filtrar + ordenar
   let displayResults = bioOnly ? results.filter((r) => r.isBioequivalent) : results;
   displayResults = displayResults.filter((med) =>
     med.prices.some((p) => isPharmacyVisible(p.pharmacySlug))
   );
+  if (onlineSalesOnly) {
+    displayResults = displayResults.filter((med) =>
+      med.prices.some((p) => onlineSlugs.includes(p.pharmacySlug))
+    );
+  }
   displayResults = [...displayResults].sort((a, b) =>
     sortBy === "name"
       ? a.canonicalName.localeCompare(b.canonicalName, "es")
@@ -256,7 +267,15 @@ export default function ResultsScreen() {
           ) : (
             <MedicationListItem
               medication={item}
-              activePharmacies={activePharmacies ?? new Set(ALL_SLUGS)}
+              activePharmacies={
+                onlineSalesOnly
+                  ? new Set(
+                      (activePharmacies ? [...activePharmacies] : ALL_SLUGS).filter((s) =>
+                        onlineSlugs.includes(s)
+                      )
+                    )
+                  : (activePharmacies ?? new Set(ALL_SLUGS))
+              }
             />
           )
         }
