@@ -100,14 +100,24 @@ export default function MedicationScreen() {
           <View className="flex-row items-start justify-between">
             <Text className="text-xl font-bold text-gray-900 dark:text-white flex-1 mr-2">{canonicalName}</Text>
             <View className="flex-row items-center gap-3 mt-1">
-              <TouchableOpacity onPress={handleCartToggle} hitSlop={8}>
+              <TouchableOpacity
+                onPress={handleCartToggle}
+                hitSlop={12}
+                accessibilityLabel={inCart ? "Quitar del carrito" : "Agregar al carrito"}
+                accessibilityRole="button"
+              >
                 <Ionicons
                   name={inCart ? "cart" : "cart-outline"}
                   size={22}
                   color={inCart ? "#16a34a" : "#9ca3af"}
                 />
               </TouchableOpacity>
-              <TouchableOpacity onPress={handleShare} hitSlop={8}>
+              <TouchableOpacity
+                onPress={handleShare}
+                hitSlop={12}
+                accessibilityLabel="Compartir precio"
+                accessibilityRole="button"
+              >
                 <Ionicons name="share-outline" size={22} color="#9ca3af" />
               </TouchableOpacity>
             </View>
@@ -210,7 +220,12 @@ function PharmacyDetail({ pharmacyPrice, unitQty }: { pharmacyPrice: PharmacyPri
       <View className="px-4 pb-3 flex-row items-center justify-between">
         <Text className="text-xs text-gray-300">{scrapedAgo(fetchedAt)}</Text>
         {onlineUrl && (
-          <TouchableOpacity onPress={openUrl} className="bg-green-600 rounded-xl px-4 py-1.5">
+          <TouchableOpacity
+            onPress={openUrl}
+            className="bg-green-600 rounded-xl px-4 py-1.5"
+            accessibilityLabel={`Ver ${config.name}`}
+            accessibilityRole="link"
+          >
             <Text className="text-white text-xs font-semibold">Ver en farmacia →</Text>
           </TouchableOpacity>
         )}

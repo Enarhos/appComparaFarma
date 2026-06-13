@@ -112,6 +112,8 @@ export default function ResultsScreen() {
           {/* Toggle bio */}
           <TouchableOpacity
             onPress={() => setBioOnly((v) => !v)}
+            accessibilityLabel={bioOnly ? "Mostrar todos los medicamentos" : `Mostrar solo bioequivalentes (${bioCount})`}
+            accessibilityRole="button"
             className={`rounded-full px-3 py-1.5 border ${
               bioOnly
                 ? "bg-emerald-50 border-emerald-500 dark:bg-emerald-950"
@@ -153,6 +155,8 @@ export default function ResultsScreen() {
           {/* Botón Filtros */}
           <TouchableOpacity
             onPress={() => setShowFilters(true)}
+            accessibilityLabel={totalFilterCount > 0 ? `Filtros activos: ${totalFilterCount}` : "Abrir filtros"}
+            accessibilityRole="button"
             className={`flex-row items-center gap-1.5 rounded-full px-3 py-1.5 border ${
               totalFilterCount > 0
                 ? "bg-green-50 border-green-500 dark:bg-green-950"

@@ -92,15 +92,19 @@ export default function HomeScreen() {
               {/* Ayuda */}
               <TouchableOpacity
                 onPress={() => router.push({ pathname: "/onboarding" as any, params: { mode: "help" } })}
-                hitSlop={8}
+                hitSlop={12}
+                accessibilityLabel="Ayuda"
+                accessibilityRole="button"
               >
                 <Ionicons name="help-circle-outline" size={26} color="#9ca3af" />
               </TouchableOpacity>
               {/* Carrito */}
               <TouchableOpacity
                 onPress={() => router.push("/cart" as any)}
-                hitSlop={8}
+                hitSlop={12}
                 className="relative"
+                accessibilityLabel={cartCount > 0 ? `Carrito, ${cartCount} medicamento${cartCount > 1 ? "s" : ""}` : "Carrito vacío"}
+                accessibilityRole="button"
               >
                 <Ionicons name="cart-outline" size={26} color="#16a34a" />
                 {cartCount > 0 && (
@@ -122,6 +126,8 @@ export default function HomeScreen() {
         <TouchableOpacity
           onPress={() => setShowFilters(true)}
           activeOpacity={0.7}
+          accessibilityLabel={totalFilterCount > 0 ? `Filtros activos: ${totalFilterCount}` : "Abrir filtros"}
+          accessibilityRole="button"
           className={`mb-3 flex-row items-center gap-2 rounded-2xl px-4 py-3 border ${
             totalFilterCount > 0
               ? "bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800"
@@ -176,6 +182,8 @@ export default function HomeScreen() {
                   onPress={() => handleFavoritePress(med.matchKey)}
                   className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl p-3 mx-1 w-44"
                   activeOpacity={0.7}
+                  accessibilityLabel={`${med.canonicalName}, desde ${formatCLP(med.bestPrice)}`}
+                  accessibilityRole="button"
                 >
                   <Text className="text-sm font-semibold text-gray-900 dark:text-white" numberOfLines={2}>
                     {med.canonicalName}
@@ -207,6 +215,8 @@ export default function HomeScreen() {
                 key={term}
                 onPress={() => handleSearch(term)}
                 className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-full px-4 py-2"
+                accessibilityLabel={`Buscar ${term}`}
+                accessibilityRole="button"
               >
                 <Text className="text-green-700 dark:text-green-400 text-sm font-medium">{term}</Text>
               </TouchableOpacity>
@@ -221,7 +231,7 @@ export default function HomeScreen() {
               <Text className="text-xs font-semibold text-gray-400 uppercase tracking-wide">
                 Búsquedas recientes
               </Text>
-              <TouchableOpacity onPress={handleClear} hitSlop={8}>
+              <TouchableOpacity onPress={handleClear} hitSlop={12} accessibilityLabel="Borrar todo el historial" accessibilityRole="button">
                 <Text className="text-xs text-red-400 font-medium">Borrar todo</Text>
               </TouchableOpacity>
             </View>
@@ -230,11 +240,13 @@ export default function HomeScreen() {
                 <TouchableOpacity
                   onPress={() => handleSearch(term)}
                   className="flex-1 py-3 flex-row items-center"
+                  accessibilityLabel={`Buscar ${term}`}
+                  accessibilityRole="button"
                 >
                   <Ionicons name="time-outline" size={16} color="#9ca3af" style={{ marginRight: 12 }} />
                   <Text className="text-gray-700 dark:text-gray-300">{term}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => handleRemove(term)} hitSlop={8} className="pl-3 py-3">
+                <TouchableOpacity onPress={() => handleRemove(term)} hitSlop={16} className="pl-3 py-3" accessibilityLabel={`Eliminar ${term}`} accessibilityRole="button">
                   <Ionicons name="close" size={16} color="#d1d5db" />
                 </TouchableOpacity>
               </View>
@@ -246,6 +258,8 @@ export default function HomeScreen() {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onPress={() => router.push("/about" as any)}
           activeOpacity={0.8}
+          accessibilityLabel="Ayúdanos a mejorar — enviar sugerencias"
+          accessibilityRole="button"
           className="mt-8 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-2xl px-4 py-4 flex-row items-center"
         >
           <View className="bg-green-100 dark:bg-green-900 rounded-full p-2 mr-3">
