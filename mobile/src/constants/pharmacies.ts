@@ -58,7 +58,7 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     bgLight: "#e8f3fb",
     cardLabel: null,
     sbpayLabel: null,
-    onlineOnly: false,
+    onlineOnly: true,
     channels: { store: true, online: false, card: false, sbpay: false },
   },
   ecofarmacias: {
