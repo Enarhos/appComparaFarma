@@ -3,63 +3,57 @@ import { fetchWithTimeout } from "../lib/timeout.js";
 
 const BASE = "https://farmacia.araucomed.com";
 
-function decodeHtml(str: string): string {
-  return str
-    .replace(/&amp;/g, "&").replace(/&nbsp;/g, " ")
-    .replace(/&aacute;/g, "á").replace(/&eacute;/g, "é")
-    .replace(/&iacute;/g, "í").replace(/&oacute;/g, "ó")
-    .replace(/&uacute;/g, "ú").replace(/&ntilde;/g, "ñ")
-    .replace(/&#(\d+);/g, (_, n: string) => String.fromCharCode(Number(n)));
+interface AraucoProduct {
+  id_product: number;
+  name: string;
+  price_amount: number;
+  manufacturer_name: string | null;
+  url: string;
+  description_short: string;
+  active: number;
+  cover: {
+    bySize?: {
+      home_default?: { url: string };
+    };
+  } | null;
 }
 
-// Regex sobre el bloque <article> de cada producto PrestaShop
-const articleRe  = /<article[^>]*product-miniature[^>]*>[\s\S]*?<\/article>/g;
-const nameUrlRe  = /product-title[^>]*itemprop="name"[^>]*>\s*<a href="([^"]+)">([^<]+)<\/a>/;
-const priceRe    = /itemprop="price"[^>]*content="(\d+)"|content="(\d+)"[^>]*itemprop="price"/;
-const imageRe    = /src\s*=\s*"([^"]+home_default[^"]+)"/;
-const outStockRe = /out_of_stock/;
+interface SearchResponse {
+  products: AraucoProduct[];
+}
 
-export function parseAraucoMedResponse(html: string): ScrapedProduct[] {
-  const results: ScrapedProduct[] = [];
-  for (const match of html.matchAll(articleRe)) {
-    const block = match[0];
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
 
-    const priceM = priceRe.exec(block);
-    if (!priceM) continue;
-    const price = parseInt(priceM[1] ?? priceM[2], 10);
-    if (!price || price <= 0) continue;
-
-    const nameM = nameUrlRe.exec(block);
-    if (!nameM) continue;
-
-    const imageM = imageRe.exec(block);
-
-    results.push({
-      name: decodeHtml(nameM[2].trim()),
-      price,
+export function parseAraucoMedResponse(data: SearchResponse): ScrapedProduct[] {
+  return (data.products ?? [])
+    .filter(p => p.price_amount > 0 && p.active)
+    .map(p => ({
+      name: p.name,
+      price: p.price_amount,
       onlinePrice: null,
       cmrPrice: null,
       sbpayPrice: null,
-      hasStock: !outStockRe.test(block),
+      hasStock: p.active === 1,
       hasOnlineDelivery: false,
-      onlineUrl: nameM[1] ?? null,
-      imageUrl: imageM ? imageM[1] : null,
-      laboratory: null,
-      isBioequivalent: false,
-    });
-  }
-  return results;
+      onlineUrl: p.url ?? null,
+      imageUrl: p.cover?.bySize?.home_default?.url ?? null,
+      laboratory: p.manufacturer_name ?? null,
+      isBioequivalent: /bioequivalen/i.test(p.name + " " + stripHtml(p.description_short)),
+    }));
 }
 
 export async function searchAraucoMed(query: string): Promise<ScrapedProduct[]> {
-  const params = new URLSearchParams({ controller: "search", s: query });
+  const params = new URLSearchParams({ controller: "search", s: query, ajax: "1" });
   const res = await fetchWithTimeout(`${BASE}/?${params}`, {
     headers: {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-      "Accept": "text/html",
+      "X-Requested-With": "XMLHttpRequest",
+      "Accept": "application/json",
     },
   });
   if (!res.ok) throw new Error(`AraucoMed HTTP ${res.status}`);
-  const html = await res.text();
-  return parseAraucoMedResponse(html);
+  const data = await res.json() as SearchResponse;
+  return parseAraucoMedResponse(data);
 }
