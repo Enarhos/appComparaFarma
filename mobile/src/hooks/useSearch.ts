@@ -6,6 +6,7 @@ import { getCached, setCached } from "@/lib/cache";
 import { useSearchStore } from "@/store/searchStore";
 import { useLocationStore } from "@/store/locationStore";
 import { getBranchIndex, getPharmaciesForCommune } from "@/lib/branches";
+import { captureSearch } from "@/lib/analytics";
 
 export function useSearch() {
   const abortRef = useRef<AbortController | null>(null);
@@ -53,6 +54,7 @@ export function useSearch() {
       const results = await searchMedications(query, abortRef.current.signal, onlyPharmacies);
       await setCached(cacheKey, results);
       setResults(results);
+      captureSearch(rawQuery, query, results, selectedCommune ?? null);
     } catch (err) {
       if ((err as Error).name === "AbortError") return;
       Sentry.captureException(err, { extra: { query } });
