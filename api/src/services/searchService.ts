@@ -4,6 +4,7 @@ import { searchCruzVerde } from "../clients/cruzverde.js";
 import { searchDrSimi } from "../clients/drsimi.js";
 import { searchEcoFarmacias } from "../clients/ecofarmacias.js";
 import { searchFarmex } from "../clients/farmex.js";
+import { searchSermecoop } from "../clients/sermecoop.js";
 import { searchSalcobrand } from "../clients/salcobrand.js";
 import { mergeDuplicates, toMedicationResult } from "../lib/normalization.js";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
@@ -78,6 +79,7 @@ const ALL_SOURCES: Array<{
   { slug: "araucomed",    fn: searchAraucoMed    },
   { slug: "ecofarmacias", fn: searchEcoFarmacias },
   { slug: "farmex",       fn: searchFarmex       },
+  { slug: "sermecoop",   fn: searchSermecoop    },
 ];
 
 export async function searchMedicationsDetailed(

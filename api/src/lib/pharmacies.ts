@@ -8,4 +8,5 @@ export const PHARMACY_NAMES: Record<PharmacySlug, string> = {
   araucomed: "AraucoMed",
   ecofarmacias: "EcoFarmacias",
   farmex: "Farmex",
+  sermecoop: "Sermecoop",
 };

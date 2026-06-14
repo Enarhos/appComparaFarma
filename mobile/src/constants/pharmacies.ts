@@ -79,4 +79,13 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     onlineOnly: true,
     channels: { store: true, online: false, card: true, sbpay: false },
   },
+  sermecoop: {
+    name: "Sermecoop",
+    color: "#e67e22",
+    bgLight: "#fef3e2",
+    cardLabel: null,
+    sbpayLabel: null,
+    onlineOnly: false,
+    channels: { store: true, online: false, card: false, sbpay: false },
+  },
 };

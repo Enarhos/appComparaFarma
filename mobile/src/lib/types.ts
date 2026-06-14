@@ -1,4 +1,4 @@
-export type PharmacySlug = "cruz-verde" | "salcobrand" | "ahumada" | "dr-simi" | "araucomed" | "ecofarmacias" | "farmex";
+export type PharmacySlug = "cruz-verde" | "salcobrand" | "ahumada" | "dr-simi" | "araucomed" | "ecofarmacias" | "farmex" | "sermecoop";
 
 export interface PriceChannels {
   store: number;
