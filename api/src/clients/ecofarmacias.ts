@@ -13,13 +13,19 @@ interface WooImage {
   src: string;
 }
 
+interface WooCategory {
+  id: number;
+  name: string;
+  slug: string;
+}
+
 interface WooProduct {
   name: string;
   permalink: string;
   prices: WooPrice;
   is_in_stock: boolean;
   images: WooImage[];
-  categories: string[];
+  categories: WooCategory[];
   on_sale: boolean;
 }
 
@@ -29,7 +35,7 @@ export function parseEcoFarmaciasResponse(products: WooProduct[]): ScrapedProduc
     if (!price || price <= 0) return [];
 
     const isBioequivalent = (p.categories ?? []).some(
-      (c) => c.toLowerCase().includes("bioequivalente")
+      (c) => c?.slug?.includes("bioequivalente") || c?.name?.toLowerCase().includes("bioequivalente")
     );
 
     return [{
