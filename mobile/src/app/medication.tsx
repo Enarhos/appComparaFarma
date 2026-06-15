@@ -8,6 +8,7 @@ import { useCartStore } from "@/store/cartStore";
 import { useConfigStore } from "@/store/configStore";
 import { useFilterStore } from "@/store/filterStore";
 import { PHARMACIES } from "@/constants/pharmacies";
+import { DonationBanner } from "@/components/DonationBanner";
 import { formatCLP, scrapedAgo } from "@/lib/formatters";
 import type { PharmacyPrice, PharmacySlug } from "@/lib/types";
 
@@ -59,6 +60,12 @@ export default function MedicationScreen() {
     (p) => isActive(p.pharmacySlug) && isPharmacyVisible(p.pharmacySlug)
   );
   const unitQty = parseUnitQty(medMatchKey);
+
+  const activeSavings = (() => {
+    if (activePrices.length < 2) return 0;
+    const effectives = activePrices.map((p) => p.channels.effective);
+    return Math.max(...effectives) - Math.min(...effectives);
+  })();
 
   function handleCartToggle() {
     if (inCart) {
@@ -166,6 +173,9 @@ export default function MedicationScreen() {
         {activePrices.map((p) => (
           <PharmacyDetail key={p.pharmacySlug} pharmacyPrice={p} unitQty={unitQty} />
         ))}
+
+        {/* Banner de apoyo al proyecto */}
+        <DonationBanner savings={activeSavings} />
 
       </ScrollView>
     </SafeAreaView>
