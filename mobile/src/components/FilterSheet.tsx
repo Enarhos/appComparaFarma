@@ -392,12 +392,14 @@ export function FilterSheet({ visible, onClose }: Props) {
                   >
                     {ph.name}
                   </Text>
-                  <Switch
-                    value={isActive}
-                    trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
-                    thumbColor="#ffffff"
-                    ios_backgroundColor="#e5e7eb"
-                  />
+                  <View pointerEvents="none">
+                    <Switch
+                      value={isActive}
+                      trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
+                      thumbColor="#ffffff"
+                      ios_backgroundColor="#e5e7eb"
+                    />
+                  </View>
                 </TouchableOpacity>
               );
             })}

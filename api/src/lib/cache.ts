@@ -11,13 +11,17 @@ interface CacheEntry {
 }
 const memCache = new Map<string, CacheEntry>();
 
-const redis =
-  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
-    ? new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN,
-      })
-    : null;
+let redis: Redis | null = null;
+try {
+  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+    redis = new Redis({
+      url: process.env.UPSTASH_REDIS_REST_URL,
+      token: process.env.UPSTASH_REDIS_REST_TOKEN,
+    });
+  }
+} catch (err) {
+  console.error("Redis init failed, falling back to in-memory cache:", err);
+}
 
 export async function getCachedSearch(key: string): Promise<MedicationResult[] | null> {
   if (redis) {
