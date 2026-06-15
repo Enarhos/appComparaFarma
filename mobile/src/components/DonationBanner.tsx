@@ -18,7 +18,7 @@ export function DonationBanner({ savings }: Props) {
   const [selectedAmount, setSelectedAmount] = useState<number | "otro" | null>(null);
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
-  if (savings < DONATION_CONFIG.threshold) return null;
+  if (savings <= DONATION_CONFIG.threshold) return null;
 
   const { bank, amounts } = DONATION_CONFIG;
 
