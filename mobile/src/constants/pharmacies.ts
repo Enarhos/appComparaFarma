@@ -88,4 +88,13 @@ export const PHARMACIES: Record<PharmacySlug, PharmacyConfig> = {
     onlineOnly: false,
     channels: { store: true, online: false, card: false, sbpay: false },
   },
+  easyfarma: {
+    name: "EasyFarma",
+    color: "#16a34a",
+    bgLight: "#dcfce7",
+    cardLabel: "Plus",
+    sbpayLabel: null,
+    onlineOnly: true,
+    channels: { store: true, online: false, card: true, sbpay: false },
+  },
 };

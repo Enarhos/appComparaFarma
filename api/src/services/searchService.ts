@@ -5,6 +5,7 @@ import { searchDrSimi } from "../clients/drsimi.js";
 import { searchEcoFarmacias } from "../clients/ecofarmacias.js";
 import { searchFarmex } from "../clients/farmex.js";
 import { searchSermecoop } from "../clients/sermecoop.js";
+import { searchEasyFarma } from "../clients/easyfarma.js";
 import { searchSalcobrand } from "../clients/salcobrand.js";
 import { mergeDuplicates, toMedicationResult } from "../lib/normalization.js";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
@@ -80,6 +81,7 @@ const ALL_SOURCES: Array<{
   { slug: "ecofarmacias", fn: searchEcoFarmacias },
   { slug: "farmex",       fn: searchFarmex       },
   { slug: "sermecoop",   fn: searchSermecoop    },
+  { slug: "easyfarma",   fn: searchEasyFarma    },
 ];
 
 export async function searchMedicationsDetailed(

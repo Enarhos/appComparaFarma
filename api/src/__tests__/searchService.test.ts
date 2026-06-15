@@ -11,6 +11,7 @@ const mocks = vi.hoisted(() => ({
   searchEcoFarmacias: vi.fn<() => Promise<ScrapedProduct[]>>(),
   searchFarmex: vi.fn<() => Promise<ScrapedProduct[]>>(),
   searchSermecoop: vi.fn<() => Promise<ScrapedProduct[]>>(),
+  searchEasyFarma: vi.fn<() => Promise<ScrapedProduct[]>>(),
 }));
 
 vi.mock("../clients/cruzverde.js", () => ({ searchCruzVerde: mocks.searchCruzVerde }));
@@ -21,6 +22,7 @@ vi.mock("../clients/araucomed.js", () => ({ searchAraucoMed: mocks.searchAraucoM
 vi.mock("../clients/ecofarmacias.js", () => ({ searchEcoFarmacias: mocks.searchEcoFarmacias }));
 vi.mock("../clients/farmex.js", () => ({ searchFarmex: mocks.searchFarmex }));
 vi.mock("../clients/sermecoop.js", () => ({ searchSermecoop: mocks.searchSermecoop }));
+vi.mock("../clients/easyfarma.js", () => ({ searchEasyFarma: mocks.searchEasyFarma }));
 
 import { searchMedicationsDetailed } from "../services/searchService.js";
 
@@ -38,12 +40,13 @@ describe("searchMedicationsDetailed", () => {
     mocks.searchEcoFarmacias.mockResolvedValue([]);
     mocks.searchFarmex.mockResolvedValue([]);
     mocks.searchSermecoop.mockResolvedValue([]);
+    mocks.searchEasyFarma.mockResolvedValue([]);
 
     const execution = await searchMedicationsDetailed("paracetamol");
 
     expect(execution.results.length).toBeGreaterThan(0);
     expect(execution.diagnostics.query).toBe("paracetamol");
-    expect(execution.diagnostics.pharmacies).toHaveLength(8);
+    expect(execution.diagnostics.pharmacies).toHaveLength(9);
     expect(execution.diagnostics.pharmacies.find((item) => item.pharmacySlug === "ahumada")).toMatchObject({
       status: "rejected",
       resultCount: 0,
