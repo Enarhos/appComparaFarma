@@ -45,16 +45,16 @@ export function DonationBanner({ savings }: Props) {
   }
 
   return (
-    <View className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-2xl p-4 gap-3">
+    <View className="bg-rose-50 dark:bg-rose-950 border border-rose-200 dark:border-rose-800 rounded-2xl p-4 gap-3">
       {/* Header */}
       <View className="flex-row items-center gap-2">
-        <Ionicons name="heart-outline" size={16} color="#16a34a" />
-        <Text className="text-sm font-bold text-green-800 dark:text-green-300 flex-1">
+        <Ionicons name="heart" size={16} color="#ef4444" />
+        <Text className="text-sm font-bold text-rose-800 dark:text-rose-300 flex-1">
           ¿Te ayudamos a ahorrar {formatCLP(savings)}?
         </Text>
       </View>
 
-      <Text className="text-xs text-green-700 dark:text-green-400 leading-4">
+      <Text className="text-xs text-rose-700 dark:text-rose-400 leading-4">
         ComparaFarma es gratuita y sin publicidad. Si te fue útil, puedes apoyar el proyecto con una transferencia voluntaria.
       </Text>
 
@@ -69,13 +69,13 @@ export function DonationBanner({ savings }: Props) {
               activeOpacity={0.7}
               className={`rounded-xl px-4 py-2 border ${
                 active
-                  ? "bg-green-600 border-green-600"
-                  : "bg-white dark:bg-gray-800 border-green-200 dark:border-green-700"
+                  ? "bg-rose-500 border-rose-500"
+                  : "bg-white dark:bg-gray-800 border-rose-200 dark:border-rose-700"
               }`}
             >
               <Text
                 className={`text-sm font-semibold ${
-                  active ? "text-white" : "text-green-700 dark:text-green-300"
+                  active ? "text-white" : "text-rose-700 dark:text-rose-300"
                 }`}
               >
                 {formatCLP(amount)}
@@ -104,7 +104,7 @@ export function DonationBanner({ savings }: Props) {
 
       {/* Datos bancarios */}
       {selectedAmount !== null && (
-        <View className="bg-white dark:bg-gray-800 rounded-xl border border-green-100 dark:border-green-800 overflow-hidden">
+        <View className="bg-white dark:bg-gray-800 rounded-xl border border-rose-100 dark:border-rose-800 overflow-hidden">
           {fields.map((field, i) => (
             <TouchableOpacity
               key={field.label}
@@ -134,7 +134,7 @@ export function DonationBanner({ savings }: Props) {
       )}
 
       {selectedAmount !== null && (
-        <Text className="text-xs text-gray-400 text-center">
+        <Text className="text-xs text-rose-400 text-center">
           Toca cualquier campo para copiarlo
         </Text>
       )}
