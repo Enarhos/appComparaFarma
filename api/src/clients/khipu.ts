@@ -10,7 +10,6 @@ export async function createKhipuPayment(amount: number): Promise<string> {
     throw new Error("Khipu credentials not configured");
   }
 
-  // Sort params alphabetically, encode with URLSearchParams (spaces as '+', matches PHP http_build_query)
   const sortedEntries = Object.entries({
     amount: String(amount),
     currency: "CLP",
@@ -19,13 +18,8 @@ export async function createKhipuPayment(amount: number): Promise<string> {
   }).sort(([a], [b]) => a.localeCompare(b));
 
   const sortedBody = new URLSearchParams(sortedEntries).toString();
-
-  // Khipu v2 HMAC-SHA256: POST&encodeURIComponent(url)&encodeURIComponent(sortedBody)
   const toSign = `POST&${encodeURIComponent(API_V2)}&${encodeURIComponent(sortedBody)}`;
   const hmac = createHmac("sha256", secret).update(toSign).digest("base64");
-
-  console.log("[khipu] body:", sortedBody);
-  console.log("[khipu] toSign:", toSign);
 
   const res = await fetch(API_V2, {
     method: "POST",
@@ -37,8 +31,6 @@ export async function createKhipuPayment(amount: number): Promise<string> {
   });
 
   const responseText = await res.text();
-  console.log("[khipu] status:", res.status, "response:", responseText);
-
   if (!res.ok) {
     throw new Error(`Khipu ${res.status}: ${responseText}`);
   }
