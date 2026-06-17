@@ -26,6 +26,11 @@ export async function createKhipuPayment(amount: number): Promise<string> {
   const toSign = `POST&${encodeURIComponent(API_URL)}&${encodeURIComponent(sortedBody)}`;
   const hmac = createHmac("sha256", secret).update(toSign).digest("base64");
 
+  console.log("[khipu] sortedBody:", sortedBody);
+  console.log("[khipu] toSign:", toSign);
+  console.log("[khipu] hmac:", hmac);
+  console.log("[khipu] Authorization:", `${receiverId}:${hmac}`);
+
   const res = await fetch(API_URL, {
     method: "POST",
     headers: {
@@ -35,11 +40,13 @@ export async function createKhipuPayment(amount: number): Promise<string> {
     body: sortedBody,
   });
 
+  const responseText = await res.text();
+  console.log("[khipu] status:", res.status, "body:", responseText);
+
   if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Khipu ${res.status}: ${text}`);
+    throw new Error(`Khipu ${res.status}: ${responseText}`);
   }
 
-  const data = (await res.json()) as { payment_url: string };
+  const data = JSON.parse(responseText) as { payment_url: string };
   return data.payment_url;
 }
