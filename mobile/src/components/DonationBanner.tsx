@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { View, Text, TouchableOpacity, Animated } from "react-native";
-import * as Clipboard from "expo-clipboard";
+import { View, Text, TouchableOpacity, Linking, ActivityIndicator } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { DONATION_CONFIG } from "@/constants/donation";
 import { formatCLP } from "@/lib/formatters";
@@ -9,39 +8,35 @@ interface Props {
   savings: number;
 }
 
-interface BankField {
-  label: string;
-  value: string;
-}
+const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "";
 
 export function DonationBanner({ savings }: Props) {
-  const [selectedAmount, setSelectedAmount] = useState<number | "otro" | null>(null);
-  const [copiedField, setCopiedField] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (savings <= DONATION_CONFIG.threshold) return null;
 
-  const { bank, amounts } = DONATION_CONFIG;
+  const { amounts } = DONATION_CONFIG;
 
-  const fields: BankField[] = [
-    { label: "Banco", value: bank.banco },
-    { label: "Tipo de cuenta", value: bank.tipoCuenta },
-    { label: "N° de cuenta", value: bank.numeroCuenta },
-    { label: "RUT", value: bank.rut },
-    { label: "Nombre", value: bank.nombre },
-    { label: "Email", value: bank.email },
-    ...(selectedAmount && selectedAmount !== "otro"
-      ? [{ label: "Monto", value: formatCLP(selectedAmount) }]
-      : []),
-  ];
-
-  async function handleCopy(field: BankField) {
-    await Clipboard.setStringAsync(field.value);
-    setCopiedField(field.label);
-    setTimeout(() => setCopiedField(null), 2000);
-  }
-
-  function handleAmount(amount: number | "otro") {
-    setSelectedAmount((prev) => (prev === amount ? null : amount));
+  async function handleDonate(amount: number) {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(`${API_URL}/api/donate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount }),
+      });
+      const data = await res.json() as { payment_url?: string; error?: string };
+      if (!res.ok || !data.payment_url) {
+        throw new Error(data.error ?? "Error al crear el pago");
+      }
+      await Linking.openURL(data.payment_url);
+    } catch {
+      setError("No se pudo abrir el pago. Intenta de nuevo.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -55,88 +50,34 @@ export function DonationBanner({ savings }: Props) {
       </View>
 
       <Text className="text-xs text-rose-700 dark:text-rose-400 leading-4">
-        ComparaFarma es gratuita y sin publicidad. Si te fue útil, puedes apoyar el proyecto con una transferencia voluntaria.
+        ComparaFarma es gratuita y sin publicidad. Si te fue útil, apoya el proyecto con un aporte voluntario vía Khipu.
       </Text>
 
       {/* Botones de monto */}
-      <View className="flex-row flex-wrap gap-2">
-        {amounts.map((amount) => {
-          const active = selectedAmount === amount;
-          return (
+      {loading ? (
+        <View className="items-center py-2">
+          <ActivityIndicator color="#ef4444" />
+          <Text className="text-xs text-rose-400 mt-2">Abriendo Khipu...</Text>
+        </View>
+      ) : (
+        <View className="flex-row flex-wrap gap-2">
+          {amounts.map((amount) => (
             <TouchableOpacity
               key={amount}
-              onPress={() => handleAmount(amount)}
+              onPress={() => handleDonate(amount)}
               activeOpacity={0.7}
-              className={`rounded-xl px-4 py-2 border ${
-                active
-                  ? "bg-rose-500 border-rose-500"
-                  : "bg-white dark:bg-gray-800 border-rose-200 dark:border-rose-700"
-              }`}
+              className="rounded-xl px-4 py-2 border bg-white dark:bg-gray-800 border-rose-200 dark:border-rose-700"
             >
-              <Text
-                className={`text-sm font-semibold ${
-                  active ? "text-white" : "text-rose-700 dark:text-rose-300"
-                }`}
-              >
+              <Text className="text-sm font-semibold text-rose-700 dark:text-rose-300">
                 {formatCLP(amount)}
               </Text>
-            </TouchableOpacity>
-          );
-        })}
-        <TouchableOpacity
-          onPress={() => handleAmount("otro")}
-          activeOpacity={0.7}
-          className={`rounded-xl px-4 py-2 border ${
-            selectedAmount === "otro"
-              ? "bg-green-600 border-green-600"
-              : "bg-white dark:bg-gray-800 border-green-200 dark:border-green-700"
-          }`}
-        >
-          <Text
-            className={`text-sm font-semibold ${
-              selectedAmount === "otro" ? "text-white" : "text-green-700 dark:text-green-300"
-            }`}
-          >
-            Otro monto
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      {/* Datos bancarios */}
-      {selectedAmount !== null && (
-        <View className="bg-white dark:bg-gray-800 rounded-xl border border-rose-100 dark:border-rose-800 overflow-hidden">
-          {fields.map((field, i) => (
-            <TouchableOpacity
-              key={field.label}
-              onPress={() => handleCopy(field)}
-              activeOpacity={0.6}
-              className={`flex-row items-center justify-between px-4 py-3 ${
-                i < fields.length - 1 ? "border-b border-gray-50 dark:border-gray-700" : ""
-              }`}
-            >
-              <View className="flex-1 mr-3">
-                <Text className="text-xs text-gray-400 mb-0.5">{field.label}</Text>
-                <Text className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                  {field.value}
-                </Text>
-              </View>
-              {copiedField === field.label ? (
-                <View className="flex-row items-center gap-1">
-                  <Ionicons name="checkmark" size={14} color="#16a34a" />
-                  <Text className="text-xs text-green-600 font-medium">Copiado</Text>
-                </View>
-              ) : (
-                <Ionicons name="copy-outline" size={16} color="#9ca3af" />
-              )}
             </TouchableOpacity>
           ))}
         </View>
       )}
 
-      {selectedAmount !== null && (
-        <Text className="text-xs text-rose-400 text-center">
-          Toca cualquier campo para copiarlo
-        </Text>
+      {error && (
+        <Text className="text-xs text-red-500">{error}</Text>
       )}
     </View>
   );
