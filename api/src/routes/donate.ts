@@ -38,7 +38,8 @@ export async function handleDonateRoute(reqLike: unknown, resLike: unknown): Pro
       json(res, error.statusCode, { error: error.message });
       return;
     }
-    console.error("Donate route error:", error instanceof Error ? error.message : error);
-    json(res, 500, { error: "No se pudo crear el pago." });
+    const msg = error instanceof Error ? error.message : String(error);
+    console.error("Donate route error:", msg);
+    json(res, 500, { error: "No se pudo crear el pago.", detail: msg });
   }
 }
