@@ -1,4 +1,6 @@
-const API_URL = "https://payment-api.khipu.com/v3/payments";
+import { createHmac } from "node:crypto";
+
+const API_V2 = "https://khipu.com/api/2.0/payments";
 
 export async function createKhipuPayment(amount: number): Promise<string> {
   const receiverId = process.env.KHIPU_RECEIVER_ID ?? "";
@@ -8,32 +10,40 @@ export async function createKhipuPayment(amount: number): Promise<string> {
     throw new Error("Khipu credentials not configured");
   }
 
-  const body = {
-    amount,
+  // Sort params alphabetically, encode with URLSearchParams (spaces as '+', matches PHP http_build_query)
+  const sortedEntries = Object.entries({
+    amount: String(amount),
     currency: "CLP",
+    receiver_id: receiverId,
     subject: "Apoyo a ComparaFarma",
-  };
+  }).sort(([a], [b]) => a.localeCompare(b));
 
-  console.log("[khipu v3] POST", API_URL, JSON.stringify(body));
+  const sortedBody = new URLSearchParams(sortedEntries).toString();
 
-  const res = await fetch(API_URL, {
+  // Khipu v2 HMAC-SHA256: POST&encodeURIComponent(url)&encodeURIComponent(sortedBody)
+  const toSign = `POST&${encodeURIComponent(API_V2)}&${encodeURIComponent(sortedBody)}`;
+  const hmac = createHmac("sha256", secret).update(toSign).digest("base64");
+
+  console.log("[khipu] body:", sortedBody);
+  console.log("[khipu] toSign:", toSign);
+
+  const res = await fetch(API_V2, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "x-api-key": secret,
+      "Content-Type": "application/x-www-form-urlencoded",
+      Authorization: `${receiverId}:${hmac}`,
     },
-    body: JSON.stringify(body),
+    body: sortedBody,
   });
 
   const responseText = await res.text();
-  console.log("[khipu v3] status:", res.status, "body:", responseText);
+  console.log("[khipu] status:", res.status, "response:", responseText);
 
   if (!res.ok) {
     throw new Error(`Khipu ${res.status}: ${responseText}`);
   }
 
-  const data = JSON.parse(responseText) as { paymentUrl?: string; payment_url?: string };
-  const url = data.paymentUrl ?? data.payment_url;
-  if (!url) throw new Error("Khipu no retornó payment_url");
-  return url;
+  const data = JSON.parse(responseText) as { payment_url: string };
+  if (!data.payment_url) throw new Error("Khipu no retornó payment_url");
+  return data.payment_url;
 }
