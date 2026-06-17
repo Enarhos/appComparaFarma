@@ -133,6 +133,7 @@ interface MedicationResult {
 - **Modo oscuro**: `darkMode: "media"` en NativeWind, dark: variants en todas las pantallas y componentes clave
 - **Skeleton loading**: 3 placeholders animados con Reanimated durante la búsqueda
 - **Historial**: últimas 10 búsquedas, eliminar individual o todo, con hápticos
+- **Banner de donación**: aparece en detalle cuando ahorro > $1.000. Fondo rose, corazón rojo. Botones $1k/$3k/$5k/Otro abre links Khipu directamente vía `Linking.openURL()` — sin API call. Config en `mobile/src/constants/donation.ts`.
 
 ## Estado Actual
 
