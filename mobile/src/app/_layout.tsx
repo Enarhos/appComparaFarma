@@ -29,7 +29,7 @@ function RootLayout() {
       <Stack screenOptions={{ headerStyle: { backgroundColor: headerBg }, headerTintColor: "#16a34a" }}>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="results" options={{ title: "Resultados", headerBackTitle: "Buscar" }} />
-        <Stack.Screen name="medication" options={{ headerBackTitle: "Resultados" }} />
+        <Stack.Screen name="medication" options={{ headerShown: false }} />
         <Stack.Screen name="cart" options={{ headerBackTitle: "Inicio" }} />
         <Stack.Screen name="about" options={{ title: "Acerca de", headerBackTitle: "Inicio" }} />
         <Stack.Screen name="onboarding" options={{ headerShown: false }} />

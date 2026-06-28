@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 import { useConfigStore } from "@/store/configStore";
 import { useLocationStore } from "@/store/locationStore";
 import type { MedicationResult, PharmacySlug } from "@/lib/types";
@@ -23,16 +24,15 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
     (p) => isActive(p.pharmacySlug) && (!activePharmacies || activePharmacies.has(p.pharmacySlug))
   );
 
-  // Mejor precio entre las farmacias visibles
   const visibleBest = visiblePrices.reduce<typeof visiblePrices[0] | null>((acc, p) => {
     if (!acc || p.channels.effective < acc.channels.effective) return p;
     return acc;
   }, null);
 
   const displayPrice = visibleBest?.channels.effective ?? bestPrice;
-  const displayPharmacy = visibleBest
-    ? (PHARMACIES[visibleBest.pharmacySlug]?.name ?? visibleBest.pharmacySlug)
-    : (PHARMACIES[bestPharmacy as PharmacySlug]?.name ?? bestPharmacy);
+  const displayPharmacySlug = (visibleBest?.pharmacySlug ?? bestPharmacy) as PharmacySlug;
+  const displayPharmacy = PHARMACIES[displayPharmacySlug]?.name ?? displayPharmacySlug;
+  const displayColor = PHARMACIES[displayPharmacySlug]?.color ?? "#16a34a";
 
   function handlePress() {
     router.push({ pathname: "/medication", params: { matchKey } });
@@ -42,81 +42,79 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
     <TouchableOpacity
       onPress={handlePress}
       activeOpacity={0.7}
-      className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 px-4 py-3 flex-row items-center gap-3"
+      className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden"
+      style={{ shadowColor: "#000", shadowOpacity: 0.04, shadowRadius: 4, shadowOffset: { width: 0, height: 1 }, elevation: 1 }}
     >
-      {/* Imagen o ícono placeholder */}
-      {imageUrl && !imgError ? (
-        <Image
-          source={{ uri: imageUrl }}
-          style={{ width: 52, height: 52 }}
-          className="rounded-xl bg-gray-50 dark:bg-gray-700"
-          resizeMode="contain"
-          onError={() => setImgError(true)}
-        />
-      ) : (
-        <View className="w-[52px] h-[52px] rounded-xl bg-gray-100 dark:bg-gray-700 items-center justify-center">
-          <Text className="text-2xl">💊</Text>
-        </View>
-      )}
-
-      {/* Nombre + lab + dots + bio */}
-      <View className="flex-1 gap-0.5">
-        <Text
-          className="text-sm font-bold text-gray-900 dark:text-white leading-snug"
-          numberOfLines={2}
-        >
-          {canonicalName}
-        </Text>
-        {laboratory && (
-          <Text className="text-xs text-gray-400" numberOfLines={1}>
-            {laboratory}
-          </Text>
+      <View className="px-4 py-3 flex-row items-center gap-3">
+        {/* Imagen o placeholder */}
+        {imageUrl && !imgError ? (
+          <Image
+            source={{ uri: imageUrl }}
+            style={{ width: 56, height: 56 }}
+            className="rounded-xl bg-gray-50 dark:bg-gray-800"
+            resizeMode="contain"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <View className="w-14 h-14 rounded-xl bg-gray-50 dark:bg-gray-800 items-center justify-center">
+            <Text style={{ fontSize: 28 }}>💊</Text>
+          </View>
         )}
-        <View className="flex-row items-center gap-2 mt-1 flex-wrap">
-          {/* Puntos de color por farmacia disponible */}
-          {visiblePrices.length > 0 && (
-            <View className="flex-row gap-1 items-center flex-wrap">
-              {visiblePrices.map((p) => {
-                const ph = PHARMACIES[p.pharmacySlug];
-                if (!ph) return null;
-                return ph.onlineOnly && selectedCommune ? (
-                  <View key={p.pharmacySlug} className="flex-row items-center gap-0.5 bg-blue-50 rounded-full px-1.5 py-0.5">
-                    <Text style={{ fontSize: 9, color: ph.color }}>🌐</Text>
-                    <Text style={{ fontSize: 9, color: ph.color }}>{ph.name}</Text>
-                  </View>
-                ) : (
-                  <View
-                    key={p.pharmacySlug}
-                    style={{ backgroundColor: ph.color }}
-                    className="w-2 h-2 rounded-full"
-                  />
-                );
-              })}
-            </View>
+
+        {/* Nombre + lab + dots */}
+        <View className="flex-1 gap-0.5">
+          <Text className="text-sm font-bold text-gray-900 dark:text-white leading-snug" numberOfLines={2}>
+            {canonicalName}
+          </Text>
+          {laboratory && (
+            <Text className="text-xs text-gray-400" numberOfLines={1}>{laboratory}</Text>
           )}
-          {isBioequivalent && (
-            <View className="bg-emerald-50 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 rounded-full px-2 py-0.5">
-              <Text className="text-emerald-700 dark:text-emerald-400 text-xs font-medium">
-                Bio
-              </Text>
-            </View>
-          )}
+          <View className="flex-row items-center gap-2 mt-1.5 flex-wrap">
+            {/* Dots de farmacias disponibles */}
+            {visiblePrices.length > 0 && (
+              <View className="flex-row gap-1 items-center">
+                {visiblePrices.map((p) => {
+                  const ph = PHARMACIES[p.pharmacySlug];
+                  if (!ph) return null;
+                  return ph.onlineOnly && selectedCommune ? (
+                    <View key={p.pharmacySlug} className="flex-row items-center bg-blue-50 dark:bg-blue-950 rounded-full px-1.5 py-0.5">
+                      <Text style={{ fontSize: 9, color: ph.color }}>🌐</Text>
+                    </View>
+                  ) : (
+                    <View
+                      key={p.pharmacySlug}
+                      style={{ backgroundColor: ph.color }}
+                      className="w-2 h-2 rounded-full"
+                    />
+                  );
+                })}
+              </View>
+            )}
+            {isBioequivalent && (
+              <View className="bg-emerald-50 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 rounded-full px-2 py-0.5">
+                <Text className="text-emerald-700 dark:text-emerald-400 text-xs font-semibold">Bio</Text>
+              </View>
+            )}
+          </View>
         </View>
+
+        {/* Precio + farmacia */}
+        {visiblePrices.length > 0 && (
+          <View className="items-end gap-0.5">
+            <Text className="text-lg font-extrabold" style={{ color: displayColor }}>
+              {formatCLP(displayPrice)}
+            </Text>
+            <Text className="text-xs text-gray-400 text-right" numberOfLines={1} style={{ maxWidth: 90 }}>
+              {displayPharmacy.replace("Farmacias ", "")}
+            </Text>
+          </View>
+        )}
+
+        <Ionicons name="chevron-forward" size={16} color="#d1d5db" />
       </View>
 
-      {/* Precio + farmacia */}
-      {visiblePrices.length > 0 && (
-        <View className="items-end gap-0.5">
-          <Text className="text-base font-extrabold text-green-600">
-            {formatCLP(displayPrice)}
-          </Text>
-          <Text className="text-xs text-gray-400 text-right" numberOfLines={1} style={{ maxWidth: 90 }}>
-            {displayPharmacy.replace("Farmacias ", "")}
-          </Text>
-        </View>
-      )}
-
-      <Text className="text-gray-300 dark:text-gray-600 text-base">›</Text>
+      {/* Barra de color de la farmacia más barata (bottom accent) */}
+      <View style={{ height: 3, backgroundColor: displayColor, opacity: 0.7 }} />
     </TouchableOpacity>
   );
 }

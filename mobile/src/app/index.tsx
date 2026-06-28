@@ -84,42 +84,58 @@ export default function HomeScreen() {
         contentContainerClassName="px-4 pt-12 pb-8"
         keyboardShouldPersistTaps="handled"
       >
-        <View className="mb-8">
-          <View className="flex-row items-center">
-            <View className="flex-1" />
-            <Text className="text-3xl font-bold text-green-700">ComparaFarma</Text>
-            <View className="flex-1 items-end flex-row justify-end gap-3">
-              {/* Ayuda */}
-              <TouchableOpacity
-                onPress={() => router.push({ pathname: "/onboarding" as any, params: { mode: "help" } })}
-                hitSlop={12}
-                accessibilityLabel="Ayuda"
-                accessibilityRole="button"
-              >
-                <Ionicons name="help-circle-outline" size={26} color="#9ca3af" />
-              </TouchableOpacity>
-              {/* Carrito */}
-              <TouchableOpacity
-                onPress={() => router.push("/cart" as any)}
-                hitSlop={12}
-                className="relative"
-                accessibilityLabel={cartCount > 0 ? `Carrito, ${cartCount} medicamento${cartCount > 1 ? "s" : ""}` : "Carrito vacío"}
-                accessibilityRole="button"
-              >
-                <Ionicons name="cart-outline" size={26} color="#16a34a" />
-                {cartCount > 0 && (
-                  <View className="absolute -top-1 -right-1 bg-green-600 rounded-full w-4 h-4 items-center justify-center">
-                    <Text className="text-white text-xs font-bold leading-none">
-                      {cartCount}
-                    </Text>
-                  </View>
-                )}
-              </TouchableOpacity>
+        {/* ── Header: logo + acciones ── */}
+        <View className="flex-row items-center mb-6">
+          {/* Logo */}
+          <View className="flex-row items-center gap-2 flex-1">
+            <View className="bg-green-600 rounded-2xl w-10 h-10 items-center justify-center">
+              <Ionicons name="search" size={20} color="#fff" />
+            </View>
+            <View>
+              <Text className="text-lg font-extrabold text-gray-900 dark:text-white leading-tight">ComparaFarma</Text>
+              <Text className="text-xs text-gray-400 leading-tight">9 farmacias en Chile</Text>
             </View>
           </View>
-          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 text-center">
-            Compara precios en {PHARMACY_SUBTITLE}
+          {/* Acciones */}
+          <View className="flex-row gap-3 items-center">
+            <TouchableOpacity
+              onPress={() => router.push({ pathname: "/onboarding" as any, params: { mode: "help" } })}
+              hitSlop={12}
+              accessibilityLabel="Ayuda"
+              accessibilityRole="button"
+            >
+              <Ionicons name="help-circle-outline" size={26} color="#9ca3af" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => router.push("/cart" as any)}
+              hitSlop={12}
+              className="relative"
+              accessibilityLabel={cartCount > 0 ? `Carrito, ${cartCount} medicamento${cartCount > 1 ? "s" : ""}` : "Carrito vacío"}
+              accessibilityRole="button"
+            >
+              <Ionicons name="cart-outline" size={26} color="#16a34a" />
+              {cartCount > 0 && (
+                <View className="absolute -top-1 -right-1 bg-green-600 rounded-full w-4 h-4 items-center justify-center">
+                  <Text className="text-white text-xs font-bold leading-none">{cartCount}</Text>
+                </View>
+              )}
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* ── Hero ── */}
+        <View className="bg-green-600 rounded-3xl px-5 py-5 mb-6 overflow-hidden">
+          <Text className="text-2xl font-extrabold text-white leading-tight mb-1">
+            Buscar{"\n"}medicamento
           </Text>
+          <Text className="text-green-100 text-sm leading-snug">
+            Encuentra el mejor precio entre{"\n"}
+            <Text className="text-white font-semibold">múltiples farmacias</Text>
+          </Text>
+          {/* Decoración */}
+          <View className="absolute right-4 top-3 opacity-20">
+            <Ionicons name="medkit" size={90} color="#fff" />
+          </View>
         </View>
 
         {/* Botón de filtros unificado */}
@@ -165,7 +181,6 @@ export default function HomeScreen() {
 
         <SearchBar
           onSearch={handleSearch}
-          autoFocus
           suggestions={[...recentSearches, ...QUICK_SEARCHES]}
         />
 
@@ -253,6 +268,36 @@ export default function HomeScreen() {
             ))}
           </View>
         )}
+        {/* Categorías populares */}
+        <View className="mt-6">
+          <Text className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+            Categorías populares
+          </Text>
+          <View className="flex-row gap-2 flex-wrap">
+            {[
+              { label: "Analgésicos", icon: "fitness-outline", query: "Paracetamol" },
+              { label: "Digestivos", icon: "nutrition-outline", query: "Omeprazol" },
+              { label: "Alergias", icon: "flower-outline", query: "Loratadina" },
+              { label: "Cardiovascular", icon: "heart-outline", query: "Losartán" },
+              { label: "Vitaminas", icon: "sunny-outline", query: "Vitamina" },
+            ].map(({ label, icon, query }) => (
+              <TouchableOpacity
+                key={label}
+                onPress={() => handleSearch(query)}
+                className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl px-3 py-2.5 flex-row items-center gap-2"
+                style={{ shadowColor: "#000", shadowOpacity: 0.03, shadowRadius: 4, elevation: 1 }}
+                accessibilityLabel={`Buscar ${label}`}
+                accessibilityRole="button"
+              >
+                <View className="bg-green-50 dark:bg-green-950 rounded-xl w-8 h-8 items-center justify-center">
+                  <Ionicons name={icon as any} size={16} color="#16a34a" />
+                </View>
+                <Text className="text-xs font-semibold text-gray-700 dark:text-gray-300">{label}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
+
         {/* Banner: Ayúdanos a mejorar */}
         <TouchableOpacity
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
