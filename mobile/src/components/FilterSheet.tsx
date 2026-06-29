@@ -11,6 +11,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  useColorScheme,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { PHARMACIES } from "@/constants/pharmacies";
@@ -39,6 +40,8 @@ interface Props {
 }
 
 export function FilterSheet({ visible, onClose }: Props) {
+  const colorScheme = useColorScheme();
+  const isDark = colorScheme === "dark";
   const slideAnim = useRef(new Animated.Value(SCREEN_H)).current;
   const [mounted, setMounted] = useState(false);
 
@@ -182,7 +185,7 @@ export function FilterSheet({ visible, onClose }: Props) {
           bottom: 0,
           left: 0,
           right: 0,
-          backgroundColor: "white",
+          backgroundColor: isDark ? "#1f2937" : "#ffffff",
           borderTopLeftRadius: 24,
           borderTopRightRadius: 24,
           paddingBottom: 36,
@@ -194,7 +197,7 @@ export function FilterSheet({ visible, onClose }: Props) {
           style={{
             width: 40,
             height: 4,
-            backgroundColor: "#e5e7eb",
+            backgroundColor: isDark ? "#374151" : "#e5e7eb",
             borderRadius: 2,
             alignSelf: "center",
             marginTop: 12,
@@ -203,14 +206,14 @@ export function FilterSheet({ visible, onClose }: Props) {
         />
 
         {/* Header */}
-        <View className="flex-row items-center justify-between px-6 py-4 border-b border-gray-100">
-          <Text className="text-lg font-bold text-gray-900">Filtros</Text>
+        <View className="flex-row items-center justify-between px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+          <Text className="text-lg font-bold text-gray-900 dark:text-white">Filtros</Text>
           <TouchableOpacity
             onPress={onClose}
             hitSlop={12}
-            className="bg-gray-100 rounded-full px-4 py-1.5"
+            className="bg-gray-100 dark:bg-gray-700 rounded-full px-4 py-1.5"
           >
-            <Text className="text-sm font-semibold text-gray-700">Listo</Text>
+            <Text className="text-sm font-semibold text-gray-700 dark:text-gray-200">Listo</Text>
           </TouchableOpacity>
         </View>
 
@@ -220,12 +223,12 @@ export function FilterSheet({ visible, onClose }: Props) {
         >
           {/* ─── SECCIÓN UBICACIÓN ─── */}
           <View className="px-6 pt-5">
-            <Text className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+            <Text className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-3">
               Ubicación
             </Text>
 
             {/* Input de búsqueda de comuna */}
-            <View className="flex-row items-center bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 gap-2">
+            <View className="flex-row items-center bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-xl px-3 py-2.5 gap-2">
               <Ionicons
                 name="location-outline"
                 size={16}
@@ -240,7 +243,7 @@ export function FilterSheet({ visible, onClose }: Props) {
                 onFocus={() => setShowCommuneList(true)}
                 placeholder="Buscar comuna..."
                 placeholderTextColor="#9ca3af"
-                style={{ flex: 1, fontSize: 14, color: "#111827" }}
+                style={{ flex: 1, fontSize: 14, color: isDark ? "#f9fafb" : "#111827" }}
                 autoCapitalize="none"
                 autoCorrect={false}
               />
@@ -259,9 +262,9 @@ export function FilterSheet({ visible, onClose }: Props) {
               <View
                 style={{
                   marginTop: 4,
-                  backgroundColor: "white",
+                  backgroundColor: isDark ? "#1f2937" : "#ffffff",
                   borderWidth: 1,
-                  borderColor: "#f3f4f6",
+                  borderColor: isDark ? "#374151" : "#f3f4f6",
                   borderRadius: 12,
                   overflow: "hidden",
                   maxHeight: 220,
@@ -286,10 +289,10 @@ export function FilterSheet({ visible, onClose }: Props) {
                     <TouchableOpacity
                       onPress={handleCommuneClear}
                       activeOpacity={0.7}
-                      className="flex-row items-center gap-3 px-4 py-3 border-b border-gray-50"
+                      className="flex-row items-center gap-3 px-4 py-3 border-b border-gray-50 dark:border-gray-700"
                     >
                       <Ionicons name="globe-outline" size={15} color="#16a34a" />
-                      <Text className="flex-1 text-sm font-medium text-green-700">
+                      <Text className="flex-1 text-sm font-medium text-green-700 dark:text-green-400">
                         Todas las comunas
                       </Text>
                       {!selectedCommune && (
@@ -302,14 +305,14 @@ export function FilterSheet({ visible, onClose }: Props) {
                         key={item.key}
                         onPress={() => handleCommuneSelect(item)}
                         activeOpacity={0.7}
-                        className="flex-row items-center px-4 py-3 border-b border-gray-50"
+                        className="flex-row items-center px-4 py-3 border-b border-gray-50 dark:border-gray-700"
                       >
                         <View className="flex-1">
                           <Text
                             className={`text-sm font-medium ${
                               item.key === selectedCommune
-                                ? "text-green-700"
-                                : "text-gray-800"
+                                ? "text-green-700 dark:text-green-400"
+                                : "text-gray-800 dark:text-gray-200"
                             }`}
                           >
                             {item.nombre}
@@ -351,7 +354,7 @@ export function FilterSheet({ visible, onClose }: Props) {
           {/* ─── SECCIÓN FARMACIAS ─── */}
           <View className="px-6 pt-5">
             <View className="flex-row items-center justify-between mb-3">
-              <Text className="text-xs font-semibold text-gray-400 uppercase tracking-wide">
+              <Text className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide">
                 Farmacias
               </Text>
               <TouchableOpacity onPress={selectAllPharmacies} hitSlop={8}>
@@ -373,7 +376,7 @@ export function FilterSheet({ visible, onClose }: Props) {
                   onPress={() => togglePharmacy(slug)}
                   activeOpacity={0.7}
                   className={`flex-row items-center py-3.5 ${
-                    !isLast ? "border-b border-gray-50" : ""
+                    !isLast ? "border-b border-gray-50 dark:border-gray-700" : ""
                   }`}
                 >
                   <View
@@ -387,7 +390,7 @@ export function FilterSheet({ visible, onClose }: Props) {
                   />
                   <Text
                     className={`flex-1 text-base ${
-                      isActive ? "text-gray-900" : "text-gray-400"
+                      isActive ? "text-gray-900 dark:text-white" : "text-gray-400 dark:text-gray-500"
                     }`}
                   >
                     {ph.name}
@@ -450,8 +453,8 @@ export function FilterSheet({ visible, onClose }: Props) {
 
             {/* Banner: farmacias manualmente desactivadas */}
             {activeCount < availableSlugs.length && (
-              <View className="mt-2 bg-amber-50 border border-amber-100 rounded-xl px-3 py-2">
-                <Text className="text-xs text-amber-700">
+              <View className="mt-2 bg-amber-50 dark:bg-amber-950 border border-amber-100 dark:border-amber-800 rounded-xl px-3 py-2">
+                <Text className="text-xs text-amber-700 dark:text-amber-400">
                   Mostrando {activeCount} de {availableSlugs.length} farmacias disponibles
                 </Text>
               </View>
@@ -460,7 +463,7 @@ export function FilterSheet({ visible, onClose }: Props) {
 
           {/* ─── SECCIÓN COMPRA ONLINE ─── */}
           <View className="px-6 pt-5">
-            <Text className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+            <Text className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-3">
               Modo de compra
             </Text>
             <TouchableOpacity
@@ -469,7 +472,7 @@ export function FilterSheet({ visible, onClose }: Props) {
               className="flex-row items-center py-3.5"
             >
               <View className="flex-1">
-                <Text className="text-base text-gray-900">Solo con despacho a domicilio</Text>
+                <Text className="text-base text-gray-900 dark:text-white">Solo con despacho a domicilio</Text>
                 <Text className="text-xs text-gray-400 mt-0.5">
                   Salcobrand, Dr. Simi, AraucoMed, EcoFarmacias, Farmex
                 </Text>
@@ -486,7 +489,7 @@ export function FilterSheet({ visible, onClose }: Props) {
 
           {/* ─── SECCIÓN ORDENAR ─── */}
           <View className="px-6 pt-6 pb-2">
-            <Text className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+            <Text className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-3">
               Ordenar por
             </Text>
             {(
@@ -509,11 +512,11 @@ export function FilterSheet({ visible, onClose }: Props) {
                   key={opt.value}
                   onPress={() => setSortBy(opt.value)}
                   activeOpacity={0.7}
-                  className="flex-row items-center py-3.5 border-b border-gray-50"
+                  className="flex-row items-center py-3.5 border-b border-gray-50 dark:border-gray-700"
                 >
                   <View
                     className={`w-5 h-5 rounded-full border-2 mr-3 items-center justify-center ${
-                      selected ? "border-green-600" : "border-gray-300"
+                      selected ? "border-green-600" : "border-gray-300 dark:border-gray-600"
                     }`}
                   >
                     {selected && (
@@ -528,7 +531,7 @@ export function FilterSheet({ visible, onClose }: Props) {
                   />
                   <Text
                     className={`text-base ${
-                      selected ? "text-green-700 font-semibold" : "text-gray-700"
+                      selected ? "text-green-700 dark:text-green-400 font-semibold" : "text-gray-700 dark:text-gray-300"
                     }`}
                   >
                     {opt.label}

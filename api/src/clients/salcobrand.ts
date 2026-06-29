@@ -1,8 +1,8 @@
 import type { ScrapedProduct } from "../lib/types.js";
 import { fetchWithTimeout } from "../lib/timeout.js";
 
-const APP_ID = "GM3RP06HJG";
-const API_KEY = "0259fe250b3be4b1326eb85e47aa7d81";
+const APP_ID = process.env.ALGOLIA_APP_ID ?? "GM3RP06HJG";
+const API_KEY = process.env.ALGOLIA_API_KEY ?? "0259fe250b3be4b1326eb85e47aa7d81";
 const INDEX = "sb_variant_production";
 const BASE = "https://salcobrand.cl";
 

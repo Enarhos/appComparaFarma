@@ -66,6 +66,7 @@ export async function searchEcoFarmacias(query: string): Promise<ScrapedProduct[
     }
   );
   if (!res.ok) throw new Error(`EcoFarmacias HTTP ${res.status}`);
-  const products = await res.json() as WooProduct[];
+  const raw = await res.json();
+  const products = Array.isArray(raw) ? raw as WooProduct[] : [];
   return parseEcoFarmaciasResponse(products);
 }
