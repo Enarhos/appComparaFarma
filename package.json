@@ -12,7 +12,7 @@
     "lint": "pnpm --filter \"*\" lint",
     "test": "pnpm --filter \"*\" test",
     "build:android": "pwsh scripts-temp/build-android-release.ps1",
-    "pack": "pwsh scripts-temp/pack.ps1"
+    "zip": "pwsh scripts-temp/pack.ps1"
   },
   "workspaces": [
     "mobile",
