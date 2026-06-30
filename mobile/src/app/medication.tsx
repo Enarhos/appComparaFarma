@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { ScrollView, View, Text, TouchableOpacity, Linking, Share, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -8,10 +8,14 @@ import { useCartStore } from "@/store/cartStore";
 import { useConfigStore } from "@/store/configStore";
 import { useFilterStore } from "@/store/filterStore";
 import { useFavoritesStore } from "@/store/favoritesStore";
+import { useAlertsStore } from "@/store/alertsStore";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { DonationBanner } from "@/components/DonationBanner";
 import { PharmacyLogo } from "@/components/PharmacyLogo";
+import { PriceHistoryChart } from "@/components/PriceHistoryChart";
+import { AlertSheet } from "@/components/AlertSheet";
 import { formatCLP, scrapedAgo } from "@/lib/formatters";
+import { recordPriceSnapshot, getPriceHistory, type PriceSnapshot } from "@/lib/priceHistory";
 import type { PharmacyPrice, PharmacySlug } from "@/lib/types";
 
 type SortKey = "price-asc" | "price-desc";
@@ -30,15 +34,19 @@ export default function MedicationScreen() {
   const results = useSearchStore((s) => s.results);
   const [imgError, setImgError] = useState(false);
   const [sort, setSort] = useState<SortKey>("price-asc");
+  const [showAlert, setShowAlert] = useState(false);
+  const [priceHistory, setPriceHistory] = useState<PriceSnapshot[]>([]);
   const { add, remove: removeCart, isInCart } = useCartStore();
   const isActive = useConfigStore((s) => s.isActive);
   const isPharmacyVisible = useFilterStore((s) => s.isPharmacyVisible);
   const { keys: favKeys, toggle: toggleFav } = useFavoritesStore();
+  const { getAlert } = useAlertsStore();
   const router = useRouter();
 
   const medication = results.find((r) => r.matchKey === key);
   const inCart = medication ? isInCart(medication.matchKey) : false;
   const isFav = medication ? favKeys.includes(medication.matchKey) : false;
+  const hasAlert = medication ? !!getAlert(medication.matchKey) : false;
 
   if (!medication) {
     return (
@@ -69,6 +77,12 @@ export default function MedicationScreen() {
 
   const unitQty = useMemo(() => parseUnitQty(medMatchKey), [medMatchKey]);
 
+  // Registrar snapshot de precio y cargar historial al abrir el detalle
+  useEffect(() => {
+    recordPriceSnapshot(medMatchKey, bestPrice, bestPharmacy);
+    getPriceHistory(medMatchKey).then(setPriceHistory);
+  }, [medMatchKey, bestPrice, bestPharmacy]);
+
   const cheapest = sortedPrices[0];
   const priciest = sortedPrices[sortedPrices.length - 1];
   const savings = (cheapest && priciest && sortedPrices.length > 1)
@@ -95,7 +109,7 @@ export default function MedicationScreen() {
   }
 
   function handleFavToggle() {
-    toggleFav(med.matchKey, med);
+    toggleFav(med);
   }
 
   const bestPharmacyName = PHARMACIES[bestPharmacy as PharmacySlug]?.name ?? bestPharmacy;
@@ -112,6 +126,9 @@ export default function MedicationScreen() {
           <View className="flex-1" />
           <TouchableOpacity onPress={handleFavToggle} hitSlop={12} accessibilityLabel={isFav ? "Quitar de favoritos" : "Agregar a favoritos"} accessibilityRole="button">
             <Ionicons name={isFav ? "heart" : "heart-outline"} size={22} color={isFav ? "#ef4444" : "#9ca3af"} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => setShowAlert(true)} hitSlop={12} accessibilityLabel={hasAlert ? "Alerta activa" : "Crear alerta de precio"} accessibilityRole="button">
+            <Ionicons name={hasAlert ? "notifications" : "notifications-outline"} size={22} color={hasAlert ? "#f59e0b" : "#9ca3af"} />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleCartToggle} hitSlop={12} accessibilityLabel={inCart ? "Quitar del carrito" : "Agregar al carrito"} accessibilityRole="button">
             <Ionicons name={inCart ? "cart" : "cart-outline"} size={22} color={inCart ? "#16a34a" : "#9ca3af"} />
@@ -226,6 +243,13 @@ export default function MedicationScreen() {
           </View>
         )}
 
+        {/* ── Historial de precios ── */}
+        {priceHistory.length >= 2 && (
+          <View className="mx-4 mt-4">
+            <PriceHistoryChart history={priceHistory} currentPrice={bestPrice} />
+          </View>
+        )}
+
         {/* ── Banner de donación ── */}
         <View className="mx-4 mt-4">
           <DonationBanner savings={activeSavings} />
@@ -238,6 +262,15 @@ export default function MedicationScreen() {
         </View>
 
       </ScrollView>
+
+      <AlertSheet
+        visible={showAlert}
+        onClose={() => setShowAlert(false)}
+        matchKey={medMatchKey}
+        canonicalName={canonicalName}
+        currentPrice={bestPrice}
+        bestPharmacy={bestPharmacy}
+      />
     </SafeAreaView>
   );
 }

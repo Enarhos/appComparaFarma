@@ -4,6 +4,8 @@ import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import * as Sentry from "@sentry/react-native";
 import { useConfigStore } from "@/store/configStore";
+import { useAlertsStore } from "@/store/alertsStore";
+import { InAppToast } from "@/components/InAppToast";
 import "../../global.css";
 
 Sentry.init({
@@ -17,15 +19,18 @@ function RootLayout() {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === "dark";
   const fetchConfig = useConfigStore((s) => s.fetch);
+  const loadAlerts = useAlertsStore((s) => s.load);
 
   useEffect(() => {
     fetchConfig();
-  }, [fetchConfig]);
+    loadAlerts();
+  }, [fetchConfig, loadAlerts]);
   const headerBg = isDark ? "#111827" : "#ffffff";
 
   return (
     <>
       <StatusBar style="auto" />
+      <InAppToast />
       <Stack screenOptions={{ headerStyle: { backgroundColor: headerBg }, headerTintColor: "#16a34a" }}>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="results" options={{ title: "Resultados", headerBackTitle: "Buscar" }} />

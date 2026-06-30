@@ -5,13 +5,18 @@ import { searchMedications } from "@/lib/search";
 import { getCached, setCached } from "@/lib/cache";
 import { useSearchStore } from "@/store/searchStore";
 import { useLocationStore } from "@/store/locationStore";
+import { useAlertsStore } from "@/store/alertsStore";
+import { useToastStore } from "@/store/toastStore";
 import { getBranchIndex, getPharmaciesForCommune } from "@/lib/branches";
 import { captureSearch } from "@/lib/analytics";
+import { formatCLP } from "@/lib/formatters";
 
 export function useSearch() {
   const abortRef = useRef<AbortController | null>(null);
   const { setLoading, setResults, setError, setQuery } = useSearchStore();
   const selectedCommune = useLocationStore((s) => s.selectedCommune);
+  const { alerts, markTriggered } = useAlertsStore();
+  const showToast = useToastStore((s) => s.show);
 
   const search = useCallback(async function search(rawQuery: string, bypassCache = false) {
     abortRef.current?.abort();
@@ -55,6 +60,21 @@ export function useSearch() {
       await setCached(cacheKey, results);
       setResults(results);
       captureSearch(rawQuery, query, results, selectedCommune ?? null);
+
+      // Chequear alertas de precio activas
+      for (const alert of alerts) {
+        const match = results.find((r) => r.matchKey === alert.matchKey);
+        if (!match || match.bestPrice > alert.targetPrice) continue;
+        // Precio bajó del objetivo — no disparar más de una vez por día
+        const lastTriggered = alert.triggeredAt ? alert.triggeredAt.split("T")[0] : null;
+        const todayStr = new Date().toISOString().split("T")[0];
+        if (lastTriggered === todayStr) continue;
+        markTriggered(alert.matchKey);
+        showToast(`${alert.canonicalName}`, {
+          subtitle: `Bajó a ${formatCLP(match.bestPrice)} — objetivo ${formatCLP(alert.targetPrice)} alcanzado`,
+          type: "alert",
+        });
+      }
     } catch (err) {
       if ((err as Error).name === "AbortError") return;
       Sentry.captureException(err, { extra: { query } });
