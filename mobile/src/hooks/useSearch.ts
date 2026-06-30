@@ -1,6 +1,6 @@
 import { useRef, useCallback } from "react";
 import * as Sentry from "@sentry/react-native";
-import { cleanQuery } from "@/lib/normalization";
+import { cleanQuery } from "@comparafarma/domain";
 import { searchMedications } from "@/lib/search";
 import { getCached, setCached } from "@/lib/cache";
 import { useSearchStore } from "@/store/searchStore";

@@ -4,7 +4,7 @@ import { attachRequestId } from "../middleware/requestId.js";
 import { getCachedSearch, setCachedSearch } from "../lib/cache.js";
 import { HttpError } from "../lib/errors.js";
 import { getClientIp, getSearchParam, json, type RequestLike, type ResponseLike } from "../lib/http.js";
-import { cleanQuery } from "../lib/normalization.js";
+import { cleanQuery } from "@comparafarma/domain";
 import { searchMedications, searchMedicationsDetailed } from "../services/searchService.js";
 
 function validateQuery(rawQuery: string | null): string {

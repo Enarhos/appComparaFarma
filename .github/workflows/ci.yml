@@ -26,6 +26,28 @@ jobs:
       - name: Type check all packages
         run: pnpm typecheck
 
+  domain-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Type check @comparafarma/domain
+        run: pnpm --filter @comparafarma/domain typecheck
+
+      - name: Test @comparafarma/domain
+        run: pnpm --filter @comparafarma/domain test
+
   api-tests:
     runs-on: ubuntu-latest
     steps:
@@ -47,7 +69,7 @@ jobs:
 
   deploy-api:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: [typecheck, api-tests]
+    needs: [typecheck, domain-tests, api-tests]
     runs-on: ubuntu-latest
     env:
       VERCEL_ORG_ID: team_QtbvbI6hTSxxSJ9qDFTv9z6S

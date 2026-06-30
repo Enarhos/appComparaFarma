@@ -7,7 +7,7 @@ import { searchFarmex } from "../clients/farmex.js";
 import { searchSermecoop } from "../clients/sermecoop.js";
 import { searchEasyFarma } from "../clients/easyfarma.js";
 import { searchSalcobrand } from "../clients/salcobrand.js";
-import { mergeDuplicates, toMedicationResult } from "../lib/normalization.js";
+import { mergeDuplicates, toMedicationResult } from "@comparafarma/domain";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
 import { getDisabledPharmacies } from "../lib/pharmacyFlags.js";
 import type {

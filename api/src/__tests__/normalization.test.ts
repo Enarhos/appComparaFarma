@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { cleanQuery, effectivePrice, matchKey, mergeDuplicates, toMedicationResult } from "../lib/normalization.js";
+import { cleanQuery, effectivePrice, matchKey, mergeDuplicates, toMedicationResult } from "@comparafarma/domain";
 import type { MedicationResult, ScrapedProduct } from "../lib/types.js";
 
 describe("normalization", () => {
