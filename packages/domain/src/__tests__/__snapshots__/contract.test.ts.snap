@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matchKey — contract snapshots > produce claves estables para nombres de medicamentos reales 1`] = `
+[
+  {
+    "key": "paracetamol|500mg|16",
+    "name": "Paracetamol 500 mg x 16",
+  },
+  {
+    "key": "trioval|80mg|30",
+    "name": "Trio-Val 80mg x 30",
+  },
+  {
+    "key": "coamoxiclav|500mg|21",
+    "name": "Co-Amoxiclav 500mg 21 Cápsulas",
+  },
+  {
+    "key": "trifen|10mg",
+    "name": "Tri Fen 10mg",
+  },
+  {
+    "key": "tapsin|d|16",
+    "name": "Tapsin Plus Día 16 Comprimidos",
+  },
+  {
+    "key": "tapsin|n|16",
+    "name": "Tapsin Plus Noche 16 Comprimidos",
+  },
+  {
+    "key": "amoxicilina|500mg",
+    "name": "Amoxicilina Potásica 0.5g Cápsulas",
+  },
+  {
+    "key": "salbutamol|100mcg",
+    "name": "Salbutamol 100mcg Inhalador",
+  },
+]
+`;

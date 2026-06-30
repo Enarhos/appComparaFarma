@@ -16,6 +16,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "@comparafarma/domain": "workspace:*",
     "@upstash/redis": "^1.38.0"
   }
 }
