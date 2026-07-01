@@ -17,24 +17,28 @@
 <body>
 
   <h1>Política de Privacidad</h1>
-  <p class="subtitle">ComparaFarma · Última actualización: 21 de mayo de 2026</p>
+  <p class="subtitle">ComparaFarma · Última actualización: 30 de junio de 2026</p>
 
   <p>
     ComparaFarma es una aplicación móvil que consulta en tiempo real los precios publicados
-    por Cruz Verde, Salcobrand, Farmacias Ahumada y Dr. Simi, permitiendo al usuario
-    comparar precios sin necesidad de visitar cada sitio por separado.
+    por Cruz Verde, Salcobrand, Farmacias Ahumada, Dr. Simi, AraucoMed, EcoFarmacias,
+    Farmex, Sermecoop y EasyFarma, permitiendo al usuario comparar precios sin necesidad
+    de visitar cada sitio por separado.
   </p>
 
   <h2>Datos que recopilamos</h2>
   <p>
-    <strong>ComparaFarma no recopila ni almacena ningún dato personal.</strong>
-    La aplicación no requiere registro, no solicita nombre, correo, número de teléfono
-    ni ningún otro dato identificable.
+    ComparaFarma no recopila ni almacena datos personales identificables.
+    La aplicación no requiere registro y no solicita nombre, correo electrónico, número
+    de teléfono ni ningún otro dato que permita identificar directamente a una persona.
+    Para mejorar la estabilidad del servicio y comprender el uso de la aplicación, se
+    recopilan únicamente datos técnicos y de uso anónimos mediante Sentry y PostHog,
+    tal como se describe en la sección «Servicios de terceros».
   </p>
 
   <h2>Cómo funciona la app</h2>
   <ul>
-    <li>Las búsquedas que realizas se envían directamente a las APIs y storefronts públicos de cada farmacia desde tu dispositivo.</li>
+    <li>Las búsquedas que realizas se envían al servidor de ComparaFarma (alojado en Vercel), que consulta en paralelo las APIs y sitios de cada farmacia y devuelve los resultados. Tu dispositivo no establece conexión directa con los sitios de las farmacias.</li>
     <li>Los resultados se guardan temporalmente en la memoria local de tu teléfono (caché de 30 minutos) para evitar consultas repetidas. Este caché se elimina automáticamente y nunca sale de tu dispositivo.</li>
     <li>El historial de búsquedas recientes se guarda localmente en tu dispositivo. Puedes eliminarlo en cualquier momento desde la pantalla de inicio.</li>
   </ul>
@@ -43,19 +47,34 @@
   <p>
     La aplicación utiliza <strong>Sentry</strong> para el monitoreo de errores técnicos.
     Sentry puede registrar información técnica anónima (tipo de error, versión de la app,
-    modelo del dispositivo) únicamente cuando ocurre un fallo. No se transmite ningún
-    dato de navegación ni búsqueda.
+    modelo del dispositivo) únicamente cuando ocurre un fallo. En caso de error durante
+    una búsqueda, el término buscado puede quedar incluido en los registros de error como
+    contexto técnico de diagnóstico.
     Puedes revisar la política de privacidad de Sentry en
     <a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a>.
   </p>
   <p>
-    La app consulta las siguientes APIs de farmacias, sujetas a sus propias políticas:
+    La aplicación utiliza <strong>PostHog</strong> para el análisis anónimo de uso.
+    PostHog registra eventos de uso —como búsquedas realizadas (término buscado, cantidad
+    de resultados, precio más bajo encontrado y farmacias disponibles)— y les asigna un
+    identificador aleatorio por instalación (<em>distinct_id</em>) que no está vinculado
+    a ninguna persona real. No se recopilan datos personales identificables.
+    Puedes revisar la política de privacidad de PostHog en
+    <a href="https://posthog.com/privacy" target="_blank">posthog.com/privacy</a>.
+  </p>
+  <p>
+    La app consulta las siguientes farmacias, sujetas a sus propias políticas:
   </p>
   <ul>
     <li><a href="https://www.cruzverde.cl" target="_blank">Cruz Verde</a></li>
     <li><a href="https://salcobrand.cl" target="_blank">Salcobrand</a></li>
     <li><a href="https://www.farmaciasahumada.cl" target="_blank">Farmacias Ahumada</a></li>
     <li><a href="https://www.drsimi.cl" target="_blank">Dr. Simi</a></li>
+    <li>AraucoMed</li>
+    <li>EcoFarmacias</li>
+    <li>Farmex</li>
+    <li>Sermecoop</li>
+    <li>EasyFarma</li>
   </ul>
 
   <h2>Permisos de la aplicación</h2>
@@ -84,7 +103,7 @@
   </p>
 
   <footer>
-    ComparaFarma &copy; 2025 · <a href="https://github.com/Enarhos/appComparaFarma">GitHub</a>
+    ComparaFarma &copy; 2026 · <a href="https://github.com/Enarhos/appComparaFarma">GitHub</a>
   </footer>
 
 </body>

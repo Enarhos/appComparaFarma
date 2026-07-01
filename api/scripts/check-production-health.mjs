@@ -4,6 +4,11 @@ const QUERIES = (process.env.HEALTHCHECK_QUERIES ?? "paracetamol,ibuprofeno")
   .map((value) => value.trim())
   .filter(Boolean);
 const OUTPUT_FILE = process.env.HEALTHCHECK_OUTPUT_FILE ?? "";
+const API_SECRET_KEY = (process.env.API_SECRET_KEY ?? "").trim();
+const BASE_HEADERS = {
+  "Accept": "application/json",
+  ...(API_SECRET_KEY ? { "x-api-key": API_SECRET_KEY } : {}),
+};
 
 async function main() {
   const health = await fetchJson(`${API_URL}/api/health`);
@@ -78,7 +83,7 @@ async function main() {
 
 async function fetchJson(url) {
   const res = await fetch(url, {
-    headers: { "Accept": "application/json" },
+    headers: BASE_HEADERS,
   });
   if (!res.ok) {
     throw new Error(`Request failed: ${url} -> ${res.status}`);

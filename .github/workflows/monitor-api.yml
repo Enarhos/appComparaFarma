@@ -31,6 +31,7 @@ jobs:
         run: pnpm --filter api healthcheck:prod
         env:
           HEALTHCHECK_OUTPUT_FILE: api/reports/api-healthcheck.json
+          API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
         continue-on-error: true
 
       - name: Upload healthcheck artifact

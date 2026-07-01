@@ -8,7 +8,7 @@
 #   pwsh scripts-temp/pack.ps1 -Ref "HEAD~1"   # versión anterior
 
 param(
-    [string]$OutputDir = "$PSScriptRoot\..",   # raíz del repo por defecto
+    [string]$OutputDir = "$env:USERPROFILE\Downloads",   # carpeta Descargas por defecto
     [string]$Ref       = "HEAD"                # rama o commit a empaquetar
 )
 

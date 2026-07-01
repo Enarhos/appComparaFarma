@@ -26,6 +26,15 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
     const bare = moduleName.replace(/^\.\.?\/node_modules\//, "");
     return context.resolveRequest(context, bare, platform);
   }
+  // TypeScript ESM packages (moduleResolution: NodeNext) use .js extensions in imports.
+  // Metro can't remap .js → .ts on its own; try the .ts source file first.
+  if (moduleName.endsWith(".js")) {
+    try {
+      return context.resolveRequest(context, moduleName.slice(0, -3) + ".ts", platform);
+    } catch {
+      // genuine .js file — fall through to default resolution
+    }
+  }
   return context.resolveRequest(context, moduleName, platform);
 };
 

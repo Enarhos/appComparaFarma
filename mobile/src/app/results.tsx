@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   View,
   Text,
@@ -16,12 +16,14 @@ import { MedicationListItem } from "@/components/MedicationListItem";
 import { SkeletonCard } from "@/components/SkeletonCard";
 import { EmptyState } from "@/components/EmptyState";
 import { FilterSheet } from "@/components/FilterSheet";
+import { PriceChannelSheet } from "@/components/PriceChannelSheet";
 import { useSearchStore } from "@/store/searchStore";
 import { useHistoryStore } from "@/store/historyStore";
 import { useFilterStore } from "@/store/filterStore";
 import { useLocationStore } from "@/store/locationStore";
 import { useSearch } from "@/hooks/useSearch";
 import { PHARMACIES } from "@/constants/pharmacies";
+import { incrementSearchCount } from "@/lib/donationGate";
 
 const TOOLTIP_KEY = "results_tooltip_v1_seen";
 const SKELETON_KEYS = ["sk-0", "sk-1", "sk-2"];
@@ -38,6 +40,8 @@ export default function ResultsScreen() {
   const [bioOnly, setBioOnly] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const [showPriceHelp, setShowPriceHelp] = useState(false);
+  const countedRef = useRef(false);
 
   useEffect(() => {
     if (q) {
@@ -52,6 +56,13 @@ export default function ResultsScreen() {
     AsyncStorage.getItem(TOOLTIP_KEY).then((seen) => {
       if (!seen) setShowTooltip(true);
     });
+  }, [status, results.length]);
+
+  // Acumular contador de búsquedas exitosas (para DonationBanner)
+  useEffect(() => {
+    if (status !== "success" || results.length === 0 || countedRef.current) return;
+    countedRef.current = true;
+    incrementSearchCount();
   }, [status, results.length]);
 
   function handleRefresh() {
@@ -178,10 +189,21 @@ export default function ResultsScreen() {
               {totalFilterCount > 0 ? `Filtros (${totalFilterCount})` : "Filtrar"}
             </Text>
           </TouchableOpacity>
+
+          {/* Botón ayuda de canales de precio */}
+          <TouchableOpacity
+            onPress={() => setShowPriceHelp(true)}
+            hitSlop={8}
+            accessibilityLabel="¿Qué son los tipos de precio?"
+            accessibilityRole="button"
+          >
+            <Ionicons name="information-circle-outline" size={18} color="#9ca3af" />
+          </TouchableOpacity>
         </View>
       )}
 
       <FilterSheet visible={showFilters} onClose={() => setShowFilters(false)} />
+      <PriceChannelSheet visible={showPriceHelp} onClose={() => setShowPriceHelp(false)} />
 
       {/* Estado de carga */}
       {isLoading && (

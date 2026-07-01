@@ -16,7 +16,6 @@ interface SearchBarProps {
 
 export function SearchBar({ onSearch, autoFocus, liveSearch = false, suggestions = [] }: SearchBarProps) {
   const [value, setValue] = useState("");
-  const [showVoiceTip, setShowVoiceTip] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<TextInput>(null);
 
@@ -68,16 +67,6 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false, suggestions
     onSearch(suggestion);
   }
 
-  function handleMic() {
-    inputRef.current?.focus();
-    Keyboard.dismiss();
-    setTimeout(() => {
-      inputRef.current?.focus();
-      setShowVoiceTip(true);
-      setTimeout(() => setShowVoiceTip(false), 3000);
-    }, 100);
-  }
-
   return (
     <View>
       <View className="flex-row items-center bg-gray-100 dark:bg-gray-700 rounded-2xl px-4 py-3 gap-3">
@@ -97,13 +86,9 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false, suggestions
           autoCapitalize="none"
           autoCorrect={false}
         />
-        {value.length > 0 ? (
+        {value.length > 0 && (
           <TouchableOpacity onPress={handleClear} hitSlop={8}>
             <Ionicons name="close-circle" size={18} color="#9ca3af" />
-          </TouchableOpacity>
-        ) : (
-          <TouchableOpacity onPress={handleMic} hitSlop={8}>
-            <Ionicons name="mic-outline" size={20} color="#9ca3af" />
           </TouchableOpacity>
         )}
         <TouchableOpacity
@@ -139,15 +124,6 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false, suggestions
         </View>
       )}
 
-      {/* Tip micrófono */}
-      {showVoiceTip && (
-        <View className="mt-2 bg-gray-800 dark:bg-gray-700 rounded-xl px-4 py-2.5 flex-row items-center gap-2">
-          <Ionicons name="mic" size={14} color="#4ade80" />
-          <Text className="text-white text-xs flex-1">
-            Toca el micrófono 🎤 en tu teclado para buscar por voz
-          </Text>
-        </View>
-      )}
     </View>
   );
 }

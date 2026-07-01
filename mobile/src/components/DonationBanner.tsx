@@ -1,16 +1,30 @@
+import { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, Linking } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { DONATION_CONFIG } from "@/constants/donation";
 import { formatCLP } from "@/lib/formatters";
+import { shouldShowDonation, dismissDonation } from "@/lib/donationGate";
 
 interface Props {
   savings: number;
 }
 
 export function DonationBanner({ savings }: Props) {
+  const [canShow, setCanShow] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    shouldShowDonation().then(setCanShow);
+  }, []);
+
   if (savings <= DONATION_CONFIG.threshold) return null;
+  if (canShow === null || !canShow) return null;
 
   const { amounts, urls, otherAmountUrl } = DONATION_CONFIG;
+
+  function handleDismiss() {
+    setCanShow(false);
+    dismissDonation();
+  }
 
   return (
     <View className="bg-rose-50 dark:bg-rose-950 border border-rose-200 dark:border-rose-800 rounded-2xl p-4 gap-3">
@@ -48,6 +62,18 @@ export function DonationBanner({ savings }: Props) {
           </Text>
         </TouchableOpacity>
       </View>
+
+      <TouchableOpacity
+        onPress={handleDismiss}
+        activeOpacity={0.7}
+        accessibilityLabel="No volver a mostrar este banner"
+        accessibilityRole="button"
+        className="items-center pt-1"
+      >
+        <Text className="text-xs text-rose-400 dark:text-rose-600">
+          No volver a mostrar
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
