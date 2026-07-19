@@ -8,8 +8,16 @@ export interface PharmacyConfig {
   active: boolean;
 }
 
+export interface DonationBannerConfig {
+  enabled: boolean;
+  dismissDays: number;
+}
+
+const DEFAULT_DONATION_BANNER: DonationBannerConfig = { enabled: true, dismissDays: 7 };
+
 interface ConfigState {
   pharmacies: PharmacyConfig[];
+  donationBanner: DonationBannerConfig;
   loaded: boolean;
   fetch: () => Promise<void>;
   isActive: (slug: PharmacySlug) => boolean;
@@ -20,6 +28,7 @@ const API_URL = process.env.EXPO_PUBLIC_API_URL?.trim() ?? "";
 
 export const useConfigStore = create<ConfigState>((set, get) => ({
   pharmacies: [],
+  donationBanner: DEFAULT_DONATION_BANNER,
   loaded: false,
 
   fetch: async () => {
@@ -29,10 +38,17 @@ export const useConfigStore = create<ConfigState>((set, get) => ({
     try {
       const res = await fetch(`${API_URL.replace(/\/$/, "")}/api/config`, { signal: controller.signal });
       if (!res.ok) return;
-      const data = (await res.json()) as { pharmacies: PharmacyConfig[] };
-      set({ pharmacies: data.pharmacies, loaded: true });
+      const data = (await res.json()) as {
+        pharmacies: PharmacyConfig[];
+        donationBanner?: DonationBannerConfig;
+      };
+      set({
+        pharmacies: data.pharmacies,
+        donationBanner: data.donationBanner ?? DEFAULT_DONATION_BANNER,
+        loaded: true,
+      });
     } catch {
-      // Falla silenciosamente — la app asume todas las farmacias activas
+      // Falla silenciosamente — la app asume todas las farmacias activas y banner por defecto
     } finally {
       clearTimeout(timeout);
     }

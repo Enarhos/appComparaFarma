@@ -8,7 +8,7 @@ Backlog vivo derivado de `PRODUCT_REVIEW_V1.md` (2026-06-30). Estado verificado 
 |---|---|---|---|---|---|
 | v15-01 | Eliminar ícono de micrófono falso en SearchBar | Alto | Bajo | ✅ Hecho | Ya no existe en el código (verificado, sin fecha de commit identificada) |
 | v15-02 | Tooltip de canales de precio en detalle | Alto | Medio | 🟡 Parcial | `PriceChannelSheet.tsx` existe y funciona, pero se dispara desde `results.tsx`, no desde la tarjeta de farmacia en `medication.tsx` como pedía el review |
-| v15-03 | DonationBanner con descarte temporal (7 días) | Alto | Bajo | 🟡 Parcial | El botón "No, gracias" existe (`donationGate.ts`) pero el descarte es **permanente**, no vuelve a aparecer nunca — no hay expiración |
+| v15-03 | DonationBanner con descarte temporal (7 días), parametrizable en consola | Alto | Bajo | ✅ Hecho (2026-07-19) | Descarte ahora expira (`dismissDays`, default 7); además el banner completo se puede apagar remotamente con `DONATION_BANNER_ENABLED` en Vercel, mismo patrón que `DISABLED_PHARMACIES`. Servido vía `/api/config`. Verificado en emulador |
 | v15-04 | Pantalla "Mis alertas" separada | Alto | Medio | ❌ Pendiente | Alertas solo se gestionan una por una desde el detalle de cada medicamento |
 | v15-05 | Indicador de filtro activo en Resultados (chip dismissible) | Alto | Bajo | ✅ Hecho (2026-07-19) | Chips individuales por comuna/farmacias ocultas/solo despacho, cada uno con botón de cierre. Verificado en emulador |
 | v15-06 | accessibilityLabel en componentes críticos | Alto | Medio | 🟡 Parcial | Solo `DonationBanner` tiene accessibility; faltan `MedicationListItem`, `SkeletonCard`, `SearchBar`, `PriceHistoryChart`, `AlertSheet`, `FilterSheet`, `InAppToast` |

@@ -4,18 +4,22 @@ import { Ionicons } from "@expo/vector-icons";
 import { DONATION_CONFIG } from "@/constants/donation";
 import { formatCLP } from "@/lib/formatters";
 import { shouldShowDonation, dismissDonation } from "@/lib/donationGate";
+import { useConfigStore } from "@/store/configStore";
 
 interface Props {
   savings: number;
 }
 
 export function DonationBanner({ savings }: Props) {
+  const { enabled, dismissDays } = useConfigStore((s) => s.donationBanner);
   const [canShow, setCanShow] = useState<boolean | null>(null);
 
   useEffect(() => {
-    shouldShowDonation().then(setCanShow);
-  }, []);
+    if (!enabled) return;
+    shouldShowDonation(dismissDays).then(setCanShow);
+  }, [enabled, dismissDays]);
 
+  if (!enabled) return null;
   if (savings <= DONATION_CONFIG.threshold) return null;
   if (canShow === null || !canShow) return null;
 
@@ -66,12 +70,12 @@ export function DonationBanner({ savings }: Props) {
       <TouchableOpacity
         onPress={handleDismiss}
         activeOpacity={0.7}
-        accessibilityLabel="No volver a mostrar este banner"
+        accessibilityLabel={`No mostrar por ${dismissDays} días`}
         accessibilityRole="button"
         className="items-center pt-1"
       >
         <Text className="text-xs text-rose-400 dark:text-rose-600">
-          No volver a mostrar
+          No mostrar por ahora
         </Text>
       </TouchableOpacity>
     </View>
