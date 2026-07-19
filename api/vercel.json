@@ -1,10 +1,7 @@
 {
   "functions": {
-    "api/search.ts": {
+    "api/*.ts": {
       "maxDuration": 30
-    },
-    "api/health.ts": {
-      "maxDuration": 10
     }
   }
 }
