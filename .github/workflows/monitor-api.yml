@@ -30,7 +30,7 @@ jobs:
         id: healthcheck
         run: pnpm --filter api healthcheck:prod
         env:
-          HEALTHCHECK_OUTPUT_FILE: api/reports/api-healthcheck.json
+          HEALTHCHECK_OUTPUT_FILE: reports/api-healthcheck.json
           API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
         continue-on-error: true
 
