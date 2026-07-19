@@ -21,6 +21,11 @@ async function main() {
     ["salcobrand", { fulfilled: 0, withResults: 0, rejected: 0 }],
     ["ahumada", { fulfilled: 0, withResults: 0, rejected: 0 }],
     ["dr-simi", { fulfilled: 0, withResults: 0, rejected: 0 }],
+    ["araucomed", { fulfilled: 0, withResults: 0, rejected: 0 }],
+    ["ecofarmacias", { fulfilled: 0, withResults: 0, rejected: 0 }],
+    ["farmex", { fulfilled: 0, withResults: 0, rejected: 0 }],
+    ["sermecoop", { fulfilled: 0, withResults: 0, rejected: 0 }],
+    ["easyfarma", { fulfilled: 0, withResults: 0, rejected: 0 }],
   ]);
 
   const summaries = [];
