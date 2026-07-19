@@ -12,8 +12,11 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { PHARMACIES as PHARMACIES_CONFIG } from "@/constants/pharmacies";
+import appConfig from "../../app.json";
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "";
+const APP_VERSION = appConfig.expo.version;
+const ANDROID_VERSION_CODE = appConfig.expo.android?.versionCode;
 
 const PHARMACY_NAMES = Object.values(PHARMACIES_CONFIG).map((p) => p.name.replace("Farmacias ", ""));
 
@@ -177,6 +180,13 @@ export default function AboutScreen() {
             </Text>
             <Text className="text-xs text-gray-300 dark:text-gray-700 mt-3">
               ComparaFarma · Chile
+            </Text>
+            <Text
+              className="text-xs text-gray-300 dark:text-gray-700 mt-1"
+              accessibilityLabel={`Versión ${APP_VERSION}`}
+            >
+              v{APP_VERSION}
+              {ANDROID_VERSION_CODE ? ` (${ANDROID_VERSION_CODE})` : ""}
             </Text>
           </View>
         </ScrollView>
