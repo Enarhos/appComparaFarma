@@ -78,9 +78,12 @@ export default function MedicationScreen() {
   const unitQty = useMemo(() => parseUnitQty(medMatchKey), [medMatchKey]);
 
   // Registrar snapshot de precio y cargar historial al abrir el detalle
+  // (recordPriceSnapshot debe terminar antes de leer, si no getPriceHistory
+  // puede leer el storage previo al snapshot recién grabado)
   useEffect(() => {
-    recordPriceSnapshot(medMatchKey, bestPrice, bestPharmacy);
-    getPriceHistory(medMatchKey).then(setPriceHistory);
+    recordPriceSnapshot(medMatchKey, bestPrice, bestPharmacy).then(() =>
+      getPriceHistory(medMatchKey).then(setPriceHistory)
+    );
   }, [medMatchKey, bestPrice, bestPharmacy]);
 
   const cheapest = sortedPrices[0];
@@ -244,7 +247,7 @@ export default function MedicationScreen() {
         )}
 
         {/* ── Historial de precios ── */}
-        {priceHistory.length >= 2 && (
+        {priceHistory.length >= 1 && (
           <View className="mx-4 mt-4">
             <PriceHistoryChart history={priceHistory} currentPrice={bestPrice} />
           </View>

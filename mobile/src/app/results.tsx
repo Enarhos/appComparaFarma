@@ -34,8 +34,10 @@ export default function ResultsScreen() {
   const { results, status, errorMessage } = useSearchStore();
   const { add: addToHistory } = useHistoryStore();
   const { search } = useSearch();
-  const { activePharmacies, isPharmacyVisible, sortBy, onlineSalesOnly } = useFilterStore();
+  const { activePharmacies, isPharmacyVisible, sortBy, onlineSalesOnly, setActivePharmacies, setOnlineSalesOnly } =
+    useFilterStore();
   const selectedCommuneName = useLocationStore((s) => s.selectedCommuneName);
+  const clearCommune = useLocationStore((s) => s.clearCommune);
 
   const [bioOnly, setBioOnly] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
@@ -199,6 +201,51 @@ export default function ResultsScreen() {
           >
             <Ionicons name="information-circle-outline" size={18} color="#9ca3af" />
           </TouchableOpacity>
+        </View>
+      )}
+
+      {/* Chips de filtro activo — para que el usuario siempre sepa qué está restringiendo sus resultados */}
+      {totalFilterCount > 0 && (
+        <View className="flex-row flex-wrap gap-2 px-4 pt-3">
+          {selectedCommuneName && (
+            <TouchableOpacity
+              onPress={clearCommune}
+              accessibilityLabel={`Quitar filtro de comuna: ${selectedCommuneName}`}
+              accessibilityRole="button"
+              className="flex-row items-center gap-1.5 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-full pl-3 pr-2 py-1.5"
+            >
+              <Text className="text-xs font-medium text-green-700 dark:text-green-400">
+                📍 {selectedCommuneName}
+              </Text>
+              <Ionicons name="close-circle" size={14} color="#16a34a" />
+            </TouchableOpacity>
+          )}
+          {filteredOutCount > 0 && (
+            <TouchableOpacity
+              onPress={() => setActivePharmacies(null)}
+              accessibilityLabel={`Quitar filtro de farmacias — ${filteredOutCount} oculta${filteredOutCount !== 1 ? "s" : ""}`}
+              accessibilityRole="button"
+              className="flex-row items-center gap-1.5 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-full pl-3 pr-2 py-1.5"
+            >
+              <Text className="text-xs font-medium text-green-700 dark:text-green-400">
+                {filteredOutCount} farmacia{filteredOutCount !== 1 ? "s" : ""} oculta{filteredOutCount !== 1 ? "s" : ""}
+              </Text>
+              <Ionicons name="close-circle" size={14} color="#16a34a" />
+            </TouchableOpacity>
+          )}
+          {onlineSalesOnly && (
+            <TouchableOpacity
+              onPress={() => setOnlineSalesOnly(false)}
+              accessibilityLabel="Quitar filtro: solo con despacho a domicilio"
+              accessibilityRole="button"
+              className="flex-row items-center gap-1.5 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-full pl-3 pr-2 py-1.5"
+            >
+              <Text className="text-xs font-medium text-green-700 dark:text-green-400">
+                🚚 Solo despacho
+              </Text>
+              <Ionicons name="close-circle" size={14} color="#16a34a" />
+            </TouchableOpacity>
+          )}
         </View>
       )}
 

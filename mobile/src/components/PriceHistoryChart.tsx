@@ -15,7 +15,20 @@ function formatDate(iso: string): string {
 export function PriceHistoryChart({ history, currentPrice }: Props) {
   // Mostrar últimos 14 puntos máximo
   const data = history.slice(-14);
-  if (data.length < 2) return null;
+
+  if (data.length < 2) {
+    return (
+      <View
+        className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl px-4 py-4 flex-row items-center gap-3"
+        accessibilityLabel="Historial de precio disponible en tu próxima visita"
+      >
+        <Text className="text-xl">📈</Text>
+        <Text className="flex-1 text-xs text-gray-400 dark:text-gray-500">
+          Empezamos a registrar el historial de este precio. Vuelve en tu próxima visita para ver si bajó.
+        </Text>
+      </View>
+    );
+  }
 
   const prices = data.map((s) => s.price);
   const maxPrice = Math.max(...prices);
