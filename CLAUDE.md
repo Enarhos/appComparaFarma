@@ -177,9 +177,11 @@ interface MedicationResult {
 - Healthcheck: `GET /api/health`
 - Diagnóstico: `GET /api/search?q=paracetamol&debug=1`
 - CI GitHub: `.github/workflows/ci.yml`
-- Monitor productivo: `.github/workflows/monitor-api.yml` (soporta `API_SECRET_KEY`)
-- Deploy automático del backend: push a `main`
+- Monitor productivo: `.github/workflows/monitor-api.yml` — corre **cada hora** (antes cada 6h), cubre las **9 farmacias** (antes solo 4), y auto-asigna el issue de fallo al owner del repo para notificación por email
+- Deploy automático del backend: push a `main` (ver sección "Operación GitHub/Vercel" — el mecanismo de deploy cambió el 2026-07-19, leer antes de tocar `ci.yml`/`vercel.json`)
 - Runtime móvil recomendado: development build, porque el proyecto usa `expo-dev-client`
+- Rate limiting: Upstash Redis (mismo store que el caché) con fallback a memoria — `api/src/middleware/rateLimit.ts`
+- Error tracking backend: Sentry (`api/src/lib/sentry.ts`), condicional a `SENTRY_DSN` en Vercel (proyecto `comparafarma-api` en sentry.io, región US) — sin esa var, no hace nada
 - Expo/React Native actuales en `mobile/package.json`:
   - `expo ~54.0.34`
   - `react-native 0.81.5`
@@ -270,16 +272,33 @@ if (moduleName.endsWith(".js")) {
 ```
 No cambiar las extensiones en `packages/domain/src/index.ts` — son obligatorias para Node.js ESM.
 
+## Advertencia: `packages/domain` necesita compilarse a JS real
+
+`packages/domain/package.json` tiene un script `"postinstall": "tsc --project tsconfig.build.json"` que compila `src/` a `dist/` (JS + `.d.ts`) en **cualquier** `pnpm install` — local, CI, o el remoto de Vercel. El `"exports"`/`"main"`/`"types"` del paquete apuntan a `dist/`, no a `src/`.
+
+**No volver a apuntar `"exports"` directo a `src/index.ts`.** Antes del 2026-07-19 así estaba, y funcionaba en `mobile` solo porque Metro tiene un resolver custom que mapea `.js` → `.ts` (ver advertencia anterior) — pero Node.js/Vercel en producción no tiene ese truco, y `/api/search` crasheaba en runtime con `ERR_MODULE_NOT_FOUND` al importar `@comparafarma/domain` (no es un error de build, el deploy podía terminar "exitoso" igual). Detalle completo en `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`.
+
+Si se agrega un submódulo nuevo a `packages/domain/src/`, no hace falta tocar nada más — `tsconfig.build.json` compila todo `src/**/*.ts` (excepto `__tests__/`) automáticamente.
+
 ## Operación GitHub/Vercel
 
 - `CI` corre en push y PR a `main`
 - jobs actuales: `typecheck`, `domain-tests`, `api-tests`, `deploy-api`
-- `deploy-api` usa `VERCEL_TOKEN` y despliega `api/` a producción (requiere los 3 jobs anteriores)
-- `Monitor API` corre cada 6 horas y también manualmente; pasa `API_SECRET_KEY` desde secrets
+- `deploy-api` usa `VERCEL_TOKEN` y despliega a producción (requiere los 3 jobs anteriores)
+- `Monitor API` corre cada hora y también manualmente; pasa `API_SECRET_KEY` desde secrets
 - si el monitor falla:
   - sube artefacto `api-healthcheck-report`
-  - crea un issue con etiqueta `monitoring`
+  - crea un issue con etiqueta `monitoring`, **auto-asignado al owner del repo** (dispara email)
   - deja la corrida en rojo
+
+### ⚠️ Deploy del backend — leer antes de tocar `ci.yml` o `vercel.json` de `api/`
+
+El 2026-07-19 el deploy estuvo roto (probablemente desde la migración a `@comparafarma/domain`) sin que nadie lo notara — el detalle completo está en `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`. Reglas que salieron de ese incidente, **no revertir sin entender por qué**:
+
+1. El step "Deploy API to Vercel" en `ci.yml` corre `vercel deploy` **desde la raíz del monorepo**, sin `working-directory: api`. Si se corre desde adentro de `api/`, Vercel solo sube esa carpeta y nunca puede resolver `"@comparafarma/domain": "workspace:*"` (falla con `EUNSUPPORTEDPROTOCOL`).
+2. En el dashboard de Vercel del proyecto `comparafarma-api`, **Root Directory debe ser `api`** (no vacío). Sin esto, Vercel no encuentra `api/vercel.json` ni resuelve las funciones en la ruta correcta.
+3. `api/vercel.json` define `"functions": {"api/*.ts": {...}}` con un **glob explícito**. Sin esto, al subir el monorepo completo Vercel detecta cada `.ts` de `api/src/` (clientes, rutas, tests) como función independiente y supera el límite de 12 funciones del plan Hobby.
+4. `packages/domain` se compila a JS real vía `postinstall` (`tsc` → `dist/`) — ver advertencia dedicada más abajo.
 
 ## Cache Versioning
 
