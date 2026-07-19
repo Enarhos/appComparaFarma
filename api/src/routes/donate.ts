@@ -1,5 +1,6 @@
 import { createKhipuPayment } from "../clients/khipu.js";
 import { HttpError } from "../lib/errors.js";
+import { captureException } from "../lib/sentry.js";
 import { json, type RequestLike, type ResponseLike } from "../lib/http.js";
 
 export async function handleDonateRoute(reqLike: unknown, resLike: unknown): Promise<void> {
@@ -39,6 +40,7 @@ export async function handleDonateRoute(reqLike: unknown, resLike: unknown): Pro
       return;
     }
     console.error("Donate route error:", error instanceof Error ? error.message : error);
+    captureException(error, { route: "/api/donate" });
     json(res, 500, { error: "No se pudo crear el pago." });
   }
 }

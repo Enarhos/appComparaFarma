@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@comparafarma/domain": "workspace:*",
+    "@sentry/node": "^10.66.0",
     "@upstash/redis": "^1.38.0"
   }
 }

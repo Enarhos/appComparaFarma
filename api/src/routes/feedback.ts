@@ -48,7 +48,7 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
 
   // Rate limit: 5 feedbacks por IP por hora
   const ip = getClientIp(request);
-  if (!consumeRateLimit(`feedback:${ip}`, 5, 60 * 60 * 1000)) {
+  if (!(await consumeRateLimit(`feedback:${ip}`, 5, 60 * 60 * 1000))) {
     return json(response, 429, { error: "Demasiados intentos. Intenta más tarde." });
   }
 

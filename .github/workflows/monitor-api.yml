@@ -3,7 +3,7 @@ name: Monitor API
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 * * * *"
 
 permissions:
   contents: read
@@ -58,7 +58,8 @@ jobs:
               repo: context.repo.repo,
               title,
               body,
-              labels: ['monitoring', 'bug']
+              labels: ['monitoring', 'bug'],
+              assignees: [context.repo.owner]
             });
 
       - name: Fail job if healthcheck failed

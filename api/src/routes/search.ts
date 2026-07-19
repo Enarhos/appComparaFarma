@@ -3,6 +3,7 @@ import { consumeRateLimit } from "../middleware/rateLimit.js";
 import { attachRequestId } from "../middleware/requestId.js";
 import { getCachedSearch, setCachedSearch } from "../lib/cache.js";
 import { HttpError } from "../lib/errors.js";
+import { captureException } from "../lib/sentry.js";
 import { getClientIp, getSearchParam, json, type RequestLike, type ResponseLike } from "../lib/http.js";
 import { cleanQuery } from "@comparafarma/domain";
 import { searchMedications, searchMedicationsDetailed } from "../services/searchService.js";
@@ -42,7 +43,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
     }
 
     const clientIp = getClientIp(req);
-    if (!consumeRateLimit(clientIp)) {
+    if (!(await consumeRateLimit(clientIp))) {
       throw new HttpError("Demasiadas solicitudes. Intenta de nuevo en un momento.", 429);
     }
 
@@ -115,6 +116,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       statusCode: 500,
       error: error instanceof Error ? error.message : "Unknown error",
     }));
+    captureException(error, { requestId, route: "/api/search" });
     json(res, 500, { error: "No se pudieron obtener los precios." });
   }
 }
