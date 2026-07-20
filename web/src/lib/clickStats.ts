@@ -2,7 +2,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 
 interface ClickRow {
   pharmacy_slug: string;
-  created_at: string;
+  clicked_at: string;
 }
 
 export interface PharmacyClickStats {
@@ -34,8 +34,8 @@ function aggregate(rows: ClickRow[]): PharmacyClickStats[] {
       lastClickAt: null,
     };
     entry.total += 1;
-    if (new Date(row.created_at).getTime() >= sevenDaysAgo) entry.last7Days += 1;
-    if (!entry.lastClickAt || row.created_at > entry.lastClickAt) entry.lastClickAt = row.created_at;
+    if (new Date(row.clicked_at).getTime() >= sevenDaysAgo) entry.last7Days += 1;
+    if (!entry.lastClickAt || row.clicked_at > entry.lastClickAt) entry.lastClickAt = row.clicked_at;
     byPharmacy.set(row.pharmacy_slug, entry);
   }
 
@@ -55,8 +55,8 @@ export async function getClickStats(): Promise<ClickStatsResult> {
 
   const { data, error } = await admin
     .from("pharmacy_clicks")
-    .select("pharmacy_slug, created_at")
-    .order("created_at", { ascending: false })
+    .select("pharmacy_slug, clicked_at")
+    .order("clicked_at", { ascending: false })
     .limit(MAX_ROWS);
 
   if (error) {
