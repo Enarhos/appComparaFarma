@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { isAllowedAdmin } from "@/lib/adminAllowlist";
 
 export async function proxy(request: NextRequest) {
   if (request.nextUrl.pathname === "/admin/login") {
@@ -29,9 +30,10 @@ export async function proxy(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) {
+  if (!user || !isAllowedAdmin(user.email)) {
     const loginUrl = request.nextUrl.clone();
     loginUrl.pathname = "/admin/login";
+    loginUrl.search = user ? "?error=unauthorized" : "";
     return NextResponse.redirect(loginUrl);
   }
 
