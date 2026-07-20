@@ -1,4 +1,4 @@
-import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { supabase } from "./supabaseClient.js";
 import type { MedicationResult, PharmacySlug, PriceChannels } from "./types.js";
 
 const TABLE = "price_history";
@@ -24,15 +24,6 @@ export function buildChannels(slug: PharmacySlug, channels: PriceChannels): Chan
   if (channels.cmr != null) entries.push({ name: LOYALTY_LABELS[slug] ?? "Tarjeta", price: channels.cmr });
   if (channels.sbpay != null) entries.push({ name: "SBPay", price: channels.sbpay });
   return entries;
-}
-
-let supabase: SupabaseClient | null = null;
-try {
-  if (process.env.SUPABASE_URL && process.env.SUPABASE_SECRET_KEY) {
-    supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SECRET_KEY);
-  }
-} catch (err) {
-  console.error("Supabase init failed, price history will not be recorded:", err);
 }
 
 export async function recordPriceHistory(results: MedicationResult[]): Promise<void> {

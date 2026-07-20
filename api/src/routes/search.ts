@@ -4,9 +4,15 @@ import { attachRequestId } from "../middleware/requestId.js";
 import { getCachedSearch, setCachedSearch } from "../lib/cache.js";
 import { HttpError } from "../lib/errors.js";
 import { captureException } from "../lib/sentry.js";
-import { getClientIp, getSearchParam, json, type RequestLike, type ResponseLike } from "../lib/http.js";
+import { getClientIp, getHeader, getSearchParam, json, type RequestLike, type ResponseLike } from "../lib/http.js";
+import { withTrackedUrls } from "../lib/clickTracking.js";
 import { cleanQuery } from "@comparafarma/domain";
 import { searchMedications, searchMedicationsDetailed } from "../services/searchService.js";
+
+function getOrigin(req: RequestLike): string {
+  const host = getHeader(req, "x-forwarded-host") ?? getHeader(req, "host") ?? "comparafarma-api.vercel.app";
+  return `https://${host}`;
+}
 
 function validateQuery(rawQuery: string | null): string {
   if (!rawQuery || rawQuery.trim().length < 2) {
@@ -56,6 +62,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       ? (pharmaciesParam.split(",").map((s) => s.trim()).filter(Boolean) as import("../lib/types.js").PharmacySlug[])
       : undefined;
 
+    const origin = getOrigin(req);
     const cacheKey = query.toLowerCase() + (onlySlugs ? `:${[...onlySlugs].sort().join(",")}` : "");
     if (!debugMode) {
       const cached = await getCachedSearch(cacheKey);
@@ -68,7 +75,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
           cache: "hit",
           results: cached.length,
         }));
-        json(res, 200, cached);
+        json(res, 200, withTrackedUrls(cached, origin));
         return;
       }
     }
@@ -84,7 +91,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
         cache: "bypass",
         diagnostics: execution.diagnostics,
       }));
-      json(res, 200, execution);
+      json(res, 200, { ...execution, results: withTrackedUrls(execution.results, origin) });
       return;
     }
 
@@ -97,7 +104,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       cache: "miss",
       results: results.length,
     }));
-    json(res, 200, results);
+    json(res, 200, withTrackedUrls(results, origin));
   } catch (error) {
     if (error instanceof HttpError) {
       console.warn(JSON.stringify({
