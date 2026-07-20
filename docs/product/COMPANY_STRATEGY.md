@@ -68,6 +68,18 @@ packages/domain (compartido)             ├─ historial de precios (server-sid
 
 **Ingesta de historial sin tocar el flujo de búsqueda:** cada vez que `searchService` ya calcula un `MedicationResult`, se puede escribir una fila (`matchKey`, farmacia, precio, fecha) en Postgres de forma asíncrona ("fire and forget"), sin bloquear ni enlentecer la respuesta al usuario. Esto empieza a acumular la serie histórica desde el día 1, para **todos** los usuarios, no solo para quien abrió esa pantalla en su teléfono.
 
+### Un solo panel administra los dos proyectos, por diseño
+
+`mobile/` y `web/` van a consumir el **mismo** `api/` — ninguno tiene backend propio. Eso significa que **no hace falta construir dos sistemas de administración**: cualquier configuración que viva en la base de datos (farmacias activas, banner de donación, feature flags) se lee desde el mismo lugar sin importar si el cliente es la app o el sitio. Esto ya es así hoy, aunque de forma rudimentaria — hoy la "consola" son variables de entorno en Vercel (`DISABLED_PHARMACIES`, `DONATION_BANNER_ENABLED`), leídas por el mismo `/api/config` que ambos clientes consultarían.
+
+El panel admin de la Fase 3 no es un tercer proyecto: vive como una sección autenticada (`/admin`) **dentro del mismo `web/`** que ya se construye para SEO, separada de las páginas públicas por rol de acceso (Supabase Auth + chequeo de rol), no por infraestructura aparte. Lo que administraría, todo compartido entre mobile y web:
+
+- Farmacias activas/inactivas y configuración del banner de donación (ya existe, hoy vía env vars — pasa a vivir en la DB con UI en vez de redeploy).
+- Tracking de clicks/afiliación por farmacia (Fase 1).
+- Feedback de usuarios (hoy solo llega por email vía Resend, sin ningún lugar donde revisarlo).
+- Llaves de API B2B — alta, revocación y consumo por cliente (Fase 3).
+- Estado de salud de los scrapers y del deploy (extiende el trabajo de monitoreo ya hecho esta sesión).
+
 ---
 
 ## 5. Roadmap propuesto (secuenciado por dependencia real)
@@ -76,7 +88,7 @@ packages/domain (compartido)             ├─ historial de precios (server-sid
 |---|---|---|
 | **1** | Base de datos (Supabase) + ingesta de historial de precios server-side + tracking de clicks a farmacia (base para afiliación) | Nada — es el punto de partida |
 | **2** | Web con SEO (Next.js) + cuentas de usuario (favoritos/alertas sincronizados) | Fase 1 (DB + Auth) |
-| **3** | Productizar la API B2B + panel admin interno (reemplaza las variables de entorno de Vercel como "consola") | Fase 1 (datos acumulados con volumen suficiente para ser vendibles) |
+| **3** | Productizar la API B2B + panel admin interno en `/admin` dentro de `web/` — administra mobile y web desde un solo lugar, reemplaza las variables de entorno de Vercel como "consola" | Fase 1 (datos acumulados con volumen suficiente para ser vendibles) |
 | **4** | Canales adicionales: bot de WhatsApp (fricción casi cero en Chile), iOS, expansión regional | Fases 1–2 |
 
 ---
