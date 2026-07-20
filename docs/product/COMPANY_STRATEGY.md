@@ -88,7 +88,7 @@ El panel admin de la Fase 3 no es un tercer proyecto: vive como una sección aut
 
 | Fase | Foco | Depende de | ¿Toca `mobile/`? |
 |---|---|---|---|
-| **1** | Base de datos (Supabase) + ingesta de historial de precios server-side + tracking de clicks a farmacia (base para afiliación) | Nada — es el punto de partida | No — vive entero en `api/`, invisible para mobile |
+| **1** | Base de datos (Supabase) + ingesta de historial de precios server-side ✅ **completado 2026-07-20** (`price_history`, esquema genérico de canales, verificado en producción) + tracking de clicks a farmacia ❌ pendiente (base para afiliación) | Nada — es el punto de partida | No — vive entero en `api/`, invisible para mobile |
 | **2a** | Web con SEO (Next.js), consumiendo el mismo `api/` | Fase 1 (DB) | No — proyecto nuevo `web/`, separado |
 | **2b** *(pausada)* | Cuentas de usuario con sincronización de favoritos/alertas **en la app** | Fase 1 (DB + Auth) + **mobile en producción** | **Sí — pausada hasta que se resuelva la restricción de arriba** |
 | **3** | Productizar la API B2B + panel admin interno en `/admin` dentro de `web/` — administra mobile y web desde un solo lugar, reemplaza las variables de entorno de Vercel como "consola" | Fase 1 (datos acumulados con volumen suficiente para ser vendibles) | No |
