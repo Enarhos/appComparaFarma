@@ -38,7 +38,7 @@ Puntos de entrada:
 ```
 compara-farma/
 ├── CLAUDE.md
-├── package.json                 ← pnpm workspaces: mobile + api + packages/*
+├── package.json                 ← pnpm workspaces: mobile + api + packages/* + web
 ├── pnpm-workspace.yaml
 ├── packages/
 │   └── domain/                  ← @comparafarma/domain (tipos + normalización compartidos)
@@ -66,26 +66,34 @@ compara-farma/
 │   ├── privacy-policy.html      ← política de privacidad (publicada en GitHub Pages)
 │   ├── release/                 ← PLAY_CONSOLE_CHECKLIST.md, RELEASE_READINESS, etc.
 │   └── screenshots/             ← capturas para Play Store
-└── mobile/                      ← Expo app (React Native + Expo Router v3)
+├── mobile/                      ← Expo app (React Native + Expo Router v3)
+│   └── src/
+│       ├── app/                 ← index.tsx (Home), results.tsx, medication.tsx,
+│       │                           onboarding.tsx, cart.tsx, about.tsx
+│       ├── components/          ← SearchBar, MedicationListItem, PriceRow, PriceChannel,
+│       │                           PharmacyBadge, PharmacyLogo, EmptyState, SkeletonCard,
+│       │                           DonationBanner, AlertSheet, FilterSheet, InAppToast,
+│       │                           PriceHistoryChart, PriceChannelSheet
+│       ├── lib/
+│       │   ├── search.ts        ← client HTTP al backend `/api/search`
+│       │   ├── types.ts         ← shim: export type * from "@comparafarma/domain"
+│       │   ├── priceHistory.ts  ← recordPriceSnapshot(), getPriceHistory()
+│       │   ├── donationGate.ts  ← lógica de cuándo mostrar DonationBanner
+│       │   ├── cache.ts         ← AsyncStorage LRU, TTL 30 min, prefijo search_cache_v10_
+│       │   └── formatters.ts    ← formatCLP(), scrapedAgo()
+│       ├── store/               ← Zustand: search, history, favorites, cart, filter,
+│       │                           location, alerts, toast
+│       ├── hooks/               ← useSearch.ts, useDebounce.ts
+│       └── constants/           ← pharmacies.ts (PHARMACIES config), donation.ts, theme colors
+└── web/                         ← Next.js 16 (App Router), SEO — proyecto Vercel propio, deploy automático
     └── src/
-        ├── app/                 ← index.tsx (Home), results.tsx, medication.tsx,
-        │                           onboarding.tsx, cart.tsx, about.tsx
-        ├── components/          ← SearchBar, MedicationListItem, PriceRow, PriceChannel,
-        │                           PharmacyBadge, PharmacyLogo, EmptyState, SkeletonCard,
-        │                           DonationBanner, AlertSheet, FilterSheet, InAppToast,
-        │                           PriceHistoryChart, PriceChannelSheet
-        ├── lib/
-        │   ├── search.ts        ← client HTTP al backend `/api/search`
-        │   ├── types.ts         ← shim: export type * from "@comparafarma/domain"
-        │   ├── priceHistory.ts  ← recordPriceSnapshot(), getPriceHistory()
-        │   ├── donationGate.ts  ← lógica de cuándo mostrar DonationBanner
-        │   ├── cache.ts         ← AsyncStorage LRU, TTL 30 min, prefijo search_cache_v10_
-        │   └── formatters.ts    ← formatCLP(), scrapedAgo()
-        ├── store/               ← Zustand: search, history, favorites, cart, filter,
-        │                           location, alerts, toast
-        ├── hooks/               ← useSearch.ts, useDebounce.ts
-        └── constants/           ← pharmacies.ts (PHARMACIES config), donation.ts, theme colors
+        ├── app/                 ← page.tsx (Home), buscar/[query]/page.tsx (resultados, generateMetadata dinámico)
+        ├── components/          ← SearchBox, MedicationCard
+        ├── constants/           ← pharmacies.ts (copia local, no importa de mobile/ — ver restricción abajo)
+        └── lib/                 ← search.ts (fetch server-side a /api/search), format.ts
 ```
+
+Producción: `https://app-compara-farma-web.vercel.app` (Fase 2a del plan de empresa, ver `docs/product/COMPANY_STRATEGY.md`).
 
 ## APIs de Farmacias
 
@@ -274,7 +282,7 @@ No cambiar las extensiones en `packages/domain/src/index.ts` — son obligatoria
 
 ## ⚠️ Restricción activa: `mobile/` está en Prueba Cerrada de Google Play
 
-Mientras esta advertencia siga presente, **no modificar código de `mobile/`**. La app está en camino a producción en Google Play y cualquier cambio ahora arriesga esa revisión/promoción. Trabajo de backend (`api/`), de un futuro `web/`, o de infraestructura (Vercel, monitoreo) puede seguir avanzando sin problema — la restricción es específicamente sobre el código de la app móvil. Ver `docs/product/COMPANY_STRATEGY.md` sección 5 para cómo esto reordena el roadmap de "empresa" (la Fase 2b, sincronización de cuentas en la app, queda pausada por esto). Quitar esta sección una vez que la app pase de Prueba Cerrada a producción.
+Mientras esta advertencia siga presente, **no modificar código de `mobile/`**. La app está en camino a producción en Google Play y cualquier cambio ahora arriesga esa revisión/promoción. Trabajo de backend (`api/`), de `web/`, o de infraestructura (Vercel, monitoreo) puede seguir avanzando sin problema — la restricción es específicamente sobre el código de la app móvil. Ver `docs/product/COMPANY_STRATEGY.md` sección 5 para cómo esto reordena el roadmap de "empresa" (la Fase 2b, sincronización de cuentas en la app, queda pausada por esto). Quitar esta sección una vez que la app pase de Prueba Cerrada a producción.
 
 ## Advertencia: `packages/domain` necesita compilarse a JS real
 
