@@ -272,6 +272,10 @@ if (moduleName.endsWith(".js")) {
 ```
 No cambiar las extensiones en `packages/domain/src/index.ts` — son obligatorias para Node.js ESM.
 
+## ⚠️ Restricción activa: `mobile/` está en Prueba Cerrada de Google Play
+
+Mientras esta advertencia siga presente, **no modificar código de `mobile/`**. La app está en camino a producción en Google Play y cualquier cambio ahora arriesga esa revisión/promoción. Trabajo de backend (`api/`), de un futuro `web/`, o de infraestructura (Vercel, monitoreo) puede seguir avanzando sin problema — la restricción es específicamente sobre el código de la app móvil. Ver `docs/product/COMPANY_STRATEGY.md` sección 5 para cómo esto reordena el roadmap de "empresa" (la Fase 2b, sincronización de cuentas en la app, queda pausada por esto). Quitar esta sección una vez que la app pase de Prueba Cerrada a producción.
+
 ## Advertencia: `packages/domain` necesita compilarse a JS real
 
 `packages/domain/package.json` tiene un script `"postinstall": "tsc --project tsconfig.build.json"` que compila `src/` a `dist/` (JS + `.d.ts`) en **cualquier** `pnpm install` — local, CI, o el remoto de Vercel. El `"exports"`/`"main"`/`"types"` del paquete apuntan a `dist/`, no a `src/`.

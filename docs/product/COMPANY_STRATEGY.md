@@ -84,12 +84,15 @@ El panel admin de la Fase 3 no es un tercer proyecto: vive como una sección aut
 
 ## 5. Roadmap propuesto (secuenciado por dependencia real)
 
-| Fase | Foco | Depende de |
-|---|---|---|
-| **1** | Base de datos (Supabase) + ingesta de historial de precios server-side + tracking de clicks a farmacia (base para afiliación) | Nada — es el punto de partida |
-| **2** | Web con SEO (Next.js) + cuentas de usuario (favoritos/alertas sincronizados) | Fase 1 (DB + Auth) |
-| **3** | Productizar la API B2B + panel admin interno en `/admin` dentro de `web/` — administra mobile y web desde un solo lugar, reemplaza las variables de entorno de Vercel como "consola" | Fase 1 (datos acumulados con volumen suficiente para ser vendibles) |
-| **4** | Canales adicionales: bot de WhatsApp (fricción casi cero en Chile), iOS, expansión regional | Fases 1–2 |
+> **⚠️ Restricción activa (2026-07-19): `mobile/` está en Prueba Cerrada de Google Play, en camino a producción.** Hasta que la app pase a producción, **no se debe modificar código de `mobile/`** — cualquier cambio ahora arriesga la revisión/promoción en curso. Todo lo de abajo está reordenado para respetar esto: el trabajo de base de datos y web es 100% aditivo sobre `api/` y un proyecto nuevo (`web/`), sin tocar `mobile/`. Lo único que sí requeriría tocar mobile (sincronizar cuentas en la app) queda explícitamente pausado hasta después del lanzamiento a producción.
+
+| Fase | Foco | Depende de | ¿Toca `mobile/`? |
+|---|---|---|---|
+| **1** | Base de datos (Supabase) + ingesta de historial de precios server-side + tracking de clicks a farmacia (base para afiliación) | Nada — es el punto de partida | No — vive entero en `api/`, invisible para mobile |
+| **2a** | Web con SEO (Next.js), consumiendo el mismo `api/` | Fase 1 (DB) | No — proyecto nuevo `web/`, separado |
+| **2b** *(pausada)* | Cuentas de usuario con sincronización de favoritos/alertas **en la app** | Fase 1 (DB + Auth) + **mobile en producción** | **Sí — pausada hasta que se resuelva la restricción de arriba** |
+| **3** | Productizar la API B2B + panel admin interno en `/admin` dentro de `web/` — administra mobile y web desde un solo lugar, reemplaza las variables de entorno de Vercel como "consola" | Fase 1 (datos acumulados con volumen suficiente para ser vendibles) | No |
+| **4** | Canales adicionales: bot de WhatsApp (fricción casi cero en Chile), iOS, expansión regional | Fases 1–2 | Sí (iOS), evaluar cuándo se levanta la restricción |
 
 ---
 
