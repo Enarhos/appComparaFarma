@@ -10,6 +10,7 @@ import { searchSalcobrand } from "../clients/salcobrand.js";
 import { mergeDuplicates, toMedicationResult } from "@comparafarma/domain";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
 import { getDisabledPharmacies } from "../lib/pharmacyFlags.js";
+import { recordPriceHistory } from "../lib/priceHistoryDb.js";
 import type {
   MedicationResult,
   PharmacySearchDiagnostic,
@@ -107,6 +108,9 @@ export async function searchMedicationsDetailed(
   }
 
   const results = mergeDuplicates(all).sort((a, b) => a.bestPrice - b.bestPrice);
+
+  await recordPriceHistory(results).catch(() => {});
+
   return {
     results,
     diagnostics: {

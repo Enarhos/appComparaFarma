@@ -18,6 +18,7 @@
   "dependencies": {
     "@comparafarma/domain": "workspace:*",
     "@sentry/node": "^10.66.0",
+    "@supabase/supabase-js": "^2.110.7",
     "@upstash/redis": "^1.38.0"
   }
 }
