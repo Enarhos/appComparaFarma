@@ -27,15 +27,15 @@ export default async function SearchPage({ params }: PageProps) {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
-      <Link href="/" className="text-sm text-neutral-500 hover:text-best">
+      <Link href="/" className="text-sm text-muted hover:text-accent-ink">
         ← Volver a la búsqueda
       </Link>
 
-      <h1 className="mt-4 text-2xl font-bold text-neutral-900">
-        Resultados para <span className="text-best">&quot;{term}&quot;</span>
+      <h1 className="mt-4 font-display text-3xl font-semibold text-ink">
+        Resultados para <span className="text-accent-ink">&quot;{term}&quot;</span>
       </h1>
       {results.length > 0 && (
-        <p className="mt-1 text-sm text-neutral-500">
+        <p className="mt-1 text-sm text-muted">
           {results.length} medicamento{results.length !== 1 ? "s" : ""} encontrado
           {results.length !== 1 ? "s" : ""}
         </p>
@@ -48,11 +48,11 @@ export default async function SearchPage({ params }: PageProps) {
       )}
 
       {!error && results.length === 0 && (
-        <div className="mt-8 rounded-xl border border-neutral-200 bg-white p-6 text-center">
-          <p className="text-neutral-600">
+        <div className="mt-8 rounded-xl border border-line bg-paper-raised p-6 text-center">
+          <p className="text-ink/80">
             No encontramos resultados para &quot;{term}&quot;.
           </p>
-          <p className="mt-1 text-sm text-neutral-400">
+          <p className="mt-1 text-sm text-muted">
             Probá con el principio activo (ej. &quot;Paracetamol&quot; en vez del nombre comercial) o
             revisá la ortografía.
           </p>

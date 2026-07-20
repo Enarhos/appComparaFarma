@@ -1,7 +1,46 @@
 @import "tailwindcss";
 
-@theme {
-  --color-best: #16a34a;
+:root {
+  --paper: #f6f5f0;
+  --paper-raised: #ffffff;
+  --ink: #16221a;
+  --muted: #5c6b60;
+  --line: #dde3d8;
+  --accent: #0f7a3d;
+  --accent-soft: #e3efe6;
+  --accent-ink: #0a5c2c;
+  --save: #b45309;
+  --save-soft: #fdf1e2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #10140f;
+    --paper-raised: #171d15;
+    --ink: #eef2ea;
+    --muted: #9fb0a2;
+    --line: #263025;
+    --accent: #34d17a;
+    --accent-soft: #16301f;
+    --accent-ink: #6ee89e;
+    --save: #f5a742;
+    --save-soft: #2e2211;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-best: var(--accent);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-save: var(--save);
+  --color-save-soft: var(--save-soft);
+
   --color-cruz-verde: #00963f;
   --color-salcobrand: #003087;
   --color-ahumada: #e31837;
@@ -11,8 +50,11 @@
   --color-farmex: #7c3aed;
   --color-sermecoop: #e67e22;
   --color-easyfarma: #16a34a;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-figtree), -apple-system, sans-serif;
 }
 
 body {
-  background-color: #fafaf9;
+  font-family: var(--font-sans);
 }
