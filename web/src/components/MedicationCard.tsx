@@ -1,9 +1,18 @@
-import type { MedicationResult } from "@comparafarma/domain";
+import type { PharmacyPrice, MedicationResult } from "@comparafarma/domain";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/format";
 
 interface Props {
   medication: MedicationResult;
+}
+
+function channelChips(price: PharmacyPrice, cardLabel: string | null): { label: string; value: number }[] {
+  const { channels } = price;
+  const chips: { label: string; value: number }[] = [{ label: "Presencial", value: channels.store }];
+  if (channels.online != null) chips.push({ label: "Online", value: channels.online });
+  if (channels.cmr != null) chips.push({ label: cardLabel ?? "Tarjeta", value: channels.cmr });
+  if (channels.sbpay != null) chips.push({ label: "SBPay", value: channels.sbpay });
+  return chips;
 }
 
 export function MedicationCard({ medication }: Props) {
@@ -17,20 +26,32 @@ export function MedicationCard({ medication }: Props) {
 
   return (
     <article className="rounded-2xl border border-line bg-paper-raised p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h2 className="font-display text-xl font-semibold leading-snug text-ink">
-            {medication.canonicalName}
-          </h2>
+      <div className="flex items-start gap-4">
+        {medication.imageUrl && (
+          // eslint-disable-next-line @next/next/no-img-element -- imágenes de dominios variables por farmacia, sin lista blanca que mantener
+          <img
+            src={medication.imageUrl}
+            alt=""
+            width={56}
+            height={56}
+            className="h-14 w-14 shrink-0 rounded-lg border border-line bg-white object-contain p-1"
+          />
+        )}
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-3">
+            <h2 className="font-display text-xl font-semibold leading-snug text-ink">
+              {medication.canonicalName}
+            </h2>
+            {medication.isBioequivalent && (
+              <span className="shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent-ink">
+                🌿 Bioequivalente
+              </span>
+            )}
+          </div>
           <p className="mt-0.5 text-sm text-muted">
             {medication.laboratory ?? "Laboratorio no especificado"}
           </p>
         </div>
-        {medication.isBioequivalent && (
-          <span className="shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent-ink">
-            🌿 Bioequivalente
-          </span>
-        )}
       </div>
 
       {best && bestDisplay && (
@@ -47,35 +68,55 @@ export function MedicationCard({ medication }: Props) {
         </div>
       )}
 
-      <ul className="mt-4 flex flex-col gap-2 border-t border-line pt-4">
+      <ul className="mt-4 flex flex-col gap-3 border-t border-line pt-4">
         {sortedPrices.map((price) => {
           const display = PHARMACIES[price.pharmacySlug];
-          const content = (
+          const chips = channelChips(price, display?.cardLabel ?? null);
+          const row = (
             <>
-              <span
-                className="inline-block h-2.5 w-2.5 shrink-0 rounded-full"
-                style={{ backgroundColor: display?.color ?? "#9ca3af" }}
-                aria-hidden
-              />
-              <span className="flex-1 text-sm text-ink/80">{display?.name ?? price.pharmacySlug}</span>
-              <span className="text-sm font-semibold tabular-nums text-ink">
-                {formatCLP(price.channels.effective)}
-              </span>
+              <div className="flex items-center gap-2">
+                <span
+                  className="inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: display?.color ?? "#9ca3af" }}
+                  aria-hidden
+                />
+                <span className="flex-1 text-sm font-medium text-ink/80">
+                  {display?.name ?? price.pharmacySlug}
+                </span>
+                {!price.hasStock && (
+                  <span className="rounded bg-neutral-100 px-1.5 py-0.5 text-xs text-muted">Sin stock</span>
+                )}
+                <span className="text-sm font-semibold tabular-nums text-ink">
+                  {formatCLP(price.channels.effective)}
+                </span>
+              </div>
+              {chips.length > 1 && (
+                <div className="mt-1.5 flex flex-wrap gap-1.5 pl-[18px]">
+                  {chips.map((chip) => (
+                    <span
+                      key={chip.label}
+                      className="rounded-md bg-paper px-2 py-0.5 text-xs text-muted tabular-nums"
+                    >
+                      {chip.label}: {formatCLP(chip.value)}
+                    </span>
+                  ))}
+                </div>
+              )}
             </>
           );
           return (
-            <li key={price.pharmacySlug} className="flex items-center gap-2">
+            <li key={price.pharmacySlug}>
               {price.onlineUrl ? (
                 <a
                   href={price.onlineUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="-mx-2 flex flex-1 items-center gap-2 rounded-lg px-2 py-1 hover:bg-accent-soft/60"
+                  className="-mx-2 block rounded-lg px-2 py-1 hover:bg-accent-soft/60"
                 >
-                  {content}
+                  {row}
                 </a>
               ) : (
-                <div className="-mx-2 flex flex-1 items-center gap-2 px-2 py-1">{content}</div>
+                <div className="-mx-2 px-2 py-1">{row}</div>
               )}
             </li>
           );
