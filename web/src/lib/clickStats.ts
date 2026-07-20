@@ -17,6 +17,8 @@ export interface ClickStats {
   byPharmacy: PharmacyClickStats[];
 }
 
+export type ClickStatsResult = { ok: true; stats: ClickStats } | { ok: false; error: string };
+
 const MAX_ROWS = 5000;
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 
@@ -45,9 +47,11 @@ function aggregate(rows: ClickRow[]): PharmacyClickStats[] {
  * (días desde el lanzamiento de Fase 1) está muy por debajo del límite — si
  * esto se vuelve lento, reemplazar por una vista agregada en Postgres.
  */
-export async function getClickStats(): Promise<ClickStats | null> {
+export async function getClickStats(): Promise<ClickStatsResult> {
   const admin = createAdminClient();
-  if (!admin) return null;
+  if (!admin) {
+    return { ok: false, error: "Faltan SUPABASE_URL / SUPABASE_SECRET_KEY en este proyecto de Vercel." };
+  }
 
   const { data, error } = await admin
     .from("pharmacy_clicks")
@@ -55,8 +59,11 @@ export async function getClickStats(): Promise<ClickStats | null> {
     .order("created_at", { ascending: false })
     .limit(MAX_ROWS);
 
-  if (error || !data) return null;
+  if (error) {
+    console.error("[admin/clicks] pharmacy_clicks query failed:", error.message);
+    return { ok: false, error: error.message };
+  }
 
-  const rows = data as ClickRow[];
-  return { totalClicks: rows.length, byPharmacy: aggregate(rows) };
+  const rows = (data ?? []) as ClickRow[];
+  return { ok: true, stats: { totalClicks: rows.length, byPharmacy: aggregate(rows) } };
 }

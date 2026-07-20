@@ -5,18 +5,20 @@ import { formatDateTime } from "@/lib/format";
 export const dynamic = "force-dynamic";
 
 export default async function AdminDashboardPage() {
-  const stats = await getClickStats();
+  const result = await getClickStats();
 
-  if (!stats) {
+  if (!result.ok) {
     return (
       <div className="rounded-xl border border-line bg-paper-raised p-6 text-sm text-muted">
-        No se pudo cargar el dashboard de clicks. Verificá que{" "}
-        <code className="rounded bg-paper px-1.5 py-0.5">SUPABASE_URL</code> y{" "}
-        <code className="rounded bg-paper px-1.5 py-0.5">SUPABASE_SECRET_KEY</code> estén configuradas en
-        este proyecto de Vercel.
+        No se pudo cargar el dashboard de clicks.
+        <pre className="mt-2 overflow-x-auto rounded-lg bg-paper px-3 py-2 text-xs text-red-700">
+          {result.error}
+        </pre>
       </div>
     );
   }
+
+  const stats = result.stats;
 
   return (
     <div className="flex flex-col gap-8">
