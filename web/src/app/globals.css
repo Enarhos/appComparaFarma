@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-best: #16a34a;
+  --color-cruz-verde: #00963f;
+  --color-salcobrand: #003087;
+  --color-ahumada: #e31837;
+  --color-dr-simi: #e2001a;
+  --color-araucomed: #1d6fa4;
+  --color-ecofarmacias: #0d9488;
+  --color-farmex: #7c3aed;
+  --color-sermecoop: #e67e22;
+  --color-easyfarma: #16a34a;
+}
+
+body {
+  background-color: #fafaf9;
+}

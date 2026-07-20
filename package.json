@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "pnpm --filter mobile start",
     "dev:api": "pnpm --filter api dev",
+    "dev:web": "pnpm --filter web dev",
     "android": "pnpm --filter mobile android",
     "ios": "pnpm --filter mobile ios",
     "typecheck": "pnpm --filter \"*\" typecheck",
@@ -16,6 +17,7 @@
   },
   "workspaces": [
     "mobile",
-    "api"
+    "api",
+    "web"
   ]
 }
