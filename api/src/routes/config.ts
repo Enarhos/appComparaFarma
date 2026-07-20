@@ -12,8 +12,6 @@ export async function handleConfigRoute(reqLike: unknown, resLike: unknown): Pro
     return;
   }
 
-  json(res, 200, {
-    pharmacies: getPharmacyConfig(),
-    donationBanner: getDonationBannerConfig(),
-  });
+  const [pharmacies, donationBanner] = await Promise.all([getPharmacyConfig(), getDonationBannerConfig()]);
+  json(res, 200, { pharmacies, donationBanner });
 }

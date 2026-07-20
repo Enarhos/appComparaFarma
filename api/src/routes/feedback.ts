@@ -1,6 +1,7 @@
 import { json, getClientIp } from "../lib/http.js";
 import type { RequestLike, ResponseLike } from "../lib/http.js";
 import { consumeRateLimit } from "../middleware/rateLimit.js";
+import { recordFeedback } from "../lib/feedbackDb.js";
 
 const FEEDBACK_EMAIL = process.env.FEEDBACK_EMAIL ?? "mario.lillo.alfaro@gmail.com";
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
@@ -104,6 +105,8 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
   } else {
     console.log("[feedback] sin RESEND_API_KEY", { message, email: userEmail, ip });
   }
+
+  await recordFeedback(message, userEmail);
 
   return json(response, 200, { ok: true });
 }

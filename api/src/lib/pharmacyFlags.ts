@@ -1,5 +1,6 @@
 import type { PharmacySlug } from "./types.js";
 import { PHARMACY_NAMES } from "./pharmacies.js";
+import { getConfigValue } from "./appConfigDb.js";
 
 export interface PharmacyConfig {
   slug: PharmacySlug;
@@ -8,32 +9,37 @@ export interface PharmacyConfig {
 }
 
 const ALL_SLUGS: PharmacySlug[] = ["cruz-verde", "salcobrand", "ahumada", "dr-simi", "araucomed", "ecofarmacias", "farmex", "sermecoop", "easyfarma"];
+const CONFIG_KEY = "disabled_pharmacies";
+
+function parseDisabledList(raw: string): Set<PharmacySlug> {
+  return new Set(
+    raw
+      .split(",")
+      .map((s) => s.trim().toLowerCase())
+      .filter((s): s is PharmacySlug => ALL_SLUGS.includes(s as PharmacySlug))
+  );
+}
 
 /**
- * Lee la variable de entorno DISABLED_PHARMACIES (comma-separated).
- *
- * Ejemplos:
- *   DISABLED_PHARMACIES=ahumada
- *   DISABLED_PHARMACIES=ahumada,dr-simi
- *   DISABLED_PHARMACIES=          ← todas activas
- *
- * Para cambiar: Vercel Dashboard → Settings → Environment Variables → redeploy (~30s).
+ * Fuente de verdad: tabla app_config en Supabase (editable desde /admin, sin
+ * redeploy). Si la fila no existe todavía o Supabase no responde, cae a la
+ * env var DISABLED_PHARMACIES como red de seguridad — así ningún problema de
+ * DB puede tumbar la búsqueda en producción.
  */
-export function getDisabledPharmacies(): Set<PharmacySlug> {
-  const raw = process.env.DISABLED_PHARMACIES ?? "";
-  const disabled = raw
-    .split(",")
-    .map((s) => s.trim().toLowerCase())
-    .filter((s): s is PharmacySlug => ALL_SLUGS.includes(s as PharmacySlug));
-  return new Set(disabled);
+export async function getDisabledPharmacies(): Promise<Set<PharmacySlug>> {
+  const fromDb = await getConfigValue<string[]>(CONFIG_KEY);
+  if (fromDb) {
+    return new Set(fromDb.filter((s): s is PharmacySlug => ALL_SLUGS.includes(s as PharmacySlug)));
+  }
+  return parseDisabledList(process.env.DISABLED_PHARMACIES ?? "");
 }
 
 /**
  * Devuelve la config completa de farmacias con su estado activo/inactivo.
  * Usado por GET /api/config para que la app sepa qué farmacias mostrar.
  */
-export function getPharmacyConfig(): PharmacyConfig[] {
-  const disabled = getDisabledPharmacies();
+export async function getPharmacyConfig(): Promise<PharmacyConfig[]> {
+  const disabled = await getDisabledPharmacies();
   return ALL_SLUGS.map((slug) => ({
     slug,
     name: PHARMACY_NAMES[slug],

@@ -90,7 +90,7 @@ export async function searchMedicationsDetailed(
   onlySlugs?: PharmacySlug[]
 ): Promise<SearchExecution> {
   const startedAt = Date.now();
-  const disabled = getDisabledPharmacies();
+  const disabled = await getDisabledPharmacies();
 
   const activeSources = ALL_SOURCES.filter(
     (s) => !disabled.has(s.slug) && (!onlySlugs || onlySlugs.includes(s.slug))

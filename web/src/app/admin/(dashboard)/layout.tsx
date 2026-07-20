@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { createClient } from "@/lib/supabase/server";
 import { SignOutButton } from "@/components/admin/SignOutButton";
+import { AdminNav } from "@/components/admin/AdminNav";
 
 export default async function AdminDashboardLayout({ children }: { children: ReactNode }) {
   const supabase = await createClient();
@@ -10,7 +11,7 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
 
   return (
     <div className="min-h-screen bg-paper">
-      <header className="flex items-center justify-between border-b border-line px-6 py-4">
+      <header className="flex items-center justify-between px-6 py-4">
         <div>
           <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
             ComparaFarma
@@ -22,6 +23,7 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
           <SignOutButton />
         </div>
       </header>
+      <AdminNav />
       <main className="mx-auto max-w-4xl px-6 py-10">{children}</main>
     </div>
   );
