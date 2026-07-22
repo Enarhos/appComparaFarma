@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { searchMedications } from "@/lib/search";
 import { MedicationCard } from "@/components/MedicationCard";
+import { SearchBox } from "@/components/SearchBox";
 import { buildMedicationJsonLd, toJsonLdScript } from "@/lib/structuredData";
 import { getSiteUrl } from "@/lib/site";
 
@@ -42,6 +43,10 @@ export default async function SearchPage({ params }: PageProps) {
           {results.length !== 1 ? "s" : ""}
         </p>
       )}
+
+      <div className="mt-6">
+        <SearchBox initialQuery={term} />
+      </div>
 
       {error && (
         <div className="mt-8 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
