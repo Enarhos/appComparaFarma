@@ -21,6 +21,7 @@ Backlog vivo derivado de `PRODUCT_REVIEW_V1.md` (2026-06-30). Estado verificado 
 | v15-13 | Fix DonationBanner en dark mode | Medio | Bajo | ✅ Hecho | `dark:bg-rose-950` ya aplicado |
 | v15-14 | Toast de confirmación de alerta con copy mejorado | Medio | Bajo | ❌ Pendiente | Solo hay feedback háptico, sin toast |
 | v15-15 | Confirmación al salir de la app ("Ver en farmacia") | Bajo | Bajo | ❌ Pendiente | `Linking.openURL` directo, sin aviso previo |
+| v15-16 | Refetch de `/api/config` al volver a foreground (o polling periódico) | Medio | Bajo | ❌ Pendiente — bloqueado | `_layout.tsx` solo llama `fetchConfig()` una vez al montar la app. Los cambios hechos desde `/admin/config` (ej. apagar el banner de donación) no se reflejan hasta cerrar la app por completo y reabrirla — verificado 2026-07-20. Requiere tocar `mobile/`, congelado por Prueba Cerrada de Google Play (ver restricción en `COMPANY_STRATEGY.md` §5) — retomar cuando se levante |
 
 ## v2.0 — Requiere backend/arquitectura nueva
 
