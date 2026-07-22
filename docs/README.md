@@ -26,6 +26,8 @@ Documentación técnica.
 - Arquitectura general
 - Mobile
 - API
+- Web (Next.js — sitio público + panel `/admin`)
+- Base de datos (Supabase — ver `database/schema.sql`)
 - Flujo de datos
 - Scraping
 

@@ -1,6 +1,6 @@
 # Deployment — Guía Actual
 
-Instrucciones para operar el backend `api/` en Vercel, la app móvil en Expo/EAS y la automatización en GitHub Actions.
+Instrucciones para operar el backend `api/` en Vercel, el sitio `web/` en Vercel (proyecto separado), la app móvil en Expo/EAS, la base de datos en Supabase y la automatización en GitHub Actions.
 
 ---
 
@@ -37,7 +37,29 @@ API_SECRET_KEY=
 RATE_LIMIT_MAX=60
 RATE_LIMIT_WINDOW_MS=60000
 SEARCH_CACHE_TTL_MS=300000
+SUPABASE_URL=                 # base de datos (price_history, pharmacy_clicks, app_config, feedback)
+SUPABASE_SECRET_KEY=          # bypassea RLS — nunca exponer al cliente
+RESEND_API_KEY=               # envío de emails de feedback (opcional)
+FEEDBACK_EMAIL=
+
+# Fallback si Supabase no responde — el mecanismo normal es /admin/config (ver pharmacy-flags.md)
 DISABLED_PHARMACIES=          # Opcional: "ahumada,dr-simi" para desactivar farmacias
+DONATION_BANNER_ENABLED=      # Opcional: "false" para apagar el banner de donación
+DONATION_BANNER_DISMISS_DAYS= # Opcional: días que dura "No mostrar por ahora" (default 7)
+```
+
+Web `web/`:
+
+```bash
+API_URL=https://comparafarma-api.vercel.app
+SITE_URL=https://app-compara-farma-web.vercel.app   # usado en sitemap.xml, robots.txt y metadata OG
+
+# Panel /admin — mismo proyecto Supabase que api/
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=   # segura de exponer, solo habilita login (no bypassea RLS)
+SUPABASE_URL=
+SUPABASE_SECRET_KEY=
+ADMIN_ALLOWED_EMAILS=            # lista blanca, coma-separada — obligatorio con Google OAuth habilitado
 ```
 
 Mobile `mobile/`:
@@ -167,7 +189,34 @@ curl "https://comparafarma-api.vercel.app/api/search?q=paracetamol&debug=1"
 ```
 
 ### Feature flags de farmacias
-Ver [`docs/pharmacy-flags.md`](pharmacy-flags.md) para activar/desactivar farmacias sin nuevo build.
+Ver [`docs/pharmacy-flags.md`](pharmacy-flags.md) para activar/desactivar farmacias sin nuevo build — el camino normal hoy es `/admin/config`, no una env var.
+
+---
+
+## Deploy del Sitio Web (`web/`) en Vercel
+
+`web/` es un **proyecto Vercel separado** del de `api/` (distinto Project ID, sin relación con `.github/workflows/ci.yml`). A diferencia de `api/`, que se deploya vía CI con `vercel deploy` en un job dedicado, `web/` usa la **integración nativa de Vercel con GitHub**: cualquier push a `main` dispara un build y deploy automático directo desde Vercel, sin pasar por GitHub Actions.
+
+- **URL de producción**: `https://app-compara-farma-web.vercel.app` (sin dominio propio todavía)
+- **Root Directory** del proyecto en Vercel: `web`
+- **Panel admin**: `/admin` (protegido por Supabase Auth — ver `docs/database/schema.sql` y variables de entorno arriba)
+
+### Importante sobre variables de entorno en Vercel
+Cualquier variable nueva o cambiada — **incluidas las que no llevan prefijo `NEXT_PUBLIC_`** — requiere un **Redeploy manual** para tomar efecto (Vercel fija las env vars por deployment, no las lee en caliente). Después de agregar o cambiar una: Deployments → deployment más reciente → `...` → Redeploy.
+
+### Verificación rápida
+```bash
+curl "https://app-compara-farma-web.vercel.app/sitemap.xml"
+curl "https://app-compara-farma-web.vercel.app/robots.txt"
+```
+
+---
+
+## Base de Datos (Supabase)
+
+Primera y única base de datos persistente del proyecto (antes todo era stateless: caché de 5 min + AsyncStorage local). Esquema versionado en [`docs/database/schema.sql`](database/schema.sql) — correrlo en el SQL Editor de Supabase es el único paso manual (no hay migraciones automatizadas ni Supabase CLI configurado).
+
+Tablas: `price_history` (historial de precios), `pharmacy_clicks` (tracking de clicks vía `/api/go`), `app_config` (config genérica clave/valor — farmacias activas, banner de donación), `feedback` (sugerencias de usuarios). Las cuatro tienen RLS habilitado como defensa en profundidad; el acceso real es siempre vía `SUPABASE_SECRET_KEY` desde `api/`/`web/`, que bypassea RLS por diseño.
 
 ---
 
@@ -215,7 +264,7 @@ Usar `pnpm build:android` (build local). La cuota free se resetea el 1º de cada
 El scraper depende del HTML del storefront Demandware — puede romperse si cambian el layout.
 1. Revisar HTML en `https://www.farmaciasahumada.cl/...Search-Show?q=paracetamol&start=0&sz=24`
 2. Actualizar regex en `api/src/clients/ahumada.ts`
-3. Desactivar temporalmente: `DISABLED_PHARMACIES=ahumada` en Vercel
+3. Desactivar temporalmente desde `/admin/config` (instantáneo) — o `DISABLED_PHARMACIES=ahumada` en Vercel si Supabase está caído
 4. Publicar fix con push a main (Vercel autodeploy)
 
 ### Build de EAS falla

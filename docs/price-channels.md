@@ -10,7 +10,7 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 
 **Qué es**: El precio que pagas al ir físicamente a la farmacia y comprar en caja. También llamado "precio de vitrina" o "precio normal".
 
-**Disponibilidad**: Presente en las **4 farmacias**.
+**Disponibilidad**: Presente en las 5 farmacias que cubre este documento (Cruz Verde, Salcobrand, Ahumada, Dr. Simi, AraucoMed) — de las 9 integradas en total, las otras 4 (EcoFarmacias, Farmex, Sermecoop, EasyFarma) no están documentadas todavía en este archivo.
 
 **En el modelo**: Campo `channels.store: number` — siempre presente, nunca null.
 
@@ -25,6 +25,7 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 - **Salcobrand**: ✅ Campo `direct_discount` en Algolia cuando es menor que `normal_price`.
 - **Ahumada**: ❌ No disponible en el scraper actual.
 - **Dr. Simi**: ✅ Se usa `Price` cuando es menor que `ListPrice`.
+- **AraucoMed**: ❌ No aplica — un solo precio expuesto por el endpoint.
 
 **En el modelo**: Campo `channels.online: number | null`.
 
@@ -41,6 +42,7 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 - **Salcobrand**: ✅ Se toma desde `cmr_price` cuando existe.
 - **Ahumada**: ✅ Detectado mediante la presencia de la imagen `badge_30x40_cmr_falabella` en el tile y el atributo `content=` de esa imagen.
 - **Dr. Simi**: ❌ No aplica.
+- **AraucoMed**: ❌ No aplica.
 
 **En el modelo**: Campo `channels.cmr: number | null`.
 
@@ -55,6 +57,7 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 - **Salcobrand**: ✅ Se toma desde `direct_discount_sbpay` cuando mejora el precio presencial.
 - **Ahumada**: ❌ No aplica.
 - **Dr. Simi**: ❌ No aplica.
+- **AraucoMed**: ❌ No aplica.
 
 **En el modelo**: Campo `channels.sbpay: number | null`.
 
@@ -90,6 +93,7 @@ Se usa para:
 | Salcobrand | ✅ | ✅ si < store | ✅ si viene `cmr_price` | ✅ si mejora `direct_discount_sbpay` | min(store, online, cmr, sbpay) |
 | Ahumada | ✅ | ❌ null | ✅ si hay badge | ❌ null | min(store, cmr) |
 | Dr. Simi | ✅ | ✅ si `Price < ListPrice` | ❌ null | ❌ null | min(store, online) |
+| AraucoMed | ✅ | ❌ null | ❌ null | ❌ null | = store |
 
 ---
 

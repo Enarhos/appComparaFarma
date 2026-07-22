@@ -1,6 +1,6 @@
 # Pharmacy APIs — Referencia Técnica
 
-Documentación de los endpoints usados por el backend en `api/src/clients/`. La app móvil puede seguir usando sus clients locales como fallback si `EXPO_PUBLIC_API_URL` no está configurado.
+Documentación de los endpoints usados por el backend en `api/src/clients/`.
 
 ---
 
@@ -231,8 +231,77 @@ Cuando el scraper devuelve 0 resultados para Ahumada (y debería devolver algo):
 
 ---
 
+## Dr. Simi — VTEX Catalog API
+
+**Tipo**: REST JSON (VTEX Catalog System, pública)
+
+### Endpoint
+```
+GET https://www.drsimi.cl/api/catalog_system/pub/products/search/{query}
+```
+
+### Headers requeridos
+```
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Accept: application/json
+Referer: https://www.drsimi.cl/
+```
+
+### Query params
+```
+_from=0
+_to=23
+```
+
+### Mapeo a PriceChannels
+| Campo API | Campo modelo | Notas |
+|---|---|---|
+| `items[0].sellers[0].commertialOffer.ListPrice` | `channels.store` | `commertialOffer` es el nombre real del campo en la API VTEX (no es un typo del código) |
+| `items[0].sellers[0].commertialOffer.Price` | `channels.online` | Solo si es menor que `ListPrice` |
+| — | `channels.cmr = null` | No expone precio con tarjeta |
+| `commertialOffer.IsAvailable` + `AvailableQuantity > 0` | `hasStock` | |
+| `product.brand` | `laboratory` | |
+| `product.Bioequivalente[0] === "SI"` | `isBioequivalent` | |
+
+### Quirks conocidos
+- Filtro `isRelevant()`: descarta resultados donde ninguna palabra de ≥3 letras de la query aparece en el nombre del producto — la búsqueda VTEX a veces devuelve resultados poco relacionados
+- `product.link` puede venir vacío — fallback a `{BASE}/{query}` como URL de producto
+
+---
+
+## AraucoMed — Endpoint ajax de PrestaShop
+
+**Tipo**: REST JSON (endpoint interno del storefront PrestaShop, no la API admin oficial)
+
+### Endpoint
+```
+GET https://farmacia.araucomed.com/?controller=search&s={query}&ajax=1
+```
+
+### Headers requeridos
+```
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+X-Requested-With: XMLHttpRequest
+Accept: application/json
+```
+
+### Mapeo a PriceChannels
+| Campo API | Campo modelo | Notas |
+|---|---|---|
+| `product.price_amount` | `channels.store` | |
+| — | `channels.online = null`, `channels.cmr = null` | Solo un canal disponible |
+| `product.active === 1` | `hasStock` | También se filtra `price_amount > 0` |
+| `product.manufacturer_name` | `laboratory` | |
+| Regex `/bioequivalen/i` sobre `name + description_short` (con HTML despojado) | `isBioequivalent` | Detección por texto, no un campo estructurado |
+
+### Quirks conocidos
+- La API REST admin oficial (`/api/`) existe pero requiere autenticación (401) — no se usa, este es un endpoint distinto del storefront
+- Solo 1 sucursal física (Quilicura, Santiago)
+
+---
+
 ## Notas de Arquitectura
 
-- El backend preferido vive en `api/` y hoy se despliega en Vercel
-- `mobile/` mantiene clients locales como fallback de desarrollo
+- El backend vive en `api/` y se despliega en Vercel; `web/` (Next.js) consume el mismo backend sin duplicar lógica de scraping
+- `mobile/src/lib/clients/` no existe — no hay clients locales de fallback; si `EXPO_PUBLIC_API_URL` no está configurado, la búsqueda falla explícitamente (no hay degradación a scraping local)
 - Sigue existiendo riesgo de cambios en endpoints, rate limiting o bloqueo por parte de terceros

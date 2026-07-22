@@ -12,7 +12,7 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | Salcobrand | ✅ Integrada | Algolia Search API | ✅ Estable |
 | Ahumada | ✅ Integrada | HTML Scraping | 🔴 Frágil |
 | Dr. Simi | ✅ Integrada | REST JSON (VTEX) | ✅ Estable |
-| AraucoMed | ✅ Integrada | HTML Scraping | ⚠️ Mejorable |
+| AraucoMed | ✅ Integrada | REST JSON (PrestaShop, endpoint ajax) | ✅ Estable |
 | EcoFarmacias | 🕐 Backlog | WooCommerce Store API | ✅ Estable |
 | Farmex | 🕐 Backlog | Shopify API | ✅ Estable |
 | COFAR | 🔍 Investigación | Next.js SPA (interceptar red) | ❓ Desconocida |
@@ -161,37 +161,29 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | Atributo | Valor |
 |---|---|
 | **Sitio** | farmacia.araucomed.com |
-| **Método** | HTML Scraping — PrestaShop storefront |
-| **Endpoint** | `https://farmacia.araucomed.com/?controller=search&s={query}` |
-| **Autenticación** | Ninguna (scraping web público) |
+| **Método** | REST JSON — endpoint ajax de PrestaShop (storefront, no admin API) |
+| **Endpoint** | `https://farmacia.araucomed.com/?controller=search&s={query}&ajax=1` |
+| **Headers** | `X-Requested-With: XMLHttpRequest`, `Accept: application/json` |
+| **Autenticación** | Ninguna (endpoint público) |
 | **Archivo** | `api/src/clients/araucomed.ts` |
 
 **Campos obtenidos:**
 
-| Campo | Fuente | Disponible |
+| Campo | Fuente API | Disponible |
 |---|---|---|
-| Nombre | Regex `product-title` en HTML | ✅ |
-| Precio presencial | Regex `itemprop="price"` en HTML | ✅ |
+| Nombre | `product.name` | ✅ |
+| Precio presencial | `product.price_amount` | ✅ |
 | Precio online | — | ❌ |
-| Stock | Clase `out_of_stock` en HTML | ✅ |
-| URL producto | `href` del link de nombre | ✅ |
-| Imagen | Regex `home_default` en `src` | ✅ |
-| Laboratorio | — | ❌ |
-| Bioequivalente | — | ❌ |
-
-**Mejora disponible (pendiente en backlog):**
-
-El endpoint `/?controller=search&s={query}&output_format=JSON` devuelve datos más ricos:
-- Stock exacto en unidades
-- Bioequivalente
-- Receta requerida
-- Laboratorio
-- Sin necesidad de regex
+| Stock | `product.active === 1` | ✅ |
+| URL producto | `product.url` | ✅ |
+| Imagen | `product.cover.bySize.home_default.url` | ✅ |
+| Laboratorio | `product.manufacturer_name` | ✅ |
+| Bioequivalente | Regex `/bioequivalen/i` sobre nombre + descripción | ✅ |
 
 **Limitaciones actuales:**
-- API REST admin (`/api/`) existe pero requiere autenticación (401)
+- API REST admin (`/api/`, distinta de este endpoint ajax) existe pero requiere autenticación (401) — no se usa
 - Solo 1 sucursal física (Quilicura, Santiago)
-- Scraping actual más frágil que la alternativa JSON disponible
+- Bioequivalente se infiere por texto, no por un campo estructurado — puede haber falsos negativos si el texto no incluye la palabra
 
 ---
 
@@ -323,8 +315,8 @@ El endpoint `/?controller=search&s={query}&output_format=JSON` devuelve datos m�
 | Stock | ✅ | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ |
 | Imagen | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | URL producto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Laboratorio | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ |
-| Bioequivalente | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ |
+| Laboratorio | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ |
+| Bioequivalente | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Receta requerida | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | SKU / EAN | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ |
 | Indicaciones médicas | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
@@ -342,7 +334,7 @@ El endpoint `/?controller=search&s={query}&output_format=JSON` devuelve datos m�
 | EcoFarmacias | WooCommerce Store API pública | Bajo — endpoint estándar WooCommerce |
 | Farmex | Shopify Search + Products API | Bajo — endpoint estándar Shopify |
 | Cruz Verde | Demandware OCAPI (no oficial) | Medio — client_id no autorizado |
-| AraucoMed | HTML Scraping PrestaShop | Medio — mejora disponible a JSON |
+| AraucoMed | Endpoint ajax PrestaShop (no oficial pero JSON, sin regex) | Bajo-Medio |
 | Ahumada | HTML Scraping Demandware | Alto — regex frágil, OCAPI bloqueado |
 | COFAR | Desconocido (SPA) | — |
 | Liga Farmacia | Desconocido (SPA) | — |

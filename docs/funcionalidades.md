@@ -21,7 +21,7 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 - Búsqueda por nombre de medicamento con debounce de 500ms
 - Limpieza automática del query (`cleanQuery`) — elimina dosis, unidades y palabras genéricas
 - Búsqueda simultánea en todas las farmacias activas vía backend
-- Caché local en AsyncStorage con TTL de 30 minutos (prefijo `search_cache_v8_`)
+- Caché local en AsyncStorage con TTL de 30 minutos (prefijo `search_cache_v10_`)
 - Pull-to-refresh para forzar nueva búsqueda
 
 ### ✅ Sugerencias de búsqueda
@@ -138,10 +138,10 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 - Canales: presencial, online
 - Bioequivalente: sí | Laboratorio: sí
 
-### 🔄 AraucoMed
-- HTML Scraping (PrestaShop) — mejora planificada a API JSON
+### ✅ AraucoMed
+- REST JSON (endpoint ajax de PrestaShop, `?controller=search&s={query}&ajax=1`)
 - Canales: presencial
-- Bioequivalente: no (mejora pendiente) | Laboratorio: no (mejora pendiente)
+- Bioequivalente: sí (detectado por regex sobre nombre+descripción) | Laboratorio: sí (`manufacturer_name`)
 
 ### 🕐 EcoFarmacias
 - WooCommerce Store API pública (`/wp-json/wc/store/products`)
@@ -229,7 +229,8 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 
 ### ✅ Formulario de feedback
 - Pantalla "Ayúdanos a mejorar" accesible desde el Home
-- Envío por email via Resend API (validación de largo mínimo y máximo, sanitización)
+- Envío por email via Resend API si está configurada (validación de largo mínimo y máximo, sanitización)
+- Se guarda también en la tabla `feedback` de Supabase, visible y gestionable (marcar resuelto/reabrir) desde el panel `/admin/feedback`
 
 ---
 
@@ -237,16 +238,29 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 
 ### ✅ API Backend (Vercel)
 - `GET /api/search?q=...` — búsqueda en todas las farmacias
-- `GET /api/config` — configuración de farmacias activas
+- `GET /api/config` — configuración de farmacias activas y banner de donación
 - `GET /api/health` — healthcheck
-- `POST /api/feedback` — envío de sugerencias
+- `POST /api/feedback` — envío de sugerencias (email + Supabase)
+- `GET /api/go?slug=...&matchKey=...&url=...` — redirect a la farmacia con tracking de click, valida dominio de destino contra open redirect
 - `GET /api/search?q=...&debug=1` — diagnóstico por farmacia (resultCount, errores)
-- Rate limiting por IP (60 req/min por defecto, configurable por env var)
-- Cache en memoria por instancia (mejora planificada: Redis compartido)
+- Rate limiting por IP (60 req/min por defecto, configurable por env var) vía Upstash Redis compartido entre instancias (fallback en memoria solo en desarrollo local)
+- Caché de búsqueda (5 min) también vía Upstash Redis compartido
 
-### ✅ Configuración de farmacias
-- Variable `DISABLED_PHARMACIES` en Vercel para desactivar farmacias sin redeploy
-- La app recibe la config desde `/api/config` al arrancar y la aplica en tiempo real
+### ✅ Sitio web público (`web/`, Next.js) y SEO
+- Home + `/buscar/[query]` — misma información que la app (imagen, canales de precio, stock), consumiendo el mismo `api/`
+- `sitemap.xml` (Home + búsquedas frecuentes curadas) y `robots.txt`
+- JSON-LD `Product`/`AggregateOffer` en `/buscar/[query]` para rich results de precio en buscadores
+- Deployado en `https://app-compara-farma-web.vercel.app` (dominio propio pendiente)
+
+### ✅ Tracking de clicks a farmacia
+- Cada link "Ver en farmacia" se reescribe para pasar por `/api/go` antes de llegar al sitio real
+- Se registra en la tabla `pharmacy_clicks` de Supabase — base para negociar afiliación con las farmacias
+- Visible en el panel `/admin` (total y últimos 7 días por farmacia)
+
+### ✅ Configuración de farmacias y banner de donación
+- Panel `/admin/config` (Next.js, protegido con Supabase Auth) — checkboxes por farmacia y toggle/días del banner de donación, cambio instantáneo sin redeploy
+- Guardado en tabla `app_config` de Supabase (clave/valor genérico); fallback automático a las env vars `DISABLED_PHARMACIES`/`DONATION_BANNER_*` si Supabase no responde
+- La app recibe la config desde `/api/config` al arrancar y la aplica en tiempo real (ver limitación: no refetchea si la app ya está abierta — `docs/product/BACKLOG_PRODUCT.md` v15-16)
 
 ### ✅ Monitoreo
 - CI/CD con GitHub Actions en cada push a `main`
@@ -283,11 +297,16 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 - La app valida vigencia del token cada 24h
 - Distribución vía Play Store Closed Testing (hasta 2.000 empleados por empresa, gratuito)
 
-### 🕐 Backoffice admin (para el dueño de la app)
+### ✅ Panel `/admin` (para el dueño de la app) — primera versión en producción
+Construido dentro de `web/` (Next.js), protegido con Supabase Auth (Google OAuth + email/contraseña + lista blanca `ADMIN_ALLOWED_EMAILS`):
+- `/admin` — dashboard de clicks por farmacia (datos de `pharmacy_clicks`, base para negociar afiliación)
+- `/admin/config` — activar/desactivar farmacias y banner de donación sin redeploy
+- `/admin/feedback` — bandeja de sugerencias de usuarios con estado abierto/resuelto
+
+### 🕐 Backoffice de empresas clientes (B2B) — no iniciado
+Distinto del panel `/admin` de arriba — esto es para gestionar cuentas de empresas que contraten la versión white-label, no para operar la app pública:
 - Gestión de empresas clientes: nombre, logo, color, plan, estado, fechas, token, contacto
-- Fase 1: Supabase Table Editor (gratis, disponible hoy)
-- Fase 2: Appsmith conectado a Supabase con botones de acción (Activar, Renovar, Generar token)
-- Fase 3: panel `/admin` propio en Next.js en Vercel
+- Depende de que exista la funcionalidad de white-labeling (ver más abajo) y de volumen de negocio B2B real
 
 ### 🕐 Panel para empresas cliente
 - Acceso para el administrador de cada empresa (RR.HH.)

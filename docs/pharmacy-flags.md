@@ -1,10 +1,22 @@
 # Feature Flags de Farmacias
 
-Permite activar o desactivar farmacias de forma centralizada **sin publicar un nuevo build ni OTA update**. El cambio tarda ~30 segundos en propagarse.
+Permite activar o desactivar farmacias de forma centralizada **sin publicar un nuevo build ni OTA update**.
 
 ---
 
-## Cómo apagar una farmacia
+## Cómo apagar una farmacia (camino normal)
+
+Desde el panel admin, cambio instantáneo, sin esperar redeploy:
+
+1. Entrar a **`https://app-compara-farma-web.vercel.app/admin/config`** (requiere login con Google o email/contraseña autorizado — ver `ADMIN_ALLOWED_EMAILS`)
+2. Destildar el checkbox de la farmacia
+3. Click **Guardar cambios** → confirma con un mensaje "Cambios guardados"
+
+El valor queda en la tabla `app_config` de Supabase (clave `disabled_pharmacies`), leída por el backend con hasta 60s de caché en memoria (ver `api/src/lib/appConfigDb.ts`).
+
+## Fallback: variable de entorno en Vercel
+
+Si Supabase no responde (caído, credenciales rotas, etc.), `api/src/lib/pharmacyFlags.ts` cae automáticamente a la variable de entorno `DISABLED_PHARMACIES` — este es el mecanismo **de respaldo**, no el que se usa día a día:
 
 1. Ir a **Vercel Dashboard → proyecto `comparafarma-api` → Settings → Environment Variables**
 2. Editar (o crear) la variable `DISABLED_PHARMACIES`
@@ -24,6 +36,11 @@ Permite activar o desactivar farmacias de forma centralizada **sin publicar un n
 - `salcobrand`
 - `ahumada`
 - `dr-simi`
+- `araucomed`
+- `ecofarmacias`
+- `farmex`
+- `sermecoop`
+- `easyfarma`
 
 ---
 
@@ -43,16 +60,23 @@ Permite activar o desactivar farmacias de forma centralizada **sin publicar un n
 
 ### Degradación elegante
 - Si `/api/config` falla (sin red, backend caído) → la app asume **todas activas**. Nunca se rompe.
+- Si `app_config` en Supabase no responde → el backend cae a `DISABLED_PHARMACIES` (ver arriba). Nunca se rompe.
 - Si hay resultados cacheados (30 min) que incluyen una farmacia desactivada → la app los oculta gracias a `isActive()` del `configStore`.
+
+**Importante — mobile no refetchea en runtime:** `mobile/_layout.tsx` solo llama `configStore.fetch()` una vez al montar la app. Un cambio en `/admin/config` no se ve en un dispositivo que ya tiene la app abierta hasta que la cierra por completo y la vuelve a abrir (bloqueado por el freeze de Prueba Cerrada de Google Play, ver `docs/product/BACKLOG_PRODUCT.md` ítem `v15-16`).
 
 ---
 
 ## Arquitectura
 
 ```
-Vercel Dashboard
-  DISABLED_PHARMACIES=ahumada
-        ↓  (~30s redeploy)
+/admin/config (web/, Supabase Auth)          Vercel env var (fallback)
+  app_config.disabled_pharmacies = [...]        DISABLED_PHARMACIES=ahumada
+        ↓  (instantáneo, caché 60s)                    ↓  (~30s redeploy)
+        └───────────────────┬────────────────────────┘
+                             ↓
+                  api/src/lib/pharmacyFlags.ts
+                  getDisabledPharmacies() — intenta Supabase primero
 
 GET /api/config
   → { pharmacies: [
@@ -75,12 +99,16 @@ App arranca → configStore.fetch()
 
 | Archivo | Rol |
 |---------|-----|
-| `api/src/lib/pharmacyFlags.ts` | Lee `DISABLED_PHARMACIES`, exporta `getDisabledPharmacies()` y `getPharmacyConfig()` |
+| `api/src/lib/pharmacyFlags.ts` | Lee `app_config` (Supabase) con fallback a `DISABLED_PHARMACIES`, exporta `getDisabledPharmacies()` y `getPharmacyConfig()` (ambas async) |
+| `api/src/lib/appConfigDb.ts` | Cliente genérico clave/valor contra la tabla `app_config`, con caché en memoria de 60s |
+| `api/src/lib/supabaseClient.ts` | Cliente Supabase compartido (secret key, bypassea RLS) |
 | `api/src/services/searchService.ts` | Filtra fuentes desactivadas antes del `Promise.all` |
 | `api/src/routes/config.ts` | Handler de `GET /api/config` |
 | `api/api/config.ts` | Entrypoint serverless Vercel |
+| `web/src/app/admin/(dashboard)/config/page.tsx` | UI del panel — checkboxes por farmacia, Server Action que escribe en `app_config` |
+| `web/src/lib/appConfig.ts` | Lectura/escritura de `app_config` desde `web/` (cliente Supabase separado del de `api/`) |
 | `mobile/src/store/configStore.ts` | Zustand store, fetchea config al arrancar, expone `isActive()` |
-| `mobile/src/app/_layout.tsx` | Llama `configStore.fetch()` una vez al montar |
+| `mobile/src/app/_layout.tsx` | Llama `configStore.fetch()` una vez al montar (ver limitación arriba) |
 | `mobile/src/app/results.tsx` | Chips de farmacia filtrados |
 | `mobile/src/app/medication.tsx` | Bloques de precio filtrados |
 | `mobile/src/components/MedicationListItem.tsx` | Badge "N farmacias" filtrado |
@@ -91,7 +119,6 @@ App arranca → configStore.fetch()
 
 El scraper de Ahumada es frágil (depende de HTML de Demandware). Si empieza a fallar:
 
-1. Ir a Vercel → `DISABLED_PHARMACIES=ahumada` → guardar
-2. En ~30s los usuarios dejan de ver Ahumada
-3. Mientras tanto, arreglar el scraper en `api/src/clients/ahumada.ts`
-4. Una vez reparado, volver `DISABLED_PHARMACIES=` (vacío) → guardar
+1. Entrar a `/admin/config` → destildar Ahumada → Guardar (cambio instantáneo, sin esperar redeploy)
+2. Mientras tanto, arreglar el scraper en `api/src/clients/ahumada.ts`
+3. Una vez reparado, volver a tildar Ahumada en `/admin/config` → Guardar

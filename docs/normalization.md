@@ -1,8 +1,8 @@
 # Normalización de Búsqueda y Deduplicación
 
-Documentación de los algoritmos clave en `api/src/lib/normalization.ts` y `mobile/src/lib/normalization.ts`. Son críticos para que la búsqueda funcione bien y para que el mismo medicamento vendido bajo nombres distintos en cada farmacia aparezca agrupado correctamente.
+Documentación de los algoritmos clave, que viven en el paquete compartido `packages/domain/src/` (`@comparafarma/domain`): `normalization.ts` (`cleanQuery`), `matching.ts` (`matchKey`), `pricing.ts` (`effectivePrice`/`toPharmacyPrice`), `deduplication.ts` (`mergeDuplicates`). Son críticos para que la búsqueda funcione bien y para que el mismo medicamento vendido bajo nombres distintos en cada farmacia aparezca agrupado correctamente.
 
-> **Nota**: Ambos archivos deben mantenerse en sincronía — aplica cualquier cambio en los dos.
+> **Antes** esta lógica vivía duplicada en `api/src/lib/normalization.ts` y `mobile/src/lib/normalization.ts` — la migración a `packages/domain` (ver `ADR-0001_SHARED_DOMAIN_PACKAGE.md`) eliminó ese riesgo de divergencia: hoy `api/` y `mobile/` importan la misma implementación, no hay dos copias que sincronizar.
 
 ---
 
@@ -39,7 +39,7 @@ Documentación de los algoritmos clave en `api/src/lib/normalization.ts` y `mobi
 
 **Propósito**: Generar una clave de deduplicación que agrupe medicamentos equivalentes aunque tengan nombres distintos entre farmacias.
 
-### Algoritmo (v6)
+### Algoritmo
 
 1. **Normalizar acentos** (NFD): "Día" → "dia", "Ácido" → "acido"
 2. Convertir a minúsculas
@@ -169,8 +169,10 @@ El prefijo de caché AsyncStorage en `mobile/src/lib/cache.ts` debe **incrementa
 | `v4` | Agregado Dr. Simi |
 | `v5` | qty=1 normalizado en matchKey; count scrapers 10→24 |
 | `v6` | Indicador turno día/noche en matchKey |
+| `v7`–`v9` | No documentados en este archivo — revisar historial de `mobile/src/lib/cache.ts` si hace falta el detalle |
+| `v10` | `matchKey` migrado a `@comparafarma/domain` (fusión de guiones y palabras cortas) |
 
-Prefijo actual: `search_cache_v6_`
+Prefijo actual: `search_cache_v10_` (`mobile/src/lib/cache.ts`)
 
 ---
 
