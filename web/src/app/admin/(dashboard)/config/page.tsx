@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import type { PharmacySlug } from "@comparafarma/domain";
 import { getConfigValue, setConfigValue } from "@/lib/appConfig";
 import { PHARMACIES } from "@/constants/pharmacies";
@@ -8,6 +9,10 @@ export const dynamic = "force-dynamic";
 interface DonationBannerConfig {
   enabled: boolean;
   dismissDays: number;
+}
+
+interface PageProps {
+  searchParams: Promise<{ status?: string; message?: string }>;
 }
 
 const ALL_SLUGS = Object.keys(PHARMACIES) as PharmacySlug[];
@@ -21,18 +26,22 @@ async function updateConfigAction(formData: FormData) {
   const dismissDaysRaw = Number(formData.get("banner_dismiss_days"));
   const dismissDays = Number.isFinite(dismissDaysRaw) && dismissDaysRaw > 0 ? dismissDaysRaw : 7;
 
-  await Promise.all([
+  const [pharmaciesResult, bannerResult] = await Promise.all([
     setConfigValue("disabled_pharmacies", disabled),
     setConfigValue("donation_banner", { enabled, dismissDays }),
   ]);
 
   revalidatePath("/admin/config");
+
+  const error = pharmaciesResult.error ?? bannerResult.error;
+  redirect(error ? `/admin/config?status=error&message=${encodeURIComponent(error)}` : "/admin/config?status=ok");
 }
 
-export default async function AdminConfigPage() {
-  const [disabledList, banner] = await Promise.all([
+export default async function AdminConfigPage({ searchParams }: PageProps) {
+  const [disabledList, banner, params] = await Promise.all([
     getConfigValue<PharmacySlug[]>("disabled_pharmacies"),
     getConfigValue<DonationBannerConfig>("donation_banner"),
+    searchParams,
   ]);
 
   const disabled = new Set(disabledList ?? []);
@@ -48,6 +57,15 @@ export default async function AdminConfigPage() {
           app y la web sin redeploy (hasta 60s de caché en el backend).
         </p>
       </div>
+
+      {params.status === "ok" && (
+        <p className="rounded-lg bg-accent-soft px-3 py-2 text-sm text-accent-ink">Cambios guardados.</p>
+      )}
+      {params.status === "error" && (
+        <p className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">
+          No se pudo guardar: {params.message ?? "error desconocido"}.
+        </p>
+      )}
 
       <form action={updateConfigAction} className="flex flex-col gap-8">
         <section className="rounded-2xl border border-line bg-paper-raised p-6">
