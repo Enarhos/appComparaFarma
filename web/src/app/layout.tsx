@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Figtree } from "next/font/google";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -15,11 +16,8 @@ const figtree = Figtree({
   weight: ["400", "500", "600", "700"],
 });
 
-// SITE_URL: actualizar cuando exista el dominio propio o la URL real de Vercel del proyecto web/
-const SITE_URL = process.env.SITE_URL ?? "https://comparafarma.vercel.app";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "ComparaFarma — Compara precios de medicamentos en Chile",
     template: "%s | ComparaFarma",
