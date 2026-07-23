@@ -1,0 +1,133 @@
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import type { MedicationResult } from "@comparafarma/domain";
+
+const notFoundMock = vi.fn(() => {
+  throw new Error("NEXT_NOT_FOUND");
+});
+const permanentRedirectMock = vi.fn((url: string) => {
+  throw new Error(`NEXT_REDIRECT:${url}`);
+});
+
+vi.mock("next/navigation", () => ({
+  notFound: () => notFoundMock(),
+  permanentRedirect: (url: string) => permanentRedirectMock(url),
+}));
+
+const resolveMedicationBySlugMock = vi.fn();
+
+vi.mock("@/lib/resolveMedication", () => ({
+  resolveMedicationBySlug: (...args: unknown[]) => resolveMedicationBySlugMock(...args),
+}));
+
+import MedicationDetailPage, { generateMetadata } from "./page";
+
+const CANONICAL_SLUG = "paracetamol-500-mg-16-comprimidos-realhash1234";
+
+function makeMedication(overrides: Partial<MedicationResult> = {}): MedicationResult {
+  return {
+    matchKey: "paracetamol|500mg|16",
+    canonicalName: "Paracetamol 500 mg 16 comprimidos",
+    laboratory: "Andrómaco",
+    isBioequivalent: true,
+    bestPrice: 291,
+    bestPharmacy: "easyfarma",
+    imageUrl: null,
+    prices: [
+      {
+        pharmacySlug: "easyfarma",
+        pharmacyName: "EasyFarma",
+        productName: "Paracetamol 500 mg 16 comprimidos",
+        channels: { store: 690, online: null, cmr: null, sbpay: null, effective: 291 },
+        hasStock: true,
+        hasOnlineDelivery: true,
+        onlineUrl: "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=paracetamol%7C500mg%7C16",
+        imageUrl: null,
+        fetchedAt: "2026-07-20T00:00:00.000Z",
+      },
+    ],
+    ...overrides,
+  };
+}
+
+beforeEach(() => {
+  resolveMedicationBySlugMock.mockReset();
+  notFoundMock.mockClear();
+  permanentRedirectMock.mockClear();
+});
+
+describe("MedicationDetailPage", () => {
+  it("calls notFound() when the slug does not resolve to any medication", async () => {
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "not-found" });
+
+    await expect(
+      MedicationDetailPage({ params: Promise.resolve({ slug: "no-existe-abc123" }) })
+    ).rejects.toThrow();
+
+    expect(notFoundMock).toHaveBeenCalled();
+    expect(permanentRedirectMock).not.toHaveBeenCalled();
+  });
+
+  it("throws without picking a winner when the resolution is ambiguous", async () => {
+    const medication = makeMedication();
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "ambiguous", matches: [medication, medication] });
+
+    await expect(
+      MedicationDetailPage({ params: Promise.resolve({ slug: CANONICAL_SLUG }) })
+    ).rejects.toThrow();
+
+    expect(permanentRedirectMock).not.toHaveBeenCalled();
+    expect(notFoundMock).not.toHaveBeenCalled();
+  });
+
+  it("redirects (308/permanent) to the canonical slug when the requested slug is outdated", async () => {
+    const medication = makeMedication();
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG });
+
+    await expect(
+      MedicationDetailPage({ params: Promise.resolve({ slug: "paracetamol-500mg-nombre-viejo" }) })
+    ).rejects.toThrow();
+
+    expect(permanentRedirectMock).toHaveBeenCalledWith(`/medicamento/${CANONICAL_SLUG}`);
+    expect(notFoundMock).not.toHaveBeenCalled();
+  });
+
+  it("renders without redirecting when the requested slug is already canonical", async () => {
+    const medication = makeMedication();
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG });
+
+    const result = await MedicationDetailPage({ params: Promise.resolve({ slug: CANONICAL_SLUG }) });
+
+    expect(permanentRedirectMock).not.toHaveBeenCalled();
+    expect(notFoundMock).not.toHaveBeenCalled();
+    expect(result).toBeTruthy();
+  });
+});
+
+describe("generateMetadata", () => {
+  it("sets alternates.canonical to the canonical slug, not the requested one", async () => {
+    const medication = makeMedication();
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG });
+
+    const metadata = await generateMetadata({ params: Promise.resolve({ slug: "un-slug-viejo-distinto" }) });
+
+    expect(metadata.alternates?.canonical).toContain(`/medicamento/${CANONICAL_SLUG}`);
+    expect(String(metadata.alternates?.canonical)).not.toContain("un-slug-viejo-distinto");
+  });
+
+  it("sets robots to noindex,follow when the medication resolves", async () => {
+    const medication = makeMedication();
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG });
+
+    const metadata = await generateMetadata({ params: Promise.resolve({ slug: CANONICAL_SLUG }) });
+
+    expect(metadata.robots).toEqual({ index: false, follow: true });
+  });
+
+  it("sets robots to noindex,follow even when the medication is not found", async () => {
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "not-found" });
+
+    const metadata = await generateMetadata({ params: Promise.resolve({ slug: "no-existe-abc123" }) });
+
+    expect(metadata.robots).toEqual({ index: false, follow: true });
+  });
+});
