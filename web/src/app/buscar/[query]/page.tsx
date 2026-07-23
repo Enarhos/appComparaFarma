@@ -4,7 +4,6 @@ import { searchMedications } from "@/lib/search";
 import { MedicationCard } from "@/components/MedicationCard";
 import { SearchBox } from "@/components/SearchBox";
 import { buildMedicationJsonLd, toJsonLdScript } from "@/lib/structuredData";
-import { getSiteUrl } from "@/lib/site";
 
 interface PageProps {
   params: Promise<{ query: string }>;
@@ -78,9 +77,7 @@ export default async function SearchPage({ params }: PageProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: toJsonLdScript(
-              buildMedicationJsonLd(term, results, `${getSiteUrl()}/buscar/${encodeURIComponent(term)}`)
-            ),
+            __html: toJsonLdScript(buildMedicationJsonLd(term, results)),
           }}
         />
       )}

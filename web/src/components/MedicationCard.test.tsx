@@ -1,7 +1,20 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
+import type { ReactNode } from "react";
 import { render, screen } from "@/test-utils";
 import type { MedicationResult } from "@comparafarma/domain";
 import { MedicationCard } from "./MedicationCard";
+
+// next/link trae su propia copia anidada de react (node_modules/next/node_modules/react),
+// distinta de la que usa el resto del árbol en este monorepo — bajo Vitest eso
+// dispara "Invalid hook call" al montar. Se mockea por un <a> simple, igual que
+// ya se mockea next/navigation en otros tests de este proyecto.
+vi.mock("next/link", () => ({
+  default: ({ href, children, ...rest }: { href: string; children: ReactNode }) => (
+    <a href={href} {...rest}>
+      {children}
+    </a>
+  ),
+}));
 
 const medication: MedicationResult = {
   matchKey: "paracetamol|500mg",
