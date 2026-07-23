@@ -37,16 +37,16 @@ export function parseEasyFarmaResponse(html: string): ScrapedProduct[] {
     const price = parseInt(normalM[1].replace(/\./g, ""), 10);
     if (!price || price <= 0) continue;
 
-    // Plus price — inside the d-none product-price block
-    const plusBlockM = block.match(/product-price d-none[\s\S]{0,300}/);
-    let cmrPrice: number | null = null;
-    if (plusBlockM) {
-      const plusM = plusBlockM[0].match(/\$([\d.]+)/);
-      if (plusM) {
-        const parsed = parseInt(plusM[1].replace(/\./g, ""), 10);
-        if (parsed > 0 && parsed < price) cmrPrice = parsed;
-      }
-    }
+    // "Easyfarma Plus" vive en un bloque "product-price d-none" — oculto por
+    // CSS en TODA tarjeta, incluso cuando el programa está descontinuado (su
+    // propio link de navegación aparece comentado en el HTML del sitio) y no
+    // se ve ni se puede usar en la página del producto. Tratarlo como un
+    // canal de precio real (cmrPrice) hacía que effectivePrice() lo eligiera
+    // como "mejor precio" aunque ningún visitante pueda acceder a él —
+    // confirmado con Insulina Apidra Solostar 1 Unidad: ComparaFarma mostraba
+    // $5.240 (el "Plus" oculto) cuando la página real solo ofrece $9.990.
+    // No se extrae más: EasyFarma solo expone el precio "Normal" visible.
+    const cmrPrice: number | null = null;
 
     results.push({
       name,
