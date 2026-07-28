@@ -4,7 +4,7 @@ import { getSiteUrl } from "@/lib/site";
 
 const MAX_PRODUCTS = 20;
 
-function buildProductNode(medication: MedicationResult, url: string) {
+function buildProductNode(medication: MedicationResult, url: string, opts: { detailed?: boolean } = {}) {
   const prices = medication.prices.map((p) => p.channels.effective);
   const inStock = medication.prices.some((p) => p.hasStock);
 
@@ -21,6 +21,21 @@ function buildProductNode(medication: MedicationResult, url: string) {
       offerCount: medication.prices.length,
       availability: inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
       url,
+      // Sprint Web 2: Offer individual por farmacia — solo en la ficha de
+      // detalle (opts.detailed), no en el ItemList de resultados de búsqueda,
+      // para no inflar esa página con N ofertas × 20 productos.
+      ...(opts.detailed
+        ? {
+            offers: medication.prices.map((price) => ({
+              "@type": "Offer",
+              price: price.channels.effective,
+              priceCurrency: "CLP",
+              availability: price.hasStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+              seller: { "@type": "Organization", name: price.pharmacyName },
+              ...(price.onlineUrl ? { url: price.onlineUrl } : {}),
+            })),
+          }
+        : {}),
     },
   };
 }
@@ -59,7 +74,7 @@ export function buildMedicationJsonLd(term: string, results: MedicationResult[])
 export function buildMedicationDetailJsonLd(medication: MedicationResult, pageUrl: string) {
   return {
     "@context": "https://schema.org",
-    ...buildProductNode(medication, pageUrl),
+    ...buildProductNode(medication, pageUrl, { detailed: true }),
   };
 }
 
