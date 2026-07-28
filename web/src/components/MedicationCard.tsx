@@ -76,6 +76,10 @@ export function MedicationCard({ medication }: Props) {
         </div>
       )}
 
+      <Link href={detailHref} className="mt-2 inline-block text-sm font-medium text-accent-ink hover:underline">
+        Ver detalle e histórico →
+      </Link>
+
       <ul className="mt-4 flex flex-col gap-3 border-t border-line pt-4">
         {sortedPrices.map((price) => {
           const display = PHARMACIES[price.pharmacySlug];

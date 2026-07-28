@@ -19,6 +19,30 @@ vi.mock("@/lib/resolveMedication", () => ({
   resolveMedicationBySlug: (...args: unknown[]) => resolveMedicationBySlugMock(...args),
 }));
 
+const getPriceHistoryMock = vi.fn();
+
+vi.mock("@/lib/priceHistory", () => ({
+  getPriceHistory: (...args: unknown[]) => getPriceHistoryMock(...args),
+}));
+
+function emptyHistory(matchKey: string) {
+  return {
+    matchKey,
+    canonicalName: null,
+    from: "",
+    to: "",
+    series: [],
+    summary: {
+      latestBestPrice: null,
+      latestBestPharmacy: null,
+      lowestRecordedPrice: null,
+      highestRecordedPrice: null,
+      change7dPercent: null,
+      change30dPercent: null,
+    },
+  };
+}
+
 import MedicationDetailPage, { generateMetadata } from "./page";
 
 const CANONICAL_SLUG = "paracetamol-500-mg-16-comprimidos-realhash1234";
@@ -53,6 +77,8 @@ beforeEach(() => {
   resolveMedicationBySlugMock.mockReset();
   notFoundMock.mockClear();
   permanentRedirectMock.mockClear();
+  getPriceHistoryMock.mockReset();
+  getPriceHistoryMock.mockImplementation((matchKey: string) => Promise.resolve(emptyHistory(matchKey)));
 });
 
 describe("MedicationDetailPage", () => {

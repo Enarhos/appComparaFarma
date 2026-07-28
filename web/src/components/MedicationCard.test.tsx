@@ -67,4 +67,11 @@ describe("MedicationCard", () => {
 
     expect(screen.getByText(/ahorrás \$549/)).toBeTruthy();
   });
+
+  it("links to the detail/history page for the medication's slug", () => {
+    render(<MedicationCard medication={medication} />);
+
+    const link = screen.getByText("Ver detalle e histórico →");
+    expect(link.closest("a")?.getAttribute("href")).toMatch(/^\/medicamento\/paracetamol-500-mg-/);
+  });
 });
