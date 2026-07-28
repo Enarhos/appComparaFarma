@@ -2,12 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import { PHARMACIES } from "@/constants/pharmacies";
-import { formatCLP, formatDateTime } from "@/lib/format";
+import { formatCLP, formatDateTime, formatPercent } from "@/lib/format";
 import { channelChips } from "@/components/MedicationCard";
+import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { SearchBox } from "@/components/SearchBox";
 import { resolveMedicationBySlug } from "@/lib/resolveMedication";
+import { getPriceHistory } from "@/lib/priceHistory";
 import { buildMedicationDetailJsonLd, toJsonLdScript } from "@/lib/structuredData";
 import { getSiteUrl } from "@/lib/site";
+
+function changeColorClass(value: number | null): string {
+  if (value == null) return "text-ink";
+  if (value < 0) return "text-save";
+  if (value > 0) return "text-red-600";
+  return "text-ink";
+}
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -30,15 +39,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // canonical ya anticipa a dónde.
   const canonicalUrl = `${getSiteUrl()}/medicamento/${canonicalSlug}`;
 
+  const title = `Precio de ${medication.canonicalName} en farmacias | ComparaFarma`;
+  const description = `Compara el precio de ${medication.canonicalName} en ${medication.prices.length} farmacia${
+    medication.prices.length !== 1 ? "s" : ""
+  } chilenas y revisa el historial reciente de precios en ComparaFarma.`;
+
   return {
-    title: `${medication.canonicalName} — Precio y dónde comprar`,
-    description: `Comparación de precio de ${medication.canonicalName} en ${medication.prices.length} farmacia${
-      medication.prices.length !== 1 ? "s" : ""
-    } chilenas, actualizado en tiempo real.`,
+    title,
+    description,
     alternates: { canonical: canonicalUrl },
     // Fichas nuevas: no indexar todavía (sin sitemap ni identidad persistida
     // este sprint) pero sí seguir sus enlaces salientes/internos.
     robots: { index: false, follow: true },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      type: "website",
+      ...(medication.imageUrl ? { images: [{ url: medication.imageUrl }] } : {}),
+    },
   };
 }
 
@@ -60,6 +79,9 @@ export default async function MedicationDetailPage({ params }: PageProps) {
   if (canonicalSlug !== slug) {
     permanentRedirect(`/medicamento/${canonicalSlug}`);
   }
+
+  const history = await getPriceHistory(medication.matchKey);
+  const hasHistory = history.series.some((s) => s.points.length > 0);
 
   const sortedPrices = [...medication.prices].sort((a, b) => a.channels.effective - b.channels.effective);
   const best = sortedPrices[0];
@@ -185,6 +207,65 @@ export default async function MedicationDetailPage({ params }: PageProps) {
             );
           })}
         </ul>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="font-display text-xl font-semibold text-ink">Histórico de precios</h2>
+
+        {!hasHistory && (
+          <p className="mt-3 rounded-xl border border-line bg-paper-raised p-4 text-sm text-muted">
+            Todavía no tenemos suficiente historial registrado para este medicamento. Volvé más adelante para
+            ver cómo evoluciona el precio.
+          </p>
+        )}
+
+        {hasHistory && (
+          <>
+            <dl className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              <div>
+                <dt className="text-xs text-muted">Mínimo registrado</dt>
+                <dd className="mt-0.5 font-display text-lg font-semibold tabular-nums text-ink">
+                  {history.summary.lowestRecordedPrice != null
+                    ? formatCLP(history.summary.lowestRecordedPrice)
+                    : "—"}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs text-muted">Máximo registrado</dt>
+                <dd className="mt-0.5 font-display text-lg font-semibold tabular-nums text-ink">
+                  {history.summary.highestRecordedPrice != null
+                    ? formatCLP(history.summary.highestRecordedPrice)
+                    : "—"}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs text-muted">Variación 7 días</dt>
+                <dd
+                  className={`mt-0.5 font-display text-lg font-semibold tabular-nums ${changeColorClass(history.summary.change7dPercent)}`}
+                >
+                  {history.summary.change7dPercent != null ? formatPercent(history.summary.change7dPercent) : "—"}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs text-muted">Variación 30 días</dt>
+                <dd
+                  className={`mt-0.5 font-display text-lg font-semibold tabular-nums ${changeColorClass(history.summary.change30dPercent)}`}
+                >
+                  {history.summary.change30dPercent != null ? formatPercent(history.summary.change30dPercent) : "—"}
+                </dd>
+              </div>
+            </dl>
+
+            <div className="mt-5">
+              <PriceHistoryChart series={history.series} />
+            </div>
+          </>
+        )}
+
+        <p className="mt-4 text-xs text-muted">
+          Los precios son referenciales, pueden variar respecto al valor final en tienda o carro de compra, y
+          se actualizan automáticamente a partir de cada búsqueda registrada.
+        </p>
       </section>
 
       <section className="mt-8">

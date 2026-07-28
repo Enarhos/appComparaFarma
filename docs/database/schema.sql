@@ -62,3 +62,15 @@ alter table feedback enable row level security;
 -- api/ y web/ acceden, con SUPABASE_SECRET_KEY (bypassea RLS por diseño).
 -- RLS queda habilitado como defensa en profundidad, no como mecanismo de
 -- acceso real.
+
+-- ============================================================
+-- Sprint Web 1 (2026-07-27) — GET /api/price-history.
+-- Índice aditivo, sin cambio de modelo: la ficha de medicamento consulta
+-- price_history filtrando por match_key y un rango de recorded_date en cada
+-- carga. Sin este índice, esa consulta escanea la tabla completa a medida
+-- que crece; el índice único ya existente (match_key, pharmacy_slug,
+-- recorded_date) no cubre bien un filtro que no fija pharmacy_slug.
+-- ============================================================
+
+create index if not exists price_history_match_key_recorded_date_idx
+  on price_history (match_key, recorded_date);
