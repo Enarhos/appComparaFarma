@@ -84,4 +84,49 @@ describe("PriceHistoryChart", () => {
     expect(screen.getAllByText("Cruz Verde").length).toBeGreaterThan(0);
     expect(screen.queryByText("Farmacias Ahumada")).toBeNull();
   });
+
+  describe("línea de referencia", () => {
+    const series: PriceHistorySeries[] = [
+      {
+        pharmacySlug: "cruz-verde",
+        points: [
+          { date: "2026-07-01", storePrice: 2990, effectivePrice: 2990, channels: [] },
+          { date: "2026-07-20", storePrice: 2890, effectivePrice: 2890, channels: [] },
+        ],
+      },
+    ];
+
+    it("draws a dashed reference line with its label when referenceValue is provided", () => {
+      const { container } = render(
+        <PriceHistoryChart series={series} referenceValue={2500} referenceLabel="Mínimo histórico" />
+      );
+
+      const dashedLine = container.querySelector('line[stroke-dasharray]');
+      expect(dashedLine).toBeTruthy();
+      expect(screen.getByText(/Mínimo histórico/)).toBeTruthy();
+    });
+
+    it("does not draw a reference line when referenceValue is null", () => {
+      const { container } = render(<PriceHistoryChart series={series} referenceValue={null} referenceLabel="Mínimo histórico" />);
+
+      expect(container.querySelector('line[stroke-dasharray]')).toBeFalsy();
+      expect(screen.queryByText(/Mínimo histórico/)).toBeNull();
+    });
+
+    it("does not draw a reference line when referenceValue is omitted (backward compatible)", () => {
+      const { container } = render(<PriceHistoryChart series={series} />);
+
+      expect(container.querySelector('line[stroke-dasharray]')).toBeFalsy();
+    });
+
+    it("extends the price axis to include a reference value outside the visible range", () => {
+      // referenceValue muy por debajo del mínimo de la serie — no debe romper
+      // el cálculo de escala ni quedar fuera del viewBox.
+      const { container } = render(<PriceHistoryChart series={series} referenceValue={100} referenceLabel="Mínimo histórico" />);
+
+      const dashedLine = container.querySelector('line[stroke-dasharray]');
+      expect(dashedLine).toBeTruthy();
+      expect(Number(dashedLine?.getAttribute("y1"))).toBeGreaterThan(0);
+    });
+  });
 });

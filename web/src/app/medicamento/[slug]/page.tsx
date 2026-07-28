@@ -3,11 +3,12 @@ import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP, formatDateTime, formatPercent } from "@/lib/format";
-import { channelChips } from "@/components/MedicationCard";
+import { PharmacyPriceCard } from "@/components/PharmacyPriceCard";
 import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { SearchBox } from "@/components/SearchBox";
 import { resolveMedicationBySlug } from "@/lib/resolveMedication";
 import { getPriceHistory } from "@/lib/priceHistory";
+import { buildInsights } from "@/lib/insights";
 import { buildMedicationDetailJsonLd, toJsonLdScript } from "@/lib/structuredData";
 import { getSiteUrl } from "@/lib/site";
 
@@ -39,7 +40,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // canonical ya anticipa a dónde.
   const canonicalUrl = `${getSiteUrl()}/medicamento/${canonicalSlug}`;
 
-  const title = `Precio de ${medication.canonicalName} en farmacias | ComparaFarma`;
+  // Sin el sufijo "| ComparaFarma" acá: el título ya pasa por el template
+  // "%s | ComparaFarma" del layout raíz (web/src/app/layout.tsx) — agregarlo
+  // acá también duplicaba el sufijo (bug ya visto y corregido una vez en el
+  // Sprint 2 original, reintroducido sin querer en el sprint de histórico).
+  const title = `Precio de ${medication.canonicalName} en farmacias`;
   const description = `Compara el precio de ${medication.canonicalName} en ${medication.prices.length} farmacia${
     medication.prices.length !== 1 ? "s" : ""
   } chilenas y revisa el historial reciente de precios en ComparaFarma.`;
@@ -56,7 +61,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url: canonicalUrl,
       type: "website",
+      siteName: "ComparaFarma",
       ...(medication.imageUrl ? { images: [{ url: medication.imageUrl }] } : {}),
+    },
+    twitter: {
+      card: medication.imageUrl ? "summary_large_image" : "summary",
+      title,
+      description,
+      ...(medication.imageUrl ? { images: [medication.imageUrl] } : {}),
     },
   };
 }
@@ -82,6 +94,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
 
   const history = await getPriceHistory(medication.matchKey);
   const hasHistory = history.series.some((s) => s.points.length > 0);
+  const insights = buildInsights(medication, history);
 
   const sortedPrices = [...medication.prices].sort((a, b) => a.channels.effective - b.channels.effective);
   const best = sortedPrices[0];
@@ -107,113 +120,70 @@ export default async function MedicationDetailPage({ params }: PageProps) {
         <span className="text-ink/70">{medication.canonicalName}</span>
       </nav>
 
-      <header className="mt-4">
-        <div className="flex items-start justify-between gap-3">
-          <h1 className="font-display text-3xl font-semibold leading-snug text-ink">
-            {medication.canonicalName}
-          </h1>
-          {medication.isBioequivalent && (
-            <span className="shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent-ink">
-              🌿 Bioequivalente
-            </span>
-          )}
-        </div>
-        <p className="mt-1 text-sm text-muted">{medication.laboratory ?? "Laboratorio no especificado"}</p>
-      </header>
-
-      <section className="mt-6 rounded-2xl border border-line bg-paper-raised p-6">
-        <div className="flex items-start gap-5">
-          {medication.imageUrl && (
-            // eslint-disable-next-line @next/next/no-img-element -- imágenes de dominios variables por farmacia, sin lista blanca que mantener
-            <img
-              src={medication.imageUrl}
-              alt=""
-              width={96}
-              height={96}
-              className="h-24 w-24 shrink-0 rounded-lg border border-line bg-white object-contain p-2"
-            />
-          )}
-          <div className="min-w-0 flex-1">
-            {best && bestDisplay && (
-              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                <span className="font-display text-3xl font-semibold tabular-nums text-accent-ink">
-                  {formatCLP(best.channels.effective)}
-                </span>
-                <span className="text-sm text-muted">en {bestDisplay.name}</span>
-                {savings > 0 && (
-                  <span className="rounded-md bg-save-soft px-2 py-0.5 text-xs font-semibold text-save">
-                    ahorrás {formatCLP(savings)} vs. la farmacia más cara
-                  </span>
-                )}
-              </div>
-            )}
-            {lastUpdatedAt && (
-              <p className="mt-2 text-xs text-muted">Última actualización: {formatDateTime(lastUpdatedAt)}</p>
+      {/* Sprint Web 2: cabecera compactada — antes eran dos bloques apilados
+          (nombre/laboratorio, luego imagen/precio en una card aparte); ahora
+          es un solo bloque para reducir el espacio vertical antes del
+          contenido principal (comparación + histórico). */}
+      <div className="mt-4 flex items-start gap-4 rounded-2xl border border-line bg-paper-raised p-4 sm:p-5">
+        {medication.imageUrl && (
+          // eslint-disable-next-line @next/next/no-img-element -- imágenes de dominios variables por farmacia, sin lista blanca que mantener
+          <img
+            src={medication.imageUrl}
+            alt=""
+            width={72}
+            height={72}
+            className="h-16 w-16 shrink-0 rounded-lg border border-line bg-white object-contain p-1.5 sm:h-[72px] sm:w-[72px]"
+          />
+        )}
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+            <h1 className="font-display text-2xl font-semibold leading-snug text-ink">
+              {medication.canonicalName}
+            </h1>
+            {medication.isBioequivalent && (
+              <span className="shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent-ink">
+                🌿 Bioequivalente
+              </span>
             )}
           </div>
+          <p className="mt-0.5 text-sm text-muted">{medication.laboratory ?? "Laboratorio no especificado"}</p>
+
+          {best && bestDisplay && (
+            <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <span className="font-display text-2xl font-semibold tabular-nums text-accent-ink">
+                {formatCLP(best.channels.effective)}
+              </span>
+              <span className="text-sm text-muted">en {bestDisplay.name}</span>
+              {savings > 0 && (
+                <span className="rounded-md bg-save-soft px-2 py-0.5 text-xs font-semibold text-save">
+                  ahorrás {formatCLP(savings)} vs. la farmacia más cara
+                </span>
+              )}
+            </div>
+          )}
+          {lastUpdatedAt && (
+            <p className="mt-1 text-xs text-muted">Última actualización: {formatDateTime(lastUpdatedAt)}</p>
+          )}
         </div>
-      </section>
+      </div>
 
       <section className="mt-8">
         <h2 className="font-display text-xl font-semibold text-ink">Comparación por farmacia</h2>
         <ul className="mt-4 flex flex-col gap-3">
-          {sortedPrices.map((price) => {
-            const display = PHARMACIES[price.pharmacySlug];
-            const chips = channelChips(price, display?.cardLabel ?? null);
-
-            return (
-              <li key={price.pharmacySlug} className="rounded-xl border border-line bg-paper-raised p-4">
-                <div className="flex items-center gap-2">
-                  <span
-                    className="inline-block h-2.5 w-2.5 shrink-0 rounded-full"
-                    style={{ backgroundColor: display?.color ?? "#9ca3af" }}
-                    aria-hidden
-                  />
-                  <span className="flex-1 text-sm font-medium text-ink/80">
-                    {display?.name ?? price.pharmacySlug}
-                  </span>
-                  {!price.hasStock && (
-                    <span className="rounded bg-neutral-100 px-1.5 py-0.5 text-xs text-muted">Sin stock</span>
-                  )}
-                  <span className="text-sm font-semibold tabular-nums text-ink">
-                    {formatCLP(price.channels.effective)}
-                  </span>
-                </div>
-
-                {chips.length > 1 && (
-                  <div className="mt-2 flex flex-wrap gap-1.5 pl-[18px]">
-                    {chips.map((chip) => (
-                      <span
-                        key={chip.label}
-                        className="rounded-md bg-paper px-2 py-0.5 text-xs text-muted tabular-nums"
-                      >
-                        {chip.label}: {formatCLP(chip.value)}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {price.onlineUrl && (
-                  <a
-                    href={price.onlineUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block text-sm font-medium text-accent-ink hover:underline"
-                  >
-                    Ver en {display?.name ?? price.pharmacySlug} →
-                  </a>
-                )}
-              </li>
-            );
-          })}
+          {sortedPrices.map((price) => (
+            <PharmacyPriceCard key={price.pharmacySlug} price={price} isBestPrice={price === best} />
+          ))}
         </ul>
       </section>
 
-      <section className="mt-8">
-        <h2 className="font-display text-xl font-semibold text-ink">Histórico de precios</h2>
+      {/* Sprint Web 2: el histórico pasa a ser el centro visual de la página —
+          card propia con más padding, título más grande y el gráfico casi el
+          doble de alto que antes (ver PriceHistoryChart). */}
+      <section className="mt-8 rounded-2xl border border-line bg-paper-raised p-5 sm:p-7">
+        <h2 className="font-display text-2xl font-semibold text-ink">Histórico de precios</h2>
 
         {!hasHistory && (
-          <p className="mt-3 rounded-xl border border-line bg-paper-raised p-4 text-sm text-muted">
+          <p className="mt-3 rounded-xl border border-line bg-paper p-4 text-sm text-muted">
             Todavía no tenemos suficiente historial registrado para este medicamento. Volvé más adelante para
             ver cómo evoluciona el precio.
           </p>
@@ -221,7 +191,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
 
         {hasHistory && (
           <>
-            <dl className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <dl className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <div>
                 <dt className="text-xs text-muted">Mínimo registrado</dt>
                 <dd className="mt-0.5 font-display text-lg font-semibold tabular-nums text-ink">
@@ -256,8 +226,12 @@ export default async function MedicationDetailPage({ params }: PageProps) {
               </div>
             </dl>
 
-            <div className="mt-5">
-              <PriceHistoryChart series={history.series} />
+            <div className="mt-6">
+              <PriceHistoryChart
+                series={history.series}
+                referenceValue={history.summary.lowestRecordedPrice}
+                referenceLabel="Mínimo histórico"
+              />
             </div>
           </>
         )}
@@ -267,6 +241,23 @@ export default async function MedicationDetailPage({ params }: PageProps) {
           se actualizan automáticamente a partir de cada búsqueda registrada.
         </p>
       </section>
+
+      {insights.length > 0 && (
+        <section className="mt-8">
+          <h2 className="font-display text-xl font-semibold text-ink">Insights</h2>
+          <ul className="mt-4 flex flex-col gap-2">
+            {insights.map((insight) => (
+              <li
+                key={insight}
+                className="flex items-start gap-2 rounded-xl border border-line bg-paper-raised p-3 text-sm text-ink/80"
+              >
+                <span aria-hidden>💡</span>
+                <span>{insight}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="mt-8">
         <h2 className="font-display text-xl font-semibold text-ink">Buscar otro medicamento</h2>
