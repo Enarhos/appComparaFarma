@@ -38,6 +38,15 @@ export interface MedicationResult {
   bestPrice: number;
   bestPharmacy: string;
   imageUrl: string | null;
+  /**
+   * Identidad canónica y permanente del medicamento (ej. "CFM-000123"),
+   * independiente de la versión de `matchKey` — ver
+   * docs/engineering/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md.
+   * Opcional y nullable a propósito: `null` cuando Supabase no está
+   * configurado o el registro aún no corrió para este resultado.
+   * Campo puramente aditivo — mobile/ y web/ no necesitan leerlo.
+   */
+  cfmId?: string | null;
 }
 
 export interface ScrapedProduct {

@@ -74,3 +74,54 @@ alter table feedback enable row level security;
 
 create index if not exists price_history_match_key_recorded_date_idx
   on price_history (match_key, recorded_date);
+
+-- ============================================================
+-- Sprint A (2026-07-31) — RFC-002: Canonical Medication Registry (CFM-ID).
+-- docs/engineering/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md
+--
+-- Identidad permanente por medicamento, independiente de matchKey (que ya
+-- cambió 10 veces — ver docs/normalization.md §5). matchKey sigue siendo el
+-- único mecanismo de fusión de resultados; esta tabla solo traduce
+-- match_key -> cfm_id para dar continuidad histórica a price_history,
+-- pharmacy_clicks, alertas y favoritos aunque el algoritmo de matching
+-- cambie de nuevo en el futuro.
+--
+-- ⚠️ Correr esta sección a mano en el SQL Editor de Supabase antes de
+-- desplegar el código de la Fase 4 (api/src/services/searchService.ts ya
+-- llama attachCanonicalIds()) — si las tablas no existen todavía, el
+-- sistema sigue funcionando igual que hoy (cfmId: null en todos los
+-- resultados), no se rompe nada, pero el registro no arranca hasta correr
+-- esto.
+-- ============================================================
+
+create sequence if not exists medications_cfm_seq;
+
+create table if not exists medications (
+  cfm_id text primary key
+    default ('CFM-' || lpad(nextval('medications_cfm_seq')::text, 6, '0')),
+  canonical_name text not null,
+  laboratory text,
+  is_bioequivalent boolean,
+  match_key_current text not null,
+  status text not null default 'active',        -- 'active' | 'merged' | 'deprecated'
+  merged_into_cfm_id text references medications(cfm_id),
+  source text not null default 'auto',           -- 'auto' | 'curated'
+  first_seen_at timestamptz not null default now(),
+  last_seen_at timestamptz not null default now(),
+  notes text
+);
+alter table medications enable row level security;
+
+create table if not exists medication_match_key_aliases (
+  match_key text primary key,
+  cfm_id text not null references medications(cfm_id),
+  first_seen_at timestamptz not null default now(),
+  last_seen_at timestamptz not null default now()
+);
+create index if not exists idx_medication_aliases_cfm_id
+  on medication_match_key_aliases(cfm_id);
+alter table medication_match_key_aliases enable row level security;
+
+-- Columnas aditivas en tablas existentes — nullable, no rompen nada.
+alter table price_history add column if not exists cfm_id text references medications(cfm_id);
+alter table pharmacy_clicks add column if not exists cfm_id text references medications(cfm_id);

@@ -11,6 +11,7 @@ import { mergeDuplicates, toMedicationResult } from "@comparafarma/domain";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
 import { getDisabledPharmacies } from "../lib/pharmacyFlags.js";
 import { recordPriceHistory } from "../lib/priceHistoryDb.js";
+import { attachCanonicalIds } from "../lib/medicationRegistry.js";
 import type {
   MedicationResult,
   PharmacySearchDiagnostic,
@@ -107,7 +108,13 @@ export async function searchMedicationsDetailed(
     }
   }
 
-  const results = mergeDuplicates(all).sort((a, b) => a.bestPrice - b.bestPrice);
+  const merged = mergeDuplicates(all).sort((a, b) => a.bestPrice - b.bestPrice);
+
+  // RFC-002 — adjunta el CFM-ID (identidad canónica y permanente) antes de
+  // registrar el historial de precios, para que price_history/pharmacy_clicks
+  // puedan guardar cfm_id en la misma escritura. Aditivo y best-effort: si
+  // Supabase no responde, `results` queda idéntico a `merged` + cfmId:null.
+  const results = await attachCanonicalIds(merged);
 
   await recordPriceHistory(results).catch(() => {});
 
