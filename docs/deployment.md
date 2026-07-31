@@ -37,6 +37,8 @@ API_SECRET_KEY=
 RATE_LIMIT_MAX=60
 RATE_LIMIT_WINDOW_MS=60000
 SEARCH_CACHE_TTL_MS=300000
+ALLOWED_ORIGINS=               # Opcional, coma-separado. Default: app-compara-farma-web.vercel.app + localhost:3000.
+                                # Requests sin header Origin (app móvil, server-to-server, curl) no se restringen.
 SUPABASE_URL=                 # base de datos (price_history, pharmacy_clicks, app_config, feedback)
 SUPABASE_SECRET_KEY=          # bypassea RLS — nunca exponer al cliente
 RESEND_API_KEY=               # envío de emails de feedback (opcional)

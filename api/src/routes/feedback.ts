@@ -1,4 +1,4 @@
-import { json, getClientIp } from "../lib/http.js";
+import { applyCorsHeaders, json, getClientIp } from "../lib/http.js";
 import type { RequestLike, ResponseLike } from "../lib/http.js";
 import { consumeRateLimit } from "../middleware/rateLimit.js";
 import { recordFeedback } from "../lib/feedbackDb.js";
@@ -33,7 +33,7 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
   const request = req as RequestLike;
   const response = res as ResponseLike;
 
-  response.setHeader("Access-Control-Allow-Origin", "*");
+  applyCorsHeaders(response, request);
   response.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   response.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
@@ -44,28 +44,28 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
   }
 
   if (request.method !== "POST") {
-    return json(response, 405, { error: "Método no permitido" });
+    return json(response, 405, { error: "Método no permitido" }, request);
   }
 
   // Rate limit: 5 feedbacks por IP por hora
   const ip = getClientIp(request);
   if (!(await consumeRateLimit(`feedback:${ip}`, 5, 60 * 60 * 1000))) {
-    return json(response, 429, { error: "Demasiados intentos. Intenta más tarde." });
+    return json(response, 429, { error: "Demasiados intentos. Intenta más tarde." }, request);
   }
 
   let body: FeedbackBody;
   try {
     body = await parseBody(request);
   } catch {
-    return json(response, 400, { error: "JSON inválido" });
+    return json(response, 400, { error: "JSON inválido" }, request);
   }
 
   const message = body.message?.trim() ?? "";
   if (message.length < 5) {
-    return json(response, 400, { error: "El mensaje debe tener al menos 5 caracteres." });
+    return json(response, 400, { error: "El mensaje debe tener al menos 5 caracteres." }, request);
   }
   if (message.length > 2000) {
-    return json(response, 400, { error: "El mensaje no puede superar los 2000 caracteres." });
+    return json(response, 400, { error: "El mensaje no puede superar los 2000 caracteres." }, request);
   }
 
   const rawEmail = body.email?.trim() ?? "";
@@ -108,5 +108,5 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
 
   await recordFeedback(message, userEmail);
 
-  return json(response, 200, { ok: true });
+  return json(response, 200, { ok: true }, request);
 }

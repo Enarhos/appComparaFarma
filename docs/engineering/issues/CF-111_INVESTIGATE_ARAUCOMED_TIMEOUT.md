@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-111 |
 | **Épica** | Confiabilidad de scrapers |
-| **Estado** | Pendiente |
+| **Estado** | Cerrado — no reproducible el 2026-07-31, queda en monitoreo pasivo |
 | **Prioridad** | Alta |
 | **Estimación** | 1-2 horas (investigación) + tiempo variable según causa raíz |
 | **Referencia** | Detectado por `/scraper-watchdog` tras extender `api/scripts/check-production-health.mjs` a las 9 farmacias (antes solo cubría 4) |
@@ -58,7 +58,21 @@ Hipótesis alternativa (menor probabilidad, descartar primero): fue un evento tr
 
 ## Definición de terminado
 
-- [ ] Corridas repetidas de `healthcheck:prod` documentadas (persistente vs. intermitente)
-- [ ] Logs de Vercel revisados si es persistente
-- [ ] Causa raíz confirmada o descartada con evidencia
-- [ ] Decisión final registrada en `DECISION_LOG.md`
+- [x] Corridas repetidas de `healthcheck:prod` documentadas (persistente vs. intermitente)
+- [ ] Logs de Vercel revisados si es persistente — **no aplica, ver hallazgo abajo**
+- [x] Causa raíz confirmada o descartada con evidencia
+- [x] Decisión final registrada en `DECISION_LOG.md`
+
+---
+
+## Hallazgo (2026-07-31)
+
+5 corridas contra `https://comparafarma-api.vercel.app/api/search?debug=1` (4 con query sin coincidencias para minimizar payload + 1 con `q=paracetamol` con resultados reales) — **las 5 tuvieron `araucomed` en `status: "fulfilled"`**, con `durationMs` entre 300 y 1897ms, muy por debajo del timeout de 8000ms. Cero repeticiones del fallo original.
+
+No se pudo ejecutar `pnpm --filter api healthcheck:prod` tal cual (el sandbox de esta sesión no tiene salida de red hacia `comparafarma-api.vercel.app` vía `curl`/Node directo; las corridas se hicieron con el fetcher de la sesión, no con el script). Tampoco se revisaron logs de Vercel — requiere acceso al dashboard, no disponible en esta sesión.
+
+**Conclusión:** el fallo no es persistente. Con la evidencia disponible se descarta la hipótesis de bloqueo sistemático por IP de Vercel (si lo fuera, debería fallar de forma consistente, no 0/5). Queda más apoyada la hipótesis alternativa: evento transitorio del lado de AraucoMed coincidente con la corrida del 2026-07-19.
+
+**Decisión:** cerrar la investigación activa. No se sube el timeout ni se cambia código (no hay causa raíz que mitigar). AraucoMed queda bajo el mismo `Monitor API` horario que ya cubre las 9 farmacias — si el fallo reaparece con frecuencia, reabrir este issue con los nuevos datos (ahí sí tendría sentido revisar logs de Vercel).
+
+**Limitación reconocida:** las 5 corridas se hicieron en una sola sesión (minutos, no horas/días como sugería el alcance original). Es evidencia de "no reproducible ahora", no una garantía de que no vuelva a ocurrir de forma intermitente.

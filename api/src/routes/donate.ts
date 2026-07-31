@@ -1,13 +1,13 @@
 import { createKhipuPayment } from "../clients/khipu.js";
 import { HttpError } from "../lib/errors.js";
 import { captureException } from "../lib/sentry.js";
-import { json, type RequestLike, type ResponseLike } from "../lib/http.js";
+import { applyCorsHeaders, json, type RequestLike, type ResponseLike } from "../lib/http.js";
 
 export async function handleDonateRoute(reqLike: unknown, resLike: unknown): Promise<void> {
   const req = reqLike as RequestLike & { body?: { amount?: unknown } };
   const res = resLike as ResponseLike;
 
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  applyCorsHeaders(res, req);
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
@@ -33,14 +33,14 @@ export async function handleDonateRoute(reqLike: unknown, resLike: unknown): Pro
     }
 
     const paymentUrl = await createKhipuPayment(amount);
-    json(res, 200, { payment_url: paymentUrl });
+    json(res, 200, { payment_url: paymentUrl }, req);
   } catch (error) {
     if (error instanceof HttpError) {
-      json(res, error.statusCode, { error: error.message });
+      json(res, error.statusCode, { error: error.message }, req);
       return;
     }
     console.error("Donate route error:", error instanceof Error ? error.message : error);
     captureException(error, { route: "/api/donate" });
-    json(res, 500, { error: "No se pudo crear el pago." });
+    json(res, 500, { error: "No se pudo crear el pago." }, req);
   }
 }

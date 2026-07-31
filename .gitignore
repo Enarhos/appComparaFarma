@@ -16,4 +16,10 @@ ios/
 *.keystore
 .venv/
 __pycache__/
-.claude/
+.claude/*
+!.claude/agents/
+
+# Exports/snapshots temporales del repo para auditoría externa o LLMs de terceros —
+# no forman parte del historial del proyecto.
+audit-package/
+ml_borrar/
