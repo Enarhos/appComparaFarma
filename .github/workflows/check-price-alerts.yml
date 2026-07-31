@@ -1,0 +1,19 @@
+name: Check Price Alerts
+
+on:
+  schedule:
+    - cron: "0 12 * * *"   # 12:00 UTC = 09:00 Chile (hora de verano)
+  workflow_dispatch:       # también ejecutable manualmente
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disparar revisión diaria de alertas de precio
+        run: |
+          curl -sf "https://comparafarma-api.vercel.app/api/alerts?action=check&secret=${{ secrets.CRON_SECRET }}" \
+            -o response.json
+          echo "Respuesta:"
+          cat response.json
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}

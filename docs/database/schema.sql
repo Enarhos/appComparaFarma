@@ -125,3 +125,35 @@ alter table medication_match_key_aliases enable row level security;
 -- Columnas aditivas en tablas existentes — nullable, no rompen nada.
 alter table price_history add column if not exists cfm_id text references medications(cfm_id);
 alter table pharmacy_clicks add column if not exists cfm_id text references medications(cfm_id);
+
+-- ============================================================
+-- Sprint C (2026-07-31) — Alertas de precio por email en web/.
+-- docs/prompt/claude/PROMPT_CLAUDE_SPRINT_C_ALERTAS_EMAIL.md
+--
+-- Sin cuenta de usuario: el email se captura al crear la alerta, y toda
+-- la gestión (confirmar / cancelar) es vía el `token` en la URL, no vía
+-- sesión. El token se genera en código (crypto.randomUUID()) al insertar,
+-- no en la base — evita depender de una extensión de Postgres.
+--
+-- Flujo de estados: pending -> active -> triggered (terminal, una sola
+-- notificación por alerta) | unsubscribed (terminal, desde pending o
+-- active).
+-- ============================================================
+
+create table if not exists email_alerts (
+  id bigint generated always as identity primary key,
+  email text not null,
+  match_key text not null,
+  canonical_name text not null,
+  target_price integer not null,
+  status text not null default 'pending', -- 'pending' | 'active' | 'triggered' | 'unsubscribed'
+  token text not null,
+  created_at timestamptz not null default now(),
+  confirmed_at timestamptz,
+  last_checked_at timestamptz,
+  triggered_at timestamptz,
+  triggered_price integer
+);
+create unique index if not exists email_alerts_token_idx on email_alerts (token);
+create index if not exists email_alerts_active_idx on email_alerts (status) where status = 'active';
+alter table email_alerts enable row level security;
