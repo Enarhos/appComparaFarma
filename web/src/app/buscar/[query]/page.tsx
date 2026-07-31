@@ -3,6 +3,7 @@ import Link from "next/link";
 import { searchMedications } from "@/lib/search";
 import { MedicationCard } from "@/components/MedicationCard";
 import { SearchBox } from "@/components/SearchBox";
+import { RecipeLinkBadge } from "@/components/RecipeLinkBadge";
 import { buildMedicationJsonLd, toJsonLdScript } from "@/lib/structuredData";
 
 interface PageProps {
@@ -29,9 +30,12 @@ export default async function SearchPage({ params }: PageProps) {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
-      <Link href="/" className="text-sm text-muted hover:text-accent-ink">
-        ← Volver a la búsqueda
-      </Link>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <Link href="/" className="text-sm text-muted hover:text-accent-ink">
+          ← Volver a la búsqueda
+        </Link>
+        <RecipeLinkBadge />
+      </div>
 
       <h1 className="mt-4 font-display text-3xl font-semibold text-ink">
         Resultados para <span className="text-accent-ink">&quot;{term}&quot;</span>
