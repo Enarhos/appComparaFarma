@@ -35,4 +35,58 @@ Ver `PRODUCT_REVIEW_V1.md` sección 17 — no re-verificado contra código (son 
 
 ---
 
+## Propuesta de negocio con propósito — Sprints 0–F (ratificado 2026-07-31)
+
+Origen: Acta 2026-07-28 (sección 2), que dejó la secuencia **sin ratificar** a la espera de que el CTO la scoreara con CFPS antes de generar cualquier prompt de sprint (Regla 2 del `PRODUCT_DECISION_FRAMEWORK.md`). Esta sección cumple ese paso — el "Sprint 0" original.
+
+### Scoring CFPS
+
+| Sprint | Ítem | VU | VN | DF | IE | CT | CM | RG | **CFPS** | Clasificación |
+|---|---|---|---|---|---|---|---|---|---|---|
+| A | Identidad permanente de medicamento (CFM-ID) — `docs/engineering/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md` | 2 | 3 | 2 | 5 | 4 | 4 | 5 | **3.2** | Media |
+| B | Alternativas bioequivalentes más baratas en la ficha | 5 | 4 | 5 | 5 | 1 | 2 | 2 | **4.15** | Alta — **bloqueada, ver nota** |
+| C | Alertas de precio por email en `web/` (sin tocar `mobile/`) | 4 | 4 | 3 | 4 | 3 | 3 | 4 | **3.65** | Media |
+| D | Cuenta ligera en `web/` (extiende Supabase Auth de `/admin`) | 3 | 3 | 2 | 3 | 4 | 3 | 3 | **2.9** | Backlog futuro |
+| E | Comparación de receta completa (multi-búsqueda + carrito server-side en `web/`) | 5 | 4 | 5 | 5 | 2 | 2 | 3 | **4.3** | Alta |
+| F | Primer tier de Servicios Premium + primer dato para API Comercial | 2 | 5 | 3 | 3 | 2 | 2 | 2 | **2.85** | Backlog futuro |
+
+### Nota crítica sobre B (Bioequivalentes) — por qué el score no manda a producción directo
+
+Investigación de código (2026-07-31) antes de puntuar CT/RG, siguiendo la Regla 5 ("la opinión nunca reemplaza los datos"): `isBioequivalent` (`packages/domain/src/types.ts`) **no tiene una fuente de verdad regulatoria** — hoy es un booleano que cada scraper llena como puede: dato estructurado real en Salcobrand/Dr. Simi/Cruz Verde, heurística frágil por regex/CSS en Ahumada/Sermecoop/AraucoMed (falsos negativos conocidos), y **siempre `false`** en Farmex y EasyFarma. No existe ningún catálogo de principio activo ni relación producto↔equivalente (`docs/database/schema.sql` no lo modela). `docs/architecture/DOMAIN_MODEL.md` §6 ya documentó esto como pregunta abierta, sin plan de migración.
+
+Construir la feature con estos datos violaría el Principio 7 (`PRODUCT_PRINCIPLES.md`: "Preferimos retrasar una publicación antes que entregar información incorrecta") — decirle a alguien que dos medicamentos son intercambiables, con una fuente que da falsos negativos y falsos positivos por diseño, es el tipo de error que el Libro Fundacional trata como línea roja (Acto III, "La Salud No Admite Atajos").
+
+**No se propone todavía un sprint de implementación para B** — antes hace falta un spike de investigación (fuente de datos: registro ISP público, Vademécum, o equivalente) que no existe hoy ni está scopeado. Se registra el CFPS para no perder la evaluación de valor, pero queda **bloqueada** hasta resolver la fuente de datos.
+
+### Orden recomendado (dato > score bruto)
+
+1. **Sprint E** — Comparación de receta completa. Score más alto (4.3) y sin bloqueos técnicos: reutiliza `/api/search` tal cual, el patrón de carrito ya existe en `mobile/` (`cartStore`, max 8 items) como referencia de UX.
+2. **Sprint A** — CFM-ID. Score medio (3.2) pero es el habilitante silencioso de C (alertas más robustas ante cambios de `matchKey`) y de un eventual spike de bioequivalencia (necesita una entidad estable donde colgar el dato ISP el día que exista). RFC ya diseñado, 100% aditivo, riesgo más bajo de toda la lista (RG=5).
+3. **Sprint C** — Alertas de precio por email. Score 3.65, infraestructura de email ya existe (Resend, usado en feedback).
+4. **Spike de datos (nuevo, sin nombre de sprint todavía)** — evaluar fuentes de bioequivalencia (ISP/Vademécum) antes de poder retomar B con calidad.
+5. **Sprint B** — Bioequivalentes, una vez resuelto el spike anterior.
+6. **D y F quedan en Backlog futuro** (CFPS < 3) — no se descartan, pero no hay caso de negocio suficiente hoy: D fragmenta la experiencia (cuenta solo en `web/`, sin sincronizar con `mobile/` mientras dure la Prueba Cerrada) y F es prematuro sin base de usuarios en Producción todavía.
+
+### Detalle de Sprint F — propuesta de categorización gratis/pago (registrado 2026-07-31, no puntuado todavía)
+
+Discusión con el CEO sobre qué podría ser de pago sin comprometer la misión. Regla dura, no negociable: **pagar nunca cambia qué farmacia aparece más barata ni el orden de los resultados** — eso es "comparar precios" y se mantiene igual para todos siempre (Artículo IV de la Constitución, independencia editorial). Lo que se puede diferenciar es todo lo que rodea a esa comparación: comodidad, automatización, alcance.
+
+**Siempre gratis (núcleo):** buscar cualquier medicamento y ver su precio en las 9 farmacias con los 4 canales; ver la farmacia más barata y el ahorro; filtros básicos, historial reciente, favoritos; que exista una alternativa bioequivalente y su precio (ocultar esto violaría la razón de ser del proyecto); compartir un resultado; una alerta de precio activa.
+
+**Candidatas a plan de pago (convenience, no acceso a información básica):**
+
+| Funcionalidad | Por qué puede ser de pago | Sprint relacionado |
+|---|---|---|
+| Comparación de receta completa (varios medicamentos a la vez, optimizando dónde comprar cada uno) | Cada medicamento individual sigue siendo gratis si se busca uno por uno — lo de pago es el ahorro de tiempo | Sprint E (la versión gratis/base podría lanzarse primero, y el tier de pago vendría después como extensión) |
+| Alertas de precio ilimitadas + por email/push (vs. 1 gratis) | Costo de infraestructura real y continuo (envío de correos, monitoreo) | Sprint C |
+| Historial de precios extendido (más allá de los últimos 14 registros) o exportable | El dato ya se guarda; lo de pago sería el rango largo y la exportación | — |
+| "Mi canasta mensual" para tratamiento crónico (recordatorios, gasto proyectado, multi-perfil familiar) | Es una capa de gestión encima de la comparación, no la comparación misma | Dirección 2 de la Acta 2026-07-28 |
+| Ficha enriquecida de bioequivalente (laboratorio, registro ISP, comparación técnica) | El precio y que "existe una alternativa" quedan gratis; el detalle clínico profundo puede ser premium | Sprint B, una vez resuelto el spike de datos |
+
+**Fuera de este esquema (no es un plan de usuario):** vender datos agregados/anónimos o acceso a API a farmacias/aseguradoras/investigadores ("API Comercial" del roadmap) — no compite con lo anterior, es otra fuente de ingreso que no le cobra nada al usuario final.
+
+**Limitación práctica:** nada de esto se puede lanzar hoy en `mobile/` (congelado). Lo primero viable es un plan de pago dentro de `web/`, apoyado en el login que ya existe para `/admin` (mismo enabler que Sprint D).
+
+*Pendiente: puntuar con CFPS cuando se decida avanzar — por ahora es una propuesta de categorización, no un compromiso de sprint.*
+
 *Backlog derivado de `docs/product/PRODUCT_REVIEW_V1.md`. Actualizar el estado acá cuando se cierre un ítem — no dejar que este documento se desactualice como pasó con el original.*

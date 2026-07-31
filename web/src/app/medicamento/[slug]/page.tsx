@@ -6,6 +6,8 @@ import { formatCLP, formatDateTime, formatPercent } from "@/lib/format";
 import { PharmacyPriceCard } from "@/components/PharmacyPriceCard";
 import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { SearchBox } from "@/components/SearchBox";
+import { AddToRecipeButton } from "@/components/AddToRecipeButton";
+import { RecipeLinkBadge } from "@/components/RecipeLinkBadge";
 import { resolveMedicationBySlug } from "@/lib/resolveMedication";
 import { getPriceHistory } from "@/lib/priceHistory";
 import { buildInsights } from "@/lib/insights";
@@ -108,17 +110,20 @@ export default async function MedicationDetailPage({ params }: PageProps) {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
-      <nav className="flex flex-wrap items-center gap-1 text-sm text-muted">
-        <Link href="/" className="hover:text-accent-ink">
-          Inicio
-        </Link>
-        <span aria-hidden>/</span>
-        <Link href={`/buscar/${encodeURIComponent(medication.canonicalName)}`} className="hover:text-accent-ink">
-          Resultados
-        </Link>
-        <span aria-hidden>/</span>
-        <span className="text-ink/70">{medication.canonicalName}</span>
-      </nav>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <nav className="flex flex-wrap items-center gap-1 text-sm text-muted">
+          <Link href="/" className="hover:text-accent-ink">
+            Inicio
+          </Link>
+          <span aria-hidden>/</span>
+          <Link href={`/buscar/${encodeURIComponent(medication.canonicalName)}`} className="hover:text-accent-ink">
+            Resultados
+          </Link>
+          <span aria-hidden>/</span>
+          <span className="text-ink/70">{medication.canonicalName}</span>
+        </nav>
+        <RecipeLinkBadge />
+      </div>
 
       {/* Sprint Web 2: cabecera compactada — antes eran dos bloques apilados
           (nombre/laboratorio, luego imagen/precio en una card aparte); ahora
@@ -147,6 +152,14 @@ export default async function MedicationDetailPage({ params }: PageProps) {
             )}
           </div>
           <p className="mt-0.5 text-sm text-muted">{medication.laboratory ?? "Laboratorio no especificado"}</p>
+
+          <div className="mt-2">
+            <AddToRecipeButton
+              matchKey={medication.matchKey}
+              canonicalName={medication.canonicalName}
+              imageUrl={medication.imageUrl}
+            />
+          </div>
 
           {best && bestDisplay && (
             <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">

@@ -3,6 +3,7 @@ import type { PharmacyPrice, MedicationResult } from "@comparafarma/domain";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/format";
 import { buildMedicationSlug } from "@/lib/medicationSlug";
+import { AddToRecipeButton } from "@/components/AddToRecipeButton";
 
 interface Props {
   medication: MedicationResult;
@@ -76,9 +77,16 @@ export function MedicationCard({ medication }: Props) {
         </div>
       )}
 
-      <Link href={detailHref} className="mt-2 inline-block text-sm font-medium text-accent-ink hover:underline">
-        Ver detalle e histórico →
-      </Link>
+      <div className="mt-2 flex flex-wrap items-center gap-3">
+        <Link href={detailHref} className="text-sm font-medium text-accent-ink hover:underline">
+          Ver detalle e histórico →
+        </Link>
+        <AddToRecipeButton
+          matchKey={medication.matchKey}
+          canonicalName={medication.canonicalName}
+          imageUrl={medication.imageUrl}
+        />
+      </div>
 
       <ul className="mt-4 flex flex-col gap-3 border-t border-line pt-4">
         {sortedPrices.map((price) => {
