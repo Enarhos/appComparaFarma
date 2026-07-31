@@ -20,13 +20,42 @@ interface AraucoProduct {
 
 interface SearchResponse {
   products: AraucoProduct[];
+  // HTML crudo con la grilla de resultados — el único lugar donde AraucoMed
+  // expone el stock real por producto (ver extractStockMap más abajo).
+  rendered_products?: string;
 }
 
 function stripHtml(html: string): string {
   return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 }
 
+// El JSON de `?controller=search&ajax=1` NO trae ningún campo de inventario
+// (ni `quantity` ni `available_for_order`) en el array `products` — el campo
+// `active` solo indica si el producto está publicado en el catálogo, no si
+// tiene stock. AraucoMed sigue publicando productos agotados con `active: 1`
+// (caso real: "Medicasp 1% Shampoo 130ml", agotado en el sitio pero
+// active=1 en el JSON). El stock real solo aparece renderizado como HTML
+// dentro de `rendered_products`, marcado por producto vía
+// `data-id-product="<id>"` en el <article> y una clase `out-of-stock` /
+// `pst-bar-info-oos` cuando está agotado.
+const ARTICLE_RE = /<article class="product-miniature js-product-miniature" data-id-product="(\d+)"/g;
+const OUT_OF_STOCK_RE = /availability-list out-of-stock|pst-bar-info-oos/;
+
+function extractStockMap(renderedProducts: string): Map<number, boolean> {
+  const stockMap = new Map<number, boolean>();
+  const matches = [...renderedProducts.matchAll(ARTICLE_RE)];
+  matches.forEach((match, index) => {
+    const id = Number(match[1]);
+    const start = match.index ?? 0;
+    const end = matches[index + 1]?.index ?? renderedProducts.length;
+    const segment = renderedProducts.slice(start, end);
+    stockMap.set(id, !OUT_OF_STOCK_RE.test(segment));
+  });
+  return stockMap;
+}
+
 export function parseAraucoMedResponse(data: SearchResponse): ScrapedProduct[] {
+  const stockMap = data.rendered_products ? extractStockMap(data.rendered_products) : new Map<number, boolean>();
   return (data.products ?? [])
     .filter(p => p.price_amount > 0 && p.active)
     .map(p => ({
@@ -35,7 +64,10 @@ export function parseAraucoMedResponse(data: SearchResponse): ScrapedProduct[] {
       onlinePrice: null,
       cmrPrice: null,
       sbpayPrice: null,
-      hasStock: p.active === 1,
+      // Fallback a `active` solo si no pudimos leer el HTML (ej. AraucoMed
+      // cambia de theme y deja de traer `rendered_products`) — mismo
+      // comportamiento que antes de este fix en ese caso extremo.
+      hasStock: stockMap.get(p.id_product) ?? (p.active === 1),
       hasOnlineDelivery: true,
       onlineUrl: p.url ?? null,
       imageUrl: p.cover?.bySize?.home_default?.url ?? null,
