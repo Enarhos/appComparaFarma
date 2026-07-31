@@ -1,0 +1,95 @@
+import { describe, it, expect } from "vitest";
+import {
+  buildMedicationSlug,
+  parseMedicationSlug,
+  queryFromSlug,
+  shortHash,
+  slugifyText,
+} from "./medicationSlug";
+
+describe("shortHash", () => {
+  it("is deterministic for the same input", () => {
+    expect(shortHash("paracetamol|500mg|20")).toBe(shortHash("paracetamol|500mg|20"));
+  });
+
+  it("produces a base36-looking string of the expected length range (64-bit FNV-1a)", () => {
+    const hash = shortHash("paracetamol|500mg|20");
+    expect(hash).toMatch(/^[0-9a-z]+$/);
+    expect(hash.length).toBeGreaterThanOrEqual(10);
+    expect(hash.length).toBeLessThanOrEqual(13);
+  });
+
+  it("is sensitive to small differences in the input (single character)", () => {
+    expect(shortHash("paracetamol|500mg|20")).not.toBe(shortHash("paracetamol|500mg|21"));
+    expect(shortHash("paracetamol|500mg|d")).not.toBe(shortHash("paracetamol|500mg|n"));
+  });
+
+  it("produces distinct suffixes for distinct matchKey fixtures", () => {
+    const matchKeys = [
+      "paracetamol|500mg|20",
+      "paracetamol|500mg",
+      "ibuprofeno|400mg",
+      "paracetamol|500mg|d",
+      "paracetamol|500mg|n",
+      "amoxicilina|500mg",
+    ];
+    const hashes = matchKeys.map(shortHash);
+    expect(new Set(hashes).size).toBe(matchKeys.length);
+  });
+});
+
+describe("slugifyText", () => {
+  it("strips accents and lowercases", () => {
+    expect(slugifyText("Losartán Potásico")).toBe("losartan-potasico");
+  });
+
+  it("collapses non-alphanumeric runs and trims edge hyphens", () => {
+    expect(slugifyText("Ácido Acetilsalicílico 500 mg (Bioequivalente)")).toBe(
+      "acido-acetilsalicilico-500-mg-bioequivalente"
+    );
+  });
+
+  it("handles very long names without throwing and stays within a-z0-9-", () => {
+    const longName = "A".repeat(300) + " 500 mg";
+    const slug = slugifyText(longName);
+    expect(slug).toMatch(/^[a-z0-9-]+$/);
+    expect(slug.length).toBeGreaterThan(0);
+  });
+});
+
+describe("buildMedicationSlug", () => {
+  it("joins the slugified name and the hash with a single hyphen", () => {
+    const medication = { canonicalName: "Paracetamol 500 mg 16 comprimidos", matchKey: "paracetamol|500mg|16" };
+    const slug = buildMedicationSlug(medication);
+    expect(slug).toBe(`paracetamol-500-mg-16-comprimidos-${shortHash(medication.matchKey)}`);
+  });
+});
+
+describe("parseMedicationSlug", () => {
+  it("parses a valid slug into human part and hash", () => {
+    const parsed = parseMedicationSlug("paracetamol-500-mg-16-comprimidos-3fe2cyydzh2fb");
+    expect(parsed).toEqual({ humanPart: "paracetamol-500-mg-16-comprimidos", hash: "3fe2cyydzh2fb" });
+  });
+
+  it("returns null when there is no separating hyphen", () => {
+    expect(parseMedicationSlug("paracetamol")).toBeNull();
+  });
+
+  it("returns null when the hash segment has invalid characters", () => {
+    expect(parseMedicationSlug("paracetamol-500mg-ABC123")).toBeNull();
+  });
+
+  it("returns null when the human part is empty", () => {
+    expect(parseMedicationSlug("-3fe2cyydzh2fb")).toBeNull();
+  });
+
+  it("returns null when the slug ends with a trailing hyphen", () => {
+    expect(parseMedicationSlug("paracetamol-500mg-")).toBeNull();
+  });
+});
+
+describe("queryFromSlug", () => {
+  it("turns hyphens back into spaces", () => {
+    expect(queryFromSlug("paracetamol-500-mg-16-comprimidos")).toBe("paracetamol 500 mg 16 comprimidos");
+  });
+});

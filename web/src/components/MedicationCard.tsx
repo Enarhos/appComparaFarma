@@ -1,12 +1,14 @@
+import Link from "next/link";
 import type { PharmacyPrice, MedicationResult } from "@comparafarma/domain";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/format";
+import { buildMedicationSlug } from "@/lib/medicationSlug";
 
 interface Props {
   medication: MedicationResult;
 }
 
-function channelChips(price: PharmacyPrice, cardLabel: string | null): { label: string; value: number }[] {
+export function channelChips(price: PharmacyPrice, cardLabel: string | null): { label: string; value: number }[] {
   const { channels } = price;
   const chips: { label: string; value: number }[] = [{ label: "Presencial", value: channels.store }];
   if (channels.online != null) chips.push({ label: "Online", value: channels.online });
@@ -24,23 +26,29 @@ export function MedicationCard({ medication }: Props) {
   const bestDisplay = best ? PHARMACIES[best.pharmacySlug] : null;
   const savings = best && priciest && priciest !== best ? priciest.channels.effective - best.channels.effective : 0;
 
+  const detailHref = `/medicamento/${buildMedicationSlug(medication)}`;
+
   return (
     <article className="rounded-2xl border border-line bg-paper-raised p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
       <div className="flex items-start gap-4">
         {medication.imageUrl && (
-          // eslint-disable-next-line @next/next/no-img-element -- imágenes de dominios variables por farmacia, sin lista blanca que mantener
-          <img
-            src={medication.imageUrl}
-            alt=""
-            width={56}
-            height={56}
-            className="h-14 w-14 shrink-0 rounded-lg border border-line bg-white object-contain p-1"
-          />
+          <Link href={detailHref} className="shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element -- imágenes de dominios variables por farmacia, sin lista blanca que mantener */}
+            <img
+              src={medication.imageUrl}
+              alt=""
+              width={56}
+              height={56}
+              className="h-14 w-14 rounded-lg border border-line bg-white object-contain p-1"
+            />
+          </Link>
         )}
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-3">
             <h2 className="font-display text-xl font-semibold leading-snug text-ink">
-              {medication.canonicalName}
+              <Link href={detailHref} className="hover:text-accent-ink">
+                {medication.canonicalName}
+              </Link>
             </h2>
             {medication.isBioequivalent && (
               <span className="shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent-ink">
@@ -67,6 +75,10 @@ export function MedicationCard({ medication }: Props) {
           )}
         </div>
       )}
+
+      <Link href={detailHref} className="mt-2 inline-block text-sm font-medium text-accent-ink hover:underline">
+        Ver detalle e histórico →
+      </Link>
 
       <ul className="mt-4 flex flex-col gap-3 border-t border-line pt-4">
         {sortedPrices.map((price) => {

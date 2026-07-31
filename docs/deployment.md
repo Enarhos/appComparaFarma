@@ -188,7 +188,21 @@ El workflow `.github/workflows/ci.yml` deploya `api/` automáticamente en cada p
 curl "https://comparafarma-api.vercel.app/api/health"
 curl "https://comparafarma-api.vercel.app/api/config"
 curl "https://comparafarma-api.vercel.app/api/search?q=paracetamol&debug=1"
+
+# Histórico de precios (Sprint Web 1) — usar un matchKey real de una respuesta
+# de /api/search (campo "matchKey" de cualquier resultado).
+curl "https://comparafarma-api.vercel.app/api/price-history?matchKey=paracetamol%7C500mg&days=90"
 ```
+
+### Histórico de precios — `GET /api/price-history`
+
+Endpoint aditivo (no reemplaza ni cambia `/api/search`). Lee de `price_history`, la misma tabla que ya llena `recordPriceHistory()` en cada búsqueda — sin tabla nueva.
+
+- **Parámetros**: `matchKey` (obligatorio, 2–180 caracteres) y `days` (opcional, default 90, clamp a [7, 365]).
+- **Respuesta 200** siempre, incluso sin historial: `series: []` y `summary` con métricas `null` en vez de un error o 404.
+- **Degradación segura**: si Supabase no está configurado o la consulta falla, responde igual con historial vacío — nunca rompe la carga de la ficha (`api/src/lib/priceHistoryQuery.ts`).
+- Middleware compartido con el resto de la API: `x-api-key` si `API_SECRET_KEY` está seteada, rate limit por IP, `x-request-id`.
+- Consumido server-side desde `web/` en `web/src/lib/priceHistory.ts` (misma variable `API_URL`, sin exponer `SUPABASE_SECRET_KEY` al cliente).
 
 ### Feature flags de farmacias
 Ver [`docs/pharmacy-flags.md`](pharmacy-flags.md) para activar/desactivar farmacias sin nuevo build — el camino normal hoy es `/admin/config`, no una env var.
