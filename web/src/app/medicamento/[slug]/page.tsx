@@ -8,6 +8,7 @@ import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { SearchBox } from "@/components/SearchBox";
 import { AddToRecipeButton } from "@/components/AddToRecipeButton";
 import { RecipeLinkBadge } from "@/components/RecipeLinkBadge";
+import { PriceAlertForm } from "@/components/PriceAlertForm";
 import { resolveMedicationBySlug } from "@/lib/resolveMedication";
 import { getPriceHistory } from "@/lib/priceHistory";
 import { buildInsights } from "@/lib/insights";
@@ -153,12 +154,19 @@ export default async function MedicationDetailPage({ params }: PageProps) {
           </div>
           <p className="mt-0.5 text-sm text-muted">{medication.laboratory ?? "Laboratorio no especificado"}</p>
 
-          <div className="mt-2">
+          <div className="mt-2 flex flex-wrap items-start gap-2">
             <AddToRecipeButton
               matchKey={medication.matchKey}
               canonicalName={medication.canonicalName}
               imageUrl={medication.imageUrl}
             />
+            {best && (
+              <PriceAlertForm
+                matchKey={medication.matchKey}
+                canonicalName={medication.canonicalName}
+                currentBestPrice={best.channels.effective}
+              />
+            )}
           </div>
 
           {best && bestDisplay && (
