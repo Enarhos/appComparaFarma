@@ -27,6 +27,12 @@ Backlog vivo derivado de `PRODUCT_REVIEW_V1.md` (2026-06-30). Estado verificado 
 
 Ver `PRODUCT_REVIEW_V1.md` sección 17 — no re-verificado contra código (son features nuevas, no fixes, así que es poco probable que ya existan). Los dos de mayor impacto: push notifications para alertas (`v20-01`) y tab bar de navegación persistente (`v20-02`).
 
+## Confiabilidad Backend — scoreado CFPS (aditivo sobre `api/`, no toca `mobile/`)
+
+| # | Ítem | CFPS | Clasificación | Nota |
+|---|---|---|---|---|
+| CF-111 | Investigar timeout persistente de AraucoMed en producción (Vercel) — issue completo en `docs/engineering/issues/CF-111_INVESTIGATE_ARAUCOMED_TIMEOUT.md` | 3.2 | ✅ Cerrado (2026-07-31) — monitoreo pasivo | VU=2 (1 de 9 farmacias, complementaria no top-4), VN=3 (confiabilidad de datos), DF=3, IE=4 (Objetivo 1: "cobertura estable de farmacias"), CT=4 (investigación simple, 1-2h), CM=4, RG=5 (aditivo, no toca otros clientes). Detectado 2026-07-19, sin resolver a 2026-07-28 (9 días). **Cerrado el 2026-07-31**: 5/5 corridas en producción con `araucomed` fulfilled, sin reproducir el timeout — no persistente, no se aplicó mitigación de código. Reabrir si reaparece con frecuencia (ahí sí revisar logs de Vercel, no disponibles en esta sesión). |
+
 ---
 
 *Backlog derivado de `docs/product/PRODUCT_REVIEW_V1.md`. Actualizar el estado acá cuando se cierre un ítem — no dejar que este documento se desactualice como pasó con el original.*
