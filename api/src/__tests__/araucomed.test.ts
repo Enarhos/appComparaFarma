@@ -83,6 +83,53 @@ describe("parseAraucoMedResponse", () => {
     expect(result.isBioequivalent).toBe(true);
   });
 
+  it("marca hasStock=false cuando el HTML renderizado dice agotado, aunque active=1 (caso real Medicasp)", () => {
+    const data = {
+      products: [
+        {
+          id_product: 6906,
+          name: "Medicasp 1% Shampoo 130ml",
+          price_amount: 3990,
+          manufacturer_name: "Genomma Lab",
+          url: "https://farmacia.araucomed.com/antimicoticos/medicasp-1-shampoo-130ml",
+          description_short: "<p>Ketoconazol Shampoo 1%</p>",
+          active: 1,
+          cover: null,
+        },
+      ],
+      rendered_products:
+        '<article class="product-miniature js-product-miniature" data-id-product="6906" data-id-product-attribute="0">' +
+        '<div class="pst-bar-info pst-bar-info-oos">AGOTADO</div>' +
+        '<div class="availability-list out-of-stock">Disponibilidad:<span>Agotado</span></div>' +
+        "</article>",
+    };
+    const [result] = parseAraucoMedResponse(data);
+    expect(result.hasStock).toBe(false);
+  });
+
+  it("mantiene hasStock=true cuando el HTML renderizado no marca agotado", () => {
+    const data = {
+      products: [
+        {
+          id_product: 111,
+          name: "Aspirina 100mg x20",
+          price_amount: 600,
+          manufacturer_name: null,
+          url: "/aspirina",
+          description_short: "",
+          active: 1,
+          cover: null,
+        },
+      ],
+      rendered_products:
+        '<article class="product-miniature js-product-miniature" data-id-product="111" data-id-product-attribute="0">' +
+        '<div class="availability-list available-now">Disponibilidad:<span>Disponible</span></div>' +
+        "</article>",
+    };
+    const [result] = parseAraucoMedResponse(data);
+    expect(result.hasStock).toBe(true);
+  });
+
   it("handles missing cover gracefully", () => {
     const data = {
       products: [
