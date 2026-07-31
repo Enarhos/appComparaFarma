@@ -28,18 +28,32 @@ export function isAllowedRedirectUrl(slug: PharmacySlug, rawUrl: string): boolea
   }
 }
 
-export async function recordClick(matchKey: string, pharmacySlug: PharmacySlug): Promise<void> {
+export async function recordClick(
+  matchKey: string,
+  pharmacySlug: PharmacySlug,
+  cfmId?: string | null
+): Promise<void> {
   if (!supabase) return;
   try {
-    const { error } = await supabase.from(TABLE).insert({ match_key: matchKey, pharmacy_slug: pharmacySlug });
+    // RFC-002 — cfm_id es aditivo/nullable, igual que en price_history.
+    const { error } = await supabase
+      .from(TABLE)
+      .insert({ match_key: matchKey, pharmacy_slug: pharmacySlug, cfm_id: cfmId ?? null });
     if (error) console.warn("pharmacy_clicks insert failed", error.message);
   } catch (err) {
     console.warn("pharmacy_clicks insert threw", err);
   }
 }
 
-function buildTrackedUrl(origin: string, matchKey: string, slug: PharmacySlug, targetUrl: string): string {
+function buildTrackedUrl(
+  origin: string,
+  matchKey: string,
+  slug: PharmacySlug,
+  targetUrl: string,
+  cfmId: string | null
+): string {
   const params = new URLSearchParams({ slug, matchKey, url: targetUrl });
+  if (cfmId) params.set("cfmId", cfmId);
   return `${origin}/api/go?${params.toString()}`;
 }
 
@@ -52,7 +66,16 @@ export function withTrackedUrls(results: MedicationResult[], origin: string): Me
     ...result,
     prices: result.prices.map((price) =>
       price.onlineUrl
-        ? { ...price, onlineUrl: buildTrackedUrl(origin, result.matchKey, price.pharmacySlug, price.onlineUrl) }
+        ? {
+            ...price,
+            onlineUrl: buildTrackedUrl(
+              origin,
+              result.matchKey,
+              price.pharmacySlug,
+              price.onlineUrl,
+              result.cfmId ?? null
+            ),
+          }
         : price
     ),
   }));

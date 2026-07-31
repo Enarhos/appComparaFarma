@@ -12,6 +12,7 @@ export async function handleGoRoute(reqLike: unknown, resLike: unknown): Promise
   const slugParam = getSearchParam(req, "slug");
   const matchKey = getSearchParam(req, "matchKey");
   const url = getSearchParam(req, "url");
+  const cfmId = getSearchParam(req, "cfmId"); // RFC-002 — opcional, ver clickTracking.ts
 
   const validSlug = slugParam && VALID_SLUGS.has(slugParam) ? (slugParam as PharmacySlug) : null;
 
@@ -22,7 +23,7 @@ export async function handleGoRoute(reqLike: unknown, resLike: unknown): Promise
     return;
   }
 
-  await recordClick(matchKey, validSlug).catch(() => {});
+  await recordClick(matchKey, validSlug, cfmId).catch(() => {});
 
   res.statusCode = 302;
   res.setHeader("Location", url);

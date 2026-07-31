@@ -23,6 +23,9 @@ vi.mock("../clients/ecofarmacias.js", () => ({ searchEcoFarmacias: mocks.searchE
 vi.mock("../clients/farmex.js", () => ({ searchFarmex: mocks.searchFarmex }));
 vi.mock("../clients/sermecoop.js", () => ({ searchSermecoop: mocks.searchSermecoop }));
 vi.mock("../clients/easyfarma.js", () => ({ searchEasyFarma: mocks.searchEasyFarma }));
+// RFC-002: Supabase ausente en este test suite (no se mockea supabaseClient),
+// así que attachCanonicalIds() y recordPriceHistory() degradan a no-op —
+// exactamente el camino que ejercita "sin Supabase configurado".
 
 import { searchMedicationsDetailed } from "../services/searchService.js";
 
@@ -55,6 +58,27 @@ describe("searchMedicationsDetailed", () => {
     expect(execution.diagnostics.pharmacies.find((item) => item.pharmacySlug === "dr-simi")).toMatchObject({
       status: "fulfilled",
       resultCount: 1,
+    });
+  });
+
+  it("RFC-002: sin Supabase configurado, cada resultado incluye cfmId:null sin cambiar ningún otro campo", async () => {
+    mocks.searchCruzVerde.mockResolvedValue([makeProduct("Paracetamol 500 mg 16 Comprimidos", 840)]);
+    mocks.searchSalcobrand.mockResolvedValue([]);
+    mocks.searchAhumada.mockResolvedValue([]);
+    mocks.searchDrSimi.mockResolvedValue([]);
+    mocks.searchAraucoMed.mockResolvedValue([]);
+    mocks.searchEcoFarmacias.mockResolvedValue([]);
+    mocks.searchFarmex.mockResolvedValue([]);
+    mocks.searchSermecoop.mockResolvedValue([]);
+    mocks.searchEasyFarma.mockResolvedValue([]);
+
+    const execution = await searchMedicationsDetailed("paracetamol");
+
+    expect(execution.results).toHaveLength(1);
+    expect(execution.results[0].cfmId).toBeNull();
+    expect(execution.results[0]).toMatchObject({
+      canonicalName: expect.any(String),
+      bestPrice: 840,
     });
   });
 });

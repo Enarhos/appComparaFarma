@@ -50,6 +50,11 @@ Origen: Acta 2026-07-28 (sección 2), que dejó la secuencia **sin ratificar** a
 | E | Comparación de receta completa (multi-búsqueda + carrito server-side en `web/`) | 5 | 4 | 5 | 5 | 2 | 2 | 3 | **4.3** | Alta |
 | F | Primer tier de Servicios Premium + primer dato para API Comercial | 2 | 5 | 3 | 3 | 2 | 2 | 2 | **2.85** | Backlog futuro |
 
+### Estado de implementación
+
+- **Sprint E** — ✅ Implementado y mergeado a `main` (2026-07-31, PR #29). "Mi receta" en `web/`: comparación de costo total entre comprar todo en una farmacia vs. repartir la compra, sin cuenta ni link para compartir (localStorage). Ver `docs/prompt/claude/PROMPT_CLAUDE_SPRINT_E_RECETA_COMPLETA.md`.
+- **Sprint A** — ✅ Implementado y mergeado a `main` (2026-07-31). RFC-002 (Fases 0–5) ejecutado: `cfmId` aditivo en `packages/domain`, `api/src/lib/medicationRegistry.ts` nuevo, wiring en `searchService.ts`, backfill en `priceHistoryDb.ts`/`clickTracking.ts`. Cero cambios en `mobile/`, cero cambios en `matchKey`/`mergeDuplicates`. **Pendiente de Mario**: correr el SQL de `docs/database/schema.sql` (sección "Sprint A") en el SQL Editor de Supabase antes de que el registro empiece a funcionar en producción — sin eso, `/api/search` sigue funcionando igual que antes con `cfmId: null` en todos los resultados (degradación elegante, no rompe nada).
+
 ### Nota crítica sobre B (Bioequivalentes) — por qué el score no manda a producción directo
 
 Investigación de código (2026-07-31) antes de puntuar CT/RG, siguiendo la Regla 5 ("la opinión nunca reemplaza los datos"): `isBioequivalent` (`packages/domain/src/types.ts`) **no tiene una fuente de verdad regulatoria** — hoy es un booleano que cada scraper llena como puede: dato estructurado real en Salcobrand/Dr. Simi/Cruz Verde, heurística frágil por regex/CSS en Ahumada/Sermecoop/AraucoMed (falsos negativos conocidos), y **siempre `false`** en Farmex y EasyFarma. No existe ningún catálogo de principio activo ni relación producto↔equivalente (`docs/database/schema.sql` no lo modela). `docs/architecture/DOMAIN_MODEL.md` §6 ya documentó esto como pregunta abierta, sin plan de migración.

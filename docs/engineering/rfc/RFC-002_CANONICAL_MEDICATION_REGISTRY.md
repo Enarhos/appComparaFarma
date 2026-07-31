@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | RFC-002 |
 | **Título** | Canonical Medication Registry — identidad permanente para medicamentos, coexistiendo con `matchKey` |
-| **Estado** | Propuesto (no implementado) |
+| **Estado** | Implementado (Fases 0–5, 2026-07-31) — Fase 6 (curación manual) sigue futura/opcional |
 | **Fecha** | 2026-07-21 |
 | **Autor** | Claude Code (Principal SE) |
 | **Revisores** | CTO, Tech Lead |

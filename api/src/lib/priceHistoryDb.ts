@@ -32,6 +32,9 @@ export async function recordPriceHistory(results: MedicationResult[]): Promise<v
   const rows = results.flatMap((result) =>
     result.prices.map((price) => ({
       match_key: result.matchKey,
+      // RFC-002 — cfm_id es aditivo/nullable: no reemplaza match_key, solo
+      // ancla el registro a una identidad estable cuando está disponible.
+      cfm_id: result.cfmId ?? null,
       canonical_name: result.canonicalName,
       pharmacy_slug: price.pharmacySlug,
       store_price: price.channels.store,
