@@ -11,5 +11,5 @@ export function handleBranchesRoute(reqLike: unknown, resLike: unknown): void {
     return;
   }
 
-  json(res, 200, BRANCH_INDEX);
+  json(res, 200, BRANCH_INDEX, req);
 }

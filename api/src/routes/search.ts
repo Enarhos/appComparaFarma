@@ -75,7 +75,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
           cache: "hit",
           results: cached.length,
         }));
-        json(res, 200, withTrackedUrls(cached, origin));
+        json(res, 200, withTrackedUrls(cached, origin), req);
         return;
       }
     }
@@ -91,7 +91,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
         cache: "bypass",
         diagnostics: execution.diagnostics,
       }));
-      json(res, 200, { ...execution, results: withTrackedUrls(execution.results, origin) });
+      json(res, 200, { ...execution, results: withTrackedUrls(execution.results, origin) }, req);
       return;
     }
 
@@ -104,7 +104,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       cache: "miss",
       results: results.length,
     }));
-    json(res, 200, withTrackedUrls(results, origin));
+    json(res, 200, withTrackedUrls(results, origin), req);
   } catch (error) {
     if (error instanceof HttpError) {
       console.warn(JSON.stringify({
@@ -113,7 +113,7 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
         statusCode: error.statusCode,
         error: error.message,
       }));
-      json(res, error.statusCode, { error: error.message });
+      json(res, error.statusCode, { error: error.message }, req);
       return;
     }
 
@@ -124,6 +124,6 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       error: error instanceof Error ? error.message : "Unknown error",
     }));
     captureException(error, { requestId, route: "/api/search" });
-    json(res, 500, { error: "No se pudieron obtener los precios." });
+    json(res, 500, { error: "No se pudieron obtener los precios." }, req);
   }
 }
