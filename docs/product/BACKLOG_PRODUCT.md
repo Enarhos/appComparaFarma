@@ -64,6 +64,28 @@ Construir la feature con estos datos violaría el Principio 7 (`PRODUCT_PRINCIPL
 
 **No se propone todavía un sprint de implementación para B** — antes hace falta un spike de investigación (fuente de datos: registro ISP público, Vademécum, o equivalente) que no existe hoy ni está scopeado. Se registra el CFPS para no perder la evaluación de valor, pero queda **bloqueada** hasta resolver la fuente de datos.
 
+### Spike de datos de bioequivalencia — ✅ cerrado (2026-07-31), desbloquea B parcialmente
+
+**Fuente encontrada**: `datos.gob.cl` (dataset 1303, "Listado de productos equivalentes terapéuticos" del ISP) — API real vía CKAN DataStore (`https://datos.gob.cl/api/3/action/datastore_search?resource_id=93df17ca-b694-4697-96b2-3dae87d9761d`), con columnas oficiales confirmadas: `Principio Activo`, `Producto`, `Registro` (N° ISP, formato `F-#####/N`), `Titular`, `Estado`, `Vigencia`. Confirmado con datos reales (no es un dataset vacío ni de juguete). Segunda fuente evaluada, `registrosanitario.ispch.gob.cl` (buscador ISP por registro individual): scrapeable en principio (existe un scraper de terceros ya funcionando, [hopazo/scrapers-salud](https://github.com/hopazo/scrapers-salud)), pero es HTML de ASP.NET sin API — mismo nivel de fragilidad que Ahumada/Sermecoop, se descarta como pieza central y queda como plan B.
+
+**El obstáculo real no es "no hay dato" sino el cruce (matching) contra nuestro catálogo** — el ISP identifica productos por nombre de marca + N° de Registro; nuestras 9 farmacias no siempre exponen ese número. Investigación exhaustiva (solo lectura, sin tocar código) de las 9:
+
+| Farmacia | Registro ISP disponible | Dónde |
+|---|---|---|
+| Dr. Simi | ✅ Sí — ya en el JSON que consumimos hoy | Campo `"Registro Sanitario"` en la respuesta de búsqueda VTEX (se descarta al mapear) |
+| Farmex | ✅ Sí — ya en el JSON que consumimos hoy | Link `RegistroISP=F-####/##` embebido en el HTML de `body` (descripción) de la respuesta Shopify |
+| AraucoMed | ✅ Sí, pero requiere scrape adicional | Solo en la página de detalle del producto (no en el JSON de búsqueda) — costo extra de latencia/fragilidad por producto |
+| Sermecoop | ✅ Sí, pero requiere scrape adicional | Solo en la página de detalle (modal "Información del producto") |
+| EasyFarma | ✅ Sí, pero requiere scrape adicional | Campo "Código ISP" solo en la página de detalle |
+| Cruz Verde | ❌ No disponible | Verificado en listado y endpoint de detalle real (Demandware) — no existe el dato |
+| EcoFarmacias | ❌ No disponible | Verificado en la respuesta completa de la API WooCommerce |
+| Salcobrand | ❌ No disponible por producto | Solo aparece una resolución de autorización ISP a nivel de sitio completo, no un registro sanitario por medicamento |
+| Ahumada | ⚠️ Inconcluso | Demandware hidrata la ficha vía JS del lado del cliente — el fetch sin navegador no vio el cuerpo de la página; requiere verificación con Chrome real |
+
+**Conclusión**: match exacto (sin fuzzy matching, cero riesgo de falso positivo) es viable de inmediato para 2/9 farmacias (Dr. Simi, Farmex) y viable con esfuerzo adicional (scrape de ficha de detalle) para 3/9 más (AraucoMed, Sermecoop, EasyFarma) — hasta 5/9 potencial. 3/9 (Cruz Verde, EcoFarmacias, Salcobrand) no tienen el dato y necesitarían fuzzy matching (mismo riesgo que motivó el bloqueo original) o simplemente no mostrar el badge para esas farmacias. Ahumada queda pendiente de verificación con navegador.
+
+**Recomendación**: un "Sprint B-lite" acotado a Dr. Simi + Farmex (capturar `registroISP` como campo aditivo, cruzar contra el dataset del ISP, mostrar el badge de bioequivalencia certificada **solo** donde hay match exacto por número de registro — nunca por nombre) es de bajo riesgo y ya viable hoy. Extender a AraucoMed/Sermecoop/EasyFarma es una fase posterior (cuesta una llamada de red extra por producto). Cruz Verde/EcoFarmacias/Salcobrand quedan fuera de este enfoque hasta que se decida si vale la pena el fuzzy matching con curación manual (ver estrategia anti-falsos-positivos discutida con el CEO: match exacto > multi-señal + curación humana > nunca fuzzy directo a producción).
+
 ### Orden recomendado (dato > score bruto)
 
 1. **Sprint E** — Comparación de receta completa. Score más alto (4.3) y sin bloqueos técnicos: reutiliza `/api/search` tal cual, el patrón de carrito ya existe en `mobile/` (`cartStore`, max 8 items) como referencia de UX.
