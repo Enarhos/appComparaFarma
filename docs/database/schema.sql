@@ -157,3 +157,54 @@ create table if not exists email_alerts (
 create unique index if not exists email_alerts_token_idx on email_alerts (token);
 create index if not exists email_alerts_active_idx on email_alerts (status) where status = 'active';
 alter table email_alerts enable row level security;
+
+-- ============================================================
+-- Sprint D (2026-08-02) — Cuenta ligera + perfil de usuario en web/.
+-- docs/prompt/claude/PROMPT_CLAUDE_SPRINT_D_CUENTA_LIGERA.md
+--
+-- Extiende auth.users (ya provista por Supabase Auth, usada hoy solo
+-- por /admin) con una tabla de perfil propia. El campo `plan` es el
+-- habilitante para gatear funcionalidades futuras (todavía no gatea
+-- nada existente) — sin flujo de pago en este sprint, el plan se
+-- activa a mano desde /admin/usuarios.
+--
+-- El usuario puede LEER su propio perfil (policy de select), pero NO
+-- puede escribirlo — no hay policy de insert/update para el rol
+-- autenticado normal, así que un usuario no puede auto-asignarse
+-- premium. Solo admin.ts (SUPABASE_SECRET_KEY, bypassea RLS) escribe.
+-- ============================================================
+
+create table if not exists profiles (
+  id uuid primary key references auth.users(id) on delete cascade,
+  email text not null,
+  plan text not null default 'free', -- 'free' | 'premium'
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists profiles_plan_idx on profiles (plan);
+alter table profiles enable row level security;
+
+drop policy if exists "profiles_select_own" on profiles;
+create policy "profiles_select_own" on profiles
+  for select using (auth.uid() = id);
+
+-- Crea automáticamente la fila de perfil (plan free) cuando alguien se
+-- registra vía Supabase Auth — security definer porque el usuario que
+-- dispara el trigger todavía no tiene permiso propio de insert.
+create or replace function public.handle_new_profile()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  insert into public.profiles (id, email) values (new.id, new.email)
+  on conflict (id) do nothing;
+  return new;
+end;
+$$;
+
+drop trigger if exists on_auth_user_created on auth.users;
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute function public.handle_new_profile();
