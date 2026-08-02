@@ -77,7 +77,11 @@ Ver Epic completa en `docs/product/EPICS.md`. Origen: `docs/product/SUBSCRIPTION
 - **Métrica de éxito de esta fase:** `getEntitlement(userId)` responde correctamente para al menos un usuario con plan manual/cortesía y para el flujo de notificación de Google Play en un entorno de prueba (sandbox/test track), sin haber tocado `mobile/`.
 - **Riesgos:** ver Epic en `EPICS.md` y detalle completo en RFC-003.
 
-**Clasificación 3.0 (Media)** — mismo rango que Sprint A (CFM-ID, 3.2): infraestructura habilitante de bajo valor de usuario directo pero alto impacto estratégico. Se autoriza el papeleo (Epic + RFC + ADR + issues) y la implementación de Fase 1 queda condicionada a que Mario ratifique este score antes de generar el prompt de sprint (Regla 2).
+**Clasificación 3.0 (Media)** — mismo rango que Sprint A (CFM-ID, 3.2): infraestructura habilitante de bajo valor de usuario directo pero alto impacto estratégico. Ratificado por el CEO sin ajustes (2026-08-02).
+
+### Estado de implementación
+
+- **Subscription Platform — Fase 1** — ✅ Implementado y mergeado a `main` (2026-08-02). CF-112 a CF-116 cerrados: modelo de datos (`subscription_plans`/`subscriptions`/`subscription_events`), `subscriptionService.ts` (`getEntitlement`/`recordProviderEvent`/`grantManual`/`revokeManual`), adaptador de Google Play (solo parsing de RTDN, sin tocar `mobile/`), API consolidada `api/api/subscriptions.ts` (10/12 funciones Vercel), y `web/src/lib/profilesAdmin.ts`/`profile.ts` migrados del write/read directo de `profiles.plan` al motor. 131 tests en `api/` + suite de `web/` verde; typecheck limpio. **Pendiente de Mario**: correr el SQL nuevo de `docs/database/schema.sql` en Supabase; crear la Service Account de Google Cloud (CF-114) y configurar `GOOGLE_RTDN_SECRET` cuando se quiera probar el flujo real de Google Play. Detalle en `docs/engineering/rfc/RFC-003_SUBSCRIPTION_ENGINE.md`.
 
 ### Nota crítica sobre B (Bioequivalentes) — por qué el score no manda a producción directo
 
@@ -141,3 +145,9 @@ Discusión con el CEO sobre qué podría ser de pago sin comprometer la misión.
 *Pendiente: puntuar con CFPS cuando se decida avanzar — por ahora es una propuesta de categorización, no un compromiso de sprint.*
 
 *Backlog derivado de `docs/product/PRODUCT_REVIEW_V1.md`. Actualizar el estado acá cuando se cierre un ítem — no dejar que este documento se desactualice como pasó con el original.*
+
+## Auditoría Documental y Gobierno del Conocimiento (registrado 2026-08-02, congelado)
+
+Auditoría completa de solo lectura del árbol documental del repo, entregada en `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md`. Cubre inventario, clasificación por dominio, mapa de relaciones, duplicidades (visión/principios definidos hasta 4 veces sin cruzarse, 5 copias de la tabla de farmacias/canales, colisión de numeración RFC-002), inconsistencias (9 issues `CF-101`–`110` marcados "Pendiente" pese a estar implementados, `FEATURE_STATUS.md` obsoleto, `docs/release/*` congelado en versionCode 30), vacíos reales (`KPIS.md`/`DATA_POLICY.md`/`BACKLOG_TECH.md` sin poblar), evaluación de calidad, estructura de carpetas propuesta, política de gobierno documental y roadmap priorizado (consolidar → fusionar → actualizar → marcar/eliminar → crear).
+
+**Estado: congelado a pedido del CEO.** No se ejecuta ninguna acción del roadmap todavía — queda en backlog para retomar cuando se decida priorizar. Sin CFPS asignado (no es una funcionalidad de producto, es deuda de gobierno documental; se puntuará si en algún momento compite por el mismo ciclo de sprints que otras iniciativas).
