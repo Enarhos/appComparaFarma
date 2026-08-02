@@ -157,3 +157,137 @@ create table if not exists email_alerts (
 create unique index if not exists email_alerts_token_idx on email_alerts (token);
 create index if not exists email_alerts_active_idx on email_alerts (status) where status = 'active';
 alter table email_alerts enable row level security;
+
+-- ============================================================
+-- Sprint D (2026-08-02) — Cuenta ligera + perfil de usuario en web/.
+-- docs/prompt/claude/PROMPT_CLAUDE_SPRINT_D_CUENTA_LIGERA.md
+--
+-- Extiende auth.users (ya provista por Supabase Auth, usada hoy solo
+-- por /admin) con una tabla de perfil propia. El campo `plan` es el
+-- habilitante para gatear funcionalidades futuras (todavía no gatea
+-- nada existente) — sin flujo de pago en este sprint, el plan se
+-- activa a mano desde /admin/usuarios.
+--
+-- El usuario puede LEER su propio perfil (policy de select), pero NO
+-- puede escribirlo — no hay policy de insert/update para el rol
+-- autenticado normal, así que un usuario no puede auto-asignarse
+-- premium. Solo admin.ts (SUPABASE_SECRET_KEY, bypassea RLS) escribe.
+-- ============================================================
+
+create table if not exists profiles (
+  id uuid primary key references auth.users(id) on delete cascade,
+  email text not null,
+  plan text not null default 'free', -- 'free' | 'premium'
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists profiles_plan_idx on profiles (plan);
+alter table profiles enable row level security;
+
+drop policy if exists "profiles_select_own" on profiles;
+create policy "profiles_select_own" on profiles
+  for select using (auth.uid() = id);
+
+-- Crea automáticamente la fila de perfil (plan free) cuando alguien se
+-- registra vía Supabase Auth — security definer porque el usuario que
+-- dispara el trigger todavía no tiene permiso propio de insert.
+create or replace function public.handle_new_profile()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  insert into public.profiles (id, email) values (new.id, new.email)
+  on conflict (id) do nothing;
+  return new;
+end;
+$$;
+
+drop trigger if exists on_auth_user_created on auth.users;
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute function public.handle_new_profile();
+
+-- ============================================================
+-- Subscription Platform — Fase 1 (2026-08-02) — RFC-003, ADR-0002, CF-112.
+-- docs/engineering/rfc/RFC-003_SUBSCRIPTION_ENGINE.md
+--
+-- Reemplaza profiles.plan como fuente de verdad del estado Premium.
+-- profiles.plan se mantiene como cache derivado (actualizado solo por
+-- subscriptionService, nunca por un endpoint de cliente directo) —
+-- ver CF-116.
+--
+-- Ninguna de las 3 tablas tiene policies de RLS permisivas para el rol
+-- autenticado — mismo patrón que profiles/price_history: solo api/
+-- (SUPABASE_SECRET_KEY, bypassea RLS) lee y escribe. Un usuario nunca
+-- lee subscriptions/subscription_events directo, siempre a través de
+-- getEntitlement() (que no expone raw_payload ni columnas internas).
+-- ============================================================
+
+-- Catálogo de planes — configurable, nunca hardcodeado en TypeScript.
+-- La existencia y el precio de cada plan es una decisión comercial que
+-- se resuelve con una fila acá, no con un deploy de código.
+create table if not exists subscription_plans (
+  id text primary key,                          -- código estable, ej. 'premium_monthly', 'cortesia'
+  name text not null,
+  product_type text not null default 'app',     -- 'app' | 'family' | 'business' | 'api' | 'other'
+  billing_period text,                          -- 'monthly' | 'quarterly' | 'yearly' | null (gratuito/cortesía)
+  reference_price integer,                      -- precio referencial, nullable — no es fuente de facturación real
+  currency text not null default 'CLP',
+  benefits jsonb not null default '[]',
+  is_available boolean not null default true,   -- visible/ofrecible a nuevos usuarios
+  status text not null default 'active',        -- 'active' | 'inactive'
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+alter table subscription_plans enable row level security;
+
+-- Estado actual de suscripción por usuario. Un usuario puede tener
+-- múltiples filas a lo largo del tiempo (histórico), pero a lo sumo
+-- una relevante en estado 'active'/'grace_period' por vez (no forzado
+-- por constraint de DB — lo garantiza subscriptionService).
+create table if not exists subscriptions (
+  id bigint generated always as identity primary key,
+  user_id uuid not null references profiles(id) on delete cascade,
+  plan_id text not null references subscription_plans(id),
+  status text not null default 'pending',       -- 'pending' | 'active' | 'canceled' | 'expired' | 'grace_period'
+  provider text not null,                       -- 'google_play' | 'apple' | 'stripe' | 'flow' | 'mercadopago' | 'manual'
+  provider_reference text,                      -- purchase token / subscription id del proveedor, nullable
+  started_at timestamptz,
+  current_period_end timestamptz,
+  canceled_at timestamptz,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists subscriptions_user_id_idx on subscriptions (user_id);
+create index if not exists subscriptions_active_idx
+  on subscriptions (user_id, status) where status in ('active', 'grace_period');
+alter table subscriptions enable row level security;
+
+-- Bitácora inmutable — nunca se actualiza ni se borra, solo se inserta.
+-- Es la aplicación literal de "los proveedores solo informan
+-- transacciones": cada notificación se guarda tal cual (raw_payload)
+-- antes de decidir qué hacer con ella. Da trazabilidad completa ante
+-- cualquier disputa o bug de facturación.
+create table if not exists subscription_events (
+  id bigint generated always as identity primary key,
+  subscription_id bigint references subscriptions(id) on delete set null,
+  type text not null,                           -- 'purchase' | 'renewal' | 'cancellation' | 'expiration' | 'refund'
+  provider text not null,
+  raw_payload jsonb,
+  occurred_at timestamptz not null default now()
+);
+create index if not exists subscription_events_subscription_id_idx
+  on subscription_events (subscription_id);
+alter table subscription_events enable row level security;
+
+-- Plan placeholder para el mecanismo de otorgamiento manual (/admin/usuarios,
+-- CF-116) — NO es un plan comercial (is_available=false, no se ofrece ni se
+-- vende). Existe solo para que subscriptionService.grantManual() tenga un
+-- plan_id válido contra el que insertar (subscriptions.plan_id tiene FK a
+-- subscription_plans). El catálogo comercial real (mensual, anual, familiar,
+-- etc.) queda vacío hasta que el CEO lo defina — no se hardcodea acá.
+insert into subscription_plans (id, name, product_type, billing_period, reference_price, currency, benefits, is_available, status)
+values ('cortesia', 'Cortesía (otorgado manualmente)', 'app', null, null, 'CLP', '["premium"]'::jsonb, false, 'active')
+on conflict (id) do nothing;

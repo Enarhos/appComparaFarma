@@ -56,6 +56,29 @@ Origen: Acta 2026-07-28 (sección 2), que dejó la secuencia **sin ratificar** a
 - **Sprint A** — ✅ Implementado y mergeado a `main` (2026-07-31). RFC-002 (Fases 0–5) ejecutado: `cfmId` aditivo en `packages/domain`, `api/src/lib/medicationRegistry.ts` nuevo, wiring en `searchService.ts`, backfill en `priceHistoryDb.ts`/`clickTracking.ts`. Cero cambios en `mobile/`, cero cambios en `matchKey`/`mergeDuplicates`. SQL corrido por Mario en Supabase (2026-07-31) — el registro ya está activo en producción.
 - **Sprint C** — ✅ Implementado (2026-07-31). Sin RFC previo (a diferencia de A y E) — diseño técnico completo en `docs/prompt/claude/PROMPT_CLAUDE_SPRINT_C_ALERTAS_EMAIL.md`: tabla nueva `email_alerts` en Supabase, endpoint consolidado `api/api/alerts.ts` (create/confirm/unsubscribe/check vía query param `action`, deja el conteo de funciones serverless en 9/12 del plan Hobby), cron diario en GitHub Actions reusando el patrón ya probado de `update-branches.yml`. Sin cuenta de usuario — gestión de la alerta vía token en la URL. Decisión del CEO: usar el dominio sandbox de Resend por ahora (no bloquear el sprint por verificación de dominio propio). **Pendiente de Mario**: correr el SQL de `email_alerts` en Supabase (igual que Sprint A) y configurar los secrets `RESEND_API_KEY` y `CRON_SECRET` en Vercel + GitHub Actions antes de que las alertas funcionen de punta a punta en producción.
 
+- **Sprint D** — ✅ Implementado (2026-08-02). Originalmente "Backlog futuro" (CFPS 2.9) por fragmentar la experiencia (cuenta solo en `web/`, sin sincronizar con `mobile/` mientras dure la Prueba Cerrada) — **reabierto a pedido explícito del CEO**, con alcance acotado: solo autenticación (email/contraseña, reusando Supabase Auth ya usado en `/admin`) + tabla `profiles` con campo `plan: 'free' | 'premium'` activable a mano desde `/admin/usuarios`. Sin flujo de pago todavía. **No se restringe ninguna función existente** (Sprint C/E siguen 100% gratis) — es solo la infraestructura para gatear funciones futuras. Entregado: tabla `profiles` + trigger `on_auth_user_created` + RLS (solo lectura propia) en `docs/database/schema.sql`; páginas `/cuenta/registro`, `/cuenta/ingresar`, `/cuenta` en `web/`; `auth/callback/route.ts` generalizado con `?next=` (100% compatible con el login de `/admin`); vista `/admin/usuarios` con toggle de plan (`profilesAdmin.ts`, con tests). **Pendiente de Mario**: correr la sección "Sprint D" de `docs/database/schema.sql` en el SQL Editor de Supabase antes de que el registro/login en `/cuenta` funcione en producción. Diseño en `docs/prompt/claude/PROMPT_CLAUDE_SPRINT_D_CUENTA_LIGERA.md`.
+
+## Subscription Platform — Fase 1: Motor de Suscripciones (registrado 2026-08-02)
+
+Ver Epic completa en `docs/product/EPICS.md`. Origen: `docs/product/SUBSCRIPTION_STRATEGY.md` (estrategia ya aprobada) + pedido explícito del CEO de construir ya el motor técnico, independiente de proveedor de pago, reemplazando el `profiles.plan` simple de Sprint D.
+
+### Scoring CFPS — Fase 1 solamente
+
+| Ítem | VU | VN | DF | IE | CT | CM | RG | **CFPS** | Clasificación |
+|---|---|---|---|---|---|---|---|---|---|
+| Motor de Suscripciones (modelo de datos + servicio + adaptador Google Play + API, sin UI de compra) | 2 | 4 | 2 | 5 | 2 | 3 | 3 | **3.0** | Media |
+
+**Razonamiento (Regla 4 del framework — problema, usuario, beneficio, métrica, riesgos):**
+
+- **Problema:** hoy no existe ninguna fuente de verdad server-side sobre el estado Premium — `profiles.plan` (Sprint D) es un campo plano sin vigencia, sin proveedor, sin bitácora, activable solo a mano. No hay forma de soportar una compra real de ningún proveedor sin antes tener este modelo.
+- **Usuario:** ninguno directo todavía — es infraestructura invisible, igual que Sprint A (CFM-ID). El usuario final la experimenta indirectamente el día que se activa un plan de pago real (Fase 2+).
+- **Beneficio:** habilita todo el roadmap de monetización (Objetivo 5 de `ROADMAP.md`) sin atarse a Google Play como fuente de verdad — condición explícita del CEO y de `SUBSCRIPTION_STRATEGY.md`.
+- **VU=2** (bajo — invisible, sin UI de compra en esta fase), **VN=4** (alto — es la base de toda monetización futura), **DF=2** (no diferencia frente a otras apps, es plomería), **IE=5** (muy alto — condición explícita del CEO y del roadmap), **CT=2** (no es simple: modelo de datos nuevo + servicio + adaptador + API), **CM=3** (mantención continua moderada — nuevas tablas, un adaptador de proveedor), **RG=3** (riesgo medio: `mobile/` congelado impide verificación end-to-end con una compra real; manejo de datos de pago exige cuidado extra, pero el diseño aditivo y sin tocar `mobile/` lo acota).
+- **Métrica de éxito de esta fase:** `getEntitlement(userId)` responde correctamente para al menos un usuario con plan manual/cortesía y para el flujo de notificación de Google Play en un entorno de prueba (sandbox/test track), sin haber tocado `mobile/`.
+- **Riesgos:** ver Epic en `EPICS.md` y detalle completo en RFC-003.
+
+**Clasificación 3.0 (Media)** — mismo rango que Sprint A (CFM-ID, 3.2): infraestructura habilitante de bajo valor de usuario directo pero alto impacto estratégico. Se autoriza el papeleo (Epic + RFC + ADR + issues) y la implementación de Fase 1 queda condicionada a que Mario ratifique este score antes de generar el prompt de sprint (Regla 2).
+
 ### Nota crítica sobre B (Bioequivalentes) — por qué el score no manda a producción directo
 
 Investigación de código (2026-07-31) antes de puntuar CT/RG, siguiendo la Regla 5 ("la opinión nunca reemplaza los datos"): `isBioequivalent` (`packages/domain/src/types.ts`) **no tiene una fuente de verdad regulatoria** — hoy es un booleano que cada scraper llena como puede: dato estructurado real en Salcobrand/Dr. Simi/Cruz Verde, heurística frágil por regex/CSS en Ahumada/Sermecoop/AraucoMed (falsos negativos conocidos), y **siempre `false`** en Farmex y EasyFarma. No existe ningún catálogo de principio activo ni relación producto↔equivalente (`docs/database/schema.sql` no lo modela). `docs/architecture/DOMAIN_MODEL.md` §6 ya documentó esto como pregunta abierta, sin plan de migración.
@@ -63,6 +86,28 @@ Investigación de código (2026-07-31) antes de puntuar CT/RG, siguiendo la Regl
 Construir la feature con estos datos violaría el Principio 7 (`PRODUCT_PRINCIPLES.md`: "Preferimos retrasar una publicación antes que entregar información incorrecta") — decirle a alguien que dos medicamentos son intercambiables, con una fuente que da falsos negativos y falsos positivos por diseño, es el tipo de error que el Libro Fundacional trata como línea roja (Acto III, "La Salud No Admite Atajos").
 
 **No se propone todavía un sprint de implementación para B** — antes hace falta un spike de investigación (fuente de datos: registro ISP público, Vademécum, o equivalente) que no existe hoy ni está scopeado. Se registra el CFPS para no perder la evaluación de valor, pero queda **bloqueada** hasta resolver la fuente de datos.
+
+### Spike de datos de bioequivalencia — ✅ cerrado (2026-07-31), desbloquea B parcialmente
+
+**Fuente encontrada**: `datos.gob.cl` (dataset 1303, "Listado de productos equivalentes terapéuticos" del ISP) — API real vía CKAN DataStore (`https://datos.gob.cl/api/3/action/datastore_search?resource_id=93df17ca-b694-4697-96b2-3dae87d9761d`), con columnas oficiales confirmadas: `Principio Activo`, `Producto`, `Registro` (N° ISP, formato `F-#####/N`), `Titular`, `Estado`, `Vigencia`. Confirmado con datos reales (no es un dataset vacío ni de juguete). Segunda fuente evaluada, `registrosanitario.ispch.gob.cl` (buscador ISP por registro individual): scrapeable en principio (existe un scraper de terceros ya funcionando, [hopazo/scrapers-salud](https://github.com/hopazo/scrapers-salud)), pero es HTML de ASP.NET sin API — mismo nivel de fragilidad que Ahumada/Sermecoop, se descarta como pieza central y queda como plan B.
+
+**El obstáculo real no es "no hay dato" sino el cruce (matching) contra nuestro catálogo** — el ISP identifica productos por nombre de marca + N° de Registro; nuestras 9 farmacias no siempre exponen ese número. Investigación exhaustiva (solo lectura, sin tocar código) de las 9:
+
+| Farmacia | Registro ISP disponible | Dónde |
+|---|---|---|
+| Dr. Simi | ✅ Sí — ya en el JSON que consumimos hoy | Campo `"Registro Sanitario"` en la respuesta de búsqueda VTEX (se descarta al mapear) |
+| Farmex | ✅ Sí — ya en el JSON que consumimos hoy | Link `RegistroISP=F-####/##` embebido en el HTML de `body` (descripción) de la respuesta Shopify |
+| AraucoMed | ✅ Sí, pero requiere scrape adicional | Solo en la página de detalle del producto (no en el JSON de búsqueda) — costo extra de latencia/fragilidad por producto |
+| Sermecoop | ✅ Sí, pero requiere scrape adicional | Solo en la página de detalle (modal "Información del producto") |
+| EasyFarma | ✅ Sí, pero requiere scrape adicional | Campo "Código ISP" solo en la página de detalle |
+| Cruz Verde | ❌ No disponible | Verificado en listado y endpoint de detalle real (Demandware) — no existe el dato |
+| EcoFarmacias | ❌ No disponible | Verificado en la respuesta completa de la API WooCommerce |
+| Salcobrand | ❌ No disponible por producto | Solo aparece una resolución de autorización ISP a nivel de sitio completo, no un registro sanitario por medicamento |
+| Ahumada | ⚠️ Inconcluso | Demandware hidrata la ficha vía JS del lado del cliente — el fetch sin navegador no vio el cuerpo de la página; requiere verificación con Chrome real |
+
+**Conclusión**: match exacto (sin fuzzy matching, cero riesgo de falso positivo) es viable de inmediato para 2/9 farmacias (Dr. Simi, Farmex) y viable con esfuerzo adicional (scrape de ficha de detalle) para 3/9 más (AraucoMed, Sermecoop, EasyFarma) — hasta 5/9 potencial. 3/9 (Cruz Verde, EcoFarmacias, Salcobrand) no tienen el dato y necesitarían fuzzy matching (mismo riesgo que motivó el bloqueo original) o simplemente no mostrar el badge para esas farmacias. Ahumada queda pendiente de verificación con navegador.
+
+**Recomendación**: un "Sprint B-lite" acotado a Dr. Simi + Farmex (capturar `registroISP` como campo aditivo, cruzar contra el dataset del ISP, mostrar el badge de bioequivalencia certificada **solo** donde hay match exacto por número de registro — nunca por nombre) es de bajo riesgo y ya viable hoy. Extender a AraucoMed/Sermecoop/EasyFarma es una fase posterior (cuesta una llamada de red extra por producto). Cruz Verde/EcoFarmacias/Salcobrand quedan fuera de este enfoque hasta que se decida si vale la pena el fuzzy matching con curación manual (ver estrategia anti-falsos-positivos discutida con el CEO: match exacto > multi-señal + curación humana > nunca fuzzy directo a producción).
 
 ### Orden recomendado (dato > score bruto)
 

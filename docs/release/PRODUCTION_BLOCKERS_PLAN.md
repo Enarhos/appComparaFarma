@@ -77,10 +77,7 @@ Verificar que la URL de privacidad registrada en Play Console sea accesible y es
 https://enarhos.github.io/appComparaFarma/privacy-policy.html
 ```
 
-Si el repo ya fue transferido a la nueva org de LET, actualizar la URL a:
-```
-https://letchile.github.io/appComparaFarma/privacy-policy.html
-```
+Si el repo ya fue transferido a otra cuenta GitHub, actualizar la URL de arriba al nuevo owner de GitHub Pages.
 
 #### Paso 5 — Guardar y enviar
 
@@ -98,7 +95,7 @@ No hay cambios de código. Solo configuración en Play Console (web).
 
 ### Responsable
 
-**Product Manager o CEO de LET** — requiere acceso de Administrador a la cuenta de Google Play Console donde está registrada la app `mla.app.comparafarma`.
+**Mario** — requiere acceso de Administrador a la cuenta de Google Play Console donde está registrada la app `mla.app.comparafarma`.
 
 ### Evidencia esperada
 

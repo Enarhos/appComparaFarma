@@ -109,14 +109,13 @@ Incluir en la descripción larga términos relevantes:
 
 ### 1.7 Email de contacto
 
-- **Valor:** `mario@letchile.cl`
-  - *Fuente: `docs/privacy-policy.html` → `mario@let.cl`. Verificar cuál es el email oficial de soporte de LET para Play Console: `mario@let.cl` o `mario@letchile.cl`.*
+- **Valor:** `mario.lillo.alfaro@gmail.com`
 - **Estado:** 🔍 Requiere validación en Play Console
 
 ### 1.8 Sitio web
 
 - **Valor sugerido:** `https://enarhos.github.io/appComparaFarma/privacy-policy.html`
-  - *Si el repo fue transferido a la org de LET, actualizar a `https://letchile.github.io/appComparaFarma/privacy-policy.html`.*
+  - *Si el repo se transfiere a otra cuenta, actualizar esta URL al nuevo owner de GitHub Pages.*
 - **Estado:** 🔍 Requiere validación en Play Console
 
 ### 1.9 Política de privacidad
@@ -127,7 +126,7 @@ Incluir en la descripción larga términos relevantes:
   - ✅ Declara que no recopila datos personales
   - ✅ Menciona Sentry para monitoreo de errores
   - ✅ Menciona que el caché es local y se elimina automáticamente
-  - ✅ Contacto: `mario@let.cl`
+  - ✅ Contacto: `mario.lillo.alfaro@gmail.com`
   - ⚠️ **Desactualizada:** solo menciona 4 farmacias (Cruz Verde, Salcobrand, Ahumada, Dr. Simi), no las 9 actuales
   - ⚠️ **Desactualizada:** no menciona PostHog (analytics de uso)
   - ⚠️ **Desactualizada:** footer dice "© 2025" (año incorrecto)
@@ -394,7 +393,7 @@ Esta sección mapea los datos que ComparaFarma procesa con las categorías del f
 |----------|-----------|---------------|
 | ¿Tu app recopila o comparte tipos de datos de usuario? | **Sí** | PostHog y Sentry procesan datos anónimos |
 | ¿Todos los datos de usuario se cifran en tránsito? | **Sí** | Todo el tráfico usa HTTPS |
-| ¿Los usuarios pueden solicitar que se eliminen sus datos? | **Sí** | Los datos locales se eliminan al desinstalar la app; para datos de PostHog/Sentry, indicar `mario@let.cl` |
+| ¿Los usuarios pueden solicitar que se eliminen sus datos? | **Sí** | Los datos locales se eliminan al desinstalar la app; para datos de PostHog/Sentry, indicar `mario.lillo.alfaro@gmail.com` |
 
 **Tipos de datos a declarar:**
 
@@ -453,27 +452,27 @@ Los siguientes puntos pueden generar rechazo por parte de Google Play o penaliza
 |---|------|-------------|---------------------|-------------|-----------------|-------------------|
 | **STORE LISTING** | | | | | | |
 | SL-1 | Nombre de la app: "ComparaFarma" | ✅ Verificado | ✅ Verificado | — | — | Play Console → Ficha principal |
-| SL-2 | Descripción corta (≤80 chars, menciona las 9 farmacias) | — | ⚠️ Pendiente | Mario (LET) | Redactar y subir a Play Console | Captura Play Console → Descripción corta |
-| SL-3 | Descripción larga actualizada (v1.4.0, 9 farmacias, features actuales) | — | ⚠️ Pendiente | Mario (LET) | Redactar con features de v1.4.0 y subir | Captura Play Console → Descripción larga |
-| SL-4 | Novedades de la versión (What's new) para v1.4.0 | — | ⚠️ Pendiente | Mario (LET) | Redactar y subir | Captura Play Console → Novedades |
-| SL-5 | Categoría seleccionada | — | 🔍 No verificado | Mario (LET) | Verificar categoría en Play Console | Captura Play Console → Categoría |
-| SL-6 | Email de soporte confirmado | ⚠️ Pendiente | 🔍 No verificado | Mario (LET) | Confirmar email correcto (`mario@let.cl` o `mario@letchile.cl`) | Captura Play Console → Contacto |
-| SL-7 | Sitio web configurado | — | 🔍 No verificado | Mario (LET) | Verificar URL en Play Console | Captura Play Console → Sitio web |
+| SL-2 | Descripción corta (≤80 chars, menciona las 9 farmacias) | — | ⚠️ Pendiente | Mario | Redactar y subir a Play Console | Captura Play Console → Descripción corta |
+| SL-3 | Descripción larga actualizada (v1.4.0, 9 farmacias, features actuales) | — | ⚠️ Pendiente | Mario | Redactar con features de v1.4.0 y subir | Captura Play Console → Descripción larga |
+| SL-4 | Novedades de la versión (What's new) para v1.4.0 | — | ⚠️ Pendiente | Mario | Redactar y subir | Captura Play Console → Novedades |
+| SL-5 | Categoría seleccionada | — | 🔍 No verificado | Mario | Verificar categoría en Play Console | Captura Play Console → Categoría |
+| SL-6 | Email de soporte confirmado | ⚠️ Pendiente | 🔍 No verificado | Mario | Confirmar `mario.lillo.alfaro@gmail.com` en Play Console | Captura Play Console → Contacto |
+| SL-7 | Sitio web configurado | — | 🔍 No verificado | Mario | Verificar URL en Play Console | Captura Play Console → Sitio web |
 | SL-8 | Privacy Policy URL accesible | ⚠️ Pendiente | 🔍 No verificado | Dev principal | Actualizar contenido + verificar URL | URL abre correctamente, contenido actualizado |
 | **ASSETS** | | | | | | |
-| AS-1 | App icon 512×512 subido | ✅ Verificado | 🔍 No verificado | Mario (LET) | Verificar dimensiones y subida en Play Console | Captura Play Console → Ícono |
+| AS-1 | App icon 512×512 subido | ✅ Verificado | 🔍 No verificado | Mario | Verificar dimensiones y subida en Play Console | Captura Play Console → Ícono |
 | AS-2 | Adaptive icon configurado | ✅ Verificado | — | — | — | `app.json` → `adaptiveIcon` |
-| AS-3 | Feature graphic 1024×500 subido | ✅ Verificado | 🔍 No verificado | Mario (LET) | Verificar que `docs/screenshots/feature_graphic.png` es el correcto | Captura Play Console → Feature graphic |
-| AS-4 | Mínimo 2 screenshots de teléfono subidos | ✅ Verificado | 🔍 No verificado | Mario (LET) | Verificar que los 3 están subidos en Play Console | Play Console → Recursos gráficos |
-| AS-5 | Screenshots adicionales (historial, lista de compras) | ⚠️ Pendiente | ⚠️ Pendiente | Mario (LET) | Capturar en dispositivo y subir | 5–6 screenshots en Play Console |
+| AS-3 | Feature graphic 1024×500 subido | ✅ Verificado | 🔍 No verificado | Mario | Verificar que `docs/screenshots/feature_graphic.png` es el correcto | Captura Play Console → Feature graphic |
+| AS-4 | Mínimo 2 screenshots de teléfono subidos | ✅ Verificado | 🔍 No verificado | Mario | Verificar que los 3 están subidos en Play Console | Play Console → Recursos gráficos |
+| AS-5 | Screenshots adicionales (historial, lista de compras) | ⚠️ Pendiente | ⚠️ Pendiente | Mario | Capturar en dispositivo y subir | 5–6 screenshots en Play Console |
 | **APP CONTENT** | | | | | | |
 | AC-1 | Privacy Policy actualizada y accesible | ⚠️ Pendiente | 🔍 No verificado | Dev principal | Actualizar `docs/privacy-policy.html` (9 farmacias, PostHog, año 2026) | Commit en repo + URL accesible |
-| AC-2 | **Data Safety completado** ← **BLOQUEANTE** | — | ⚠️ Pendiente | Mario (LET) | Completar formulario en Play Console según sección 5 de este documento | Play Console → Seguridad de los datos → ✅ verde |
-| AC-3 | Publicidad: declarado "Sin anuncios" | ✅ Verificado | ⚠️ Pendiente | Mario (LET) | Marcar "No" en Play Console → Anuncios | Captura Play Console → Anuncios |
-| AC-4 | App Access: "Sin acceso especial requerido" | ✅ Verificado | ⚠️ Pendiente | Mario (LET) | Declarar en Play Console | Captura Play Console → Acceso a la app |
-| AC-5 | Content Rating (cuestionario IARC completado) | — | ⚠️ Pendiente | Mario (LET) | Completar el cuestionario en Play Console | Play Console → Clasificación del contenido → ✅ Completado |
-| AC-6 | Target Audience: 18+ declarado | — | 🔍 No verificado | Mario (LET) | Declarar en Play Console → Público objetivo | Captura Play Console → Público objetivo |
-| AC-7 | Disclaimer médico en descripción | — | ⚠️ Pendiente | Mario (LET) | Agregar frase "No reemplaza la consulta médica" en descripción larga | Texto visible en descripción de Play Store |
+| AC-2 | **Data Safety completado** ← **BLOQUEANTE** | — | ⚠️ Pendiente | Mario | Completar formulario en Play Console según sección 5 de este documento | Play Console → Seguridad de los datos → ✅ verde |
+| AC-3 | Publicidad: declarado "Sin anuncios" | ✅ Verificado | ⚠️ Pendiente | Mario | Marcar "No" en Play Console → Anuncios | Captura Play Console → Anuncios |
+| AC-4 | App Access: "Sin acceso especial requerido" | ✅ Verificado | ⚠️ Pendiente | Mario | Declarar en Play Console | Captura Play Console → Acceso a la app |
+| AC-5 | Content Rating (cuestionario IARC completado) | — | ⚠️ Pendiente | Mario | Completar el cuestionario en Play Console | Play Console → Clasificación del contenido → ✅ Completado |
+| AC-6 | Target Audience: 18+ declarado | — | 🔍 No verificado | Mario | Declarar en Play Console → Público objetivo | Captura Play Console → Público objetivo |
+| AC-7 | Disclaimer médico en descripción | — | ⚠️ Pendiente | Mario | Agregar frase "No reemplaza la consulta médica" en descripción larga | Texto visible en descripción de Play Store |
 | **RELEASE** | | | | | | |
 | RE-1 | Package name: `mla.app.comparafarma` | ✅ Verificado | ✅ Verificado | — | — | `app.json` |
 | RE-2 | Version name: 1.4.0 | ✅ Verificado | 🔍 No verificado | — | Verificar que Play Console muestra 1.4.0 | Play Console → Prueba Interna |
@@ -481,18 +480,18 @@ Los siguientes puntos pueden generar rechazo por parte de Google Play o penaliza
 | RE-4 | Target SDK ≥ 34 en AAB | ✅ Verificado (36) | 🔍 No verificado | — | Verificar en Play Console → Bundle analysis | Captura Bundle analysis → Target SDK |
 | RE-5 | Permisos de producción correctos (solo INTERNET + VIBRATE) | ✅ Verificado | ⚠️ Pendiente | Dev principal | Verificar en Play Console → Bundle analysis → Permissions | Captura Bundle analysis sin permisos de storage |
 | RE-6 | AAB firmado disponible | ✅ Verificado | ✅ Verificado | — | — | `comparafarma-v1.4.0-vc30.aab` + Prueba Interna activa |
-| RE-7 | Play App Signing habilitado | — | 🔍 No verificado | Mario (LET) | Verificar en Play Console → Setup → App integrity | Captura Play Console → App signing |
+| RE-7 | Play App Signing habilitado | — | 🔍 No verificado | Mario | Verificar en Play Console → Setup → App integrity | Captura Play Console → App signing |
 | RE-8 | Keystore respaldada de forma segura | — | — | Dev principal | Confirmar backup externo al repo | Confirmación verbal / evidencia de backup seguro |
 | RE-9 | `eas.json` track corregido a "production" | ⚠️ Pendiente | — | Dev principal | Cambiar `"track": "internal"` → `"track": "production"` en `eas.json` | Diff en repo |
 | RE-10 | Track de Prueba Interna activo (vc30) | — | ✅ Verificado | — | — | Play Console → Prueba Interna |
-| RE-11 | Promover vc30 a Producción | — | ⚠️ Pendiente | Mario (LET) | Play Console → Prueba Interna → Promover (después de resolver todos los ítems pendientes) | Play Console → Producción → rollout activo |
+| RE-11 | Promover vc30 a Producción | — | ⚠️ Pendiente | Mario | Play Console → Prueba Interna → Promover (después de resolver todos los ítems pendientes) | Play Console → Producción → rollout activo |
 | **SEGURIDAD** | | | | | | |
 | SE-1 | `API_SECRET_KEY` configurada en Vercel | ✅ Verificado | — | — | — | `curl` sin key devuelve 401 |
 | SE-2 | `EXPO_PUBLIC_API_KEY` en EAS Secrets | ⚠️ Pendiente | — | Dev principal | Verificar con `eas secret:list` | `eas secret:list` muestra la key |
 | SE-3 | Algolia keys en Vercel env vars | ✅ Verificado | — | — | Resuelto en B-3 (commit `ad76da1`) | `grep` en `salcobrand.ts` sin credenciales hardcodeadas |
 | **POST-PUBLICACIÓN** | | | | | | |
 | PO-1 | Monitorear Sentry en las primeras 48h | — | ⚠️ Pendiente | Dev principal | Revisar Sentry Dashboard después de publicar | Sin nuevos crash reports críticos |
-| PO-2 | Revisar primeras reseñas en Play Store | — | ⚠️ Pendiente | Mario (LET) | Monitorear Play Console → Reseñas | — |
+| PO-2 | Revisar primeras reseñas en Play Store | — | ⚠️ Pendiente | Mario | Monitorear Play Console → Reseñas | — |
 | PO-3 | Verificar healthcheck monitor sigue verde | ✅ Verificado | — | Dev principal | Revisar `.github/workflows/monitor-api.yml` post-deploy | GitHub Actions → Monitor API → verde |
 
 ---
