@@ -58,6 +58,27 @@ Origen: Acta 2026-07-28 (sección 2), que dejó la secuencia **sin ratificar** a
 
 - **Sprint D** — ✅ Implementado (2026-08-02). Originalmente "Backlog futuro" (CFPS 2.9) por fragmentar la experiencia (cuenta solo en `web/`, sin sincronizar con `mobile/` mientras dure la Prueba Cerrada) — **reabierto a pedido explícito del CEO**, con alcance acotado: solo autenticación (email/contraseña, reusando Supabase Auth ya usado en `/admin`) + tabla `profiles` con campo `plan: 'free' | 'premium'` activable a mano desde `/admin/usuarios`. Sin flujo de pago todavía. **No se restringe ninguna función existente** (Sprint C/E siguen 100% gratis) — es solo la infraestructura para gatear funciones futuras. Entregado: tabla `profiles` + trigger `on_auth_user_created` + RLS (solo lectura propia) en `docs/database/schema.sql`; páginas `/cuenta/registro`, `/cuenta/ingresar`, `/cuenta` en `web/`; `auth/callback/route.ts` generalizado con `?next=` (100% compatible con el login de `/admin`); vista `/admin/usuarios` con toggle de plan (`profilesAdmin.ts`, con tests). **Pendiente de Mario**: correr la sección "Sprint D" de `docs/database/schema.sql` en el SQL Editor de Supabase antes de que el registro/login en `/cuenta` funcione en producción. Diseño en `docs/prompt/claude/PROMPT_CLAUDE_SPRINT_D_CUENTA_LIGERA.md`.
 
+## Subscription Platform — Fase 1: Motor de Suscripciones (registrado 2026-08-02)
+
+Ver Epic completa en `docs/product/EPICS.md`. Origen: `docs/product/SUBSCRIPTION_STRATEGY.md` (estrategia ya aprobada) + pedido explícito del CEO de construir ya el motor técnico, independiente de proveedor de pago, reemplazando el `profiles.plan` simple de Sprint D.
+
+### Scoring CFPS — Fase 1 solamente
+
+| Ítem | VU | VN | DF | IE | CT | CM | RG | **CFPS** | Clasificación |
+|---|---|---|---|---|---|---|---|---|---|
+| Motor de Suscripciones (modelo de datos + servicio + adaptador Google Play + API, sin UI de compra) | 2 | 4 | 2 | 5 | 2 | 3 | 3 | **3.0** | Media |
+
+**Razonamiento (Regla 4 del framework — problema, usuario, beneficio, métrica, riesgos):**
+
+- **Problema:** hoy no existe ninguna fuente de verdad server-side sobre el estado Premium — `profiles.plan` (Sprint D) es un campo plano sin vigencia, sin proveedor, sin bitácora, activable solo a mano. No hay forma de soportar una compra real de ningún proveedor sin antes tener este modelo.
+- **Usuario:** ninguno directo todavía — es infraestructura invisible, igual que Sprint A (CFM-ID). El usuario final la experimenta indirectamente el día que se activa un plan de pago real (Fase 2+).
+- **Beneficio:** habilita todo el roadmap de monetización (Objetivo 5 de `ROADMAP.md`) sin atarse a Google Play como fuente de verdad — condición explícita del CEO y de `SUBSCRIPTION_STRATEGY.md`.
+- **VU=2** (bajo — invisible, sin UI de compra en esta fase), **VN=4** (alto — es la base de toda monetización futura), **DF=2** (no diferencia frente a otras apps, es plomería), **IE=5** (muy alto — condición explícita del CEO y del roadmap), **CT=2** (no es simple: modelo de datos nuevo + servicio + adaptador + API), **CM=3** (mantención continua moderada — nuevas tablas, un adaptador de proveedor), **RG=3** (riesgo medio: `mobile/` congelado impide verificación end-to-end con una compra real; manejo de datos de pago exige cuidado extra, pero el diseño aditivo y sin tocar `mobile/` lo acota).
+- **Métrica de éxito de esta fase:** `getEntitlement(userId)` responde correctamente para al menos un usuario con plan manual/cortesía y para el flujo de notificación de Google Play en un entorno de prueba (sandbox/test track), sin haber tocado `mobile/`.
+- **Riesgos:** ver Epic en `EPICS.md` y detalle completo en RFC-003.
+
+**Clasificación 3.0 (Media)** — mismo rango que Sprint A (CFM-ID, 3.2): infraestructura habilitante de bajo valor de usuario directo pero alto impacto estratégico. Se autoriza el papeleo (Epic + RFC + ADR + issues) y la implementación de Fase 1 queda condicionada a que Mario ratifique este score antes de generar el prompt de sprint (Regla 2).
+
 ### Nota crítica sobre B (Bioequivalentes) — por qué el score no manda a producción directo
 
 Investigación de código (2026-07-31) antes de puntuar CT/RG, siguiendo la Regla 5 ("la opinión nunca reemplaza los datos"): `isBioequivalent` (`packages/domain/src/types.ts`) **no tiene una fuente de verdad regulatoria** — hoy es un booleano que cada scraper llena como puede: dato estructurado real en Salcobrand/Dr. Simi/Cruz Verde, heurística frágil por regex/CSS en Ahumada/Sermecoop/AraucoMed (falsos negativos conocidos), y **siempre `false`** en Farmex y EasyFarma. No existe ningún catálogo de principio activo ni relación producto↔equivalente (`docs/database/schema.sql` no lo modela). `docs/architecture/DOMAIN_MODEL.md` §6 ya documentó esto como pregunta abierta, sin plan de migración.

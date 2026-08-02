@@ -1,6 +1,8 @@
 # Inventario de Servicios y Plan de Migración de Cuentas
-**Versión:** 1.0 · **Fecha:** 2026-06-30  
-**Propósito:** Preparar la transferencia de todos los servicios externos de cuentas personales a la cuenta de LET antes de la publicación en Google Play Producción.
+**Versión:** 1.1 · **Fecha:** 2026-06-30 (corregido 2026-08-02)  
+**Propósito:** Preparar la consolidación de todos los servicios externos en una única cuenta — `mario.lillo.alfaro@gmail.com` — antes de la publicación en Google Play Producción.
+
+> **Corrección (2026-08-02):** el destino real de esta consolidación, confirmado por el CEO, es la cuenta personal `mario.lillo.alfaro@gmail.com` — la misma que ya es dueña de Google Play Console, Khipu, y el destinatario por defecto de Resend. En varios casos el servicio **ya está** en esa cuenta y no requiere ninguna migración — solo verificación.
 
 ---
 
@@ -26,15 +28,15 @@
 
 ## Resumen ejecutivo
 
-ComparaFarma usa **11 servicios externos**. Todos los servicios críticos excepto MINSAL (público) y Algolia (credenciales de Salcobrand, no propias) requieren migración de cuenta antes de pasar a producción empresarial.
+ComparaFarma usa **11 servicios externos**. Excepto MINSAL (público) y Algolia (credenciales de Salcobrand, no propias), todos deben quedar consolidados bajo `mario.lillo.alfaro@gmail.com`. Varios (Google Play, Khipu) ya están ahí — para esos, esta sección es solo verificación, no migración.
 
 Los tres servicios de mayor riesgo operativo son:
 
 | Servicio | Riesgo | Motivo |
 |----------|--------|--------|
-| Expo / EAS | 🔴 Alto | Cambiar el projectId rompe OTA en instalaciones existentes |
-| Khipu | 🔴 Alto | URLs de donación hardcodeadas en el bundle — requieren nuevo build |
-| Google Play | 🔴 Alto | El bundle ID `mla.app.comparafarma` no puede cambiar sin perder la app |
+| Expo / EAS | 🔴 Alto (condicional) | Solo si `belford` no es ya `mario.lillo.alfaro@gmail.com` — cambiar el projectId rompe OTA en instalaciones existentes |
+| Khipu | 🟢 Probablemente ninguno | El cobrador ya está a nombre de "Mario Lillo Alfaro" — solo falta verificar el email de la cuenta |
+| Google Play | 🟢 Ninguno | El bundle ID `mla.app.comparafarma` ya está bajo la cuenta destino (mismas iniciales) |
 
 **Recomendación:** completar la migración de cuentas **antes** de la release de producción. Si la app ya tiene usuarios activos en Prueba Interna, el orden importa (ver [Tabla resumen](#tabla-resumen-y-orden-de-migración)).
 
@@ -76,14 +78,12 @@ Dominio generado: `comparafarma-api.vercel.app`.
 
 ### Pasos para migrarlo
 
-1. Crear cuenta de equipo Vercel bajo `letchile` (o transferir la org existente).
-2. En Vercel Dashboard → proyecto → Settings → Transfer: transferir `comparafarma-api` al nuevo equipo.
-3. Copiar todas las environment variables del proyecto actual al nuevo (las secretas se eliminan al transferir; respárdelas antes).
-4. Obtener nuevo `VERCEL_TOKEN` desde la cuenta de LET (Account Settings → Tokens).
-5. Obtener nuevo `VERCEL_ORG_ID` y `VERCEL_PROJECT_ID` del proyecto transferido.
-6. Actualizar en GitHub Secrets: `VERCEL_TOKEN`.
-7. Actualizar en `.github/workflows/ci.yml` las líneas 75–76: `VERCEL_ORG_ID` y `VERCEL_PROJECT_ID`.
-8. Si el dominio cambia (dejar de usar `.vercel.app`): configurar dominio custom → actualizar `EXPO_PUBLIC_API_URL` → nuevo build Android.
+1. Verificar si el equipo Vercel actual (`team_QtbvbI6hTSxxSJ9qDFTv9z6S`) ya está asociado al login `mario.lillo.alfaro@gmail.com`. Si es así, no hay nada que migrar en este servicio.
+2. Si el equipo está bajo otro email personal: en Vercel Dashboard → proyecto → Settings → Transfer, transferir `comparafarma-api` a un equipo/cuenta bajo `mario.lillo.alfaro@gmail.com` (las secretas se eliminan al transferir; respaldarlas antes).
+3. Si hubo transferencia, obtener nuevo `VERCEL_TOKEN` desde esa cuenta (Account Settings → Tokens) y los nuevos `VERCEL_ORG_ID`/`VERCEL_PROJECT_ID`.
+4. Actualizar en GitHub Secrets: `VERCEL_TOKEN`.
+5. Actualizar en `.github/workflows/ci.yml` las líneas 75–76: `VERCEL_ORG_ID` y `VERCEL_PROJECT_ID`.
+6. Si el dominio cambia (dejar de usar `.vercel.app`): configurar dominio custom → actualizar `EXPO_PUBLIC_API_URL` → nuevo build Android.
 
 ### Cómo validar
 
@@ -99,7 +99,7 @@ curl "https://comparafarma-api.vercel.app/api/search?q=paracetamol&debug=1" \
 
 ### Responsable sugerido
 
-Administrador de infraestructura / DevOps de LET.
+Desarrollador principal (dueño de `mario.lillo.alfaro@gmail.com`).
 
 ---
 
@@ -136,18 +136,17 @@ Project ID: `4de81d7d-c9ab-470c-be3c-04eb43047e59`.
 
 ### Pasos para migrarlo
 
-1. Crear organización en [expo.dev](https://expo.dev) bajo la cuenta de LET.
-2. Invitar al desarrollador principal como miembro.
-3. Ejecutar desde `mobile/`:
+1. Verificar si la cuenta Expo `belford` ya usa `mario.lillo.alfaro@gmail.com` como email. Si es así, no hay nada que migrar.
+2. Si está bajo otro email: crear o reclamar una cuenta Expo con `mario.lillo.alfaro@gmail.com` y ejecutar desde `mobile/`:
    ```bash
    eas init --id <nuevo-project-id>
    # O si se crea el proyecto desde la web:
    # actualizar manualmente mobile/app.json → extra.eas.projectId y updates.url
    ```
-4. Cambiar `"owner": "belford"` → `"owner": "<org-letchile>"` en `mobile/app.json`.
-5. Actualizar EAS Secrets en el nuevo proyecto: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_API_KEY`, `EXPO_PUBLIC_SENTRY_DSN`.
-6. Generar nuevo build de producción (`pnpm build:android`) con los nuevos valores.
-7. Publicar nuevo build en Play Console (requiere subir el AAB generado).
+3. Cambiar `"owner": "belford"` → `"owner": "<nuevo-usuario-expo>"` en `mobile/app.json`.
+4. Actualizar EAS Secrets en el nuevo proyecto: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_API_KEY`, `EXPO_PUBLIC_SENTRY_DSN`.
+5. Generar nuevo build de producción (`pnpm build:android`) con los nuevos valores.
+6. Publicar nuevo build en Play Console (requiere subir el AAB generado).
 
 > **Nota sobre OTA:** Si se migra antes del lanzamiento público, basta con subir un nuevo build. Si ya hay usuarios activos, publicar un OTA update es imposible después de cambiar el `projectId` — se requiere un nuevo build obligatorio en Play Store.
 
@@ -194,30 +193,23 @@ La cuenta de Google Play Developer que publicó el bundle ID `mla.app.comparafar
 
 🔴 **Alto** — El bundle ID `mla.app.comparafarma` es **permanente e inmutable** una vez publicado. No puede cambiarse sin crear una app nueva (perdiendo reseñas, ratings, e historial de descargas).
 
-**Opción A — Conservar la cuenta actual:** No hay migración de Play Console. La cuenta personal sigue siendo la propietaria. Problema: si el desarrollador sale de LET, se pierde el control de la app.  
-**Opción B — Transferir la app a otra cuenta:** Google no permite transferir una app entre cuentas de Play Developer directamente. La única vía es publicar una nueva app con un nuevo bundle ID y deprecar la antigua.
+**No requiere migración.** La cuenta de Google Play Developer que publicó `mla.app.comparafarma` es (según el prefijo "mla" = Mario Lillo Alfaro) la misma cuenta `mario.lillo.alfaro@gmail.com` que es el destino de consolidación de todo lo demás. Este servicio ya está donde debe estar.
 
-### Pasos para migrarlo
+### Pasos
 
-**Si se elige conservar el bundle ID actual (recomendado):**
-1. Agregar a LET como organización de facturación y administración en la cuenta actual de Google Play.
-2. Invitar usuarios de LET como "Administradores de cuenta" en Play Console → Usuarios y permisos.
-3. Cambiar el email de recuperación y facturación de la cuenta a `mario@letchile.cl`.
-4. Documentar que la cuenta Google personal del desarrollador es también la cuenta de Play Console de LET.
-
-**Si en el futuro se necesita nuevo bundle ID (rompe compatibilidad):**
-- Publicar `mla.letchile.comparafarma` (o similar) como app nueva.
-- Mantener la antigua durante un período de transición.
+1. Confirmar en Play Console → Configuración de la cuenta que el email de contacto/facturación es `mario.lillo.alfaro@gmail.com`.
+2. Si la empresa necesita facturar o administrar formalmente la app (por ejemplo para temas tributarios), se puede agregar como organización de facturación **sin transferir la propiedad de la cuenta** — la cuenta sigue siendo `mario.lillo.alfaro@gmail.com`.
+3. No hay ningún escenario en el que se necesite un bundle ID nuevo por este motivo.
 
 ### Cómo validar
 
-1. Iniciar sesión en [play.google.com/console](https://play.google.com/console) con las credenciales de LET.
+1. Iniciar sesión en [play.google.com/console](https://play.google.com/console) con `mario.lillo.alfaro@gmail.com`.
 2. Verificar acceso a la app `mla.app.comparafarma` como Administrador.
 3. Verificar que la cuenta de facturación está actualizada.
 
 ### Responsable sugerido
 
-CEO / Administrador legal de LET (requiere control de la cuenta Google).
+Mario Lillo (dueño de la cuenta).
 
 ---
 
@@ -252,36 +244,32 @@ Esta URL está registrada en Google Play Console como política de privacidad.
 
 ### Riesgo de migración
 
-🟡 **Medio** — Si el repo se transfiere a una org (`letchile` o similar), la URL de GitHub Pages cambia. Esa URL está registrada en Play Console y en `docs/privacy-policy.html` (referencia a sí misma). Play Console no bloquea si la URL anterior sigue redirigiendo, pero puede causar confusión.
+🟡 **Medio** — Si `enarhos` no es una cuenta GitHub ligada a `mario.lillo.alfaro@gmail.com`, hay que transferir el repo, y la URL de GitHub Pages cambia. Esa URL está registrada en Play Console y en `docs/privacy-policy.html` (referencia a sí misma). Play Console no bloquea si la URL anterior sigue redirigiendo, pero puede causar confusión.
 
 ### Pasos para migrarlo
 
-1. Crear organización GitHub bajo el nombre de LET (ej: `letchile`).
-2. Invitar al desarrollador principal como owner de la org.
-3. Transferir el repo: GitHub → Settings → Transfer Ownership → `letchile/appComparaFarma`.
+1. Verificar si la cuenta GitHub `enarhos` ya tiene `mario.lillo.alfaro@gmail.com` como email asociado. Si es así, no hay nada que transferir.
+2. Si no: crear o identificar una cuenta GitHub propia de `mario.lillo.alfaro@gmail.com` y transferir el repo ahí (GitHub → Settings → Transfer Ownership).
    - La URL antigua `enarhos/appComparaFarma` redirige automáticamente durante un período.
-4. Habilitar GitHub Pages en el nuevo repo: Settings → Pages → branch `main`, carpeta `/docs`.
-5. Actualizar en Play Console: la URL de privacidad a `https://letchile.github.io/appComparaFarma/privacy-policy.html`.
-6. Actualizar cualquier referencia a `enarhos.github.io` en `docs/privacy-policy.html`.
-7. Re-crear el GitHub Secret `VERCEL_TOKEN` en el nuevo repo (los secrets no se transfieren).
+3. Habilitar GitHub Pages en el repo destino: Settings → Pages → branch `main`, carpeta `/docs`.
+4. Actualizar en Play Console la URL de privacidad si el owner del repo cambió.
+5. Actualizar cualquier referencia a `enarhos.github.io` en `docs/privacy-policy.html` si aplica.
+6. Re-crear el GitHub Secret `VERCEL_TOKEN` en el repo destino si hubo transferencia (los secrets no se transfieren).
 
 ### Cómo validar
 
 ```bash
-# Verificar que el repo es accesible desde la nueva org:
-gh repo view letchile/appComparaFarma
+# Verificar el email asociado a la cuenta enarhos (requiere estar logueado como enarhos):
+gh api user --jq '.email'
 
-# Verificar GitHub Pages:
-curl -I https://letchile.github.io/appComparaFarma/privacy-policy.html
+# Si hubo transferencia, verificar GitHub Pages en el nuevo owner:
+curl -I https://<nuevo-owner>.github.io/appComparaFarma/privacy-policy.html
 # Esperado: HTTP 200
-
-# Verificar CI en el nuevo repo:
-gh run list --repo letchile/appComparaFarma
 ```
 
 ### Responsable sugerido
 
-Desarrollador principal + Administrador GitHub de LET.
+Mario Lillo (dueño de `mario.lillo.alfaro@gmail.com`).
 
 ---
 
@@ -314,8 +302,8 @@ Desconocida (DSN solo en variables de entorno, no en el código). Inferida: cuen
 
 ### Pasos para migrarlo
 
-1. Crear organización en Sentry bajo `letchile` (o invitar al desarrollador a la org existente).
-2. Crear nuevo proyecto: Sentry → Projects → Create Project → React Native → `comparafarma`.
+1. Verificar si la cuenta Sentry actual ya usa `mario.lillo.alfaro@gmail.com`. Si es así, no hay nada que migrar.
+2. Si no: crear cuenta/organización en Sentry con `mario.lillo.alfaro@gmail.com`, crear proyecto React Native `comparafarma`.
 3. Copiar el nuevo DSN: Settings → Projects → comparafarma → Client Keys.
 4. Actualizar `EXPO_PUBLIC_SENTRY_DSN` en:
    - EAS Secrets del proyecto (nuevo): `eas secret:create --scope project --name EXPO_PUBLIC_SENTRY_DSN --value <nuevo-dsn>`
@@ -329,7 +317,7 @@ Desconocida (DSN solo en variables de entorno, no en el código). Inferida: cuen
 # O via Sentry SDK:
 Sentry.captureMessage("test-migración-2026")
 
-# En Sentry Dashboard del nuevo org:
+# En Sentry Dashboard de mario.lillo.alfaro@gmail.com:
 # Issues → verificar que el evento aparece en el proyecto correcto
 ```
 
@@ -365,8 +353,8 @@ Cuenta PostHog asociada a quien creó el proyecto con la key `phc_CGQaYJtbFpR3VJ
 
 ### Pasos para migrarlo
 
-1. Crear organización PostHog bajo la cuenta de LET en [app.posthog.com](https://app.posthog.com).
-2. Crear proyecto: `ComparaFarma`.
+1. Verificar si la cuenta PostHog dueña de la key actual ya usa `mario.lillo.alfaro@gmail.com`. Si es así, no hay nada que migrar.
+2. Si no: crear organización en [app.posthog.com](https://app.posthog.com) con `mario.lillo.alfaro@gmail.com` y proyecto `ComparaFarma`.
 3. Obtener nueva project API key desde Settings → Project → API Key.
 4. Actualizar `mobile/src/lib/analytics.ts` línea 5: reemplazar `phc_CGQaYJtbFpR3VJ6BSYrjrDpT5emqZG4WFCeaE2FEcT3g` con la nueva key.
 5. **Recomendado:** mover la key a variable de entorno para evitar este problema en el futuro:
@@ -385,12 +373,12 @@ Cuenta PostHog asociada a quien creó el proyecto con la key `phc_CGQaYJtbFpR3VJ
 ```bash
 # Lanzar la app nueva → hacer una búsqueda → esperar ~30s
 # En PostHog Dashboard → Events: verificar evento medication_search
-# Verificar que el proyecto destino es el de LET, no el personal
+# Verificar que el proyecto destino está bajo mario.lillo.alfaro@gmail.com
 ```
 
 ### Responsable sugerido
 
-Desarrollador principal + Product Manager de LET.
+Mario Lillo (dueño de `mario.lillo.alfaro@gmail.com`).
 
 ---
 
@@ -419,11 +407,12 @@ Cuenta Upstash personal del desarrollador. Database actual: desconocida (credenc
 
 ### Riesgo de migración
 
-🟢 **Bajo** — Solo requiere crear un nuevo database en la cuenta de LET y actualizar dos variables en Vercel Dashboard. El caché es efímero (TTL 5 min), no hay datos críticos que migrar.
+🟢 **Bajo** — Si hace falta migrar, solo requiere crear un nuevo database y actualizar dos variables en Vercel Dashboard. El caché es efímero (TTL 5 min), no hay datos críticos que migrar.
 
 ### Pasos para migrarlo
 
-1. Crear cuenta en [upstash.com](https://upstash.com) bajo el email de LET.
+1. Verificar si la cuenta Upstash actual ya usa `mario.lillo.alfaro@gmail.com`. Si es así, no hay nada que migrar.
+2. Si no: crear cuenta en [upstash.com](https://upstash.com) con `mario.lillo.alfaro@gmail.com`.
 2. Crear database: type `Redis`, region `us-east-1` (o la más cercana al despliegue Vercel), plan free.
 3. Copiar las credenciales REST: Settings → REST API → `UPSTASH_REDIS_REST_URL` y `UPSTASH_REDIS_REST_TOKEN`.
 4. Actualizar en Vercel Dashboard → proyecto → Settings → Environment Variables:
@@ -444,7 +433,7 @@ curl "https://comparafarma-api.vercel.app/api/search?q=paracetamol" \
 
 ### Responsable sugerido
 
-Administrador de infraestructura de LET.
+Mario Lillo (dueño de `mario.lillo.alfaro@gmail.com`).
 
 ---
 
@@ -478,23 +467,13 @@ Cobrador `Mario Lillo Alfaro`, ID `520175` en Khipu. Las URLs hardcodeadas en `d
 
 ### Riesgo de migración
 
-🔴 **Alto** — Las URLs de pago están hardcodeadas en el bundle de la app. Si se migra la cuenta Khipu, los viejos links dejan de funcionar en todas las instalaciones existentes hasta que el usuario actualice la app. Requiere:
-1. Nuevo build de producción con las URLs nuevas
-2. Actualización de Vercel env vars (para la ruta dinámica)
+**Probablemente no requiere migración.** El cobrador ya está registrado como "Mario Lillo Alfaro" (ID 520175) — si el email de esa cuenta Khipu ya es `mario.lillo.alfaro@gmail.com`, este servicio ya está en el destino correcto y no hace falta tocar nada.
 
-### Pasos para migrarlo
+### Pasos
 
-1. Crear cuenta de cobrador en [khipu.com](https://khipu.com) bajo el nombre o empresa de LET.
-2. Completar verificación de identidad empresarial en Khipu.
-3. Crear los cobros fijos:
-   - $1.000 CLP → copiar nuevo URL → `donation.ts` línea 5
-   - $3.000 CLP → copiar nuevo URL → `donation.ts` línea 6
-   - $5.000 CLP → copiar nuevo URL → `donation.ts` línea 7
-   - Link de monto libre → copiar nuevo URL → `donation.ts` línea 9
-4. Actualizar `mobile/src/constants/donation.ts` con las nuevas URLs.
-5. Obtener nuevo `RECEIVER_ID` y `SECRET` desde Khipu → Mi cuenta → Credenciales API.
-6. Actualizar Vercel Dashboard: `KHIPU_RECEIVER_ID` y `KHIPU_SECRET`.
-7. Generar nuevo build de producción Android (AAB) y publicar en Play Store.
+1. Verificar en Khipu → Mi cuenta → Datos de la cuenta que el email registrado sea `mario.lillo.alfaro@gmail.com`.
+2. Si el email es distinto, actualizarlo directamente desde la configuración de la cuenta (no requiere crear un cobrador nuevo ni cambiar las URLs de `donation.ts`, porque el `RECEIVER_ID` no cambia).
+3. Solo si en el futuro se necesitara un cobrador completamente nuevo (otro `RECEIVER_ID`): ahí sí habría que regenerar las URLs de `donation.ts` y republicar la app — pero no es el caso de esta consolidación.
 
 > El nombre del cobro ("Apoyo a ComparaFarma") está hardcodeado en `api/src/clients/khipu.ts` línea 17 — no necesita cambiar, pero verificar que sea correcto para el nuevo cobrador.
 
@@ -507,17 +486,16 @@ curl -X POST https://comparafarma-api.vercel.app/api/donate \
   -H "x-api-key: $API_SECRET_KEY" \
   -d '{"amount": 1000}'
 # Esperado: {"payment_url":"https://khipu.com/payment/..."}
-# Verificar que la URL lleva al nuevo cobrador
 
 # Flujo estático (app):
 # Abrir la app → buscar medicamento con gran diferencia de precio
 # → verificar que aparece el banner de donación → tocar "$1.000"
-# → verificar que el link abre al cobrador correcto en el browser
+# → verificar que el link sigue funcionando en el browser
 ```
 
 ### Responsable sugerido
 
-CEO / Administrador financiero de LET (requiere verificación de identidad en Khipu).
+Mario Lillo (dueño de la cuenta Khipu).
 
 ---
 
@@ -549,27 +527,30 @@ Cuenta Resend personal del desarrollador. El `from` usa `onboarding@resend.dev` 
 
 ### Riesgo de migración
 
-🟡 **Medio** — Requiere cambio de código para actualizar el `from` a un dominio propio de LET (`@letchile.cl`), lo que implica nuevo build del backend (deploy a Vercel). El email destinatario se puede cambiar solo con env var.
+🟡 **Medio** — Requiere cambio de código para actualizar el `from` a un dominio propio verificado (pendiente de definir cuál), lo que implica nuevo build del backend (deploy a Vercel). El email destinatario se puede cambiar solo con env var.
 
 ### Pasos para migrarlo
 
-1. Crear cuenta en [resend.com](https://resend.com) bajo el email de LET.
-2. Agregar y verificar el dominio de LET (DNS TXT/MX records en el proveedor de dominio).
+1. Verificar si la cuenta Resend actual ya usa `mario.lillo.alfaro@gmail.com`. Si es así, el login no requiere cambios.
+2. Definir y verificar un dominio propio en Resend (DNS TXT/MX records en el proveedor de dominio) — esto es independiente de a quién pertenece la cuenta, es solo para que el `from` deje de usar el dominio de prueba `@resend.dev`.
 3. Obtener nueva API key: Resend → API Keys → Create.
-4. Actualizar `api/src/routes/feedback.ts` línea 93:
+4. Actualizar `api/src/routes/feedback.ts` línea 93 con el dominio verificado:
    ```typescript
-   from: "ComparaFarma <noreply@letchile.cl>",
+   from: "ComparaFarma <noreply@dominio-verificado>",
    ```
 5. Actualizar Vercel Dashboard:
    - `RESEND_API_KEY` → nueva key
-   - `FEEDBACK_EMAIL` → `mario@letchile.cl` (o alias de equipo)
+   - `FEEDBACK_EMAIL` → `mario.lillo.alfaro@gmail.com`
+
 6. Hacer push a `main` para triggear el deploy automático del API.
+
+> **Nota:** `FEEDBACK_EMAIL` (destinatario) ya está resuelto — es `mario.lillo.alfaro@gmail.com`. El dominio del `from` (paso 2, remitente) es un tema técnico aparte: Resend exige verificar por DNS un dominio que uno controle, y `gmail.com` no es ese tipo de dominio — sigue pendiente definir cuál usar (o mantener `@resend.dev` por ahora).
 
 ### Cómo validar
 
 ```bash
 # Desde la app: Acerca de → formulario de feedback → enviar mensaje
-# Verificar que llega email a mario@letchile.cl con remitente @letchile.cl (no @resend.dev)
+# Verificar que llega el email con el remitente del dominio verificado (no @resend.dev)
 
 # O via curl:
 curl -X POST https://comparafarma-api.vercel.app/api/feedback \
@@ -581,7 +562,7 @@ curl -X POST https://comparafarma-api.vercel.app/api/feedback \
 
 ### Responsable sugerido
 
-Desarrollador principal + administrador del dominio `letchile.cl`.
+Mario Lillo (dueño de la cuenta) + quien administre el dominio elegido.
 
 ---
 
@@ -669,16 +650,16 @@ API pública de MINSAL — no requiere autenticación ni cuenta.
 
 ### Pasos para migrarlo
 
-1. Al transferir el repo a la nueva org, verificar que los GitHub Actions están habilitados.
+1. Si el repo GitHub se transfiere (ver sección 4), verificar que los GitHub Actions quedan habilitados en el repo destino.
 2. Verificar que el workflow `update-branches.yml` tiene `permissions: contents: write`.
 3. Hacer una ejecución manual post-transferencia para confirmar que el commit automático funciona.
 
 ### Cómo validar
 
 ```bash
-# En GitHub Actions del nuevo repo:
-gh workflow run update-branches.yml --repo letchile/appComparaFarma
-gh run list --repo letchile/appComparaFarma --workflow=update-branches.yml
+# En GitHub Actions del repo (mismo owner o el destino de la transferencia):
+gh workflow run update-branches.yml --repo <owner>/appComparaFarma
+gh run list --repo <owner>/appComparaFarma --workflow=update-branches.yml
 # Verificar status: success
 ```
 
@@ -702,7 +683,7 @@ Desarrollador principal.
 | `UPSTASH_REDIS_REST_TOKEN` | `AX...` | Sí (prod) | Vercel Dashboard | Upstash Redis |
 | `ALGOLIA_APP_ID` | `GM3RP06HJG` | No (⚠️ recomendado) | Vercel Dashboard | Algolia/Salcobrand |
 | `ALGOLIA_API_KEY` | `0259...` | No (⚠️ recomendado) | Vercel Dashboard | Algolia/Salcobrand |
-| `FEEDBACK_EMAIL` | `mario@letchile.cl` | No | Vercel Dashboard | Resend |
+| `FEEDBACK_EMAIL` | `mario.lillo.alfaro@gmail.com` | No | Vercel Dashboard | Resend |
 | `RESEND_API_KEY` | `re_...` | No (⚠️ recomendado) | Vercel Dashboard | Resend |
 | `KHIPU_RECEIVER_ID` | `520175` | Sí (ruta /donate) | Vercel Dashboard | Khipu |
 | `KHIPU_SECRET` | `[REDACTED]` | Sí (ruta /donate) | Vercel Dashboard | Khipu |
@@ -733,7 +714,7 @@ Desarrollador principal.
 | `https://khipu.com/payment/process/qzd92` | `donation.ts` | 7 | Khipu link $5.000 | 🔴 Cambia al migrar Khipu |
 | `https://khipu.com/payment/process/dAwLD` | `donation.ts` | 9 | Khipu link libre | 🔴 Cambia al migrar Khipu |
 | `mario.lillo.alfaro@gmail.com` | `feedback.ts` | 5 | Email feedback (default) | ⚠️ Mover a FEEDBACK_EMAIL |
-| `onboarding@resend.dev` | `feedback.ts` | 93 | Email from (dominio test) | ⚠️ Cambiar a dominio LET |
+| `onboarding@resend.dev` | `feedback.ts` | 93 | Email from (dominio test) | ⚠️ Cambiar a un dominio propio verificado (pendiente de definir) |
 | `GM3RP06HJG` | `salcobrand.ts` | 4 | Algolia App ID (fallback) | ⚠️ Mover a env var |
 | `0259fe250b3be4b1326eb85e47aa7d81` | `salcobrand.ts` | 5 | Algolia API Key (fallback) | ⚠️ Mover a env var |
 | `team_QtbvbI6hTSxxSJ9qDFTv9z6S` | `ci.yml` | 75 | Vercel Org ID | 🔴 Cambia al migrar Vercel |
@@ -743,21 +724,21 @@ Desarrollador principal.
 
 ## Tabla resumen y orden de migración
 
-| # | Servicio | Tipo | Riesgo | ¿Requiere nuevo build? | ¿Requiere cambio de código? | Orden sugerido |
-|---|----------|------|--------|----------------------|----------------------------|---------------|
-| 1 | Google Play | Distribución | 🔴 Alto | No | No | **Primero** |
-| 2 | GitHub | Repo/CI | 🟡 Medio | No | Sí (privacy policy URL) | **Segundo** |
-| 3 | Vercel | Backend | 🟡 Medio | No (redeploy) | Sí (ci.yml Org/Project ID) | **Tercero** |
-| 4 | Upstash Redis | Cache | 🟢 Bajo | No | No | **Cuarto** |
-| 5 | Sentry | Monitoring | 🟢 Bajo | Sí | No (solo env var) | **Quinto** |
-| 6 | PostHog | Analytics | 🟡 Medio | Sí | Sí (key hardcodeada) | **Sexto** |
-| 7 | Resend | Email | 🟡 Medio | No (redeploy API) | Sí (from: hardcodeado) | **Séptimo** |
-| 8 | Expo / EAS | Mobile | 🔴 Alto | Sí | Sí (app.json) | **Octavo** |
-| 9 | Khipu | Pagos | 🔴 Alto | Sí | Sí (donation.ts URLs) | **Noveno** |
-| 10 | Algolia | Índice 3rd party | 🟢 Sin riesgo | No | Sí (remover fallback) | Backlog |
-| 11 | MINSAL | Datos públicos | 🟢 Sin riesgo | No | No | Post-transferencia repo |
+| # | Servicio | Tipo | ¿Ya está en `mario.lillo.alfaro@gmail.com`? | ¿Requiere nuevo build? | ¿Requiere cambio de código? | Orden sugerido |
+|---|----------|------|----------------------------------------------|----------------------------|-----------------------------|---------------|
+| 1 | Google Play | Distribución | 🟢 Probablemente sí (mismas iniciales "mla") | No | No | Solo verificar |
+| 2 | Khipu | Pagos | 🟢 Probablemente sí (cobrador "Mario Lillo Alfaro") | No | No | Solo verificar |
+| 3 | GitHub | Repo/CI | ❓ Verificar email de `enarhos` | No | Sí, si no coincide (privacy policy URL) | Primero (si aplica) |
+| 4 | Vercel | Backend | ❓ Verificar email del equipo actual | No (redeploy) | Sí, si no coincide (ci.yml Org/Project ID) | Segundo (si aplica) |
+| 5 | Upstash Redis | Cache | ❓ Verificar | No | No | Tercero (si aplica) |
+| 6 | Sentry | Monitoring | ❓ Verificar | Sí | No (solo env var) | Cuarto (si aplica) |
+| 7 | PostHog | Analytics | ❓ Verificar | Sí | Sí (key hardcodeada) | Quinto (si aplica) |
+| 8 | Resend | Email | ❓ Verificar (login) — el dominio propio para el `from` es un tema aparte, no de cuenta | No (redeploy API) | Sí (from: hardcodeado) | Sexto (si aplica) |
+| 9 | Expo / EAS | Mobile | ❓ Verificar email de `belford` | Sí, si no coincide | Sí, si no coincide (app.json) | Último (solo si no coincide — rompe OTA) |
+| 10 | Algolia | Índice 3rd party | No aplica (credenciales de Salcobrand) | No | Sí (remover fallback) | Backlog |
+| 11 | MINSAL | Datos públicos | No aplica (API pública) | No | No | — |
 
-> **Estrategia:** Los servicios 8 (Expo/EAS) y 9 (Khipu) ambos requieren un nuevo build de Android. Migrarlos juntos en la misma iteración reduce el número de builds necesarios.
+> **Nota:** para la mayoría de estos servicios no sabemos con certeza si el login ya es `mario.lillo.alfaro@gmail.com` — antes de ejecutar cualquier paso de "migración", el primer paso real es simplemente entrar a cada servicio y verificarlo. Varios probablemente no requieren ninguna acción.
 
 ---
 
