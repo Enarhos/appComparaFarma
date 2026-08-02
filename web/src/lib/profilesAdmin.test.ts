@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 const state = vi.hoisted(() => ({ admin: null as unknown }));
 
@@ -54,16 +54,38 @@ describe("getProfiles", () => {
 });
 
 describe("setProfilePlan", () => {
-  it("con Supabase ausente no lanza", async () => {
-    await expect(setProfilePlan("u1", "premium")).resolves.toBeUndefined();
+  afterEach(() => {
+    vi.unstubAllGlobals();
   });
 
-  it("llama a update con el plan nuevo", async () => {
-    const updateMock = vi.fn(() => ({ eq: vi.fn(() => Promise.resolve({ error: null })) }));
-    state.admin = { from: vi.fn(() => ({ update: updateMock })) };
+  it("premium llama a action=grant-manual con el userId", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true });
+    vi.stubGlobal("fetch", fetchMock);
 
     await setProfilePlan("u1", "premium");
 
-    expect(updateMock).toHaveBeenCalledWith(expect.objectContaining({ plan: "premium" }));
+    expect(fetchMock).toHaveBeenCalledWith(
+      expect.stringContaining("action=grant-manual"),
+      expect.objectContaining({ method: "POST" })
+    );
+    const body = JSON.parse(fetchMock.mock.calls[0][1].body);
+    expect(body).toEqual({ userId: "u1", planId: "cortesia" });
+  });
+
+  it("free llama a action=revoke-manual con el userId", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true });
+    vi.stubGlobal("fetch", fetchMock);
+
+    await setProfilePlan("u1", "free");
+
+    expect(fetchMock).toHaveBeenCalledWith(
+      expect.stringContaining("action=revoke-manual"),
+      expect.objectContaining({ method: "POST" })
+    );
+  });
+
+  it("no lanza si el fetch falla (red caída)", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockRejectedValue(new Error("network down")));
+    await expect(setProfilePlan("u1", "premium")).resolves.toBeUndefined();
   });
 });

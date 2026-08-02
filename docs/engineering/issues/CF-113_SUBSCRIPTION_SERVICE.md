@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-113 |
 | **Épica** | Subscription Platform (Fase 1) |
-| **Estado** | Backlog — bloqueado por CF-112 |
+| **Estado** | ✅ Implementado (2026-08-02) |
 | **Prioridad** | Media |
 | **Estimación** | 3-4 h |
 | **Referencia** | RFC-003 §3.2, ADR-0002 |
@@ -37,7 +37,7 @@ Implementar el módulo que decide, para cualquier usuario, si tiene acceso Premi
 
 ## Definición de terminado
 
-- [ ] `subscriptionsDb.ts` implementado
-- [ ] `subscriptionService.ts` implementado (`getEntitlement`, `recordProviderEvent`, `grantManual`)
-- [ ] Tests nuevos en verde
-- [ ] `pnpm --filter api test` y `pnpm typecheck` en verde
+- [x] `subscriptionsDb.ts` implementado
+- [x] `subscriptionService.ts` implementado (`getEntitlement`, `recordProviderEvent`, `grantManual`, `revokeManual`)
+- [x] Tests nuevos en verde (18 tests: 6 en `subscriptionsDb.test.ts`, 12 en `subscriptionService.test.ts`)
+- [x] `pnpm --filter api test` y `pnpm typecheck` en verde

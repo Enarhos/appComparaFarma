@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-114 |
 | **Épica** | Subscription Platform (Fase 1) |
-| **Estado** | Backlog — bloqueado por CF-113; verificación end-to-end bloqueada por `mobile/` congelado |
+| **Estado** | 🟡 Parcial (2026-08-02) — parser de RTDN implementado y testeado; falta la Service Account de Google Cloud (acción manual de Mario) y, por lo tanto, la verificación real de purchase tokens |
 | **Prioridad** | Media |
 | **Estimación** | 4-6 h (incluye alta de credencial de Google Cloud) |
 | **Referencia** | RFC-003 §3.3, §5 (riesgos R-01, R-02, R-05), ADR-0002 |
@@ -35,7 +35,7 @@ Normalizar las notificaciones de Google Play (Real-Time Developer Notifications)
 
 ## Definición de terminado
 
-- [ ] Service Account de Google Cloud creada y documentada
-- [ ] `googlePlayAdapter.ts` implementado y testeado con fixtures
-- [ ] RTDN configurado en Play Console (sandbox/test track)
-- [ ] Limitación de asociación usuario↔purchase token documentada en `docs/product/BACKLOG_PRODUCT.md` como deuda pendiente hasta que `mobile/` se libere
+- [x] `googlePlayAdapter.ts` implementado y testeado con fixtures (15 tests — parseo de notificaciones + mapeo de los 8 `notificationType` relevantes + construcción del evento normalizado)
+- [x] Limitación de asociación usuario↔purchase token documentada (este issue, RFC-003 §5 R-02, y comentario en el código del adaptador)
+- [ ] Service Account de Google Cloud creada — **pendiente, acción manual de Mario** (ver `docs/release/SERVICE_ACCOUNT_MIGRATION.md`)
+- [ ] RTDN configurado en Play Console (sandbox/test track) — pendiente de la Service Account

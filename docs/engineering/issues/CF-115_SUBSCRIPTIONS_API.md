@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-115 |
 | **Épica** | Subscription Platform (Fase 1) |
-| **Estado** | Backlog — bloqueado por CF-113 y CF-114 |
+| **Estado** | ✅ Implementado (2026-08-02) |
 | **Prioridad** | Media |
 | **Estimación** | 2-3 h |
 | **Referencia** | RFC-003 §3.4, patrón de consolidación de Sprint C (`api/api/alerts.ts`) |
@@ -37,7 +37,8 @@ Exponer el Subscription Service vía HTTP sin sumar más de una función serverl
 
 ## Definición de terminado
 
-- [ ] `api/api/subscriptions.ts` + `api/src/routes/subscriptions.ts` implementados
-- [ ] Tests nuevos en verde
-- [ ] Confirmado que `api/vercel.json` sigue cubriendo el archivo nuevo con el glob existente (sin cambios necesarios, ver PM-001)
-- [ ] `pnpm --filter api test` y `pnpm typecheck` en verde
+- [x] `api/api/subscriptions.ts` + `api/src/routes/subscriptions.ts` implementados (`action=me`, `verify-purchase`, `google-rtdn`, `grant-manual`, `revoke-manual`)
+- [x] Tests nuevos en verde (15 tests)
+- [x] Confirmado que `api/vercel.json` sigue cubriendo el archivo nuevo con el glob existente — 10/12 funciones
+- [x] `pnpm --filter api test` y `pnpm typecheck` en verde
+- [x] `GOOGLE_RTDN_SECRET` documentado en `api/.env.example`

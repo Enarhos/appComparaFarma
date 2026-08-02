@@ -1,6 +1,7 @@
 import { createAdminClient } from "@/lib/supabase/admin";
 
 const TABLE = "profiles";
+const API_URL = (process.env.API_URL ?? "https://comparafarma-api.vercel.app").replace(/\/$/, "");
 
 export interface ProfileRow {
   id: string;
@@ -27,11 +28,25 @@ export async function getProfiles(): Promise<ProfilesResult> {
   return { ok: true, rows: (data ?? []) as ProfileRow[] };
 }
 
-// Único mecanismo de escritura sobre `plan` — profiles no tiene policy de
-// update para el rol autenticado (ver docs/database/schema.sql, Sprint D),
-// así que esto solo puede correr acá vía SUPABASE_SECRET_KEY.
+// Fase 1 del Motor de Suscripciones (RFC-003, CF-116): esto YA NO escribe
+// `profiles.plan` directo — llama a api/ (subscriptionService.grantManual /
+// revokeManual vía /api/subscriptions), que crea/cancela una suscripción
+// real (provider: 'manual', plan 'cortesia') y actualiza `profiles.plan`
+// como cache derivado desde el lado del motor. El comportamiento visible en
+// /admin/usuarios no cambia — el toggle sigue funcionando igual.
 export async function setProfilePlan(id: string, plan: "free" | "premium"): Promise<void> {
-  const admin = createAdminClient();
-  if (!admin) return;
-  await admin.from(TABLE).update({ plan, updated_at: new Date().toISOString() }).eq("id", id);
+  const action = plan === "premium" ? "grant-manual" : "revoke-manual";
+  try {
+    await fetch(`${API_URL}/api/subscriptions?action=${action}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...(process.env.API_SECRET_KEY ? { "x-api-key": process.env.API_SECRET_KEY } : {}),
+      },
+      body: JSON.stringify({ userId: id, planId: "cortesia" }),
+      cache: "no-store",
+    });
+  } catch (err) {
+    console.warn("setProfilePlan (subscription engine) failed", err);
+  }
 }

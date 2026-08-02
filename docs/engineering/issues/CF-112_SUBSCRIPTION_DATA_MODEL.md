@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-112 |
 | **Épica** | Subscription Platform (Fase 1) |
-| **Estado** | Backlog — pendiente de que se ratifique el CFPS de la Epic |
+| **Estado** | Código listo — pendiente de que Mario corra el SQL en Supabase |
 | **Prioridad** | Media |
 | **Estimación** | 1-1.5 h |
 | **Referencia** | RFC-003 §3.1, ADR-0002 |
@@ -37,6 +37,6 @@ Crear las 3 tablas nuevas en Supabase que sostienen el motor de suscripciones, s
 
 ## Definición de terminado
 
-- [ ] SQL agregado a `schema.sql`
+- [x] SQL agregado a `schema.sql`
 - [ ] SQL corrido en Supabase (a cargo de Mario)
 - [ ] Verificado en el Table Editor de Supabase que las 3 tablas y sus índices existen

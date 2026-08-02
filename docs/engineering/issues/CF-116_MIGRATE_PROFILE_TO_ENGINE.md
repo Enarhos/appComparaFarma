@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-116 |
 | **Épica** | Subscription Platform (Fase 1) |
-| **Estado** | Backlog — bloqueado por CF-113 |
+| **Estado** | ✅ Implementado (2026-08-02) |
 | **Prioridad** | Media |
 | **Estimación** | 1.5-2 h |
 | **Referencia** | RFC-003 §3.5, §4 (compatibilidad), Sprint D (`docs/prompt/claude/PROMPT_CLAUDE_SPRINT_D_CUENTA_LIGERA.md`) |
@@ -34,7 +34,7 @@ Dejar de escribir/leer `profiles.plan` directo desde código de cliente — todo
 
 ## Definición de terminado
 
-- [ ] `profilesAdmin.ts` actualizado
-- [ ] `profile.ts` actualizado
-- [ ] Tests existentes y nuevos en verde
-- [ ] Verificación manual: togglear premium en `/admin/usuarios` y confirmar que se refleja en `/cuenta`
+- [x] `profilesAdmin.ts` actualizado (`setProfilePlan` → `action=grant-manual`/`revoke-manual` vía `api/`)
+- [x] `profile.ts` actualizado (`getCurrentProfile` → `action=me` vía `api/`, degrada a `free` si `api/` no responde)
+- [x] Tests existentes y nuevos en verde (6 en `profilesAdmin.test.ts`, 7 nuevos en `profile.test.ts`)
+- [ ] Verificación manual en producción: togglear premium en `/admin/usuarios` y confirmar que se refleja en `/cuenta` — pendiente de que Mario corra el SQL de CF-112 en Supabase y haga un deploy
