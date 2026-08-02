@@ -27,6 +27,7 @@ export interface SubscriptionPlanRow {
   benefits: string[];
   isAvailable: boolean;
   status: "active" | "inactive";
+  stripePriceId: string | null;
 }
 
 export interface SubscriptionRow {
@@ -74,6 +75,7 @@ interface PlanRowRaw {
   benefits: string[];
   is_available: boolean;
   status: "active" | "inactive";
+  stripe_price_id: string | null;
 }
 
 function fromPlanRow(row: PlanRowRaw): SubscriptionPlanRow {
@@ -87,6 +89,7 @@ function fromPlanRow(row: PlanRowRaw): SubscriptionPlanRow {
     benefits: row.benefits ?? [],
     isAvailable: row.is_available,
     status: row.status,
+    stripePriceId: row.stripe_price_id ?? null,
   };
 }
 
@@ -128,6 +131,33 @@ export async function findPlan(planId: string): Promise<SubscriptionPlanRow | nu
   } catch (err) {
     console.warn("subscription_plans select threw", err);
     return null;
+  }
+}
+
+/**
+ * Planes vendibles hoy — Subscription Platform Fase 2 (RFC-004, CF-117).
+ * Usado por `action=plans` (público) para que web/ pueda mostrar un botón de
+ * upgrade sin hardcodear ningún plan. Devuelve `[]` (nunca lanza) si Supabase
+ * no responde o si el catálogo comercial todavía no tiene ningún plan
+ * disponible — ambos casos son "no mostrar el botón", no un error.
+ */
+export async function findAvailablePlans(): Promise<SubscriptionPlanRow[]> {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase
+      .from(PLANS_TABLE)
+      .select("*")
+      .eq("is_available", true)
+      .eq("status", "active")
+      .order("reference_price", { ascending: true });
+    if (error) {
+      console.warn("subscription_plans select available failed", error.message);
+      return [];
+    }
+    return ((data ?? []) as PlanRowRaw[]).map(fromPlanRow);
+  } catch (err) {
+    console.warn("subscription_plans select available threw", err);
+    return [];
   }
 }
 

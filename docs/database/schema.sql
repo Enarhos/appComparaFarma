@@ -291,3 +291,17 @@ alter table subscription_events enable row level security;
 insert into subscription_plans (id, name, product_type, billing_period, reference_price, currency, benefits, is_available, status)
 values ('cortesia', 'Cortesía (otorgado manualmente)', 'app', null, null, 'CLP', '["premium"]'::jsonb, false, 'active')
 on conflict (id) do nothing;
+
+-- ============================================================
+-- Subscription Platform — Fase 2 (2026-08-02) — RFC-004, ADR-0003, CF-117.
+-- docs/engineering/rfc/RFC-004_WEB_BILLING_STRIPE.md
+--
+-- Mapeo al Price de Stripe correspondiente a cada plan. Nullable: un plan
+-- puede existir en el catálogo (ej. 'cortesia') sin ser vendible por Stripe.
+-- El catálogo comercial real (mensual, anual, familiar, etc.) sigue vacío
+-- hasta que el CEO lo defina — crear un plan vendible es insertar una fila
+-- con is_available=true y este campo apuntando a un Price real de Stripe,
+-- nunca requiere un deploy de código (ver CF-121).
+-- ============================================================
+
+alter table subscription_plans add column if not exists stripe_price_id text;

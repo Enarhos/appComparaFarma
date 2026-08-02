@@ -10,6 +10,7 @@ vi.mock("../lib/supabaseClient.js", () => ({
 
 import {
   findPlan,
+  findAvailablePlans,
   findActiveSubscription,
   findSubscriptionByProviderReference,
   insertSubscription,
@@ -43,6 +44,7 @@ beforeEach(() => {
 describe("con Supabase ausente", () => {
   it("todas las funciones de lectura devuelven null/no-op sin lanzar", async () => {
     await expect(findPlan("premium_monthly")).resolves.toBeNull();
+    await expect(findAvailablePlans()).resolves.toEqual([]);
     await expect(findActiveSubscription("u1")).resolves.toBeNull();
     await expect(findSubscriptionByProviderReference("google_play", "tok")).resolves.toBeNull();
     await expect(insertSubscription({
@@ -72,6 +74,7 @@ describe("findPlan", () => {
                 benefits: ["premium"],
                 is_available: false,
                 status: "active",
+                stripe_price_id: null,
               },
               error: null,
             })
@@ -91,6 +94,7 @@ describe("findPlan", () => {
       benefits: ["premium"],
       isAvailable: false,
       status: "active",
+      stripePriceId: null,
     });
   });
 
@@ -99,6 +103,59 @@ describe("findPlan", () => {
       from: vi.fn(() => makeBuilder({ maybeSingle: vi.fn(() => Promise.resolve({ data: null, error: { message: "boom" } })) })),
     };
     await expect(findPlan("cortesia")).resolves.toBeNull();
+  });
+});
+
+describe("findAvailablePlans", () => {
+  it("devuelve solo los planes is_available/active, mapeados", async () => {
+    state.supabase = {
+      from: vi.fn(() =>
+        makeBuilder({
+          order: vi.fn(() =>
+            Promise.resolve({
+              data: [
+                {
+                  id: "premium_monthly",
+                  name: "Premium mensual",
+                  product_type: "app",
+                  billing_period: "monthly",
+                  reference_price: 2990,
+                  currency: "CLP",
+                  benefits: ["premium"],
+                  is_available: true,
+                  status: "active",
+                  stripe_price_id: "price_abc",
+                },
+              ],
+              error: null,
+            })
+          ),
+        })
+      ),
+    };
+
+    const plans = await findAvailablePlans();
+    expect(plans).toEqual([
+      {
+        id: "premium_monthly",
+        name: "Premium mensual",
+        productType: "app",
+        billingPeriod: "monthly",
+        referencePrice: 2990,
+        currency: "CLP",
+        benefits: ["premium"],
+        isAvailable: true,
+        status: "active",
+        stripePriceId: "price_abc",
+      },
+    ]);
+  });
+
+  it("devuelve [] si Supabase responde con error, sin lanzar", async () => {
+    state.supabase = {
+      from: vi.fn(() => makeBuilder({ order: vi.fn(() => Promise.resolve({ data: null, error: { message: "boom" } })) })),
+    };
+    await expect(findAvailablePlans()).resolves.toEqual([]);
   });
 });
 

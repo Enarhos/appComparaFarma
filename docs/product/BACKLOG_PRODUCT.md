@@ -81,6 +81,22 @@ Ver Epic completa en `docs/product/EPICS.md`. Origen: `docs/product/SUBSCRIPTION
 
 ### Estado de implementación
 
+- **Subscription Platform — Fase 2 (Web Billing + Stripe)** — CFPS registrado 2026-08-02, autorizado a ejecutar directamente por el CEO (papeleo + implementación en el mismo pedido, sin pausa de ratificación intermedia como en Fase 1).
+
+  | Criterio | Puntaje | Peso | Nota |
+  |---|---|---|---|
+  | VU (Valor Usuario) | 2 | 25% | El usuario gratuito de comparación de precios no se ve afectado; el beneficio es para quien quiera pagar por algo premium todavía sin definir en detalle |
+  | VN (Valor Negocio) | 5 | 15% | Es el primer canal de monetización real y ejecutable hoy — `mobile/` está congelado, así que `web/` es la única vía de cobro disponible |
+  | DF (Diferenciación) | 2 | 20% | Cobrar por Stripe no diferencia a ComparaFarma de ningún competidor — es infraestructura estándar |
+  | IE (Impacto Estratégico) | 5 | 20% | Activa el "Motor de Suscripciones" (activo estratégico #6 de `VISION_2030.md`) como fuente de ingreso real, no solo como capacidad técnica |
+  | CT (Complejidad Técnica) | 3 | 10% | Reutiliza el motor y el endpoint consolidado de Fase 1; lo nuevo es checkout + webhook + verificación de firma, manejable sin SDK nuevo |
+  | CM (Costo de Mantención) | 3 | 5% | Stripe Checkout hosted minimiza alcance de PCI y soporte, pero hay dinero real de por medio — más soporte que Fase 1 |
+  | RG (Riesgo) | 2 | 5% | Mayor riesgo que Fase 1 por manejar pagos reales (idempotencia de webhooks, firma, reembolsos) |
+
+  **CFPS = (2×0.25)+(5×0.15)+(2×0.20)+(5×0.20)+(3×0.10)+(3×0.05)+(2×0.05) = 3.20 — Media (evaluar), mismo rango que Fase 1 (3.0) y CFM-ID (3.2).**
+
+  Documentado en `docs/engineering/rfc/RFC-004_WEB_BILLING_STRIPE.md`, `docs/engineering/adr/ADR-0003_STRIPE_CHECKOUT_HOSTED.md`, issues `CF-117` a `CF-121`. Catálogo comercial real (nombre/precio/periodicidad de los planes vendibles) sigue sin definir — es decisión del CEO, no se inventa acá; el código queda listo para que cualquier plan que se cree en `subscription_plans` con `stripe_price_id` sea vendible sin deploy nuevo.
+
 - **Subscription Platform — Fase 1** — ✅ Implementado y mergeado a `main` (2026-08-02). CF-112 a CF-116 cerrados: modelo de datos (`subscription_plans`/`subscriptions`/`subscription_events`), `subscriptionService.ts` (`getEntitlement`/`recordProviderEvent`/`grantManual`/`revokeManual`), adaptador de Google Play (solo parsing de RTDN, sin tocar `mobile/`), API consolidada `api/api/subscriptions.ts` (10/12 funciones Vercel), y `web/src/lib/profilesAdmin.ts`/`profile.ts` migrados del write/read directo de `profiles.plan` al motor. 131 tests en `api/` + suite de `web/` verde; typecheck limpio. **Pendiente de Mario**: correr el SQL nuevo de `docs/database/schema.sql` en Supabase; crear la Service Account de Google Cloud (CF-114) y configurar `GOOGLE_RTDN_SECRET` cuando se quiera probar el flujo real de Google Play. Detalle en `docs/engineering/rfc/RFC-003_SUBSCRIPTION_ENGINE.md`.
 
 ### Nota crítica sobre B (Bioequivalentes) — por qué el score no manda a producción directo
