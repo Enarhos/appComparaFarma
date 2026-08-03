@@ -6,7 +6,7 @@ Iniciativas grandes que agrupan varios sprints/RFCs. Convención: una Epic queda
 
 ## Subscription Platform
 
-**Estado:** 🚧 Activa — Fase 1 en papeleo (2026-08-02)
+**Estado:** ✅ Activa — Fase 1 implementada y mergeada a `main` (2026-08-02)
 **Origen:** `docs/product/SUBSCRIPTION_STRATEGY.md` (estrategia ya aprobada) + pedido explícito del CEO de construir el motor técnico independiente de proveedor de pago.
 **Documentos relacionados:** `docs/product/SUBSCRIPTION_STRATEGY.md`, `docs/engineering/rfc/RFC-003_SUBSCRIPTION_ENGINE.md`, `docs/engineering/adr/ADR-0002_SUBSCRIPTION_ARCHITECTURE.md`
 
@@ -20,8 +20,8 @@ Esta Epic reemplaza el mecanismo simple `profiles.plan` de Sprint D (ver `docs/d
 
 | Fase | Alcance | Estado |
 |---|---|---|
-| **Fase 1** | Motor de suscripciones, modelo de datos, API (`api/`), adaptador Google Play (solo lado backend) | 🚧 En papeleo — CFPS pendiente de ratificar (ver `BACKLOG_PRODUCT.md`) |
-| **Fase 2** | Web Billing, integración Stripe, diseño para Flow/Mercado Pago | ⬜ Backlog futuro |
+| **Fase 1** | Motor de suscripciones, modelo de datos, API (`api/`), adaptador Google Play (solo lado backend) | ✅ Implementado y mergeado a `main` (CF-112 a CF-116, ver `BACKLOG_PRODUCT.md`) |
+| **Fase 2** | Web Billing, integración Stripe, diseño para Flow/Mercado Pago | 🚧 En implementación (CFPS 3.2, ver `BACKLOG_PRODUCT.md` — RFC-004, ADR-0003, CF-117 a CF-121) |
 | **Fase 3** | Apple Billing | ⬜ Backlog futuro |
 | **Fase 4** | Plataforma Comercial: planes configurables desde `/admin`, promociones, cupones, empresas, API Premium, licencias | ⬜ Backlog futuro |
 
