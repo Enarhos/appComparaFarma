@@ -81,7 +81,7 @@ Ver Epic completa en `docs/product/EPICS.md`. Origen: `docs/product/SUBSCRIPTION
 
 ### Estado de implementación
 
-- **Subscription Platform — Fase 2 (Web Billing + Stripe)** — CFPS registrado 2026-08-02, autorizado a ejecutar directamente por el CEO (papeleo + implementación en el mismo pedido, sin pausa de ratificación intermedia como en Fase 1).
+- **Subscription Platform — Fase 2 (Web Billing + Stripe)** — ✅ Implementado y mergeado a `main` (2026-08-02). CFPS registrado el mismo día, autorizado a ejecutar directamente por el CEO (papeleo + implementación en el mismo pedido, sin pausa de ratificación intermedia como en Fase 1).
 
   | Criterio | Puntaje | Peso | Nota |
   |---|---|---|---|
@@ -95,7 +95,7 @@ Ver Epic completa en `docs/product/EPICS.md`. Origen: `docs/product/SUBSCRIPTION
 
   **CFPS = (2×0.25)+(5×0.15)+(2×0.20)+(5×0.20)+(3×0.10)+(3×0.05)+(2×0.05) = 3.20 — Media (evaluar), mismo rango que Fase 1 (3.0) y CFM-ID (3.2).**
 
-  Documentado en `docs/engineering/rfc/RFC-004_WEB_BILLING_STRIPE.md`, `docs/engineering/adr/ADR-0003_STRIPE_CHECKOUT_HOSTED.md`, issues `CF-117` a `CF-121`. Catálogo comercial real (nombre/precio/periodicidad de los planes vendibles) sigue sin definir — es decisión del CEO, no se inventa acá; el código queda listo para que cualquier plan que se cree en `subscription_plans` con `stripe_price_id` sea vendible sin deploy nuevo.
+  Documentado en `docs/engineering/rfc/RFC-004_WEB_BILLING_STRIPE.md`, `docs/engineering/adr/ADR-0003_STRIPE_CHECKOUT_HOSTED.md`, issues `CF-117` a `CF-121`. Catálogo comercial real (nombre/precio/periodicidad de los planes vendibles) sigue sin definir — es decisión del CEO, no se inventa acá; el código queda listo para que cualquier plan que se cree en `subscription_plans` con `stripe_price_id` sea vendible sin deploy nuevo. **Pendiente de Mario (post-merge)**: correr la sección "Fase 2" de `docs/database/schema.sql` en Supabase; crear/confirmar la cuenta de Stripe bajo `mario.lillo.alfaro@gmail.com`; configurar `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` y `WEB_APP_URL` en Vercel; definir y crear el primer plan real vendible.
 
 - **Subscription Platform — Fase 1** — ✅ Implementado y mergeado a `main` (2026-08-02). CF-112 a CF-116 cerrados: modelo de datos (`subscription_plans`/`subscriptions`/`subscription_events`), `subscriptionService.ts` (`getEntitlement`/`recordProviderEvent`/`grantManual`/`revokeManual`), adaptador de Google Play (solo parsing de RTDN, sin tocar `mobile/`), API consolidada `api/api/subscriptions.ts` (10/12 funciones Vercel), y `web/src/lib/profilesAdmin.ts`/`profile.ts` migrados del write/read directo de `profiles.plan` al motor. 131 tests en `api/` + suite de `web/` verde; typecheck limpio. **Pendiente de Mario**: correr el SQL nuevo de `docs/database/schema.sql` en Supabase; crear la Service Account de Google Cloud (CF-114) y configurar `GOOGLE_RTDN_SECRET` cuando se quiera probar el flujo real de Google Play. Detalle en `docs/engineering/rfc/RFC-003_SUBSCRIPTION_ENGINE.md`.
 
