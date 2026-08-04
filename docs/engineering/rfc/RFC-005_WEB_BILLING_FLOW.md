@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | RFC-005 |
 | **Título** | Integración de Flow como proveedor de pago recurrente del Motor de Suscripciones (reemplaza RFC-004/Stripe) |
-| **Estado** | Diseño — pendiente de ratificación del CEO antes de implementar (Regla 2) |
+| **Estado** | Implementado (2026-08-03) — ratificado por el CEO sin ajustes, ejecutado y mergeado a `main` (PR #36) |
 | **Fecha** | 2026-08-02 |
 | **Autor** | Claude (rol CTO) |
 | **Documentos relacionados** | RFC-004 (Superseded), ADR-0003 (Superseded), ADR-0004, RFC-003, ADR-0002, `docs/product/EPICS.md`, `docs/product/BACKLOG_PRODUCT.md`, `docs/database/schema.sql` |
