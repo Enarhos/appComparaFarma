@@ -17,6 +17,9 @@ import {
   updateSubscription,
   insertEvent,
   updateProfilePlanCache,
+  findFlowCustomer,
+  findFlowCustomerByFlowCustomerId,
+  upsertFlowCustomer,
 } from "../lib/subscriptionsDb.js";
 
 /** Builder encadenable genérico — soporta ser awaited directamente (vía `then`) o seguir encadenando. */
@@ -25,6 +28,7 @@ function makeBuilder(overrides: Record<string, unknown> = {}) {
     select: vi.fn(() => builder),
     insert: vi.fn(() => builder),
     update: vi.fn(() => builder),
+    upsert: vi.fn(() => builder),
     eq: vi.fn(() => builder),
     in: vi.fn(() => builder),
     order: vi.fn(() => builder),
@@ -54,6 +58,118 @@ describe("con Supabase ausente", () => {
     await expect(updateSubscription(1, { status: "canceled" })).resolves.toBeUndefined();
     await expect(insertEvent({ subscriptionId: 1, type: "purchase", provider: "manual", rawPayload: {} })).resolves.toBeUndefined();
     await expect(updateProfilePlanCache("u1", true)).resolves.toBeUndefined();
+    await expect(findFlowCustomer("u1")).resolves.toBeNull();
+    await expect(findFlowCustomerByFlowCustomerId("cus_x")).resolves.toBeNull();
+    await expect(upsertFlowCustomer({ userId: "u1", flowCustomerId: "cus_x" })).resolves.toBeNull();
+  });
+});
+
+describe("findFlowCustomer", () => {
+  it("mapea la fila snake_case a camelCase", async () => {
+    state.supabase = {
+      from: vi.fn(() =>
+        makeBuilder({
+          maybeSingle: vi.fn(() =>
+            Promise.resolve({
+              data: {
+                user_id: "u1",
+                flow_customer_id: "cus_l3cc364e35",
+                register_status: "active",
+                card_brand: "Visa",
+                card_last4: "6623",
+              },
+              error: null,
+            })
+          ),
+        })
+      ),
+    };
+
+    const customer = await findFlowCustomer("u1");
+    expect(customer).toEqual({
+      userId: "u1",
+      flowCustomerId: "cus_l3cc364e35",
+      registerStatus: "active",
+      cardBrand: "Visa",
+      cardLast4: "6623",
+    });
+  });
+
+  it("devuelve null si Supabase responde con error", async () => {
+    state.supabase = {
+      from: vi.fn(() => makeBuilder({ maybeSingle: vi.fn(() => Promise.resolve({ data: null, error: { message: "boom" } })) })),
+    };
+    await expect(findFlowCustomer("u1")).resolves.toBeNull();
+  });
+});
+
+describe("findFlowCustomerByFlowCustomerId", () => {
+  it("mapea la fila snake_case a camelCase", async () => {
+    state.supabase = {
+      from: vi.fn(() =>
+        makeBuilder({
+          maybeSingle: vi.fn(() =>
+            Promise.resolve({
+              data: {
+                user_id: "u1",
+                flow_customer_id: "cus_l3cc364e35",
+                register_status: "pending",
+                card_brand: null,
+                card_last4: null,
+              },
+              error: null,
+            })
+          ),
+        })
+      ),
+    };
+
+    const customer = await findFlowCustomerByFlowCustomerId("cus_l3cc364e35");
+    expect(customer?.userId).toBe("u1");
+  });
+
+  it("devuelve null si Supabase responde con error", async () => {
+    state.supabase = {
+      from: vi.fn(() => makeBuilder({ maybeSingle: vi.fn(() => Promise.resolve({ data: null, error: { message: "boom" } })) })),
+    };
+    await expect(findFlowCustomerByFlowCustomerId("cus_x")).resolves.toBeNull();
+  });
+});
+
+describe("upsertFlowCustomer", () => {
+  it("hace upsert por user_id y devuelve la fila mapeada", async () => {
+    const upsertMock = vi.fn(() =>
+      makeBuilder({
+        single: vi.fn(() =>
+          Promise.resolve({
+            data: {
+              user_id: "u1",
+              flow_customer_id: "cus_l3cc364e35",
+              register_status: "pending",
+              card_brand: null,
+              card_last4: null,
+            },
+            error: null,
+          })
+        ),
+      })
+    );
+    state.supabase = { from: vi.fn(() => ({ upsert: upsertMock })) };
+
+    const customer = await upsertFlowCustomer({ userId: "u1", flowCustomerId: "cus_l3cc364e35" });
+    expect(customer?.flowCustomerId).toBe("cus_l3cc364e35");
+    expect(upsertMock).toHaveBeenCalledWith(
+      expect.objectContaining({ user_id: "u1", flow_customer_id: "cus_l3cc364e35" }),
+      expect.objectContaining({ onConflict: "user_id" })
+    );
+  });
+
+  it("devuelve null si el upsert falla", async () => {
+    state.supabase = {
+      from: vi.fn(() => makeBuilder({ single: vi.fn(() => Promise.resolve({ data: null, error: { message: "boom" } })) })),
+    };
+    const customer = await upsertFlowCustomer({ userId: "u1", flowCustomerId: "cus_x" });
+    expect(customer).toBeNull();
   });
 });
 
@@ -74,7 +190,6 @@ describe("findPlan", () => {
                 benefits: ["premium"],
                 is_available: false,
                 status: "active",
-                stripe_price_id: null,
               },
               error: null,
             })
@@ -94,7 +209,6 @@ describe("findPlan", () => {
       benefits: ["premium"],
       isAvailable: false,
       status: "active",
-      stripePriceId: null,
     });
   });
 
@@ -124,7 +238,6 @@ describe("findAvailablePlans", () => {
                   benefits: ["premium"],
                   is_available: true,
                   status: "active",
-                  stripe_price_id: "price_abc",
                 },
               ],
               error: null,
@@ -146,7 +259,6 @@ describe("findAvailablePlans", () => {
         benefits: ["premium"],
         isAvailable: true,
         status: "active",
-        stripePriceId: "price_abc",
       },
     ]);
   });

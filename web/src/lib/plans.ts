@@ -1,7 +1,7 @@
 const API_URL = (process.env.API_URL ?? "https://comparafarma-api.vercel.app").replace(/\/$/, "");
 
-// Subscription Platform — Fase 2 (RFC-004, CF-120).
-// docs/engineering/rfc/RFC-004_WEB_BILLING_STRIPE.md
+// Subscription Platform — Fase 2 corregida (RFC-005, CF-125).
+// docs/engineering/rfc/RFC-005_WEB_BILLING_FLOW.md
 //
 // Lista de planes vendibles hoy, resuelta 100% desde api/ (GET
 // action=plans, público, sin auth) — nunca hardcodeada en web/. Si el

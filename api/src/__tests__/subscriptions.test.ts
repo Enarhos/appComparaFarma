@@ -1,4 +1,3 @@
-import { createHmac } from "node:crypto";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 const mocks = vi.hoisted(() => ({
@@ -9,6 +8,9 @@ const mocks = vi.hoisted(() => ({
   findSubscriptionByProviderReference: vi.fn(),
   findAvailablePlans: vi.fn(),
   findPlan: vi.fn(),
+  findFlowCustomer: vi.fn(),
+  findFlowCustomerByFlowCustomerId: vi.fn(),
+  upsertFlowCustomer: vi.fn(),
   getUser: vi.fn(),
 }));
 
@@ -22,6 +24,9 @@ vi.mock("../lib/subscriptionsDb.js", () => ({
   findSubscriptionByProviderReference: mocks.findSubscriptionByProviderReference,
   findAvailablePlans: mocks.findAvailablePlans,
   findPlan: mocks.findPlan,
+  findFlowCustomer: mocks.findFlowCustomer,
+  findFlowCustomerByFlowCustomerId: mocks.findFlowCustomerByFlowCustomerId,
+  upsertFlowCustomer: mocks.upsertFlowCustomer,
 }));
 vi.mock("../lib/supabaseClient.js", () => ({
   supabase: { auth: { getUser: mocks.getUser } },
@@ -62,9 +67,11 @@ beforeEach(() => {
   vi.resetAllMocks();
   delete process.env.GOOGLE_RTDN_SECRET;
   delete process.env.API_SECRET_KEY;
-  delete process.env.STRIPE_SECRET_KEY;
-  delete process.env.STRIPE_WEBHOOK_SECRET;
   delete process.env.WEB_APP_URL;
+  delete process.env.FLOW_API_KEY;
+  delete process.env.FLOW_SECRET_KEY;
+  delete process.env.FLOW_API_BASE_URL;
+  delete process.env.API_PUBLIC_URL;
 });
 
 afterEach(() => {
@@ -268,7 +275,7 @@ describe("action=grant-manual / revoke-manual", () => {
 });
 
 describe("action=plans", () => {
-  it("devuelve los planes disponibles sin exponer stripePriceId", async () => {
+  it("devuelve los planes disponibles con solo los campos públicos", async () => {
     mocks.findAvailablePlans.mockResolvedValue([
       {
         id: "premium_monthly",
@@ -280,7 +287,6 @@ describe("action=plans", () => {
         benefits: ["premium"],
         isAvailable: true,
         status: "active",
-        stripePriceId: "price_abc",
       },
     ]);
 
@@ -294,7 +300,6 @@ describe("action=plans", () => {
     expect(body).toEqual([
       { id: "premium_monthly", name: "Premium mensual", referencePrice: 2990, currency: "CLP", billingPeriod: "monthly", benefits: ["premium"] },
     ]);
-    expect(body[0].stripePriceId).toBeUndefined();
   });
 
   it("con catálogo vacío devuelve []", async () => {
@@ -309,9 +314,15 @@ describe("action=plans", () => {
   });
 });
 
-describe("action=create-checkout-session", () => {
+function stubFlowEnv() {
+  process.env.FLOW_API_KEY = "apiKey123";
+  process.env.FLOW_SECRET_KEY = "secret123";
+  process.env.FLOW_API_BASE_URL = "https://sandbox.flow.cl/api";
+}
+
+describe("action=start-flow-subscription", () => {
   it("sin sesión devuelve 401", async () => {
-    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=create-checkout-session", body: { planId: "premium_monthly" } });
+    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=start-flow-subscription", body: { planId: "premium_monthly" } });
     const res = makeRes();
 
     await handleSubscriptionsRoute(req, res);
@@ -319,11 +330,11 @@ describe("action=create-checkout-session", () => {
     expect(res.statusCode).toBe(401);
   });
 
-  it("sin STRIPE_SECRET_KEY configurado devuelve 503", async () => {
-    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1" } }, error: null });
+  it("sin FLOW_API_KEY/FLOW_SECRET_KEY/FLOW_API_BASE_URL configurados devuelve 503", async () => {
+    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1", email: "u@x.cl" } }, error: null });
     const req = makeReq({
       method: "POST",
-      url: "/api/subscriptions?action=create-checkout-session",
+      url: "/api/subscriptions?action=start-flow-subscription",
       headers: { authorization: "Bearer good-token" },
       body: { planId: "premium_monthly" },
     });
@@ -335,13 +346,13 @@ describe("action=create-checkout-session", () => {
   });
 
   it("con plan inexistente/no disponible devuelve 400", async () => {
-    process.env.STRIPE_SECRET_KEY = "sk_test_123";
-    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1" } }, error: null });
+    stubFlowEnv();
+    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1", email: "u@x.cl" } }, error: null });
     mocks.findPlan.mockResolvedValue(null);
 
     const req = makeReq({
       method: "POST",
-      url: "/api/subscriptions?action=create-checkout-session",
+      url: "/api/subscriptions?action=start-flow-subscription",
       headers: { authorization: "Bearer good-token" },
       body: { planId: "no-existe" },
     });
@@ -352,32 +363,22 @@ describe("action=create-checkout-session", () => {
     expect(res.statusCode).toBe(400);
   });
 
-  it("con plan vendible crea la sesión y devuelve la url", async () => {
-    process.env.STRIPE_SECRET_KEY = "sk_test_123";
-    process.env.WEB_APP_URL = "https://app-compara-farma-web.vercel.app";
-    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1" } }, error: null });
-    mocks.findPlan.mockResolvedValue({
-      id: "premium_monthly",
-      name: "Premium mensual",
-      productType: "app",
-      billingPeriod: "monthly",
-      referencePrice: 2990,
-      currency: "CLP",
-      benefits: ["premium"],
-      isAvailable: true,
-      status: "active",
-      stripePriceId: "price_abc",
-    });
+  it("usuario sin flow_customers: crea cliente, registra, y devuelve la url de enrolamiento", async () => {
+    stubFlowEnv();
+    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1", email: "mario@x.cl" } }, error: null });
+    mocks.findPlan.mockResolvedValue({ id: "premium_monthly", isAvailable: true, name: "x", productType: "app", billingPeriod: "monthly", referencePrice: 1, currency: "CLP", benefits: [], status: "active" });
+    mocks.findFlowCustomer.mockResolvedValue(null);
+    mocks.upsertFlowCustomer.mockResolvedValue({ userId: "user-1", flowCustomerId: "cus_abc", registerStatus: "pending", cardBrand: null, cardLast4: null });
 
-    const fetchMock = vi.fn().mockResolvedValue({
-      ok: true,
-      json: () => Promise.resolve({ url: "https://checkout.stripe.com/pay/cs_test_123" }),
-    });
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ status: 200, json: () => Promise.resolve({ customerId: "cus_abc" }) }) // customer/create
+      .mockResolvedValueOnce({ status: 200, json: () => Promise.resolve({ url: "https://sandbox.flow.cl/app/customer/disclaimer.php", token: "tok-register" }) }); // customer/register
     vi.stubGlobal("fetch", fetchMock);
 
     const req = makeReq({
       method: "POST",
-      url: "/api/subscriptions?action=create-checkout-session",
+      url: "/api/subscriptions?action=start-flow-subscription",
       headers: { authorization: "Bearer good-token" },
       body: { planId: "premium_monthly" },
     });
@@ -386,28 +387,26 @@ describe("action=create-checkout-session", () => {
     await handleSubscriptionsRoute(req, res);
 
     expect(res.statusCode).toBe(200);
-    expect(jsonBody(res)).toEqual({ url: "https://checkout.stripe.com/pay/cs_test_123" });
-    expect(fetchMock).toHaveBeenCalledWith(
-      "https://api.stripe.com/v1/checkout/sessions",
-      expect.objectContaining({ method: "POST" })
-    );
-    const sentBody = fetchMock.mock.calls[0][1].body as string;
-    expect(sentBody).toContain("client_reference_id=user-1");
-    expect(sentBody).toContain("line_items%5B0%5D%5Bprice%5D=price_abc");
+    expect(jsonBody(res)).toEqual({ redirectUrl: "https://sandbox.flow.cl/app/customer/disclaimer.php?token=tok-register" });
+    expect(mocks.upsertFlowCustomer).toHaveBeenCalledWith({ userId: "user-1", flowCustomerId: "cus_abc", registerStatus: "pending" });
+    const registerCallUrl = fetchMock.mock.calls[1][0] as string;
+    expect(registerCallUrl).toContain("/customer/register");
   });
 
-  it("si Stripe responde con error, devuelve 502", async () => {
-    process.env.STRIPE_SECRET_KEY = "sk_test_123";
-    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1" } }, error: null });
-    mocks.findPlan.mockResolvedValue({
-      id: "premium_monthly", isAvailable: true, stripePriceId: "price_abc",
-      name: "x", productType: "app", billingPeriod: "monthly", referencePrice: 1, currency: "CLP", benefits: [], status: "active",
-    });
-    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: false, status: 400, text: () => Promise.resolve("bad request") }));
+  it("usuario con tarjeta ya activa: crea la suscripción directo, sin pasar por Flow de nuevo", async () => {
+    stubFlowEnv();
+    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1", email: "mario@x.cl" } }, error: null });
+    mocks.findPlan.mockResolvedValue({ id: "premium_monthly", isAvailable: true, name: "x", productType: "app", billingPeriod: "monthly", referencePrice: 1, currency: "CLP", benefits: [], status: "active" });
+    mocks.findFlowCustomer.mockResolvedValue({ userId: "user-1", flowCustomerId: "cus_abc", registerStatus: "active", cardBrand: "Visa", cardLast4: "6623" });
+
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({ status: 200, json: () => Promise.resolve({ subscriptionId: "sus_xyz", period_end: "2026-09-02 00:00:00" }) })
+    );
 
     const req = makeReq({
       method: "POST",
-      url: "/api/subscriptions?action=create-checkout-session",
+      url: "/api/subscriptions?action=start-flow-subscription",
       headers: { authorization: "Bearer good-token" },
       body: { planId: "premium_monthly" },
     });
@@ -415,127 +414,154 @@ describe("action=create-checkout-session", () => {
 
     await handleSubscriptionsRoute(req, res);
 
-    expect(res.statusCode).toBe(502);
+    expect(res.statusCode).toBe(200);
+    expect(jsonBody(res)).toEqual({ redirectUrl: "https://app-compara-farma-web.vercel.app/cuenta?upgrade=success" });
+    expect(mocks.recordProviderEvent).toHaveBeenCalledWith(
+      expect.objectContaining({ provider: "flow", providerReference: "sus_xyz", type: "purchase", userId: "user-1", planId: "premium_monthly" })
+    );
   });
 });
 
-describe("action=stripe-webhook", () => {
-  const SECRET = "whsec_test_123";
-
-  function sign(rawBody: string, timestamp = "1700000000") {
-    const signature = createHmac("sha256", SECRET).update(`${timestamp}.${rawBody}`, "utf8").digest("hex");
-    return `t=${timestamp},v1=${signature}`;
-  }
-
-  it("sin STRIPE_WEBHOOK_SECRET configurado devuelve 401 (sin fallback abierto)", async () => {
-    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=stripe-webhook", body: "{}" });
+describe("action=flow-register-return", () => {
+  it("sin token en el body redirige a /cuenta?upgrade=error", async () => {
+    stubFlowEnv();
+    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=flow-register-return", body: "" });
     const res = makeRes();
 
     await handleSubscriptionsRoute(req, res);
 
-    expect(res.statusCode).toBe(401);
+    expect(res.statusCode).toBe(302);
+    expect(res.headers.Location).toBe("https://app-compara-farma-web.vercel.app/cuenta?upgrade=error");
   });
 
-  it("con firma inválida devuelve 400", async () => {
-    process.env.STRIPE_WEBHOOK_SECRET = SECRET;
+  it("con getRegisterStatus no-activo redirige a error", async () => {
+    stubFlowEnv();
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ status: 200, json: () => Promise.resolve({ status: "0", customerId: "cus_abc" }) }));
+
+    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=flow-register-return", body: "token=tok-1" });
+    const res = makeRes();
+
+    await handleSubscriptionsRoute(req, res);
+
+    expect(res.headers.Location).toBe("https://app-compara-farma-web.vercel.app/cuenta?upgrade=error");
+  });
+
+  it("con tarjeta activa y planId válido: activa flow_customers y crea la suscripción, redirige a success", async () => {
+    stubFlowEnv();
+    mocks.findFlowCustomerByFlowCustomerId.mockResolvedValue({ userId: "user-1", flowCustomerId: "cus_abc", registerStatus: "pending", cardBrand: null, cardLast4: null });
+    mocks.findPlan.mockResolvedValue({ id: "premium_monthly", isAvailable: true, name: "x", productType: "app", billingPeriod: "monthly", referencePrice: 1, currency: "CLP", benefits: [], status: "active" });
+
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ status: 200, json: () => Promise.resolve({ status: "1", customerId: "cus_abc", creditCardType: "Visa", last4CardDigits: "6623" }) }) // getRegisterStatus
+      .mockResolvedValueOnce({ status: 200, json: () => Promise.resolve({ subscriptionId: "sus_xyz", period_end: "2026-09-02 00:00:00" }) }); // subscription/create
+    vi.stubGlobal("fetch", fetchMock);
+
     const req = makeReq({
       method: "POST",
-      url: "/api/subscriptions?action=stripe-webhook",
-      body: "{}",
-      headers: { "stripe-signature": "t=1,v1=deadbeef" },
+      url: "/api/subscriptions?action=flow-register-return&planId=premium_monthly",
+      body: "token=tok-1",
     });
     const res = makeRes();
 
     await handleSubscriptionsRoute(req, res);
 
-    expect(res.statusCode).toBe(400);
-    expect(mocks.recordProviderEvent).not.toHaveBeenCalled();
+    expect(mocks.upsertFlowCustomer).toHaveBeenCalledWith(
+      expect.objectContaining({ userId: "user-1", flowCustomerId: "cus_abc", registerStatus: "active", cardBrand: "Visa", cardLast4: "6623" })
+    );
+    expect(mocks.recordProviderEvent).toHaveBeenCalledWith(
+      expect.objectContaining({ provider: "flow", providerReference: "sus_xyz", type: "purchase", userId: "user-1" })
+    );
+    expect(res.headers.Location).toBe("https://app-compara-farma-web.vercel.app/cuenta?upgrade=success");
   });
+});
 
-  it("checkout.session.completed con firma válida registra la compra", async () => {
-    process.env.STRIPE_WEBHOOK_SECRET = SECRET;
-    const rawBody = JSON.stringify({
-      type: "checkout.session.completed",
-      data: { object: { subscription: "sub_123", client_reference_id: "user-1", metadata: { planId: "premium_monthly" } } },
-    });
-
-    const req = makeReq({
-      method: "POST",
-      url: "/api/subscriptions?action=stripe-webhook",
-      body: rawBody,
-      headers: { "stripe-signature": sign(rawBody) },
-    });
+describe("action=flow-webhook", () => {
+  it("siempre responde 200, incluso sin FLOW_* configurado", async () => {
+    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=flow-webhook", body: "token=tok-1" });
     const res = makeRes();
 
     await handleSubscriptionsRoute(req, res);
 
     expect(res.statusCode).toBe(200);
-    expect(mocks.recordProviderEvent).toHaveBeenCalledWith(
-      expect.objectContaining({ provider: "stripe", providerReference: "sub_123", type: "purchase", userId: "user-1", planId: "premium_monthly" })
-    );
+    expect(jsonBody(res).skipped).toBe("flow-not-configured");
   });
 
-  it("customer.subscription.deleted sin suscripción asociada se ignora (200, no procesa)", async () => {
-    process.env.STRIPE_WEBHOOK_SECRET = SECRET;
+  it("token que no resuelve a una suscripción (commerceOrder no matchea) se ignora, 200", async () => {
+    stubFlowEnv();
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ status: 200, json: () => Promise.resolve({ commerceOrder: "sf12377", status: 2 }) }));
+
+    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=flow-webhook", body: "token=tok-1" });
+    const res = makeRes();
+
+    await handleSubscriptionsRoute(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(jsonBody(res).skipped).toBe("not-a-subscription-invoice");
+    expect(mocks.recordProviderEvent).not.toHaveBeenCalled();
+  });
+
+  it("invoice no pagado (status distinto de 2) se ignora explícitamente, 200", async () => {
+    stubFlowEnv();
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({ status: 200, json: () => Promise.resolve({ commerceOrder: "sus_abc_555_2026-08-02 00:00", status: 3 }) })
+    );
+
+    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=flow-webhook", body: "token=tok-1" });
+    const res = makeRes();
+
+    await handleSubscriptionsRoute(req, res);
+
+    expect(jsonBody(res).skipped).toBe("invoice-unpaid-no-action");
+    expect(mocks.recordProviderEvent).not.toHaveBeenCalled();
+  });
+
+  it("suscripción no encontrada (huérfana) se ignora, 200", async () => {
+    stubFlowEnv();
     mocks.findSubscriptionByProviderReference.mockResolvedValue(null);
-    const rawBody = JSON.stringify({ type: "customer.subscription.deleted", data: { object: { id: "sub_huerfano" } } });
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({ status: 200, json: () => Promise.resolve({ commerceOrder: "sus_huerfana_555_2026-08-02 00:00", status: 2 }) })
+    );
 
-    const req = makeReq({
-      method: "POST",
-      url: "/api/subscriptions?action=stripe-webhook",
-      body: rawBody,
-      headers: { "stripe-signature": sign(rawBody) },
-    });
+    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=flow-webhook", body: "token=tok-1" });
     const res = makeRes();
 
     await handleSubscriptionsRoute(req, res);
 
-    expect(res.statusCode).toBe(200);
-    expect(jsonBody(res).skipped).toBe("unlinked-stripe-subscription");
+    expect(jsonBody(res).skipped).toBe("unlinked-flow-subscription");
     expect(mocks.recordProviderEvent).not.toHaveBeenCalled();
   });
 
-  it("customer.subscription.deleted con suscripción existente registra la cancelación", async () => {
-    process.env.STRIPE_WEBHOOK_SECRET = SECRET;
+  it("invoice pagado de una suscripción existente registra la renovación", async () => {
+    stubFlowEnv();
     mocks.findSubscriptionByProviderReference.mockResolvedValue({
-      id: 1, userId: "user-1", planId: "premium_monthly", status: "active", provider: "stripe",
-      providerReference: "sub_123", startedAt: null, currentPeriodEnd: null, canceledAt: null,
+      id: 1, userId: "user-1", planId: "premium_monthly", status: "active", provider: "flow",
+      providerReference: "sus_xyz", startedAt: null, currentPeriodEnd: null, canceledAt: null,
     });
-    const rawBody = JSON.stringify({ type: "customer.subscription.deleted", data: { object: { id: "sub_123" } } });
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({ status: 200, json: () => Promise.resolve({ commerceOrder: "sus_xyz_1183510_2026-08-02 22:02", status: 2, amount: "1000" }) }) // payment/getStatus
+      .mockResolvedValueOnce({ status: 200, json: () => Promise.resolve({ period_end: "2026-09-02 00:00:00" }) }); // invoice/get
+    vi.stubGlobal("fetch", fetchMock);
 
-    const req = makeReq({
-      method: "POST",
-      url: "/api/subscriptions?action=stripe-webhook",
-      body: rawBody,
-      headers: { "stripe-signature": sign(rawBody) },
-    });
+    const req = makeReq({ method: "POST", url: "/api/subscriptions?action=flow-webhook", body: "token=tok-1" });
     const res = makeRes();
 
     await handleSubscriptionsRoute(req, res);
 
     expect(res.statusCode).toBe(200);
     expect(mocks.recordProviderEvent).toHaveBeenCalledWith(
-      expect.objectContaining({ provider: "stripe", providerReference: "sub_123", type: "cancellation", userId: "user-1", planId: "premium_monthly" })
+      expect.objectContaining({
+        provider: "flow",
+        providerReference: "sus_xyz",
+        type: "renewal",
+        userId: "user-1",
+        planId: "premium_monthly",
+        periodEnd: "2026-09-02 00:00:00",
+      })
     );
-  });
-
-  it("tipo de evento fuera de alcance de Fase 2 se ignora (200, no procesa)", async () => {
-    process.env.STRIPE_WEBHOOK_SECRET = SECRET;
-    const rawBody = JSON.stringify({ type: "invoice.payment_failed", data: { object: {} } });
-
-    const req = makeReq({
-      method: "POST",
-      url: "/api/subscriptions?action=stripe-webhook",
-      body: rawBody,
-      headers: { "stripe-signature": sign(rawBody) },
-    });
-    const res = makeRes();
-
-    await handleSubscriptionsRoute(req, res);
-
-    expect(res.statusCode).toBe(200);
-    expect(jsonBody(res).skipped).toBe("event-type-not-handled");
-    expect(mocks.recordProviderEvent).not.toHaveBeenCalled();
   });
 });
 

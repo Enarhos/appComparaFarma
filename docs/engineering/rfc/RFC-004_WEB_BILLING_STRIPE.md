@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | RFC-004 |
 | **Título** | Integración de Stripe Checkout como primer canal de cobro real del Motor de Suscripciones |
-| **Estado** | Implementado (2026-08-02) — ejecutado en el mismo pedido que el papeleo, autorizado explícitamente por el CEO |
+| **Estado** | **Superseded (2026-08-02) por [RFC-005](./RFC-005_WEB_BILLING_FLOW.md)** — Stripe no admite comercios domiciliados en Chile (verificado oficialmente al intentar crear la cuenta real), por lo tanto el diseño de este documento nunca pudo usarse end-to-end. El código correspondiente fue eliminado de `main` (decisión del CEO, ver ADR-0004). Se conserva este documento como registro histórico de la decisión y del diseño, no como estado vigente. |
 | **Fecha** | 2026-08-02 |
 | **Autor** | Claude (rol CTO) |
 | **Documentos relacionados** | RFC-003 (motor de suscripciones), ADR-0002, ADR-0003, `docs/product/SUBSCRIPTION_STRATEGY.md`, `docs/product/EPICS.md`, `docs/product/BACKLOG_PRODUCT.md`, `docs/database/schema.sql` |

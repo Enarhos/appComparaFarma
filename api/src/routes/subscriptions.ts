@@ -1,26 +1,42 @@
-import { getHeader, getSearchParam, json, type RequestLike, type ResponseLike } from "../lib/http.js";
+import { getHeader, getSearchParam, json, redirect, type RequestLike, type ResponseLike } from "../lib/http.js";
 import { isAuthorized } from "../middleware/auth.js";
 import { supabase } from "../lib/supabaseClient.js";
 import { getEntitlement, recordProviderEvent, grantManual, revokeManual } from "../services/subscriptionService.js";
-import { findAvailablePlans, findPlan, findSubscriptionByProviderReference } from "../lib/subscriptionsDb.js";
+import {
+  findAvailablePlans,
+  findPlan,
+  findSubscriptionByProviderReference,
+  findFlowCustomer,
+  findFlowCustomerByFlowCustomerId,
+  upsertFlowCustomer,
+} from "../lib/subscriptionsDb.js";
 import { parseGooglePlayNotification, toNormalizedEvent, type GooglePlayRtdnEnvelope } from "../lib/adapters/googlePlayAdapter.js";
-import { parseStripeWebhookPayload } from "../lib/adapters/stripeAdapter.js";
+import {
+  getFlowConfig,
+  callFlow,
+  resolveFlowWebhookToken,
+  getInvoicePeriodEnd,
+  type FlowConfig,
+} from "../lib/adapters/flowAdapter.js";
 
-// Subscription Platform — Fase 1 (RFC-003, CF-115) + Fase 2 (RFC-004, CF-119).
+// Subscription Platform — Fase 1 (RFC-003, CF-115) + Fase 2 corregida
+// (RFC-005, ADR-0004, CF-124 — reemplaza a RFC-004/Stripe, ver ambos
+// documentos marcados Superseded).
 // docs/engineering/rfc/RFC-003_SUBSCRIPTION_ENGINE.md
-// docs/engineering/rfc/RFC-004_WEB_BILLING_STRIPE.md
+// docs/engineering/rfc/RFC-005_WEB_BILLING_FLOW.md
 //
 // Endpoint consolidado (1 sola función serverless, api/api/subscriptions.ts)
 // que despacha por método + query param `action`, mismo patrón que
 // routes/alerts.ts, para no acercarnos al límite de 12 funciones del plan
-// Hobby de Vercel (hoy 10/12).
+// Hobby de Vercel.
 //
-// Fase 2 agrega `export const config = { api: { bodyParser: false } }` en
-// api/api/subscriptions.ts — necesario para que action=stripe-webhook pueda
-// verificar la firma sobre el body crudo exacto. Todas las acciones (Fase 1
-// y Fase 2) leen el body vía readRawBody()/parseBody() de abajo, que ya
-// hacían una lectura manual del stream como respaldo — este cambio no
-// altera su comportamiento.
+// `export const config = { api: { bodyParser: false } }` en
+// api/api/subscriptions.ts preserva el body crudo — necesario para que
+// `flow-register-return`/`flow-webhook` puedan parsear el body
+// `application/x-www-form-urlencoded` que manda Flow (nunca JSON, ver
+// parseFormBody() más abajo). Todas las acciones leen el body vía
+// readRawBody()/parseBody()/parseFormBody(), que ya hacían una lectura
+// manual del stream como respaldo — este cambio no altera su comportamiento.
 
 async function readRawBody(req: RequestLike): Promise<string> {
   const raw = (req as Record<string, unknown>).body;
@@ -43,8 +59,22 @@ async function parseBody(req: RequestLike): Promise<Record<string, unknown>> {
   return JSON.parse(text) as Record<string, unknown>;
 }
 
-/** Resuelve el usuario a partir del access token de Supabase (Authorization: Bearer <jwt>). */
-async function resolveUserId(req: RequestLike): Promise<string | null> {
+/**
+ * Flow (Fase 2 corregida, CF-124) manda `application/x-www-form-urlencoded`
+ * en sus callbacks (`flow-register-return`/`flow-webhook`) — nunca JSON, a
+ * diferencia del resto de las acciones de este endpoint. `parseBody` no
+ * sirve ahí (rompería con `JSON.parse` sobre un body que no es JSON).
+ */
+async function parseFormBody(req: RequestLike): Promise<Record<string, string>> {
+  const text = await readRawBody(req);
+  if (!text) return {};
+  const result: Record<string, string> = {};
+  for (const [key, value] of new URLSearchParams(text)) result[key] = value;
+  return result;
+}
+
+/** Resuelve el usuario (id + email) a partir del access token de Supabase (Authorization: Bearer <jwt>). */
+async function resolveUser(req: RequestLike): Promise<{ id: string; email: string | null } | null> {
   const authHeader = getHeader(req, "authorization");
   const token = authHeader?.replace(/^Bearer\s+/i, "").trim();
   if (!token || !supabase) return null;
@@ -52,11 +82,25 @@ async function resolveUserId(req: RequestLike): Promise<string | null> {
   try {
     const { data, error } = await supabase.auth.getUser(token);
     if (error || !data.user) return null;
-    return data.user.id;
+    return { id: data.user.id, email: data.user.email ?? null };
   } catch (err) {
-    console.warn("resolveUserId threw", err);
+    console.warn("resolveUser threw", err);
     return null;
   }
+}
+
+async function resolveUserId(req: RequestLike): Promise<string | null> {
+  const user = await resolveUser(req);
+  return user?.id ?? null;
+}
+
+function getWebAppUrl(): string {
+  return (process.env.WEB_APP_URL ?? "https://app-compara-farma-web.vercel.app").trim();
+}
+
+/** URL pública de esta misma API — necesaria para armar el `url_return` que le pasamos a Flow (CF-124). */
+function getApiPublicUrl(): string {
+  return (process.env.API_PUBLIC_URL ?? "https://comparafarma-api.vercel.app").trim();
 }
 
 async function handleMe(req: RequestLike, res: ResponseLike): Promise<void> {
@@ -163,60 +207,58 @@ async function handleGoogleRtdn(req: RequestLike, res: ResponseLike): Promise<vo
 }
 
 /**
- * Crea una Checkout Session de Stripe vía su REST API (sin el SDK `stripe`,
- * ver ADR-0003) y devuelve la URL a la que redirigir al usuario.
+ * Crea la suscripción en Flow (`/subscription/create`) y registra la compra
+ * en el motor. Devuelve `false` sin lanzar si Flow no responde `subscriptionId`
+ * — CF-124.
  */
-async function createStripeCheckoutSession(params: {
-  priceId: string;
-  userId: string;
-  planId: string;
-  customerEmail?: string;
-}): Promise<{ url: string } | null> {
-  const secretKey = process.env.STRIPE_SECRET_KEY?.trim();
-  if (!secretKey) return null;
-
-  const webAppUrl = (process.env.WEB_APP_URL ?? "https://app-compara-farma-web.vercel.app").trim();
-  const body = new URLSearchParams();
-  body.set("mode", "subscription");
-  body.set("line_items[0][price]", params.priceId);
-  body.set("line_items[0][quantity]", "1");
-  body.set("success_url", `${webAppUrl}/cuenta?checkout=success`);
-  body.set("cancel_url", `${webAppUrl}/cuenta?checkout=cancelled`);
-  body.set("client_reference_id", params.userId);
-  body.set("metadata[planId]", params.planId);
-  if (params.customerEmail) body.set("customer_email", params.customerEmail);
-
-  try {
-    const response = await fetch("https://api.stripe.com/v1/checkout/sessions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${secretKey}`,
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: body.toString(),
-    });
-    if (!response.ok) {
-      console.warn("Stripe checkout session creation failed", response.status, await response.text());
-      return null;
-    }
-    const data = (await response.json()) as { url?: string };
-    return data.url ? { url: data.url } : null;
-  } catch (err) {
-    console.warn("createStripeCheckoutSession threw", err);
-    return null;
+async function createFlowSubscriptionAndRecordEvent(
+  flowConfig: FlowConfig,
+  flowCustomerId: string,
+  userId: string,
+  planId: string
+): Promise<boolean> {
+  const { status, body } = await callFlow(flowConfig, "POST", "/subscription/create", {
+    planId,
+    customerId: flowCustomerId,
+  });
+  const subscriptionId = typeof body?.subscriptionId === "string" ? body.subscriptionId : null;
+  if (status !== 200 || !subscriptionId) {
+    console.warn("createFlowSubscriptionAndRecordEvent: /subscription/create failed", status, body);
+    return false;
   }
+
+  await recordProviderEvent({
+    provider: "flow",
+    providerReference: subscriptionId,
+    type: "purchase",
+    userId,
+    planId,
+    // El propio /subscription/create devuelve period_end (verificado en
+    // sandbox) — no hace falta una llamada aparte a getInvoicePeriodEnd
+    // para el alta, solo para renovaciones (ver handleFlowWebhook).
+    periodEnd: typeof body?.period_end === "string" ? body.period_end : null,
+    rawPayload: body,
+  });
+  return true;
 }
 
-/** Requiere sesión (Bearer) — Subscription Platform Fase 2 (RFC-004, CF-119). */
-async function handleCreateCheckoutSession(req: RequestLike, res: ResponseLike): Promise<void> {
-  const userId = await resolveUserId(req);
-  if (!userId) {
+/**
+ * Inicia el flujo de alta con Flow (RFC-005 §3.4, CF-124). Requiere sesión.
+ * Si el usuario ya tiene tarjeta activa (`flow_customers.register_status
+ * === "active"`), se salta el enrolamiento y crea la suscripción directo —
+ * no tiene sentido hacer redirigir de nuevo a Flow a alguien que ya enroló
+ * su tarjeta antes (ej. está tomando un segundo plan, o se resuscribe).
+ */
+async function handleStartFlowSubscription(req: RequestLike, res: ResponseLike): Promise<void> {
+  const user = await resolveUser(req);
+  if (!user) {
     json(res, 401, { error: "No autorizado." }, req);
     return;
   }
 
-  if (!process.env.STRIPE_SECRET_KEY?.trim()) {
-    json(res, 503, { error: "Stripe no está configurado todavía." }, req);
+  const flowConfig = getFlowConfig();
+  if (!flowConfig) {
+    json(res, 503, { error: "Flow no está configurado todavía." }, req);
     return;
   }
 
@@ -228,84 +270,179 @@ async function handleCreateCheckoutSession(req: RequestLike, res: ResponseLike):
   }
 
   const plan = await findPlan(planId);
-  if (!plan || !plan.isAvailable || !plan.stripePriceId) {
+  if (!plan || !plan.isAvailable) {
     json(res, 400, { error: "Ese plan no está disponible para compra." }, req);
     return;
   }
 
-  const session = await createStripeCheckoutSession({
-    priceId: plan.stripePriceId,
-    userId,
-    planId: plan.id,
-  });
-  if (!session) {
-    json(res, 502, { error: "No se pudo iniciar el pago con Stripe." }, req);
+  let flowCustomer = await findFlowCustomer(user.id);
+
+  if (flowCustomer?.registerStatus === "active") {
+    const created = await createFlowSubscriptionAndRecordEvent(flowConfig, flowCustomer.flowCustomerId, user.id, plan.id);
+    json(res, created ? 200 : 502, created ? { redirectUrl: `${getWebAppUrl()}/cuenta?upgrade=success` } : { error: "No se pudo iniciar el pago con Flow." }, req);
     return;
   }
 
-  json(res, 200, { url: session.url }, req);
+  if (!flowCustomer) {
+    const { status, body: createBody } = await callFlow(flowConfig, "POST", "/customer/create", {
+      name: user.email ? user.email.split("@")[0] : "Cliente ComparaFarma",
+      email: user.email ?? `${user.id}@comparafarma.cl`,
+      externalId: user.id,
+    });
+    const flowCustomerId = typeof createBody?.customerId === "string" ? createBody.customerId : null;
+    if (status !== 200 || !flowCustomerId) {
+      json(res, 502, { error: "No se pudo iniciar el pago con Flow." }, req);
+      return;
+    }
+    flowCustomer = await upsertFlowCustomer({ userId: user.id, flowCustomerId, registerStatus: "pending" });
+    if (!flowCustomer) {
+      json(res, 502, { error: "No se pudo iniciar el pago con Flow." }, req);
+      return;
+    }
+  }
+
+  const returnUrl = `${getApiPublicUrl()}/api/subscriptions?action=flow-register-return&planId=${encodeURIComponent(plan.id)}`;
+  const { status, body: registerBody } = await callFlow(flowConfig, "POST", "/customer/register", {
+    customerId: flowCustomer.flowCustomerId,
+    url_return: returnUrl,
+  });
+  const registerUrl = typeof registerBody?.url === "string" ? registerBody.url : null;
+  const token = typeof registerBody?.token === "string" ? registerBody.token : null;
+  if (status !== 200 || !registerUrl || !token) {
+    json(res, 502, { error: "No se pudo iniciar el pago con Flow." }, req);
+    return;
+  }
+
+  json(res, 200, { redirectUrl: `${registerUrl}?token=${token}` }, req);
 }
 
 /**
- * Webhook de Stripe — autenticado por firma (`Stripe-Signature` +
- * `STRIPE_WEBHOOK_SECRET`), sin fallback abierto si el secreto no está
- * configurado (hay dinero real de por medio, mismo criterio que
- * GOOGLE_RTDN_SECRET/CRON_SECRET).
+ * Recibe el POST que el navegador del cliente hace a `url_return` tras
+ * enrolar la tarjeta en Flow (RFC-005 §3.4, CF-124). Público — no hay
+ * sesión ni firma entrante; la autenticidad se resuelve consultando
+ * `/customer/getRegisterStatus` con nuestro propio `secretKey`, y el
+ * `userId` real se obtiene de nuestra propia tabla `flow_customers` (nunca
+ * de un parámetro que venga del cliente). Siempre termina en un redirect a
+ * `web/` — nunca responde JSON, es el navegador del cliente quien recibe
+ * esta respuesta directamente.
  */
-async function handleStripeWebhook(req: RequestLike, res: ResponseLike): Promise<void> {
-  const secret = process.env.STRIPE_WEBHOOK_SECRET?.trim();
-  if (!secret) {
-    json(res, 401, { error: "No autorizado." }, req);
+async function handleFlowRegisterReturn(req: RequestLike, res: ResponseLike): Promise<void> {
+  const webAppUrl = getWebAppUrl();
+  const flowConfig = getFlowConfig();
+  if (!flowConfig) {
+    redirect(res, `${webAppUrl}/cuenta?upgrade=error`);
     return;
   }
 
-  const rawBody = await readRawBody(req);
-  const signatureHeader = getHeader(req, "stripe-signature");
-  const parsed = parseStripeWebhookPayload(rawBody, signatureHeader, secret);
-  if (!parsed) {
-    json(res, 400, { error: "Firma inválida o payload malformado." }, req);
+  const form = await parseFormBody(req);
+  const token = form.token ?? "";
+  if (!token) {
+    redirect(res, `${webAppUrl}/cuenta?upgrade=error`);
     return;
   }
 
-  if (parsed.kind === "ignored") {
-    json(res, 200, { ok: true, skipped: "event-type-not-handled" }, req);
+  const { status, body } = await callFlow(flowConfig, "GET", "/customer/getRegisterStatus", { token });
+  const flowCustomerId = typeof body?.customerId === "string" ? body.customerId : null;
+  // Verificado en sandbox: el status de un registro activo viene como
+  // string "1", no number 1.
+  const registered = status === 200 && body?.status === "1" && !!flowCustomerId;
+  if (!registered || !flowCustomerId) {
+    redirect(res, `${webAppUrl}/cuenta?upgrade=error`);
     return;
   }
 
-  if (parsed.kind === "checkout_completed") {
+  const flowCustomer = await findFlowCustomerByFlowCustomerId(flowCustomerId);
+  if (!flowCustomer) {
+    // No debería pasar nunca — el customerId lo creamos nosotros en
+    // handleStartFlowSubscription. Si pasa, no hay a quién asociar la tarjeta.
+    console.warn("handleFlowRegisterReturn: flowCustomerId sin fila en flow_customers", flowCustomerId);
+    redirect(res, `${webAppUrl}/cuenta?upgrade=error`);
+    return;
+  }
+
+  await upsertFlowCustomer({
+    userId: flowCustomer.userId,
+    flowCustomerId,
+    registerStatus: "active",
+    cardBrand: typeof body?.creditCardType === "string" ? body.creditCardType : null,
+    cardLast4: typeof body?.last4CardDigits === "string" ? body.last4CardDigits : null,
+  });
+
+  const planId = getSearchParam(req, "planId") ?? "";
+  if (!planId) {
+    // Caso borde: tarjeta enrolada sin un plan pendiente asociado (no
+    // debería ocurrir en el flujo normal, ver handleStartFlowSubscription).
+    redirect(res, `${webAppUrl}/cuenta?upgrade=success`);
+    return;
+  }
+
+  const plan = await findPlan(planId);
+  if (!plan || !plan.isAvailable) {
+    redirect(res, `${webAppUrl}/cuenta?upgrade=error`);
+    return;
+  }
+
+  const created = await createFlowSubscriptionAndRecordEvent(flowConfig, flowCustomerId, flowCustomer.userId, plan.id);
+  redirect(res, `${webAppUrl}/cuenta?upgrade=${created ? "success" : "error"}`);
+}
+
+/**
+ * Webhook de cobros periódicos de Flow (RFC-005 §3.4, ADR-0004, CF-124).
+ * Flow manda solo `token` en el body — nunca el resultado del pago — así
+ * que la autenticidad se resuelve indirectamente vía `resolveFlowWebhookToken`
+ * (llamado firmado con nuestro secretKey). Siempre responde 200 (Flow espera
+ * respuesta en menos de 15s y no distingue error nuestro de rechazo) —
+ * incluso ante una excepción interna, nunca se cuelga ni devuelve otro código.
+ */
+async function handleFlowWebhook(req: RequestLike, res: ResponseLike): Promise<void> {
+  try {
+    const flowConfig = getFlowConfig();
+    if (!flowConfig) {
+      json(res, 200, { ok: true, skipped: "flow-not-configured" }, req);
+      return;
+    }
+
+    const form = await parseFormBody(req);
+    const token = form.token ?? "";
+    if (!token) {
+      json(res, 200, { ok: true, skipped: "no-token" }, req);
+      return;
+    }
+
+    const resolved = await resolveFlowWebhookToken(flowConfig, token);
+    if (resolved.kind === "ignored") {
+      json(res, 200, { ok: true, skipped: "not-a-subscription-invoice" }, req);
+      return;
+    }
+    if (resolved.kind === "invoice_unpaid") {
+      // Mismo criterio que invoice.payment_failed en RFC-004 (Stripe): se
+      // ignora explícitamente, Flow reintenta según charges_retries_number
+      // del plan — no es un bug, es un límite conocido de esta fase (RFC-005 R-03).
+      json(res, 200, { ok: true, skipped: "invoice-unpaid-no-action" }, req);
+      return;
+    }
+
+    const existing = await findSubscriptionByProviderReference("flow", resolved.flowSubscriptionId);
+    if (!existing) {
+      json(res, 200, { ok: true, skipped: "unlinked-flow-subscription" }, req);
+      return;
+    }
+
+    const periodEnd = await getInvoicePeriodEnd(flowConfig, resolved.invoiceId);
     await recordProviderEvent({
-      provider: "stripe",
-      providerReference: parsed.providerReference,
-      type: "purchase",
-      userId: parsed.userId,
-      planId: parsed.planId,
-      periodEnd: null,
-      rawPayload: parsed,
+      provider: "flow",
+      providerReference: resolved.flowSubscriptionId,
+      type: "renewal",
+      userId: existing.userId,
+      planId: existing.planId,
+      periodEnd,
+      rawPayload: resolved.rawPayload,
     });
     json(res, 200, { ok: true }, req);
-    return;
+  } catch (err) {
+    console.warn("handleFlowWebhook threw", err);
+    json(res, 200, { ok: true, skipped: "internal-error" }, req);
   }
-
-  // subscription_renewed / subscription_canceled: la suscripción ya debe
-  // existir (creada por checkout_completed) — si no, se ignora, no hay
-  // usuario/plan a quién asociar el evento (mismo criterio que R-02 de
-  // Google Play en Fase 1, pero acá es un caso borde, no la regla general).
-  const existing = await findSubscriptionByProviderReference("stripe", parsed.providerReference);
-  if (!existing) {
-    json(res, 200, { ok: true, skipped: "unlinked-stripe-subscription" }, req);
-    return;
-  }
-
-  await recordProviderEvent({
-    provider: "stripe",
-    providerReference: parsed.providerReference,
-    type: parsed.kind === "subscription_renewed" ? "renewal" : "cancellation",
-    userId: existing.userId,
-    planId: existing.planId,
-    periodEnd: parsed.kind === "subscription_renewed" ? parsed.periodEnd : null,
-    rawPayload: parsed,
-  });
-  json(res, 200, { ok: true }, req);
 }
 
 /** Llamado server-to-server desde web/ (profilesAdmin.ts, ver CF-116) — autenticado con API_SECRET_KEY. */
@@ -368,12 +505,16 @@ export async function handleSubscriptionsRoute(reqLike: unknown, resLike: unknow
       await handleGoogleRtdn(req, res);
       return;
     }
-    if (action === "create-checkout-session") {
-      await handleCreateCheckoutSession(req, res);
+    if (action === "start-flow-subscription") {
+      await handleStartFlowSubscription(req, res);
       return;
     }
-    if (action === "stripe-webhook") {
-      await handleStripeWebhook(req, res);
+    if (action === "flow-register-return") {
+      await handleFlowRegisterReturn(req, res);
+      return;
+    }
+    if (action === "flow-webhook") {
+      await handleFlowWebhook(req, res);
       return;
     }
     if (action === "grant-manual") {

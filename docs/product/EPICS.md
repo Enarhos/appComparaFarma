@@ -6,9 +6,9 @@ Iniciativas grandes que agrupan varios sprints/RFCs. Convención: una Epic queda
 
 ## Subscription Platform
 
-**Estado:** ✅ Activa — Fases 1 y 2 implementadas y mergeadas a `main` (2026-08-02)
+**Estado:** ✅ Activa — Fases 1 y 2 (corregida a Flow) implementadas y mergeadas a `main` (2026-08-02/03)
 **Origen:** `docs/product/SUBSCRIPTION_STRATEGY.md` (estrategia ya aprobada) + pedido explícito del CEO de construir el motor técnico independiente de proveedor de pago.
-**Documentos relacionados:** `docs/product/SUBSCRIPTION_STRATEGY.md`, `docs/engineering/rfc/RFC-003_SUBSCRIPTION_ENGINE.md`, `docs/engineering/adr/ADR-0002_SUBSCRIPTION_ARCHITECTURE.md`
+**Documentos relacionados:** `docs/product/SUBSCRIPTION_STRATEGY.md`, `docs/engineering/rfc/RFC-003_SUBSCRIPTION_ENGINE.md`, `docs/engineering/adr/ADR-0002_SUBSCRIPTION_ARCHITECTURE.md`, `docs/engineering/rfc/RFC-005_WEB_BILLING_FLOW.md`, `docs/engineering/adr/ADR-0004_FLOW_SUBSCRIPTION_INTEGRATION.md`
 
 ### Objetivo
 
@@ -21,7 +21,7 @@ Esta Epic reemplaza el mecanismo simple `profiles.plan` de Sprint D (ver `docs/d
 | Fase | Alcance | Estado |
 |---|---|---|
 | **Fase 1** | Motor de suscripciones, modelo de datos, API (`api/`), adaptador Google Play (solo lado backend) | ✅ Implementado y mergeado a `main` (CF-112 a CF-116, ver `BACKLOG_PRODUCT.md`) |
-| **Fase 2** | Web Billing, integración Stripe, diseño para Flow/Mercado Pago | ✅ Implementado y mergeado a `main` (CFPS 3.2, ver `BACKLOG_PRODUCT.md` — RFC-004, ADR-0003, CF-117 a CF-121). Diseño para Flow/Mercado Pago queda para una fase futura, no cubierto todavía. |
+| **Fase 2** | Web Billing, proveedor de pago recurrente real | ✅ Implementado y mergeado a `main` con **Flow** como proveedor (CFPS 3.2, mismo score de la Fase 2 original — ver RFC-005 §7). Se implementó primero sobre Stripe (RFC-004/ADR-0003, CF-117 a CF-121) — al crear la cuenta real se confirmó que **Stripe no admite comercios en Chile**, y ese código se retiró de `main` (CF-126). Diseño y ejecución final en `RFC-005_WEB_BILLING_FLOW.md`/`ADR-0004_FLOW_SUBSCRIPTION_INTEGRATION.md`, issues CF-122 a CF-127. |
 | **Fase 3** | Apple Billing | ⬜ Backlog futuro |
 | **Fase 4** | Plataforma Comercial: planes configurables desde `/admin`, promociones, cupones, empresas, API Premium, licencias | ⬜ Backlog futuro |
 
