@@ -59,6 +59,20 @@ export function json(res: ResponseLike, statusCode: number, body: unknown, req?:
   res.end(JSON.stringify(body));
 }
 
+/**
+ * Redirect HTTP 302 — usado por acciones que reciben un POST directo del
+ * navegador del cliente (no un fetch de web/), como `flow-register-return`
+ * (Subscription Platform Fase 2 corregida, RFC-005/CF-124): Flow redirige
+ * el navegador ahí, así que la respuesta tiene que ser un redirect real,
+ * no JSON.
+ */
+export function redirect(res: ResponseLike, location: string): void {
+  res.statusCode = 302;
+  res.setHeader("Location", location);
+  res.setHeader("Cache-Control", "no-store");
+  res.end();
+}
+
 export function getSearchParam(req: RequestLike, name: string): string | null {
   if (!req.url) return null;
   const url = new URL(req.url, "http://localhost");

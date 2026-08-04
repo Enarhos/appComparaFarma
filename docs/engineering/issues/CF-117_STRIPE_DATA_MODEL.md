@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-117 |
 | **Épica** | Subscription Platform (Fase 2) |
-| **Estado** | ✅ Implementado (2026-08-02) |
+| **Estado** | ⚠️ Superseded (2026-08-02) por CF-122 — Stripe no admite comercios en Chile, `stripe_price_id` retirada. Ver RFC-005/ADR-0004 |
 | **Prioridad** | Media |
 | **Estimación** | 0.5-1 h |
 | **Referencia** | RFC-004 §3.1, ADR-0003 |

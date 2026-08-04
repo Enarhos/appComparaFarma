@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-121 |
 | **Épica** | Subscription Platform (Fase 2) |
-| **Estado** | ✅ Implementado (2026-08-02) — acciones manuales del CEO pendientes por separado |
+| **Estado** | ⚠️ Superseded (2026-08-02) por CF-126/CF-127 — Stripe no admite comercios en Chile, ninguna de las acciones pendientes del CEO listadas abajo aplica ya. Ver RFC-005/ADR-0004 |
 | **Prioridad** | Media |
 | **Estimación** | 1 h |
 | **Referencia** | RFC-004 §8, §9 |

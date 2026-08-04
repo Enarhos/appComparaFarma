@@ -305,3 +305,36 @@ on conflict (id) do nothing;
 -- ============================================================
 
 alter table subscription_plans add column if not exists stripe_price_id text;
+
+-- ============================================================
+-- Subscription Platform — Fase 2 corregida (2026-08-02/03) — RFC-005, ADR-0004, CF-122.
+-- docs/engineering/rfc/RFC-005_WEB_BILLING_FLOW.md
+--
+-- Stripe no admite comercios domiciliados en Chile (verificado oficialmente
+-- al intentar crear la cuenta real) — se retira la columna que la Fase 2
+-- original había agregado. No se reemplaza por un "flow_price_id": Flow
+-- permite elegir el planId nosotros mismos (a diferencia de Stripe, que
+-- genera sus propios IDs de Price), así que se reutiliza
+-- subscription_plans.id directo como planId de Flow.
+-- ============================================================
+
+alter table subscription_plans drop column if exists stripe_price_id;
+
+-- Identidad de Flow por usuario — independiente de cualquier suscripción,
+-- porque en Flow un cliente se crea y enrola tarjeta ANTES de que exista
+-- una suscripción (a diferencia de Stripe Checkout, que resolvía todo en
+-- un solo paso). register_status permite detectar un alta a medio camino
+-- (cliente creado, tarjeta todavía no confirmada).
+--
+-- Mismo patrón de RLS que subscriptions/subscription_events: sin policies
+-- para el rol autenticado — solo api/ (SUPABASE_SECRET_KEY) lee y escribe.
+create table if not exists flow_customers (
+  user_id uuid primary key references profiles(id) on delete cascade,
+  flow_customer_id text not null unique,
+  register_status text not null default 'pending', -- 'pending' | 'active'
+  card_brand text,
+  card_last4 text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+alter table flow_customers enable row level security;

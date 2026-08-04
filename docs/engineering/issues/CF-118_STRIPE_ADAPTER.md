@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-118 |
 | **Épica** | Subscription Platform (Fase 2) |
-| **Estado** | ✅ Implementado (2026-08-02) |
+| **Estado** | ⚠️ Superseded (2026-08-02) por CF-123 (adaptador Flow) — Stripe no admite comercios en Chile. Código eliminado de `main`. Ver RFC-005/ADR-0004 |
 | **Prioridad** | Media |
 | **Estimación** | 2-2.5 h |
 | **Referencia** | RFC-004 §3.3, ADR-0003 |

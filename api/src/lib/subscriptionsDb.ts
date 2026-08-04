@@ -12,6 +12,7 @@ const PLANS_TABLE = "subscription_plans";
 const SUBSCRIPTIONS_TABLE = "subscriptions";
 const EVENTS_TABLE = "subscription_events";
 const PROFILES_TABLE = "profiles";
+const FLOW_CUSTOMERS_TABLE = "flow_customers";
 
 export type SubscriptionStatus = "pending" | "active" | "canceled" | "expired" | "grace_period";
 export type SubscriptionProvider = "google_play" | "apple" | "stripe" | "flow" | "mercadopago" | "manual";
@@ -27,7 +28,6 @@ export interface SubscriptionPlanRow {
   benefits: string[];
   isAvailable: boolean;
   status: "active" | "inactive";
-  stripePriceId: string | null;
 }
 
 export interface SubscriptionRow {
@@ -75,7 +75,6 @@ interface PlanRowRaw {
   benefits: string[];
   is_available: boolean;
   status: "active" | "inactive";
-  stripe_price_id: string | null;
 }
 
 function fromPlanRow(row: PlanRowRaw): SubscriptionPlanRow {
@@ -89,7 +88,6 @@ function fromPlanRow(row: PlanRowRaw): SubscriptionPlanRow {
     benefits: row.benefits ?? [],
     isAvailable: row.is_available,
     status: row.status,
-    stripePriceId: row.stripe_price_id ?? null,
   };
 }
 
@@ -261,6 +259,112 @@ export async function insertEvent(input: InsertEventInput): Promise<void> {
     if (error) console.warn("subscription_events insert failed", error.message);
   } catch (err) {
     console.warn("subscription_events insert threw", err);
+  }
+}
+
+/**
+ * Identidad de Flow por usuario — Subscription Platform Fase 2 corregida
+ * (RFC-005, ADR-0004, CF-122). Independiente de cualquier suscripción:
+ * en Flow un cliente se crea y enrola tarjeta ANTES de que exista una
+ * suscripción, así que necesita su propia tabla (no cabe en `subscriptions`,
+ * que representa una suscripción concreta, no la identidad de pago del
+ * usuario).
+ */
+export type FlowRegisterStatus = "pending" | "active";
+
+export interface FlowCustomerRow {
+  userId: string;
+  flowCustomerId: string;
+  registerStatus: FlowRegisterStatus;
+  cardBrand: string | null;
+  cardLast4: string | null;
+}
+
+export interface UpsertFlowCustomerInput {
+  userId: string;
+  flowCustomerId: string;
+  registerStatus?: FlowRegisterStatus;
+  cardBrand?: string | null;
+  cardLast4?: string | null;
+}
+
+interface FlowCustomerRowRaw {
+  user_id: string;
+  flow_customer_id: string;
+  register_status: FlowRegisterStatus;
+  card_brand: string | null;
+  card_last4: string | null;
+}
+
+function fromFlowCustomerRow(row: FlowCustomerRowRaw): FlowCustomerRow {
+  return {
+    userId: row.user_id,
+    flowCustomerId: row.flow_customer_id,
+    registerStatus: row.register_status,
+    cardBrand: row.card_brand,
+    cardLast4: row.card_last4,
+  };
+}
+
+export async function findFlowCustomer(userId: string): Promise<FlowCustomerRow | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.from(FLOW_CUSTOMERS_TABLE).select("*").eq("user_id", userId).maybeSingle();
+    if (error) {
+      console.warn("flow_customers select failed", error.message);
+      return null;
+    }
+    return data ? fromFlowCustomerRow(data as FlowCustomerRowRaw) : null;
+  } catch (err) {
+    console.warn("flow_customers select threw", err);
+    return null;
+  }
+}
+
+/**
+ * Lookup inverso — necesario en `flow-register-return` (CF-124): Flow solo
+ * nos da un `token`/`customerId` en ese callback público, nunca el `userId`
+ * (no hay sesión ahí, es un POST directo del navegador del cliente vía
+ * Flow). Este lookup es la fuente de verdad de a qué usuario corresponde
+ * ese `customerId` — nunca se confía en un `userId` que venga del cliente.
+ */
+export async function findFlowCustomerByFlowCustomerId(flowCustomerId: string): Promise<FlowCustomerRow | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.from(FLOW_CUSTOMERS_TABLE).select("*").eq("flow_customer_id", flowCustomerId).maybeSingle();
+    if (error) {
+      console.warn("flow_customers select by flow_customer_id failed", error.message);
+      return null;
+    }
+    return data ? fromFlowCustomerRow(data as FlowCustomerRowRaw) : null;
+  } catch (err) {
+    console.warn("flow_customers select by flow_customer_id threw", err);
+    return null;
+  }
+}
+
+/** Crea o actualiza la fila de identidad Flow del usuario (upsert por `user_id`). */
+export async function upsertFlowCustomer(input: UpsertFlowCustomerInput): Promise<FlowCustomerRow | null> {
+  if (!supabase) return null;
+  try {
+    const patch: Record<string, unknown> = {
+      user_id: input.userId,
+      flow_customer_id: input.flowCustomerId,
+      updated_at: new Date().toISOString(),
+    };
+    if (input.registerStatus !== undefined) patch.register_status = input.registerStatus;
+    if (input.cardBrand !== undefined) patch.card_brand = input.cardBrand;
+    if (input.cardLast4 !== undefined) patch.card_last4 = input.cardLast4;
+
+    const { data, error } = await supabase.from(FLOW_CUSTOMERS_TABLE).upsert(patch, { onConflict: "user_id" }).select("*").single();
+    if (error || !data) {
+      if (error) console.warn("flow_customers upsert failed", error.message);
+      return null;
+    }
+    return fromFlowCustomerRow(data as FlowCustomerRowRaw);
+  } catch (err) {
+    console.warn("flow_customers upsert threw", err);
+    return null;
   }
 }
 

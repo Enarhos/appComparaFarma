@@ -1,6 +1,6 @@
 # ADR-0003 — Stripe Checkout hospedado (no Elements/Payment Intents embebido)
 
-**Estado:** Aprobado
+**Estado:** **Superseded (2026-08-02) por [ADR-0004](./ADR-0004_FLOW_SUBSCRIPTION_INTEGRATION.md)** — Stripe no admite comercios domiciliados en Chile. Este ADR sigue siendo válido como registro de *cómo* se habría integrado Stripe (Checkout hospedado, sin SDK) si algún día aplica para otro país, pero el código correspondiente fue eliminado de `main`.
 **Fecha:** 2026-08-02
 
 ---

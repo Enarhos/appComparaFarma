@@ -12,17 +12,16 @@ const PLAN_LABEL: Record<"free" | "premium", string> = {
   premium: "Premium",
 };
 
-// Subscription Platform Fase 2 (RFC-004) — mensaje según ?checkout=,
-// puramente informativo: el estado real del plan lo actualiza el webhook de
-// Stripe, no esta URL de retorno.
-const CHECKOUT_BANNER: Record<string, { text: string; tone: "ok" | "muted" | "error" }> = {
+// Subscription Platform Fase 2 corregida (RFC-005) — mensaje según
+// ?upgrade=, puramente informativo: el estado real del plan lo actualiza
+// api/ (flow-register-return/flow-webhook), no esta URL de retorno.
+const UPGRADE_BANNER: Record<string, { text: string; tone: "ok" | "muted" | "error" }> = {
   success: { text: "Pago iniciado. Puede tardar unos segundos en reflejarse acá.", tone: "ok" },
-  cancelled: { text: "Cancelaste el pago — tu plan no cambió.", tone: "muted" },
   error: { text: "Algo salió mal al iniciar el pago. Intenta de nuevo.", tone: "error" },
 };
 
 interface PageProps {
-  searchParams: Promise<{ checkout?: string }>;
+  searchParams: Promise<{ upgrade?: string }>;
 }
 
 export default async function CuentaPage({ searchParams }: PageProps) {
@@ -35,7 +34,7 @@ export default async function CuentaPage({ searchParams }: PageProps) {
   }
 
   const plans = profile.plan === "free" ? await getAvailablePlans() : [];
-  const banner = params.checkout ? CHECKOUT_BANNER[params.checkout] : undefined;
+  const banner = params.upgrade ? UPGRADE_BANNER[params.upgrade] : undefined;
 
   return (
     <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6">

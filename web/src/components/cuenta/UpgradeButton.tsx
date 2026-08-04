@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { createCheckoutSession } from "@/lib/actions/createCheckoutSession";
+import { startFlowSubscription } from "@/lib/actions/startFlowSubscription";
 
 export function UpgradeButton({ planId, label }: { planId: string; label: string }) {
   const [loading, setLoading] = useState(false);
@@ -10,9 +10,9 @@ export function UpgradeButton({ planId, label }: { planId: string; label: string
   async function handleClick() {
     setLoading(true);
     setError(null);
-    const result = await createCheckoutSession(planId);
+    const result = await startFlowSubscription(planId);
     if (result.ok) {
-      window.location.href = result.url;
+      window.location.href = result.redirectUrl;
       return;
     }
     setError(result.error);
