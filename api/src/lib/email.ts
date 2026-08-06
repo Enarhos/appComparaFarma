@@ -10,7 +10,10 @@ const FROM = "ComparaFarma <onboarding@resend.dev>";
 
 export async function sendEmail(to: string, subject: string, text: string): Promise<void> {
   if (!RESEND_API_KEY) {
-    console.log("[email] sin RESEND_API_KEY, no se envía", { to, subject });
+    // Sprint REL-003 — Privacy Logging Review: nunca registrar la dirección de
+    // destino (dato personal). El subject describe el tipo de email (ej. "Confirma
+    // tu alerta de precio — Paracetamol"), suficiente para depurar sin loguear PII.
+    console.log("[email] sin RESEND_API_KEY, no se envía", { subject });
     return;
   }
 
@@ -23,8 +26,9 @@ export async function sendEmail(to: string, subject: string, text: string): Prom
       },
       body: JSON.stringify({ from: FROM, to: [to], subject, text }),
     });
-    const body = await res.json().catch(() => ({}));
-    console.log("[email] resend status:", res.status, JSON.stringify(body));
+    // Sprint REL-003: no volcar el body de la respuesta — en un error de validación
+    // Resend puede repetir el valor de "to" (dato personal) dentro del mensaje.
+    console.log("[email] resend status:", res.status, "ok:", res.ok);
   } catch (err) {
     console.error("[email] resend error:", err instanceof Error ? err.message : err);
   }

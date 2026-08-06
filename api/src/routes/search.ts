@@ -1,4 +1,4 @@
-import { isAuthorized } from "../middleware/auth.js";
+import { isAuthorized, isDebugAuthorized } from "../middleware/auth.js";
 import { consumeRateLimit } from "../middleware/rateLimit.js";
 import { attachRequestId } from "../middleware/requestId.js";
 import { getCachedSearch, setCachedSearch } from "../lib/cache.js";
@@ -54,6 +54,10 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
     }
 
     const debugMode = isDebugMode(req);
+    if (debugMode && !isDebugAuthorized(req)) {
+      throw new HttpError("No autorizado para modo debug.", 403);
+    }
+
     const query = validateQuery(getSearchParam(req, "q"));
 
     // Filtro geográfico: ?pharmacies=cruz-verde,dr-simi

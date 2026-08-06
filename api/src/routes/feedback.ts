@@ -97,13 +97,20 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
           text: lines.join("\n"),
         }),
       });
-      const resendBody = await resendRes.json().catch(() => ({}));
-      console.log("[feedback] resend status:", resendRes.status, JSON.stringify(resendBody));
+      await resendRes.json().catch(() => ({}));
+      // Sprint REL-003 — Privacy Logging Review: no volcar el body de la respuesta de
+      // Resend (puede repetir el mensaje del usuario o su email dentro del payload).
+      console.log("[feedback] resend status:", resendRes.status, "ok:", resendRes.ok);
     } catch (err) {
       console.error("[feedback] resend error:", err instanceof Error ? err.message : err);
     }
   } else {
-    console.log("[feedback] sin RESEND_API_KEY", { message, email: userEmail, ip });
+    // Sprint REL-003: nunca registrar el mensaje, el email ni la IP del usuario —
+    // son datos personales. messageLength/hasEmail bastan para depurar sin exponerlos.
+    console.log("[feedback] sin RESEND_API_KEY, feedback registrado sin enviar email", {
+      messageLength: message.length,
+      hasEmail: Boolean(userEmail),
+    });
   }
 
   await recordFeedback(message, userEmail);
