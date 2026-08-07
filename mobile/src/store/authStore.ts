@@ -1,4 +1,4 @@
-// Auth Store — Épica 1 (Identity Foundation), TASK-001.
+// Auth Store — Épica 1 (Identity Foundation), TASK-001 + TASK-001A.
 //
 // Representa exclusivamente identidad, sesión, estado de carga y estado de
 // autenticación — sin lógica Premium, sin preferencias, sin Perfil (eso es
@@ -10,9 +10,16 @@
 // que este store nunca debe convertirse en una segunda fuente de verdad que
 // pueda desincronizarse de la real (riesgo #3 de
 // docs/execution/EPIC-01-IDENTITY_FOUNDATION.md).
+//
+// TASK-001A: este store consume exclusivamente `lib/entitlementAdapter.ts`
+// (modelo de dominio `{ entitlements, plan, expiresAt }`) — nunca
+// `lib/entitlements.ts` directo. El contrato crudo del backend
+// (`active`/`planId`/`benefits`) no debe fugarse más allá del adapter; este
+// archivo, y cualquier UI futura que lo consuma, solo debe conocer el
+// modelo de dominio.
 import { create } from "zustand";
 import { getCurrentSession, onSessionChange, signOut as signOutSession, type Session } from "@/lib/sessionManager";
-import { fetchEntitlement, type EntitlementSnapshot } from "@/lib/entitlements";
+import { resolveEntitlement as fetchDomainEntitlement, type Entitlement } from "@/lib/entitlementAdapter";
 
 export interface AuthIdentity {
   id: string;
@@ -25,9 +32,10 @@ interface AuthState {
   loading: boolean;
   isAuthenticated: boolean;
   identity: AuthIdentity | null;
-  /** Snapshot de solo lectura de `lib/entitlements.ts`. `null` mientras no hay
-   * sesión — no confundir con "sin beneficios": significa "no aplica". */
-  entitlement: EntitlementSnapshot | null;
+  /** Modelo de dominio de `lib/entitlementAdapter.ts`
+   * (`{ entitlements, plan, expiresAt }`). `null` mientras no hay sesión —
+   * no confundir con "sin entitlements": significa "no aplica". */
+  entitlement: Entitlement | null;
   /**
    * Resuelve la sesión existente al arrancar la app. Idempotente (como
    * `alertsStore.load()`) — llamarlo más de una vez no repite el trabajo.
@@ -48,9 +56,9 @@ function toIdentity(session: Session | null): AuthIdentity | null {
   return { id: session.user.id, email: session.user.email ?? null };
 }
 
-async function resolveEntitlement(session: Session | null): Promise<EntitlementSnapshot | null> {
+async function resolveEntitlement(session: Session | null): Promise<Entitlement | null> {
   if (!session) return null;
-  return fetchEntitlement(session.access_token);
+  return fetchDomainEntitlement(session.access_token);
 }
 
 // Suscripción a `onSessionChange` — a nivel de módulo, no de instancia del
