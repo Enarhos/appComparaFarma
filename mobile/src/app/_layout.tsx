@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import * as Sentry from "@sentry/react-native";
 import { useConfigStore } from "@/store/configStore";
 import { useAlertsStore } from "@/store/alertsStore";
+import { useAuthStore } from "@/store/authStore";
 import { InAppToast } from "@/components/InAppToast";
 import "../../global.css";
 
@@ -20,11 +21,17 @@ function RootLayout() {
   const isDark = colorScheme === "dark";
   const fetchConfig = useConfigStore((s) => s.fetch);
   const loadAlerts = useAlertsStore((s) => s.load);
+  const initAuth = useAuthStore((s) => s.init);
 
   useEffect(() => {
     fetchConfig();
     loadAlerts();
-  }, [fetchConfig, loadAlerts]);
+    // Identity Foundation (Épica 1, TASK-001): resuelve una sesión existente
+    // (si la hay) y su entitlement — Supabase → Identity → Entitlements →
+    // Auth Store. No bloquea el montaje del Stack, igual que fetchConfig()/
+    // loadAlerts(): sin sesión o sin red, la app sigue 100% anónima.
+    initAuth();
+  }, [fetchConfig, loadAlerts, initAuth]);
   const headerBg = isDark ? "#111827" : "#ffffff";
 
   return (
