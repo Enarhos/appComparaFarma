@@ -10,10 +10,10 @@ import {
   ScrollView,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useAuthStore } from "@/store/authStore";
 import { signInWithPassword } from "@/lib/sessionManager";
+import { goToRegistro, returnFromAuth } from "@/lib/authNavigation";
 
 // Login / Cuenta — Épica 1 (Identity Foundation), TASK-003 (Tasks 006 y 008
 // del plan técnico de docs/execution/EPIC-01-IDENTITY_FOUNDATION.md).
@@ -30,22 +30,16 @@ import { signInWithPassword } from "@/lib/sessionManager";
 // todo momento y "volver al flujo autenticado" significa simplemente volver
 // a la pantalla de origen tras un login/registro exitoso.
 export default function LoginScreen() {
-  const router = useRouter();
   const initialized = useAuthStore((s) => s.initialized);
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const identity = useAuthStore((s) => s.identity);
   const signOut = useAuthStore((s) => s.signOut);
+  const signingOut = useAuthStore((s) => s.signingOut);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [signingOut, setSigningOut] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  function goToOrigin() {
-    if (router.canGoBack()) router.back();
-    else router.replace("/");
-  }
 
   async function handleSubmit() {
     if (!email.trim() || !password) {
@@ -63,13 +57,7 @@ export default function LoginScreen() {
       setError("Email o contraseña incorrectos.");
       return;
     }
-    goToOrigin();
-  }
-
-  async function handleSignOut() {
-    setSigningOut(true);
-    await signOut();
-    setSigningOut(false);
+    returnFromAuth();
   }
 
   if (!initialized) {
@@ -91,7 +79,7 @@ export default function LoginScreen() {
           <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1">{identity?.email}</Text>
 
           <TouchableOpacity
-            onPress={handleSignOut}
+            onPress={signOut}
             disabled={signingOut}
             activeOpacity={0.8}
             className="mt-8 border border-red-200 dark:border-red-800 rounded-xl px-6 py-3 flex-row items-center gap-2"
@@ -170,7 +158,7 @@ export default function LoginScreen() {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => router.push("/registro" as any)}
+            onPress={goToRegistro}
             className="mt-5 items-center"
             accessibilityRole="button"
             accessibilityLabel="Crear cuenta"

@@ -31,6 +31,10 @@ interface AuthState {
   initialized: boolean;
   loading: boolean;
   isAuthenticated: boolean;
+  /** true mientras `signOut()` está en curso — la UI que lo invoque (ej.
+   * `login.tsx`) lo usa para mostrar su propio estado de carga, sin
+   * necesidad de mantener un `useState` local duplicado. */
+  signingOut: boolean;
   identity: AuthIdentity | null;
   /** Modelo de dominio de `lib/entitlementAdapter.ts`
    * (`{ entitlements, plan, expiresAt }`). `null` mientras no hay sesión —
@@ -71,6 +75,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   initialized: false,
   loading: false,
   isAuthenticated: false,
+  signingOut: false,
   identity: null,
   entitlement: null,
 
@@ -101,8 +106,14 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   },
 
   signOut: async () => {
-    await signOutSession();
-    // No se actualiza el estado acá a mano — `onSessionChange` ya recibe el
-    // evento `SIGNED_OUT` de Supabase y sincroniza el store (ver `init()`).
+    set({ signingOut: true });
+    try {
+      await signOutSession();
+      // No se actualiza `identity`/`isAuthenticated` acá a mano —
+      // `onSessionChange` ya recibe el evento `SIGNED_OUT` de Supabase y
+      // sincroniza el store (ver `init()`).
+    } finally {
+      set({ signingOut: false });
+    }
   },
 }));

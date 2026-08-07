@@ -2,12 +2,11 @@ import { useEffect } from "react";
 import { useColorScheme } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import * as Linking from "expo-linking";
 import * as Sentry from "@sentry/react-native";
 import { useConfigStore } from "@/store/configStore";
 import { useAlertsStore } from "@/store/alertsStore";
 import { useAuthStore } from "@/store/authStore";
-import { completeSessionFromUrl } from "@/lib/sessionManager";
+import { subscribeToAuthDeepLinks } from "@/lib/sessionManager";
 import { InAppToast } from "@/components/InAppToast";
 import "../../global.css";
 
@@ -34,22 +33,12 @@ function RootLayout() {
     // loadAlerts(): sin sesión o sin red, la app sigue 100% anónima.
     initAuth();
 
-    // TASK-003 (Task 007 de EPIC-01): completa la sesión cuando la Persona
-    // abre el deep link de confirmación de email enviado por Supabase
-    // (`comparafarma://login#access_token=...`). No navega ni sincroniza el
-    // Auth Store a mano — `setSession()` (dentro de `completeSessionFromUrl`)
-    // dispara el evento `SIGNED_IN`, que `authStore.init()` ya escucha vía
-    // `onSessionChange`. Cubre tanto el caso de la app ya abierta
-    // (`addEventListener`) como el de abrirla recién desde el link
-    // (`getInitialURL`).
-    const subscription = Linking.addEventListener("url", ({ url }) => {
-      completeSessionFromUrl(url);
-    });
-    Linking.getInitialURL().then((url) => {
-      if (url) completeSessionFromUrl(url);
-    });
+    // TASK-003 (Task 007 de EPIC-01): la lógica de deep links de auth vive en
+    // `sessionManager.ts` — `_layout.tsx` no contiene lógica de
+    // autenticación/deep-linking, solo la orquesta desde el ciclo de vida.
+    const unsubscribeDeepLinks = subscribeToAuthDeepLinks();
 
-    return () => subscription.remove();
+    return () => unsubscribeDeepLinks();
   }, [fetchConfig, loadAlerts, initAuth]);
   const headerBg = isDark ? "#111827" : "#ffffff";
 

@@ -167,3 +167,30 @@ export async function completeSessionFromUrl(url: string): Promise<boolean> {
     return false;
   }
 }
+
+/**
+ * Se suscribe a los deep links de auth (TASK-003, Task 007 de EPIC-01):
+ * completa la sesión cuando la Persona abre el link de confirmación de
+ * email enviado por Supabase (`comparafarma://login#access_token=...`).
+ * Encapsula tanto el caso de la app ya abierta (`Linking.addEventListener`)
+ * como el de abrirla recién desde el link (`Linking.getInitialURL`) — antes
+ * vivía directamente en `_layout.tsx`, que no debe contener lógica de
+ * autenticación/deep-linking (ver comentario de `RootLayout`).
+ *
+ * No navega ni sincroniza el Auth Store a mano — `setSession()` (dentro de
+ * `completeSessionFromUrl`) dispara el evento `SIGNED_IN`, que
+ * `authStore.init()` ya escucha vía `onSessionChange`.
+ *
+ * Devuelve una función `unsubscribe` para el cleanup del `useEffect` que la
+ * invoque.
+ */
+export function subscribeToAuthDeepLinks(): () => void {
+  const subscription = Linking.addEventListener("url", ({ url }) => {
+    completeSessionFromUrl(url);
+  });
+  Linking.getInitialURL().then((url) => {
+    if (url) completeSessionFromUrl(url);
+  });
+
+  return () => subscription.remove();
+}

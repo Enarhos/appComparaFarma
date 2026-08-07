@@ -10,8 +10,8 @@ import {
   ScrollView,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useRouter } from "expo-router";
 import { signUpWithPassword } from "@/lib/sessionManager";
+import { goToLogin, returnFromAuth } from "@/lib/authNavigation";
 
 type Status = "idle" | "submitting" | "check-email" | "error";
 
@@ -32,16 +32,10 @@ type Status = "idle" | "submitting" | "check-email" | "error";
 // verificar que las "Redirect URLs" del proyecto Supabase acepten el
 // esquema `comparafarma://` (configuración fuera de este repositorio).
 export default function RegistroScreen() {
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
-
-  function goToOrigin() {
-    if (router.canGoBack()) router.back();
-    else router.replace("/");
-  }
 
   async function handleSubmit() {
     if (!email.trim() || password.length < 6) {
@@ -62,7 +56,7 @@ export default function RegistroScreen() {
       return;
     }
     if (outcome === "signed-in") {
-      goToOrigin();
+      returnFromAuth();
       return;
     }
     setStatus("check-email");
@@ -137,7 +131,7 @@ export default function RegistroScreen() {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => router.push("/login" as any)}
+            onPress={goToLogin}
             className="mt-5 items-center"
             accessibilityRole="button"
             accessibilityLabel="Ya tengo cuenta"

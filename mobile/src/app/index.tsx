@@ -15,6 +15,7 @@ import { useFavoritesStore } from "@/store/favoritesStore";
 import { useSearchStore } from "@/store/searchStore";
 import { useCartStore } from "@/store/cartStore";
 import { useAuthStore } from "@/store/authStore";
+import { goToLogin } from "@/lib/authNavigation";
 import { formatCLP } from "@/lib/formatters";
 import { PHARMACIES } from "@/constants/pharmacies";
 import type { PharmacySlug } from "@/lib/types";
@@ -126,7 +127,7 @@ export default function HomeScreen() {
                 son opcionales — no bloquean ningún flujo de búsqueda o
                 comparación de precios (Principio 1, USER_DOMAIN_MODEL.md). */}
             <TouchableOpacity
-              onPress={() => router.push("/login" as any)}
+              onPress={goToLogin}
               hitSlop={12}
               accessibilityLabel={isAuthenticated ? "Mi cuenta" : "Iniciar sesión"}
               accessibilityRole="button"
