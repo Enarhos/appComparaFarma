@@ -20,6 +20,11 @@ export function goToRegistro(): void {
   router.push("/registro" as any);
 }
 
+/** Navega a la pantalla de recuperación de contraseña (Product Completion Sprint 01). */
+export function goToRecuperarClave(): void {
+  router.push("/recuperar-clave" as any);
+}
+
 /**
  * Vuelve a la pantalla de origen tras un login/registro exitoso: si hay una
  * pantalla anterior en el stack, vuelve a ella; si no, reemplaza por Home.

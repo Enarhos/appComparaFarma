@@ -13,7 +13,18 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { useAuthStore } from "@/store/authStore";
 import { signInWithPassword } from "@/lib/sessionManager";
-import { goToRegistro, returnFromAuth } from "@/lib/authNavigation";
+import { goToRegistro, goToRecuperarClave, returnFromAuth } from "@/lib/authNavigation";
+
+// Product Completion Sprint 01: la etiqueta de Plan es deliberadamente
+// binaria (Gratis/Premium), igual que `web/src/lib/profile.ts`
+// (`PLAN_LABEL`) — `entitlement.plan` ya viene resuelto por
+// `lib/entitlementAdapter.ts` como "el planId si el entitlement está
+// activo, o `null` si no" (ver ese archivo), así que su sola presencia ya
+// equivale a "activo": no hace falta un catálogo de nombres de plan para
+// mostrar el estado que ya existe en el Auth Store.
+function planLabel(plan: string | null): string {
+  return plan ? "Premium" : "Gratis";
+}
 
 // Login / Cuenta — Épica 1 (Identity Foundation), TASK-003 (Tasks 006 y 008
 // del plan técnico de docs/execution/EPIC-01-IDENTITY_FOUNDATION.md).
@@ -33,6 +44,7 @@ export default function LoginScreen() {
   const initialized = useAuthStore((s) => s.initialized);
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const identity = useAuthStore((s) => s.identity);
+  const entitlement = useAuthStore((s) => s.entitlement);
   const signOut = useAuthStore((s) => s.signOut);
   const signingOut = useAuthStore((s) => s.signingOut);
 
@@ -77,6 +89,13 @@ export default function LoginScreen() {
           </View>
           <Text className="text-lg font-bold text-gray-900 dark:text-white">Mi cuenta</Text>
           <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1">{identity?.email}</Text>
+
+          <View className="bg-gray-50 dark:bg-gray-800 rounded-xl px-4 py-3 mt-5 w-full">
+            <Text className="text-xs text-gray-500 dark:text-gray-400">Plan</Text>
+            <Text className="text-sm font-semibold text-gray-900 dark:text-white mt-0.5">
+              {planLabel(entitlement?.plan ?? null)}
+            </Text>
+          </View>
 
           <TouchableOpacity
             onPress={signOut}
@@ -141,6 +160,15 @@ export default function LoginScreen() {
             autoComplete="current-password"
             className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white text-sm mb-4"
           />
+
+          <TouchableOpacity
+            onPress={goToRecuperarClave}
+            className="items-end mb-4"
+            accessibilityRole="button"
+            accessibilityLabel="Olvidé mi contraseña"
+          >
+            <Text className="text-sm text-green-600 font-semibold">¿Olvidaste tu contraseña?</Text>
+          </TouchableOpacity>
 
           <TouchableOpacity
             onPress={handleSubmit}
