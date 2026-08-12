@@ -16,7 +16,13 @@ export default function HomePage() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div className="flex justify-end">
+        <Link href="/cuenta" className="text-sm font-medium text-accent-ink underline-offset-2 hover:underline">
+          Mi cuenta
+        </Link>
+      </div>
+
+      <div className="mt-6 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         {/* Columna de texto */}
         <div>
           <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
