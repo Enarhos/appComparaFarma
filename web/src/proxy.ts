@@ -4,7 +4,13 @@ import { isAllowedAdmin } from "@/lib/adminAllowlist";
 
 // Sprint D: rutas de usuario final protegidas por sesión, sin lista blanca
 // (a diferencia de /admin, cualquiera con cuenta puede entrar acá).
-const PUBLIC_CUENTA_PATHS = new Set(["/cuenta/ingresar", "/cuenta/registro"]);
+// Product Completion Sprint 01: "/cuenta/recuperar" se agrega como pública
+// porque la Persona todavía no tiene sesión cuando pide recuperar su
+// contraseña — "/cuenta/actualizar-clave" NO se agrega acá a propósito: solo
+// se llega a esa ruta después de que el link de recuperación ya estableció
+// una sesión (ver auth/callback/route.ts), así que debe seguir exigiendo
+// sesión como cualquier otra ruta de /cuenta.
+const PUBLIC_CUENTA_PATHS = new Set(["/cuenta/ingresar", "/cuenta/registro", "/cuenta/recuperar"]);
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
