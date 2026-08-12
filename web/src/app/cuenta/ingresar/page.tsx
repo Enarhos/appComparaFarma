@@ -77,6 +77,12 @@ function CuentaLoginForm() {
       </form>
 
       <p className="mt-4 text-center text-sm text-muted">
+        <Link href="/cuenta/recuperar" className="font-medium text-accent-ink hover:underline">
+          ¿Olvidaste tu contraseña?
+        </Link>
+      </p>
+
+      <p className="mt-2 text-center text-sm text-muted">
         ¿No tienes cuenta?{" "}
         <Link href="/cuenta/registro" className="font-medium text-accent-ink hover:underline">
           Crea una acá

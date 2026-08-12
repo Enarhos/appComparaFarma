@@ -115,6 +115,56 @@ export async function signUpWithPassword(email: string, password: string): Promi
 }
 
 /**
+ * Envía el email de recuperación de contraseña (Product Completion Sprint
+ * 01). Usa exclusivamente la capacidad nativa de Supabase Auth
+ * (`resetPasswordForEmail`) — no hay backend ni API propios involucrados.
+ *
+ * `redirectTo` usa el mismo esquema de deep link ya declarado en
+ * `mobile/app.json` que usa `signUpWithPassword`, apuntando a la nueva
+ * pantalla `actualizar-clave` en vez de a `login` — para que la Persona
+ * llegue directo al formulario de contraseña nueva, no a la pantalla de
+ * cuenta. La sesión de recuperación se completa igual que la de
+ * confirmación de registro: `subscribeToAuthDeepLinks()` ya extrae los
+ * tokens del deep link sin importar a qué pantalla apunten (ver
+ * `parseAuthTokensFromUrl`), así que no requiere ningún cambio ahí.
+ *
+ * Igual que el resto de las funciones de este archivo, nunca reenvía el
+ * mensaje real de error de Supabase — solo `true`/`false`. Un `false` puede
+ * significar tanto "el email no existe" como "falló el envío": esa
+ * ambigüedad es intencional, mismo criterio que
+ * `web/src/app/cuenta/recuperar/page.tsx`, para no revelar si un correo
+ * tiene o no una cuenta creada.
+ */
+export async function sendPasswordReset(email: string): Promise<boolean> {
+  if (!supabase) return false;
+  try {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: Linking.createURL("actualizar-clave"),
+    });
+    return !error;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Actualiza la contraseña de la sesión activa (Product Completion Sprint
+ * 01). Solo tiene sentido llamarla con una sesión de recuperación ya
+ * establecida (ver `sendPasswordReset` y `app/actualizar-clave.tsx`) —
+ * `supabase.auth.updateUser` opera siempre sobre la sesión actual, nunca
+ * requiere la contraseña anterior.
+ */
+export async function updatePassword(newPassword: string): Promise<boolean> {
+  if (!supabase) return false;
+  try {
+    const { error } = await supabase.auth.updateUser({ password: newPassword });
+    return !error;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Extrae `access_token`/`refresh_token` del fragmento (`#...`) o, si no hay
  * fragmento, del query string (`?...`) de una URL de deep link. Sigue el
  * formato del flujo implícito documentado en la guía oficial vigente de
