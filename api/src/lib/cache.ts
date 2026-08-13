@@ -56,3 +56,26 @@ export async function setCachedSearch(
   }
   memCache.set(key, { data, expiresAt: Date.now() + ttlMs });
 }
+
+const HEALTHCHECK_TIMEOUT_MS = 1500;
+
+/**
+ * Ping real de Redis para `/api/health` (RC-03, Health Check Medio #8 —
+ * restaurado 2026-08-13, ver docs/operations/RUNBOOK.md §6). No expone
+ * ningún secreto, solo el estado. `"not_configured"` si las env vars de
+ * Upstash no están presentes (mismo criterio que `getCachedSearch`);
+ * `"degraded"` si el ping falla o excede el timeout; `"ok"` en caso contrario.
+ */
+export async function pingRedis(): Promise<"ok" | "degraded" | "not_configured"> {
+  if (!redis) return "not_configured";
+  try {
+    await Promise.race([
+      redis.get(`${KEY_PREFIX}__healthcheck__`),
+      new Promise((_resolve, reject) => setTimeout(() => reject(new Error("timeout")), HEALTHCHECK_TIMEOUT_MS)),
+    ]);
+    return "ok";
+  } catch (err) {
+    console.warn("[health] Redis ping failed", err);
+    return "degraded";
+  }
+}
