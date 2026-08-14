@@ -3,10 +3,14 @@
 // api/src/routes/alerts.ts (Sprint C) sin duplicar la llamada a fetch.
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
-// Dominio sandbox de Resend — decisión explícita del CEO (2026-07-31) para
-// no bloquear Sprint C con verificación de dominio propio. Migrar cuando
-// se decida verificar un dominio real en Resend.
-const FROM = "ComparaFarma <onboarding@resend.dev>";
+// Dominio propio verificado en Resend (2026-08-14, ver OPS-REV-002) — antes
+// usaba el dominio sandbox `onboarding@resend.dev` (decisión explícita del
+// CEO, 2026-07-31, para no bloquear Sprint C con verificación de dominio
+// propio), que solo entregaba de forma confiable al email dueño de la
+// cuenta de Resend, no a usuarios reales de alertas de precio. Dominio
+// interino (`lospanalesdeamelia.cl`, verificado para el SMTP de Supabase
+// Auth) — reemplazar cuando se defina el dominio definitivo del proyecto.
+const FROM = "ComparaFarma <noreply@lospanalesdeamelia.cl>";
 
 export async function sendEmail(to: string, subject: string, text: string): Promise<void> {
   if (!RESEND_API_KEY) {

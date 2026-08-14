@@ -91,7 +91,9 @@ export async function handleFeedbackRoute(req: unknown, res: unknown): Promise<v
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "ComparaFarma <onboarding@resend.dev>",
+          // Dominio propio verificado en Resend (2026-08-14, ver OPS-REV-002) —
+          // antes usaba el dominio sandbox, igual que email.ts.
+          from: "ComparaFarma <noreply@lospanalesdeamelia.cl>",
           to: [FEEDBACK_EMAIL],
           subject: "[ComparaFarma] Nueva sugerencia",
           text: lines.join("\n"),
