@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
 
     steps:
       - uses: actions/checkout@v4
@@ -19,9 +20,12 @@ jobs:
           node-version: 20
 
       - name: Fetch and merge MINSAL data
+        id: fetch-branches
         run: node scripts-temp/fetch-branches.js
+        continue-on-error: true
 
       - name: Commit if data changed
+        if: steps.fetch-branches.outcome == 'success'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -32,3 +36,23 @@ jobs:
             git commit -m "data: update MINSAL branches (acumulado)"
             git push
           fi
+
+      - name: Create issue on update-branches failure
+        if: steps.fetch-branches.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `Update MINSAL branches failure - ${new Date().toISOString().slice(0, 16)}`;
+            const body = 'Falló el fetch/merge de datos de sucursales MINSAL (`update-branches.yml`, step "Fetch and merge MINSAL data"). Revisar logs del run para el error real (MINSAL bloquea IPs de Vercel en runtime; este workflow corre desde GitHub Actions, no debería verse afectado por eso, pero puede fallar por otras razones — formato de datos cambiado, timeout, etc.).';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['monitoring', 'bug'],
+              assignees: [context.repo.owner]
+            });
+
+      - name: Fail job if fetch-branches failed
+        if: steps.fetch-branches.outcome == 'failure'
+        run: exit 1
