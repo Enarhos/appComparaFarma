@@ -1,0 +1,57 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800'>
+<rect x='0' y='0' width='1200' height='800' rx='0' fill='#F5F6F7'/>
+<rect x='0' y='0' width='220' height='800' rx='0' fill='#1B1F23'/>
+<text x='32' y='48' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#FFFFFF' text-anchor='start'>ComparaFarma</text>
+<text x='32' y='110' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#7C848C' text-anchor='start'>Resumen</text>
+<rect x='16' y='128' width='188' height='34' rx='8' fill='#3F3FB8'/>
+<text x='32' y='150' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='600' fill='#FFFFFF' text-anchor='start'>Historial de precios</text>
+<text x='32' y='190' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#7C848C' text-anchor='start'>Alertas</text>
+<text x='32' y='230' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#7C848C' text-anchor='start'>Farmacias</text>
+<text x='32' y='270' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#7C848C' text-anchor='start'>Configuración</text>
+<rect x='220' y='0' width='980' height='64' rx='0' fill='#FFFFFF'/>
+<rect x='220' y='63' width='980' height='1' rx='0' fill='#C2C7CC'/>
+<text x='252' y='40' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='700' fill='#1B1F23' text-anchor='start'>Historial de precios</text>
+<rect x='252' y='96' width='210' height='110' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='252' y='96' width='210' height='4' rx='2' fill='#2F8F5B'/>
+<text x='272' y='128' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#7C848C' text-anchor='start'>Ahorro este mes</text>
+<text x='272' y='164' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#1B1F23' text-anchor='start'>$18.400</text>
+<rect x='482' y='96' width='210' height='110' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='482' y='96' width='210' height='4' rx='2' fill='#1C7DB0'/>
+<text x='502' y='128' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#7C848C' text-anchor='start'>Alertas activas</text>
+<text x='502' y='164' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#1B1F23' text-anchor='start'>6</text>
+<rect x='712' y='96' width='210' height='110' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='712' y='96' width='210' height='4' rx='2' fill='#B4790E'/>
+<text x='732' y='128' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#7C848C' text-anchor='start'>Precio más volátil</text>
+<text x='732' y='164' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#1B1F23' text-anchor='start'>Losartán 50mg</text>
+<rect x='942' y='96' width='210' height='110' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='942' y='96' width='210' height='4' rx='2' fill='#B23B33'/>
+<text x='962' y='128' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#7C848C' text-anchor='start'>Sin stock</text>
+<text x='962' y='164' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#1B1F23' text-anchor='start'>2 farmacias</text>
+<rect x='252' y='230' width='600' height='340' rx='16' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='276' y='262' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg — últimos 14 registros</text>
+<rect x='288' y='398' width='34' height='142' rx='4' fill='#3F3FB8'/>
+<rect x='326' y='442' width='34' height='98' rx='4' fill='#3F3FB8'/>
+<rect x='364' y='379' width='34' height='161' rx='4' fill='#3F3FB8'/>
+<rect x='402' y='314' width='34' height='226' rx='4' fill='#B23B33'/>
+<rect x='440' y='468' width='34' height='72' rx='4' fill='#3F3FB8'/>
+<rect x='478' y='462' width='34' height='78' rx='4' fill='#3F3FB8'/>
+<rect x='516' y='343' width='34' height='197' rx='4' fill='#3F3FB8'/>
+<rect x='554' y='456' width='34' height='84' rx='4' fill='#3F3FB8'/>
+<rect x='592' y='387' width='34' height='153' rx='4' fill='#3F3FB8'/>
+<rect x='630' y='331' width='34' height='209' rx='4' fill='#3F3FB8'/>
+<rect x='668' y='466' width='34' height='74' rx='4' fill='#3F3FB8'/>
+<rect x='706' y='351' width='34' height='189' rx='4' fill='#3F3FB8'/>
+<rect x='744' y='426' width='34' height='114' rx='4' fill='#3F3FB8'/>
+<rect x='782' y='471' width='34' height='69' rx='4' fill='#2F8F5B'/>
+<rect x='872' y='230' width='296' height='340' rx='16' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='896' y='262' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#1B1F23' text-anchor='start'>Notas</text>
+<circle cx='906' cy='296' r='5' fill='#2F8F5B'/>
+<text x='922' y='300' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>Precio bajó 8%</text>
+<circle cx='906' cy='336' r='5' fill='#7C848C'/>
+<text x='922' y='340' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>Sin cambios en 3 farmacias</text>
+<circle cx='906' cy='376' r='5' fill='#B23B33'/>
+<text x='922' y='380' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>Stock agotado en Ahumada</text>
+<circle cx='906' cy='416' r='5' fill='#1C7DB0'/>
+<text x='922' y='420' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>Nuevo canal CMR detectado</text>
+<text x='1184' y='786' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#7C848C' text-anchor='end'>Option A — Intelligence (Refinada)</text>
+</svg>

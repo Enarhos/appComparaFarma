@@ -28,7 +28,7 @@
 | Google Play Console + Billing/RTDN | Cuenta developer (USD 25, pago único) | Distribución de Mobile + RTDN de suscripciones (Fase 1) | `MONITOR` (hallazgo de `DonationBanner` resuelto en Mobile, ver actualización 2026-08-15 abajo) | 🟢 Bajo — donaciones retiradas del flujo visible de Mobile; keystore reclasificado, ya no crítico | Confirmar backup del upload key | CTO |
 | Sentry (api + mobile) | Developer/Free | Reporte de excepciones no controladas | `OK` | 🟢 Bajo — sin PII en el contexto enviado (solo `requestId`/`route`), no-op explícito sin DSN | Ninguna | — |
 | PostHog | Free | Analítica de búsqueda (evento único `medication_search`) | `OK` | 🟢 Bajo — sin PII directa capturada (no email, no user id); el texto de búsqueda podría ser sensible por naturaleza, no por diseño del evento | Investigar el toast de error de PostHog observado en Mobile en una sesión previa (menor, no bloqueante) | — |
-| Khipu | Comisión por transacción (~0,69%+IVA, no confirmado en página oficial) | Donaciones: link estático en Mobile (deshabilitado) + CTA nuevo en Web vía `/api/donate` (Instant Payments API 3.0, `KHIPU_PAYMENT_CREATION: VERIFIED_IN_PRODUCTION`) | `HUMAN_ACTION_REQUIRED` | 🟡 Medio — CTA Web ya en esta rama (sin desplegar); confirmación de pago no implementada (`KHIPU_PAYMENT_CONFIRMATION: NOT_IMPLEMENTED`); credenciales API 2.0 conservadas como `LEGACY_ROLLBACK_ONLY` sin rotar; webhook pendiente por secreto de firma no confirmado | Revisar y aprobar el PR `feat/web-donations-khipu`; rotación de credenciales API 2.0 sigue pendiente por separado | CTO |
+| Khipu | Comisión por transacción (~0,69%+IVA, no confirmado en página oficial) | Donaciones (link estático, en producción) + flujo dinámico `/api/donate` (sin uso real hoy) | `HUMAN_ACTION_REQUIRED` | 🔴 Alto — credenciales expuestas en logs/endpoint público el 2026-06-16 (evidencia directa de git), sin evidencia de rotación posterior | Rotar `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` (procedimiento detallado abajo) | CTO |
 | Upstash Redis | Free | Caché de búsqueda + rate limiting distribuido | `OK` | 🟢 Bajo — fallback a memoria verificado línea por línea, nunca bloquea funcionalidad | Monitorear consumo de comandos/mes antes de crecer | — |
 | Flow | Sandbox/Producción (no activo) | Motor de suscripciones premium recurrentes, código completo, sin credenciales configuradas | `MONITOR` (pausado por decisión de negocio, 2026-08-14) | 🟢 Bajo — degrada explícitamente (503 / `skipped`) sin configurar, sin impacto en producción | Activar solo junto con el lanzamiento comercial de Premium — coordinar con el upgrade de Vercel | CTO |
 | Repositorio Git (estado de la copia de trabajo) | No aplica | Control de versiones del monorepo | `BLOCKED` | 🔴 Alto — operacional, no de producto (ver sección dedicada) | Resolver el cherry-pick en curso en `hotfix/mobile-validation`; commitear la documentación de este sprint | CTO |
@@ -127,44 +127,21 @@ Se revisó específicamente si existe código en Mobile que permita comprar Prem
 7. **Riesgo de hacerlo:** cargo recurrente de USD 20/mes
 8. **Rollback:** downgrade a Hobby disponible en cualquier momento desde el mismo panel — de hacerlo, habría que volver a resolver el hallazgo de uso comercial (DonationBanner/Premium) de otra forma
 
-### 3. `HUMAN_ACTION_REQUIRED: ROTATE_KHIPU_CREDENTIALS` (actualizado 2026-08-15 — migración a API 3.0 en curso)
-
-**Cambio de contexto:** `api/src/clients/khipu.ts`/`api/src/routes/donate.ts` migraron de Khipu API 2.0 a Instant Payments API 3.0 (ver `PLATFORM_SERVICE_REVIEW_KHIPU.md` §5ter). El código nuevo usa `KHIPU_API_KEY` (autenticación por header `x-api-key`) y ya **no** usa `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` ni la firma HMAC — esas quedan como `LEGACY_ROLLBACK_ONLY`. Esto significa que la acción humana pendiente cambió de forma: ya no es "rotar la clave vieja" sino **"crear la clave nueva y configurarla"**; la clave vieja se conserva sin rotar, solo por si hace falta revertir.
+### 3. `HUMAN_ACTION_REQUIRED: ROTATE_KHIPU_CREDENTIALS`
 
 1. **Servicio:** Khipu
-2. **Consola:** khipu.com → sesión del cobrador `520175` ("Mario Lillo Alfaro") → "Opciones de la cuenta de cobro"
-3. **Ruta:** "Para integrar Khipu a tu sitio web" → sección "API Keys" → botón "Nueva API Key"
+2. **Consola:** khipu.com → portal del cobrador `520175` ("Mario Lillo Alfaro")
+3. **Ruta:** Mis datos → Integración (o la sección de seguridad/API equivalente)
 4. **Cambio requerido:**
-   1. Presionar "Nueva API Key". Opcionalmente, ingresar el alias **"ComparaFarma Production"** para identificarla.
-   2. Copiar el valor mostrado de inmediato — Khipu solo lo muestra completo una vez, en el momento de creación.
-   3. Guardar ese valor en Vercel → proyecto `comparafarma-api` → Settings → Environment Variables → `KHIPU_API_KEY` (Production **y** Preview).
-   4. Forzar un redeploy de `comparafarma-api` desde el dashboard de Vercel.
-   5. Ejecutar la prueba de validación de abajo — objetivo: confirmar `payment_url`, **sin completar un pago real**.
-   6. **No expirar todavía** las credenciales `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` de API 2.0 — quedan como `LEGACY_ROLLBACK_ONLY`, se conservan mientras no se confirme que la API 3.0 es estable en producción (acción separada y posterior, no parte de este cierre).
-5. **Servicios que requieren la credencial nueva (`KHIPU_API_KEY`):**
-
-   | Servicio | ¿Necesita `KHIPU_API_KEY`? | `NEEDS_UPDATE` |
-   |---|---|---|
-   | Vercel `comparafarma-api` (Production + Preview) | Sí — única variable de entorno que usa el flujo nuevo (`api/src/clients/khipu.ts`) | **YES** |
-   | GitHub Actions | No — ningún workflow referencia `KHIPU_*` | NO |
-   | Web | No — cero referencias a Khipu en `web/src` todavía (sin CTA propio) | NO |
-   | Mobile | No — el `DonationBanner` (deshabilitado hoy) usa links estáticos, no `/api/donate` ni ninguna credencial de Khipu | NO |
-   | Supabase | No — sin referencias a Khipu en el schema ni en código de datos | NO |
-
-6. **Cómo validar (sin completar un pago real):**
-
-   ```bash
-   curl -s -o /tmp/donate_test.json -w 'HTTP %{http_code}\n' \
-     -X POST https://comparafarma-api.vercel.app/api/donate \
-     -H "Content-Type: application/json" \
-     -d '{"amount":1000}'
-   cat /tmp/donate_test.json
-   ```
-
-   Éxito: `HTTP 200` y `{"payment_url":"https://khipu.com/payment/..."}`. **No abrir esa URL ni completar el pago.** Si `KHIPU_API_KEY` falta o es inválida, la respuesta es `500 {"error":"No se pudo crear el pago."}` sin detalle adicional — por diseño, para no filtrar nada de la clave ni de la respuesta de Khipu.
-
-7. **Riesgo de hacerlo:** bajo — `/api/donate` sigue sin ningún llamador real en producción (Mobile deshabilitado, Web sin CTA), así que un error de configuración no afecta a ningún usuario real.
-8. **Rollback:** revertir el import en `api/src/routes/donate.ts` de `createKhipuPaymentV3` a `createKhipuPaymentLegacyV2` (ver `PLATFORM_SERVICE_REVIEW_KHIPU.md` §5ter) — posible porque `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` se conservaron sin expirar.
+   1. Generar un nuevo `Secret` (y `Receiver ID` si Khipu permite regenerarlo) para el cobrador.
+   2. Actualizar `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` en Vercel → proyecto `comparafarma-api` → Environment Variables (Production y Preview).
+   3. Forzar un redeploy de `comparafarma-api` (Vercel no relee env vars de builds ya generados).
+   4. Verificar funcionamiento: `POST /api/donate` con `{ "amount": 1000 }` debe responder `200` con un `payment_url` válido.
+   5. Revocar/invalidar la credencial antigua en el portal de Khipu si el proveedor ofrece esa opción explícita (distinta de simplemente regenerar).
+5. **Variables afectadas:** `KHIPU_RECEIVER_ID`, `KHIPU_SECRET` (Vercel, proyecto `comparafarma-api`)
+6. **Cómo validar:** ver paso 4.iv arriba
+7. **Riesgo de hacerlo:** bajo — el flujo dinámico (`/api/donate`) no tiene ningún llamador real hoy (el `DonationBanner` en producción usa links estáticos, no este endpoint), así que un error temporal de configuración no afecta la experiencia real de usuarios
+8. **Rollback:** no aplica en sentido estricto — una vez rotada, la credencial anterior queda inválida por diseño; dado el punto 7, esto no es disruptivo
 
 ### 4. `HUMAN_ACTION_REQUIRED: CONFIGURE_SUPABASE_SMTP`
 
@@ -257,8 +234,5 @@ Temas que no corresponden a este sprint de cierre operacional:
 | Versión | Fecha | Estado | Aprobación | Cambios |
 |---|---|---|---|---|
 | 1.0 | 2026-08-15 | Activo | Pendiente (CTO) | Creación — consolida las 12 revisiones de servicio del backlog `OPS-BKL-001` en un único estado operacional, con verificación de código real, hallazgo nuevo de estado de git sin commitear, análisis de `DonationBanner` sin eliminarlo, y reclasificación del riesgo de `release.keystore`. |
-| 1.1 | 2026-08-15 | Activo | Pendiente (CTO) | Preparación de la rotación segura de credenciales Khipu: re-verificación de código (sin exposición activa hoy), tabla de servicios que sí/no necesitan actualizar la credencial, y comando de validación exacto (curl/PowerShell) para ejecutar después del redeploy. Reclasificación del riesgo de Khipu de 🔴 Alto a 🟡 Medio en la tabla consolidada, ya que la exposición de código quedó cerrada — la rotación en el panel de Khipu sigue como acción humana pendiente. Ningún código modificado. |
-| 1.2 | 2026-08-15 | Activo | Pendiente (CTO) | Migración de `/api/donate` a Khipu Instant Payments API 3.0: la acción humana pendiente cambia de "rotar la clave API 2.0" a "crear KHIPU_API_KEY nueva y configurarla en Vercel"; se actualiza el procedimiento, la tabla de servicios afectados y el comando de validación. Credenciales API 2.0 se conservan sin expirar como LEGACY_ROLLBACK_ONLY. |
-| 1.3 | 2026-08-15 | Activo | Pendiente (CTO) | Primer CTA de donación en Web (rama feat/web-donations-khipu): footer global, selector de 3 montos, Server Action con validación de payment_url, páginas /apoyar/retorno y /apoyar/cancelado (sin afirmar pago exitoso), rate limiting agregado a /api/donate. Confirmado en producción que la creación de pago vía API 3.0 funciona. Confirmación de pago (KHIPU_PAYMENT_CONFIRMATION) sigue NOT_IMPLEMENTED — deuda registrada, no resuelta en este sprint. |
 
 **Nota:** este documento no tiene, a la fecha, aprobación formal del CTO — fue creado a su pedido explícito; la aprobación es un paso posterior y separado.

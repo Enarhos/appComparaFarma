@@ -1,0 +1,41 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 420' width='900' height='420'>
+<rect x='0' y='0' width='900' height='420' rx='0' fill='#FFFFFF'/>
+<text x='30' y='44' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#231F1A' text-anchor='start'>Option B — Intelligence Cálida</text>
+<rect x='30' y='70' width='120' height='80' rx='10' fill='#4A4A9E'/>
+<text x='30' y='168' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Brand</text>
+<text x='30' y='186' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#4A4A9E</text>
+<rect x='170' y='70' width='120' height='80' rx='10' fill='#B8763A'/>
+<text x='170' y='168' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Accent</text>
+<text x='170' y='186' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#B8763A</text>
+<rect x='310' y='70' width='120' height='80' rx='10' fill='#5C8F4E'/>
+<text x='310' y='168' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Success</text>
+<text x='310' y='186' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#5C8F4E</text>
+<rect x='450' y='70' width='120' height='80' rx='10' fill='#C08A2E'/>
+<text x='450' y='168' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Warning</text>
+<text x='450' y='186' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#C08A2E</text>
+<rect x='590' y='70' width='120' height='80' rx='10' fill='#B5533F'/>
+<text x='590' y='168' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Error</text>
+<text x='590' y='186' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#B5533F</text>
+<rect x='730' y='70' width='120' height='80' rx='10' fill='#3E80A3'/>
+<text x='730' y='168' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Information</text>
+<text x='730' y='186' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#3E80A3</text>
+<rect x='30' y='220' width='120' height='80' rx='10' fill='#F7F5F2' stroke='#CFC6BA' stroke-width='1'/>
+<text x='30' y='318' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 50</text>
+<text x='30' y='336' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#F7F5F2</text>
+<rect x='170' y='220' width='120' height='80' rx='10' fill='#EDE8E1' stroke='#CFC6BA' stroke-width='1'/>
+<text x='170' y='318' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 100</text>
+<text x='170' y='336' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#EDE8E1</text>
+<rect x='310' y='220' width='120' height='80' rx='10' fill='#CFC6BA'/>
+<text x='310' y='318' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 300</text>
+<text x='310' y='336' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#CFC6BA</text>
+<rect x='450' y='220' width='120' height='80' rx='10' fill='#948A7C'/>
+<text x='450' y='318' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 500</text>
+<text x='450' y='336' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#948A7C</text>
+<rect x='590' y='220' width='120' height='80' rx='10' fill='#585045'/>
+<text x='590' y='318' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 700</text>
+<text x='590' y='336' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#585045</text>
+<rect x='730' y='220' width='120' height='80' rx='10' fill='#231F1A'/>
+<text x='730' y='318' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 900</text>
+<text x='730' y='336' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>#231F1A</text>
+<text x='30' y='380' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#948A7C' text-anchor='start'>Uso: Brand=marca/CTA principal · Accent=acciones secundarias · Success/Warning/Error/Information=feedback y estado · Neutral=superficies y texto</text>
+</svg>

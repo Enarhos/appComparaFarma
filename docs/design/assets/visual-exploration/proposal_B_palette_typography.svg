@@ -1,0 +1,49 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 480' width='1000' height='480'>
+<rect x='0.0' y='0.0' width='1000.0' height='480.0' rx='0' fill='#FFFFFF'/>
+<text x='30.0' y='42.0' font-family='Arial, Helvetica, sans-serif' font-size='19' font-weight='700' fill='#121214' text-anchor='start'>Propuesta B — Confidence (Minimal Tech (dominante en esta exploración))</text>
+<rect x='30.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#191B22'/>
+<text x='30.0' y='154.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Primary</text>
+<text x='30.0' y='170.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#191B22</text>
+<rect x='165.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#F7F6F3'/>
+<text x='165.0' y='154.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Secondary</text>
+<text x='165.0' y='170.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#F7F6F3</text>
+<rect x='300.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#A9782E'/>
+<text x='300.0' y='154.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Accent</text>
+<text x='300.0' y='170.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#A9782E</text>
+<rect x='435.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#2F7A52'/>
+<text x='435.0' y='154.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Success</text>
+<text x='435.0' y='170.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#2F7A52</text>
+<rect x='570.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#A9782E'/>
+<text x='570.0' y='154.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Warning</text>
+<text x='570.0' y='170.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#A9782E</text>
+<rect x='705.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#9C3B33'/>
+<text x='705.0' y='154.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Error</text>
+<text x='705.0' y='170.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#9C3B33</text>
+<rect x='840.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#3C6E8F'/>
+<text x='840.0' y='154.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Information</text>
+<text x='840.0' y='170.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#3C6E8F</text>
+<rect x='30.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#F5F5F4' stroke='#C7C5C1' stroke-width='1'/>
+<text x='30.0' y='286.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Neutral 50</text>
+<text x='30.0' y='302.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#F5F5F4</text>
+<rect x='165.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#E7E6E4' stroke='#C7C5C1' stroke-width='1'/>
+<text x='165.0' y='286.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Neutral 100</text>
+<text x='165.0' y='302.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#E7E6E4</text>
+<rect x='300.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#C7C5C1'/>
+<text x='300.0' y='286.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Neutral 300</text>
+<text x='300.0' y='302.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#C7C5C1</text>
+<rect x='435.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#8A8782'/>
+<text x='435.0' y='286.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Neutral 500</text>
+<text x='435.0' y='302.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#8A8782</text>
+<rect x='570.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#464440'/>
+<text x='570.0' y='286.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Neutral 700</text>
+<text x='570.0' y='302.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#464440</text>
+<rect x='705.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#121214'/>
+<text x='705.0' y='286.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#121214' text-anchor='start'>Neutral 900</text>
+<text x='705.0' y='302.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#464440' text-anchor='start'>#121214</text>
+<text x='30.0' y='352.0' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='700' fill='#121214' text-anchor='start'>Tipografía propuesta: Space Grotesk</text>
+<text x='30.0' y='378.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#464440' text-anchor='start'>· Space Grotesk tiene una geometría distintiva y segura de sí misma, coherente con "Confidence" sin caer en el registro genérico de Inter.</text>
+<text x='30.0' y='398.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#464440' text-anchor='start'>· Su carácter ligeramente técnico refuerza Minimal Tech sin sacrificar calidez en tamaños grandes de titular.</text>
+<text x='30.0' y='418.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#464440' text-anchor='start'>· Funciona bien con muy pocos pesos en pantalla, coherente con la disciplina "un acento, pocos elementos" de esta propuesta.</text>
+<text x='30.0' y='438.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#464440' text-anchor='start'>· Es de uso libre y ya adoptada por productos tech modernos citados en el benchmark aprobado.</text>
+<text x='30.0' y='458.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#464440' text-anchor='start'>· Exploración visual únicamente — no constituye una decisión de TYPOGRAPHY_SYSTEM.</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 900' width='390' height='900'>
+<rect x='0.0' y='0.0' width='390.0' height='900.0' rx='0' fill='#F5F6F7'/>
+<rect x='0.0' y='0.0' width='390.0' height='72.0' rx='0' fill='#FFFFFF'/>
+<rect x='0.0' y='71.0' width='390.0' height='1.0' rx='0' fill='#C2C7CC'/>
+<g transform='translate(16,20) scale(0.26)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#3F3FB8' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#3F3FB8'/></g>
+<text x='42.0' y='40.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='700' fill='#1B1F23' text-anchor='start' letter-spacing='-0.2'>ComparaFarma</text>
+<text x='16.0' y='100.0' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='normal' fill='#454B52' text-anchor='start'>Resultados para "paracetamol"</text><text x='16.0' y='120.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#7C848C' text-anchor='start'>4 medicamentos encontrados</text>
+<rect x='16.0' y='124.0' width='358.0' height='52.0' rx='0' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/><rect x='32.0' y='137.0' width='86.0' height='26.0' rx='13.0' fill='#E7E9EB'/><text x='75.0' y='153.5' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='600' fill='#2B8354' text-anchor='middle'>Bio (4)</text><circle cx='136.0' cy='150.0' r='3.5' fill='#3F3FB8'/><circle cx='148.0' cy='150.0' r='3.5' fill='#0D827B'/><circle cx='160.0' cy='150.0' r='3.5' fill='#2B8354'/><circle cx='172.0' cy='150.0' r='3.5' fill='#9F6B0C'/><circle cx='184.0' cy='150.0' r='3.5' fill='#1C7BAE'/><circle cx='196.0' cy='150.0' r='3.5' fill='#454B52'/><circle cx='208.0' cy='150.0' r='3.5' fill='#7C848C'/><circle cx='220.0' cy='150.0' r='3.5' fill='#2E2E8C'/><circle cx='232.0' cy='150.0' r='3.5' fill='#B23B33'/><rect x='284.0' y='135.0' width='74.0' height='30.0' rx='15' fill='#E7E9EB' stroke='#C2C7CC' stroke-width='1'/><text x='321.0' y='153.8' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#2B8354' text-anchor='middle'>Filtros (2)</text>
+<rect x='16.0' y='192.0' width='358.0' height='104.0' rx='10' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<g transform='translate(34,222.0) scale(0.17)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#7C848C' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#7C848C'/></g>
+<text x='64.0' y='224.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20 comprimidos</text>
+<text x='64.0' y='240.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='start'>Laboratorio Chile</text>
+<rect x='64.0' y='250.0' width='44.0' height='16.0' rx='8.0' fill='#E7E9EB'/><text x='86.0' y='260.8' font-family='Arial, Helvetica, sans-serif' font-size='8' font-weight='600' fill='#2B8354' text-anchor='middle'>Bio</text>
+<circle cx='64.0' cy='272.0' r='3.5' fill='#3F3FB8'/><circle cx='76.0' cy='272.0' r='3.5' fill='#0D827B'/><circle cx='88.0' cy='272.0' r='3.5' fill='#2B8354'/><circle cx='100.0' cy='272.0' r='3.5' fill='#9F6B0C'/>
+<path d='M324.0,222.7 A10,10 0 1 1 334.0,222.7' fill='none' stroke='#D5D8DC' stroke-width='3' stroke-linecap='round'/><path d='M324.0,222.7 A10,10 0 1 1 336.7,207.6' fill='none' stroke='#0D827B' stroke-width='3' stroke-linecap='round'/>
+<text x='358.0' y='250.0' font-family='Arial, Helvetica, sans-serif' text-anchor='end'><tspan font-size='10.8' font-weight='600' fill='#7C848C'>$</tspan><tspan dx='2' font-size='18' font-weight='700' fill='#1B1F23'>1.990</tspan></text>
+<text x='358.0' y='268.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='end'>Cruz Verde</text>
+<rect x='16.0' y='308.0' width='358.0' height='104.0' rx='10' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<g transform='translate(34,338.0) scale(0.17)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#7C848C' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#7C848C'/></g>
+<text x='64.0' y='340.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x10 comprimidos</text>
+<text x='64.0' y='356.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='start'>Laboratorio Chile</text>
+<rect x='64.0' y='366.0' width='44.0' height='16.0' rx='8.0' fill='#E7E9EB'/><text x='86.0' y='376.8' font-family='Arial, Helvetica, sans-serif' font-size='8' font-weight='600' fill='#2B8354' text-anchor='middle'>Bio</text>
+<circle cx='64.0' cy='388.0' r='3.5' fill='#3F3FB8'/><circle cx='76.0' cy='388.0' r='3.5' fill='#0D827B'/><circle cx='88.0' cy='388.0' r='3.5' fill='#2B8354'/>
+<text x='358.0' y='366.0' font-family='Arial, Helvetica, sans-serif' text-anchor='end'><tspan font-size='10.8' font-weight='600' fill='#7C848C'>$</tspan><tspan dx='2' font-size='18' font-weight='700' fill='#1B1F23'>1.190</tspan></text>
+<text x='358.0' y='384.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='end'>Salcobrand</text>
+<rect x='16.0' y='424.0' width='358.0' height='104.0' rx='10' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<g transform='translate(34,454.0) scale(0.17)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#7C848C' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#7C848C'/></g>
+<text x='64.0' y='456.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol Forte 650mg x20</text>
+<text x='64.0' y='472.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='start'>Bayer</text>
+<circle cx='64.0' cy='504.0' r='3.5' fill='#3F3FB8'/><circle cx='76.0' cy='504.0' r='3.5' fill='#0D827B'/>
+<path d='M324.0,454.7 A10,10 0 1 1 334.0,454.7' fill='none' stroke='#D5D8DC' stroke-width='3' stroke-linecap='round'/><path d='M324.0,454.7 A10,10 0 0 1 321.3,439.6' fill='none' stroke='#0D827B' stroke-width='3' stroke-linecap='round'/>
+<text x='358.0' y='482.0' font-family='Arial, Helvetica, sans-serif' text-anchor='end'><tspan font-size='10.8' font-weight='600' fill='#7C848C'>$</tspan><tspan dx='2' font-size='18' font-weight='700' fill='#1B1F23'>3.290</tspan></text>
+<text x='358.0' y='500.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='end'>Dr. Simi</text>
+<rect x='16.0' y='540.0' width='358.0' height='104.0' rx='10' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<g transform='translate(34,570.0) scale(0.17)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#7C848C' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#7C848C'/></g>
+<text x='64.0' y='572.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol Gotas 100mg/ml</text>
+<text x='64.0' y='588.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='start'>Mintlab</text>
+<text x='358.0' y='598.0' font-family='Arial, Helvetica, sans-serif' text-anchor='end'><tspan font-size='10.8' font-weight='600' fill='#7C848C'>$</tspan><tspan dx='2' font-size='18' font-weight='700' fill='#1B1F23'>2.490</tspan></text>
+<text x='358.0' y='616.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='end'>EasyFarma</text>
+<text x='374.0' y='886.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='end'>ComparaFarma — Signature Components v1 (BRAND-003) · Resultados — Mobile</text>
+</svg>

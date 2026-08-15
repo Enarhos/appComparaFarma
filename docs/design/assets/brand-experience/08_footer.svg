@@ -1,0 +1,28 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 420' width='1280' height='420'>
+<rect x='0.0' y='0.0' width='1280.0' height='420.0' rx='0' fill='#FFFFFF'/>
+<rect x='0.0' y='60.0' width='1280.0' height='300.0' rx='0' fill='#1B1F23'/>
+<g transform='translate(48,96) scale(0.3)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='82.0' y='122.0' font-family='Arial, Helvetica, sans-serif' font-size='16' font-weight='700' fill='#FFFFFF' text-anchor='start' letter-spacing='-0.2'>ComparaFarma</text>
+<text x='48.0' y='150.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Plataforma de Inteligencia Farmacéutica.</text>
+<text x='420.0' y='110.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#FFFFFF' text-anchor='start'>Producto</text>
+<text x='420.0' y='140.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Buscar medicamentos</text>
+<text x='420.0' y='166.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Favoritos</text>
+<text x='420.0' y='192.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Alertas de precio</text>
+<text x='420.0' y='218.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Dashboard</text>
+<text x='630.0' y='110.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#FFFFFF' text-anchor='start'>Farmacias</text>
+<text x='630.0' y='140.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Cruz Verde</text>
+<text x='630.0' y='166.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Salcobrand</text>
+<text x='630.0' y='192.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Ahumada</text>
+<text x='630.0' y='218.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Ver las 9 farmacias</text>
+<text x='840.0' y='110.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#FFFFFF' text-anchor='start'>Compañía</text>
+<text x='840.0' y='140.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Sobre ComparaFarma</text>
+<text x='840.0' y='166.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Cómo comparamos</text>
+<text x='840.0' y='192.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Contacto</text>
+<text x='1050.0' y='110.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='700' fill='#FFFFFF' text-anchor='start'>Legal</text>
+<text x='1050.0' y='140.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Términos de uso</text>
+<text x='1050.0' y='166.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Política de privacidad</text>
+<text x='1050.0' y='192.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#C2C7CC' text-anchor='start'>Neutralidad e independencia</text>
+<line x1='48' y1='300' x2='1232' y2='300' stroke='#454B52' stroke-width='1'/>
+<text x='48.0' y='330.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#7C848C' text-anchor='start'>© 2026 ComparaFarma. No somos una farmacia ni un marketplace — comparamos precios de forma neutral.</text>
+<text x='1264.0' y='406.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#7C848C' text-anchor='end'>ComparaFarma — Brand Experience v1 (BRAND-001)</text>
+</svg>

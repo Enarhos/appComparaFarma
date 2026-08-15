@@ -1,0 +1,10 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 844' width='390' height='844'>
+<rect x='0.0' y='0.0' width='390.0' height='844.0' rx='0' fill='#3F3FB8'/>
+<g transform='translate(155,340) scale(0.85)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='195' y='470' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#FFFFFF'>ComparaFarma</text>
+<text x='195' y='498' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='12' fill='#D8D8F0'>Plataforma de Inteligencia Farmacéutica</text>
+<circle cx='175' cy='560' r='5' fill='#FFFFFF' opacity='0.4'/>
+<circle cx='195' cy='560' r='5' fill='#FFFFFF' opacity='1.0'/>
+<circle cx='215' cy='560' r='5' fill='#FFFFFF' opacity='0.4'/>
+<text x='374.0' y='830.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#7C848C' text-anchor='end'>ComparaFarma — Brand Experience v1 (BRAND-001)</text>
+</svg>

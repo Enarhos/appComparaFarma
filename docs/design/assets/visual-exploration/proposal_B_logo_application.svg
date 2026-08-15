@@ -1,0 +1,38 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 520' width='1200' height='520'>
+<rect x='0.0' y='0.0' width='1200.0' height='520.0' rx='0' fill='#FFFFFF'/>
+<text x='30.0' y='40.0' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#121214' text-anchor='start'>Propuesta B — Aplicación del logo (isotipo Candidato 09, sin rediseño)</text>
+<text x='30.0' y='80.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#8A8782' text-anchor='start'>Header</text>
+<rect x='30.0' y='90.0' width='270.0' height='64.0' rx='8' fill='#FFFFFF' stroke='#C7C5C1' stroke-width='1'/>
+<g transform='translate(46,108) scale(0.26)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#191B22' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#191B22'/></g>
+<text x='76.0' y='132.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='600' fill='#121214' text-anchor='start' letter-spacing='0'>ComparaFarma</text>
+<text x='330.0' y='80.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#8A8782' text-anchor='start'>Web Header</text>
+<rect x='330.0' y='90.0' width='420.0' height='64.0' rx='8' fill='#191B22'/>
+<g transform='translate(350,108) scale(0.26)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='380.0' y='132.0' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='600' fill='#FFFFFF' text-anchor='start' letter-spacing='0'>ComparaFarma</text>
+<text x='560.0' y='132.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#FFFFFF' text-anchor='start'>Buscar</text>
+<text x='630.0' y='132.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#FFFFFF' text-anchor='start'>Favoritos</text>
+<text x='700.0' y='132.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#FFFFFF' text-anchor='start'>Cuenta</text>
+<text x='30.0' y='190.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#8A8782' text-anchor='start'>Splash (móvil)</text>
+<rect x='30.0' y='200.0' width='180.0' height='300.0' rx='20' fill='#191B22'/>
+<g transform='translate(90,300) scale(0.5)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='120' y='420' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='600' fill='#FFFFFF'>ComparaFarma</text>
+<text x='240.0' y='190.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#8A8782' text-anchor='start'>App Icon</text>
+<rect x='240.0' y='200.0' width='80.0' height='80.0' rx='18' fill='#191B22'/>
+<g transform='translate(256,216) scale(0.34)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<rect x='340.0' y='200.0' width='80.0' height='80.0' rx='18' fill='#121214'/>
+<g transform='translate(356,216) scale(0.34)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<rect x='440.0' y='200.0' width='80.0' height='80.0' rx='18' fill='#FFFFFF' stroke='#C7C5C1' stroke-width='1'/>
+<g transform='translate(456,216) scale(0.34)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#191B22' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#191B22'/></g>
+<text x='240.0' y='300.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#8A8782' text-anchor='start'>Positivo · Negativo · Monocromo claro</text>
+<text x='560.0' y='190.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#8A8782' text-anchor='start'>Reducción (favicon)</text>
+<rect x='560.0' y='208.0' width='32.0' height='32.0' rx='6.4' fill='#191B22'/>
+<g transform='translate(565.76,213.76) scale(0.20666666666666667)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='576.0' y='260.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#8A8782' text-anchor='middle'>32px</text>
+<rect x='622.0' y='216.0' width='24.0' height='24.0' rx='4.800000000000001' fill='#191B22'/>
+<g transform='translate(626.32,220.32) scale(0.155)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='634.0' y='260.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#8A8782' text-anchor='middle'>24px</text>
+<rect x='676.0' y='224.0' width='16.0' height='16.0' rx='3.2' fill='#191B22'/>
+<g transform='translate(678.88,226.88) scale(0.10333333333333333)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='684.0' y='260.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#8A8782' text-anchor='middle'>16px</text>
+<text x='30.0' y='470.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#8A8782' text-anchor='start'>Geometría del isotipo sin modificar (Candidato 09, 'Aprobar con ajustes'). Solo cambia el color de aplicación por propuesta.</text>
+</svg>
