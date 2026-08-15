@@ -10,7 +10,12 @@ import { useFilterStore } from "@/store/filterStore";
 import { useFavoritesStore } from "@/store/favoritesStore";
 import { useAlertsStore } from "@/store/alertsStore";
 import { PHARMACIES } from "@/constants/pharmacies";
-import { DonationBanner } from "@/components/DonationBanner";
+// DonationBanner: import retirado temporalmente del flujo visible de Mobile
+// (decisión de producto 2026-08-15 — donaciones se retiran de Mobile durante
+// la etapa inicial de adquisición de usuarios; Web sigue recibiendo donaciones
+// vía Khipu sin cambios). El componente y sus constantes se conservan intactos
+// para una futura reactivación — ver docs/operations/PLATFORM_OPERATIONAL_STATUS.md.
+// import { DonationBanner } from "@/components/DonationBanner";
 import { PharmacyLogo } from "@/components/PharmacyLogo";
 import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { AlertSheet } from "@/components/AlertSheet";
@@ -95,7 +100,8 @@ export default function MedicationScreen() {
     ? Math.round((savings / priciest.channels.effective) * 100)
     : 0;
 
-  const activeSavings = savings;
+  // activeSavings (alias de `savings` usado solo por el DonationBanner) se
+  // retira junto con el banner — ver comentarios de import/render arriba.
 
   async function handleShare() {
     const pharmacyName = PHARMACIES[bestPharmacy as PharmacySlug]?.name ?? bestPharmacy;
@@ -253,10 +259,10 @@ export default function MedicationScreen() {
           </View>
         )}
 
-        {/* ── Banner de donación ── */}
-        <View className="mx-4 mt-4">
-          <DonationBanner savings={activeSavings} />
-        </View>
+        {/* ── Banner de donación — retirado temporalmente de Mobile (decisión de
+            producto 2026-08-15). No renderizar en Mobile hasta nueva evaluación
+            de políticas de Google Play / estrategia comercial. Web no se ve
+            afectado. ── */}
 
         {/* ── Footer verificación ── */}
         <View className="mx-4 mt-4 flex-row items-center gap-2 justify-center">
