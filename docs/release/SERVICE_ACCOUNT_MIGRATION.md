@@ -2,6 +2,8 @@
 **Versión:** 1.1 · **Fecha:** 2026-06-30 (corregido 2026-08-02)  
 **Propósito:** Preparar la consolidación de todos los servicios externos en una única cuenta — `mario.lillo.alfaro@gmail.com` — antes de la publicación en Google Play Producción.
 
+> **Trazabilidad (2026-08-13):** el catálogo permanente de servicios (propósito, criticidad, dependencias) vive en `docs/operations/PLATFORM_SERVICE_CATALOG.md` (OPS-SVC-001), que referencia este documento para la propiedad de cuenta. Este documento sigue siendo la única fuente del paso a paso de migración/verificación por servicio — no re-verificado desde 2026-08-02.
+
 > **Corrección (2026-08-02):** el destino real de esta consolidación, confirmado por el CEO, es la cuenta personal `mario.lillo.alfaro@gmail.com` — la misma que ya es dueña de Google Play Console, Khipu, y el destinatario por defecto de Resend. En varios casos el servicio **ya está** en esa cuenta y no requiere ninguna migración — solo verificación.
 
 ---
