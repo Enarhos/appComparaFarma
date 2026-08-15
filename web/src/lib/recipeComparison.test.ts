@@ -30,8 +30,13 @@ function medication(matchKey: string, prices: PharmacyPrice[]): MedicationResult
   };
 }
 
-describe("computeAllInOneTotals", () => {
-  it("sums the effective price per pharmacy across all medications", () => {
+// computeAllInOneTotals() ahora vive en @comparafarma/domain — su cobertura
+// exhaustiva (Domain Consolidation v2, PR refactor/domain-cart-totals) se
+// movió a packages/domain/src/__tests__/basket.test.ts. Este test queda
+// solo como integración ligera: confirma que web/ sigue consumiendo el
+// helper compartido correctamente, sin repetir toda la suite acá.
+describe("computeAllInOneTotals (integración — el algoritmo se testea en @comparafarma/domain)", () => {
+  it("está wireado correctamente: suma el precio efectivo por farmacia a través de medicamentos", () => {
     const meds = [
       medication("a", [price("cruz-verde", "Cruz Verde", 1000), price("salcobrand", "Salcobrand", 1200)]),
       medication("b", [price("cruz-verde", "Cruz Verde", 500), price("salcobrand", "Salcobrand", 300)]),
@@ -40,37 +45,7 @@ describe("computeAllInOneTotals", () => {
     const totals = computeAllInOneTotals(meds);
 
     const cruzVerde = totals.find((t) => t.pharmacySlug === "cruz-verde");
-    const salcobrand = totals.find((t) => t.pharmacySlug === "salcobrand");
     expect(cruzVerde).toMatchObject({ total: 1500, found: 2, missing: 0 });
-    expect(salcobrand).toMatchObject({ total: 1500, found: 2, missing: 0 });
-  });
-
-  it("ranks pharmacies with full coverage before partial coverage, regardless of total", () => {
-    const meds = [
-      medication("a", [price("cruz-verde", "Cruz Verde", 100), price("salcobrand", "Salcobrand", 100)]),
-      medication("b", [price("salcobrand", "Salcobrand", 100)]), // cruz-verde no la tiene
-    ];
-
-    const totals = computeAllInOneTotals(meds);
-
-    expect(totals[0]).toMatchObject({ pharmacySlug: "salcobrand", missing: 0 });
-    expect(totals[1]).toMatchObject({ pharmacySlug: "cruz-verde", missing: 1, found: 1 });
-  });
-
-  it("orders full-coverage pharmacies by total ascending", () => {
-    const meds = [
-      medication("a", [price("cruz-verde", "Cruz Verde", 2000), price("salcobrand", "Salcobrand", 1000)]),
-    ];
-
-    const totals = computeAllInOneTotals(meds);
-
-    expect(totals.map((t) => t.pharmacySlug)).toEqual(["salcobrand", "cruz-verde"]);
-  });
-
-  it("excludes pharmacies that carry none of the medications", () => {
-    const meds = [medication("a", [price("cruz-verde", "Cruz Verde", 100)])];
-    const totals = computeAllInOneTotals(meds);
-    expect(totals.every((t) => t.found > 0)).toBe(true);
   });
 });
 
