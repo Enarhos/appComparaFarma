@@ -1,18 +1,26 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 const createKhipuPaymentV3Mock = vi.hoisted(() => vi.fn());
+const consumeRateLimitMock = vi.hoisted(() => vi.fn());
 
 vi.mock("../clients/khipu.js", () => ({
   createKhipuPaymentV3: (...args: unknown[]) => createKhipuPaymentV3Mock(...args),
 }));
 
+vi.mock("../middleware/rateLimit.js", () => ({
+  consumeRateLimit: (...args: unknown[]) => consumeRateLimitMock(...args),
+}));
+
 import { handleDonateRoute } from "../routes/donate.js";
+
+const ORIGINAL_ENV = { ...process.env };
 
 function makeReq(overrides: Partial<{ method: string; body: { amount?: unknown } }> = {}) {
   return {
     method: overrides.method ?? "POST",
     body: overrides.body ?? { amount: 1000 },
     headers: {},
+    socket: { remoteAddress: "127.0.0.1" },
   };
 }
 
@@ -37,10 +45,16 @@ beforeEach(() => {
     paymentId: "abc123",
     paymentUrl: "https://khipu.com/payment/info/abc123",
   });
+  consumeRateLimitMock.mockReset();
+  consumeRateLimitMock.mockResolvedValue(true);
+});
+
+afterEach(() => {
+  process.env = { ...ORIGINAL_ENV };
 });
 
 describe("handleDonateRoute — método y CORS", () => {
-  it("responde 204 a OPTIONS sin llamar a Khipu", async () => {
+  it("responde 204 a OPTIONS sin llamar a Khipu ni consumir rate limit", async () => {
     const req = makeReq({ method: "OPTIONS" });
     const res = makeRes();
 
@@ -48,6 +62,7 @@ describe("handleDonateRoute — método y CORS", () => {
 
     expect(res.statusCode).toBe(204);
     expect(createKhipuPaymentV3Mock).not.toHaveBeenCalled();
+    expect(consumeRateLimitMock).not.toHaveBeenCalled();
   });
 
   it("responde 405 a métodos distintos de POST/OPTIONS", async () => {
@@ -57,6 +72,26 @@ describe("handleDonateRoute — método y CORS", () => {
     await handleDonateRoute(req, res);
 
     expect(res.statusCode).toBe(405);
+    expect(createKhipuPaymentV3Mock).not.toHaveBeenCalled();
+  });
+});
+
+describe("handleDonateRoute — rate limiting", () => {
+  it("consume el rate limit por IP antes de crear el pago", async () => {
+    const req = makeReq();
+    await handleDonateRoute(req, makeRes());
+
+    expect(consumeRateLimitMock).toHaveBeenCalledWith("127.0.0.1");
+  });
+
+  it("responde 429 y no llama a Khipu si se excede el límite", async () => {
+    consumeRateLimitMock.mockResolvedValue(false);
+    const req = makeReq();
+    const res = makeRes();
+
+    await handleDonateRoute(req, res);
+
+    expect(res.statusCode).toBe(429);
     expect(createKhipuPaymentV3Mock).not.toHaveBeenCalled();
   });
 });
@@ -125,13 +160,33 @@ describe("handleDonateRoute — creación del pago", () => {
     expect(call1.transactionId).not.toBe(call2.transactionId);
   });
 
-  it("no envía return_url/cancel_url en este sprint (sin página Web todavía)", async () => {
+  it("envía return_url/cancel_url apuntando a las páginas de retorno/cancelado en Web (default WEB_APP_URL)", async () => {
+    delete process.env.WEB_APP_URL;
     const req = makeReq();
     await handleDonateRoute(req, makeRes());
 
     const call = createKhipuPaymentV3Mock.mock.calls[0][0];
-    expect(call.returnUrl).toBeUndefined();
-    expect(call.cancelUrl).toBeUndefined();
+    expect(call.returnUrl).toBe("https://app-compara-farma-web.vercel.app/apoyar/retorno");
+    expect(call.cancelUrl).toBe("https://app-compara-farma-web.vercel.app/apoyar/cancelado");
+  });
+
+  it("usa WEB_APP_URL si está configurado, sin doble slash", async () => {
+    process.env.WEB_APP_URL = "https://web-de-prueba.vercel.app/";
+    const req = makeReq();
+    await handleDonateRoute(req, makeRes());
+
+    const call = createKhipuPaymentV3Mock.mock.calls[0][0];
+    expect(call.returnUrl).toBe("https://web-de-prueba.vercel.app/apoyar/retorno");
+    expect(call.cancelUrl).toBe("https://web-de-prueba.vercel.app/apoyar/cancelado");
+  });
+
+  it("nunca envía notify_url/notify_api_version (webhook fuera de alcance)", async () => {
+    const req = makeReq();
+    await handleDonateRoute(req, makeRes());
+
+    const call = createKhipuPaymentV3Mock.mock.calls[0][0];
+    expect(call).not.toHaveProperty("notifyUrl");
+    expect(call).not.toHaveProperty("notify_url");
   });
 
   it("responde 200 con { payment_url } exactamente, sin otros campos", async () => {
