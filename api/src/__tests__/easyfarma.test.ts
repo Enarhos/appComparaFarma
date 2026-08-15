@@ -5,64 +5,97 @@ import { describe, expect, it } from "vitest";
 import { parseEasyFarmaResponse } from "../clients/easyfarma.js";
 import { toPharmacyPrice } from "@comparafarma/domain";
 
+// Fixture actualizado tras la migración de EasyFarma a nuevo.easyfarma.cl
+// (tema PrestaShop "leo_medilazar", artículos "product-miniature") — ver
+// docs/operations (sesión 2026-08-15) para el detalle de la investigación.
 const fixturePath = join(import.meta.dirname, "fixtures", "easyfarma-search.html");
 const html = readFileSync(fixturePath, "utf8");
 
-describe("parseEasyFarmaResponse", () => {
-  it("extrae el precio Normal visible como price y NUNCA el 'Plus' oculto como cmrPrice", () => {
+describe("parseEasyFarmaResponse (nuevo.easyfarma.cl)", () => {
+  it("parsea las 3 tarjetas con precio válido del fixture (la 4ta se excluye por no tener precio)", () => {
     const results = parseEasyFarmaResponse(html);
-    const apidra = results.find((result) => result.name.includes("Insulina Apidra"));
+    expect(results).toHaveLength(3);
+  });
 
-    expect(apidra).toMatchObject({
-      name: "Insulina Apidra Solostar 1 Unidad",
-      price: 9990,
-      cmrPrice: null,
-      onlineUrl: "https://www.easyfarma.cl/producto/insulina-apidra-solostar-1-unidad.html",
+  it("extrae nombre, precio y URL de un producto con imagen normal", () => {
+    const results = parseEasyFarmaResponse(html);
+    const paracetamol = results.find((r) => r.name.includes("Paracetamol 500"));
+
+    expect(paracetamol).toMatchObject({
+      name: "Paracetamol 500 mg. 16 comp.",
+      price: 690,
+      onlineUrl: "https://nuevo.easyfarma.cl/24713-paracetamol-500-mg-x-16.html",
+      imageUrl: "https://nuevo.easyfarma.cl/18980-home_default/paracetamol-500-mg-x-16.jpg",
     });
   });
 
-  it("sigue extrayendo el precio Normal correctamente en una tarjeta sin bloque Plus", () => {
+  it("interpreta correctamente el formato de precio con espacio y miles ('$ 1.490')", () => {
     const results = parseEasyFarmaResponse(html);
-    const producto = results.find((result) => result.name.includes("Producto Sin Plus"));
+    const gotas = results.find((r) => r.name.includes("Gotas"));
 
-    expect(producto).toMatchObject({ price: 1990, cmrPrice: null });
+    expect(gotas?.price).toBe(1490);
+    expect(gotas?.price).not.toBeNaN();
   });
 
-  it("caso real simplificado de Apidra: toPharmacyPrice() da effective = store (9990), sin canal cmr", () => {
+  it("interpreta correctamente precios de 5 cifras ('$ 12.490')", () => {
     const results = parseEasyFarmaResponse(html);
-    const apidra = results.find((result) => result.name.includes("Insulina Apidra"));
-    if (!apidra) throw new Error("fixture no encontró Apidra");
+    const ibuprofeno = results.find((r) => r.name.includes("Ibuprofeno"));
 
-    const pharmacyPrice = toPharmacyPrice(apidra, "easyfarma", "EasyFarma");
-
-    expect(pharmacyPrice.channels).toEqual({
-      store: 9990,
-      online: null,
-      cmr: null,
-      sbpay: null,
-      effective: 9990,
-    });
+    expect(ibuprofeno?.price).toBe(12490);
   });
 
-  it("no revienta ni produce 0/NaN con el placeholder vacío <del>$</del>", () => {
+  it("deja imageUrl en null cuando el producto no tiene <img> (placeholder 'Imagen no disponible')", () => {
     const results = parseEasyFarmaResponse(html);
-    const paracetamol = results.find((result) => result.name.includes("Paracetamol"));
+    const ibuprofeno = results.find((r) => r.name.includes("Ibuprofeno"));
 
-    expect(paracetamol?.price).toBe(690);
-    expect(paracetamol?.price).not.toBeNaN();
-    expect(paracetamol?.cmrPrice).toBeNull();
+    expect(ibuprofeno?.imageUrl).toBeNull();
   });
 
-  it("excluye del resultado un producto sin precio Normal válido, sin inventar un precio", () => {
+  it("excluye un producto sin precio visible ('Consultar disponibilidad'), sin inventar un precio", () => {
     const results = parseEasyFarmaResponse(html);
-    const sinPrecio = results.find((result) => result.name.includes("Producto Sin Precio Normal"));
+    const sinPrecio = results.find((r) => r.name.includes("Producto Sin Precio"));
 
     expect(sinPrecio).toBeUndefined();
   });
 
-  it("parsea las 3 tarjetas con precio Normal válido del fixture (la 4ta se excluye a propósito)", () => {
+  it("nunca deja price NaN o 0 en ningún resultado", () => {
     const results = parseEasyFarmaResponse(html);
-    expect(results).toHaveLength(3);
-    expect(results.every((result) => result.cmrPrice === null)).toBe(true);
+    expect(results.every((r) => Number.isFinite(r.price) && r.price > 0)).toBe(true);
+  });
+
+  it("no expone canales online/cmr/sbpay ni laboratorio (EasyFarma solo expone precio de lista)", () => {
+    const results = parseEasyFarmaResponse(html);
+    expect(results.every((r) => r.onlinePrice === null && r.cmrPrice === null && r.sbpayPrice === null)).toBe(true);
+    expect(results.every((r) => r.laboratory === null)).toBe(true);
+  });
+
+  it("toPharmacyPrice() da effective = store para un producto de EasyFarma", () => {
+    const results = parseEasyFarmaResponse(html);
+    const paracetamol = results.find((r) => r.name.includes("Paracetamol 500"));
+    if (!paracetamol) throw new Error("fixture no encontró Paracetamol 500");
+
+    const pharmacyPrice = toPharmacyPrice(paracetamol, "easyfarma", "EasyFarma");
+    expect(pharmacyPrice.channels).toEqual({
+      store: 690,
+      online: null,
+      cmr: null,
+      sbpay: null,
+      effective: 690,
+    });
+  });
+
+  it("devuelve un array vacío ante HTML sin ningún producto ('sin resultados')", () => {
+    const noResultsHtml = `<!DOCTYPE html><html><body><section id="js-product-list"><div class="products row"></div></section></body></html>`;
+    expect(parseEasyFarmaResponse(noResultsHtml)).toEqual([]);
+  });
+
+  it("no revienta con HTML inesperado / inválido (tags sin cerrar, contenido basura)", () => {
+    const garbage = `<html><body><article class="product-miniature"><h3 class="product-title"><a href="x">rota`;
+    expect(() => parseEasyFarmaResponse(garbage)).not.toThrow();
+    expect(parseEasyFarmaResponse(garbage)).toEqual([]);
+  });
+
+  it("no revienta con un string vacío", () => {
+    expect(parseEasyFarmaResponse("")).toEqual([]);
   });
 });
