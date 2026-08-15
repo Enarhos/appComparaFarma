@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { PharmacyPrice, MedicationResult } from "@comparafarma/domain";
+import { computeSavings, type PharmacyPrice, type MedicationResult } from "@comparafarma/domain";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/format";
 import { buildMedicationSlug } from "@/lib/medicationSlug";
@@ -22,10 +22,8 @@ export function MedicationCard({ medication }: Props) {
   const sortedPrices = [...medication.prices].sort(
     (a, b) => a.channels.effective - b.channels.effective
   );
-  const best = sortedPrices[0];
-  const priciest = sortedPrices[sortedPrices.length - 1];
+  const { cheapest: best, savings } = computeSavings(sortedPrices);
   const bestDisplay = best ? PHARMACIES[best.pharmacySlug] : null;
-  const savings = best && priciest && priciest !== best ? priciest.channels.effective - best.channels.effective : 0;
 
   const detailHref = `/medicamento/${buildMedicationSlug(medication)}`;
 
