@@ -1,0 +1,48 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 375 812' width='375' height='812'>
+<rect x='0' y='0' width='375' height='812' rx='0' fill='#F5F6F7'/>
+<rect x='0' y='0' width='375' height='88' rx='0' fill='#FFFFFF'/>
+<rect x='0' y='87' width='375' height='1' rx='0' fill='#C2C7CC'/>
+<text x='20' y='54' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='700' fill='#3F3FB8' text-anchor='start'>ComparaFarma</text>
+<rect x='20' y='106' width='335' height='48' rx='10' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='36' y='135' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#7C848C' text-anchor='start'>Buscar medicamento</text>
+<rect x='300' y='116' width='40' height='28' rx='8' fill='#0E8E86'/>
+<rect x='20' y='170' width='109' height='30' rx='15' fill='#E7E9EB'/>
+<text x='74.5' y='190' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#454B52' text-anchor='middle'>Paracetamol</text>
+<rect x='137' y='170' width='102' height='30' rx='15' fill='#E7E9EB'/>
+<text x='188.0' y='190' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#454B52' text-anchor='middle'>Ibuprofeno</text>
+<rect x='247' y='170' width='88' height='30' rx='15' fill='#E7E9EB'/>
+<text x='291.0' y='190' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#454B52' text-anchor='middle'>Losartán</text>
+<rect x='20' y='220' width='164' height='100' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='20' y='220' width='164' height='5' rx='2' fill='#2F8F5B'/>
+<text x='36' y='250' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#7C848C' text-anchor='start'>Ahorro este mes</text>
+<text x='36' y='282' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#1B1F23' text-anchor='start'>$4.200</text>
+<rect x='192' y='220' width='164' height='100' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='192' y='220' width='164' height='5' rx='2' fill='#B4790E'/>
+<text x='208' y='250' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#7C848C' text-anchor='start'>Alertas activas</text>
+<text x='208' y='282' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#1B1F23' text-anchor='start'>3</text>
+<text x='20' y='356' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='700' fill='#1B1F23' text-anchor='start'>Favoritos</text>
+<rect x='20' y='372' width='335' height='84' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='40' y='402' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='600' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20</text>
+<text x='40' y='428' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#7C848C' text-anchor='start'>Desde</text>
+<text x='90' y='430' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='700' fill='#3F3FB8' text-anchor='start'>$1.990</text>
+<rect x='230' y='410' width='105' height='24' rx='12.0' fill='#E7E9EB'/><text x='282.5' y='425.5' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='600' fill='#2F8F5B' text-anchor='middle'>Mejor precio</text>
+<rect x='20' y='468' width='335' height='84' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='40' y='498' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='600' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20</text>
+<text x='40' y='524' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#7C848C' text-anchor='start'>Desde</text>
+<text x='90' y='526' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='700' fill='#3F3FB8' text-anchor='start'>$1.990</text>
+<rect x='20' y='564' width='335' height='84' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='40' y='594' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='600' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20</text>
+<text x='40' y='620' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#7C848C' text-anchor='start'>Desde</text>
+<text x='90' y='622' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='700' fill='#3F3FB8' text-anchor='start'>$1.990</text>
+<rect x='0' y='742' width='375' height='70' rx='0' fill='#FFFFFF'/>
+<rect x='0' y='741' width='375' height='1' rx='0' fill='#C2C7CC'/>
+<circle cx='40' cy='767' r='10' fill='#3F3FB8'/>
+<text x='40' y='794' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='600' fill='#3F3FB8' text-anchor='middle'>Buscar</text>
+<circle cx='124' cy='767' r='10' fill='#C2C7CC'/>
+<text x='124' y='794' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='middle'>Favoritos</text>
+<circle cx='208' cy='767' r='10' fill='#C2C7CC'/>
+<text x='208' y='794' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='middle'>Alertas</text>
+<circle cx='292' cy='767' r='10' fill='#C2C7CC'/>
+<text x='292' y='794' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='middle'>Cuenta</text>
+<text x='359' y='798' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#7C848C' text-anchor='end'>Option A — Intelligence (Refinada)</text>
+</svg>

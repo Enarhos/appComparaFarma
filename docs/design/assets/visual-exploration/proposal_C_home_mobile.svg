@@ -1,0 +1,52 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 844' width='390' height='844'>
+<rect x='0.0' y='0.0' width='390.0' height='844.0' rx='0' fill='#F7F5F2'/>
+<rect x='0.0' y='0.0' width='390.0' height='88.0' rx='0' fill='#FFFFFF'/>
+<rect x='0.0' y='87.0' width='390.0' height='1.0' rx='0' fill='#CFC6BA'/>
+<g transform='translate(20,26) scale(0.3)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#4A4A9E' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#4A4A9E'/></g>
+<text x='52.0' y='52.0' font-family='Verdana, Arial, sans-serif' font-size='16' font-weight='700' fill='#231F1A' text-anchor='start' letter-spacing='0'>ComparaFarma</text>
+<rect x='20.0' y='108.0' width='350.0' height='50.0' rx='16' fill='#FFFFFF'/>
+<circle cx='46.92' cy='130.92' r='8.32' fill='none' stroke='#948A7C' stroke-width='2.34'/><line x1='53.16' y1='137.16' x2='59.92' y2='143.92000000000002' stroke='#948A7C' stroke-width='2.34' stroke-linecap='round'/>
+<text x='74.0' y='138.0' font-family='Verdana, Arial, sans-serif' font-size='13' font-weight='normal' fill='#948A7C' text-anchor='start'>Buscar medicamento</text>
+<rect x='20.0' y='172.0' width='109.0' height='30.0' rx='15' fill='#EDE8E1'/>
+<text x='74.5' y='192.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='middle'>Paracetamol</text>
+<rect x='137.0' y='172.0' width='102.0' height='30.0' rx='15' fill='#EDE8E1'/>
+<text x='188.0' y='192.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='middle'>Ibuprofeno</text>
+<rect x='247.0' y='172.0' width='88.0' height='30.0' rx='15' fill='#EDE8E1'/>
+<text x='291.0' y='192.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='middle'>Losartán</text>
+<rect x='20.0' y='222.0' width='171.0' height='104.0' rx='16' fill='#FFFFFF'/>
+<rect x='20.0' y='222.0' width='171.0' height='5.0' rx='2' fill='#5C8F4E'/>
+<text x='38.0' y='254.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#948A7C' text-anchor='start'>Ahorro este mes</text>
+<text x='38.0' y='288.0' font-family='Verdana, Arial, sans-serif' font-size='19' font-weight='700' fill='#231F1A' text-anchor='start'>$4.200</text>
+<rect x='199.0' y='222.0' width='171.0' height='104.0' rx='16' fill='#FFFFFF'/>
+<rect x='199.0' y='222.0' width='171.0' height='5.0' rx='2' fill='#C08A2E'/>
+<text x='217.0' y='254.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#948A7C' text-anchor='start'>Alertas</text>
+<text x='217.0' y='288.0' font-family='Verdana, Arial, sans-serif' font-size='19' font-weight='700' fill='#231F1A' text-anchor='start'>3 activas</text>
+<text x='20.0' y='362.0' font-family='Verdana, Arial, sans-serif' font-size='15' font-weight='700' fill='#231F1A' text-anchor='start'>Favoritos</text>
+<rect x='20.0' y='380.0' width='350.0' height='86.0' rx='16' fill='#FFFFFF'/>
+<g transform='translate(36,396) scale(0.19)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#4A4A9E' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#4A4A9E'/></g>
+<text x='70.0' y='414.0' font-family='Verdana, Arial, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Paracetamol 500mg x20</text>
+<text x='70.0' y='438.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#948A7C' text-anchor='start'>Desde</text>
+<text x='108.0' y='440.0' font-family='Verdana, Arial, sans-serif' font-size='15' font-weight='700' fill='#4A4A9E' text-anchor='start'>$1.990</text>
+<rect x='240.0' y='422.0' width='108.0' height='24.0' rx='12.0' fill='#EDE8E1'/><text x='294.0' y='437.5' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='600' fill='#5C8F4E' text-anchor='middle'>Mejor precio</text>
+<rect x='20.0' y='478.0' width='350.0' height='86.0' rx='16' fill='#FFFFFF'/>
+<g transform='translate(36,494) scale(0.19)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#4A4A9E' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#4A4A9E'/></g>
+<text x='70.0' y='512.0' font-family='Verdana, Arial, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Paracetamol 500mg x20</text>
+<text x='70.0' y='536.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#948A7C' text-anchor='start'>Desde</text>
+<text x='108.0' y='538.0' font-family='Verdana, Arial, sans-serif' font-size='15' font-weight='700' fill='#4A4A9E' text-anchor='start'>$1.990</text>
+<rect x='20.0' y='576.0' width='350.0' height='86.0' rx='16' fill='#FFFFFF'/>
+<g transform='translate(36,592) scale(0.19)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#4A4A9E' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#4A4A9E'/></g>
+<text x='70.0' y='610.0' font-family='Verdana, Arial, sans-serif' font-size='12' font-weight='600' fill='#231F1A' text-anchor='start'>Paracetamol 500mg x20</text>
+<text x='70.0' y='634.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#948A7C' text-anchor='start'>Desde</text>
+<text x='108.0' y='636.0' font-family='Verdana, Arial, sans-serif' font-size='15' font-weight='700' fill='#4A4A9E' text-anchor='start'>$1.990</text>
+<rect x='0.0' y='772.0' width='390.0' height='72.0' rx='0' fill='#FFFFFF'/>
+<rect x='0.0' y='771.0' width='390.0' height='1.0' rx='0' fill='#CFC6BA'/>
+<circle cx='51.24' cy='795.24' r='7.04' fill='none' stroke='#4A4A9E' stroke-width='1.98'/><line x1='56.52' y1='800.52' x2='62.24' y2='806.24' stroke='#4A4A9E' stroke-width='1.98' stroke-linecap='round'/>
+<text x='53.0' y='828.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='600' fill='#4A4A9E' text-anchor='middle'>Buscar</text>
+<path d='M141.0,804.7 C132.2,798.1 131.1,790.4 136.6,788.64 C139.9,787.54 141.0,790.4 141.0,790.4 C141.0,790.4 142.1,787.54 145.4,788.64 C150.9,790.4 149.8,798.1 141.0,804.7 Z' fill='none' stroke='#948A7C' stroke-width='1.76' stroke-linejoin='round'/>
+<text x='141.0' y='828.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#948A7C' text-anchor='middle'>Favoritos</text>
+<path d='M224.6,799.64 V794.8 a4.4,4.4 0 0 1 8.8,0 v4.84' fill='none' stroke='#948A7C' stroke-width='1.76' stroke-linecap='round'/><line x1='222.84' y1='799.64' x2='235.16' y2='799.64' stroke='#948A7C' stroke-width='1.76' stroke-linecap='round'/><path d='M227.24,801.84 a1.76,1.76 0 0 0 3.52,0' fill='none' stroke='#948A7C' stroke-width='1.76' stroke-linecap='round'/>
+<text x='229.0' y='828.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#948A7C' text-anchor='middle'>Alertas</text>
+<rect x='306.0' y='798.1' width='4.0' height='7.7' rx='0.99' fill='#948A7C'/><rect x='311.3' y='792.6' width='4.0' height='13.2' rx='0.99' fill='#948A7C'/><rect x='316.6' y='795.9' width='4.0' height='9.9' rx='0.99' fill='#948A7C'/><rect x='321.8' y='788.2' width='4.0' height='17.6' rx='0.99' fill='#948A7C'/>
+<text x='317.0' y='828.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#948A7C' text-anchor='middle'>Panel</text>
+<text x='380.0' y='836.0' font-family='Verdana, Arial, sans-serif' font-size='9' font-weight='normal' fill='#CFC6BA' text-anchor='end'>Guidance</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 420' width='1000' height='420'>
+<rect x='0.0' y='0.0' width='1000.0' height='420.0' rx='0' fill='#FFFFFF'/>
+<text x='24.0' y='32.0' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='700' fill='#1B1F23' text-anchor='start'>App Icon aplicado (geometría del isotipo sin modificar)</text>
+<rect x='24.0' y='70.0' width='140.0' height='140.0' rx='32' fill='#3F3FB8'/>
+<g transform='translate(48,94) scale(0.6)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='94.0' y='230.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='middle'>iOS</text>
+<circle cx='274' cy='140' r='70' fill='#3F3FB8'/>
+<g transform='translate(228,94) scale(0.6)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='274.0' y='230.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='middle'>Android</text>
+<rect x='384.0' y='70.0' width='140.0' height='140.0' rx='32' fill='#1B1F23'/>
+<g transform='translate(408,94) scale(0.6)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='454.0' y='230.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='middle'>Modo oscuro</text>
+<rect x='564.0' y='70.0' width='140.0' height='140.0' rx='32' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<g transform='translate(588,94) scale(0.6)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#3F3FB8' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#3F3FB8'/></g>
+<text x='634.0' y='230.0' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='middle'>Monocromo claro</text>
+<text x='24.0' y='270.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#7C848C' text-anchor='start'>Reducción — favicon / notificaciones</text>
+<rect x='24.0' y='280.0' width='32.0' height='32.0' rx='7.04' fill='#3F3FB8'/>
+<g transform='translate(29.759999999999998,285.76) scale(0.20666666666666667)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='40.0' y='328.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='middle'>32px</text>
+<rect x='96.0' y='280.0' width='24.0' height='24.0' rx='5.28' fill='#3F3FB8'/>
+<g transform='translate(100.32,284.32) scale(0.155)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='108.0' y='320.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='middle'>24px</text>
+<rect x='160.0' y='280.0' width='16.0' height='16.0' rx='3.52' fill='#3F3FB8'/>
+<g transform='translate(162.88,282.88) scale(0.10333333333333333)'><path d='M76.98,40.24 A30,30 0 1,1 55.76,18.98' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/><circle cx='48' cy='48' r='11' fill='#FFFFFF'/></g>
+<text x='168.0' y='312.0' font-family='Arial, Helvetica, sans-serif' font-size='10' font-weight='normal' fill='#7C848C' text-anchor='middle'>16px</text>
+<text x='984.0' y='406.0' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='normal' fill='#7C848C' text-anchor='end'>ComparaFarma — Brand Experience v1 (BRAND-001)</text>
+</svg>

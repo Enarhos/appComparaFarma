@@ -1,0 +1,49 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 480' width='1000' height='480'>
+<rect x='0.0' y='0.0' width='1000.0' height='480.0' rx='0' fill='#FFFFFF'/>
+<text x='30.0' y='42.0' font-family='Verdana, Arial, sans-serif' font-size='19' font-weight='700' fill='#231F1A' text-anchor='start'>Propuesta C — Guidance (Human + Technology (dominante en esta exploración))</text>
+<rect x='30.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#4A4A9E'/>
+<text x='30.0' y='154.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Primary</text>
+<text x='30.0' y='170.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#4A4A9E</text>
+<rect x='165.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#F7F5F1'/>
+<text x='165.0' y='154.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Secondary</text>
+<text x='165.0' y='170.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#F7F5F1</text>
+<rect x='300.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#C2694A'/>
+<text x='300.0' y='154.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Accent</text>
+<text x='300.0' y='170.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#C2694A</text>
+<rect x='435.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#5C8F4E'/>
+<text x='435.0' y='154.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Success</text>
+<text x='435.0' y='170.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#5C8F4E</text>
+<rect x='570.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#C08A2E'/>
+<text x='570.0' y='154.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Warning</text>
+<text x='570.0' y='170.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#C08A2E</text>
+<rect x='705.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#B5533F'/>
+<text x='705.0' y='154.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Error</text>
+<text x='705.0' y='170.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#B5533F</text>
+<rect x='840.0' y='68.0' width='116.0' height='72.0' rx='10' fill='#3E80A3'/>
+<text x='840.0' y='154.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Information</text>
+<text x='840.0' y='170.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#3E80A3</text>
+<rect x='30.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#F7F5F2' stroke='#CFC6BA' stroke-width='1'/>
+<text x='30.0' y='286.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 50</text>
+<text x='30.0' y='302.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#F7F5F2</text>
+<rect x='165.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#EDE8E1' stroke='#CFC6BA' stroke-width='1'/>
+<text x='165.0' y='286.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 100</text>
+<text x='165.0' y='302.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#EDE8E1</text>
+<rect x='300.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#CFC6BA'/>
+<text x='300.0' y='286.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 300</text>
+<text x='300.0' y='302.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#CFC6BA</text>
+<rect x='435.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#948A7C'/>
+<text x='435.0' y='286.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 500</text>
+<text x='435.0' y='302.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#948A7C</text>
+<rect x='570.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#585045'/>
+<text x='570.0' y='286.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 700</text>
+<text x='570.0' y='302.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#585045</text>
+<rect x='705.0' y='200.0' width='116.0' height='72.0' rx='10' fill='#231F1A'/>
+<text x='705.0' y='286.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='600' fill='#231F1A' text-anchor='start'>Neutral 900</text>
+<text x='705.0' y='302.0' font-family='Verdana, Arial, sans-serif' font-size='10' font-weight='normal' fill='#585045' text-anchor='start'>#231F1A</text>
+<text x='30.0' y='352.0' font-family='Verdana, Arial, sans-serif' font-size='15' font-weight='700' fill='#231F1A' text-anchor='start'>Tipografía propuesta: Manrope</text>
+<text x='30.0' y='378.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>· Manrope combina terminales suaves con una estructura geométrica clara: calidez sin perder seriedad, tensión exacta que pide "Guidance".</text>
+<text x='30.0' y='398.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>· Es humanista sin volverse decorativa, coherente con "Cercana" sin sacrificar "Científica/Profesional".</text>
+<text x='30.0' y='418.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>· Mantiene buena densidad en pantallas móviles, prioridad ya fijada para ComparaFarma.</text>
+<text x='30.0' y='438.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>· Se aleja deliberadamente del registro "developer tool" de Inter/Space Grotesk, reforzando el eje Human + Technology.</text>
+<text x='30.0' y='458.0' font-family='Verdana, Arial, sans-serif' font-size='11' font-weight='normal' fill='#585045' text-anchor='start'>· Exploración visual únicamente — no constituye una decisión de TYPOGRAPHY_SYSTEM.</text>
+</svg>

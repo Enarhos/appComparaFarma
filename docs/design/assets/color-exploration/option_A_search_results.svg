@@ -1,0 +1,56 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800'>
+<rect x='0' y='0' width='1200' height='800' rx='0' fill='#F5F6F7'/>
+<rect x='0' y='0' width='1200' height='64' rx='0' fill='#FFFFFF'/>
+<rect x='0' y='63' width='1200' height='1' rx='0' fill='#C2C7CC'/>
+<text x='32' y='40' font-family='Arial, Helvetica, sans-serif' font-size='20' font-weight='700' fill='#3F3FB8' text-anchor='start'>ComparaFarma</text>
+<rect x='300' y='16' width='500' height='32' rx='8' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='316' y='38' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#1B1F23' text-anchor='start'>paracetamol 500mg</text>
+<rect x='32' y='96' width='220' height='660' rx='12' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='56' y='128' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='700' fill='#1B1F23' text-anchor='start'>Filtros</text>
+<text x='56' y='160' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#7C848C' text-anchor='start'>Farmacias</text>
+<rect x='56' y='170' width='14' height='14' rx='3' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='78' y='182' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>Cruz Verde</text>
+<rect x='56' y='196' width='14' height='14' rx='3' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='78' y='208' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>Salcobrand</text>
+<rect x='56' y='222' width='14' height='14' rx='3' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='78' y='234' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>Ahumada</text>
+<rect x='56' y='248' width='14' height='14' rx='3' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='78' y='260' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>Dr. Simi</text>
+<rect x='56' y='274' width='14' height='14' rx='3' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<text x='78' y='286' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#454B52' text-anchor='start'>EasyFarma</text>
+<text x='56' y='340' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#7C848C' text-anchor='start'>Ordenar por</text>
+<rect x='56' y='352' width='168' height='32' rx='8' fill='#E7E9EB'/>
+<text x='70' y='373' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#1B1F23' text-anchor='start'>Menor precio</text>
+<text x='56' y='420' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='600' fill='#7C848C' text-anchor='start'>Solo bioequivalentes</text>
+<rect x='56' y='432' width='36' height='20' rx='10' fill='#0E8E86'/>
+<circle cx='82' cy='442' r='9' fill='#FFFFFF'/>
+<rect x='276' y='96' width='892' height='112' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='300' y='122' width='60' height='60' rx='10' fill='#E7E9EB'/>
+<text x='390' y='138' font-family='Arial, Helvetica, sans-serif' font-size='16' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20 comprimidos</text>
+<text x='390' y='162' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#454B52' text-anchor='start'>Cruz Verde · Presencial</text>
+<rect x='390' y='172' width='120' height='24' rx='12.0' fill='#E7E9EB'/><text x='450.0' y='187.85' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#2F8F5B' text-anchor='middle'>Mejor precio</text>
+<text x='1140' y='146' font-family='Arial, Helvetica, sans-serif' font-size='24' font-weight='700' fill='#3F3FB8' text-anchor='end'>$1.990</text>
+<rect x='276' y='224' width='892' height='112' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='300' y='250' width='60' height='60' rx='10' fill='#E7E9EB'/>
+<text x='390' y='266' font-family='Arial, Helvetica, sans-serif' font-size='16' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20 comprimidos</text>
+<text x='390' y='290' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#454B52' text-anchor='start'>Salcobrand · CMR T.Más</text>
+<rect x='390' y='300' width='120' height='24' rx='12.0' fill='#E7E9EB'/><text x='450.0' y='315.85' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#1C7DB0' text-anchor='middle'>Con tarjeta</text>
+<text x='1140' y='274' font-family='Arial, Helvetica, sans-serif' font-size='24' font-weight='700' fill='#3F3FB8' text-anchor='end'>$2.150</text>
+<rect x='276' y='352' width='892' height='112' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='300' y='378' width='60' height='60' rx='10' fill='#E7E9EB'/>
+<text x='390' y='394' font-family='Arial, Helvetica, sans-serif' font-size='16' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20 comprimidos</text>
+<text x='390' y='418' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#454B52' text-anchor='start'>Ahumada · Presencial</text>
+<text x='1140' y='402' font-family='Arial, Helvetica, sans-serif' font-size='24' font-weight='700' fill='#3F3FB8' text-anchor='end'>$2.390</text>
+<rect x='276' y='480' width='892' height='112' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='300' y='506' width='60' height='60' rx='10' fill='#E7E9EB'/>
+<text x='390' y='522' font-family='Arial, Helvetica, sans-serif' font-size='16' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20 comprimidos</text>
+<text x='390' y='546' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#454B52' text-anchor='start'>EasyFarma · Online · Plus</text>
+<rect x='390' y='556' width='120' height='24' rx='12.0' fill='#E7E9EB'/><text x='450.0' y='571.85' font-family='Arial, Helvetica, sans-serif' font-size='11' font-weight='600' fill='#B4790E' text-anchor='middle'>Solo online</text>
+<text x='1140' y='530' font-family='Arial, Helvetica, sans-serif' font-size='24' font-weight='700' fill='#3F3FB8' text-anchor='end'>$2.490</text>
+<rect x='276' y='608' width='892' height='112' rx='14' fill='#FFFFFF' stroke='#C2C7CC' stroke-width='1'/>
+<rect x='300' y='634' width='60' height='60' rx='10' fill='#E7E9EB'/>
+<text x='390' y='650' font-family='Arial, Helvetica, sans-serif' font-size='16' font-weight='700' fill='#1B1F23' text-anchor='start'>Paracetamol 500mg x20 comprimidos</text>
+<text x='390' y='674' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#454B52' text-anchor='start'>Dr. Simi · Presencial</text>
+<text x='1140' y='658' font-family='Arial, Helvetica, sans-serif' font-size='24' font-weight='700' fill='#3F3FB8' text-anchor='end'>$2.690</text>
+<text x='1184' y='786' font-family='Arial, Helvetica, sans-serif' font-size='12' font-weight='normal' fill='#7C848C' text-anchor='end'>Option A — Intelligence (Refinada)</text>
+</svg>
