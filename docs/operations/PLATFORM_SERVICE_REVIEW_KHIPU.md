@@ -8,7 +8,7 @@
 
 **Estado:** Activo
 
-**Versión:** 1.2
+**Versión:** 1.3
 
 **Propietario:** CTO
 
@@ -90,6 +90,26 @@ KHIPU_API_V2_CREDENTIALS: LEGACY_ROLLBACK_ONLY
 - **`KHIPU_RECEIVER_ID`/`KHIPU_SECRET` pasan a `LEGACY_ROLLBACK_ONLY`.** El código que los usa (`createKhipuPaymentLegacyV2()`, ex-`createKhipuPayment()`) sigue en el repositorio sin llamador real, únicamente para poder revertir `/api/donate` a la API 2.0 con un solo cambio de import si la migración presentara un problema no anticipado. No se eliminaron de Vercel ni del código — ver acción humana en `PLATFORM_OPERATIONAL_STATUS.md`.
 - **`return_url`/`cancel_url`** están soportados por la API 3.0 (confirmado en la documentación oficial) y el helper `createKhipuPaymentV3()` ya acepta ambos parámetros, pero `/api/donate` no los envía todavía porque no existe ninguna página en Web a la que apuntar — se agregarán cuando exista el CTA Web (fuera de alcance de este sprint).
 
+## 5quater. CTA de donación en Web + confirmación en producción (2026-08-15, Sprint FEAT-WEB-DONATIONS)
+
+Se implementó el primer CTA de donación en `web/` (footer global, discreto, sin banners ni popups automáticos) y se confirmó en producción que la migración a API 3.0 funciona: `POST https://comparafarma-api.vercel.app/api/donate` con `{"amount":1000}` respondió `HTTP 200` con un `payment_url` real de Khipu.
+
+```
+WEB_DONATION_CTA: IMPLEMENTED
+WEB_DONATION_PAYMENT_CREATION: KHIPU_API_3
+KHIPU_PAYMENT_CREATION: VERIFIED_IN_PRODUCTION
+KHIPU_PAYMENT_CONFIRMATION: NOT_IMPLEMENTED
+KHIPU_WEBHOOK: PENDING
+KHIPU_WEBHOOK_SIGNATURE_SECRET: UNCONFIRMED
+```
+
+- **CTA:** `web/src/components/DonationWidget.tsx`, montado desde un nuevo `Footer.tsx` global (`app/layout.tsx`). Botón discreto "Apoya ComparaFarma" que expande un selector de 3 montos fijos ($1.000/$3.000/$5.000) — mismo patrón "colapsado → expandido" que `PriceAlertForm.tsx`. Deliberadamente no se repite en cada resultado de medicamento.
+- **Creación del pago:** `web/src/lib/actions/createDonationPayment.ts` (Server Action) llama a `POST /api/donate` enviando únicamente `{amount}` — nunca ninguna credencial (`API_SECRET_KEY`/`KHIPU_API_KEY`/`KHIPU_SECRET`/`KHIPU_RECEIVER_ID`). Valida que `payment_url` sea HTTPS y pertenezca a `khipu.com`/subdominios antes de dejar que el navegador redirija.
+- **`return_url`/`cancel_url` ya se conectan** en `api/src/routes/donate.ts` (no en `khipu.ts`, que no se tocó) apuntando a `/apoyar/retorno` y `/apoyar/cancelado` — dos páginas mínimas y neutras en Web que **nunca afirman que el pago fue exitoso**, solo que el usuario volvió desde Khipu.
+- **`KHIPU_PAYMENT_CONFIRMATION: NOT_IMPLEMENTED`** — sigue sin existir ninguna forma de asociar el `payment_id` devuelto por Khipu con una consulta posterior desde Web (`getKhipuPayment()` existe en el backend desde la migración a API 3.0, pero no tiene ningún caller todavía). La página de retorno es honesta sobre esta limitación: no inventa una confirmación que no puede verificar.
+- **Webhook sigue fuera de alcance** (`KHIPU_WEBHOOK: PENDING`, `KHIPU_WEBHOOK_SIGNATURE_SECRET: UNCONFIRMED`) — sin cambios respecto a §5ter.
+- **Rate limiting agregado a `/api/donate`:** no tenía ninguno antes de este sprint (hallazgo reportado explícitamente); se agregó reutilizando `consumeRateLimit()` (mismo mecanismo de `/api/search`/`/api/price-history`, no es infraestructura nueva).
+
 ## 6. Consumo actual
 
 **No verificable** sin acceso al dashboard de Khipu — no hay forma de saber cuántas donaciones reales se han recibido vía los links estáticos.
@@ -146,6 +166,7 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 | 1.0 | 2026-08-15 | Activo | Pendiente (CTO) | Creación de la undécima revisión individual de servicio del backlog `OPS-BKL-001` — Khipu. Hallazgo crítico nuevo con evidencia directa de git: exposición confirmada de credenciales el 2026-06-16 sin evidencia de rotación posterior. Ningún código modificado. | `RELEASE_READINESS_V1.md`, `SERVICE_ACCOUNT_MIGRATION.md`, historial de git del repositorio, `khipu.zendesk.com` |
 | 1.1 | 2026-08-15 | Activo | Pendiente (CTO) | Re-verificación de código previa a preparar la rotación de credenciales (§5bis): confirma que no hay exposición activa hoy (sin logging, sin endpoint de diagnóstico, sin secretos en variables de cliente). Ningún código modificado — no se encontró ningún problema activo que lo justificara. La rotación en sí sigue pendiente como acción humana, sin cambios respecto a v1.0. | Auditoría de código de esta sesión (`api/src/clients/khipu.ts`, `api/src/routes/donate.ts`, `api/api/`, `.env.example` de los 3 paquetes) |
 | 1.2 | 2026-08-15 | Activo | Pendiente (CTO) | Migración de `/api/donate` de Khipu API 2.0 a Instant Payments API 3.0 (§5ter): nueva autenticación por `x-api-key`/`KHIPU_API_KEY`, `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` reclasificados a `LEGACY_ROLLBACK_ONLY` (sin eliminar), webhook explícitamente pendiente por secreto de firma no confirmado. Código modificado: `api/src/clients/khipu.ts`, `api/src/routes/donate.ts`, `api/.env.example`, nuevos tests. | Documentación oficial de Khipu (docs.khipu.com/payment-solutions/instant-payments/*), verificada con fetch directo, no por resumen de búsqueda |
+| 1.3 | 2026-08-15 | Activo | Pendiente (CTO) | Primer CTA de donación en Web (§5quater): footer global discreto, Server Action con validación de payment_url (HTTPS + dominio khipu.com), return_url/cancel_url conectados a /apoyar/retorno y /apoyar/cancelado (páginas que nunca afirman pago exitoso), rate limiting agregado a /api/donate (no tenía ninguno). Confirmado en producción que la creación de pago vía API 3.0 funciona (KHIPU_PAYMENT_CREATION: VERIFIED_IN_PRODUCTION). Confirmación de pago (KHIPU_PAYMENT_CONFIRMATION) sigue NOT_IMPLEMENTED. | Prueba real ejecutada por el CTO contra producción (POST /api/donate, HTTP 200 + payment_url) |
 
 ## Historial de Gobierno
 
