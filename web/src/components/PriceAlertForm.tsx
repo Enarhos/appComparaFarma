@@ -45,10 +45,19 @@ export function PriceAlertForm({ matchKey, canonicalName, currentBestPrice }: Pr
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setStatus("submitting");
     setErrorMessage(null);
 
-    const result = await createPriceAlert({ email, matchKey, canonicalName, targetPrice });
+    // Misma regla que exige el backend (targetPrice < currentPrice) — esta
+    // validación es solo UX: si se omite o se manipula, la API la rechaza
+    // igual con 400. No se llama al backend si ya sabemos que es inválida.
+    if (!(targetPrice < currentBestPrice)) {
+      setErrorMessage("El precio objetivo debe ser menor al precio actual.");
+      setStatus("error");
+      return;
+    }
+
+    setStatus("submitting");
+    const result = await createPriceAlert({ email, matchKey, canonicalName, targetPrice, currentPrice: currentBestPrice });
     if (result.ok) {
       setStatus("success");
     } else {

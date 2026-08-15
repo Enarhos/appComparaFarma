@@ -69,7 +69,7 @@ describe("handleAlertsRoute — crear alerta (POST)", () => {
   });
 
   it("rechaza targetPrice <= 0 con 400", async () => {
-    const req = makeReq({ method: "POST", body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 0 } });
+    const req = makeReq({ method: "POST", body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 0, currentPrice: 100 } });
     const res = makeRes();
 
     await handleAlertsRoute(req, res);
@@ -79,7 +79,7 @@ describe("handleAlertsRoute — crear alerta (POST)", () => {
 
   it("respeta el rate limit y responde 429", async () => {
     mocks.consumeRateLimit.mockResolvedValue(false);
-    const req = makeReq({ method: "POST", body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 100 } });
+    const req = makeReq({ method: "POST", body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 100, currentPrice: 200 } });
     const res = makeRes();
 
     await handleAlertsRoute(req, res);
@@ -92,7 +92,7 @@ describe("handleAlertsRoute — crear alerta (POST)", () => {
     mocks.createAlert.mockResolvedValue({ token: "tok-123" });
     const req = makeReq({
       method: "POST",
-      body: { email: "a@b.com", matchKey: "paracetamol|500mg", canonicalName: "Paracetamol 500 mg", targetPrice: 900 },
+      body: { email: "a@b.com", matchKey: "paracetamol|500mg", canonicalName: "Paracetamol 500 mg", targetPrice: 900, currentPrice: 1000 },
     });
     const res = makeRes();
 
@@ -114,13 +114,83 @@ describe("handleAlertsRoute — crear alerta (POST)", () => {
 
   it("responde 503 si createAlert falla (Supabase caído)", async () => {
     mocks.createAlert.mockResolvedValue(null);
-    const req = makeReq({ method: "POST", body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 100 } });
+    const req = makeReq({ method: "POST", body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 100, currentPrice: 200 } });
     const res = makeRes();
 
     await handleAlertsRoute(req, res);
 
     expect(res.statusCode).toBe(503);
     expect(mocks.sendEmail).not.toHaveBeenCalled();
+  });
+});
+
+// fix/price-alert-target-validation — el backend es la autoridad de
+// targetPrice < currentPrice (antes solo mobile/ lo exigía en su UI local,
+// que ni siquiera llama este endpoint — ver PASO 7 del PR).
+describe("handleAlertsRoute — regla targetPrice < currentPrice", () => {
+  it("permite crear la alerta cuando targetPrice < currentPrice", async () => {
+    mocks.createAlert.mockResolvedValue({ token: "tok-123" });
+    const req = makeReq({
+      method: "POST",
+      body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 4000, currentPrice: 5000 },
+    });
+    const res = makeRes();
+
+    await handleAlertsRoute(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(mocks.createAlert).toHaveBeenCalledWith({
+      email: "a@b.com",
+      matchKey: "x",
+      canonicalName: "X",
+      targetPrice: 4000,
+    });
+  });
+
+  it("rechaza con 400 cuando targetPrice === currentPrice", async () => {
+    const req = makeReq({
+      method: "POST",
+      body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 5000, currentPrice: 5000 },
+    });
+    const res = makeRes();
+
+    await handleAlertsRoute(req, res);
+
+    expect(res.statusCode).toBe(400);
+    expect(JSON.parse(res.body ?? "{}")).toEqual({ error: "El precio objetivo debe ser menor al precio actual." });
+    expect(mocks.createAlert).not.toHaveBeenCalled();
+    expect(mocks.sendEmail).not.toHaveBeenCalled();
+  });
+
+  it("rechaza con 400 cuando targetPrice > currentPrice", async () => {
+    const req = makeReq({
+      method: "POST",
+      body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 6000, currentPrice: 5000 },
+    });
+    const res = makeRes();
+
+    await handleAlertsRoute(req, res);
+
+    expect(res.statusCode).toBe(400);
+    expect(JSON.parse(res.body ?? "{}")).toEqual({ error: "El precio objetivo debe ser menor al precio actual." });
+    expect(mocks.createAlert).not.toHaveBeenCalled();
+    expect(mocks.sendEmail).not.toHaveBeenCalled();
+  });
+
+  it("rechaza con 400 cuando currentPrice es inválido (ausente, cero o negativo)", async () => {
+    for (const currentPrice of [undefined, 0, -100]) {
+      const req = makeReq({
+        method: "POST",
+        body: { email: "a@b.com", matchKey: "x", canonicalName: "X", targetPrice: 100, currentPrice },
+      });
+      const res = makeRes();
+
+      await handleAlertsRoute(req, res);
+
+      expect(res.statusCode).toBe(400);
+      expect(JSON.parse(res.body ?? "{}")).toEqual({ error: "El precio actual es inválido." });
+      expect(mocks.createAlert).not.toHaveBeenCalled();
+    }
   });
 });
 

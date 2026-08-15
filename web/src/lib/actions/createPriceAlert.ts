@@ -7,6 +7,10 @@ export interface CreatePriceAlertInput {
   matchKey: string;
   canonicalName: string;
   targetPrice: number;
+  // Precio vigente al momento de crear la alerta — el backend lo exige para
+  // aplicar targetPrice < currentPrice como autoridad final (fix/price-
+  // alert-target-validation). Web ya valida lo mismo antes de llamar acá.
+  currentPrice: number;
 }
 
 export type CreatePriceAlertResult =
