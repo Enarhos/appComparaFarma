@@ -16,7 +16,7 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Nombre** | DONE.md |
 | **Dominio** | Gestión de Programa (`docs/program/`) |
 | **Estado** | Activo |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Enterprise Program Manager |
 | **Nivel de Gobierno** | Histórico / inmutable en sus filas ya registradas |
@@ -55,6 +55,7 @@ Servir como memoria permanente del proyecto a través de todos los workstreams �
 | 2026-07-31 | CF-111 (timeout AraucoMed) cerrado; ratificación de secuencia de Sprints 0–F; Sprint E (receta completa), Sprint A (CFM-ID), corrección de bug de stock en AraucoMed, spike de bioequivalencia cerrado, Sprint C (alertas email) — todos implementados y mergeados |
 | 2026-08-02 | Corrección de referencias documentales a "LET"; Sprint D (cuenta ligera) implementado; Epic "Subscription Platform" registrada y Fase 1 (motor + Google Play adapter) implementada y mergeada |
 | 2026-08-02/03 | Subscription Platform Fase 2 implementada con Stripe, luego corregida a Flow (Stripe no admite comercios en Chile) — Fase 2 corregida implementada y mergeada; código de Stripe retirado de `main` |
+| 2026-08-15 | **Cierre de la fase Domain Consolidation v2–v4**: tres refactors funcionalmente neutros centralizan en `@comparafarma/domain` lógica que estaba duplicada entre Mobile y Web — `computeAllInOneTotals()` (v2, PR `refactor/domain-cart-totals`), `computeSavings()` (v3, PR `refactor/domain-compute-savings`) y `sortByEffectivePrice()` (v4, PR `refactor/domain-sort-effective-price`). Sin cambios de comportamiento observable en ninguno de los tres. No se planifican nuevas rondas de esta consolidación sin una nueva decisión explícita |
 
 *(Detalle línea por línea, con commits, PRs y números de test, en `docs/product/DECISION_LOG.md`, filas 1–36.)*
 
@@ -130,6 +131,7 @@ Este documento **nunca se edita retroactivamente**. No reemplaza a `docs/product
 |---|---|---|---|---|---|
 | 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial de la memoria histórica de programa, consolidando logros de Ingeniería de Producto, Arquitectura Empresarial, Arquitectura de Marca, Arquitectura de Diseño y Gobierno de Programa. | Ver Matriz de Trazabilidad (§6) |
 | 1.1 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Se agrega la entrada de cierre formal de Fase 1 y apertura de Fase 2 (§4.5). No se editó ninguna fila previa. | `docs/program/PHASE_TRANSITION.md` |
+| 1.2 | 2026-08-15 | Activo | Pendiente (CEO/fundador) | Se agrega la entrada de cierre de la fase Domain Consolidation v2–v4 (§4.1). No se editó ninguna fila previa. | `CLAUDE.md`, `docs/architecture/DOMAIN_MODEL.md` |
 
 ---
 
@@ -139,5 +141,6 @@ Este documento **nunca se edita retroactivamente**. No reemplaza a `docs/product
 |---|---|---|---|
 | 2026-08-05 | Creación de la memoria histórica de programa | Enterprise Program Manager | `docs/program/DONE.md` v1.0 (este documento) |
 | 2026-08-05 | Registro del cierre formal de Fase 1 | Enterprise Program Manager / PMO Director | `docs/program/DONE.md` v1.1 (este documento) |
+| 2026-08-15 | Registro del cierre de la fase Domain Consolidation v2–v4 | CTO (rol asumido) | `docs/program/DONE.md` v1.2 (este documento) |
 
 **Pendiente de definición:** ninguna aprobación formal del CEO/fundador registrada todavía.

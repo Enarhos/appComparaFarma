@@ -232,6 +232,30 @@ Dos condiciones combinadas, no una tabla de roles: sesión válida de Supabase A
 ### 4.8 Degradación ante ausencia de configuración
 Regla transversal en todos los módulos `*Db.ts`: si `SUPABASE_URL`/`SUPABASE_SECRET_KEY` no están definidas, cada función retorna `null` o no hace nada (no lanza error). Diseño deliberado para que un problema de Supabase no tumbe `/api/search`, pero implica que un fallo de persistencia (feedback no guardado, historial no registrado) es silencioso.
 
+### 4.9 Costo de canasta por farmacia (`computeAllInOneTotals`) — `packages/domain/src/basket.ts`
+Regla compartida (Domain Consolidation v2, PR `refactor/domain-cart-totals`): dado un conjunto de `MedicationResult[]` (la "receta" o carrito del usuario), calcula, por cada farmacia candidata, el costo total de comprar ahí todos los medicamentos que esa farmacia ofrece — sumando `channels.effective` de cada `MedicationResult` que tiene precio en esa farmacia.
+
+- El universo de farmacias a evaluar es configurable: si se pasa `pharmacySlugs`, ese es el universo (comportamiento histórico de Mobile, donde la whitelist viene de las farmacias activas del usuario); si se omite, el universo se deriva de las farmacias presentes en `medications[].prices` (comportamiento histórico de Web).
+- No filtra por `hasStock`, no deduplica `matchKey` repetidos, no recalcula `channels.effective` — solo suma valores ya calculados.
+- Ordena primero por cobertura completa (`missing === 0`), luego por total ascendente.
+- Esta es la única regla de dominio compartida sobre "receta múltiple" — la extracción de la lista de medicamentos de una receta y su UI (`mobile/src/app/cart.tsx`, `web/src/lib/recipeComparison.ts`) siguen siendo específicas de cada plataforma; `computeAllInOneTotals()` es el cálculo puro que ambas invocan con los mismos datos.
+
+### 4.10 Ahorro entre el precio más barato y el más caro (`computeSavings`) — `packages/domain/src/savings.ts`
+Regla compartida (Domain Consolidation v3, PR `refactor/domain-compute-savings`): recibe una lista de `PharmacyPrice[]` **ya ordenada/filtrada por el llamador** y devuelve `cheapest = orderedPrices[0]`, `priciest = orderedPrices[length - 1]`, y `savings = priciest.channels.effective - cheapest.channels.effective` (o `0` si hay menos de dos elementos distintos).
+
+Deliberadamente no ordena ni filtra nada por su cuenta — es una decisión de diseño, no un olvido: `mobile/src/app/medication.tsx` pasa un array cuyo orden depende de un toggle de UI (precio ascendente/descendente) y de qué farmacias están visibles/activas. Cuando el usuario ordena por "precio descendente", `cheapest`/`priciest` quedan invertidos y `savings` da negativo, lo que oculta el banner de ahorro (su guard es `savings > 0`) — un comportamiento preexistente en Mobile que este documento no corrige ni recomienda corregir; solo se deja constancia de que es real y de que la función compartida lo preserva a propósito recibiendo el orden que cada consumidor decida darle.
+
+No incluye: el porcentaje de ahorro (`savingsPct`) que calcula `mobile/src/app/medication.tsx` (solo se usa ahí), ni el umbral de "alta dispersión" de `web/src/lib/insights.ts` (que divide el mismo `diff` por `cheapest` en vez de por `priciest`, con un propósito distinto — marcar dispersión de precios, no "cuánto ahorras"). Ambos cálculos siguen siendo específicos de su plataforma/módulo porque son fórmulas realmente distintas, aunque compartan los mismos dos precios de entrada.
+
+### 4.11 Orden ascendente por precio efectivo (`sortByEffectivePrice`) — `packages/domain/src/pricing.ts`
+Regla compartida (Domain Consolidation v4, PR `refactor/domain-sort-effective-price`): dado `PharmacyPrice[]`, devuelve una **copia** ordenada ascendentemente por `channels.effective`. No muta el array recibido, no filtra farmacias, no deduplica, no aplica ninguna regla adicional — es exclusivamente el orden.
+
+Reemplazó cuatro reimplementaciones idénticas del mismo patrón de `sort` en Web (`MedicationCard.tsx`, `medicamento/[slug]/page.tsx`, `insights.ts`, `recipeComparison.ts::computeSplitTotal()`) y, por equivalencia demostrada (mismo resultado por referencia de objeto, incluidos empates, gracias a la estabilidad garantizada de `Array.prototype.sort` desde ES2019), también la búsqueda manual del precio mínimo en `mobile/src/components/MedicationListItem.tsx`.
+
+Deliberadamente **no** se usa en `mobile/src/app/medication.tsx`: ese archivo mantiene su propio orden bidireccional (ascendente/descendente) controlado por un toggle de UI — es el mismo array ordenado del que depende `computeSavings()` (§4.10), y su dirección de orden es comportamiento específico de esa pantalla, no una regla de dominio compartida.
+
+**Separación vigente tras PR #2–#4**: `packages/domain` concentra el cálculo puro sobre `MedicationResult`/`PharmacyPrice` ya construidos (matching, normalización, deduplicación, precio efectivo, orden, totales de canasta, ahorro). Queda fuera de `packages/domain`, y sigue siendo responsabilidad de cada plataforma o de `api/`: qué se muestra y en qué orden elige mostrarlo el usuario (toggles de UI), la obtención de datos (scraping/clientes de farmacia, `api/src/clients/*`), la persistencia (Supabase, `AsyncStorage`), y la composición de pantallas.
+
 ---
 
 ## 5. Brechas: datos disponibles en las fuentes pero no modelados
