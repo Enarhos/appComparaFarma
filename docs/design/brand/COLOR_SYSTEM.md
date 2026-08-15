@@ -2,7 +2,7 @@
 
 Este documento no define una paleta cromática definitiva, no elige colores corporativos, no selecciona códigos HEX, no reemplaza un Brand Book y no es una guía gráfica. Es la **especificación oficial del sistema de color**: qué responsabilidades funcionales cumple el color dentro de la marca, qué principios debe respetar cualquier paleta futura, y qué reglas gobiernan su neutralidad, su accesibilidad y su evolución. Debe seguir siendo válido aunque, dentro de cinco años, cambie por completo la paleta cromática de ComparaFarma — porque no gobierna esa elección, gobierna los principios y la arquitectura bajo los que esa elección deberá tomarse.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -17,10 +17,10 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Versión** | 1.0 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Brand Architect / Color Systems Director / Enterprise Documentation Architect |
-| **Nivel de Gobierno** | Estratégico — quinto grado de derivación: se apoya directamente en `docs/brand/LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md` e `ICONOGRAPHY_SYSTEM.md` (tercer, cuarto y quinto grado), y en `VISUAL_IDENTITY.md`/`DESIGN_CONCEPT.md`, todos derivados de `docs/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
+| **Nivel de Gobierno** | Estratégico — quinto grado de derivación: se apoya directamente en `docs/design/brand/LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md` e `ICONOGRAPHY_SYSTEM.md` (tercer, cuarto y quinto grado), y en `VISUAL_IDENTITY.md`/`DESIGN_CONCEPT.md`, todos derivados de `docs/design/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
 | **Clasificación** | Documento de Arquitectura de Marca / Especificación de Sistema |
 | **Fuente Oficial** | Este documento es la fuente oficial de los **principios y la arquitectura** del sistema de color. No es fuente de identidad (`BRAND_FOUNDATIONS.md`), de percepción visual (`VISUAL_IDENTITY.md`), de estructura de logotipo, tipografía o iconografía (`LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md`), ni de ninguna paleta, código cromático o valor HEX concreto (no definidos) |
-| **Documentos de los que depende** | `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_ARCHITECTURE.md`, `docs/brand/VISUAL_IDENTITY.md`, `docs/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/brand/LOGO_SYSTEM.md`, `docs/brand/TYPOGRAPHY_SYSTEM.md`, `docs/brand/ICONOGRAPHY_SYSTEM.md`, `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
+| **Documentos de los que depende** | `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_ARCHITECTURE.md`, `docs/design/brand/VISUAL_IDENTITY.md`, `docs/design/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/design/brand/LOGO_SYSTEM.md`, `docs/design/brand/TYPOGRAPHY_SYSTEM.md`, `docs/design/brand/ICONOGRAPHY_SYSTEM.md`, `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
 | **Documentos que gobierna** | Ninguno todavía de forma directa. Debería gobernar la futura selección concreta de una paleta cromática (documento de implementación, no creado) y cierra el punto "COLOR_SYSTEM" ya anticipado en el roadmap de `VISUAL_IDENTITY.md` §4.9, `DESIGN_CONCEPT.md` §4.10, `LOGO_SYSTEM.md` §8 y `TYPOGRAPHY_SYSTEM.md` §8 |
 | **Pregunta que responde** | ¿Cómo debe gobernarse el color dentro de ComparaFarma para mantener una identidad coherente, accesible y neutral a lo largo del tiempo? |
 
@@ -28,7 +28,7 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 
 ## 2. Propósito
 
-El color, dentro de ComparaFarma, no es un elemento decorativo: es un **sistema de comunicación** con una responsabilidad más delicada que la de cualquier otro componente visual de la marca, porque el producto existe específicamente para presentar una **comparación** — de precios, de farmacias, de canales — de la que la persona debe poder confiar que es objetiva. `docs/brand/BRAND_FOUNDATIONS.md` §12 declara, sin ambigüedad, que ComparaFarma *"no privilegia una farmacia por sobre otra por conveniencia comercial"*, y `docs/design/DESIGN_BRIEF.md` §4.11 ya advierte que el color *"debe evitar los códigos cromáticos que el usuario asocia automáticamente con farmacia... o con seguridad financiera tipo fintech"*. Un sistema de color mal gobernado no solo sería un error estético: podría introducir, sin intención, un sesgo visual en la comparación misma que constituye la propuesta de valor central de la marca.
+El color, dentro de ComparaFarma, no es un elemento decorativo: es un **sistema de comunicación** con una responsabilidad más delicada que la de cualquier otro componente visual de la marca, porque el producto existe específicamente para presentar una **comparación** — de precios, de farmacias, de canales — de la que la persona debe poder confiar que es objetiva. `docs/design/brand/BRAND_FOUNDATIONS.md` §12 declara, sin ambigüedad, que ComparaFarma *"no privilegia una farmacia por sobre otra por conveniencia comercial"*, y `docs/design/DESIGN_BRIEF.md` §4.11 ya advierte que el color *"debe evitar los códigos cromáticos que el usuario asocia automáticamente con farmacia... o con seguridad financiera tipo fintech"*. Un sistema de color mal gobernado no solo sería un error estético: podría introducir, sin intención, un sesgo visual en la comparación misma que constituye la propuesta de valor central de la marca.
 
 Este documento existe para que esa responsabilidad no dependa de decisiones de color aisladas, tomadas pantalla por pantalla, sino de una arquitectura y unos principios estables que cualquier paleta futura deba cumplir.
 
@@ -51,7 +51,7 @@ Este documento existe para que esa responsabilidad no dependa de decisiones de c
 - Ninguna paleta cromática, código HEX, RGB o valor de color concreto.
 - Ningún color específico como decisión de marca — no se elige, menciona ni descarta verde, azul, ni ningún otro color como código de identidad.
 - Ningún componente de interfaz de usuario ni patrón de UI. Corresponde a un futuro `DESIGN_SYSTEM` de producto, no creado.
-- La estructura del logotipo, las capas tipográficas o las categorías de iconografía. Pertenecen íntegramente a `docs/brand/LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md` e `ICONOGRAPHY_SYSTEM.md`, ya vigentes, que este documento no duplica — solo referencia su relación con el color (§4.7).
+- La estructura del logotipo, las capas tipográficas o las categorías de iconografía. Pertenecen íntegramente a `docs/design/brand/LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md` e `ICONOGRAPHY_SYSTEM.md`, ya vigentes, que este documento no duplica — solo referencia su relación con el color (§4.7).
 - Ratios de contraste, valores de luminancia ni métricas absolutas de accesibilidad. Corresponden a especificaciones técnicas de implementación, no a esta especificación de sistema.
 - Un manual gráfico con ejemplos visuales de paleta aplicada. Corresponde a un futuro `BRAND_GUIDELINES.md`, no creado.
 - Ninguna decisión de identidad, arquitectura de marca o percepción visual ya tomada en `BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md` o `DESIGN_CONCEPT.md`. Este documento no las reinterpreta.
@@ -71,7 +71,7 @@ Consolidados sin agregar ninguno nuevo, desde las fuentes ya aprobadas de Brand 
 | Confianza | `BRAND_FOUNDATIONS.md` §11.1, Principio II; `VISUAL_IDENTITY.md` §4.2, §4.3 (atributo "Confiable") | Un uso de color que sugiriera sesgo, aunque fuera involuntario, erosionaría directamente la confianza ya declarada como el atributo más consolidado del corpus documental |
 | Accesibilidad | `BRAND_FOUNDATIONS.md` §11.2; `VISUAL_IDENTITY.md` §4.2, citando `BRAND_AUDIT.md` §2 | Fundamenta íntegramente §4.4 |
 | Consistencia | Derivado del modelo Branded House (`BRAND_ARCHITECTURE.md` §4.1), mismo criterio ya aplicado en `TYPOGRAPHY_SYSTEM.md` §4.1 e `ICONOGRAPHY_SYSTEM.md` §4.1 | Un mismo significado cromático debe sostenerse igual en todos los canales; un color no puede significar una cosa en la app y otra en el sitio web |
-| Orientación | Concepto central de diseño ya aprobado (`docs/design/DESIGN_DECISION_LOG.md`, DD-001) | Aplicado con matiz: el color puede ayudar a orientar la lectura de la información (§4.2.4, §4.2.7), pero nunca al costo de la Neutralidad — esta tensión se resuelve explícitamente en §4.5 |
+| Orientación | Concepto central de diseño ya aprobado (`docs/design/decisions/DESIGN_DECISION_LOG.md`, DD-001) | Aplicado con matiz: el color puede ayudar a orientar la lectura de la información (§4.2.4, §4.2.7), pero nunca al costo de la Neutralidad — esta tensión se resuelve explícitamente en §4.5 |
 
 ### 4.2 Arquitectura del Color
 
@@ -113,7 +113,7 @@ Reglas generales, sin definir implementaciones:
 - **El color nunca debe alterar la neutralidad de la comparación.** Ningún uso de color puede hacer que una opción parezca objetivamente mejor por razones distintas a los datos que el sistema ya calcula — desarrollado íntegramente en §4.5.
 - **El color debe reforzar la comprensión, no sustituirla.** Un color no resuelve por sí solo la necesidad de que una persona entienda una comparación; acompaña a la información, no la reemplaza.
 - **El color debe reducir la carga cognitiva, no aumentarla.** Cuantos menos significados cromáticos distintos deba recordar una persona para usar el producto, más se cumple el principio de Claridad (§4.1).
-- **El color debe apoyar la jerarquía visual, nunca sustituir a la tipografía como su mecanismo primario.** `docs/brand/TYPOGRAPHY_SYSTEM.md` §4.5 ya exige que la jerarquía tipográfica funcione "incluso sin color"; este documento no contradice esa exigencia — el color es, por diseño de sistema, una capa de refuerzo secundaria sobre una jerarquía que ya debe sostenerse sin él.
+- **El color debe apoyar la jerarquía visual, nunca sustituir a la tipografía como su mecanismo primario.** `docs/design/brand/TYPOGRAPHY_SYSTEM.md` §4.5 ya exige que la jerarquía tipográfica funcione "incluso sin color"; este documento no contradice esa exigencia — el color es, por diseño de sistema, una capa de refuerzo secundaria sobre una jerarquía que ya debe sostenerse sin él.
 
 ### 4.4 Accesibilidad
 
@@ -127,12 +127,12 @@ Principios, sin ratios concretos — fundamentados en el principio de Accesibili
 
 ### 4.5 Neutralidad
 
-Este es el principio más determinante de todo el sistema de color de ComparaFarma, y se relaciona de forma directa y explícita con `docs/brand/BRAND_FOUNDATIONS.md`: el Principio de producto 3, "Neutralidad" (§11.2), la Diferenciación declarada como "plataforma neutral" (§14), y la restricción explícita de que ComparaFarma *"no privilegia una farmacia por sobre otra por conveniencia comercial"* (§12).
+Este es el principio más determinante de todo el sistema de color de ComparaFarma, y se relaciona de forma directa y explícita con `docs/design/brand/BRAND_FOUNDATIONS.md`: el Principio de producto 3, "Neutralidad" (§11.2), la Diferenciación declarada como "plataforma neutral" (§14), y la restricción explícita de que ComparaFarma *"no privilegia una farmacia por sobre otra por conveniencia comercial"* (§12).
 
 El color debe evitar introducir sesgos, específicamente en:
 
 - **Comparación de precios:** el sistema sí necesita resaltar visualmente cuál es el mejor precio disponible — es la propuesta de valor central del producto, ya declarada como "conocer, en pocos segundos, dónde un medicamento tiene el mejor precio" (`BRAND_FOUNDATIONS.md` §14). Este documento no prohíbe ese resalte. Lo que prohíbe es que ese resalte se construya reutilizando un color que, en cualquier otro punto del sistema, ya cargue un significado semántico distinto (por ejemplo, "aprobado" o "correcto" en el Color Semántico, §4.2.3) — el resalte del mejor precio debe ser una función exclusiva del Color de Datos (§4.2.7), nunca una colisión con el Color Semántico.
-- **Farmacias:** ningún color puede asociarse de forma permanente a una farmacia específica de manera que la distinga visualmente como preferida o como advertencia. Esta regla extiende al color la misma restricción ya impuesta a la iconografía de farmacias en `docs/brand/ICONOGRAPHY_SYSTEM.md` §4.2.7.
+- **Farmacias:** ningún color puede asociarse de forma permanente a una farmacia específica de manera que la distinga visualmente como preferida o como advertencia. Esta regla extiende al color la misma restricción ya impuesta a la iconografía de farmacias en `docs/design/brand/ICONOGRAPHY_SYSTEM.md` §4.2.7.
 - **Resultados y rankings:** el orden de una lista de resultados puede comunicarse por posición, por tipografía o por el dato numérico mismo — nunca exclusivamente por un degradado o código de color que jerarquice visualmente las opciones antes de que la persona lea la información real.
 - **Recomendaciones:** ComparaFarma *"no emite recomendaciones médicas ni diagnósticos"* y *"no privilegia una farmacia por conveniencia comercial"* (`BRAND_FOUNDATIONS.md` §12). Ningún uso de color puede simular una recomendación implícita —un resaltado que sugiera "esta es la opción que ComparaFarma recomienda"— que no sea, exclusivamente, el reflejo visual de un hecho ya calculado de forma objetiva por el sistema (el precio efectivo mínimo entre los canales disponibles, ya definido en el contrato de datos de la plataforma). El color solo puede reflejar ese cálculo ya existente; nunca puede añadir un juicio de valor adicional que el sistema no haya calculado.
 
@@ -140,9 +140,9 @@ El color debe evitar introducir sesgos, específicamente en:
 
 Todo color nuevo, para incorporarse al sistema, debe:
 
-1. **Encajar en una de las siete responsabilidades funcionales ya definidas (§4.2)** o justificar formalmente la creación de una responsabilidad nueva antes de incorporarse — mismo principio de evolución ya aplicado por analogía en `docs/brand/LOGO_SYSTEM.md` §5 e `ICONOGRAPHY_SYSTEM.md` §4.7.
+1. **Encajar en una de las siete responsabilidades funcionales ya definidas (§4.2)** o justificar formalmente la creación de una responsabilidad nueva antes de incorporarse — mismo principio de evolución ya aplicado por analogía en `docs/design/brand/LOGO_SYSTEM.md` §5 e `ICONOGRAPHY_SYSTEM.md` §4.7.
 2. **No introducir un significado semántico paralelo o contradictorio** al ya establecido en el Color Semántico (§4.2.3) — dos colores no pueden significar lo mismo, y un color no puede cambiar de significado entre canales.
-3. **Registrarse como una decisión de diseño**, siguiendo el mismo mecanismo de gobierno que ya exige `docs/design/DESIGN_DECISION_LOG.md`, con la misma observación de gobierno ya señalada en `LOGO_SYSTEM.md` §5 e `ICONOGRAPHY_SYSTEM.md` §5: ese registro es el mecanismo correcto, aunque hoy no exista todavía una fila específica para decisiones de color.
+3. **Registrarse como una decisión de diseño**, siguiendo el mismo mecanismo de gobierno que ya exige `docs/design/decisions/DESIGN_DECISION_LOG.md`, con la misma observación de gobierno ya señalada en `LOGO_SYSTEM.md` §5 e `ICONOGRAPHY_SYSTEM.md` §5: ese registro es el mecanismo correcto, aunque hoy no exista todavía una fila específica para decisiones de color.
 
 Ninguna incorporación de color puede romper la arquitectura de siete capas ya definida en este documento, ni la disciplina de neutralidad definida en §4.5, sin importar cuán conveniente parezca desde una necesidad de diseño puntual.
 
@@ -169,14 +169,14 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Principios de marca y percepción visual | `docs/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md` | ✔ — aplicados al sistema de color (§4.1) | Ningún principio nuevo agregado |
-| Neutralidad (Principio de producto 3) | `docs/brand/BRAND_FOUNDATIONS.md` §11.2, §14, §12 | ✔ — desarrollado íntegramente en §4.5 | Principio más determinante de todo el documento |
+| Principios de marca y percepción visual | `docs/design/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md` | ✔ — aplicados al sistema de color (§4.1) | Ningún principio nuevo agregado |
+| Neutralidad (Principio de producto 3) | `docs/design/brand/BRAND_FOUNDATIONS.md` §11.2, §14, §12 | ✔ — desarrollado íntegramente en §4.5 | Principio más determinante de todo el documento |
 | Restricciones cromáticas contra farmacia/fintech | `docs/design/DESIGN_BRIEF.md` §4.11 | ✔ — fundamenta §2 y §4.2.5 | — |
-| Concepto central "Orientación" | `docs/design/DESIGN_DECISION_LOG.md`, DD-001 | ✔ — aplicado con matiz a §4.2.4, §4.2.7, resuelto por §4.5 | Tensión explícita entre orientación y neutralidad, resuelta a favor de la neutralidad |
-| Jerarquía tipográfica independiente del color | `docs/brand/TYPOGRAPHY_SYSTEM.md` §4.5 | ✔ — condiciona el rol secundario del color en §4.3, §4.7 | — |
-| Diferenciación de íconos por forma, no por color | `docs/brand/ICONOGRAPHY_SYSTEM.md` §4.6 | ✔ — condiciona §4.3, §4.7 | — |
-| Neutralidad de la categoría "Farmacias" en iconografía | `docs/brand/ICONOGRAPHY_SYSTEM.md` §4.2.7 | ✔ — extendida al color en §4.5 | — |
-| Versiones oficiales de reproducción del isotipo (sin color) | `docs/brand/LOGO_SYSTEM.md` §4.5 | ✔ — condiciona §4.2.1, §4.7 | Cualquier versión con color requiere aprobación formal explícita |
+| Concepto central "Orientación" | `docs/design/decisions/DESIGN_DECISION_LOG.md`, DD-001 | ✔ — aplicado con matiz a §4.2.4, §4.2.7, resuelto por §4.5 | Tensión explícita entre orientación y neutralidad, resuelta a favor de la neutralidad |
+| Jerarquía tipográfica independiente del color | `docs/design/brand/TYPOGRAPHY_SYSTEM.md` §4.5 | ✔ — condiciona el rol secundario del color en §4.3, §4.7 | — |
+| Diferenciación de íconos por forma, no por color | `docs/design/brand/ICONOGRAPHY_SYSTEM.md` §4.6 | ✔ — condiciona §4.3, §4.7 | — |
+| Neutralidad de la categoría "Farmacias" en iconografía | `docs/design/brand/ICONOGRAPHY_SYSTEM.md` §4.2.7 | ✔ — extendida al color en §4.5 | — |
+| Versiones oficiales de reproducción del isotipo (sin color) | `docs/design/brand/LOGO_SYSTEM.md` §4.5 | ✔ — condiciona §4.2.1, §4.7 | Cualquier versión con color requiere aprobación formal explícita |
 | Contrato de datos (canales de precio, precio efectivo) | `CLAUDE.md` (raíz del repositorio) — contrato de tipos `PriceChannels`, `effective` | ✔ — fundamenta la distinción entre Color Informativo (§4.2.4) y Color de Datos (§4.2.7), y el criterio de "hecho ya calculado" en §4.5 | Referencia técnica, no de marca; se cita porque el sistema de color debe reflejar ese cálculo, no reinterpretarlo |
 | Paleta cromática, códigos HEX o colores concretos | — (no existe documento de implementación todavía) | No consolidado — declarado explícitamente fuera de alcance (§3) | Pendiente de una decisión de implementación futura |
 
@@ -186,9 +186,9 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 `COLOR_SYSTEM.md` **no reemplaza**:
 
-- `docs/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` — siguen siendo la única fuente de identidad, arquitectura de marca, principios de percepción y concepto de diseño.
+- `docs/design/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` — siguen siendo la única fuente de identidad, arquitectura de marca, principios de percepción y concepto de diseño.
 - `docs/design/DESIGN_BRIEF.md` — sigue siendo la única fuente del encargo de diseño y de las restricciones cromáticas ya declaradas.
-- `docs/brand/LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md` e `ICONOGRAPHY_SYSTEM.md` — siguen siendo la única fuente de estructura de logotipo, tipografía e iconografía, con las que este documento se relaciona (§4.7) sin duplicar su contenido.
+- `docs/design/brand/LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md` e `ICONOGRAPHY_SYSTEM.md` — siguen siendo la única fuente de estructura de logotipo, tipografía e iconografía, con las que este documento se relaciona (§4.7) sin duplicar su contenido.
 
 La responsabilidad específica de `COLOR_SYSTEM.md` dentro de la Arquitectura de Marca es gobernar exclusivamente los **principios, la arquitectura funcional y las reglas de neutralidad y evolución** del uso del color: sus siete responsabilidades funcionales, sus principios de aplicación y accesibilidad, y —de forma más específica que en cualquier otro sistema ya vigente— la disciplina de neutralidad que el color debe respetar frente a la comparación de precios y farmacias que constituye el núcleo del producto. No gobierna, y no debe absorber en ninguna revisión futura, la selección de una paleta cromática concreta, códigos HEX, ni ninguna decisión de componentes de interfaz — esa frontera es una restricción deliberada de alcance (§3), consistente con el criterio de éxito declarado en §2: este documento debe seguir siendo válido aunque cambie por completo la paleta cromática de ComparaFarma.
 
@@ -200,16 +200,16 @@ Cuando exista una discrepancia entre este documento y cualquiera de sus fuentes,
 
 ## 8. Documentos relacionados
 
-- `docs/brand/BRAND_FOUNDATIONS.md`
-- `docs/brand/BRAND_ARCHITECTURE.md`
-- `docs/brand/VISUAL_IDENTITY.md`
-- `docs/brand/DESIGN_CONCEPT.md`
+- `docs/design/brand/BRAND_FOUNDATIONS.md`
+- `docs/design/brand/BRAND_ARCHITECTURE.md`
+- `docs/design/brand/VISUAL_IDENTITY.md`
+- `docs/design/brand/DESIGN_CONCEPT.md`
 - `docs/design/DESIGN_BRIEF.md`
-- `docs/brand/LOGO_SYSTEM.md`
-- `docs/brand/TYPOGRAPHY_SYSTEM.md`
-- `docs/brand/ICONOGRAPHY_SYSTEM.md`
-- `docs/design/DESIGN_DECISION_LOG.md`
-- `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
+- `docs/design/brand/LOGO_SYSTEM.md`
+- `docs/design/brand/TYPOGRAPHY_SYSTEM.md`
+- `docs/design/brand/ICONOGRAPHY_SYSTEM.md`
+- `docs/design/decisions/DESIGN_DECISION_LOG.md`
+- `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
 
 Documentos que, una vez creados, dependerán estructuralmente de este documento: el futuro documento de selección de paleta cromática concreta, `BRAND_GUIDELINES.md`, y el futuro `DESIGN_SYSTEM` de producto de `mobile/` y `web/`.
 
@@ -219,7 +219,7 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la especificación oficial de principios y arquitectura del sistema de color: principios (claridad, neutralidad, confianza, accesibilidad, consistencia, orientación), siete responsabilidades funcionales (Marca, Interfaz, Semántico, Informativo, Énfasis, Fondo, Datos), principios de aplicación, accesibilidad, disciplina de neutralidad relacionada explícitamente con `BRAND_FOUNDATIONS.md`, reglas de evolución del sistema, y relación con `LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md` e `ICONOGRAPHY_SYSTEM.md`. No define paleta, códigos HEX ni ningún color concreto. | `docs/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/brand/LOGO_SYSTEM.md` v1.0; `TYPOGRAPHY_SYSTEM.md` v1.0; `ICONOGRAPHY_SYSTEM.md` v1.0 |
+| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la especificación oficial de principios y arquitectura del sistema de color: principios (claridad, neutralidad, confianza, accesibilidad, consistencia, orientación), siete responsabilidades funcionales (Marca, Interfaz, Semántico, Informativo, Énfasis, Fondo, Datos), principios de aplicación, accesibilidad, disciplina de neutralidad relacionada explícitamente con `BRAND_FOUNDATIONS.md`, reglas de evolución del sistema, y relación con `LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md` e `ICONOGRAPHY_SYSTEM.md`. No define paleta, códigos HEX ni ningún color concreto. | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/design/brand/LOGO_SYSTEM.md` v1.0; `TYPOGRAPHY_SYSTEM.md` v1.0; `ICONOGRAPHY_SYSTEM.md` v1.0 |
 
 ---
 
@@ -227,9 +227,9 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/brand/LOGO_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema tipográfico | Brand Architect / Type Director / Enterprise Documentation Architect | `docs/brand/TYPOGRAPHY_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema de iconografía | Iconography Director / Design Systems Architect / Enterprise Documentation Architect | `docs/brand/ICONOGRAPHY_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema de color | Brand Architect / Color Systems Director / Enterprise Documentation Architect | `docs/brand/COLOR_SYSTEM.md` v1.0 (este documento) |
+| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/design/brand/LOGO_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema tipográfico | Brand Architect / Type Director / Enterprise Documentation Architect | `docs/design/brand/TYPOGRAPHY_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema de iconografía | Iconography Director / Design Systems Architect / Enterprise Documentation Architect | `docs/design/brand/ICONOGRAPHY_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema de color | Brand Architect / Color Systems Director / Enterprise Documentation Architect | `docs/design/brand/COLOR_SYSTEM.md` v1.0 (este documento) |
 
 **Pendiente de definición:** ninguna acción anterior cuenta todavía con aprobación formal registrada del CEO/fundador. La selección de una paleta cromática concreta queda, en su totalidad, fuera de esta versión y pendiente de trabajo de diseño posterior.

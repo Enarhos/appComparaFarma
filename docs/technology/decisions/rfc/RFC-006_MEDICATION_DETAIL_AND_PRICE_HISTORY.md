@@ -1,6 +1,6 @@
 # RFC-006 — Ficha pública de medicamento e histórico de precios
 
-> **Renumerado de RFC-002 a RFC-006 el 2026-08-06 (WEB-002, Decisión 5 del Product Manager)** — este documento colisionaba en numeración con `docs/engineering/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md` (CFM-ID), que conserva el número RFC-002 por ser el registro oficial de la secuencia (`docs/engineering/rfc/`). Solo cambió el número de identificación y este encabezado — el contenido técnico de este documento no se modificó.
+> **Renumerado de RFC-002 a RFC-006 el 2026-08-06 (WEB-002, Decisión 5 del Product Manager)** — este documento colisionaba en numeración con `docs/technology/decisions/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md` (CFM-ID), que conserva el número RFC-002 por ser el registro oficial de la secuencia (`docs/engineering/rfc/`). Solo cambió el número de identificación y este encabezado — el contenido técnico de este documento no se modificó.
 
 **Estado:** Propuesto para implementación  
 **Fecha:** 2026-07-27  
@@ -9,7 +9,7 @@
 
 ## 1. Contexto
 
-ComparaFarma ya registra snapshots diarios de precios en Supabase mediante `api/src/lib/priceHistoryDb.ts`, en la tabla `price_history` definida en `docs/database/schema.sql`.
+ComparaFarma ya registra snapshots diarios de precios en Supabase mediante `api/src/lib/priceHistoryDb.ts`, en la tabla `price_history` definida en `docs/technology/database/schema.sql`.
 
 La API actual guarda, por combinación `match_key + pharmacy_slug + recorded_date`:
 

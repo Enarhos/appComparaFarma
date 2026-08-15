@@ -63,7 +63,7 @@ Si Supabase no responde (caído, credenciales rotas, etc.), `api/src/lib/pharmac
 - Si `app_config` en Supabase no responde → el backend cae a `DISABLED_PHARMACIES` (ver arriba). Nunca se rompe.
 - Si hay resultados cacheados (30 min) que incluyen una farmacia desactivada → la app los oculta gracias a `isActive()` del `configStore`.
 
-**Importante — mobile no refetchea en runtime:** `mobile/_layout.tsx` solo llama `configStore.fetch()` una vez al montar la app. Un cambio en `/admin/config` no se ve en un dispositivo que ya tiene la app abierta hasta que la cierra por completo y la vuelve a abrir (bloqueado por el freeze de Prueba Cerrada de Google Play, ver `docs/product/BACKLOG_PRODUCT.md` ítem `v15-16`).
+**Importante — mobile no refetchea en runtime:** `mobile/_layout.tsx` solo llama `configStore.fetch()` una vez al montar la app. Un cambio en `/admin/config` no se ve en un dispositivo que ya tiene la app abierta hasta que la cierra por completo y la vuelve a abrir (bloqueado por el freeze de Prueba Cerrada de Google Play, ver `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` ítem `v15-16`).
 
 ---
 

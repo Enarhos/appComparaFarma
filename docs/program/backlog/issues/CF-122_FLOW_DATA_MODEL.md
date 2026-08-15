@@ -18,7 +18,7 @@ Modelar la identidad de Flow por usuario (cliente + tarjeta enrolada) de forma i
 ## Alcance
 
 ### Incluye
-- `create table if not exists flow_customers (...)` en `docs/database/schema.sql` (sección Fase 2 corregida, aditiva): `user_id` (PK, FK a `auth.users`), `flow_customer_id`, `register_status` (`pending`/`active`), `card_brand`, `card_last4`, timestamps. RLS habilitado, sin policies para `authenticated` (mismo criterio que `subscriptions`).
+- `create table if not exists flow_customers (...)` en `docs/technology/database/schema.sql` (sección Fase 2 corregida, aditiva): `user_id` (PK, FK a `auth.users`), `flow_customer_id`, `register_status` (`pending`/`active`), `card_brand`, `card_last4`, timestamps. RLS habilitado, sin policies para `authenticated` (mismo criterio que `subscriptions`).
 - `alter table subscription_plans drop column if exists stripe_price_id;` — nunca se pobló con datos reales, sin riesgo de pérdida.
 - `findFlowCustomer(userId)` / `upsertFlowCustomer(...)` en `api/src/lib/subscriptionsDb.ts`, mismo patrón de degradación elegante que el resto del archivo.
 - Quitar `stripePriceId` de `SubscriptionPlanRow`/`PlanRowRaw`/`fromPlanRow`.
@@ -36,7 +36,7 @@ Modelar la identidad de Flow por usuario (cliente + tarjeta enrolada) de forma i
 
 ## Definición de terminado
 
-- [x] SQL agregado a `schema.sql` — verificado 2026-08-15: `flow_customers` existe en `docs/database/schema.sql` (RLS habilitada, `user_id` único), `stripe_price_id` retirado
+- [x] SQL agregado a `schema.sql` — verificado 2026-08-15: `flow_customers` existe en `docs/technology/database/schema.sql` (RLS habilitada, `user_id` único), `stripe_price_id` retirado
 - [ ] SQL corrido en Supabase (a cargo de Mario) — pendiente, no verificable desde el repositorio; ver `docs/program/DECISION_QUEUE.md` (mismo patrón que CF-112)
 - [x] `findFlowCustomer`/`upsertFlowCustomer` implementadas y testeadas — verificado 2026-08-15 en `api/src/lib/subscriptionsDb.ts` y `api/src/__tests__/subscriptionsDb.test.ts`
 

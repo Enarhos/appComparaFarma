@@ -56,13 +56,13 @@ Este hallazgo no estaba en el alcance original del sprint (no es un "servicio ex
 
 - `CHERRY_PICK_HEAD` apunta a un commit (`33902c2`) que ya existe, con el mismo contenido, en `origin/main` bajo otro hash (`127d66a`).
 - La cola de cherry-pick pendiente (`.git/sequencer/todo`) todavía lista 2 commits más por aplicar (`058d226`, `17d6046`) — ambos también ya presentes en `origin/main` con hashes distintos (`543530f`, y el equivalente de recuperación de contraseña).
-- 7 archivos tienen cambios sin commitear: `.github/workflows/check-price-alerts.yml`, `.github/workflows/update-branches.yml` (sin diferencia real), `CLAUDE.md`, `api/.gitignore`, `web/.gitignore`, `mobile/src/lib/sessionManager.ts`, `docs/release/SERVICE_ACCOUNT_MIGRATION.md`.
+- 7 archivos tienen cambios sin commitear: `.github/workflows/check-price-alerts.yml`, `.github/workflows/update-branches.yml` (sin diferencia real), `CLAUDE.md`, `api/.gitignore`, `web/.gitignore`, `mobile/src/lib/sessionManager.ts`, `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`.
 
 **Verificación de que no hay pérdida de trabajo de producción:** se comparó cada uno de los 7 archivos modificados contra `origin/main` (lo que realmente se despliega):
 
 - `mobile/src/lib/sessionManager.ts`: el diff son únicamente `console.log` de diagnóstico, con un comentario propio que dice explícitamente **"sacar antes de mergear"** — no debe commitearse, es descartable sin pérdida.
 - `api/.gitignore` / `web/.gitignore`: agregan `.vercel`/`.env*`, ya cubierto por el `.gitignore` raíz — redundante, de bajo valor.
-- `docs/release/SERVICE_ACCOUNT_MIGRATION.md`: una sola línea de trazabilidad hacia `PLATFORM_SERVICE_CATALOG.md` — fácil de rehacer.
+- `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`: una sola línea de trazabilidad hacia `PLATFORM_SERVICE_CATALOG.md` — fácil de rehacer.
 - `CLAUDE.md`: contiene documentación redactada en una sesión anterior de este mismo trabajo (advertencia de MINSAL, advertencia de Vercel Hobby, corrección de `versionCode`) que **nunca se commiteó** — el archivo en disco (el que este sprint leyó y usó como fuente de verdad) tiene contenido correcto y más actualizado que `origin/main`.
 - **`.github/workflows/check-price-alerts.yml` es el único con contenido de valor real y no replicado en ningún otro lado:** agrega `permissions: { contents: read, issues: write }` y un `id` al step de disparo. Esto es la pieza que falta para que el mecanismo de "crear un issue si falla" (que `RUNBOOK.md` §6 y `CLAUDE.md` ya describen como "ya corregido") funcione de verdad — **confirmado que `origin/main` NO tiene el mecanismo de alerta de este workflow en absoluto** (solo tiene el paso de `curl`, sin `continue-on-error`, sin creación de issue, sin bloque `permissions`). La documentación existente sobreestima el estado real de este workflow específico.
 
@@ -190,15 +190,15 @@ Se revisó específicamente si existe código en Mobile que permita comprar Prem
 
 ### 6. `HUMAN_DECISION_REQUIRED: GITHUB_REPOSITORY_VISIBILITY`
 
-Decisión de producto/seguridad, no una acción técnica: mantener el repositorio público (sin cuota de Actions, pero con exposición de la lógica de scraping de las 9 farmacias) o privatizarlo (introduce cuota de 2.000 minutos/mes de Actions en plan Free, y Pages requeriría plan Pro). Ver `docs/operations/PLATFORM_SERVICE_REVIEW_GITHUB.md` para el detalle completo.
+Decisión de producto/seguridad, no una acción técnica: mantener el repositorio público (sin cuota de Actions, pero con exposición de la lógica de scraping de las 9 farmacias) o privatizarlo (introduce cuota de 2.000 minutos/mes de Actions en plan Free, y Pages requeriría plan Pro). Ver `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_GITHUB.md` para el detalle completo.
 
 ### 7. `HUMAN_DECISION_REQUIRED: MINSAL_IP_BLOCK_STRATEGY`
 
-Decisión de ingeniería/costo: aceptar el snapshot manual congelado (ver sección de Monitoreo) como estrategia permanente, o invertir en una vía de acceso no bloqueada por MINSAL (IP residencial/self-hosted runner). Ver `docs/operations/PLATFORM_SERVICE_REVIEW_MINSAL.md`.
+Decisión de ingeniería/costo: aceptar el snapshot manual congelado (ver sección de Monitoreo) como estrategia permanente, o invertir en una vía de acceso no bloqueada por MINSAL (IP residencial/self-hosted runner). Ver `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_MINSAL.md`.
 
 ### 8. `POLICY_REVIEW_REQUIRED: DONATION_BANNER_TAX_STATUS`
 
-Confirmar si el aporte voluntario del `DonationBanner` califica como "tax exempt donation" bajo la política de Google Play, o si de todas formas conviene resolverlo migrando a Vercel Pro (que cubre el ángulo de Vercel independientemente del resultado de este análisis). Ver sección dedicada arriba y `docs/operations/PLATFORM_SERVICE_REVIEW_GOOGLE_PLAY.md`.
+Confirmar si el aporte voluntario del `DonationBanner` califica como "tax exempt donation" bajo la política de Google Play, o si de todas formas conviene resolverlo migrando a Vercel Pro (que cubre el ángulo de Vercel independientemente del resultado de este análisis). Ver sección dedicada arriba y `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_GOOGLE_PLAY.md`.
 
 ---
 
@@ -238,7 +238,7 @@ Temas que no corresponden a este sprint de cierre operacional:
 
 - Definición comercial completa de Free/Premium (qué se incluye en cada plan) — de la que depende cuándo y cómo se activa Flow y cómo se implementa la compra de Premium en Android (Google Play Billing, ver sección dedicada arriba).
 - Estructura societaria (LET como entidad) que permita separar las cuentas de servicios de la persona natural que las opera hoy — relevante para Khipu, Vercel, GitHub, Google Play, y para la exención tributaria que resolvería `DONATION_BANNER_TAX_STATUS`.
-- Reactivación de Fase 2b ("sincronización de cuentas en Mobile") de `docs/product/COMPANY_STRATEGY.md`, pausada mientras Mobile estaba en Prueba Cerrada — la restricción ya se levantó (2026-08-13), pendiente de una sesión de producto/estrategia dedicada.
+- Reactivación de Fase 2b ("sincronización de cuentas en Mobile") de `docs/product/strategy/COMPANY_STRATEGY.md`, pausada mientras Mobile estaba en Prueba Cerrada — la restricción ya se levantó (2026-08-13), pendiente de una sesión de producto/estrategia dedicada.
 
 ---
 
@@ -250,7 +250,7 @@ Temas que no corresponden a este sprint de cierre operacional:
 
 ## Documentos relacionados
 
-`docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, y las 12 revisiones individuales `docs/operations/PLATFORM_SERVICE_REVIEW_{SUPABASE,RESEND,EXPO_EAS,ALGOLIA,VERCEL,GITHUB,MINSAL,GOOGLE_PLAY,SENTRY,POSTHOG,KHIPU,UPSTASH}.md`.
+`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, y las 12 revisiones individuales `docs/operations/PLATFORM_SERVICE_REVIEW_{SUPABASE,RESEND,EXPO_EAS,ALGOLIA,VERCEL,GITHUB,MINSAL,GOOGLE_PLAY,SENTRY,POSTHOG,KHIPU,UPSTASH}.md`.
 
 ## Control de Cambios
 

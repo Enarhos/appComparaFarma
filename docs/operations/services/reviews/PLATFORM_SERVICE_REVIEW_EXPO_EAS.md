@@ -4,7 +4,7 @@
 
 **Nombre:** PLATFORM_SERVICE_REVIEW_EXPO_EAS.md
 
-**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo ya usado por `PLATFORM_SERVICE_CATALOG.md` (OPS-SVC-001), `PLATFORM_SERVICE_REVIEW_BACKLOG.md` (OPS-BKL-001), `PLATFORM_SERVICE_REVIEW_SUPABASE.md` (OPS-REV-001) y `PLATFORM_SERVICE_REVIEW_RESEND.md` (OPS-REV-002).
+**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo ya usado por `PLATFORM_SERVICE_CATALOG.md` (OPS-SVC-001), `PLATFORM_SERVICE_REVIEW_BACKLOG.md` (OPS-BKL-001), `PLATFORM_SERVICE_REVIEW_SUPABASE.md` (OPS-REV-001) y `PLATFORM_SERVICE_REVIEW_RESEND.md` (OPS-REV-002).
 
 **Estado:** Activo
 
@@ -16,7 +16,7 @@
 
 **Clasificación:** Revisión de Servicio Externo (ítems de backlog `OPS-SVC-BKL-007` y `OPS-SVC-BKL-008`, tratados juntos — mismo criterio que `PLATFORM_SERVICE_CATALOG.md`, que no los separa)
 
-**Documentos de los que depende:** `docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (ficha #11), `CLAUDE.md`, `mobile/app.json`, `mobile/eas.json`.
+**Documentos de los que depende:** `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (ficha #11), `CLAUDE.md`, `mobile/app.json`, `mobile/eas.json`.
 
 ---
 
@@ -125,7 +125,7 @@ Escala de decisión usada: 🟢 Mantener sin cambios · 🟡 Mantener con vigila
 
 ## Relaciones
 
-Esta revisión no reemplaza a `PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fuente original de la ficha #11, sigue vigente) ni a `PLATFORM_SERVICE_CATALOG.md` (clasificación de criticidad Alta de Expo/EAS, sin cambios) ni a `docs/release/SERVICE_ACCOUNT_MIGRATION.md` (SPOF del `projectId`, sin cambios). Es la tercera revisión individual generada a partir de `PLATFORM_SERVICE_REVIEW_BACKLOG.md` (OPS-BKL-001), cubriendo dos ítems de backlog (`OPS-SVC-BKL-007`, `OPS-SVC-BKL-008`) en un solo documento, igual que el Catálogo los trata combinados.
+Esta revisión no reemplaza a `PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fuente original de la ficha #11, sigue vigente) ni a `PLATFORM_SERVICE_CATALOG.md` (clasificación de criticidad Alta de Expo/EAS, sin cambios) ni a `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md` (SPOF del `projectId`, sin cambios). Es la tercera revisión individual generada a partir de `PLATFORM_SERVICE_REVIEW_BACKLOG.md` (OPS-BKL-001), cubriendo dos ítems de backlog (`OPS-SVC-BKL-007`, `OPS-SVC-BKL-008`) en un solo documento, igual que el Catálogo los trata combinados.
 
 ## Matriz de Trazabilidad
 
@@ -133,16 +133,16 @@ Esta revisión no reemplaza a `PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fuente origi
 |---|---|---|---|
 | Función y configuración de Expo/EAS | `mobile/app.json`, `mobile/eas.json`, `CLAUDE.md` | ✔ (§1, §2) | Inventario propio de esta revisión |
 | Clasificación de criticidad | `PLATFORM_SERVICE_CATALOG.md` §6 | Heredada, sin recalcular | Esta revisión no reevalúa criticidad |
-| SPOF de `projectId` | `docs/release/SERVICE_ACCOUNT_MIGRATION.md` | Heredado (§5), sin cambios | No se repite el detalle de mitigación |
+| SPOF de `projectId` | `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md` | Heredado (§5), sin cambios | No se repite el detalle de mitigación |
 | Límites oficiales y consumo real | `expo.dev/pricing` (oficial) + Dashboard de Expo (verificado en vivo) | ✔ (§4, §6, §9) | Primera vez que se confirma el límite de 1.000 MAU contra fuente oficial directa, no de terceros |
 
 ## Gobierno
 
-Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERVICE_CATALOG.md`, `PLATFORM_SERVICE_REVIEW_BACKLOG.md` ni `docs/release/SERVICE_ACCOUNT_MIGRATION.md`. Ante una discrepancia sobre un dato de Expo/EAS entre este documento y la Auditoría, prevalece la Auditoría salvo que este documento cite evidencia más reciente (caso del límite de MAU, ahora confirmado oficialmente). Adopta voluntariamente la estructura de `GOV-TPL-001` para la familia Operations, mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001` y `OPS-REV-002`.
+Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERVICE_CATALOG.md`, `PLATFORM_SERVICE_REVIEW_BACKLOG.md` ni `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`. Ante una discrepancia sobre un dato de Expo/EAS entre este documento y la Auditoría, prevalece la Auditoría salvo que este documento cite evidencia más reciente (caso del límite de MAU, ahora confirmado oficialmente). Adopta voluntariamente la estructura de `GOV-TPL-001` para la familia Operations, mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001` y `OPS-REV-002`.
 
 ## Documentos relacionados
 
-`docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/release/SERVICE_ACCOUNT_MIGRATION.md`.
+`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`.
 
 ## Control de Cambios
 
@@ -154,6 +154,6 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-14 | Revisión completa de Expo/EAS — tercer ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/PLATFORM_SERVICE_REVIEW_EXPO_EAS.md` v1.0 (este documento) |
+| 2026-08-14 | Revisión completa de Expo/EAS — tercer ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_EXPO_EAS.md` v1.0 (este documento) |
 
 **Nota:** este documento no tiene, a la fecha, aprobación formal del CTO — fue creado a su pedido explícito; la aprobación es un paso posterior y separado.

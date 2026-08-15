@@ -5,7 +5,7 @@
 **Fecha de corte:** 2026-08-06
 **Alcance:** qué es capaz de hacer la Plataforma ComparaFarma — no dónde, no cómo, no con qué tecnología. Es la última capa de arquitectura funcional antes de volver al desarrollo.
 **No es:** una especificación de pantallas, APIs, tablas, tecnologías ni implementación.
-**Fuente de verdad:** `docs/analysis/CURRENT_PLATFORM_ASSESSMENT.md`, `docs/domain/USER_DOMAIN_MODEL.md` y `docs/architecture/IDENTITY_INTEGRATION_PLAN.md` (los tres, aprobados, no se repiten ni se contradicen). Documentación adicional consultada solo donde fue estrictamente necesaria: `docs/product/PRODUCT_BLUEPRINT.md`, `docs/product/ROADMAP.md`, `docs/program/ROADMAP.md`, `docs/product/PERSONAS.md`, `docs/product/PRODUCT_PRINCIPLES.md`, `docs/brand/BRAND_FOUNDATIONS.md`. No se volvió a inspeccionar código ni el repositorio.
+**Fuente de verdad:** `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md`, `docs/technology/domain/USER_DOMAIN_MODEL.md` y `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` (los tres, aprobados, no se repiten ni se contradicen). Documentación adicional consultada solo donde fue estrictamente necesaria: `docs/product/PRODUCT_BLUEPRINT.md`, `docs/product/ROADMAP.md`, `docs/program/ROADMAP.md`, `docs/product/definition/PERSONAS.md`, `docs/product/PRODUCT_PRINCIPLES.md`, `docs/design/brand/BRAND_FOUNDATIONS.md`. No se volvió a inspeccionar código ni el repositorio.
 
 ---
 
@@ -90,7 +90,7 @@ No se fuerza una profundidad uniforme: algunas ramas (Alertas) tienen una sub-ca
 | Distinguir canales de precio | Evitar que la Persona compare precios que no aplican a su forma de comprar | La Plataforma es capaz de separar precio presencial, online, con tarjeta de fidelización y SBPay para cada farmacia | Evita decisiones basadas en un precio que en la práctica no podría obtener | Da precisión y credibilidad — sin esto, la comparación sería engañosa |
 | Calcular ahorro | Cuantificar cuánto se gana comparando | La Plataforma es capaz de calcular la diferencia entre la mejor y la peor opción disponible | Convierte una lista de precios en una razón concreta para actuar | Es la métrica que sostiene el valor percibido del producto entero |
 | Comparar una lista de medicamentos (canasta / receta completa) | Optimizar el gasto total de varios medicamentos a la vez, no uno por uno | La Plataforma es capaz de recibir un conjunto de medicamentos y determinar dónde conviene comprarlos, individual o conjuntamente | Resuelve la necesidad de Rodrigo: *"no me interesa cuál medicamento es más barato... quiero saber dónde gastar menos por toda la compra"* | Nombrada como capacidad de mayor potencial de diferenciación (★★★★★, `docs/product/ROADMAP.md`) |
-| Ver evolución histórica de precio | Entender si un precio de hoy es bueno o malo en el tiempo | La Plataforma es capaz de mostrar cómo varió el precio de un medicamento a lo largo del tiempo | Da contexto y confianza a la decisión de comprar ahora o esperar | Es, según `docs/product/COMPANY_STRATEGY.md`, el activo que se vuelve difícil de copiar frente a la competencia |
+| Ver evolución histórica de precio | Entender si un precio de hoy es bueno o malo en el tiempo | La Plataforma es capaz de mostrar cómo varió el precio de un medicamento a lo largo del tiempo | Da contexto y confianza a la decisión de comprar ahora o esperar | Es, según `docs/product/strategy/COMPANY_STRATEGY.md`, el activo que se vuelve difícil de copiar frente a la competencia |
 | Compartir un hallazgo de precio | Permitir que la Persona informe a otra sobre un precio conveniente | La Plataforma es capaz de generar un mensaje resumido de un hallazgo de precio para enviarlo fuera de la Plataforma | Ayuda a la Persona a ayudar a alguien más (ej. Claudia comprando para su madre) | Puede actuar como canal orgánico de descubrimiento del producto, aunque no hay evidencia documental de que esté priorizado como tal |
 
 ### 2.3 Recordar
@@ -116,11 +116,11 @@ No se fuerza una profundidad uniforme: algunas ramas (Alertas) tienen una sub-ca
 
 | Nombre | Objetivo | Descripción | Valor para el Usuario | Valor para la Plataforma |
 |---|---|---|---|---|
-| Donaciones voluntarias | Ofrecer una forma simbólica de retribución | La Plataforma es capaz de recibir un pago voluntario de una Persona que percibió un ahorro | Le permite expresar gratitud sin obligación | Ingreso hoy simbólico, no un modelo de negocio (`docs/product/COMPANY_STRATEGY.md`) |
+| Donaciones voluntarias | Ofrecer una forma simbólica de retribución | La Plataforma es capaz de recibir un pago voluntario de una Persona que percibió un ahorro | Le permite expresar gratitud sin obligación | Ingreso hoy simbólico, no un modelo de negocio (`docs/product/strategy/COMPANY_STRATEGY.md`) |
 | Suscripción Premium | Ofrecer beneficios adicionales a cambio de pago recurrente | La Plataforma es capaz de reconocer que una Persona pagó por acceso a funciones adicionales | Potencial, no realizado — no hay catálogo comercial que comprar hoy | Fuente de ingresos declarada como Objetivo Estratégico 5 |
-| Convenios / afiliación con farmacias | Generar ingreso sin alterar la neutralidad del comparador | La Plataforma es capaz de registrar cuando una Persona fue derivada a una farmacia y, potencialmente, cobrar una comisión por ello | Ninguno directo — es invisible para la Persona si se ejecuta correctamente | Recomendado como el modelo de negocio de entrada más simple (`docs/product/COMPANY_STRATEGY.md`) |
+| Convenios / afiliación con farmacias | Generar ingreso sin alterar la neutralidad del comparador | La Plataforma es capaz de registrar cuando una Persona fue derivada a una farmacia y, potencialmente, cobrar una comisión por ello | Ninguno directo — es invisible para la Persona si se ejecuta correctamente | Recomendado como el modelo de negocio de entrada más simple (`docs/product/strategy/COMPANY_STRATEGY.md`) |
 | API Comercial (datos agregados B2B) | Vender acceso a inteligencia de precios agregada, no a datos de ninguna Persona | La Plataforma es capaz de exponer tendencias y series históricas agregadas a terceros (aseguradoras, laboratorios) | Ninguno directo | Descrito como el ingreso de mayor valor a largo plazo, condicionado a acumular suficiente histórico |
-| Publicidad ética | Generar ingreso por visibilidad sin alterar el orden por precio real | La Plataforma sería capaz de mostrar contenido patrocinado etiquetado explícitamente, sin tocar el ranking de precios | Riesgo si no se ejecuta con cuidado — puede percibirse como pérdida de neutralidad | Marcada como la opción de mayor riesgo a la neutralidad de marca (`docs/product/COMPANY_STRATEGY.md`) |
+| Publicidad ética | Generar ingreso por visibilidad sin alterar el orden por precio real | La Plataforma sería capaz de mostrar contenido patrocinado etiquetado explícitamente, sin tocar el ranking de precios | Riesgo si no se ejecuta con cuidado — puede percibirse como pérdida de neutralidad | Marcada como la opción de mayor riesgo a la neutralidad de marca (`docs/product/strategy/COMPANY_STRATEGY.md`) |
 
 ### 2.6 Inteligencia
 
@@ -173,7 +173,7 @@ No se fuerza una profundidad uniforme: algunas ramas (Alertas) tienen una sub-ca
 | Gestionar consentimiento | **No iniciada** | No se encontró evidencia de un mecanismo diferenciado de gestión de consentimientos en ninguno de los tres documentos fuente, más allá de lo que Supabase Auth implica por defecto |
 | Donaciones voluntarias | **Implementada** | Solo Mobile, vía Khipu (`CURRENT_PLATFORM_ASSESSMENT.md` §1.3) |
 | Suscripción Premium | **Parcial** | Motor completo en los Servicios de Plataforma; sin catálogo comercial real; solo accesible desde el Cliente Web (`CURRENT_PLATFORM_ASSESSMENT.md` §2.7) |
-| Convenios / afiliación con farmacias | **Planificada** | Recomendada explícitamente como próximo paso de monetización; la base de tracking (clics) ya existe, el acuerdo comercial en sí no (`docs/product/COMPANY_STRATEGY.md` §3, §6) |
+| Convenios / afiliación con farmacias | **Planificada** | Recomendada explícitamente como próximo paso de monetización; la base de tracking (clics) ya existe, el acuerdo comercial en sí no (`docs/product/strategy/COMPANY_STRATEGY.md` §3, §6) |
 | API Comercial (datos agregados B2B) | **No iniciada** | Nombrada en `docs/product/ROADMAP.md` Objetivo 5; sin evidencia de diseño ni código |
 | Publicidad ética | **No iniciada** | Solo nombrada como ítem de lista, sin desarrollo (`docs/product/ROADMAP.md`) |
 | Identificar bioequivalentes | **Parcial** | El dato (`isBioequivalent`) y el filtro existen; la capacidad de "identificación inteligente" está bloqueada (`docs/program/ROADMAP.md`: "bioequivalentes bloqueado") |
@@ -344,21 +344,21 @@ Inteligencia
 ## Validación final
 
 ### Documentos utilizados
-- `docs/analysis/CURRENT_PLATFORM_ASSESSMENT.md` (fuente principal)
-- `docs/domain/USER_DOMAIN_MODEL.md` (fuente principal)
-- `docs/architecture/IDENTITY_INTEGRATION_PLAN.md` (fuente principal, versión revisada PLATFORM-002A)
+- `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md` (fuente principal)
+- `docs/technology/domain/USER_DOMAIN_MODEL.md` (fuente principal)
+- `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` (fuente principal, versión revisada PLATFORM-002A)
 - `docs/product/PRODUCT_BLUEPRINT.md` (confirmado: índice de experiencias UX, no un modelo de capacidades — no se duplica)
 - `docs/product/ROADMAP.md` (Objetivos Estratégicos, Capacidades por objetivo, Capacidades Estratégicas y Operacionales — citado extensamente en §2, §3, §7, §8)
 - `docs/program/ROADMAP.md` (estado por workstream — Growth/Commercial, citado en §3)
-- `docs/product/PERSONAS.md` (citado en §2, §8)
+- `docs/product/definition/PERSONAS.md` (citado en §2, §8)
 - `docs/product/PRODUCT_PRINCIPLES.md` (citado en §7)
-- `docs/brand/BRAND_FOUNDATIONS.md` (grounding de principios ya usado en `USER_DOMAIN_MODEL.md`, no releído en extenso en este sprint)
+- `docs/design/brand/BRAND_FOUNDATIONS.md` (grounding de principios ya usado en `USER_DOMAIN_MODEL.md`, no releído en extenso en este sprint)
 
 ### Código revisado
 Ninguno.
 
 ### Documento creado
-`docs/architecture/PLATFORM_CAPABILITY_MODEL.md` (este documento).
+`docs/technology/architecture/PLATFORM_CAPABILITY_MODEL.md` (este documento).
 
 ### Relación con otros documentos
 

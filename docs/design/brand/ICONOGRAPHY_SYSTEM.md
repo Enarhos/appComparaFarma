@@ -2,7 +2,7 @@
 
 Este documento no diseña íconos, no selecciona una librería, no reemplaza un Design System y no define componentes de interfaz. Es la **especificación oficial del sistema de iconografía**: qué categorías funcionales lo componen, qué principios debe cumplir cualquier ícono futuro, y qué reglas gobiernan su construcción, su estilo, su escalabilidad y su evolución. Debe seguir siendo válido aunque, en el futuro, cambie por completo la librería de íconos utilizada por ComparaFarma — porque no gobierna esa implementación, gobierna los principios y la arquitectura bajo los que cualquier implementación deberá construirse.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -17,10 +17,10 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Versión** | 1.0 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Iconography Director / Design Systems Architect / Enterprise Documentation Architect |
-| **Nivel de Gobierno** | Estratégico — se apoya directamente en `docs/brand/LOGO_SYSTEM.md` y `docs/brand/TYPOGRAPHY_SYSTEM.md` (tercer y cuarto grado de derivación), y en `docs/brand/VISUAL_IDENTITY.md` / `DESIGN_CONCEPT.md`, todos derivados de `docs/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
+| **Nivel de Gobierno** | Estratégico — se apoya directamente en `docs/design/brand/LOGO_SYSTEM.md` y `docs/design/brand/TYPOGRAPHY_SYSTEM.md` (tercer y cuarto grado de derivación), y en `docs/design/brand/VISUAL_IDENTITY.md` / `DESIGN_CONCEPT.md`, todos derivados de `docs/design/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
 | **Clasificación** | Documento de Arquitectura de Marca / Especificación de Sistema |
 | **Fuente Oficial** | Este documento es la fuente oficial de los **principios y la arquitectura** del sistema de iconografía. No es fuente de identidad (`BRAND_FOUNDATIONS.md`), de percepción visual (`VISUAL_IDENTITY.md`), de estructura de logotipo (`LOGO_SYSTEM.md`), de sistema tipográfico (`TYPOGRAPHY_SYSTEM.md`) ni de ningún ícono, catálogo o librería concreta (no creados) |
-| **Documentos de los que depende** | `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_ARCHITECTURE.md`, `docs/brand/VISUAL_IDENTITY.md`, `docs/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/brand/LOGO_SYSTEM.md`, `docs/brand/TYPOGRAPHY_SYSTEM.md`, `docs/design/BRAND_IDENTITY_VALIDATION.md`, `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
+| **Documentos de los que depende** | `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_ARCHITECTURE.md`, `docs/design/brand/VISUAL_IDENTITY.md`, `docs/design/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/design/brand/LOGO_SYSTEM.md`, `docs/design/brand/TYPOGRAPHY_SYSTEM.md`, `docs/design/BRAND_IDENTITY_VALIDATION.md`, `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
 | **Documentos que gobierna** | Ninguno todavía de forma directa. Debería gobernar la futura selección o construcción concreta de un catálogo o librería de íconos (no creado), y cierra el punto "ICONOGRAPHY" ya anticipado en el roadmap de `VISUAL_IDENTITY.md` §4.9, `DESIGN_CONCEPT.md` §4.10, `LOGO_SYSTEM.md` §8 y `TYPOGRAPHY_SYSTEM.md` §8 |
 | **Pregunta que responde** | ¿Cómo debe gobernarse el sistema de iconografía de ComparaFarma para mantener una identidad visual coherente a lo largo del tiempo? |
 
@@ -54,8 +54,8 @@ Este documento existe para que esa responsabilidad no dependa de decisiones aisl
 - Ningún componente de interfaz de usuario (botones, tarjetas, listas, patrones de interacción). Corresponde a un futuro `DESIGN_SYSTEM` de producto, no creado.
 - Ningún tamaño en píxeles, retícula de construcción ni valor de contraste absoluto. Corresponde a especificaciones técnicas de implementación, no a esta especificación de sistema.
 - Ningún color. Corresponde a `COLOR_SYSTEM`, no creado.
-- La geometría, proporciones, área de seguridad o tamaño mínimo del isotipo. Pertenecen exclusivamente a la especificación de construcción del Candidato 09 y a `docs/brand/LOGO_SYSTEM.md`, que este documento no duplica — solo referencia su relación funcional con la iconografía (§4.8).
-- Las capas, criterios de selección o filosofía de pesos del sistema tipográfico. Pertenecen íntegramente a `docs/brand/TYPOGRAPHY_SYSTEM.md`, ya vigente.
+- La geometría, proporciones, área de seguridad o tamaño mínimo del isotipo. Pertenecen exclusivamente a la especificación de construcción del Candidato 09 y a `docs/design/brand/LOGO_SYSTEM.md`, que este documento no duplica — solo referencia su relación funcional con la iconografía (§4.8).
+- Las capas, criterios de selección o filosofía de pesos del sistema tipográfico. Pertenecen íntegramente a `docs/design/brand/TYPOGRAPHY_SYSTEM.md`, ya vigente.
 - Un manual gráfico con ejemplos visuales de íconos. Corresponde a un futuro `BRAND_GUIDELINES.md`, no creado.
 
 ---
@@ -72,7 +72,7 @@ Consolidados sin agregar ninguno nuevo, desde las fuentes ya aprobadas de Brand 
 | Simplicidad | `BRAND_FOUNDATIONS.md` §11.2; `VISUAL_IDENTITY.md` §4.2 | Fundamenta el nivel de detalle mínimo indispensable exigido en §4.4 |
 | Consistencia | Derivado del modelo Branded House (`BRAND_ARCHITECTURE.md` §4.1), mismo criterio ya aplicado en `TYPOGRAPHY_SYSTEM.md` §4.1 | Un sistema de íconos con estilos paralelos entre categorías contradice la expresión de marca única que exige ese modelo |
 | Confianza | `BRAND_FOUNDATIONS.md` §11.1, Principio II; `VISUAL_IDENTITY.md` §4.2 | Un ícono ambiguo o inconsistente, en un producto que existe para reducir incertidumbre, erosiona directamente la confianza que la marca declara como su atributo más consolidado |
-| Orientación | Concepto central de diseño ya aprobado (`docs/design/DESIGN_DECISION_LOG.md`, DD-001) | La categoría de Navegación (§4.2.1) traduce este concepto a la función más literal que puede cumplir un ícono: ayudar a una persona a ubicarse dentro del producto |
+| Orientación | Concepto central de diseño ya aprobado (`docs/design/decisions/DESIGN_DECISION_LOG.md`, DD-001) | La categoría de Navegación (§4.2.1) traduce este concepto a la función más literal que puede cumplir un ícono: ayudar a una persona a ubicarse dentro del producto |
 | Accesibilidad | `BRAND_FOUNDATIONS.md` §11.2; `VISUAL_IDENTITY.md` §4.2, citando `BRAND_AUDIT.md` §2 | Fundamenta íntegramente §4.6 |
 
 ### 4.2 Arquitectura de la Iconografía
@@ -109,7 +109,7 @@ Categoría específica de la propuesta de valor central del producto: comparar p
 
 #### 4.2.8 Medicamentos
 
-Íconos que representan medicamentos, dosis, presentaciones o categorías terapéuticas de forma abstracta. Deben evitar por completo la iconografía clínica ya restringida en la documentación de marca (cruces, píldoras realistas, símbolos de autoridad médica) — restricción heredada directamente de `docs/design/DESIGN_BRIEF.md` §4.10 y `docs/brand/DESIGN_CONCEPT.md` §4.7, no creada por este documento.
+Íconos que representan medicamentos, dosis, presentaciones o categorías terapéuticas de forma abstracta. Deben evitar por completo la iconografía clínica ya restringida en la documentación de marca (cruces, píldoras realistas, símbolos de autoridad médica) — restricción heredada directamente de `docs/design/DESIGN_BRIEF.md` §4.10 y `docs/design/brand/DESIGN_CONCEPT.md` §4.7, no creada por este documento.
 
 #### 4.2.9 Cuenta
 
@@ -158,9 +158,9 @@ Principios, sin métricas concretas — fundamentados en el principio de Accesib
 
 Todo ícono nuevo, para incorporarse al sistema, debe:
 
-1. **Encajar en una de las nueve categorías ya definidas (§4.2)** o justificar formalmente la creación de una categoría nueva antes de incorporarse — mismo principio de evolución ya aplicado a productos nuevos en `docs/brand/BRAND_ARCHITECTURE.md` §4.7 ("todo producto nuevo debe trazarse a una Business Capability ya existente... o justificar formalmente la creación de una nueva antes de nombrarse"), aplicado aquí por analogía a la iconografía.
+1. **Encajar en una de las nueve categorías ya definidas (§4.2)** o justificar formalmente la creación de una categoría nueva antes de incorporarse — mismo principio de evolución ya aplicado a productos nuevos en `docs/design/brand/BRAND_ARCHITECTURE.md` §4.7 ("todo producto nuevo debe trazarse a una Business Capability ya existente... o justificar formalmente la creación de una nueva antes de nombrarse"), aplicado aquí por analogía a la iconografía.
 2. **Respetar los principios de construcción (§4.3) y el estilo visual ya decidido (§4.4)** sin introducir una variación paralela de grosor, geometría o nivel de detalle.
-3. **Registrarse como una decisión de diseño**, siguiendo el mismo mecanismo de gobierno que ya exige `docs/design/DESIGN_DECISION_LOG.md` para cualquier decisión de diseño aprobada — con la misma observación de gobierno ya señalada en `docs/brand/LOGO_SYSTEM.md` §5: ese registro es el mecanismo correcto, aunque hoy no exista todavía una fila específica para decisiones de iconografía.
+3. **Registrarse como una decisión de diseño**, siguiendo el mismo mecanismo de gobierno que ya exige `docs/design/decisions/DESIGN_DECISION_LOG.md` para cualquier decisión de diseño aprobada — con la misma observación de gobierno ya señalada en `docs/design/brand/LOGO_SYSTEM.md` §5: ese registro es el mecanismo correcto, aunque hoy no exista todavía una fila específica para decisiones de iconografía.
 
 La necesidad funcional inmediata de un ícono nuevo nunca es, por sí sola, justificación suficiente para romper la arquitectura ya definida en este documento. Ningún ícono puede aprobarse por urgencia de producto si contradice §4.2, §4.3 o §4.4.
 
@@ -182,7 +182,7 @@ La convivencia correcta entre isotipo, iconografía e interfaz es de **coherenci
 
 ## 5. Relaciones
 
-`ICONOGRAPHY_SYSTEM.md` depende, en cadena, de toda la Arquitectura de Marca ya construida: `BRAND_FOUNDATIONS.md` (identidad), `BRAND_ARCHITECTURE.md` (modelo Branded House, fuente del principio de Consistencia y del criterio de evolución de §4.7), `VISUAL_IDENTITY.md` y `DESIGN_CONCEPT.md` (principios y territorio visual restringido), `DESIGN_BRIEF.md` (encargo de diseño y restricciones de imagen), `docs/brand/LOGO_SYSTEM.md` (estructura del logotipo y del isotipo, del que este documento distingue explícitamente su rol en §4.8) y `docs/brand/TYPOGRAPHY_SYSTEM.md` (precedente directo de disciplina de sistema — pesos, capas — que este documento traduce a categorías y principios de construcción iconográfica).
+`ICONOGRAPHY_SYSTEM.md` depende, en cadena, de toda la Arquitectura de Marca ya construida: `BRAND_FOUNDATIONS.md` (identidad), `BRAND_ARCHITECTURE.md` (modelo Branded House, fuente del principio de Consistencia y del criterio de evolución de §4.7), `VISUAL_IDENTITY.md` y `DESIGN_CONCEPT.md` (principios y territorio visual restringido), `DESIGN_BRIEF.md` (encargo de diseño y restricciones de imagen), `docs/design/brand/LOGO_SYSTEM.md` (estructura del logotipo y del isotipo, del que este documento distingue explícitamente su rol en §4.8) y `docs/design/brand/TYPOGRAPHY_SYSTEM.md` (precedente directo de disciplina de sistema — pesos, capas — que este documento traduce a categorías y principios de construcción iconográfica).
 
 Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a la de cada uno de esos documentos: ninguno de ellos define cuántas categorías funcionales tiene la iconografía, qué principios de construcción debe seguir, ni cómo debe convivir con el isotipo. `ICONOGRAPHY_SYSTEM.md` cierra, además, un vacío señalado explícitamente en `docs/design/BRAND_IDENTITY_VALIDATION.md` (BV-007): que el isotipo, por sí solo, "no ofrece un lenguaje formal replicable para íconos secundarios... sin definir reglas nuevas no cubiertas por este candidato" — este documento es esa regla, sin diseñar ningún ícono.
 
@@ -192,15 +192,15 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Principios de marca y percepción visual | `docs/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md` | ✔ — aplicados al sistema de iconografía (§4.1) | Ningún principio nuevo agregado |
-| Concepto central "Orientación" | `docs/design/DESIGN_DECISION_LOG.md`, DD-001 | ✔ — fundamenta la categoría Navegación (§4.2.1) | — |
-| Territorio visual y restricciones de imagen | `docs/design/DESIGN_BRIEF.md` §4.10, §4.11; `docs/brand/DESIGN_CONCEPT.md` §4.7 | ✔ — fundamenta las categorías Comparación, Alertas, Medicamentos y Farmacias (§4.2.5–§4.2.8) | — |
-| Neutralidad entre farmacias | `docs/brand/BRAND_FOUNDATIONS.md` §12 | ✔ — condición estructural de la categoría Farmacias (§4.2.7) | Riesgo de posicionamiento, no solo estético |
-| Privacidad (Principio IX) | `docs/brand/BRAND_FOUNDATIONS.md` §11.1 | ✔ — condiciona la categoría Cuenta (§4.2.9) | — |
+| Principios de marca y percepción visual | `docs/design/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md` | ✔ — aplicados al sistema de iconografía (§4.1) | Ningún principio nuevo agregado |
+| Concepto central "Orientación" | `docs/design/decisions/DESIGN_DECISION_LOG.md`, DD-001 | ✔ — fundamenta la categoría Navegación (§4.2.1) | — |
+| Territorio visual y restricciones de imagen | `docs/design/DESIGN_BRIEF.md` §4.10, §4.11; `docs/design/brand/DESIGN_CONCEPT.md` §4.7 | ✔ — fundamenta las categorías Comparación, Alertas, Medicamentos y Farmacias (§4.2.5–§4.2.8) | — |
+| Neutralidad entre farmacias | `docs/design/brand/BRAND_FOUNDATIONS.md` §12 | ✔ — condición estructural de la categoría Farmacias (§4.2.7) | Riesgo de posicionamiento, no solo estético |
+| Privacidad (Principio IX) | `docs/design/brand/BRAND_FOUNDATIONS.md` §11.1 | ✔ — condiciona la categoría Cuenta (§4.2.9) | — |
 | Riesgos de escalabilidad ya documentados para el isotipo | `docs/design/BRAND_IDENTITY_VALIDATION.md`, BV-001, BV-003 | ✔ — extendidos a la iconografía (§4.5) | — |
 | Vacío de sistema de iconografía derivado del isotipo | `docs/design/BRAND_IDENTITY_VALIDATION.md`, BV-007 | ✔ — este documento es la respuesta arquitectónica a ese vacío | No resuelve el ajuste pendiente del isotipo en sí; ver `LOGO_SYSTEM.md` §4.4 |
-| Estructura del logotipo y equilibrio óptico | `docs/brand/LOGO_SYSTEM.md` §4.4, §4.5 | ✔ — extendido por analogía a §4.3, §4.6, §4.8 | — |
-| Filosofía de disciplina de sistema (pesos/capas) | `docs/brand/TYPOGRAPHY_SYSTEM.md` §4.1, §4.4 | ✔ — extendido por analogía a §4.3 (grosor uniforme) | — |
+| Estructura del logotipo y equilibrio óptico | `docs/design/brand/LOGO_SYSTEM.md` §4.4, §4.5 | ✔ — extendido por analogía a §4.3, §4.6, §4.8 | — |
+| Filosofía de disciplina de sistema (pesos/capas) | `docs/design/brand/TYPOGRAPHY_SYSTEM.md` §4.1, §4.4 | ✔ — extendido por analogía a §4.3 (grosor uniforme) | — |
 | Ícono, librería o catálogo concreto | — (no existe documento de implementación todavía) | No consolidado — declarado explícitamente fuera de alcance (§3) | Pendiente de una decisión de implementación futura |
 
 ---
@@ -209,10 +209,10 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 `ICONOGRAPHY_SYSTEM.md` **no reemplaza**:
 
-- `docs/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` — siguen siendo la única fuente de identidad, arquitectura de marca, principios de percepción y concepto de diseño.
+- `docs/design/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` — siguen siendo la única fuente de identidad, arquitectura de marca, principios de percepción y concepto de diseño.
 - `docs/design/DESIGN_BRIEF.md` — sigue siendo la única fuente del encargo de diseño y de las restricciones de imagen ya declaradas.
-- `docs/brand/LOGO_SYSTEM.md` — sigue siendo la única fuente de estructura del sistema de logotipo, incluida la relación funcional entre isotipo e iconografía que este documento aclara en §4.8 sin modificar su origen.
-- `docs/brand/TYPOGRAPHY_SYSTEM.md` — sigue siendo la única fuente de principios y arquitectura tipográfica.
+- `docs/design/brand/LOGO_SYSTEM.md` — sigue siendo la única fuente de estructura del sistema de logotipo, incluida la relación funcional entre isotipo e iconografía que este documento aclara en §4.8 sin modificar su origen.
+- `docs/design/brand/TYPOGRAPHY_SYSTEM.md` — sigue siendo la única fuente de principios y arquitectura tipográfica.
 - `docs/design/BRAND_IDENTITY_VALIDATION.md` — sigue siendo la única fuente del resultado de auditoría de calidad del isotipo.
 
 La responsabilidad específica de `ICONOGRAPHY_SYSTEM.md` dentro de la Arquitectura de Marca es gobernar exclusivamente los **principios, la arquitectura funcional y las reglas de evolución** del sistema de iconografía: sus nueve categorías, sus principios de construcción y estilo, sus principios de escalabilidad y accesibilidad, y su relación de convivencia con el isotipo. No gobierna, y no debe absorber en ninguna revisión futura, el diseño de íconos concretos, la selección de una librería, ni ninguna decisión de componentes de interfaz — esa frontera es una restricción deliberada de alcance (§3), consistente con el criterio de éxito declarado en §1: este documento debe seguir siendo válido aunque cambie por completo la librería de íconos utilizada por ComparaFarma.
@@ -225,16 +225,16 @@ Cuando exista una discrepancia entre este documento y cualquiera de sus fuentes,
 
 ## 8. Documentos relacionados
 
-- `docs/brand/BRAND_FOUNDATIONS.md`
-- `docs/brand/BRAND_ARCHITECTURE.md`
-- `docs/brand/VISUAL_IDENTITY.md`
-- `docs/brand/DESIGN_CONCEPT.md`
+- `docs/design/brand/BRAND_FOUNDATIONS.md`
+- `docs/design/brand/BRAND_ARCHITECTURE.md`
+- `docs/design/brand/VISUAL_IDENTITY.md`
+- `docs/design/brand/DESIGN_CONCEPT.md`
 - `docs/design/DESIGN_BRIEF.md`
-- `docs/brand/LOGO_SYSTEM.md`
-- `docs/brand/TYPOGRAPHY_SYSTEM.md`
+- `docs/design/brand/LOGO_SYSTEM.md`
+- `docs/design/brand/TYPOGRAPHY_SYSTEM.md`
 - `docs/design/BRAND_IDENTITY_VALIDATION.md`
-- `docs/design/DESIGN_DECISION_LOG.md`
-- `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
+- `docs/design/decisions/DESIGN_DECISION_LOG.md`
+- `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
 
 Documentos que, una vez creados, dependerán estructuralmente de este documento: el futuro documento de selección o construcción de librería de íconos, `COLOR_SYSTEM.md` (en lo relativo a color aplicado sobre íconos), `BRAND_GUIDELINES.md`, y el futuro `DESIGN_SYSTEM` de producto de `mobile/` y `web/`.
 
@@ -244,7 +244,7 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la especificación oficial de principios y arquitectura del sistema de iconografía: principios (claridad, simplicidad, consistencia, confianza, orientación, accesibilidad), nueve categorías funcionales (Navegación, Acciones, Estado, Información, Comparación, Alertas, Farmacias, Medicamentos, Cuenta), principios de construcción, estilo visual, escalabilidad, accesibilidad, reglas de evolución del sistema, y relación funcional con el isotipo. No diseña íconos, no selecciona librería y no define componentes de interfaz. Cierra el vacío de sistema de iconografía derivado señalado en `docs/design/BRAND_IDENTITY_VALIDATION.md` (BV-007). | `docs/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/brand/LOGO_SYSTEM.md` v1.0; `TYPOGRAPHY_SYSTEM.md` v1.0; `docs/design/BRAND_IDENTITY_VALIDATION.md` v1.0 |
+| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la especificación oficial de principios y arquitectura del sistema de iconografía: principios (claridad, simplicidad, consistencia, confianza, orientación, accesibilidad), nueve categorías funcionales (Navegación, Acciones, Estado, Información, Comparación, Alertas, Farmacias, Medicamentos, Cuenta), principios de construcción, estilo visual, escalabilidad, accesibilidad, reglas de evolución del sistema, y relación funcional con el isotipo. No diseña íconos, no selecciona librería y no define componentes de interfaz. Cierra el vacío de sistema de iconografía derivado señalado en `docs/design/BRAND_IDENTITY_VALIDATION.md` (BV-007). | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/design/brand/LOGO_SYSTEM.md` v1.0; `TYPOGRAPHY_SYSTEM.md` v1.0; `docs/design/BRAND_IDENTITY_VALIDATION.md` v1.0 |
 
 ---
 
@@ -252,8 +252,8 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/brand/LOGO_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema tipográfico | Brand Architect / Type Director / Enterprise Documentation Architect | `docs/brand/TYPOGRAPHY_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema de iconografía | Iconography Director / Design Systems Architect / Enterprise Documentation Architect | `docs/brand/ICONOGRAPHY_SYSTEM.md` v1.0 (este documento) |
+| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/design/brand/LOGO_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema tipográfico | Brand Architect / Type Director / Enterprise Documentation Architect | `docs/design/brand/TYPOGRAPHY_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema de iconografía | Iconography Director / Design Systems Architect / Enterprise Documentation Architect | `docs/design/brand/ICONOGRAPHY_SYSTEM.md` v1.0 (este documento) |
 
 **Pendiente de definición:** ninguna acción anterior cuenta todavía con aprobación formal registrada del CEO/fundador. La selección o construcción de una librería de íconos concreta queda, en su totalidad, fuera de esta versión y pendiente de trabajo de diseño e implementación posterior.

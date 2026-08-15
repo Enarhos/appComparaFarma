@@ -2,7 +2,7 @@
 
 Este documento no diseña, no rediseña y no propone variantes nuevas del isotipo. Es una auditoría independiente de calidad sobre el **candidato oficial de isotipo** (Candidato 09, resultado de `Isotype Exploration` → `Isotype Refinement` → `Candidate Construction`), redactada antes de su aprobación definitiva como identidad corporativa.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -20,7 +20,7 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Nivel de Gobierno** | De decisión operativa — registra el resultado concreto de una auditoría de calidad previa a una decisión de aprobación de identidad. No hay un nivel de los siete reconocidos por `GOVERNED_DOCUMENT_TEMPLATE.md` §"Niveles" pensado específicamente para auditorías de diseño; se declara este por analogía directa con "documentos que registran decisiones concretas de producto o ingeniería" |
 | **Clasificación** | Informe de Validación / Auditoría de Identidad de Marca |
 | **Fuente Oficial** | Este documento es la fuente oficial del **resultado de validación** del Candidato 09. No es fuente de identidad (`BRAND_FOUNDATIONS.md`), de encargo de diseño (`DESIGN_BRIEF.md`) ni de la geometría del símbolo (entregable de construcción del candidato, no archivado como documento de repositorio) |
-| **Documentos de los que depende** | `docs/design/DESIGN_BRIEF.md`, `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_ARCHITECTURE.md`, `docs/brand/DESIGN_CONCEPT.md`, `docs/brand/VISUAL_IDENTITY.md`, `docs/product/PRODUCT_DEFINITION_v1.0.md`, y la especificación de construcción del Candidato 09 (entregable de la etapa "Candidate Construction", no archivado como documento independiente) |
+| **Documentos de los que depende** | `docs/design/DESIGN_BRIEF.md`, `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_ARCHITECTURE.md`, `docs/design/brand/DESIGN_CONCEPT.md`, `docs/design/brand/VISUAL_IDENTITY.md`, `docs/product/PRODUCT_DEFINITION_v1.0.md`, y la especificación de construcción del Candidato 09 (entregable de la etapa "Candidate Construction", no archivado como documento independiente) |
 | **Documentos que gobierna** | Ninguno todavía. Su conclusión debería condicionar la decisión de aprobación formal del isotipo por parte del CEO/fundador, y — de aprobarse con ajustes — el alcance de trabajo previo a `LOGO_SYSTEM.md` e `ICONOGRAPHY.md` |
 | **Pregunta que responde** | ¿Puede aprobarse el Candidato 09 como isotipo corporativo definitivo de ComparaFarma, y bajo qué condiciones? |
 
@@ -184,7 +184,7 @@ Sin embargo, tres riesgos identificados en esta auditoría son reales y no deben
 
 ## 5. Relaciones
 
-Este documento depende de `docs/design/DESIGN_BRIEF.md` como fuente de los criterios de evaluación y restricciones contra los que se audita el candidato, y de `docs/brand/BRAND_FOUNDATIONS.md` y `BRAND_ARCHITECTURE.md` como fuente de la identidad y el modelo de marca contra los que se evalúa la coherencia (BV-006). Se relaciona con las etapas previas del proceso de diseño — `Isotype Exploration`, `Isotype Refinement` y `Candidate Construction` — como el objeto que audita, sin reabrir ninguna de sus decisiones. Ninguna de esas etapas fue archivada como documento de repositorio (fueron entregables de proceso presentados directamente); este documento es, en consecuencia, el primer registro documental formal del Candidato 09 dentro de `docs/design/`.
+Este documento depende de `docs/design/DESIGN_BRIEF.md` como fuente de los criterios de evaluación y restricciones contra los que se audita el candidato, y de `docs/design/brand/BRAND_FOUNDATIONS.md` y `BRAND_ARCHITECTURE.md` como fuente de la identidad y el modelo de marca contra los que se evalúa la coherencia (BV-006). Se relaciona con las etapas previas del proceso de diseño — `Isotype Exploration`, `Isotype Refinement` y `Candidate Construction` — como el objeto que audita, sin reabrir ninguna de sus decisiones. Ninguna de esas etapas fue archivada como documento de repositorio (fueron entregables de proceso presentados directamente); este documento es, en consecuencia, el primer registro documental formal del Candidato 09 dentro de `docs/design/`.
 
 ---
 
@@ -193,9 +193,9 @@ Este documento depende de `docs/design/DESIGN_BRIEF.md` como fuente de los crite
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
 | Criterios de evaluación y restricciones de diseño | `docs/design/DESIGN_BRIEF.md` §4.10, §4.13 | ✔ — usado como base normativa de BV-001 a BV-008 | — |
-| Identidad de marca (personalidad, emociones, principios) | `docs/brand/BRAND_FOUNDATIONS.md` | ✔ — usado en BV-006 | — |
-| Modelo de arquitectura de marca (Branded House) | `docs/brand/BRAND_ARCHITECTURE.md` §4.1 | ✔ — usado en BV-007 | — |
-| Metáfora central "Orientación" | `docs/brand/DESIGN_CONCEPT.md`, `DESIGN_DECISION_LOG.md` (DD-001) | ✔ — usado en BV-004 y BV-006 | — |
+| Identidad de marca (personalidad, emociones, principios) | `docs/design/brand/BRAND_FOUNDATIONS.md` | ✔ — usado en BV-006 | — |
+| Modelo de arquitectura de marca (Branded House) | `docs/design/brand/BRAND_ARCHITECTURE.md` §4.1 | ✔ — usado en BV-007 | — |
+| Metáfora central "Orientación" | `docs/design/brand/DESIGN_CONCEPT.md`, `DESIGN_DECISION_LOG.md` (DD-001) | ✔ — usado en BV-004 y BV-006 | — |
 | Geometría y construcción del Candidato 09 | Entregable de proceso "Candidate Construction" (no archivado como documento) | ✔ — objeto íntegro de esta auditoría | Pendiente: archivar formalmente la especificación de construcción como documento de repositorio si el candidato se aprueba |
 | Contexto funcional del producto | `docs/product/PRODUCT_DEFINITION_v1.0.md` | Referencia | No se usa como criterio de evaluación directo; contexto general únicamente |
 
@@ -206,7 +206,7 @@ Este documento depende de `docs/design/DESIGN_BRIEF.md` como fuente de los crite
 `BRAND_IDENTITY_VALIDATION.md` **no reemplaza**:
 
 - `docs/design/DESIGN_BRIEF.md` — sigue siendo la única fuente del encargo de diseño y de los criterios de evaluación.
-- `docs/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `DESIGN_CONCEPT.md` y `VISUAL_IDENTITY.md` — siguen siendo la única fuente de identidad, arquitectura de marca y concepto de diseño.
+- `docs/design/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `DESIGN_CONCEPT.md` y `VISUAL_IDENTITY.md` — siguen siendo la única fuente de identidad, arquitectura de marca y concepto de diseño.
 - Las etapas previas del proceso de diseño (`Isotype Exploration`, `Isotype Refinement`, `Candidate Construction`) — este documento no reabre ni modifica ninguna de sus decisiones; solo audita su resultado.
 
 Este documento **no aprueba por sí mismo** la identidad corporativa — emite una recomendación (§4, Conclusión) que queda sujeta a la misma ratificación formal del CEO/fundador que, a la fecha, sigue pendiente sobre el resto de la documentación de `docs/brand/` y `docs/design/`. Si la ratificación se otorga sin resolver los ajustes de la sección 4 (Conclusión), ese hecho debe registrarse explícitamente en el Control de Cambios de este documento, no asumirse como resuelto.
@@ -217,7 +217,7 @@ Este documento **no aprueba por sí mismo** la identidad corporativa — emite u
 
 ## 8. Documentos relacionados
 
-`docs/design/DESIGN_BRIEF.md`, `docs/design/DESIGN_EXPLORATION.md`, `docs/design/DESIGN_DECISION_LOG.md`, `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_ARCHITECTURE.md`, `docs/brand/DESIGN_CONCEPT.md`, `docs/brand/VISUAL_IDENTITY.md`, `docs/product/PRODUCT_DEFINITION_v1.0.md`, `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+`docs/design/DESIGN_BRIEF.md`, `docs/archive/design/explorations/DESIGN_EXPLORATION.md`, `docs/design/decisions/DESIGN_DECISION_LOG.md`, `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_ARCHITECTURE.md`, `docs/design/brand/DESIGN_CONCEPT.md`, `docs/design/brand/VISUAL_IDENTITY.md`, `docs/product/PRODUCT_DEFINITION_v1.0.md`, `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -225,7 +225,7 @@ Este documento **no aprueba por sí mismo** la identidad corporativa — emite u
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial. Auditoría integral del Candidato 09 (BV-001 a BV-008) y recomendación formal "Aprobar con ajustes", con cuatro ajustes explícitos pendientes antes de la aprobación definitiva. No modifica la geometría del candidato ni reabre decisiones de exploración o refinamiento previas. | `docs/design/DESIGN_BRIEF.md` v1.0; `docs/brand/BRAND_FOUNDATIONS.md` v1.1; `docs/brand/BRAND_ARCHITECTURE.md` v1.0; entregable de construcción del Candidato 09 |
+| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial. Auditoría integral del Candidato 09 (BV-001 a BV-008) y recomendación formal "Aprobar con ajustes", con cuatro ajustes explícitos pendientes antes de la aprobación definitiva. No modifica la geometría del candidato ni reabre decisiones de exploración o refinamiento previas. | `docs/design/DESIGN_BRIEF.md` v1.0; `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1; `docs/design/brand/BRAND_ARCHITECTURE.md` v1.0; entregable de construcción del Candidato 09 |
 
 ---
 

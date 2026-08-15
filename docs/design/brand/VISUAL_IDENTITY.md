@@ -1,10 +1,10 @@
 # VISUAL_IDENTITY — Arquitectura de Identidad Visual de ComparaFarma
 
-Este documento no propone logos, no elige colores, no define tipografías, no genera imágenes y no es un manual de branding. Es un documento de **Arquitectura de Marca**, no de Diseño. Responde una sola pregunta: **¿cómo debe verse ComparaFarma para expresar correctamente la identidad ya consolidada en `docs/brand/BRAND_FOUNDATIONS.md`?**
+Este documento no propone logos, no elige colores, no define tipografías, no genera imágenes y no es un manual de branding. Es un documento de **Arquitectura de Marca**, no de Diseño. Responde una sola pregunta: **¿cómo debe verse ComparaFarma para expresar correctamente la identidad ya consolidada en `docs/design/brand/BRAND_FOUNDATIONS.md`?**
 
 Toda decisión gráfica futura (logo, paleta, tipografía, iconografía) deberá derivarse de los principios aquí definidos. Este documento no decide esas piezas; define las reglas bajo las cuales deberán decidirse.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -17,12 +17,12 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Dominio** | Identidad de Marca (`docs/brand/`) |
 | **Estado** | Draft |
 | **Versión** | 1.0 |
-| **Propietario** | CEO / CTO — mismo criterio ya usado en `docs/brand/BRAND_FOUNDATIONS.md`, `docs/strategy/DIGITAL_ASSET_REGISTER.md` y `docs/enterprise/BUSINESS_SERVICES.md` |
+| **Propietario** | CEO / CTO — mismo criterio ya usado en `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/enterprise/strategy/DIGITAL_ASSET_REGISTER.md` y `docs/enterprise/BUSINESS_SERVICES.md` |
 | **Rol asumido en su redacción** | Brand Architect / UX Strategist / Design System Architect |
-| **Nivel de Gobierno** | Estratégico — establece dirección de largo plazo para toda decisión visual futura, en el mismo nivel jerárquico que otros documentos de dirección de marca; se apoya, en segundo grado, en `docs/brand/BRAND_FOUNDATIONS.md`, clasificado como Fundacional derivado (ver Relaciones, §5) |
+| **Nivel de Gobierno** | Estratégico — establece dirección de largo plazo para toda decisión visual futura, en el mismo nivel jerárquico que otros documentos de dirección de marca; se apoya, en segundo grado, en `docs/design/brand/BRAND_FOUNDATIONS.md`, clasificado como Fundacional derivado (ver Relaciones, §5) |
 | **Clasificación** | Documento de Arquitectura de Marca |
-| **Fuente Oficial** | `docs/brand/BRAND_FOUNDATIONS.md` (v1.1), con apoyo directo en `docs/brand/BRAND_AUDIT.md` (v1.0), `docs/book/` (Carta del Fundador y Acto II — La Identidad) y `docs/strategy/VISION_2030.md` |
-| **Documentos de los que depende** | `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_AUDIT.md`, `docs/book/0. Carta del Fundador.md`, `docs/book/02-acto-la-identidad/`, `docs/strategy/VISION_2030.md`, `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
+| **Fuente Oficial** | `docs/design/brand/BRAND_FOUNDATIONS.md` (v1.1), con apoyo directo en `docs/design/brand/BRAND_AUDIT.md` (v1.0), `docs/book/` (Carta del Fundador y Acto II — La Identidad) y `docs/enterprise/strategy/VISION_2030.md` |
+| **Documentos de los que depende** | `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_AUDIT.md`, `docs/archive/foundational-book/0. Carta del Fundador.md`, `docs/book/02-acto-la-identidad/`, `docs/enterprise/strategy/VISION_2030.md`, `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
 | **Documentos que gobierna** | Ninguno todavía. Gobernará los futuros `LOGO_SYSTEM`, `COLOR_SYSTEM`, `TYPOGRAPHY_SYSTEM`, `ICONOGRAPHY`, `GOOGLE_PLAY_ASSETS` y `MARKETING_GUIDELINES`, en el orden declarado en el Roadmap de este documento (§4.9) |
 | **Pregunta que responde** | ¿Cómo debe verse ComparaFarma para expresar correctamente la identidad definida en `BRAND_FOUNDATIONS`? |
 
@@ -30,9 +30,9 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 
 ## 2. Propósito
 
-La Identidad Visual cumple, dentro de la Arquitectura de Marca de ComparaFarma, un rol estrictamente subordinado y expresivo: **traduce a principios de percepción una identidad que ya existe**, consolidada en `docs/brand/BRAND_FOUNDATIONS.md`. No crea identidad nueva, no reinterpreta la personalidad, la voz o el tono ya consolidados, y no adelanta ninguna decisión estética (logo, color, tipografía).
+La Identidad Visual cumple, dentro de la Arquitectura de Marca de ComparaFarma, un rol estrictamente subordinado y expresivo: **traduce a principios de percepción una identidad que ya existe**, consolidada en `docs/design/brand/BRAND_FOUNDATIONS.md`. No crea identidad nueva, no reinterpreta la personalidad, la voz o el tono ya consolidados, y no adelanta ninguna decisión estética (logo, color, tipografía).
 
-Este documento existe porque `docs/brand/BRAND_AUDIT.md` (§5, Vacíos) confirmó que **no existe en el repositorio ninguna mención a identidad visual** — ni logo, ni paleta, ni tipografía, ni sistema gráfico — y recomendó, en su Roadmap (§9), que `VISUAL_IDENTITY` sea el documento inmediatamente posterior a la consolidación de marca, y previo a cualquier desarrollo gráfico concreto (`LOGO_SYSTEM`, `COLOR_SYSTEM`, etc.). `BRAND_FOUNDATIONS.md` (§1, "Documentos que gobierna") ya anticipaba este mismo documento como uno de los que deberá gobernar.
+Este documento existe porque `docs/design/brand/BRAND_AUDIT.md` (§5, Vacíos) confirmó que **no existe en el repositorio ninguna mención a identidad visual** — ni logo, ni paleta, ni tipografía, ni sistema gráfico — y recomendó, en su Roadmap (§9), que `VISUAL_IDENTITY` sea el documento inmediatamente posterior a la consolidación de marca, y previo a cualquier desarrollo gráfico concreto (`LOGO_SYSTEM`, `COLOR_SYSTEM`, etc.). `BRAND_FOUNDATIONS.md` (§1, "Documentos que gobierna") ya anticipaba este mismo documento como uno de los que deberá gobernar.
 
 En síntesis: si `BRAND_FOUNDATIONS.md` responde **quién es** ComparaFarma, este documento responde **qué reglas de percepción** debe cumplir cualquier expresión visual futura de esa identidad — sin todavía decidir cómo se ve.
 
@@ -57,8 +57,8 @@ En síntesis: si `BRAND_FOUNDATIONS.md` responde **quién es** ComparaFarma, est
 - Colores, paletas ni códigos cromáticos. Corresponde a `COLOR_SYSTEM`, pendiente.
 - Tipografías. Corresponde a `TYPOGRAPHY_SYSTEM`, pendiente.
 - Iconografía, ilustración, fotografía o motion concretos. Corresponden a documentos posteriores aún no creados.
-- Un manual de marca gráfico ni guías de aplicación terminadas. Ese rol corresponde a un futuro `BRAND_GUIDELINES`, ya anticipado en el Roadmap de `docs/brand/BRAND_AUDIT.md` (§9).
-- Personalidad, voz, tono, misión, visión, propósito o principios de identidad. Estos ya están consolidados en `docs/brand/BRAND_FOUNDATIONS.md` y este documento no los reinterpreta; solo los traduce a percepción visual.
+- Un manual de marca gráfico ni guías de aplicación terminadas. Ese rol corresponde a un futuro `BRAND_GUIDELINES`, ya anticipado en el Roadmap de `docs/design/brand/BRAND_AUDIT.md` (§9).
+- Personalidad, voz, tono, misión, visión, propósito o principios de identidad. Estos ya están consolidados en `docs/design/brand/BRAND_FOUNDATIONS.md` y este documento no los reinterpreta; solo los traduce a percepción visual.
 - Tono publicitario o de comunicación externa. `BRAND_FOUNDATIONS.md` (§17) declara explícitamente que ese tono está pendiente de definición en `BRAND_GUIDELINES` / `MARKETING_GUIDE`; este documento tampoco lo resuelve.
 
 ---
@@ -69,7 +69,7 @@ En síntesis: si `BRAND_FOUNDATIONS.md` responde **quién es** ComparaFarma, est
 
 La identidad visual **expresa** la marca. **Nunca la define.**
 
-`docs/brand/BRAND_FOUNDATIONS.md` es la única fuente de verdad sobre quién es ComparaFarma: su historia, propósito, misión, visión, promesa, principios, personalidad, voz y tono. Este documento no repite ni reinterpreta ese contenido — lo toma como dato fijo y se pregunta exclusivamente cómo debería verse una expresión gráfica fiel a él.
+`docs/design/brand/BRAND_FOUNDATIONS.md` es la única fuente de verdad sobre quién es ComparaFarma: su historia, propósito, misión, visión, promesa, principios, personalidad, voz y tono. Este documento no repite ni reinterpreta ese contenido — lo toma como dato fijo y se pregunta exclusivamente cómo debería verse una expresión gráfica fiel a él.
 
 Esto tiene una consecuencia de gobierno directa: si en el futuro cambia algo en `BRAND_FOUNDATIONS.md` (por ejemplo, una revisión de la personalidad en su §15, hoy declarada como lectura inicial no ratificada), este documento debe revisarse en consecuencia. La relación es de dependencia en una sola dirección: `VISUAL_IDENTITY` depende de `BRAND_FOUNDATIONS`; `BRAND_FOUNDATIONS` no depende de este documento.
 
@@ -83,7 +83,7 @@ Los siguientes principios no son una propuesta estética: son la traducción, a 
 | **Simplicidad** | §11.2, Principios de producto: *"4. Simplicidad"* (`PRODUCT_PRINCIPLES.md`) | Cita directa |
 | **Confianza** | §11.1, Principio II: *"La confianza antes que el crecimiento"*; §9, Visión: *"reconocida por la confianza de su información antes que por la cantidad de funcionalidades"* | Cita directa |
 | **Transparencia** | Relación con la Constitución (§11.1: Art. V, "transparencia operativa"); §11.2, Principio 6 (`PRODUCT_PRINCIPLES.md`); §10, La Promesa: *"mostrar la información de la forma más clara y útil posible"* | Cita directa |
-| **Accesibilidad** | `BRAND_AUDIT.md` §2 (Diferenciadores): *"Rechazo explícito de patrones oscuros de diseño, compromiso de accesibilidad"*, con base en `docs/book/03-acto-nuestra-forma-de-trabajar/16-El-Acceso-A-La-Informacion-Tambien-Es-Una-Forma-De-Justicia.md` | Cita directa, vía BRAND_AUDIT |
+| **Accesibilidad** | `BRAND_AUDIT.md` §2 (Diferenciadores): *"Rechazo explícito de patrones oscuros de diseño, compromiso de accesibilidad"*, con base en `docs/archive/foundational-book/03-acto-nuestra-forma-de-trabajar/16-El-Acceso-A-La-Informacion-Tambien-Es-Una-Forma-De-Justicia.md` | Cita directa, vía BRAND_AUDIT |
 | **Humanidad** | §15, Personalidad: *"Protectora / cercana a la familia"*, con cita de `Nuestra-Promesa.md`: *"Detrás de cada medicamento existe una persona. Un padre. Una madre..."* | Traducción directa de un rasgo de personalidad ya consolidado (marcado como lectura inicial no ratificada en su origen) |
 | **Inteligencia** | §5 y §13: categoría declarada como *"Plataforma de Inteligencia Farmacéutica"* | Cita directa — el principio proviene del nombre mismo de la categoría |
 | **Evidencia** | §11.1, Principio VI: *"La evidencia antes que el ego."* | Cita directa |
@@ -157,7 +157,7 @@ Los siguientes principios de experiencia de usuario se extraen directamente de `
 - **No usar patrones de diseño que dificulten decidir con libertad** — §18, Compromisos, consolidado de `docs/book/03-acto-nuestra-forma-de-trabajar/15-...md` y `16-...md`.
 - **Priorizar claridad sobre densidad de información** — §11.1, Principio IV (claridad antes que complejidad), traducido a criterio de interfaz.
 - **Optimizar para decisión rápida, no para permanencia en pantalla** — §14, Propuesta de Valor: *"en pocos segundos"*; consistente con §17, Tono: *"Lo escribimos para orientar decisiones"* (no para entretener ni retener atención).
-- **No aprovechar momentos de vulnerabilidad del usuario** — §18, Compromisos, con base en `docs/book/03-acto-nuestra-forma-de-trabajar/15-Nunca-Aprovecharemos-La-Vulnerabilidad-De-Quienes-Nos-Necesitan.md`.
+- **No aprovechar momentos de vulnerabilidad del usuario** — §18, Compromisos, con base en `docs/archive/foundational-book/03-acto-nuestra-forma-de-trabajar/15-Nunca-Aprovecharemos-La-Vulnerabilidad-De-Quienes-Nos-Necesitan.md`.
 
 Estos principios de UX son de comportamiento de interfaz, no de estética. No definen composición visual, solo criterios de diseño de experiencia coherentes con la identidad ya consolidada.
 
@@ -218,7 +218,7 @@ GOOGLE_PLAY_ASSETS
 MARKETING_GUIDELINES
 ```
 
-Este orden es consistente con el Roadmap ya declarado en `docs/brand/BRAND_AUDIT.md` (§9: BRAND_AUDIT → Consolidación documental → BRAND_BOOK → VISUAL_IDENTITY → BRAND_GUIDELINES → GOOGLE_PLAY_BRAND → MARKETING_GUIDE), con dos ajustes que se dejan explícitos: (1) este documento asume que `VISUAL_IDENTITY` puede desarrollarse a partir de `BRAND_FOUNDATIONS` directamente, sin esperar a un `BRAND_BOOK` todavía no creado, dado que su alcance es de arquitectura y no de compilación narrativa; (2) se desagrega `BRAND_GUIDELINES` en los componentes concretos del sistema visual (`LOGO_SYSTEM`, `COLOR_SYSTEM`, `TYPOGRAPHY_SYSTEM`, `ICONOGRAPHY`) antes de llegar a `GOOGLE_PLAY_ASSETS` y `MARKETING_GUIDELINES`, siguiendo la lista de componentes ya definida en §4.4. Cualquier decisión de reordenar este roadmap corresponde a quien tenga autoridad de gobierno de marca (CEO/fundador), no a este documento.
+Este orden es consistente con el Roadmap ya declarado en `docs/design/brand/BRAND_AUDIT.md` (§9: BRAND_AUDIT → Consolidación documental → BRAND_BOOK → VISUAL_IDENTITY → BRAND_GUIDELINES → GOOGLE_PLAY_BRAND → MARKETING_GUIDE), con dos ajustes que se dejan explícitos: (1) este documento asume que `VISUAL_IDENTITY` puede desarrollarse a partir de `BRAND_FOUNDATIONS` directamente, sin esperar a un `BRAND_BOOK` todavía no creado, dado que su alcance es de arquitectura y no de compilación narrativa; (2) se desagrega `BRAND_GUIDELINES` en los componentes concretos del sistema visual (`LOGO_SYSTEM`, `COLOR_SYSTEM`, `TYPOGRAPHY_SYSTEM`, `ICONOGRAPHY`) antes de llegar a `GOOGLE_PLAY_ASSETS` y `MARKETING_GUIDELINES`, siguiendo la lista de componentes ya definida en §4.4. Cualquier decisión de reordenar este roadmap corresponde a quien tenga autoridad de gobierno de marca (CEO/fundador), no a este documento.
 
 ---
 
@@ -226,11 +226,11 @@ Este orden es consistente con el Roadmap ya declarado en `docs/brand/BRAND_AUDIT
 
 `VISUAL_IDENTITY.md` depende, en cadena, de dos cuerpos documentales:
 
-- **`docs/brand/BRAND_FOUNDATIONS.md`** (Fundacional derivado) es la fuente directa e inmediata: define quién es ComparaFarma, y este documento traduce esa identidad a principios de percepción. La relación es de dependencia estricta y en una sola dirección — ver §4.1.
-- **`docs/brand/BRAND_AUDIT.md`** es la fuente del diagnóstico que originó este documento: confirmó el vacío de identidad visual (§5) y fijó su lugar en el roadmap documental (§9).
-- **`docs/book/` (Carta del Fundador y Acto II — La Identidad)** y **`docs/strategy/VISION_2030.md`** son, indirectamente, la fuente última de los principios y atributos aquí traducidos, en la medida en que `BRAND_FOUNDATIONS.md` ya los consolidó citándolos. Este documento no vuelve a citarlos de forma independiente salvo cuando `BRAND_FOUNDATIONS.md` mismo los cita (ver tabla de §4.2 y §4.3).
+- **`docs/design/brand/BRAND_FOUNDATIONS.md`** (Fundacional derivado) es la fuente directa e inmediata: define quién es ComparaFarma, y este documento traduce esa identidad a principios de percepción. La relación es de dependencia estricta y en una sola dirección — ver §4.1.
+- **`docs/design/brand/BRAND_AUDIT.md`** es la fuente del diagnóstico que originó este documento: confirmó el vacío de identidad visual (§5) y fijó su lugar en el roadmap documental (§9).
+- **`docs/book/` (Carta del Fundador y Acto II — La Identidad)** y **`docs/enterprise/strategy/VISION_2030.md`** son, indirectamente, la fuente última de los principios y atributos aquí traducidos, en la medida en que `BRAND_FOUNDATIONS.md` ya los consolidó citándolos. Este documento no vuelve a citarlos de forma independiente salvo cuando `BRAND_FOUNDATIONS.md` mismo los cita (ver tabla de §4.2 y §4.3).
 
-Este documento no tiene relación directa con la Arquitectura Empresarial (`docs/enterprise/`) ni con el Patrimonio Digital (`docs/strategy/DIGITAL_ASSET_REGISTER.md`): esos dominios modelan capacidades, datos y servicios, no identidad de marca ni su expresión visual. Esa distinción ya la traza `BRAND_FOUNDATIONS.md` en su §20 y no se repite aquí.
+Este documento no tiene relación directa con la Arquitectura Empresarial (`docs/enterprise/`) ni con el Patrimonio Digital (`docs/enterprise/strategy/DIGITAL_ASSET_REGISTER.md`): esos dominios modelan capacidades, datos y servicios, no identidad de marca ni su expresión visual. Esa distinción ya la traza `BRAND_FOUNDATIONS.md` en su §20 y no se repite aquí.
 
 ---
 
@@ -244,9 +244,9 @@ Ver §4.8, dentro de "Contenido principal". Se ubica allí, y no como sección a
 
 `VISUAL_IDENTITY.md` **no reemplaza**:
 
-- `docs/brand/BRAND_FOUNDATIONS.md` — sigue siendo la única fuente de verdad sobre quién es ComparaFarma (historia, propósito, misión, visión, promesa, principios, personalidad, voz, tono).
-- `docs/brand/BRAND_AUDIT.md` — sigue siendo el diagnóstico documental de origen.
-- `docs/book/` ni `docs/strategy/VISION_2030.md` — siguen siendo las fuentes narrativas y estratégicas primarias.
+- `docs/design/brand/BRAND_FOUNDATIONS.md` — sigue siendo la única fuente de verdad sobre quién es ComparaFarma (historia, propósito, misión, visión, promesa, principios, personalidad, voz, tono).
+- `docs/design/brand/BRAND_AUDIT.md` — sigue siendo el diagnóstico documental de origen.
+- `docs/book/` ni `docs/enterprise/strategy/VISION_2030.md` — siguen siendo las fuentes narrativas y estratégicas primarias.
 
 `VISUAL_IDENTITY.md` es, a su vez, gobernado por `BRAND_FOUNDATIONS.md`, que ya lo anticipa en su §1 ("Documentos que gobierna") y en su §2 (Propósito, que ordena a "Diseño" como una de las capas que deben derivarse de esa consolidación). Toda futura revisión de personalidad, voz o tono en `BRAND_FOUNDATIONS.md` debe propagarse a este documento; este documento no debe modificarse de forma independiente de su fuente.
 
@@ -258,11 +258,11 @@ Este documento se mantiene, de forma explícita y por mandato de su propio encar
 
 ## 8. Documentos relacionados
 
-- `docs/brand/BRAND_FOUNDATIONS.md` — fuente directa de toda la identidad que este documento traduce a percepción visual.
-- `docs/brand/BRAND_AUDIT.md` — diagnóstico de origen; confirma el vacío de identidad visual y define el roadmap documental que este documento sigue.
-- `docs/book/0. Carta del Fundador.md` y `docs/book/02-acto-la-identidad/` — fuente narrativa primaria de los rasgos de personalidad, voz y tono aquí traducidos.
-- `docs/strategy/VISION_2030.md` — fuente de la categoría ("Plataforma de Inteligencia Farmacéutica") que informa el atributo de percepción "científica/inteligente".
-- `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` — estándar documental aplicado en la estructura de este documento.
+- `docs/design/brand/BRAND_FOUNDATIONS.md` — fuente directa de toda la identidad que este documento traduce a percepción visual.
+- `docs/design/brand/BRAND_AUDIT.md` — diagnóstico de origen; confirma el vacío de identidad visual y define el roadmap documental que este documento sigue.
+- `docs/archive/foundational-book/0. Carta del Fundador.md` y `docs/book/02-acto-la-identidad/` — fuente narrativa primaria de los rasgos de personalidad, voz y tono aquí traducidos.
+- `docs/enterprise/strategy/VISION_2030.md` — fuente de la categoría ("Plataforma de Inteligencia Farmacéutica") que informa el atributo de percepción "científica/inteligente".
+- `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` — estándar documental aplicado en la estructura de este documento.
 
 ---
 
@@ -270,7 +270,7 @@ Este documento se mantiene, de forma explícita y por mandato de su propio encar
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la arquitectura de identidad visual de ComparaFarma: principios visuales, atributos de percepción, componentes futuros del sistema visual (sin desarrollarlos), aplicaciones, principios de UX derivados de `BRAND_FOUNDATIONS.md`, restricciones justificadas, y roadmap documental posterior. No incluye ninguna propuesta gráfica, logo, paleta de color ni tipografía. | `docs/brand/BRAND_FOUNDATIONS.md` v1.1; `docs/brand/BRAND_AUDIT.md` v1.0; `docs/book/0. Carta del Fundador.md`; `docs/strategy/VISION_2030.md`; `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0 |
+| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la arquitectura de identidad visual de ComparaFarma: principios visuales, atributos de percepción, componentes futuros del sistema visual (sin desarrollarlos), aplicaciones, principios de UX derivados de `BRAND_FOUNDATIONS.md`, restricciones justificadas, y roadmap documental posterior. No incluye ninguna propuesta gráfica, logo, paleta de color ni tipografía. | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1; `docs/design/brand/BRAND_AUDIT.md` v1.0; `docs/archive/foundational-book/0. Carta del Fundador.md`; `docs/enterprise/strategy/VISION_2030.md`; `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0 |
 
 ---
 
@@ -278,10 +278,10 @@ Este documento se mantiene, de forma explícita y por mandato de su propio encar
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-02 | Auditoría de Gobierno Documental general del repositorio | CTO (rol de Arquitecto de Documentación) | `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` |
-| 2026-08-05 | Auditoría de identidad de marca | Brand Strategist / Corporate Historian / Enterprise Architect | `docs/brand/BRAND_AUDIT.md` v1.0 |
-| 2026-08-05 | Consolidación de identidad de marca | Chief Brand Officer / Corporate Historian / Document Architect | `docs/brand/BRAND_FOUNDATIONS.md` v1.0 |
-| 2026-08-05 | Revisión de gobierno documental y elevación al estándar de la Arquitectura Empresarial | Enterprise Documentation Architect | `docs/brand/BRAND_FOUNDATIONS.md` v1.1 y `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0 |
-| 2026-08-05 | Definición de la arquitectura de identidad visual | Brand Architect / UX Strategist / Design System Architect | `docs/brand/VISUAL_IDENTITY.md` v1.0 (este documento) |
+| 2026-08-02 | Auditoría de Gobierno Documental general del repositorio | CTO (rol de Arquitecto de Documentación) | `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` |
+| 2026-08-05 | Auditoría de identidad de marca | Brand Strategist / Corporate Historian / Enterprise Architect | `docs/design/brand/BRAND_AUDIT.md` v1.0 |
+| 2026-08-05 | Consolidación de identidad de marca | Chief Brand Officer / Corporate Historian / Document Architect | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.0 |
+| 2026-08-05 | Revisión de gobierno documental y elevación al estándar de la Arquitectura Empresarial | Enterprise Documentation Architect | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1 y `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0 |
+| 2026-08-05 | Definición de la arquitectura de identidad visual | Brand Architect / UX Strategist / Design System Architect | `docs/design/brand/VISUAL_IDENTITY.md` v1.0 (este documento) |
 
 **Pendiente de definición:** ninguna de las acciones anteriores cuenta todavía con una aprobación formal registrada del CEO/fundador. En particular, la clasificación de "Nivel de Gobierno: Estratégico" asignada a este documento (§1) y los dos atributos de percepción marcados como pendientes en §4.3 ("Moderna", "Optimista") quedan sujetos a esa misma ratificación futura.

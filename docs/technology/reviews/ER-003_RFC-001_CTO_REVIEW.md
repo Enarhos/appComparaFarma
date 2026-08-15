@@ -57,7 +57,7 @@ No se aceptó ninguna afirmación del RFC sin verificarla contra el código real
 
 ### H-01 — El RFC nunca se cerró formalmente (Severidad: Alta)
 
-**Descripción:** `docs/engineering/rfc/RFC-001_SHARED_NORMALIZATION_PACKAGE.md:901-934` — la sección 12 "Definition of Done" tiene 25 checkboxes. Ninguno está marcado (`[x]`), incluyendo los de "Código" y "Tests" que esta revisión confirmó como verdaderos en el filesystem hoy.
+**Descripción:** `docs/technology/decisions/rfc/RFC-001_SHARED_NORMALIZATION_PACKAGE.md:901-934` — la sección 12 "Definition of Done" tiene 25 checkboxes. Ninguno está marcado (`[x]`), incluyendo los de "Código" y "Tests" que esta revisión confirmó como verdaderos en el filesystem hoy.
 
 **Qué pasaría si no se corrige:** cualquier ingeniero o agente nuevo que lea `RFC-001` sin mirar el código asumirá que la migración sigue en curso o bloqueada, cuando en realidad terminó hace semanas. Es exactamente el mismo riesgo que causó que `CF-108` quedara marcado "Pendiente" — la fuente de esta sesión de trabajo.
 
@@ -65,7 +65,7 @@ No se aceptó ninguna afirmación del RFC sin verificarla contra el código real
 
 ### H-02 — Ítem de DoD sobre `AUDIT_SEARCH_NORMALIZATION.md` incumplido (Severidad: Media)
 
-**Descripción:** `RFC-001:947` exige que `docs/audits/AUDIT_SEARCH_NORMALIZATION.md` marque CF-001 como resuelto. Verificado: no lo hace.
+**Descripción:** `RFC-001:947` exige que `docs/archive/audits/AUDIT_SEARCH_NORMALIZATION.md` marque CF-001 como resuelto. Verificado: no lo hace.
 
 **Qué pasaría si no se corrige:** el documento de auditoría original queda como fuente de verdad contradictoria — sigue listando un problema como abierto que el propio RFC dice haber resuelto.
 
@@ -99,4 +99,4 @@ Las opciones A, C y D están bien argumentadas y la elección de C es correcta y
 
 RFC-001 es, en su contenido técnico, uno de los documentos más rigurosos del repositorio: diagnóstico cuantificado, arquitectura sin ciclos, plan de migración en fases reversibles, riesgos con mitigación primaria y de respaldo, y una estrategia de testing que efectivamente se implementó tal cual se especificó. La ejecución en código está, en la práctica, completa y correcta.
 
-Su falla no es técnica — es de cierre. El mismo documento que instruye "agregar tests de contrato para prevenir divergencias silenciosas" es hoy, él mismo, una fuente de divergencia silenciosa entre lo que dice (`Pendiente`, implícito) y lo que es (`Completado`, verificado). Recomendación: cerrar formalmente RFC-001 ahora (marcar el DoD verificado en esta revisión), corregir `AUDIT_SEARCH_NORMALIZATION.md` para reflejar CF-001 resuelto, y registrar en `docs/product/DECISION_LOG.md` cuándo y por qué se reactivaron los 5 clientes de SVC-01 — ese registro no existe en ningún lado hoy.
+Su falla no es técnica — es de cierre. El mismo documento que instruye "agregar tests de contrato para prevenir divergencias silenciosas" es hoy, él mismo, una fuente de divergencia silenciosa entre lo que dice (`Pendiente`, implícito) y lo que es (`Completado`, verificado). Recomendación: cerrar formalmente RFC-001 ahora (marcar el DoD verificado en esta revisión), corregir `AUDIT_SEARCH_NORMALIZATION.md` para reflejar CF-001 resuelto, y registrar en `docs/product/decisions/DECISION_LOG.md` cuándo y por qué se reactivaron los 5 clientes de SVC-01 — ese registro no existe en ningún lado hoy.

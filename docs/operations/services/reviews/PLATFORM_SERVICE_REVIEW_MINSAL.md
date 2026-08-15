@@ -4,7 +4,7 @@
 
 **Nombre:** PLATFORM_SERVICE_REVIEW_MINSAL.md
 
-**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001` a `OPS-REV-006`.
+**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001` a `OPS-REV-006`.
 
 **Estado:** Activo
 
@@ -16,7 +16,7 @@
 
 **Clasificación:** Revisión de Servicio Externo (ítem de backlog `OPS-SVC-BKL-015`)
 
-**Documentos de los que depende:** `docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fichas #13/#16), `api/src/clients/minsal.ts`, `scripts-temp/fetch-branches.js`, `.github/workflows/update-branches.yml`, `api/src/data/branches.json`.
+**Documentos de los que depende:** `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fichas #13/#16), `api/src/clients/minsal.ts`, `scripts-temp/fetch-branches.js`, `.github/workflows/update-branches.yml`, `api/src/data/branches.json`.
 
 ---
 
@@ -110,7 +110,7 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 ## Documentos relacionados
 
-`docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`.
+`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`.
 
 ## Control de Cambios
 
@@ -123,7 +123,7 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-14 | Revisión completa de MINSAL — séptimo ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/PLATFORM_SERVICE_REVIEW_MINSAL.md` v1.0 (este documento) |
+| 2026-08-14 | Revisión completa de MINSAL — séptimo ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_MINSAL.md` v1.0 (este documento) |
 | 2026-08-14 | Diagnóstico en vivo (Actions) + despliegue de la alerta de fallo a `origin/main` | CTO / Claude | Commit `2d5691f` en `origin/main`; documento actualizado a v1.1 |
 
 **Nota:** este documento no tiene, a la fecha, aprobación formal del CTO — fue creado a su pedido explícito; la aprobación es un paso posterior y separado. El bloqueo de IP de MINSAL contra GitHub Actions (§5.1, §8) sigue sin resolver — es una decisión pendiente del CTO, no ejecutada desde esta revisión.

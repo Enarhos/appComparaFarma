@@ -19,14 +19,14 @@
 >
 > Ver:
 >
-> docs/brand/DOMAIN_STATUS.md
+> docs/design/brand/DOMAIN_STATUS.md
 
 
 # docs/brand/ — Arquitectura de Marca de ComparaFarma
 
 Este documento es el punto de entrada al dominio `docs/brand/`. No existía previamente ningún README en esta carpeta — se confirmó por inspección directa del directorio antes de crear este documento. Se crea ahora, en versión 1.0, como parte de la definición del nuevo dominio `docs/design/`, que requiere explicar cómo se relaciona con la Arquitectura de Marca ya existente.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -44,7 +44,7 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Nivel de Gobierno** | Chárter de Dominio — mismo nivel introducido en `docs/design/README.md` §1 |
 | **Clasificación** | Documento de Gobierno Documental |
 | **Fuente Oficial** | Este mismo documento |
-| **Documentos de los que depende** | `docs/brand/BRAND_AUDIT.md`, `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/VISUAL_IDENTITY.md`, `docs/brand/DESIGN_CONCEPT.md`, `docs/design/README.md` |
+| **Documentos de los que depende** | `docs/design/brand/BRAND_AUDIT.md`, `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/VISUAL_IDENTITY.md`, `docs/design/brand/DESIGN_CONCEPT.md`, `docs/design/README.md` |
 | **Documentos que gobierna** | Ninguno directamente; orienta la lectura de todo `docs/brand/` |
 | **Pregunta que responde** | ¿Qué contiene `docs/brand/`, en qué orden debe leerse, y cómo se relaciona con `docs/design/`? |
 
@@ -119,7 +119,7 @@ Ver §4.2. La relación completa y detallada, incluyendo principios de gobierno 
 
 ## 7. Gobierno
 
-`docs/brand/README.md` **no reemplaza** ningún documento que referencia: no redefine identidad, percepción ni concepto visual. Es un índice y un mapa de relaciones, no una fuente de contenido de marca.
+`docs/design/brand/README.md` **no reemplaza** ningún documento que referencia: no redefine identidad, percepción ni concepto visual. Es un índice y un mapa de relaciones, no una fuente de contenido de marca.
 
 Este documento no gobierna a `docs/design/`; simplemente documenta, desde el lado de `docs/brand/`, la misma relación de gobierno que `docs/design/README.md` declara en detalle. Si en el futuro cambia el conjunto de documentos de `docs/brand/` (por ejemplo, al crearse un futuro `BRAND_GUIDELINES`), este índice debe actualizarse.
 
@@ -127,12 +127,12 @@ Este documento no gobierna a `docs/design/`; simplemente documenta, desde el lad
 
 ## 8. Documentos relacionados
 
-- `docs/brand/BRAND_AUDIT.md`
-- `docs/brand/BRAND_FOUNDATIONS.md`
-- `docs/brand/VISUAL_IDENTITY.md`
-- `docs/brand/DESIGN_CONCEPT.md`
+- `docs/design/brand/BRAND_AUDIT.md`
+- `docs/design/brand/BRAND_FOUNDATIONS.md`
+- `docs/design/brand/VISUAL_IDENTITY.md`
+- `docs/design/brand/DESIGN_CONCEPT.md`
 - `docs/design/README.md`
-- `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
+- `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
 
 ---
 
@@ -140,7 +140,7 @@ Este documento no gobierna a `docs/design/`; simplemente documenta, desde el lad
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial de este índice (no existía previamente ningún README en `docs/brand/`, confirmado por inspección directa). Documenta el orden de lectura de los cuatro documentos de la Arquitectura de Marca y agrega la sección "Relación con docs/design", requerida al crear ese nuevo dominio documental. | `docs/brand/BRAND_AUDIT.md` v1.0; `docs/brand/BRAND_FOUNDATIONS.md` v1.1; `docs/brand/VISUAL_IDENTITY.md` v1.0; `docs/brand/DESIGN_CONCEPT.md` v1.0; `docs/design/README.md` v1.0 |
+| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial de este índice (no existía previamente ningún README en `docs/brand/`, confirmado por inspección directa). Documenta el orden de lectura de los cuatro documentos de la Arquitectura de Marca y agrega la sección "Relación con docs/design", requerida al crear ese nuevo dominio documental. | `docs/design/brand/BRAND_AUDIT.md` v1.0; `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1; `docs/design/brand/VISUAL_IDENTITY.md` v1.0; `docs/design/brand/DESIGN_CONCEPT.md` v1.0; `docs/design/README.md` v1.0 |
 
 ---
 
@@ -148,12 +148,12 @@ Este documento no gobierna a `docs/design/`; simplemente documenta, desde el lad
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-02 | Auditoría de Gobierno Documental general del repositorio | CTO (rol de Arquitecto de Documentación) | `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` |
-| 2026-08-05 | Auditoría de identidad de marca | Brand Strategist / Corporate Historian / Enterprise Architect | `docs/brand/BRAND_AUDIT.md` v1.0 |
-| 2026-08-05 | Consolidación de identidad de marca | Chief Brand Officer / Corporate Historian / Document Architect | `docs/brand/BRAND_FOUNDATIONS.md` v1.0 |
-| 2026-08-05 | Revisión de gobierno documental y elevación al estándar de la Arquitectura Empresarial | Enterprise Documentation Architect | `docs/brand/BRAND_FOUNDATIONS.md` v1.1 y `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0 |
-| 2026-08-05 | Definición de la arquitectura de identidad visual | Brand Architect / UX Strategist / Design System Architect | `docs/brand/VISUAL_IDENTITY.md` v1.0 |
-| 2026-08-05 | Definición del concepto de diseño | Director Creativo / Brand Strategist / Semiotic Designer / Enterprise Architect | `docs/brand/DESIGN_CONCEPT.md` v1.0 |
-| 2026-08-05 | Creación del dominio documental de proceso de diseño y de este índice de `docs/brand/` | Enterprise Documentation Architect / Design Governance Architect | `docs/design/README.md` v1.0, `docs/design/DESIGN_EXPLORATION.md` v1.0, `docs/design/DESIGN_DECISION_LOG.md` v1.0, `docs/design/assets/README.md` v1.0, `docs/brand/README.md` v1.0 (este documento) |
+| 2026-08-02 | Auditoría de Gobierno Documental general del repositorio | CTO (rol de Arquitecto de Documentación) | `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` |
+| 2026-08-05 | Auditoría de identidad de marca | Brand Strategist / Corporate Historian / Enterprise Architect | `docs/design/brand/BRAND_AUDIT.md` v1.0 |
+| 2026-08-05 | Consolidación de identidad de marca | Chief Brand Officer / Corporate Historian / Document Architect | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.0 |
+| 2026-08-05 | Revisión de gobierno documental y elevación al estándar de la Arquitectura Empresarial | Enterprise Documentation Architect | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1 y `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0 |
+| 2026-08-05 | Definición de la arquitectura de identidad visual | Brand Architect / UX Strategist / Design System Architect | `docs/design/brand/VISUAL_IDENTITY.md` v1.0 |
+| 2026-08-05 | Definición del concepto de diseño | Director Creativo / Brand Strategist / Semiotic Designer / Enterprise Architect | `docs/design/brand/DESIGN_CONCEPT.md` v1.0 |
+| 2026-08-05 | Creación del dominio documental de proceso de diseño y de este índice de `docs/brand/` | Enterprise Documentation Architect / Design Governance Architect | `docs/design/README.md` v1.0, `docs/archive/design/explorations/DESIGN_EXPLORATION.md` v1.0, `docs/design/decisions/DESIGN_DECISION_LOG.md` v1.0, `docs/design/assets/README.md` v1.0, `docs/design/brand/README.md` v1.0 (este documento) |
 
 **Pendiente de definición:** ninguna de las acciones anteriores cuenta todavía con una aprobación formal registrada del CEO/fundador.

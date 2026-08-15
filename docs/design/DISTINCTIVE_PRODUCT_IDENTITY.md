@@ -2,7 +2,7 @@
 
 **Naturaleza de este documento:** no es teoría de marca ni un nuevo benchmark. No rediseña la Propuesta A (Precision), no cambia la dirección visual "Intelligence", no toca color, tipografía, layout general ni navegación. Es la respuesta a una sola pregunta: **¿qué hace que una pantalla de ComparaFarma sea reconocible como ComparaFarma, incluso sin ver el logo ni el nombre?** Hoy la respuesta es "nada" — este documento propone el sistema que la cambia.
 
-No se generaron nuevos mockups, ninguna paleta nueva ni ningún benchmark. El diagnóstico se apoya en los assets ya existentes de `docs/design/assets/visual-exploration/proposal_A_*` (Propuesta A seleccionada) y `docs/design/assets/brand-experience/` (materialización BRAND-001). El sistema propuesto se apoya, sin contradecirlas, en `docs/brand/ICONOGRAPHY_SYSTEM.md` (nueve categorías funcionales, relación con el isotipo) y `docs/design-system/COMPONENT_LIBRARY.md` (familias de componentes, principio de Neutralidad, criterio de "hecho ya calculado").
+No se generaron nuevos mockups, ninguna paleta nueva ni ningún benchmark. El diagnóstico se apoya en los assets ya existentes de `docs/design/assets/visual-exploration/proposal_A_*` (Propuesta A seleccionada) y `docs/design/assets/brand-experience/` (materialización BRAND-001). El sistema propuesto se apoya, sin contradecirlas, en `docs/design/brand/ICONOGRAPHY_SYSTEM.md` (nueve categorías funcionales, relación con el isotipo) y `docs/design/system/COMPONENT_LIBRARY.md` (familias de componentes, principio de Neutralidad, criterio de "hecho ya calculado").
 
 ---
 

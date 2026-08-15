@@ -2,7 +2,7 @@
 
 > **Propósito**: documentar el modelo de dominio *tal como existe hoy en el código* (entidades, atributos, relaciones, reglas de negocio) y usarlo como base para evaluar una evolución hacia un **Pharmaceutical Knowledge Graph**. Este documento **no propone cambios** — es un análisis del estado actual y un mapa de brechas/oportunidades para una discusión posterior.
 >
-> **Método**: lectura directa de `packages/domain/src/*`, `api/src/clients/*`, `api/src/lib/*Db.ts`, `docs/database/schema.sql`, stores de `mobile/src/store/*`, y la documentación existente (`docs/normalization.md`, `docs/price-channels.md`, `docs/farmacias.md`, `docs/pharmacy-flags.md`). Donde el código y la documentación existente discrepan, se señala explícitamente y se confía en el código.
+> **Método**: lectura directa de `packages/domain/src/*`, `api/src/clients/*`, `api/src/lib/*Db.ts`, `docs/technology/database/schema.sql`, stores de `mobile/src/store/*`, y la documentación existente (`docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md`, `docs/product/definition/PRICE_CHANNELS.md`, `docs/technology/integrations/pharmacies/FARMACIAS.md`, `docs/operations/runbooks/PHARMACY_FLAGS.md`). Donde el código y la documentación existente discrepan, se señala explícitamente y se confía en el código.
 
 ---
 
@@ -75,7 +75,7 @@ communes:  { [comuna]: { nombre, region } }
 No hay entidad `Sucursal` (con dirección, geolocalización, horario) ni relación entre una oferta de precio (`PharmacyPrice`) y una sucursal concreta — el dato es a nivel de cadena×comuna, generado por un script manual (`scripts-temp/fetch-branches.js`, cobertura parcial: "1/7 días acumulados" según el comentario en el archivo generado) y no se recalcula automáticamente. Solo cubre 4 de las 9 farmacias (las que están en el dataset MINSAL: Cruz Verde, Salcobrand, Ahumada, Dr. Simi).
 
 ### 2.6 Entidades persistidas en Supabase/Postgres
-`docs/database/schema.sql`
+`docs/technology/database/schema.sql`
 
 | Tabla | Clave | Atributos | Rol en el dominio |
 |---|---|---|---|
@@ -203,16 +203,16 @@ Esta es la regla de negocio más crítica del sistema — define qué se conside
 3. Concatena guiones entre letras ("Co-Amoxiclav" → "coamoxiclav").
 4. Toma la primera palabra "marca" (no stop-word, no numérica) como `first`; si es ≤4 letras y la siguiente también, las fusiona ("Trio Val" → "trioval") — heurística para nombres compuestos cortos.
 5. Detecta indicador de turno día/noche (`\bdia\b` / `\bnoche\b`) como campo **separado** — un antigripal "Día" y su versión "Noche" son productos distintos (composición distinta), no deben fusionarse aunque compartan marca y dosis.
-6. Detecta cantidad de unidades (x20, "20 comprimidos", etc.); **normaliza qty=1 a vacío** porque las farmacias son inconsistentes en si escriben "1 sobre" explícitamente o lo omiten — sin esto, el mismo producto genera claves distintas entre Cruz Verde y Salcobrand (documentado con ejemplos reales en `docs/normalization.md`).
+6. Detecta cantidad de unidades (x20, "20 comprimidos", etc.); **normaliza qty=1 a vacío** porque las farmacias son inconsistentes en si escriben "1 sobre" explícitamente o lo omiten — sin esto, el mismo producto genera claves distintas entre Cruz Verde y Salcobrand (documentado con ejemplos reales en `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md`).
 7. Retorna `"{marca}|{dosis}|{turno}|{cantidad}"`, omitiendo segmentos vacíos.
 
-**Regla implícita de diseño**: la forma farmacéutica (comprimido vs. efervescente vs. jarabe) se ignora deliberadamente para maximizar coincidencias entre farmacias — trade-off documentado en `docs/normalization.md` como límite conocido (puede fusionar incorrectamente formas distintas de una misma dosis).
+**Regla implícita de diseño**: la forma farmacéutica (comprimido vs. efervescente vs. jarabe) se ignora deliberadamente para maximizar coincidencias entre farmacias — trade-off documentado en `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md` como límite conocido (puede fusionar incorrectamente formas distintas de una misma dosis).
 
 ### 4.3 Fusión de duplicados (`mergeDuplicates`) — `packages/domain/src/deduplication.ts`
 - Agrupa por `matchKey`.
 - **Nombre canónico**: prefiere el miembro del grupo con `laboratory` no-nulo; si hay empate, el de nombre más corto.
 - **Fusión de precios por farmacia**: si dos miembros del grupo tienen precio de la misma farmacia, se queda con el de **menor `channels.effective`** (`deduplication.ts:24`).
-  - ⚠️ **Discrepancia entre código y documentación**: `docs/normalization.md` (línea 115) describe esta regla como "manteniendo el más reciente por farmacia (`fetchedAt`)". El código no mira `fetchedAt` en absoluto — compara `effective` y se queda con el menor. En la práctica normalmente no importa (dentro de una misma ejecución de búsqueda todos los `fetchedAt` son casi simultáneos), pero es una afirmación incorrecta en la documentación que vale la pena corregir por separado, y señala que la regla real es "precio más barato gana", no "dato más fresco gana" — con implicancias si en el futuro se cachean resultados de distintas farmacias en momentos distintos.
+  - ⚠️ **Discrepancia entre código y documentación**: `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md` (línea 115) describe esta regla como "manteniendo el más reciente por farmacia (`fetchedAt`)". El código no mira `fetchedAt` en absoluto — compara `effective` y se queda con el menor. En la práctica normalmente no importa (dentro de una misma ejecución de búsqueda todos los `fetchedAt` son casi simultáneos), pero es una afirmación incorrecta en la documentación que vale la pena corregir por separado, y señala que la regla real es "precio más barato gana", no "dato más fresco gana" — con implicancias si en el futuro se cachean resultados de distintas farmacias en momentos distintos.
 - Imagen: primera no-nula entre los miembros.
 
 ### 4.4 Precio efectivo (`effectivePrice`) — `packages/domain/src/pricing.ts`
@@ -260,7 +260,7 @@ Deliberadamente **no** se usa en `mobile/src/app/medication.tsx`: ese archivo ma
 
 ## 5. Brechas: datos disponibles en las fuentes pero no modelados
 
-Comparando `docs/farmacias.md` (qué expone cada API cruda) contra `ScrapedProduct`/`PharmacyPrice`/`MedicationResult` (qué efectivamente se captura), hay información que **existe en el origen y se descarta al mapear**:
+Comparando `docs/technology/integrations/pharmacies/FARMACIAS.md` (qué expone cada API cruda) contra `ScrapedProduct`/`PharmacyPrice`/`MedicationResult` (qué efectivamente se captura), hay información que **existe en el origen y se descarta al mapear**:
 
 | Dato disponible en la fuente | Farmacia(s) donde se confirmó | Se captura hoy? |
 |---|---|---|
@@ -273,9 +273,9 @@ Comparando `docs/farmacias.md` (qué expone cada API cruda) contra `ScrapedProdu
 | Precio por unidad (fraccionado) | Farmex (`precio_fraccionado`) | ❌ Descartado |
 | Categoría Cenabast | EcoFarmacias | ❌ Descartado |
 | Geolocalización de sucursal (lat/lng, dirección, horario) | Dataset MINSAL (usado para `branches-data.ts`) | ❌ Colapsado a presencia por comuna, sin coordenadas ni sucursal individual |
-| Registro ISP / código regulatorio | Liga Farmacia (código en URL de producto, "podría ser código ISP" según nota en `docs/farmacias.md`) | ❌ No integrado (farmacia en investigación) |
+| Registro ISP / código regulatorio | Liga Farmacia (código en URL de producto, "podría ser código ISP" según nota en `docs/technology/integrations/pharmacies/FARMACIAS.md`) | ❌ No integrado (farmacia en investigación) |
 
-**Nota**: `docs/farmacias.md` describe a EcoFarmacias y Farmex como "🕐 Backlog" — pero ambos están **integrados y activos** en `api/src/clients/` hoy. El documento está desactualizado respecto al código; se señala aquí porque afecta la lectura de qué campos realmente se están perdiendo (los "Campos disponibles en la API" listados para esas dos farmacias en ese documento son reales y siguen sin capturarse en el cliente implementado).
+**Nota**: `docs/technology/integrations/pharmacies/FARMACIAS.md` describe a EcoFarmacias y Farmex como "🕐 Backlog" — pero ambos están **integrados y activos** en `api/src/clients/` hoy. El documento está desactualizado respecto al código; se señala aquí porque afecta la lectura de qué campos realmente se están perdiendo (los "Campos disponibles en la API" listados para esas dos farmacias en ese documento son reales y siguen sin capturarse en el cliente implementado).
 
 ### Otras inconsistencias de calidad de dato observadas en el código de los clientes
 
@@ -312,7 +312,7 @@ Un Knowledge Graph farmacéutico típicamente separaría lo que hoy es una sola 
 | **Interacciones medicamentosas** | Relación N:N entre principios activos | Hoy: no existe en ninguna fuente integrada ni en el modelo. |
 
 ### 6.2 Por qué hoy sería difícil construir el grafo sin trabajo previo
-- **No hay identidad estable** — ✅ primer paso incremental implementado (2026-07-31, `docs/engineering/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md`): cada `MedicationResult` ahora puede traer un `cfmId` permanente (`CFM-######`), desacoplado de la versión de `matchKey` vía una tabla de alias (`match_key → cfm_id`). Antes de este RFC, para anclar un grafo se necesitaba un ID de producto/principio activo que no cambiara entre versiones del algoritmo de matching — hoy ese rol lo cumplía únicamente `matchKey`, que está explícitamente documentado como algo que cambia de versión en versión (`v1`...`v10` en `docs/normalization.md`). El `CFM-ID` no reemplaza `matchKey` como mecanismo de fusión (sigue intacto) ni resuelve por sí solo el resto de §6 (principio activo, ATC, ISP siguen sin modelar) — es la capa de identidad sobre la que esas capas futuras podrían anclarse.
+- **No hay identidad estable** — ✅ primer paso incremental implementado (2026-07-31, `docs/technology/decisions/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md`): cada `MedicationResult` ahora puede traer un `cfmId` permanente (`CFM-######`), desacoplado de la versión de `matchKey` vía una tabla de alias (`match_key → cfm_id`). Antes de este RFC, para anclar un grafo se necesitaba un ID de producto/principio activo que no cambiara entre versiones del algoritmo de matching — hoy ese rol lo cumplía únicamente `matchKey`, que está explícitamente documentado como algo que cambia de versión en versión (`v1`...`v10` en `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md`). El `CFM-ID` no reemplaza `matchKey` como mecanismo de fusión (sigue intacto) ni resuelve por sí solo el resto de §6 (principio activo, ATC, ISP siguen sin modelar) — es la capa de identidad sobre la que esas capas futuras podrían anclarse.
 - **La normalización actual optimiza para lo contrario de un grafo rico**: `cleanQuery`/`matchKey` *eliminan* información (forma farmacéutica, texto entre paréntesis) para maximizar la tasa de fusión entre farmacias. Un Knowledge Graph necesitaría conservar esa información en campos estructurados en vez de descartarla, sin perder la capacidad de fusión (son objetivos en tensión).
 - **Cobertura de datos ricos es dispareja entre farmacias**: solo Farmex expone indicaciones/contraindicaciones/posología entre las 9 integradas; construir un grafo confiable de conocimiento clínico con una sola fuente parcial es limitado — probablemente se necesitaría una fuente autoritativa externa (ej. registro ISP público, Vademécum) en vez de (o adicional a) los scrapers de e-commerce actuales, cuyo propósito original es precio, no información clínica.
 - **No hay separación entre "catálogo" y "oferta"**: un grafo de conocimiento normalmente separa el nodo "medicamento" (estable) de los nodos "oferta de precio por farmacia" (volátiles, se recalculan en cada búsqueda). Hoy ambos están fusionados en un solo objeto (`MedicationResult`) que se reconstruye desde cero en cada request.
@@ -327,8 +327,8 @@ Un Knowledge Graph farmacéutico típicamente separaría lo que hoy es una sola 
 
 ## 7. Resumen de hallazgos para seguimiento
 
-1. `docs/normalization.md` describe incorrectamente la regla de fusión de precios en `mergeDuplicates` (dice "más reciente por `fetchedAt`", el código usa "menor `effective`") — corregir la documentación por separado.
-2. `docs/farmacias.md` describe a EcoFarmacias y Farmex como "Backlog" cuando ya están integrados en producción — desactualizado.
+1. `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md` describe incorrectamente la regla de fusión de precios en `mergeDuplicates` (dice "más reciente por `fetchedAt`", el código usa "menor `effective`") — corregir la documentación por separado.
+2. `docs/technology/integrations/pharmacies/FARMACIAS.md` describe a EcoFarmacias y Farmex como "Backlog" cuando ya están integrados en producción — desactualizado.
 3. Existen campos clínicamente valiosos (indicaciones, contraindicaciones, posología, SKU/EAN, receta requerida) disponibles en al menos una fuente integrada (Farmex, EcoFarmacias) que se descartan silenciosamente al mapear a `ScrapedProduct`.
 4. `hasStock` y `hasOnlineDelivery` tienen el mismo tipo (`boolean`) en las 9 farmacias pero confiabilidad muy distinta (algunos hardcodeados, no derivados de dato real) — un consumidor del dato no puede distinguir "sin stock confirmado" de "dato no disponible, asumido true".
 5. La cobertura de sucursales (`BranchIndex`) cubre solo 4/9 farmacias, con datos generados manualmente y parcialmente (comentario "1/7 días acumulados" en el archivo autogenerado) — no se sabe si sigue vigente sin volver a correr el script.

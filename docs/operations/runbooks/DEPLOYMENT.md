@@ -205,7 +205,7 @@ Endpoint aditivo (no reemplaza ni cambia `/api/search`). Lee de `price_history`,
 - Consumido server-side desde `web/` en `web/src/lib/priceHistory.ts` (misma variable `API_URL`, sin exponer `SUPABASE_SECRET_KEY` al cliente).
 
 ### Feature flags de farmacias
-Ver [`docs/pharmacy-flags.md`](pharmacy-flags.md) para activar/desactivar farmacias sin nuevo build — el camino normal hoy es `/admin/config`, no una env var.
+Ver [`docs/operations/runbooks/PHARMACY_FLAGS.md`](PHARMACY_FLAGS.md) para activar/desactivar farmacias sin nuevo build — el camino normal hoy es `/admin/config`, no una env var.
 
 ---
 
@@ -215,7 +215,7 @@ Ver [`docs/pharmacy-flags.md`](pharmacy-flags.md) para activar/desactivar farmac
 
 - **URL de producción**: `https://app-compara-farma-web.vercel.app` (sin dominio propio todavía)
 - **Root Directory** del proyecto en Vercel: `web`
-- **Panel admin**: `/admin` (protegido por Supabase Auth — ver `docs/database/schema.sql` y variables de entorno arriba)
+- **Panel admin**: `/admin` (protegido por Supabase Auth — ver `docs/technology/database/schema.sql` y variables de entorno arriba)
 
 ### Importante sobre variables de entorno en Vercel
 Cualquier variable nueva o cambiada — **incluidas las que no llevan prefijo `NEXT_PUBLIC_`** — requiere un **Redeploy manual** para tomar efecto (Vercel fija las env vars por deployment, no las lee en caliente). Después de agregar o cambiar una: Deployments → deployment más reciente → `...` → Redeploy.
@@ -230,7 +230,7 @@ curl "https://app-compara-farma-web.vercel.app/robots.txt"
 
 ## Base de Datos (Supabase)
 
-Primera y única base de datos persistente del proyecto (antes todo era stateless: caché de 5 min + AsyncStorage local). Esquema versionado en [`docs/database/schema.sql`](database/schema.sql) — correrlo en el SQL Editor de Supabase es el único paso manual (no hay migraciones automatizadas ni Supabase CLI configurado).
+Primera y única base de datos persistente del proyecto (antes todo era stateless: caché de 5 min + AsyncStorage local). Esquema versionado en [`docs/technology/database/schema.sql`](../../technology/database/schema.sql) — correrlo en el SQL Editor de Supabase es el único paso manual (no hay migraciones automatizadas ni Supabase CLI configurado).
 
 Tablas: `price_history` (historial de precios), `pharmacy_clicks` (tracking de clicks vía `/api/go`), `app_config` (config genérica clave/valor — farmacias activas, banner de donación), `feedback` (sugerencias de usuarios). Las cuatro tienen RLS habilitado como defensa en profundidad; el acceso real es siempre vía `SUPABASE_SECRET_KEY` desde `api/`/`web/`, que bypassea RLS por diseño.
 

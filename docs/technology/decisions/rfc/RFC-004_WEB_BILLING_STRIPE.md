@@ -7,7 +7,7 @@
 | **Estado** | **Superseded (2026-08-02) por [RFC-005](./RFC-005_WEB_BILLING_FLOW.md)** — Stripe no admite comercios domiciliados en Chile (verificado oficialmente al intentar crear la cuenta real), por lo tanto el diseño de este documento nunca pudo usarse end-to-end. El código correspondiente fue eliminado de `main` (decisión del CEO, ver ADR-0004). Se conserva este documento como registro histórico de la decisión y del diseño, no como estado vigente. |
 | **Fecha** | 2026-08-02 |
 | **Autor** | Claude (rol CTO) |
-| **Documentos relacionados** | RFC-003 (motor de suscripciones), ADR-0002, ADR-0003, `docs/product/SUBSCRIPTION_STRATEGY.md`, `docs/product/EPICS.md`, `docs/product/BACKLOG_PRODUCT.md`, `docs/database/schema.sql` |
+| **Documentos relacionados** | RFC-003 (motor de suscripciones), ADR-0002, ADR-0003, `docs/product/SUBSCRIPTION_STRATEGY.md`, `docs/archive/product/EPICS_2026-08-15.md`, `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `docs/technology/database/schema.sql` |
 | **Prioridad** | Media (CFPS 3.2) |
 
 ---
@@ -157,7 +157,7 @@ Sin cambios. Esta fase vive enteramente en `api/` y `web/`.
 
 | Issue | Alcance |
 |---|---|
-| CF-117 | Columna `stripe_price_id` en `subscription_plans` (`docs/database/schema.sql`) + `findAvailablePlans()` |
+| CF-117 | Columna `stripe_price_id` en `subscription_plans` (`docs/technology/database/schema.sql`) + `findAvailablePlans()` |
 | CF-118 | Adaptador Stripe (`stripeAdapter.ts`): verificación de firma + parsing de eventos, con tests |
 | CF-119 | Acciones `plans`, `create-checkout-session`, `stripe-webhook` en `api/api/subscriptions.ts`/`routes/subscriptions.ts` |
 | CF-120 | UI de upgrade en `web/` (`/cuenta`, Server Action `createCheckoutSession`) |
@@ -167,7 +167,7 @@ Sin cambios. Esta fase vive enteramente en `api/` y `web/`.
 
 ## 8. Definition of Done
 
-- [x] `subscription_plans.stripe_price_id` existe en `docs/database/schema.sql` (pendiente de que el CEO corra el SQL en Supabase, igual que Fase 1)
+- [x] `subscription_plans.stripe_price_id` existe en `docs/technology/database/schema.sql` (pendiente de que el CEO corra el SQL en Supabase, igual que Fase 1)
 - [x] `stripeAdapter.parseStripeWebhookPayload` rechaza firmas inválidas y payloads malformados sin lanzar
 - [x] `action=plans/create-checkout-session/stripe-webhook` implementados en el endpoint consolidado, sin sumar funciones Vercel
 - [x] `/cuenta` muestra "Actualizar a Premium" solo si hay al menos un plan vendible configurado

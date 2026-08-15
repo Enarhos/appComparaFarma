@@ -32,7 +32,7 @@ Detalle técnico completo (esquema SQL, contratos de función, API) en RFC-003.
 **Impactos aceptados:**
 - Tres tablas nuevas en Supabase en vez de extender `profiles` — más piezas que mantener, a cambio de no repetir el error de Sprint D (un campo demasiado simple para lo que viene).
 - `web/src/lib/profilesAdmin.ts` y `web/src/lib/profile.ts` requieren un cambio de implementación (ver CF-116) — sin cambio de comportamiento visible para el usuario.
-- Requiere una Service Account de Google Cloud nueva (acceso a la Play Developer API) — no existe hoy, se crea bajo `mario.lillo.alfaro@gmail.com` (misma cuenta que ya es dueña de Google Play Console, decisión explícita del CEO, ver `docs/release/SERVICE_ACCOUNT_MIGRATION.md`).
+- Requiere una Service Account de Google Cloud nueva (acceso a la Play Developer API) — no existe hoy, se crea bajo `mario.lillo.alfaro@gmail.com` (misma cuenta que ya es dueña de Google Play Console, decisión explícita del CEO, ver `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`).
 
 **Riesgos aceptados:**
 - `mobile/` está en Prueba Cerrada de Google Play y no puede tocarse — el flujo de compra real iniciado desde la app queda fuera de alcance de Fase 1. El motor se puede construir y probar (sandbox, notificaciones RTDN de prueba, otorgamiento manual) sin ese flujo, pero no hay verificación end-to-end con una compra real hasta que `mobile/` se libere. Detalle en RFC-003 §5 (R-01, R-02).
@@ -46,6 +46,6 @@ Detalle técnico completo (esquema SQL, contratos de función, API) en RFC-003.
 ## Referencias
 
 - [RFC-003_SUBSCRIPTION_ENGINE.md](../rfc/RFC-003_SUBSCRIPTION_ENGINE.md)
-- [docs/product/SUBSCRIPTION_STRATEGY.md](../../product/SUBSCRIPTION_STRATEGY.md)
-- [docs/product/EPICS.md](../../product/EPICS.md) — Epic "Subscription Platform"
-- [docs/release/SERVICE_ACCOUNT_MIGRATION.md](../../release/SERVICE_ACCOUNT_MIGRATION.md)
+- [docs/product/SUBSCRIPTION_STRATEGY.md](../../../product/SUBSCRIPTION_STRATEGY.md)
+- [docs/archive/product/EPICS_2026-08-15.md](../../../archive/product/EPICS_2026-08-15.md) — Epic "Subscription Platform"
+- [docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md](../../../archive/releases/SERVICE_ACCOUNT_MIGRATION.md)

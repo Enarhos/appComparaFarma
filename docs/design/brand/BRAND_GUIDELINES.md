@@ -2,7 +2,7 @@
 
 Este documento no es un Brand Book. No es un manual gráfico. No contiene mockups, aplicaciones ni ejemplos visuales. Es el documento de **gobierno que integra** los cuatro sistemas de identidad ya construidos — `LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md` y `COLOR_SYSTEM.md` — y define cómo deben convivir entre sí, sin repetir, reinterpretar ni sustituir ninguno de ellos. Debe seguir siendo válido aunque, en el futuro, cambien por completo la paleta, la tipografía, el isotipo o incluso el producto — porque no gobierna ninguna de esas decisiones: gobierna la manera en que decisiones futuras de esa naturaleza deberán convivir entre sí.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -17,10 +17,10 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Versión** | 1.0 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Brand Architect / Brand Governance Director / Enterprise Documentation Architect |
-| **Nivel de Gobierno** | Estratégico — sexto grado de derivación: se apoya simultáneamente en `docs/brand/LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md` y `COLOR_SYSTEM.md` (tercer a quinto grado), todos derivados en cadena de `docs/brand/VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` y, en última instancia, de `docs/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
+| **Nivel de Gobierno** | Estratégico — sexto grado de derivación: se apoya simultáneamente en `docs/design/brand/LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md` y `COLOR_SYSTEM.md` (tercer a quinto grado), todos derivados en cadena de `docs/design/brand/VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` y, en última instancia, de `docs/design/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
 | **Clasificación** | Documento de Gobierno de Marca / Integración de Sistemas |
 | **Fuente Oficial** | Este documento es la fuente oficial de las **reglas de convivencia** entre los cuatro sistemas de identidad. No es fuente de identidad, arquitectura de marca, concepto de diseño, ni de ninguno de los cuatro sistemas individuales — cada uno conserva su propia fuente oficial declarada en su propio documento |
-| **Documentos de los que depende** | `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_ARCHITECTURE.md`, `docs/brand/VISUAL_IDENTITY.md`, `docs/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/brand/LOGO_SYSTEM.md`, `docs/brand/TYPOGRAPHY_SYSTEM.md`, `docs/brand/ICONOGRAPHY_SYSTEM.md`, `docs/brand/COLOR_SYSTEM.md`, `docs/design/BRAND_IDENTITY_VALIDATION.md`, `docs/design/DESIGN_DECISION_LOG.md`, `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
+| **Documentos de los que depende** | `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_ARCHITECTURE.md`, `docs/design/brand/VISUAL_IDENTITY.md`, `docs/design/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/design/brand/LOGO_SYSTEM.md`, `docs/design/brand/TYPOGRAPHY_SYSTEM.md`, `docs/design/brand/ICONOGRAPHY_SYSTEM.md`, `docs/design/brand/COLOR_SYSTEM.md`, `docs/design/BRAND_IDENTITY_VALIDATION.md`, `docs/design/decisions/DESIGN_DECISION_LOG.md`, `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
 | **Documentos que gobierna** | Ninguno todavía de forma directa. Debería gobernar la relación de convivencia de cualquier sistema de identidad futuro, y condiciona estructuralmente a un futuro `BRAND_BOOK.md` (que deberá implementarlo, nunca contradecirlo) y a un futuro `DESIGN_SYSTEM` de producto (§4.5) |
 | **Pregunta que responde** | ¿Cómo deben convivir e implementarse conjuntamente todos los sistemas oficiales de identidad de ComparaFarma para garantizar una experiencia de marca coherente en cualquier canal presente o futuro? |
 
@@ -62,13 +62,13 @@ Ese es exclusivamente el rol de `BRAND_GUIDELINES.md`: no añade ninguna decisi�
 La identidad de ComparaFarma no es una lista de nueve documentos independientes: es una arquitectura de dependencia, con una sola dirección de derivación.
 
 ```
-docs/brand/BRAND_FOUNDATIONS.md
+docs/design/brand/BRAND_FOUNDATIONS.md
    ¿Quién es ComparaFarma?
               ↓
-docs/brand/BRAND_ARCHITECTURE.md
+docs/design/brand/BRAND_ARCHITECTURE.md
    ¿Cómo se organiza la marca y el portafolio? (Branded House)
               ↓
-docs/brand/VISUAL_IDENTITY.md  +  docs/brand/DESIGN_CONCEPT.md
+docs/design/brand/VISUAL_IDENTITY.md  +  docs/design/brand/DESIGN_CONCEPT.md
    ¿Qué principios y qué concepto debe expresar cualquier pieza visual?
               ↓
 docs/design/DESIGN_BRIEF.md
@@ -81,7 +81,7 @@ LOGO_SYSTEM   TYPOGRAPHY_SYSTEM   ICONOGRAPHY_SYSTEM     COLOR_SYSTEM
 del logotipo)  capas tipográficas)  funcionales)             funcionales del color)
    └───────────────┴────────────────────┴────────────────────┴───────────────┘
               ↓
-docs/brand/BRAND_GUIDELINES.md (este documento)
+docs/design/brand/BRAND_GUIDELINES.md (este documento)
    ¿Cómo conviven los cuatro sistemas entre sí?
               ↓
    ┌────────────────────────┬─────────────────────────────┐
@@ -127,7 +127,7 @@ Principios generales aplicables a cualquier canal, sin definir detalles de imple
 
 **Ningún cambio aislado puede romper la coherencia del sistema.** Un cambio propuesto sobre uno solo de los cuatro sistemas —por ejemplo, una capa nueva de color, una categoría nueva de iconografía, una variante nueva del logotipo— debe evaluarse contra los otros tres antes de aprobarse, no solo contra su propio documento de origen. Un cambio que cumple perfectamente las reglas de `COLOR_SYSTEM.md` pero contradice un principio de convivencia ya declarado en §4.2 de este documento no puede considerarse aprobado solo porque su propio sistema lo permita.
 
-**Toda modificación relevante debe registrarse mediante el mecanismo oficial de decisiones de diseño** (`docs/design/DESIGN_DECISION_LOG.md`). Este documento consolida una observación que ya aparece, de forma repetida, en los cuatro sistemas individuales (`LOGO_SYSTEM.md` §5, `ICONOGRAPHY_SYSTEM.md` §4.7, `COLOR_SYSTEM.md` §4.6): `DESIGN_DECISION_LOG.md` registra hoy únicamente la decisión DD-001 (concepto "Orientación"), y ninguno de los cuatro sistemas cuenta todavía con una fila formal que registre su propia adopción. Ninguno de los cuatro sistemas —ni este documento de gobierno que los integra— puede considerarse en pleno cumplimiento de su propio mandato de gobierno mientras ese registro siga incompleto. Esta observación no se resuelve aquí; se consolida como una única acción de gobierno pendiente en lugar de cuatro observaciones repetidas y dispersas.
+**Toda modificación relevante debe registrarse mediante el mecanismo oficial de decisiones de diseño** (`docs/design/decisions/DESIGN_DECISION_LOG.md`). Este documento consolida una observación que ya aparece, de forma repetida, en los cuatro sistemas individuales (`LOGO_SYSTEM.md` §5, `ICONOGRAPHY_SYSTEM.md` §4.7, `COLOR_SYSTEM.md` §4.6): `DESIGN_DECISION_LOG.md` registra hoy únicamente la decisión DD-001 (concepto "Orientación"), y ninguno de los cuatro sistemas cuenta todavía con una fila formal que registre su propia adopción. Ninguno de los cuatro sistemas —ni este documento de gobierno que los integra— puede considerarse en pleno cumplimiento de su propio mandato de gobierno mientras ese registro siga incompleto. Esta observación no se resuelve aquí; se consolida como una única acción de gobierno pendiente en lugar de cuatro observaciones repetidas y dispersas.
 
 ### 4.5 Relación con el Design System
 
@@ -141,7 +141,7 @@ Un futuro `DESIGN_SYSTEM` de producto —aplicado a `mobile/` y `web/`— deber�
 
 **`BRAND_GUIDELINES.md` → Brand Book.**
 
-Las Brand Guidelines **gobiernan**: definen los principios, la arquitectura y las reglas de convivencia que cualquier expresión de la marca debe cumplir, sin importar la forma final que tome. El Brand Book **implementa**: cuando se cree (ya anticipado en el roadmap de `docs/brand/BRAND_AUDIT.md` §9 y `VISUAL_IDENTITY.md` §4.9), contendrá los ejemplos visuales, mockups, plantillas y aplicaciones reales que este documento explícitamente no contiene.
+Las Brand Guidelines **gobiernan**: definen los principios, la arquitectura y las reglas de convivencia que cualquier expresión de la marca debe cumplir, sin importar la forma final que tome. El Brand Book **implementa**: cuando se cree (ya anticipado en el roadmap de `docs/design/brand/BRAND_AUDIT.md` §9 y `VISUAL_IDENTITY.md` §4.9), contendrá los ejemplos visuales, mockups, plantillas y aplicaciones reales que este documento explícitamente no contiene.
 
 La relación es de dependencia en una sola dirección: el futuro Brand Book debe derivarse íntegramente de este documento y de los cuatro sistemas que integra. Ninguna decisión tomada en un futuro Brand Book puede contradecir lo ya gobernado aquí sin que, antes, se registre un cambio formal en el documento de origen correspondiente (§4.4). Un Brand Book que introdujera, por ejemplo, un uso de color no contemplado en `COLOR_SYSTEM.md` no estaría "implementando" la identidad: estaría tomando una decisión de sistema por la puerta equivocada.
 
@@ -149,7 +149,7 @@ La relación es de dependencia en una sola dirección: el futuro Brand Book debe
 
 ## 5. Relaciones
 
-`BRAND_GUIDELINES.md` depende, de forma simultánea y no jerárquica, de los cuatro sistemas de identidad ya vigentes (`LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md`, `COLOR_SYSTEM.md`), y en cadena, de toda la Arquitectura de Marca que los origina (`BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md`, `DESIGN_BRIEF.md`). Se relaciona también con `docs/design/BRAND_IDENTITY_VALIDATION.md`, cuyo resultado condicionado ("Aprobar con ajustes") es una de las razones por las que este documento gobierna convivencia y arquitectura sin poder declarar el conjunto como plenamente operativo, y con `docs/design/DESIGN_DECISION_LOG.md`, cuyo registro incompleto es una observación de gobierno consolidada en §4.4.
+`BRAND_GUIDELINES.md` depende, de forma simultánea y no jerárquica, de los cuatro sistemas de identidad ya vigentes (`LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md`, `COLOR_SYSTEM.md`), y en cadena, de toda la Arquitectura de Marca que los origina (`BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md`, `DESIGN_BRIEF.md`). Se relaciona también con `docs/design/BRAND_IDENTITY_VALIDATION.md`, cuyo resultado condicionado ("Aprobar con ajustes") es una de las razones por las que este documento gobierna convivencia y arquitectura sin poder declarar el conjunto como plenamente operativo, y con `docs/design/decisions/DESIGN_DECISION_LOG.md`, cuyo registro incompleto es una observación de gobierno consolidada en §4.4.
 
 Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a la de cada uno de los nueve documentos de los que depende: ninguno de ellos responde qué ocurre cuando los cuatro sistemas se aplican de forma simultánea. `BRAND_GUIDELINES.md` es el primer y único documento del repositorio que trata la identidad de ComparaFarma como un sistema integrado, no como cuatro entregables paralelos.
 
@@ -159,17 +159,17 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Identidad de marca (quién es ComparaFarma) | `docs/brand/BRAND_FOUNDATIONS.md` | Referencia — origen de toda la arquitectura (§4.1) | No se reinterpreta |
-| Modelo de marca única (Branded House) | `docs/brand/BRAND_ARCHITECTURE.md` §4.1 | Referencia — fundamenta la coherencia entre canales exigida en §4.3 | — |
-| Principios y atributos de percepción visual | `docs/brand/VISUAL_IDENTITY.md` | Referencia — fuente común de los cuatro sistemas (§4.1) | — |
-| Concepto central "Orientación" y metáfora | `docs/brand/DESIGN_CONCEPT.md`; `docs/design/DESIGN_DECISION_LOG.md` DD-001 | Referencia | — |
+| Identidad de marca (quién es ComparaFarma) | `docs/design/brand/BRAND_FOUNDATIONS.md` | Referencia — origen de toda la arquitectura (§4.1) | No se reinterpreta |
+| Modelo de marca única (Branded House) | `docs/design/brand/BRAND_ARCHITECTURE.md` §4.1 | Referencia — fundamenta la coherencia entre canales exigida en §4.3 | — |
+| Principios y atributos de percepción visual | `docs/design/brand/VISUAL_IDENTITY.md` | Referencia — fuente común de los cuatro sistemas (§4.1) | — |
+| Concepto central "Orientación" y metáfora | `docs/design/brand/DESIGN_CONCEPT.md`; `docs/design/decisions/DESIGN_DECISION_LOG.md` DD-001 | Referencia | — |
 | Encargo de diseño y restricciones de imagen | `docs/design/DESIGN_BRIEF.md` | Referencia — fuente de varias reglas de implementación (§4.3) | — |
-| Estructura del sistema de logotipo | `docs/brand/LOGO_SYSTEM.md` | ✔ — integrado en principios de convivencia (§4.2) y arquitectura (§4.1) | No se duplica su contenido |
-| Arquitectura del sistema tipográfico | `docs/brand/TYPOGRAPHY_SYSTEM.md` | ✔ — integrado en §4.2, §4.5 | No se duplica su contenido |
-| Arquitectura del sistema de iconografía | `docs/brand/ICONOGRAPHY_SYSTEM.md` | ✔ — integrado en §4.2, §4.5 | No se duplica su contenido |
-| Arquitectura del sistema de color | `docs/brand/COLOR_SYSTEM.md` | ✔ — integrado en §4.2, §4.5 | No se duplica su contenido |
+| Estructura del sistema de logotipo | `docs/design/brand/LOGO_SYSTEM.md` | ✔ — integrado en principios de convivencia (§4.2) y arquitectura (§4.1) | No se duplica su contenido |
+| Arquitectura del sistema tipográfico | `docs/design/brand/TYPOGRAPHY_SYSTEM.md` | ✔ — integrado en §4.2, §4.5 | No se duplica su contenido |
+| Arquitectura del sistema de iconografía | `docs/design/brand/ICONOGRAPHY_SYSTEM.md` | ✔ — integrado en §4.2, §4.5 | No se duplica su contenido |
+| Arquitectura del sistema de color | `docs/design/brand/COLOR_SYSTEM.md` | ✔ — integrado en §4.2, §4.5 | No se duplica su contenido |
 | Estado de aprobación del isotipo | `docs/design/BRAND_IDENTITY_VALIDATION.md` | Referencia — condiciona la nota de gobierno de §5 | Estado "Aprobar con ajustes" |
-| Registro de decisiones de diseño | `docs/design/DESIGN_DECISION_LOG.md` | ✔ — observación de gobierno consolidada (§4.4) | Registro incompleto: solo DD-001 |
+| Registro de decisiones de diseño | `docs/design/decisions/DESIGN_DECISION_LOG.md` | ✔ — observación de gobierno consolidada (§4.4) | Registro incompleto: solo DD-001 |
 | Frontera con implementación de producto | Declarada de forma independiente en cada uno de los cuatro sistemas (§3 de cada documento) | ✔ — consolidada en una sola declaración (§4.5) | — |
 | Brand Book, mockups, aplicaciones visuales | — (no existe todavía) | No consolidado — declarado explícitamente fuera de alcance (§3, §4.6) | Pendiente de un futuro `BRAND_BOOK.md` |
 | Design System de producto | — (no existe todavía) | No consolidado — declarado explícitamente fuera de alcance (§3, §4.5) | Pendiente de un futuro `DESIGN_SYSTEM` |
@@ -180,38 +180,38 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 `BRAND_GUIDELINES.md` **no reemplaza**:
 
-- `docs/brand/BRAND_FOUNDATIONS.md` — sigue siendo la única fuente de identidad de marca.
-- `docs/brand/BRAND_ARCHITECTURE.md` — sigue siendo la única fuente del modelo de marca y portafolio.
-- `docs/brand/VISUAL_IDENTITY.md` — sigue siendo la única fuente de principios y atributos de percepción visual.
-- `docs/brand/DESIGN_CONCEPT.md` — sigue siendo la única fuente del concepto central de diseño.
+- `docs/design/brand/BRAND_FOUNDATIONS.md` — sigue siendo la única fuente de identidad de marca.
+- `docs/design/brand/BRAND_ARCHITECTURE.md` — sigue siendo la única fuente del modelo de marca y portafolio.
+- `docs/design/brand/VISUAL_IDENTITY.md` — sigue siendo la única fuente de principios y atributos de percepción visual.
+- `docs/design/brand/DESIGN_CONCEPT.md` — sigue siendo la única fuente del concepto central de diseño.
 - `docs/design/DESIGN_BRIEF.md` — sigue siendo la única fuente del encargo de diseño y sus criterios de evaluación.
-- `docs/brand/LOGO_SYSTEM.md` — sigue siendo la única fuente de estructura del sistema de logotipo.
-- `docs/brand/TYPOGRAPHY_SYSTEM.md` — sigue siendo la única fuente de arquitectura del sistema tipográfico.
-- `docs/brand/ICONOGRAPHY_SYSTEM.md` — sigue siendo la única fuente de arquitectura del sistema de iconografía.
-- `docs/brand/COLOR_SYSTEM.md` — sigue siendo la única fuente de arquitectura del sistema de color.
+- `docs/design/brand/LOGO_SYSTEM.md` — sigue siendo la única fuente de estructura del sistema de logotipo.
+- `docs/design/brand/TYPOGRAPHY_SYSTEM.md` — sigue siendo la única fuente de arquitectura del sistema tipográfico.
+- `docs/design/brand/ICONOGRAPHY_SYSTEM.md` — sigue siendo la única fuente de arquitectura del sistema de iconografía.
+- `docs/design/brand/COLOR_SYSTEM.md` — sigue siendo la única fuente de arquitectura del sistema de color.
 
 La responsabilidad específica de `BRAND_GUIDELINES.md` dentro de la Arquitectura de Marca es **integrar, sin sustituir**: es el único documento que gobierna la convivencia simultánea de los cuatro sistemas, las reglas de implementación transversales a cualquier canal, el mecanismo de gobierno de cambios que protege la coherencia del conjunto, y la frontera compartida con un futuro Design System y un futuro Brand Book. No gobierna, y no debe absorber en ninguna revisión futura, ninguna decisión que ya pertenezca a uno de los nueve documentos de los que depende — esa frontera es una restricción deliberada de alcance (§3), consistente con el criterio de éxito de este documento: debe seguir siendo válido aunque cambien por completo la paleta, la tipografía, el isotipo o el producto, porque ninguno de esos cambios altera las reglas de convivencia que aquí se gobiernan.
 
 Cuando exista una discrepancia entre este documento y cualquiera de sus fuentes, prevalece la fuente original y este documento debe corregirse — mismo principio de gobierno ya declarado en `docs/enterprise/README.md` y aplicado de forma consistente en el resto de `docs/brand/`.
 
-**Ninguna versión de este documento tiene, a la fecha, aprobación formal del CEO/fundador.** Este documento hereda, y no resuelve por sí mismo, los pendientes de gobierno ya señalados en sus fuentes: los cuatro ajustes de `docs/design/BRAND_IDENTITY_VALIDATION.md` y el registro incompleto de `docs/design/DESIGN_DECISION_LOG.md` (§4.4).
+**Ninguna versión de este documento tiene, a la fecha, aprobación formal del CEO/fundador.** Este documento hereda, y no resuelve por sí mismo, los pendientes de gobierno ya señalados en sus fuentes: los cuatro ajustes de `docs/design/BRAND_IDENTITY_VALIDATION.md` y el registro incompleto de `docs/design/decisions/DESIGN_DECISION_LOG.md` (§4.4).
 
 ---
 
 ## 8. Documentos relacionados
 
-- `docs/brand/BRAND_FOUNDATIONS.md`
-- `docs/brand/BRAND_ARCHITECTURE.md`
-- `docs/brand/VISUAL_IDENTITY.md`
-- `docs/brand/DESIGN_CONCEPT.md`
+- `docs/design/brand/BRAND_FOUNDATIONS.md`
+- `docs/design/brand/BRAND_ARCHITECTURE.md`
+- `docs/design/brand/VISUAL_IDENTITY.md`
+- `docs/design/brand/DESIGN_CONCEPT.md`
 - `docs/design/DESIGN_BRIEF.md`
-- `docs/brand/LOGO_SYSTEM.md`
-- `docs/brand/TYPOGRAPHY_SYSTEM.md`
-- `docs/brand/ICONOGRAPHY_SYSTEM.md`
-- `docs/brand/COLOR_SYSTEM.md`
+- `docs/design/brand/LOGO_SYSTEM.md`
+- `docs/design/brand/TYPOGRAPHY_SYSTEM.md`
+- `docs/design/brand/ICONOGRAPHY_SYSTEM.md`
+- `docs/design/brand/COLOR_SYSTEM.md`
 - `docs/design/BRAND_IDENTITY_VALIDATION.md`
-- `docs/design/DESIGN_DECISION_LOG.md`
-- `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
+- `docs/design/decisions/DESIGN_DECISION_LOG.md`
+- `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
 
 Documentos que, una vez creados, dependerán estructuralmente de este documento: un futuro `BRAND_BOOK.md` (§4.6) y un futuro `DESIGN_SYSTEM` de producto (§4.5).
 
@@ -221,7 +221,7 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define el gobierno de convivencia entre `LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md` y `COLOR_SYSTEM.md`: arquitectura completa de la identidad, principios de convivencia derivados sin excepción de reglas ya declaradas, reglas de implementación por canal, mecanismo de gobierno de cambios, frontera con un futuro Design System y con un futuro Brand Book. No crea ningún Brand Book, no diseña componentes ni contiene ejemplos visuales. Consolida en una sola observación el registro incompleto de `DESIGN_DECISION_LOG.md` ya señalado de forma repetida en los cuatro sistemas. | `docs/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/brand/LOGO_SYSTEM.md` v1.0; `TYPOGRAPHY_SYSTEM.md` v1.0; `ICONOGRAPHY_SYSTEM.md` v1.0; `COLOR_SYSTEM.md` v1.0; `docs/design/BRAND_IDENTITY_VALIDATION.md` v1.0 |
+| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define el gobierno de convivencia entre `LOGO_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md` y `COLOR_SYSTEM.md`: arquitectura completa de la identidad, principios de convivencia derivados sin excepción de reglas ya declaradas, reglas de implementación por canal, mecanismo de gobierno de cambios, frontera con un futuro Design System y con un futuro Brand Book. No crea ningún Brand Book, no diseña componentes ni contiene ejemplos visuales. Consolida en una sola observación el registro incompleto de `DESIGN_DECISION_LOG.md` ya señalado de forma repetida en los cuatro sistemas. | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/design/brand/LOGO_SYSTEM.md` v1.0; `TYPOGRAPHY_SYSTEM.md` v1.0; `ICONOGRAPHY_SYSTEM.md` v1.0; `COLOR_SYSTEM.md` v1.0; `docs/design/BRAND_IDENTITY_VALIDATION.md` v1.0 |
 
 ---
 
@@ -229,10 +229,10 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/brand/LOGO_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema tipográfico | Brand Architect / Type Director / Enterprise Documentation Architect | `docs/brand/TYPOGRAPHY_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema de iconografía | Iconography Director / Design Systems Architect / Enterprise Documentation Architect | `docs/brand/ICONOGRAPHY_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema de color | Brand Architect / Color Systems Director / Enterprise Documentation Architect | `docs/brand/COLOR_SYSTEM.md` v1.0 |
-| 2026-08-05 | Integración de los cuatro sistemas de identidad bajo un único gobierno de convivencia | Brand Architect / Brand Governance Director / Enterprise Documentation Architect | `docs/brand/BRAND_GUIDELINES.md` v1.0 (este documento) |
+| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/design/brand/LOGO_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema tipográfico | Brand Architect / Type Director / Enterprise Documentation Architect | `docs/design/brand/TYPOGRAPHY_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema de iconografía | Iconography Director / Design Systems Architect / Enterprise Documentation Architect | `docs/design/brand/ICONOGRAPHY_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema de color | Brand Architect / Color Systems Director / Enterprise Documentation Architect | `docs/design/brand/COLOR_SYSTEM.md` v1.0 |
+| 2026-08-05 | Integración de los cuatro sistemas de identidad bajo un único gobierno de convivencia | Brand Architect / Brand Governance Director / Enterprise Documentation Architect | `docs/design/brand/BRAND_GUIDELINES.md` v1.0 (este documento) |
 
 **Pendiente de definición:** ninguna acción anterior cuenta todavía con aprobación formal registrada del CEO/fundador. La creación de un futuro Brand Book y de un futuro Design System de producto queda, en su totalidad, fuera de esta versión y pendiente de trabajo posterior — ambos deberán derivarse de este documento, no sustituirlo.

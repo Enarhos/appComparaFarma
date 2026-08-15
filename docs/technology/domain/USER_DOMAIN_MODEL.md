@@ -5,7 +5,7 @@
 **Fecha de corte:** 2026-08-06
 **Alcance:** qué es un Usuario en el dominio de ComparaFarma, qué le pertenece a él, al dispositivo o a la plataforma, y los principios/invariantes que gobiernan esa relación. Es el contrato conceptual para toda futura integración entre Mobile, Web y Backend.
 **No es:** una especificación de pantallas, de APIs, de tablas, de autenticación técnica ni de arquitectura. No propone migraciones ni cambios de código.
-**Método:** `docs/analysis/CURRENT_PLATFORM_ASSESSMENT.md` (aprobado, PLATFORM-001) como fuente principal de qué existe hoy — no se repite su contenido, solo se cita lo necesario para justificar cada decisión conceptual. Se contrasta contra la documentación de negocio/marca/arquitectura empresarial ya existente, para no contradecirla. Donde el negocio no ha decidido algo, se señala como pregunta abierta en la Validación Final, no se decide aquí.
+**Método:** `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md` (aprobado, PLATFORM-001) como fuente principal de qué existe hoy — no se repite su contenido, solo se cita lo necesario para justificar cada decisión conceptual. Se contrasta contra la documentación de negocio/marca/arquitectura empresarial ya existente, para no contradecirla. Donde el negocio no ha decidido algo, se señala como pregunta abierta en la Validación Final, no se decide aquí.
 
 ---
 
@@ -13,7 +13,7 @@
 
 Antes de responder las preguntas del documento, se fijan cinco términos que se usan de forma consistente en todo el texto — su confusión es la causa más común de errores de dominio:
 
-- **Persona.** El ser humano real detrás de cualquier interacción con ComparaFarma. Siempre existe, con o sin identidad reconocida por la plataforma. Es el sujeto moral del dominio — citado en `docs/book/03-acto-nuestra-forma-de-trabajar/04-Los-Datos-Existen-Para-Servir-No-Para-Vigilar.md`: *"Nunca veremos los datos como simples registros. Detrás de ellos siempre existe una persona."*
+- **Persona.** El ser humano real detrás de cualquier interacción con ComparaFarma. Siempre existe, con o sin identidad reconocida por la plataforma. Es el sujeto moral del dominio — citado en `docs/archive/foundational-book/03-acto-nuestra-forma-de-trabajar/04-Los-Datos-Existen-Para-Servir-No-Para-Vigilar.md`: *"Nunca veremos los datos como simples registros. Detrás de ellos siempre existe una persona."*
 - **Instalación.** Un dispositivo o navegador concreto a través del cual una Persona interactúa con ComparaFarma (una copia de la app, una sesión de navegador). Es anónima por definición: la plataforma no sabe qué Persona hay detrás, ni si es siempre la misma.
 - **Identidad.** El mecanismo que permite a la plataforma reconocer, entre una interacción y otra, que se trata de la misma Persona. Es un mecanismo operativo, no un activo de negocio — así lo define `docs/enterprise/BUSINESS_CAPABILITY_MAP.md` (BC-005): *"La identidad constituye un mecanismo operativo. No forma parte del Patrimonio Digital."*
 - **Perfil.** La experiencia personalizada de una Persona dentro de la plataforma una vez que tiene Identidad — sus datos de contacto, su plan, sus preferencias. `BUSINESS_CAPABILITY_MAP.md` (BC-006) es explícito: *"El Perfil representa la experiencia personalizada del usuario. No representa su identidad civil."*
@@ -33,7 +33,7 @@ Tres elementos son necesarios para esa definición:
 2. **Continuidad reconocible.** Lo que distingue a un Usuario de una Instalación anónima no es "haber puesto un email en un formulario" — eso es Identidad, el mecanismo (BC-005). Ser Usuario es el resultado de negocio de ese mecanismo: que la plataforma pueda decir "esta es la misma Persona que ayer" sin depender del dispositivo.
 3. **Independencia del dispositivo.** Un Usuario existe conceptualmente por encima de cualquier Instalación concreta — puede tener varias (su teléfono, su computador) y sigue siendo el mismo Usuario en todas.
 
-Antes de ese momento, la Persona ya es un participante legítimo y completo del dominio de ComparaFarma — solo que actúa como una Instalación anónima, no como Usuario. Esto no es un estado incompleto o degradado: es, hoy, el estado por defecto y explícitamente documentado del producto (`docs/product/COMPANY_STRATEGY.md`, 2026-07-19: *"Usuarios: Anónimos, sin cuenta... Sin identidad de usuario"*), y sigue siendo enteramente válido para el núcleo de la propuesta de valor (ver sección 8).
+Antes de ese momento, la Persona ya es un participante legítimo y completo del dominio de ComparaFarma — solo que actúa como una Instalación anónima, no como Usuario. Esto no es un estado incompleto o degradado: es, hoy, el estado por defecto y explícitamente documentado del producto (`docs/product/strategy/COMPANY_STRATEGY.md`, 2026-07-19: *"Usuarios: Anónimos, sin cuenta... Sin identidad de usuario"*), y sigue siendo enteramente válido para el núcleo de la propuesta de valor (ver sección 8).
 
 **Lo que un Usuario NO es:** no es una fila en una tabla, no es una sesión de Supabase Auth, no es un email verificado. Esas son formas técnicas concretas de *implementar* la Identidad hoy (ver `CURRENT_PLATFORM_ASSESSMENT.md` §2.3-2.5) — el concepto de Usuario es anterior e independiente de cualquier mecanismo técnico particular.
 
@@ -47,7 +47,7 @@ Pertenece al Usuario todo aquello que representa una decisión, un compromiso o 
 - **Plan / Premium.** Es una relación comercial con una Persona ("le vendí acceso a esto"), no con un aparato. Si Premium no siguiera al Usuario entre dispositivos, la promesa comercial básica se rompería.
 - **Favoritos.** Un favorito representa el interés de una Persona en un medicamento — una decisión suya, con sentido propio independiente de qué teléfono tenía en la mano cuando la tomó.
 - **Alertas de precio.** Representan un compromiso de la Persona hacia el futuro ("avísame si baja de precio") — el mismo razonamiento que favoritos, con un componente temporal adicional.
-- **Comparaciones recurrentes (carrito / "mi receta").** Representan una necesidad real y recurrente de una Persona (el caso de Claudia en `docs/product/PERSONAS.md`, que compra los mismos medicamentos de forma permanente) — no un estado de una pantalla.
+- **Comparaciones recurrentes (carrito / "mi receta").** Representan una necesidad real y recurrente de una Persona (el caso de Claudia en `docs/product/definition/PERSONAS.md`, que compra los mismos medicamentos de forma permanente) — no un estado de una pantalla.
 - **Historial de búsquedas.** Pertenece conceptualmente al Usuario en la medida en que documenta su propio recorrido de búsqueda de salud — pero es, de los elementos de esta lista, el que tiene la tensión de privacidad más fuerte (ver sección 7 y Decisiones Pendientes): que algo "pertenezca" al Usuario no implica automáticamente que deba sincronizarse o conservarse indefinidamente.
 - **Preferencias declaradas explícitamente por la Persona** (por ejemplo, "mi comuna habitual"), cuando existen como una declaración deliberada y no como un dato de contexto de una búsqueda puntual — ver la distinción con "Dispositivo" en la sección 3, y la pregunta pendiente en la sección 9.
 
@@ -154,7 +154,7 @@ Todo lo que constituye la propuesta de valor central de ComparaFarma: buscar, co
 
 - Principio Inmutable I: *"las personas antes que las métricas"* — nadie debería tener que identificarse para resolver la necesidad básica de saber cuánto cuesta un medicamento.
 - Principio Inmutable IX: *"la privacidad antes que la explotación de los datos"* — exigir identidad para la función central sería pedir más de lo necesario.
-- El propio estado histórico del producto, documentado sin ambigüedad en `docs/product/COMPANY_STRATEGY.md`: *"Usuarios: Anónimos, sin cuenta"* — no como un defecto a corregir, sino como el punto de partida legítimo del dominio.
+- El propio estado histórico del producto, documentado sin ambigüedad en `docs/product/strategy/COMPANY_STRATEGY.md`: *"Usuarios: Anónimos, sin cuenta"* — no como un defecto a corregir, sino como el punto de partida legítimo del dominio.
 
 Esto también incluye, coherentemente, todo lo que hoy ya funciona sin identidad y que la sección 2 reconoce como perteneciente al Usuario en el plano conceptual (favoritos, alertas, comparaciones) — el hecho de que hoy se puedan usar sin login (de forma local, por Instalación) es compatible con este principio; lo que está pendiente de decidir es si, además, deberían sincronizar cuando la Persona sí decide identificarse (sección 7 y Decisiones Pendientes).
 
@@ -207,24 +207,24 @@ Nada del núcleo de comparación de precios debe requerir identidad, hoy ni en e
 ## Validación final
 
 ### Documentos utilizados
-- `docs/analysis/CURRENT_PLATFORM_ASSESSMENT.md` (fuente principal)
-- `docs/brand/BRAND_FOUNDATIONS.md` (§11.1 Principios Inmutables, §15)
-- `docs/brand/BRAND_AUDIT.md`
+- `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md` (fuente principal)
+- `docs/design/brand/BRAND_FOUNDATIONS.md` (§11.1 Principios Inmutables, §15)
+- `docs/design/brand/BRAND_AUDIT.md`
 - `docs/enterprise/BUSINESS_CAPABILITY_MAP.md` (BC-005, BC-006)
-- `docs/book/03-acto-nuestra-forma-de-trabajar/04-Los-Datos-Existen-Para-Servir-No-Para-Vigilar.md`
-- `docs/product/COMPANY_STRATEGY.md`
+- `docs/archive/foundational-book/03-acto-nuestra-forma-de-trabajar/04-Los-Datos-Existen-Para-Servir-No-Para-Vigilar.md`
+- `docs/product/strategy/COMPANY_STRATEGY.md`
 - `docs/product/PRODUCT_PRINCIPLES.md`
-- `docs/product/PERSONAS.md`
+- `docs/product/definition/PERSONAS.md`
 - `docs/product/USER_JOURNEYS.md`
-- `docs/architecture/DOMAIN_MODEL.md` (confirmado: modelo de datos de medicamentos, sin entidad Usuario — no se superpone con este documento)
-- `docs/database/schema.sql` (solo para confirmar qué relaciones con "usuario" existen hoy — `profiles`, `subscriptions`, `flow_customers`, `email_alerts` — sin diseñar sobre ellas)
+- `docs/technology/architecture/DOMAIN_MODEL.md` (confirmado: modelo de datos de medicamentos, sin entidad Usuario — no se superpone con este documento)
+- `docs/technology/database/schema.sql` (solo para confirmar qué relaciones con "usuario" existen hoy — `profiles`, `subscriptions`, `flow_customers`, `email_alerts` — sin diseñar sobre ellas)
 - RFC-003 (Subscription Engine), ADR-0002, ADR-0004 (confirmado: asumen `profiles` sin redefinir qué es un usuario)
 
 ### Código revisado
-Ninguno directamente — este documento se apoya en las citas de código ya verificadas y referenciadas en `docs/analysis/CURRENT_PLATFORM_ASSESSMENT.md`, evitando repetir la auditoría de código ya realizada en ese sprint.
+Ninguno directamente — este documento se apoya en las citas de código ya verificadas y referenciadas en `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md`, evitando repetir la auditoría de código ya realizada en ese sprint.
 
 ### Documento creado
-`docs/domain/USER_DOMAIN_MODEL.md` (este documento).
+`docs/technology/domain/USER_DOMAIN_MODEL.md` (este documento).
 
 ### Decisiones pendientes (para el comité — no resueltas en este documento)
 

@@ -7,7 +7,7 @@
 | **Estado** | ✅ Implementado (2026-08-02) |
 | **Prioridad** | Media |
 | **Estimación** | 1.5-2 h |
-| **Referencia** | RFC-003 §3.5, §4 (compatibilidad), Sprint D (`docs/prompt/claude/PROMPT_CLAUDE_SPRINT_D_CUENTA_LIGERA.md`) |
+| **Referencia** | RFC-003 §3.5, §4 (compatibilidad), Sprint D (`docs/archive/execution/prompts/claude/PROMPT_CLAUDE_SPRINT_D_CUENTA_LIGERA.md`) |
 
 ---
 

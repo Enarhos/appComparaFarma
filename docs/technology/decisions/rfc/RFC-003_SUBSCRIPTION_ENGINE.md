@@ -7,7 +7,7 @@
 | **Estado** | Propuesto — pendiente de ratificación CFPS antes de implementar (Regla 2 del `PRODUCT_DECISION_FRAMEWORK.md`) |
 | **Fecha** | 2026-08-02 |
 | **Autor** | Claude (rol CTO) |
-| **Documentos relacionados** | `docs/product/SUBSCRIPTION_STRATEGY.md`, `docs/product/EPICS.md` (Epic "Subscription Platform"), `docs/product/BACKLOG_PRODUCT.md`, ADR-0002, `docs/database/schema.sql` |
+| **Documentos relacionados** | `docs/product/SUBSCRIPTION_STRATEGY.md`, `docs/archive/product/EPICS_2026-08-15.md` (Epic "Subscription Platform"), `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, ADR-0002, `docs/technology/database/schema.sql` |
 | **Prioridad** | Media (CFPS 3.0) — infraestructura habilitante, no resuelve un incidente activo |
 
 ---
@@ -37,7 +37,7 @@ Reemplazar la fuente de verdad del estado Premium por un **Subscription Service*
 
 ## 2. Estado Actual
 
-- `profiles` (`docs/database/schema.sql`, sección Sprint D): `id`, `email`, `plan text default 'free'`, `created_at`, `updated_at`. RLS: el usuario lee su propia fila; nadie (ni siquiera el propio usuario autenticado) tiene policy de `update` — solo el cliente admin (`SUPABASE_SECRET_KEY`, bypassea RLS) escribe.
+- `profiles` (`docs/technology/database/schema.sql`, sección Sprint D): `id`, `email`, `plan text default 'free'`, `created_at`, `updated_at`. RLS: el usuario lee su propia fila; nadie (ni siquiera el propio usuario autenticado) tiene policy de `update` — solo el cliente admin (`SUPABASE_SECRET_KEY`, bypassea RLS) escribe.
 - `web/src/lib/profilesAdmin.ts`: `setProfilePlan(id, plan)` hace `update profiles set plan = ...` directo — es el único punto de escritura hoy.
 - `web/src/lib/profile.ts`: `getCurrentProfile()` lee `profiles.plan` directo desde el cliente con sesión.
 - No existe ningún adaptador de proveedor de pago, ninguna tabla de suscripciones ni de eventos. `mobile/` no tiene ninguna integración de Google Play Billing.
@@ -213,7 +213,7 @@ Esta fase se implementa **enteramente dentro de `api/`**, sin ningún cambio en 
 
 | Issue | Alcance |
 |---|---|
-| CF-112 | Modelo de datos: `subscription_plans`, `subscriptions`, `subscription_events` en `docs/database/schema.sql` |
+| CF-112 | Modelo de datos: `subscription_plans`, `subscriptions`, `subscription_events` en `docs/technology/database/schema.sql` |
 | CF-113 | `subscriptionService.ts` + `subscriptionsDb.ts`: `getEntitlement`, `recordProviderEvent`, `grantManual`, con tests |
 | CF-114 | Adaptador Google Play (`googlePlayAdapter.ts`) — solo parsing/verificación server-side, sin tocar `mobile/` |
 | CF-115 | API consolidada `api/api/subscriptions.ts` + `api/src/routes/subscriptions.ts` |
@@ -223,7 +223,7 @@ Esta fase se implementa **enteramente dentro de `api/`**, sin ningún cambio en 
 
 ## 8. Definition of Done
 
-- [ ] `subscription_plans`, `subscriptions`, `subscription_events` existen en Supabase y en `docs/database/schema.sql`
+- [ ] `subscription_plans`, `subscriptions`, `subscription_events` existen en Supabase y en `docs/technology/database/schema.sql`
 - [ ] `subscriptionService.getEntitlement()` funciona con Supabase ausente (degradación elegante, nunca lanza)
 - [ ] Adaptador de Google Play parsea una notificación RTDN de prueba (sandbox) correctamente
 - [ ] `api/api/subscriptions.ts` responde `action=me`, `action=google-rtdn`, `action=verify-purchase`

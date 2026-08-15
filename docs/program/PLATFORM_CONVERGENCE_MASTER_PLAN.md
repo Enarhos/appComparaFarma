@@ -4,7 +4,7 @@
 **Tipo:** Backlog de ejecución (no arquitectura, no diseño, no investigación)
 **Fecha de corte:** 2026-08-06
 **Alcance:** transformar la arquitectura funcional ya aprobada en un plan completamente ejecutable — Épicas, Features, Historias de Usuario, dependencias, MVP, Releases, riesgos de ejecución, Definition of Done y trazabilidad. No redefine ninguna decisión ya tomada.
-**Línea base (no modificada, no repetida):** `docs/analysis/CURRENT_PLATFORM_ASSESSMENT.md`, `docs/domain/USER_DOMAIN_MODEL.md`, `docs/architecture/IDENTITY_INTEGRATION_PLAN.md` (versión revisada PLATFORM-002A), `docs/architecture/PLATFORM_CAPABILITY_MODEL.md`.
+**Línea base (no modificada, no repetida):** `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md`, `docs/technology/domain/USER_DOMAIN_MODEL.md`, `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` (versión revisada PLATFORM-002A), `docs/technology/architecture/PLATFORM_CAPABILITY_MODEL.md`.
 
 **Nota de alcance (importante, no es una redefinición):** este plan cubre exclusivamente la convergencia de Identidad ya delimitada por `IDENTITY_INTEGRATION_PLAN.md` (Fases 0 a 5) y las Capacidades que ese plan ya declaró parte de su alcance. Las Capacidades de las ramas Inteligencia y de Monetizar distintas de Premium (Convenios, API Comercial, Publicidad ética) no son parte de la convergencia de Identidad — son construcción de Capacidades nuevas, no unificación de lo que ya existe en dos clientes — y por lo tanto no tienen Épica en este plan, consistente con `IDENTITY_INTEGRATION_PLAN.md` §3, que ya las marcó fuera de esa convergencia. Tampoco se incluyen brechas de paridad de funcionalidad entre clientes que no dependen de Identidad (ej. selector de comuna en el Cliente Web, compartir en el Cliente Web) — son decisiones de producto independientes, no convergencia de Identidad.
 
@@ -391,16 +391,16 @@ Epic 6 completa, únicamente si Epic 0.2 se resolvió a favor de permitir la sin
 ## Validación final
 
 ### Documentos utilizados
-- `docs/analysis/CURRENT_PLATFORM_ASSESSMENT.md`
-- `docs/domain/USER_DOMAIN_MODEL.md`
-- `docs/architecture/IDENTITY_INTEGRATION_PLAN.md` (versión revisada, PLATFORM-002A)
-- `docs/architecture/PLATFORM_CAPABILITY_MODEL.md`
+- `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md`
+- `docs/technology/domain/USER_DOMAIN_MODEL.md`
+- `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` (versión revisada, PLATFORM-002A)
+- `docs/technology/architecture/PLATFORM_CAPABILITY_MODEL.md`
 
 ### Código revisado
 Ninguno.
 
 ### Documento creado
-`docs/project/PLATFORM_CONVERGENCE_MASTER_PLAN.md` (este documento).
+`docs/program/PLATFORM_CONVERGENCE_MASTER_PLAN.md` (este documento).
 
 ### Estado del proyecto
 

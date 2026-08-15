@@ -2,7 +2,7 @@
 
 **Tipo:** Documento de estrategia funcional (no arquitectura nueva, no diseño de pantallas, no backlog de ejecución). Responde una única pregunta: ¿cómo evolucionamos desde dos productos parcialmente independientes (Web y Mobile) hacia una única Plataforma ComparaFarma?
 **Fecha de corte:** 2026-08-07
-**Contexto:** la etapa de Arquitectura está cerrada; EPIC-01 (Identity Foundation) está oficialmente cerrada y aprobada por el CTO (`docs/analysis/EPIC-01_COMPLETION_REVIEW.md`, veredicto "cerrada con observaciones"). Este documento abre la etapa de Convergencia Funcional y será la base para planificar las épicas siguientes — no reemplaza, no modifica y no repite `docs/project/PLATFORM_CONVERGENCE_MASTER_PLAN.md` (el backlog ejecutable ya aprobado), sino que se apoya en él para razonar la estrategia a un nivel de producto, no de ejecución.
+**Contexto:** la etapa de Arquitectura está cerrada; EPIC-01 (Identity Foundation) está oficialmente cerrada y aprobada por el CTO (`docs/archive/reviews/EPIC-01_COMPLETION_REVIEW_2026-08-07.md`, veredicto "cerrada con observaciones"). Este documento abre la etapa de Convergencia Funcional y será la base para planificar las épicas siguientes — no reemplaza, no modifica y no repite `docs/program/PLATFORM_CONVERGENCE_MASTER_PLAN.md` (el backlog ejecutable ya aprobado), sino que se apoya en él para razonar la estrategia a un nivel de producto, no de ejecución.
 **Método:** verificación cruzada contra los 9 documentos exigidos en el pedido de este informe, todos leídos íntegros antes de redactar. No se asume ningún dato no verificable en esas fuentes.
 
 ---
@@ -11,15 +11,15 @@
 
 Documentos revisados íntegramente antes de redactar este documento:
 
-1. `docs/analysis/CURRENT_PLATFORM_ASSESSMENT.md`
-2. `docs/domain/USER_DOMAIN_MODEL.md`
-3. `docs/architecture/IDENTITY_INTEGRATION_PLAN.md` (versión revisada PLATFORM-002A)
-4. `docs/architecture/PLATFORM_CAPABILITY_MODEL.md`
-5. `docs/analysis/EPIC-01_COMPLETION_REVIEW.md`
-6. `docs/project/PLATFORM_CONVERGENCE_MASTER_PLAN.md`
-7. `docs/product/BACKLOG_PRODUCT.md`
-8. `docs/product/BACKLOG_TECH.md`
-9. `docs/project/PROJECT_STATUS.md`
+1. `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md`
+2. `docs/technology/domain/USER_DOMAIN_MODEL.md`
+3. `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` (versión revisada PLATFORM-002A)
+4. `docs/technology/architecture/PLATFORM_CAPABILITY_MODEL.md`
+5. `docs/archive/reviews/EPIC-01_COMPLETION_REVIEW_2026-08-07.md`
+6. `docs/program/PLATFORM_CONVERGENCE_MASTER_PLAN.md`
+7. `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`
+8. `docs/product/BACKLOG_TECH.md` (nota de gobierno documental, 2026-08-15: este archivo estaba vacío — 0 bytes — y fue eliminado en la limpieza de gobierno documental; los ítems TECH-001/TECH-002 citados más abajo (§ Costos operacionales) nunca llegaron a registrarse por escrito en él. Se deja constancia aquí en vez de reescribir sin evidencia)
+9. `docs/archive/project/PROJECT_STATUS_2026-08-06.md`
 
 Ninguno de estos documentos fue modificado. Ningún dato de este informe proviene de una fuente distinta a estas 9 (más las citas que esos mismos documentos ya hacían a otras fuentes, referenciadas aquí solo cuando ellos mismos las citaban).
 
@@ -75,7 +75,7 @@ Cada principio se ancla explícitamente en la Architecture Baseline ya aprobada 
 | Historial (de búsquedas) | Solo Mobile → **Pendiente de convergencia (condicional)** | Local; no existe en Web. Su sincronización depende de que el comité resuelva primero la Decisión Pendiente #1 de `USER_DOMAIN_MODEL.md` (tensión de privacidad) — si se resuelve "nunca sincronizar", queda permanentemente Solo Mobile. |
 | Alertas | Existe en ambos, pero **incompatible entre sí** → **Pendiente de convergencia** | Mobile: local, in-app. Web: email+token sin cuenta (`email_alerts`). No es "Compartida" — son dos mecanismos que hoy significan cosas distintas para el mismo concepto de dominio (`IDENTITY_INTEGRATION_PLAN.md` §1, §4.4). |
 | Comparaciones (concepto unificado de Carrito/"Mi receta") | Duplicada, no compartida → **Pendiente de convergencia** | Ver filas "Carrito" y "Mi receta" — es el mismo concepto de producto con dos implementaciones de datos independientes (`IDENTITY_INTEGRATION_PLAN.md` §4.3). |
-| Premium | Solo Web → **Pendiente de convergencia** | El motor de entitlement es único en la Plataforma, pero solo Web puede autenticarse hoy para consultarlo (`CURRENT_PLATFORM_ASSESSMENT.md` §2.7). Sin catálogo comercial vendible real (`BACKLOG_PRODUCT.md`, Subscription Platform). |
+| Premium | Solo Web → **Pendiente de convergencia** | El motor de entitlement es único en la Plataforma, pero solo Web puede autenticarse hoy para consultarlo (`CURRENT_PLATFORM_ASSESSMENT.md` §2.7). Sin catálogo comercial vendible real (`docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, Subscription Platform). |
 | Perfil | Solo Web → **Pendiente de convergencia** | `profiles`, accesible solo desde Web (`CURRENT_PLATFORM_ASSESSMENT.md` §2.5). Es la Feature de mayor precedencia en el roadmap ya aprobado (Epic 2.1, MVP de `PLATFORM_CONVERGENCE_MASTER_PLAN.md` §5). |
 | Configuración (remota: farmacias activas, banner de donación) | **Compartida** — ya converge | Fuente única (`app_config`), ambos Clientes consumen, Web administra (`CURRENT_PLATFORM_ASSESSMENT.md` §6, "Integrada"; `PLATFORM_CAPABILITY_MODEL.md` §3, "Implementada"). No requiere ningún trabajo de convergencia adicional — nunca fue un dato por-Cliente. |
 | Configuración (del Usuario / Preferencias, ej. comuna habitual) | No existe en ninguno como concepto del Usuario; hoy es local en ambos sin relación entre sí → **Pendiente de decisión, no de construcción** | Distinta de la fila anterior. Su clasificación de dominio (¿es del Usuario o del contexto de cada búsqueda?) sigue sin resolver — Decisión Pendiente #2 de `USER_DOMAIN_MODEL.md`. No puede clasificarse como "pendiente de convergencia" técnica hasta que exista esa decisión de negocio. |
@@ -83,7 +83,7 @@ Cada principio se ancla explícitamente en la Architecture Baseline ya aprobada 
 | Mi receta | Solo Web → **Pendiente de convergencia** (junto con Carrito, ver fila "Comparaciones") | `localStorage` del navegador, sin cuenta (`CURRENT_PLATFORM_ASSESSMENT.md` §2.1). |
 | Carrito | Solo Mobile → **Pendiente de convergencia** (junto con Mi receta, ver fila "Comparaciones") | `cartStore`, AsyncStorage, máx. 8 ítems (`CURRENT_PLATFORM_ASSESSMENT.md` §1.5). |
 | IA (recomendaciones basadas en IA) | No existe en ninguno → **No aplica a esta clasificación** | Confirmado "sin código todavía" (`PLATFORM_CAPABILITY_MODEL.md` §3, citando `docs/program/ROADMAP.md`). No hay nada que converger porque no existe en ningún Cliente. |
-| Bioequivalentes | Dato parcial y compartido (`isBioequivalent` en el dominio, ambos Clientes muestran el badge), pero **con un problema de calidad de dato, no de convergencia de Identidad** | La brecha real no es que Mobile y Web difieran entre sí — es que la fuente del dato es poco confiable (heurísticas frágiles, `false` fijo en 2 de 9 farmacias; `BACKLOG_PRODUCT.md`, "Nota crítica sobre B"). Bloqueada por un spike de datos (ISP/`datos.gob.cl`), no por ninguna Decisión de Identidad. |
+| Bioequivalentes | Dato parcial y compartido (`isBioequivalent` en el dominio, ambos Clientes muestran el badge), pero **con un problema de calidad de dato, no de convergencia de Identidad** | La brecha real no es que Mobile y Web difieran entre sí — es que la fuente del dato es poco confiable (heurísticas frágiles, `false` fijo en 2 de 9 farmacias; `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, "Nota crítica sobre B"). Bloqueada por un spike de datos (ISP/`datos.gob.cl`), no por ninguna Decisión de Identidad. |
 
 ---
 
@@ -138,7 +138,7 @@ No técnicos — riesgos de producto, negocio y operación de la convergencia en
 - **Complejidad del producto.** Mantener dos Clientes con paridad parcial, más un nuevo eje (identificado / no identificado) en cada uno de ellos, multiplica el número de combinaciones de experiencia que hay que diseñar, comunicar y sostener — una fragmentación adicional a la ya señalada en `IDENTITY_INTEGRATION_PLAN.md` §1, no menor por ser conocida de antemano.
 - **Experiencia del usuario.** Riesgo de que identificarse empiece a sentirse, en la práctica, como un paso casi obligatorio si la comunicación de producto no refuerza constantemente que sigue siendo 100% opcional (Principios 1 y 2, `USER_DOMAIN_MODEL.md`); riesgo adicional, ya señalado en `PLATFORM_CONVERGENCE_MASTER_PLAN.md` §7, de que el primer release perciba "sin nada que mostrar" y genere presión para adelantar funcionalidades de mayor valor visible antes de validar la base.
 - **Sincronización de datos.** Conflictos reales cuando la misma Persona usa y modifica Favoritos, Comparaciones o Alertas desde ambos Clientes casi simultáneamente — riesgo ya identificado sin solución diseñada todavía en `IDENTITY_INTEGRATION_PLAN.md` §7; y riesgo de pérdida de continuidad si la migración de lo que hoy vive solo en `AsyncStorage` no contempla explícitamente preservarlo.
-- **Costos operacionales.** Extender la infraestructura de sesión, refresh y entitlement a un tercer Cliente (Mobile) añade superficie operativa nueva — logs, monitoreo, incidentes — que hoy solo existe para Web/`api/`. Los dos ítems de deuda técnica ya registrados en `BACKLOG_TECH.md` (TECH-001, TECH-002) son, si no se resuelven antes de avanzar, exactamente el tipo de riesgo que se traduce en costo real de soporte una vez que haya Personas reales identificadas en producción.
+- **Costos operacionales.** Extender la infraestructura de sesión, refresh y entitlement a un tercer Cliente (Mobile) añade superficie operativa nueva — logs, monitoreo, incidentes — que hoy solo existe para Web/`api/`. Los dos ítems de deuda técnica referidos como TECH-001/TECH-002 (nunca llegaron a registrarse formalmente por escrito — el archivo `BACKLOG_TECH.md` que debía contenerlos estaba vacío y fue retirado en la limpieza de gobierno documental de 2026-08-15) son, si no se resuelven antes de avanzar, exactamente el tipo de riesgo que se traduce en costo real de soporte una vez que haya Personas reales identificadas en producción.
 - **Riesgo de gobernanza.** Varias Decisiones Pendientes de negocio (comuna, historial, alertas anónimas, catálogo comercial de Premium) siguen abiertas — si la convergencia avanza en código antes de que el comité las resuelva formalmente, el riesgo es repetir el mismo patrón ya observado y señalado como lección aprendida al cierre de EPIC-01: implementación avanzando mientras una autorización o decisión formal correspondiente queda sin cerrar en su documento de origen (`EPIC-01_COMPLETION_REVIEW.md` §6, §11).
 - **Riesgo de negocio en Premium.** Converger la capacidad de Premium antes de que exista un catálogo comercial real vendible no genera ingreso real ni valor perceptible para nadie — riesgo ya señalado dos veces en la Architecture Baseline (`IDENTITY_INTEGRATION_PLAN.md` §7; `PLATFORM_CAPABILITY_MODEL.md` §7) y que este documento no resuelve, solo hereda.
 
@@ -162,7 +162,7 @@ En paralelo — no como parte de este objetivo, sino como una condición adminis
 Los 9 listados en "Auditoría previa". Ninguno fue modificado.
 
 ### Documento creado
-`docs/strategy/FUNCTIONAL_CONVERGENCE_STRATEGY.md` (este documento).
+`docs/enterprise/strategy/FUNCTIONAL_CONVERGENCE_STRATEGY.md` (este documento).
 
 ### Restricciones respetadas
 No se escribió ni modificó código. No se creó backlog nuevo, ni Tasks, ni Épicas. No se modificó el roadmap ya aprobado (`PLATFORM_CONVERGENCE_MASTER_PLAN.md`) — este documento lo confirma y lo razona desde una capa de estrategia, sin recalcularlo. No se modificó la Architecture Baseline ni ningún otro documento existente. No se tocó ningún archivo del repositorio fuera de este documento nuevo.

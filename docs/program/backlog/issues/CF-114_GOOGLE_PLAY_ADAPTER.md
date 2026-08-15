@@ -19,7 +19,7 @@ Normalizar las notificaciones de Google Play (Real-Time Developer Notifications)
 
 ### Incluye
 - `api/src/lib/adapters/googlePlayAdapter.ts` (nuevo): `parseNotification(payload): NormalizedSubscriptionEvent | null`, siguiendo el contrato `PaymentProviderAdapter` de RFC-003 §3.3.
-- Alta de una Service Account de Google Cloud con acceso a la Play Developer API, bajo `mario.lillo.alfaro@gmail.com` (ver `docs/release/SERVICE_ACCOUNT_MIGRATION.md`) — necesaria para verificar purchase tokens.
+- Alta de una Service Account de Google Cloud con acceso a la Play Developer API, bajo `mario.lillo.alfaro@gmail.com` (ver `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`) — necesaria para verificar purchase tokens.
 - Configuración de Real-Time Developer Notifications en Play Console (tópico de Pub/Sub) apuntando al endpoint de CF-115.
 - Tests con payloads de ejemplo de Google (fixtures, sin llamar a la API real de Google en tests).
 
@@ -37,5 +37,5 @@ Normalizar las notificaciones de Google Play (Real-Time Developer Notifications)
 
 - [x] `googlePlayAdapter.ts` implementado y testeado con fixtures (15 tests — parseo de notificaciones + mapeo de los 8 `notificationType` relevantes + construcción del evento normalizado)
 - [x] Limitación de asociación usuario↔purchase token documentada (este issue, RFC-003 §5 R-02, y comentario en el código del adaptador)
-- [ ] Service Account de Google Cloud creada — **pendiente, acción manual de Mario** (ver `docs/release/SERVICE_ACCOUNT_MIGRATION.md`)
+- [ ] Service Account de Google Cloud creada — **pendiente, acción manual de Mario** (ver `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`)
 - [ ] RTDN configurado en Play Console (sandbox/test track) — pendiente de la Service Account

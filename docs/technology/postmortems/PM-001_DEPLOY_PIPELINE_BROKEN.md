@@ -13,7 +13,7 @@
 
 ## Resumen
 
-Al reforzar el monitoreo del proyecto (ver `docs/engineering/reviews/ER-003_RFC-001_CTO_REVIEW.md` y el trabajo de la misma sesión), se intentó re-desplegar el backend para activar una variable de entorno nueva (`SENTRY_DSN`). Ese intento de deploy expuso una cadena de **cuatro problemas independientes**, cada uno enmascarando al siguiente, que terminaron en que `/api/search` — el endpoint principal de la app — devolviera `500 FUNCTION_INVOCATION_FAILED` en producción.
+Al reforzar el monitoreo del proyecto (ver `docs/technology/reviews/ER-003_RFC-001_CTO_REVIEW.md` y el trabajo de la misma sesión), se intentó re-desplegar el backend para activar una variable de entorno nueva (`SENTRY_DSN`). Ese intento de deploy expuso una cadena de **cuatro problemas independientes**, cada uno enmascarando al siguiente, que terminaron en que `/api/search` — el endpoint principal de la app — devolviera `500 FUNCTION_INVOCATION_FAILED` en producción.
 
 No hay evidencia de que un usuario haya reportado esto — se descubrió por casualidad, en medio de una tarea de configuración no relacionada.
 
@@ -51,4 +51,4 @@ No hay certeza de cuánto tiempo estuvo así — es posible que el mecanismo de 
 
 - [ ] Considerar un smoke test post-deploy en la propia CI (`deploy-api`) que golpee `/api/search?q=paracetamol` antes de dar el job por exitoso, para que un deploy roto nunca quede como "verde" en GitHub Actions. No implementado en esta sesión — evaluar como próximo paso.
 - [x] `CLAUDE.md` actualizado con las 4 reglas de este incidente (sección "Deploy del backend").
-- [x] `docs/product/DECISION_LOG.md` con la entrada correspondiente.
+- [x] `docs/product/decisions/DECISION_LOG.md` con la entrada correspondiente.

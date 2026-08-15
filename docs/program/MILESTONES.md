@@ -4,7 +4,7 @@ Registro de los grandes hitos alcanzados por el programa. A diferencia de `DONE.
 
 **Regla de gobierno:** nunca se elimina ni se edita retroactivamente una fila de este documento. Solo se agregan filas nuevas.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -22,7 +22,7 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Nivel de Gobierno** | Histórico / inmutable en sus filas ya registradas — se le agrega, no se le edita |
 | **Clasificación** | Registro de Hitos de Programa |
 | **Fuente Oficial** | Este documento, para hitos de nivel programa. Cada hito individual tiene su propia fuente de detalle, citada en la tabla |
-| **Documentos de los que depende** | `docs/audits/*`, `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/release/*`, `docs/product/DECISION_LOG.md` |
+| **Documentos de los que depende** | `docs/audits/*`, `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/release/*`, `docs/product/decisions/DECISION_LOG.md` |
 | **Pregunta que responde** | ¿Qué grandes hitos ha alcanzado el programa hasta ahora, y cuáles están todavía en curso? |
 
 ---
@@ -47,18 +47,18 @@ Dar memoria de los hitos que marcaron un cambio de fase en el programa — para 
 
 | Fecha | Hito | Evidencia | Nota |
 |---|---|---|---|
-| 2026-06-29 | Shared Domain Package — fin de la duplicación de `normalization.ts`/`types.ts` entre `api/` y `mobile/` | `docs/engineering/adr/ADR-0001_SHARED_DOMAIN_PACKAGE.md` | Creación de `packages/domain` |
-| 2026-07-19 | Postmortem PM-001 resuelto — pipeline de deploy del backend reparado | `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` | Deploy en producción estabilizado |
-| 2026-07-20 | Fase 1 de `COMPANY_STRATEGY.md` — historial de precios en Supabase, tracking de clicks, lanzamiento de `web/` | `docs/product/DECISION_LOG.md` (entradas 2026-07-20) | Primer paso de "app a empresa" |
-| 2026-07-31 | Ratificación de la secuencia de Sprints 0–F con scoring CFPS | `docs/actas/20260731b.md` | Orden E → A → C → spike → B |
-| 2026-07-31 | Sprints E (receta completa), A (CFM-ID), C (alertas email) implementados y mergeados | `docs/product/DECISION_LOG.md` (entradas 2026-07-31) | — |
-| 2026-08-02 | **Gobierno Documental** — primera auditoría formal del repositorio completo | `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` | Diagnóstico base para toda la gobernanza posterior |
-| 2026-08-02 | Sprint D (cuenta ligera + perfil) implementado | `docs/product/DECISION_LOG.md` | — |
+| 2026-06-29 | Shared Domain Package — fin de la duplicación de `normalization.ts`/`types.ts` entre `api/` y `mobile/` | `docs/technology/decisions/adr/ADR-0001_SHARED_DOMAIN_PACKAGE.md` | Creación de `packages/domain` |
+| 2026-07-19 | Postmortem PM-001 resuelto — pipeline de deploy del backend reparado | `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` | Deploy en producción estabilizado |
+| 2026-07-20 | Fase 1 de `COMPANY_STRATEGY.md` — historial de precios en Supabase, tracking de clicks, lanzamiento de `web/` | `docs/product/decisions/DECISION_LOG.md` (entradas 2026-07-20) | Primer paso de "app a empresa" |
+| 2026-07-31 | Ratificación de la secuencia de Sprints 0–F con scoring CFPS | `docs/archive/meetings/20260731b.md` | Orden E → A → C → spike → B |
+| 2026-07-31 | Sprints E (receta completa), A (CFM-ID), C (alertas email) implementados y mergeados | `docs/product/decisions/DECISION_LOG.md` (entradas 2026-07-31) | — |
+| 2026-08-02 | **Gobierno Documental** — primera auditoría formal del repositorio completo | `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` | Diagnóstico base para toda la gobernanza posterior |
+| 2026-08-02 | Sprint D (cuenta ligera + perfil) implementado | `docs/product/decisions/DECISION_LOG.md` | — |
 | 2026-08-02/03 | Subscription Platform — Fase 1 (motor + Google Play adapter) y Fase 2 (Web Billing) implementadas y mergeadas | `docs/archive/product/EPICS_2026-08-15.md` | Fase 2 corregida de Stripe a Flow por incompatibilidad con Chile |
-| 2026-08-03 | **Arquitectura Empresarial — primera versión escrita** (Business Capability Map, Business Services, Enterprise Data Model, Digital Asset Register) | `docs/actas/20260803.md`, `docs/enterprise/*` | Estado: Draft/En Elaboración — **sin ratificación formal del CEO todavía** |
+| 2026-08-03 | **Arquitectura Empresarial — primera versión escrita** (Business Capability Map, Business Services, Enterprise Data Model, Digital Asset Register) | `docs/archive/meetings/20260803.md`, `docs/enterprise/*` | Estado: Draft/En Elaboración — **sin ratificación formal del CEO todavía** |
 | 2026-08-05 | **Arquitectura de Marca — completa (Draft)**: Brand Audit, Brand Foundations, Visual Identity, Design Concept, Brand Architecture | `docs/brand/*` | Estado: Draft — **sin ratificación formal del CEO todavía** |
 | 2026-08-05 | **Arquitectura de Diseño (dominio de proceso) — creada**: README, Design Exploration (EXP-001 abierta), Design Decision Log (DD-001 aprobado como decisión de proceso) | `docs/design/*` | Sin dirección visual final seleccionada todavía |
-| 2026-08-05 | **Arquitectura de Portafolio — resuelta**: modelo Branded House recomendado, marca principal identificada, portafolio reconstruido | `docs/brand/BRAND_ARCHITECTURE.md` | Cierra el vacío señalado en `docs/brand/BRAND_AUDIT.md` §5 |
+| 2026-08-05 | **Arquitectura de Portafolio — resuelta**: modelo Branded House recomendado, marca principal identificada, portafolio reconstruido | `docs/design/brand/BRAND_ARCHITECTURE.md` | Cierra el vacío señalado en `docs/design/brand/BRAND_AUDIT.md` §5 |
 | 2026-08-05 | **Gobierno Operativo del Programa — dominio creado**: `docs/program/` con sus 9 documentos | Este mismo dominio | Primer corte de estado consolidado del programa completo |
 | 2026-08-05 | **Arquitectura Estratégica Consolidada — cierre formal de Fase 1**: construcción de fundamentos concluida en los cuatro dominios que la componen (Enterprise, Brand, Design, Program Governance) | `docs/program/PHASE_TRANSITION.md`; `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/program/*` | Hito de cambio de fase, no de ratificación: ningún documento de Enterprise o Brand tiene aprobación formal del CEO todavía (eso sigue en `DECISION_QUEUE.md`, DQ-007) — lo que se cierra es la construcción, no la validación final. Abre la Fase 2 (Ejecución y Lanzamiento), sprint activo "Production Release 1.0" |
 
@@ -68,8 +68,8 @@ Incluidos aquí porque el programa los sigue activamente, aunque la evidencia di
 
 | Hito previsto | Estado real | Evidencia |
 |---|---|---|
-| Prueba Cerrada de Google Play finalizada (paso a Producción) | 🟡 **Restricción de código levantada (2026-08-08)** (confirmación del CTO en sesión de chat, 2026-08-08 — ver `CLAUDE.md`, sección "Actualización de estado (2026-08-08)"; sin artefacto de Play Console verificado de forma independiente en este repositorio). La publicación efectiva del AAB vc31 en el track de Producción (Acción 8 de `GO_LIVE_EXECUTION_PLAN.md`) sigue sin evidencia verificable en este repositorio — no se marca "paso a Producción" alcanzado hasta que Mario lo confirme en Play Console. | `CLAUDE.md`, `docs/release/GO_LIVE_EXECUTION_PLAN.md` Acción 8 |
-| Preparación de Producción completa | 🟡 **Parcial.** 3 de 4 bloqueantes históricos resueltos (API_SECRET_KEY, Algolia hardcodeada, Target SDK). Pendiente: Data Safety, y un riesgo abierto de configuración (`eas.json` track "internal"). | `docs/release/PRODUCTION_READINESS_V2.md` |
+| Prueba Cerrada de Google Play finalizada (paso a Producción) | 🟡 **Restricción de código levantada (2026-08-08)** (confirmación del CTO en sesión de chat, 2026-08-08 — ver `CLAUDE.md`, sección "Actualización de estado (2026-08-08)"; sin artefacto de Play Console verificado de forma independiente en este repositorio). La publicación efectiva del AAB vc31 en el track de Producción (Acción 8 de `GO_LIVE_EXECUTION_PLAN.md`) sigue sin evidencia verificable en este repositorio — no se marca "paso a Producción" alcanzado hasta que Mario lo confirme en Play Console. | `CLAUDE.md`, `docs/archive/releases/GO_LIVE_EXECUTION_PLAN.md` Acción 8 |
+| Preparación de Producción completa | 🟡 **Parcial.** 3 de 4 bloqueantes históricos resueltos (API_SECRET_KEY, Algolia hardcodeada, Target SDK). Pendiente: Data Safety, y un riesgo abierto de configuración (`eas.json` track "internal"). | `docs/archive/releases/PRODUCTION_READINESS_V2.md` |
 
 ---
 

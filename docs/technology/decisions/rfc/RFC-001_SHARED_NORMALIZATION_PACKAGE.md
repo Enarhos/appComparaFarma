@@ -944,8 +944,8 @@ grep -r "from.*lib/types" api/src mobile/src
 
 - [ ] PR aprobado por al menos 1 revisor técnico
 - [ ] CHANGELOG actualizado: entrada de breaking change indicando que `matchKey` cambió para nombres con guiones y short-word pairs
-- [ ] `docs/audits/AUDIT_SEARCH_NORMALIZATION.md` — CF-001 marcado como resuelto
-- [ ] `docs/engineering/reviews/ER-002_SEARCH_ENGINE_FULL_REVIEW.md` — NORM-01 marcado como resuelto
+- [ ] `docs/archive/audits/AUDIT_SEARCH_NORMALIZATION.md` — CF-001 marcado como resuelto
+- [ ] `docs/technology/reviews/ER-002_SEARCH_ENGINE_FULL_REVIEW.md` — NORM-01 marcado como resuelto
 
 ---
 

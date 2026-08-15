@@ -2,7 +2,7 @@
 
 Este documento no selecciona una tipografía definitiva, no diseña un wordmark, no crea un logotipo y no reemplaza un Brand Book. Es la **especificación oficial del sistema tipográfico**: qué capas lo componen, qué principios debe cumplir cualquier familia tipográfica futura, y qué reglas gobiernan su jerarquía, su comportamiento responsivo y su accesibilidad. Debe seguir siendo válido aunque, dentro de cinco años, cambie por completo la familia tipográfica utilizada por ComparaFarma — porque no gobierna esa elección, gobierna los principios y la arquitectura bajo los que esa elección deberá tomarse.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -17,10 +17,10 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Versión** | 1.0 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Brand Architect / Type Director / Enterprise Documentation Architect |
-| **Nivel de Gobierno** | Estratégico — cuarto grado de derivación: se apoya directamente en `docs/brand/LOGO_SYSTEM.md` (tercer grado) y en `docs/brand/VISUAL_IDENTITY.md` / `DESIGN_CONCEPT.md` (primer y segundo grado), todos derivados de `docs/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
+| **Nivel de Gobierno** | Estratégico — cuarto grado de derivación: se apoya directamente en `docs/design/brand/LOGO_SYSTEM.md` (tercer grado) y en `docs/design/brand/VISUAL_IDENTITY.md` / `DESIGN_CONCEPT.md` (primer y segundo grado), todos derivados de `docs/design/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
 | **Clasificación** | Documento de Arquitectura de Marca / Especificación de Sistema |
 | **Fuente Oficial** | Este documento es la fuente oficial de los **principios y la arquitectura** del sistema tipográfico. No es fuente de identidad (`BRAND_FOUNDATIONS.md`), de percepción visual (`VISUAL_IDENTITY.md`), de estructura de logotipo (`LOGO_SYSTEM.md`) ni de ninguna familia tipográfica concreta (documento de selección todavía no creado) |
-| **Documentos de los que depende** | `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_ARCHITECTURE.md`, `docs/brand/VISUAL_IDENTITY.md`, `docs/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/brand/LOGO_SYSTEM.md`, `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
+| **Documentos de los que depende** | `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_ARCHITECTURE.md`, `docs/design/brand/VISUAL_IDENTITY.md`, `docs/design/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/design/brand/LOGO_SYSTEM.md`, `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
 | **Documentos que gobierna** | Ninguno todavía de forma directa. Debería gobernar la futura selección concreta de familia(s) tipográfica(s) (documento de implementación, no creado) y condiciona estructuralmente a un futuro `BRAND_GUIDELINES.md` en todo lo relativo a uso tipográfico |
 | **Pregunta que responde** | ¿Cómo se gobierna el sistema tipográfico de ComparaFarma y cuáles son las reglas que deberán seguir todas las decisiones tipográficas futuras? |
 
@@ -50,8 +50,8 @@ Este documento existe para que esa responsabilidad no dependa de qué familia ti
 **Este documento NO define:**
 
 - Ninguna familia tipográfica específica, ni criterios de comparación entre familias reales del mercado. Corresponde a un futuro documento de selección tipográfica, no creado.
-- El wordmark ni su tipografía. Corresponde a `docs/brand/LOGO_SYSTEM.md` §4.2.2 (que ya declara el wordmark como componente estructural pendiente de definición tipográfica) — este documento no lo diseña ni lo duplica, solo aclara su relación (§4.8).
-- Ningún componente del sistema de logotipo (isotipo, variantes, restricciones de uso, motion). Corresponde íntegramente a `docs/brand/LOGO_SYSTEM.md`, ya vigente.
+- El wordmark ni su tipografía. Corresponde a `docs/design/brand/LOGO_SYSTEM.md` §4.2.2 (que ya declara el wordmark como componente estructural pendiente de definición tipográfica) — este documento no lo diseña ni lo duplica, solo aclara su relación (§4.8).
+- Ningún componente del sistema de logotipo (isotipo, variantes, restricciones de uso, motion). Corresponde íntegramente a `docs/design/brand/LOGO_SYSTEM.md`, ya vigente.
 - Color, iconografía, ilustración, fotografía o componentes de interfaz de usuario. Corresponden a `COLOR_SYSTEM`, `ICONOGRAPHY` y a un futuro `DESIGN_SYSTEM` de producto, ninguno creado todavía.
 - Un manual gráfico con ejemplos visuales, tamaños en píxeles o especificaciones de implementación técnica (variables CSS, tokens de diseño). Corresponde a un futuro `BRAND_GUIDELINES.md` y a la documentación técnica de `mobile/` y `web/`, no a este documento.
 - Ninguna decisión de identidad, arquitectura de marca o percepción visual ya tomada en `BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md` o `DESIGN_CONCEPT.md`. Este documento no las reinterpreta.
@@ -135,7 +135,7 @@ La filosofía general de esta capa es que **menos pesos usados con disciplina co
 Reglas generales, sin tamaños específicos:
 
 - La jerarquía debe construirse combinando peso, tamaño relativo y espaciado — nunca depender de una sola variable para distinguir un nivel de otro.
-- Cada nivel de jerarquía debe seguir siendo distinguible incluso sin color, en escala de grises o en cualquiera de las versiones de una tinta. Este documento extiende al sistema tipográfico el mismo principio de independencia del color ya exigido para el isotipo en `docs/brand/LOGO_SYSTEM.md` §4.5, porque `COLOR_SYSTEM` no existe todavía y ninguna jerarquía puede depender de una variable que aún no está definida.
+- Cada nivel de jerarquía debe seguir siendo distinguible incluso sin color, en escala de grises o en cualquiera de las versiones de una tinta. Este documento extiende al sistema tipográfico el mismo principio de independencia del color ya exigido para el isotipo en `docs/design/brand/LOGO_SYSTEM.md` §4.5, porque `COLOR_SYSTEM` no existe todavía y ninguna jerarquía puede depender de una variable que aún no está definida.
 - La jerarquía debe permitir escanear rápidamente una comparación de precios sin exigir lectura completa de cada fila — coherente con la propuesta de valor ya consolidada de decidir "en pocos segundos" (`BRAND_FOUNDATIONS.md` §14).
 - Ningún nivel de jerarquía debe lograr distinción mediante urgencia visual (parpadeo, tamaño desproporcionado, contraste agresivo) — coherente con la restricción ya declarada contra elementos de urgencia agresiva (`DESIGN_BRIEF.md` §4.10).
 
@@ -160,7 +160,7 @@ Requisitos mínimos, sin valores absolutos — fundamentados directamente en el 
 
 ### 4.8 Wordmark
 
-Este sistema tipográfico y el wordmark de ComparaFarma son decisiones independientes. `docs/brand/LOGO_SYSTEM.md` §4.2.2 ya define el wordmark como un componente estructural del sistema de logotipo cuya especificación tipográfica exacta "no existe todavía", y aclara que ese componente pertenece al dominio de `LOGO_SYSTEM` y del futuro trabajo de diseño gráfico del logotipo, no al de este documento.
+Este sistema tipográfico y el wordmark de ComparaFarma son decisiones independientes. `docs/design/brand/LOGO_SYSTEM.md` §4.2.2 ya define el wordmark como un componente estructural del sistema de logotipo cuya especificación tipográfica exacta "no existe todavía", y aclara que ese componente pertenece al dominio de `LOGO_SYSTEM` y del futuro trabajo de diseño gráfico del logotipo, no al de este documento.
 
 Se aclara explícitamente: **el wordmark no tiene por qué utilizar la misma familia tipográfica que el sistema de interfaz aquí definido (Display, Heading, Body, Caption, Data/Numeric).** Es una práctica habitual y legítima de identidad corporativa que el wordmark sea una pieza de diseño gráfico fija — en algunos casos con ajustes manuales de letras que no serían apropiados ni reproducibles en una tipografía de uso extendido en interfaz —, mientras que el sistema tipográfico de interfaz se optimiza para objetivos distintos: rendimiento, legibilidad en pantalla, variedad de pesos y disponibilidad multiplataforma (§4.3). Ambos sistemas deben ser coherentes entre sí en términos de personalidad percibida (§4.1), pero esa coherencia no exige ni implica que compartan la misma familia tipográfica.
 
@@ -168,7 +168,7 @@ Se aclara explícitamente: **el wordmark no tiene por qué utilizar la misma fam
 
 ## 5. Relaciones
 
-`TYPOGRAPHY_SYSTEM.md` depende, en cadena, de toda la Arquitectura de Marca ya construida: `BRAND_FOUNDATIONS.md` (identidad), `BRAND_ARCHITECTURE.md` (modelo Branded House, fuente del principio de Consistencia), `VISUAL_IDENTITY.md` y `DESIGN_CONCEPT.md` (principios y atributos de percepción), `DESIGN_BRIEF.md` (encargo de diseño y criterios de evaluación) y `docs/brand/LOGO_SYSTEM.md` (estructura del logotipo, de la que este documento distingue explícitamente el wordmark en §4.8).
+`TYPOGRAPHY_SYSTEM.md` depende, en cadena, de toda la Arquitectura de Marca ya construida: `BRAND_FOUNDATIONS.md` (identidad), `BRAND_ARCHITECTURE.md` (modelo Branded House, fuente del principio de Consistencia), `VISUAL_IDENTITY.md` y `DESIGN_CONCEPT.md` (principios y atributos de percepción), `DESIGN_BRIEF.md` (encargo de diseño y criterios de evaluación) y `docs/design/brand/LOGO_SYSTEM.md` (estructura del logotipo, de la que este documento distingue explícitamente el wordmark en §4.8).
 
 Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a la de cada uno de esos documentos: ninguno de ellos define cuántas capas tiene el sistema tipográfico, qué criterios debe cumplir una familia candidata, ni cómo debe comportarse la tipografía entre pantallas. `TYPOGRAPHY_SYSTEM.md` es el primer documento del repositorio que responde esa pregunta específica de arquitectura tipográfica, sin seleccionar ninguna familia concreta — de la misma manera en que `LOGO_SYSTEM.md` fijó la estructura del logotipo sin fijar la geometría final del isotipo.
 
@@ -178,16 +178,16 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Principios de marca y percepción visual | `docs/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md` | ✔ — aplicados al sistema tipográfico (§4.1) | Ningún principio nuevo agregado |
+| Principios de marca y percepción visual | `docs/design/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md` | ✔ — aplicados al sistema tipográfico (§4.1) | Ningún principio nuevo agregado |
 | Criterios de evaluación (legibilidad, escalabilidad) | `docs/design/DESIGN_BRIEF.md` §4.13 | ✔ — usados como principios y criterios de selección (§4.1, §4.3) | — |
 | Exigencia de densidad de información numérica y comparativa | `docs/design/DESIGN_BRIEF.md` §4.11 | ✔ — fundamenta la capa Data/Numeric (§4.2.5) y el criterio de números tabulares (§4.3) | Es el requisito más específico de este producto dentro de todo el documento |
-| Modelo de marca única (Branded House) | `docs/brand/BRAND_ARCHITECTURE.md` §4.1 | ✔ — fundamenta el principio de Consistencia (§4.1) | — |
+| Modelo de marca única (Branded House) | `docs/design/brand/BRAND_ARCHITECTURE.md` §4.1 | ✔ — fundamenta el principio de Consistencia (§4.1) | — |
 | Restricción contra urgencia agresiva | `docs/design/DESIGN_BRIEF.md` §4.10 | ✔ — condiciona el uso de pesos SemiBold/Bold (§4.4) y las reglas de jerarquía (§4.5) | — |
-| Estructura del logotipo y del wordmark | `docs/brand/LOGO_SYSTEM.md` §4.2.2 | Referenciado, no duplicado (§4.8) | Se aclara explícitamente la independencia entre wordmark y sistema tipográfico de interfaz |
-| Independencia del color | `docs/brand/LOGO_SYSTEM.md` §4.5 (aplicado al isotipo) | ✔ — extendido por analogía a la jerarquía tipográfica (§4.5) | `COLOR_SYSTEM` no existe todavía; la jerarquía no puede depender de una variable no definida |
-| Accesibilidad | `docs/brand/BRAND_FOUNDATIONS.md` §11.2; `VISUAL_IDENTITY.md` §4.2, vía `BRAND_AUDIT.md` §2 | ✔ (§4.7) | — |
+| Estructura del logotipo y del wordmark | `docs/design/brand/LOGO_SYSTEM.md` §4.2.2 | Referenciado, no duplicado (§4.8) | Se aclara explícitamente la independencia entre wordmark y sistema tipográfico de interfaz |
+| Independencia del color | `docs/design/brand/LOGO_SYSTEM.md` §4.5 (aplicado al isotipo) | ✔ — extendido por analogía a la jerarquía tipográfica (§4.5) | `COLOR_SYSTEM` no existe todavía; la jerarquía no puede depender de una variable no definida |
+| Accesibilidad | `docs/design/brand/BRAND_FOUNDATIONS.md` §11.2; `VISUAL_IDENTITY.md` §4.2, vía `BRAND_AUDIT.md` §2 | ✔ (§4.7) | — |
 | Familia tipográfica concreta | — (no existe documento de selección todavía) | No consolidado — declarado explícitamente fuera de alcance (§3) | Pendiente de un futuro documento de selección tipográfica |
-| Wordmark gráfico | `docs/brand/LOGO_SYSTEM.md` §4.2.2 | No consolidado — fuera de alcance de este documento | El wordmark sigue siendo competencia de `LOGO_SYSTEM` / diseño gráfico del logotipo |
+| Wordmark gráfico | `docs/design/brand/LOGO_SYSTEM.md` §4.2.2 | No consolidado — fuera de alcance de este documento | El wordmark sigue siendo competencia de `LOGO_SYSTEM` / diseño gráfico del logotipo |
 
 ---
 
@@ -195,9 +195,9 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 `TYPOGRAPHY_SYSTEM.md` **no reemplaza**:
 
-- `docs/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` — siguen siendo la única fuente de identidad, arquitectura de marca, principios de percepción y concepto de diseño.
+- `docs/design/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` — siguen siendo la única fuente de identidad, arquitectura de marca, principios de percepción y concepto de diseño.
 - `docs/design/DESIGN_BRIEF.md` — sigue siendo la única fuente del encargo de diseño y de los criterios de evaluación de propuestas.
-- `docs/brand/LOGO_SYSTEM.md` — sigue siendo la única fuente de estructura del sistema de logotipo, incluido el rol estructural del wordmark (§4.2.2 de ese documento), que este documento no duplica ni redefine.
+- `docs/design/brand/LOGO_SYSTEM.md` — sigue siendo la única fuente de estructura del sistema de logotipo, incluido el rol estructural del wordmark (§4.2.2 de ese documento), que este documento no duplica ni redefine.
 
 La responsabilidad específica de `TYPOGRAPHY_SYSTEM.md` dentro de la Arquitectura de Marca es gobernar exclusivamente los **principios y la arquitectura** del sistema tipográfico: sus capas funcionales, los criterios que debe cumplir cualquier familia candidata, la filosofía de su sistema de pesos, las reglas generales de jerarquía, los principios de comportamiento responsivo y los requisitos mínimos de accesibilidad. No gobierna, y no debe absorber en ninguna revisión futura, la selección de una familia tipográfica concreta, el diseño del wordmark, ni especificaciones técnicas de implementación (tokens, variables CSS, tamaños en píxeles) — esa frontera es una restricción deliberada de alcance (§3), consistente con el criterio de éxito declarado en §1: este documento debe seguir siendo válido aunque cambie por completo la familia tipográfica utilizada por ComparaFarma.
 
@@ -209,14 +209,14 @@ Cuando exista una discrepancia entre este documento y cualquiera de sus fuentes,
 
 ## 8. Documentos relacionados
 
-- `docs/brand/BRAND_FOUNDATIONS.md`
-- `docs/brand/BRAND_ARCHITECTURE.md`
-- `docs/brand/VISUAL_IDENTITY.md`
-- `docs/brand/DESIGN_CONCEPT.md`
+- `docs/design/brand/BRAND_FOUNDATIONS.md`
+- `docs/design/brand/BRAND_ARCHITECTURE.md`
+- `docs/design/brand/VISUAL_IDENTITY.md`
+- `docs/design/brand/DESIGN_CONCEPT.md`
 - `docs/design/DESIGN_BRIEF.md`
-- `docs/brand/LOGO_SYSTEM.md`
+- `docs/design/brand/LOGO_SYSTEM.md`
 - `docs/design/BRAND_IDENTITY_VALIDATION.md`
-- `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
+- `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
 
 Documentos que, una vez creados, dependerán estructuralmente de este documento: el futuro documento de selección tipográfica concreta, `COLOR_SYSTEM.md` (en lo relativo a contraste y jerarquía combinada), `ICONOGRAPHY.md` (en lo relativo a coherencia de personalidad entre tipografía e íconos), `BRAND_GUIDELINES.md`, y la documentación técnica de implementación de `mobile/` y `web/`.
 
@@ -226,7 +226,7 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la especificación oficial de principios y arquitectura del sistema tipográfico: principios (claridad, legibilidad, confianza, simplicidad, accesibilidad, consistencia, científica/profesional), arquitectura de cinco capas (Display, Heading, Body, Caption, Data/Numeric), criterios de selección de familias tipográficas, filosofía de sistema de pesos, reglas de jerarquía, principios de tipografía responsiva, requisitos mínimos de accesibilidad, y aclaración explícita de independencia entre el wordmark y el sistema tipográfico de interfaz. No selecciona ninguna familia tipográfica ni diseña el wordmark. | `docs/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/brand/LOGO_SYSTEM.md` v1.0 |
+| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la especificación oficial de principios y arquitectura del sistema tipográfico: principios (claridad, legibilidad, confianza, simplicidad, accesibilidad, consistencia, científica/profesional), arquitectura de cinco capas (Display, Heading, Body, Caption, Data/Numeric), criterios de selección de familias tipográficas, filosofía de sistema de pesos, reglas de jerarquía, principios de tipografía responsiva, requisitos mínimos de accesibilidad, y aclaración explícita de independencia entre el wordmark y el sistema tipográfico de interfaz. No selecciona ninguna familia tipográfica ni diseña el wordmark. | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/design/brand/LOGO_SYSTEM.md` v1.0 |
 
 ---
 
@@ -234,10 +234,10 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-05 | Definición de la arquitectura de identidad visual | Brand Architect / UX Strategist / Design System Architect | `docs/brand/VISUAL_IDENTITY.md` v1.0 |
-| 2026-08-05 | Definición del concepto de diseño | Director Creativo / Brand Strategist / Semiotic Designer / Enterprise Architect | `docs/brand/DESIGN_CONCEPT.md` v1.0 |
+| 2026-08-05 | Definición de la arquitectura de identidad visual | Brand Architect / UX Strategist / Design System Architect | `docs/design/brand/VISUAL_IDENTITY.md` v1.0 |
+| 2026-08-05 | Definición del concepto de diseño | Director Creativo / Brand Strategist / Semiotic Designer / Enterprise Architect | `docs/design/brand/DESIGN_CONCEPT.md` v1.0 |
 | 2026-08-06 | Redacción del Design Brief oficial de identidad visual | Creative Director / Brand Strategist / Design Director | `docs/design/DESIGN_BRIEF.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/brand/LOGO_SYSTEM.md` v1.0 |
-| 2026-08-05 | Definición de la especificación oficial del sistema tipográfico | Brand Architect / Type Director / Enterprise Documentation Architect | `docs/brand/TYPOGRAPHY_SYSTEM.md` v1.0 (este documento) |
+| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/design/brand/LOGO_SYSTEM.md` v1.0 |
+| 2026-08-05 | Definición de la especificación oficial del sistema tipográfico | Brand Architect / Type Director / Enterprise Documentation Architect | `docs/design/brand/TYPOGRAPHY_SYSTEM.md` v1.0 (este documento) |
 
 **Pendiente de definición:** ninguna acción anterior cuenta todavía con aprobación formal registrada del CEO/fundador. La selección de una familia tipográfica concreta y el diseño tipográfico del wordmark quedan, ambos, fuera de esta versión y pendientes de trabajo de diseño posterior.

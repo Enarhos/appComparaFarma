@@ -28,7 +28,7 @@ Ningún componente introduce un radio, un grosor o un color que no esté ya en e
 
 ## 1. Savings Arc
 
-![Savings Arc](assets/signature-components/01_savings_arc.png)
+![Savings Arc](../assets/signature-components/01_savings_arc.png)
 
 Arco parcial (nunca un círculo cerrado) que representa, proporcionalmente, cuánto se ahorra sobre el precio más caro comparado.
 
@@ -40,7 +40,7 @@ Arco parcial (nunca un círculo cerrado) que representa, proporcionalmente, cuá
 
 ## 2. Channel Bar
 
-![Channel Bar](assets/signature-components/02_channel_bar.png)
+![Channel Bar](../assets/signature-components/02_channel_bar.png)
 
 Codifica los canales de precio de una farmacia sin depender del texto.
 
@@ -52,7 +52,7 @@ Codifica los canales de precio de una farmacia sin depender del texto.
 
 ## 3. Price Block
 
-![Price Block](assets/signature-components/03_price_block.png)
+![Price Block](../assets/signature-components/03_price_block.png)
 
 La única forma oficial de mostrar un precio en ComparaFarma.
 
@@ -63,7 +63,7 @@ La única forma oficial de mostrar un precio en ComparaFarma.
 
 ## 4. Price Break Marker
 
-![Price Break Marker](assets/signature-components/04_price_break_marker.png)
+![Price Break Marker](../assets/signature-components/04_price_break_marker.png)
 
 El indicador oficial de cambio de precio — sin flechas bursátiles, sin iconografía financiera, sin stickers.
 
@@ -73,7 +73,7 @@ El indicador oficial de cambio de precio — sin flechas bursátiles, sin iconog
 
 ## 5. Sparkline
 
-![Sparkline](assets/signature-components/05_sparkline.png)
+![Sparkline](../assets/signature-components/05_sparkline.png)
 
 El lenguaje oficial de historial de precios — no un gráfico de barras genérico.
 
@@ -83,7 +83,7 @@ El lenguaje oficial de historial de precios — no un gráfico de barras genéri
 
 ## 6. Comparison Card
 
-![Comparison Card](assets/signature-components/06_comparison_card.png)
+![Comparison Card](../assets/signature-components/06_comparison_card.png)
 
 El componente más importante del producto — combina los cinco anteriores en una sola unidad.
 
@@ -94,7 +94,7 @@ El componente más importante del producto — combina los cinco anteriores en u
 
 ## 7. Empty State
 
-![Empty State](assets/signature-components/07_empty_state.png)
+![Empty State](../assets/signature-components/07_empty_state.png)
 
 El lenguaje oficial para "todavía no hay nada que mostrar" — cuatro variantes: sin resultados, sin favoritos, sin alertas, sin historial.
 
@@ -106,7 +106,7 @@ El lenguaje oficial para "todavía no hay nada que mostrar" — cuatro variantes
 
 ## Family Sheet — verificación de consistencia
 
-![Family Sheet](assets/signature-components/08_family_sheet.png)
+![Family Sheet](../assets/signature-components/08_family_sheet.png)
 
 Los siete componentes a la misma escala relativa, uno junto al otro, para verificar en un solo vistazo que ninguno introduce un radio, un grosor, una tipografía o un uso de color fuera de la tabla de la sección "Regla de geometría compartida".
 

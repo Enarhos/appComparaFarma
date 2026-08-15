@@ -7,7 +7,7 @@
 | **Estado** | Implementado (2026-08-03) — ratificado por el CEO sin ajustes, ejecutado y mergeado a `main` (PR #36) |
 | **Fecha** | 2026-08-02 |
 | **Autor** | Claude (rol CTO) |
-| **Documentos relacionados** | RFC-004 (Superseded), ADR-0003 (Superseded), ADR-0004, RFC-003, ADR-0002, `docs/product/EPICS.md`, `docs/product/BACKLOG_PRODUCT.md`, `docs/database/schema.sql` |
+| **Documentos relacionados** | RFC-004 (Superseded), ADR-0003 (Superseded), ADR-0004, RFC-003, ADR-0002, `docs/archive/product/EPICS_2026-08-15.md`, `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `docs/technology/database/schema.sql` |
 | **Prioridad** | Media (CFPS 3.20 — reutiliza el score de Fase 2 ya ratificado; es un cambio de proveedor, no de alcance de producto — ver §7) |
 
 ---
@@ -211,7 +211,7 @@ Este RFC no cambia el *alcance de producto* que ya fue puntuado y ratificado en 
 
 | Issue | Alcance |
 |---|---|
-| CF-122 | Modelo de datos: `flow_customers`, retirar `stripe_price_id` (`docs/database/schema.sql`, `subscriptionsDb.ts`) |
+| CF-122 | Modelo de datos: `flow_customers`, retirar `stripe_price_id` (`docs/technology/database/schema.sql`, `subscriptionsDb.ts`) |
 | CF-123 | Adaptador Flow (`flowAdapter.ts`): firma, llamadas HTTP, resolución de webhook, parsing de `commerceOrder`, con tests |
 | CF-124 | Acciones `start-flow-subscription`, `flow-register-return`, `flow-webhook` en `api/api/subscriptions.ts`/`routes/subscriptions.ts` |
 | CF-125 | UI de upgrade en `web/` adaptada al flujo de Flow (Server Action + redirect) |
@@ -222,7 +222,7 @@ Este RFC no cambia el *alcance de producto* que ya fue puntuado y ratificado en 
 
 ## 9. Definition of Done
 
-- [ ] `flow_customers` existe en `docs/database/schema.sql`, `stripe_price_id` retirada (pendiente de que el CEO corra el SQL en Supabase)
+- [ ] `flow_customers` existe en `docs/technology/database/schema.sql`, `stripe_price_id` retirada (pendiente de que el CEO corra el SQL en Supabase)
 - [ ] `flowAdapter.resolveFlowWebhookToken` maneja tokens válidos, inválidos y `commerceOrder` malformado sin lanzar
 - [ ] `action=start-flow-subscription/flow-register-return/flow-webhook` implementados, sin sumar funciones Vercel
 - [ ] `/cuenta` muestra "Actualizar a Premium" solo si hay al menos un plan vendible configurado

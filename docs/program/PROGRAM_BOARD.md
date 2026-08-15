@@ -2,7 +2,7 @@
 
 **Este es el documento con el que debe empezar toda sesión de trabajo.** Es una vista ejecutiva, no un registro detallado — cada afirmación aquí tiene su detalle y su evidencia completa en `MASTER_BACKLOG.md`, `RISKS.md`, `DECISION_QUEUE.md`, `MILESTONES.md`, `DONE.md` o en el dominio de origen correspondiente.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -53,7 +53,7 @@ El foco declarado del programa cambia ahora desde "construir arquitectura" hacia
 
 ### 4.2 Programa
 
-**ComparaFarma — Plataforma de Inteligencia Farmacéutica.** (Nombre y posicionamiento consolidados en `docs/brand/BRAND_ARCHITECTURE.md` §4.2 y `docs/strategy/VISION_2030.md`.)
+**ComparaFarma — Plataforma de Inteligencia Farmacéutica.** (Nombre y posicionamiento consolidados en `docs/design/brand/BRAND_ARCHITECTURE.md` §4.2 y `docs/enterprise/strategy/VISION_2030.md`.)
 
 ### 4.3 Sprint Actual
 
@@ -67,7 +67,7 @@ Corte al 2026-08-05, ya con el cierre de Fase 1. Los dominios de Fase 1 (Enterpr
 
 | Área / Workstream | Estado | Fase | Detalle |
 |---|---|---|---|
-| **Enterprise** | 🟡 En Elaboración | Fase 1 completada (construcción) → continuación en Fase 3 | 4 documentos escritos (BCM, BS, EDM, DAR), todos v1.0/v2.0 Draft. Próximo, por acuerdo explícito en `docs/actas/20260803.md`: Architecture Traceability Matrix → Product Portfolio → Operating Model → Enterprise Roadmap → Enterprise Glossary — ninguno de esos 5 existe todavía, y ninguno es bloqueante para el lanzamiento. |
+| **Enterprise** | 🟡 En Elaboración | Fase 1 completada (construcción) → continuación en Fase 3 | 4 documentos escritos (BCM, BS, EDM, DAR), todos v1.0/v2.0 Draft. Próximo, por acuerdo explícito en `docs/archive/meetings/20260803.md`: Architecture Traceability Matrix → Product Portfolio → Operating Model → Enterprise Roadmap → Enterprise Glossary — ninguno de esos 5 existe todavía, y ninguno es bloqueante para el lanzamiento. |
 | **Brand** | 🟡 Draft completo, sin ratificar | Fase 1 completada (construcción) → Logo/Color/Typography/Iconography pasan a Fase 2 | 5 documentos escritos y completos (`BRAND_AUDIT`, `BRAND_FOUNDATIONS`, `VISUAL_IDENTITY`, `DESIGN_CONCEPT`, `BRAND_ARCHITECTURE`). Ninguno tiene aprobación formal del CEO/fundador. Los sistemas visuales (Workstream A del sprint activo) son ahora trabajo de Fase 2. |
 | **Design** | 🟡 Exploración abierta | Fase 1 completada (dominio de proceso) → evaluación/selección pasa a Fase 2 | 1 exploración registrada (EXP-001, 3 familias conceptuales: Brújula, Mapa, Constelación — ninguna seleccionada), 1 decisión de proceso (DD-001: concepto "Orientación" aprobado para guiar el trabajo, no como decisión final de marca). La evaluación y selección final es el primer paso de Workstream A. |
 | **Launch (Google Play)** | 🟡 Prueba Cerrada finalizada (2026-08-08) | Fase 2 — Workstream B activo | Salida de Prueba Cerrada confirmada por el CTO en chat (confirmación del CTO en sesión de chat, 2026-08-08 — ver `CLAUDE.md`, sección "Actualización de estado (2026-08-08)"; sin artefacto de Play Console verificado de forma independiente en este repositorio). Falta confirmar en Play Console la publicación efectiva en Producción (Acción 8 de `GO_LIVE_EXECUTION_PLAN.md`). Bloqueantes históricos B-1/B-2/B-3/B-4 superados por este cierre. |
@@ -76,7 +76,7 @@ Corte al 2026-08-05, ya con el cierre de Fase 1. Los dominios de Fase 1 (Enterpr
 | **Growth** | ⚪ Mayormente Backlog | Fase 3 | Favoritos/historial/búsquedas recientes ya operativos (mobile). Bioequivalentes bloqueado, IA/escaneo de receta en fase de idea, push notifications sin código — ninguno requerido para el lanzamiento. |
 | **Commercial** | 🟡 Motor listo, sin catálogo | Motor: Fase 1 completada · Catálogo: Fase 3 | Motor de Suscripciones operativo en backend; catálogo comercial de planes vendibles vacío (solo plan placeholder "cortesía", no vendible); precios y modelo comercial real sin definir. No es uno de los 4 workstreams explícitos del sprint activo, pero condiciona la "propuesta de valor consolidada" de su objetivo. |
 | **Program Governance** | ✅ Fase 1 completada | Fase 1 completada | Dominio `docs/program/` (9 documentos) creado el 2026-08-05; este mismo cierre de Fase 1 y la transición a Fase 2 (`PHASE_TRANSITION.md`) son su entrega final de Fase 1. |
-| **Identity Architecture** | 🟡 Diseño y validación completos, sin implementar | Fase 2 (nuevo workstream, no listado en §4.3) | Cadena de 8 sprints (`PLATFORM-001` a `SPIKE-001`) diseñó y validó con evidencia real la convergencia de identidad Mobile/Web/Backend — ver detalle en `CLAUDE.md` ("Estado de la Documentación de Gobierno") y `docs/product/DECISION_LOG.md` (2026-08-06/07). Cero código implementado. Bloqueada por DQ-015 (aprobación del CEO). |
+| **Identity Architecture** | 🟡 Diseño y validación completos, sin implementar | Fase 2 (nuevo workstream, no listado en §4.3) | Cadena de 8 sprints (`PLATFORM-001` a `SPIKE-001`) diseñó y validó con evidencia real la convergencia de identidad Mobile/Web/Backend — ver detalle en `CLAUDE.md` ("Estado de la Documentación de Gobierno") y `docs/product/decisions/DECISION_LOG.md` (2026-08-06/07). Cero código implementado. Bloqueada por DQ-015 (aprobación del CEO). |
 
 **Nota sobre esta fila:** agregada el 2026-08-07 solo para reflejar este workstream nuevo. El resto de esta tabla sigue con corte al 2026-08-05 y no incorpora otros sprints corridos el 2026-08-06/07 (`RELEASE-003`, `PROJECT-001`, `PRODUCT-003`, `RELEASE-004`, `PLATFORM-001..SPIKE-001`) — requiere una reconciliación completa que no se hizo en esta sesión.
 
@@ -98,9 +98,9 @@ Detalle completo, impacto, probabilidad y mitigación de cada uno en `docs/progr
 
 Prioridades vigentes para el sprint activo "Production Release 1.0" (ver `docs/program/CURRENT_SPRINT.md`):
 
-1. **Resolver Data Safety en Play Console** (acción exclusiva del CEO, ~1h según `docs/release/PRODUCTION_BLOCKERS_PLAN.md`) — Workstream B, sigue siendo el bloqueo crítico único del programa.
+1. **Resolver Data Safety en Play Console** (acción exclusiva del CEO, ~1h según `docs/archive/releases/PRODUCTION_BLOCKERS_PLAN.md`) — Workstream B, sigue siendo el bloqueo crítico único del programa.
 2. **Evaluar las 3 familias conceptuales de diseño contra la matriz de criterios de `DESIGN_CONCEPT.md` §4.8 y seleccionar dirección visual final** — Workstream A, primer paso; condiciona Logo/Color/Typography/Iconography y, después, los assets de Google Play.
-3. **Completar Checklist de Producción y Revisión final de calidad** (`docs/release/PLAY_CONSOLE_CHECKLIST.md`, `PRODUCTION_READINESS_V2.md`) — Workstream C.
+3. **Completar Checklist de Producción y Revisión final de calidad** (`docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md`, `PRODUCTION_READINESS_V2.md`) — Workstream C.
 4. **Integrar la identidad visual resultante en la Plataforma Web** — Workstream D, depende de Workstream A.
 5. *(Transversal, fuera de los 4 workstreams explícitos pero relevante para la "propuesta de valor consolidada")* Definir el catálogo comercial real de planes Premium — decisión pendiente del CEO (`DECISION_QUEUE.md`, DQ-003).
 6. *(Transversal, no bloqueante)* Ratificación del CEO sobre los documentos de Enterprise y Brand (`DECISION_QUEUE.md`, DQ-007) y continuación de la cadena de Arquitectura Empresarial (Architecture Traceability Matrix) — ambos quedan en Fase 3, sin fecha comprometida.
@@ -134,7 +134,7 @@ Prioridades vigentes para el sprint activo "Production Release 1.0" (ver `docs/p
 
 ## 5. Relaciones
 
-Este documento consolida, sin duplicar en detalle, el estado de: `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/archive/product/EPICS_2026-08-15.md`/`docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`/`ROADMAP.md`, `docs/release/PRODUCTION_READINESS_V2.md`, `docs/analysis/PROJECT_INVENTORY.md` y `docs/actas/`. Se relaciona con el resto de `docs/program/` como su vista resumen — cada sección de este documento tiene su contraparte de detalle en otro archivo del mismo dominio.
+Este documento consolida, sin duplicar en detalle, el estado de: `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/archive/product/EPICS_2026-08-15.md`/`docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`/`ROADMAP.md`, `docs/archive/releases/PRODUCTION_READINESS_V2.md`, `docs/archive/assessments/PROJECT_INVENTORY.md` y `docs/actas/`. Se relaciona con el resto de `docs/program/` como su vista resumen — cada sección de este documento tiene su contraparte de detalle en otro archivo del mismo dominio.
 
 ---
 
@@ -142,11 +142,11 @@ Este documento consolida, sin duplicar en detalle, el estado de: `docs/enterpris
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Estado de Enterprise | `docs/enterprise/*`, `docs/actas/20260803.md` | ✔ resumido (§4.4) | — |
+| Estado de Enterprise | `docs/enterprise/*`, `docs/archive/meetings/20260803.md` | ✔ resumido (§4.4) | — |
 | Estado de Brand/Design | `docs/brand/*`, `docs/design/*` | ✔ resumido (§4.4) | — |
-| Estado de Launch/Google Play | `docs/release/PRODUCTION_READINESS_V2.md` | ✔ resumido (§4.4, §4.5) | Clasificación C ("no recomendable publicar todavía") citada íntegra en la fuente |
+| Estado de Launch/Google Play | `docs/archive/releases/PRODUCTION_READINESS_V2.md` | ✔ resumido (§4.4, §4.5) | Clasificación C ("no recomendable publicar todavía") citada íntegra en la fuente |
 | Estado de Product/Engineering | `docs/archive/product/EPICS_2026-08-15.md`, `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `DECISION_LOG.md` | ✔ resumido (§4.4) | — |
-| Estado de Platform | `docs/analysis/PROJECT_INVENTORY.md` | ✔ resumido (§4.4) | — |
+| Estado de Platform | `docs/archive/assessments/PROJECT_INVENTORY.md` | ✔ resumido (§4.4) | — |
 | Bloqueos | `docs/program/RISKS.md` | ✔ referenciado (§4.5) | Detalle completo vive en `RISKS.md` |
 | Decisiones pendientes | `docs/program/DECISION_QUEUE.md` | Referenciado (§4.6) | — |
 | Cierre formal de Fase 1 y transición a Fase 2 | `docs/program/PHASE_TRANSITION.md` | ✔ referenciado (§4.1, §4.3) | Resumen ejecutivo completo del cierre vive en ese documento, no se duplica aquí |
@@ -173,7 +173,7 @@ Este documento no reemplaza ningún dominio de contenido — es una vista de con
 |---|---|---|---|---|---|
 | 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial del tablero ejecutivo, reconstruyendo el estado real del programa a partir de toda la documentación existente. | Ver Matriz de Trazabilidad (§6) |
 | 1.1 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Cierre formal de Fase 1 (Arquitectura y Fundamentos) y apertura de Fase 2 (Ejecución y Lanzamiento): Estado General, Áreas del Programa, Prioridades, Próximos Hitos e Indicadores actualizados; Sprint Actual reemplazado por "Production Release 1.0". | `docs/program/PHASE_TRANSITION.md`, `MASTER_BACKLOG.md`, `MILESTONES.md`, `CURRENT_SPRINT.md` |
-| 1.2 | 2026-08-07 | Activo | Pendiente (CEO/fundador) | Actualización parcial: agregada la fila "Identity Architecture" en §4.4, prioridad #7 y nota explícita de que el resto de la tabla sigue con corte al 2026-08-05 (no se reconciliaron los demás sprints del 2026-08-06/07). | `docs/execution/SPIKE-001_IDENTITY_ENTITLEMENT_POC.md`, `docs/product/DECISION_LOG.md`, `docs/program/DECISION_QUEUE.md` (DQ-015) |
+| 1.2 | 2026-08-07 | Activo | Pendiente (CEO/fundador) | Actualización parcial: agregada la fila "Identity Architecture" en §4.4, prioridad #7 y nota explícita de que el resto de la tabla sigue con corte al 2026-08-05 (no se reconciliaron los demás sprints del 2026-08-06/07). | `docs/archive/execution/SPIKE-001_IDENTITY_ENTITLEMENT_POC.md`, `docs/product/decisions/DECISION_LOG.md`, `docs/program/DECISION_QUEUE.md` (DQ-015) |
 
 ---
 

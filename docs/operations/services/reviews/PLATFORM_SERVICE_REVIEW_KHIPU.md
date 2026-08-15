@@ -4,7 +4,7 @@
 
 **Nombre:** PLATFORM_SERVICE_REVIEW_KHIPU.md
 
-**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001` a `OPS-REV-010`.
+**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001` a `OPS-REV-010`.
 
 **Estado:** Activo
 
@@ -16,7 +16,7 @@
 
 **Clasificación:** Revisión de Servicio Externo (ítem de backlog `OPS-SVC-BKL-014`)
 
-**Documentos de los que depende:** `docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/release/RELEASE_READINESS_V1.md`, `docs/release/SERVICE_ACCOUNT_MIGRATION.md`, `api/src/clients/khipu.ts`, `api/src/routes/donate.ts`, `mobile/src/constants/donation.ts`, `mobile/src/components/DonationBanner.tsx`, historial de git del repositorio.
+**Documentos de los que depende:** `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/archive/releases/RELEASE_READINESS_V1.md`, `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`, `api/src/clients/khipu.ts`, `api/src/routes/donate.ts`, `mobile/src/constants/donation.ts`, `mobile/src/components/DonationBanner.tsx`, historial de git del repositorio.
 
 ---
 
@@ -33,7 +33,7 @@ Es decir: el código que usa credenciales reales de Khipu (`KHIPU_RECEIVER_ID`/`
 
 | Dato | Valor | Evidencia |
 |---|---|---|
-| Cobrador Khipu | "Mario Lillo Alfaro", ID `520175` | `docs/release/SERVICE_ACCOUNT_MIGRATION.md` línea 461, 468 |
+| Cobrador Khipu | "Mario Lillo Alfaro", ID `520175` | `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md` línea 461, 468 |
 | Flujo dinámico | `createKhipuPayment()` → API v2 (`/api/2.0/payments`), firma HMAC-SHA256, vars `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` en Vercel | `api/src/clients/khipu.ts` (código actual, leído completo) |
 | Flujo estático (en producción) | 4 payment links hardcodeados (`khipu.com/payment/process/{5Jxso,rkHAZ,qzd92,dAwLD}`) para $1.000/$3.000/$5.000/monto libre | `mobile/src/constants/donation.ts` |
 | Consumidor real en Mobile | `DonationBanner.tsx` → `Linking.openURL(urls[amount])` | `mobile/src/components/DonationBanner.tsx` |
@@ -54,7 +54,7 @@ No aplica un límite de "plan" en el sentido de Sentry/PostHog — Khipu no tien
    - `ab81bd3` agregó un endpoint público **`api/api/diagnose-khipu.ts`** — sin autenticación, con `Access-Control-Allow-Origin: *` — que respondía con `receiver_id_preview` (primeros 3 + últimos 2 caracteres) y `secret_preview` (primeros 4 + últimos 4 caracteres) de `KHIPU_SECRET`. Este archivo vive en `api/api/`, la carpeta de funciones serverless reales de Vercel (no en `src/`) — es decir, **fue un endpoint real y público** mientras existió, no un script local.
    - Ambos commits están confirmados como ancestros de `main` y de `origin/main` (`git merge-base --is-ancestor` → sí en ambos casos) — o sea, **llegaron a desplegarse en producción**, no quedaron en una rama sin mergear.
    - El mismo día, `a40d7e3` (commit "usar links estáticos de Khipu, sin llamada a la API") eliminó `diagnose-khipu.ts` al migrar al flujo estático — la ventana de exposición pública del endpoint fue de horas, no de meses.
-   - **Lo que no se pudo verificar:** si `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` fueron efectivamente rotados en el dashboard de Khipu después de este incidente. Los valores de variables de entorno no viven en git — no hay forma de confirmar esto desde el repositorio. `docs/release/RELEASE_READINESS_V1.md` (línea 95, ítem 5.3) y su lista de prioridades (línea 177, acción #6) marcan **"Rotar credenciales Khipu" como 🔴 Pendiente / Alta**, sin ningún commit o documento posterior que registre que se haya ejecutado. Dado que la app ya está en producción (aprobada 2026-08-13) y el flujo dinámico sigue usando las mismas variables de entorno declaradas en Vercel, **se trata como una acción de seguridad todavía abierta, no como resuelta**, salvo que el CTO confirme lo contrario directamente (no verificable por otra vía).
+   - **Lo que no se pudo verificar:** si `KHIPU_RECEIVER_ID`/`KHIPU_SECRET` fueron efectivamente rotados en el dashboard de Khipu después de este incidente. Los valores de variables de entorno no viven en git — no hay forma de confirmar esto desde el repositorio. `docs/archive/releases/RELEASE_READINESS_V1.md` (línea 95, ítem 5.3) y su lista de prioridades (línea 177, acción #6) marcan **"Rotar credenciales Khipu" como 🔴 Pendiente / Alta**, sin ningún commit o documento posterior que registre que se haya ejecutado. Dado que la app ya está en producción (aprobada 2026-08-13) y el flujo dinámico sigue usando las mismas variables de entorno declaradas en Vercel, **se trata como una acción de seguridad todavía abierta, no como resuelta**, salvo que el CTO confirme lo contrario directamente (no verificable por otra vía).
 2. **🟡 Medio — inconsistencia de referencia cruzada en la documentación (hallazgo nuevo, de higiene documental).** `SERVICE_ACCOUNT_MIGRATION.md` línea 464 remite a "RELEASE_READINESS_V1.md RC-3" para la nota de rotación de credenciales Khipu. Pero el **RC-3 real** de `RELEASE_READINESS_V1.md` (línea 195) es *"Scrapers HTML sin monitoreo de contenido"* — un tema no relacionado. La referencia correcta sería el ítem §5.3 ("Credenciales Khipu", línea 95) o la acción de prioridad #6 (línea 177). Es un error de cita, no un riesgo de producto, pero puede llevar a alguien a revisar el documento equivocado al buscar el contexto de este pendiente.
 3. **🟡 Medio — cuenta de cobrador personal, no empresarial (heredado de la Auditoría original, reconfirmado).** Los pagos de donación llegan a una cuenta Khipu a nombre de una persona natural ("Mario Lillo Alfaro"), no de una entidad LET. Implica mezcla de fondos personales y de producto, y ata la operación de donaciones a una sola persona.
 4. **🟢 Bajo — código muerto con superficie de riesgo si se reactiva sin cuidado.** El flujo dinámico (`/api/donate` + `createKhipuPayment()`) no tiene caller real hoy, pero sigue desplegado y funcional si algo lo invoca (ej. una futura integración desde `web/`). No es un riesgo activo mientras nadie lo llame, pero es superficie de ataque/mantenimiento sin uso — no se encontró evidencia de que esté planeado para `web/` ni de que se haya decidido eliminarlo.
@@ -157,7 +157,7 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 ## Documentos relacionados
 
-`docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/release/RELEASE_READINESS_V1.md`, `docs/release/SERVICE_ACCOUNT_MIGRATION.md`.
+`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/archive/releases/RELEASE_READINESS_V1.md`, `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`.
 
 ## Control de Cambios
 
@@ -172,6 +172,6 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-15 | Revisión completa de Khipu — undécimo ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/PLATFORM_SERVICE_REVIEW_KHIPU.md` v1.0 (este documento) |
+| 2026-08-15 | Revisión completa de Khipu — undécimo ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_KHIPU.md` v1.0 (este documento) |
 
 **Nota:** este documento no tiene, a la fecha, aprobación formal del CTO — fue creado a su pedido explícito; la aprobación es un paso posterior y separado.

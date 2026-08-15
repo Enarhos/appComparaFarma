@@ -260,7 +260,7 @@ Documento de referencia de todas las funcionalidades de la app, tanto implementa
 ### ✅ Configuración de farmacias y banner de donación
 - Panel `/admin/config` (Next.js, protegido con Supabase Auth) — checkboxes por farmacia y toggle/días del banner de donación, cambio instantáneo sin redeploy
 - Guardado en tabla `app_config` de Supabase (clave/valor genérico); fallback automático a las env vars `DISABLED_PHARMACIES`/`DONATION_BANNER_*` si Supabase no responde
-- La app recibe la config desde `/api/config` al arrancar y la aplica en tiempo real (ver limitación: no refetchea si la app ya está abierta — `docs/product/BACKLOG_PRODUCT.md` v15-16)
+- La app recibe la config desde `/api/config` al arrancar y la aplica en tiempo real (ver limitación: no refetchea si la app ya está abierta — `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` v15-16)
 
 ### ✅ Monitoreo
 - CI/CD con GitHub Actions en cada push a `main`

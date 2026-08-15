@@ -18,7 +18,7 @@ Crear las 3 tablas nuevas en Supabase que sostienen el motor de suscripciones, s
 ## Alcance
 
 ### Incluye
-- Agregar a `docs/database/schema.sql` (sección nueva, estilo `if not exists` consistente con el resto del archivo):
+- Agregar a `docs/technology/database/schema.sql` (sección nueva, estilo `if not exists` consistente con el resto del archivo):
   - `subscription_plans` (catálogo configurable de planes)
   - `subscriptions` (estado por usuario, con `provider`, `status`, vigencia)
   - `subscription_events` (bitácora inmutable de eventos de proveedor)
@@ -32,7 +32,7 @@ Crear las 3 tablas nuevas en Supabase que sostienen el motor de suscripciones, s
 ## Criterios de aceptación
 
 1. Las 3 tablas existen en Supabase (corridas a mano por Mario, mismo flujo que Sprint A/C/D).
-2. `docs/database/schema.sql` documenta la sección nueva con el mismo estilo que las anteriores.
+2. `docs/technology/database/schema.sql` documenta la sección nueva con el mismo estilo que las anteriores.
 3. Ningún cambio rompe `pnpm typecheck` ni los tests existentes (esta issue es solo SQL, sin código TypeScript).
 
 ## Definición de terminado

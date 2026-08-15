@@ -2,7 +2,7 @@
 
 Roadmap de programa: la evolución de los 7 workstreams entre sí, no el roadmap funcional de producto (eso es `docs/product/ROADMAP.md`, que este documento referencia sin duplicar).
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -20,7 +20,7 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Nivel de Gobierno** | De decisión operativa |
 | **Clasificación** | Roadmap de Programa |
 | **Fuente Oficial** | Este documento, para la vista consolidada entre workstreams. No reemplaza `docs/product/ROADMAP.md` (roadmap funcional) ni la futura `docs/enterprise/ENTERPRISE_ROADMAP.md` (roadmap de capacidades empresariales, todavía no escrita) |
-| **Documentos de los que depende** | `docs/product/ROADMAP.md`, `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/release/PRODUCTION_READINESS_V2.md`, `docs/actas/20260803.md` |
+| **Documentos de los que depende** | `docs/product/ROADMAP.md`, `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/archive/releases/PRODUCTION_READINESS_V2.md`, `docs/archive/meetings/20260803.md` |
 | **Pregunta que responde** | ¿Cómo evoluciona el programa completo, workstream por workstream, y en qué estado está cada uno hoy? |
 
 ---
@@ -91,20 +91,20 @@ Growth: depende de Product/Engineering para nuevas capacidades (bioequivalentes,
 
 | Workstream | Próximo hito | Fuente |
 |---|---|---|
-| Enterprise | Architecture Traceability Matrix | `docs/actas/20260803.md` |
-| Brand | Ratificación formal del CEO sobre `BRAND_FOUNDATIONS.md`/`BRAND_ARCHITECTURE.md` | `docs/brand/BRAND_FOUNDATIONS.md` §22-23 |
-| Design | Evaluación de las 3 familias conceptuales contra la matriz de criterios | `docs/design/DESIGN_EXPLORATION.md` |
-| Launch | Confirmación de cierre de Data Safety | `docs/release/PRODUCTION_READINESS_V2.md` |
+| Enterprise | Architecture Traceability Matrix | `docs/archive/meetings/20260803.md` |
+| Brand | Ratificación formal del CEO sobre `BRAND_FOUNDATIONS.md`/`BRAND_ARCHITECTURE.md` | `docs/design/brand/BRAND_FOUNDATIONS.md` §22-23 |
+| Design | Evaluación de las 3 familias conceptuales contra la matriz de criterios | `docs/archive/design/explorations/DESIGN_EXPLORATION.md` |
+| Launch | Confirmación de cierre de Data Safety | `docs/archive/releases/PRODUCTION_READINESS_V2.md` |
 | Product/Engineering | Sin sprint de ingeniería activo declarado; próximo candidato depende de prioridad del CEO | `docs/program/CURRENT_SPRINT.md` |
-| Platform | Sin pendiente crítico declarado | `docs/analysis/PROJECT_INVENTORY.md` |
+| Platform | Sin pendiente crítico declarado | `docs/archive/assessments/PROJECT_INVENTORY.md` |
 | Growth | Evaluar si se acota "Sprint B-lite" a Dr. Simi + Farmex (match exacto ISP) | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
-| Commercial | Definición del primer plan comercial real vendible | `docs/product/DECISION_LOG.md` (pendiente recurrente desde Fase 1 de Subscription Platform) |
+| Commercial | Definición del primer plan comercial real vendible | `docs/product/decisions/DECISION_LOG.md` (pendiente recurrente desde Fase 1 de Subscription Platform) |
 
 ---
 
 ## 5. Relaciones
 
-Este roadmap se apoya en `docs/product/ROADMAP.md` (roadmap funcional de producto, con sus 5 Objetivos Estratégicos) sin duplicarlo, y en la cadena de Arquitectura Empresarial declarada en `docs/enterprise/README.md` y en `docs/actas/20260803.md`. Se relaciona con `docs/program/MILESTONES.md` como el registro de lo ya alcanzado en cada workstream.
+Este roadmap se apoya en `docs/product/ROADMAP.md` (roadmap funcional de producto, con sus 5 Objetivos Estratégicos) sin duplicarlo, y en la cadena de Arquitectura Empresarial declarada en `docs/enterprise/README.md` y en `docs/archive/meetings/20260803.md`. Se relaciona con `docs/program/MILESTONES.md` como el registro de lo ya alcanzado en cada workstream.
 
 ---
 
@@ -113,8 +113,8 @@ Este roadmap se apoya en `docs/product/ROADMAP.md` (roadmap funcional de product
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
 | Roadmap funcional de producto (5 Objetivos Estratégicos) | `docs/product/ROADMAP.md` | Referencia (§4.3) | No se duplica el detalle de indicadores/capacidades de cada objetivo |
-| Cadena pendiente de Arquitectura Empresarial | `docs/actas/20260803.md` | ✔ (§4.1, §4.3) | — |
-| Roadmap documental de Brand/Design | `docs/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` | ✔ (§4.1, §4.3) | — |
+| Cadena pendiente de Arquitectura Empresarial | `docs/archive/meetings/20260803.md` | ✔ (§4.1, §4.3) | — |
+| Roadmap documental de Brand/Design | `docs/design/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` | ✔ (§4.1, §4.3) | — |
 
 ---
 

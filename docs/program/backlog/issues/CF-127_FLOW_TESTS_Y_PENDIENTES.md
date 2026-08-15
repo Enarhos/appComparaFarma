@@ -21,7 +21,7 @@ Cerrar el ciclo de Fase 2 corregida: verificación de extremo a extremo (parcial
 - Suite completa de tests (`api/`, `web/`) en verde tras CF-122 a CF-126.
 - `pnpm typecheck` limpio en los 4 workspaces.
 - Verificación manual en sandbox del flujo completo implementado (alta + al menos un cobro periódico simulado con `interval: 1` como en la investigación previa).
-- Documentar en `BACKLOG_PRODUCT.md`/`DECISION_LOG.md` la lista de pendientes reales del CEO: correr SQL de `flow_customers`/retiro de `stripe_price_id` en Supabase; configurar `FLOW_API_KEY`/`FLOW_SECRET_KEY`/`FLOW_API_BASE_URL` en Vercel (producción, `www.flow.cl/api`); definir y crear el primer plan comercial real.
+- Documentar en `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` (archivado, ver nota abajo) / `docs/product/decisions/DECISION_LOG.md` la lista de pendientes reales del CEO: correr SQL de `flow_customers`/retiro de `stripe_price_id` en Supabase; configurar `FLOW_API_KEY`/`FLOW_SECRET_KEY`/`FLOW_API_BASE_URL` en Vercel (producción, `www.flow.cl/api`); definir y crear el primer plan comercial real.
 
 ### No incluye
 - No define el catálogo comercial real (sigue siendo decisión del CEO).
@@ -39,4 +39,4 @@ Cerrar el ciclo de Fase 2 corregida: verificación de extremo a extremo (parcial
 - [x] Tests de `web/` de los archivos tocados verdes: `startFlowSubscription.test.ts` (4) + `plans.test.ts` (4)
 - [ ] Resto de la suite de `web/` (componentes/lib no relacionados a Subscription Platform) — **no se pudo correr completa en este entorno** por timeout del sandbox de ejecución (limitación de infraestructura de esta sesión, ya documentada en sesiones anteriores del proyecto — no relacionada a este cambio). Ningún archivo de esos tests importa código tocado en CF-122 a CF-126; el typecheck limpio del workspace completo es la señal de regresión disponible. Recomendado correr `pnpm --filter web test` completo en CI/local antes de deployar a producción.
 - [x] Verificación manual del flujo Flow en sandbox — hecha con `flow-sandbox-test.js` (script de investigación, eliminado tras usarse) antes de escribir el adaptador; **no repetida contra el código final** por no tener credenciales de sandbox disponibles en esta sesión — recomendado que Mario la repita una vez configuradas las variables de entorno en un ambiente de prueba.
-- [x] Pendientes del CEO documentados en `BACKLOG_PRODUCT.md`
+- [x] Pendientes del CEO documentados en `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` (nota 2026-08-15: ese archivo fue archivado en la limpieza de gobierno documental; los pendientes citados siguen siendo válidos como registro histórico de la fecha en que se documentaron)

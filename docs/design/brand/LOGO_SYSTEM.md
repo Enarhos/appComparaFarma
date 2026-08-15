@@ -2,7 +2,7 @@
 
 Este documento no es un manual gráfico. No es un Brand Book. No es un documento de diseño. No dibuja, no propone tipografías, no define colores y no crea iconografía. Es la **especificación oficial de la estructura del sistema de logotipo**: qué componentes lo integran, cómo se combinan, cuándo corresponde usar cada combinación, y qué reglas gobiernan su uso y su evolución futura. Debe seguir siendo válido aunque, en el futuro, cambien el color, la tipografía o el contenido de un eventual Brand Book — porque no gobierna ninguna de esas tres cosas.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -17,10 +17,10 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Versión** | 1.0 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Brand Architect / Identity Systems Director / Enterprise Documentation Architect |
-| **Nivel de Gobierno** | Estratégico — tercer grado de derivación: se apoya directamente en `docs/brand/DESIGN_CONCEPT.md` (segundo grado) y `docs/brand/VISUAL_IDENTITY.md` (primer grado), ambos derivados de `docs/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
+| **Nivel de Gobierno** | Estratégico — tercer grado de derivación: se apoya directamente en `docs/design/brand/DESIGN_CONCEPT.md` (segundo grado) y `docs/design/brand/VISUAL_IDENTITY.md` (primer grado), ambos derivados de `docs/design/brand/BRAND_FOUNDATIONS.md` (Fundacional derivado) |
 | **Clasificación** | Documento de Arquitectura de Marca / Especificación de Sistema |
 | **Fuente Oficial** | Este documento es la fuente oficial de la **estructura y reglas de gobierno** del sistema de logotipo. No es fuente de identidad (`BRAND_FOUNDATIONS.md`), de concepto (`DESIGN_CONCEPT.md`), de percepción visual (`VISUAL_IDENTITY.md`), ni de la geometría concreta del isotipo (entregable de construcción del Candidato 09, auditado en `docs/design/BRAND_IDENTITY_VALIDATION.md`) |
-| **Documentos de los que depende** | `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_ARCHITECTURE.md`, `docs/brand/VISUAL_IDENTITY.md`, `docs/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/design/DESIGN_DECISION_LOG.md`, `docs/design/BRAND_IDENTITY_VALIDATION.md`, `docs/product/PRODUCT_DEFINITION_v1.0.md`, `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
+| **Documentos de los que depende** | `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_ARCHITECTURE.md`, `docs/design/brand/VISUAL_IDENTITY.md`, `docs/design/brand/DESIGN_CONCEPT.md`, `docs/design/DESIGN_BRIEF.md`, `docs/design/decisions/DESIGN_DECISION_LOG.md`, `docs/design/BRAND_IDENTITY_VALIDATION.md`, `docs/product/PRODUCT_DEFINITION_v1.0.md`, `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` |
 | **Documentos que gobierna** | Ninguno todavía de forma directa. Debería gobernar toda futura decisión de aplicación del logotipo en `LOGO_APPLICATION` / `BRAND_GUIDELINES` (no existen aún), y condiciona estructuralmente a `COLOR_SYSTEM`, `TYPOGRAPHY_SYSTEM` e `ICONOGRAPHY` en la medida en que esos documentos deban componer su materia (color, tipografía) sobre los componentes aquí definidos (isotipo, wordmark, logotipo completo) |
 | **Pregunta que responde** | ¿Cómo está compuesto el sistema oficial del logotipo de ComparaFarma y cuáles son las reglas que gobiernan su utilización y evolución? |
 
@@ -166,7 +166,7 @@ Estos principios se apoyan en un hallazgo ya registrado en la auditoría de cali
 
 Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a la de cada uno de esos documentos: ninguno de ellos define cuántos componentes tiene el sistema de logotipo, cómo se combinan, ni qué transformaciones están prohibidas. `LOGO_SYSTEM.md` es el primer documento del repositorio que responde esa pregunta específica de estructura, sin resolver todavía color ni tipografía.
 
-**Observación de gobierno:** `docs/design/DESIGN_DECISION_LOG.md` registra hoy únicamente la decisión DD-001 (concepto central "Orientación"). No existe, a la fecha, una fila DD-002 a DD-005 que registre formalmente la aprobación del proceso de exploración, refinamiento y construcción del Candidato 09 como isotipo oficial — esa cadena de decisiones se documentó como entregables de proceso y, en su etapa final, como la auditoría `BRAND_IDENTITY_VALIDATION.md`, pero no como filas de `DESIGN_DECISION_LOG.md`. Este documento no corrige esa omisión por no estar dentro de su alcance (§3), pero la señala como pendiente de gobierno: `DESIGN_DECISION_LOG.md` exige que "ninguna fila puede aprobarse sin una columna 'Documento fuente' verificable" (§7 de ese documento), y hoy esa fuente existe (`BRAND_IDENTITY_VALIDATION.md`) sin que la fila correspondiente se haya creado todavía.
+**Observación de gobierno:** `docs/design/decisions/DESIGN_DECISION_LOG.md` registra hoy únicamente la decisión DD-001 (concepto central "Orientación"). No existe, a la fecha, una fila DD-002 a DD-005 que registre formalmente la aprobación del proceso de exploración, refinamiento y construcción del Candidato 09 como isotipo oficial — esa cadena de decisiones se documentó como entregables de proceso y, en su etapa final, como la auditoría `BRAND_IDENTITY_VALIDATION.md`, pero no como filas de `DESIGN_DECISION_LOG.md`. Este documento no corrige esa omisión por no estar dentro de su alcance (§3), pero la señala como pendiente de gobierno: `DESIGN_DECISION_LOG.md` exige que "ninguna fila puede aprobarse sin una columna 'Documento fuente' verificable" (§7 de ese documento), y hoy esa fuente existe (`BRAND_IDENTITY_VALIDATION.md`) sin que la fila correspondiente se haya creado todavía.
 
 ---
 
@@ -174,15 +174,15 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Principios de marca y percepción visual | `docs/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md` | ✔ — aplicados al sistema de logotipo (§4.1) | Ningún principio nuevo agregado |
+| Principios de marca y percepción visual | `docs/design/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md` | ✔ — aplicados al sistema de logotipo (§4.1) | Ningún principio nuevo agregado |
 | Criterios de evaluación (memorabilidad, escalabilidad, atemporalidad) | `docs/design/DESIGN_BRIEF.md` §4.13 | ✔ — usados como principios del sistema (§4.1) | — |
-| Modelo de marca única (Branded House) | `docs/brand/BRAND_ARCHITECTURE.md` §4.1, §4.2 | ✔ — fundamenta el rol del wordmark y el carácter complementario del isotipo (§4.2) | — |
+| Modelo de marca única (Branded House) | `docs/design/brand/BRAND_ARCHITECTURE.md` §4.1, §4.2 | ✔ — fundamenta el rol del wordmark y el carácter complementario del isotipo (§4.2) | — |
 | Exigencia de Responsive Logo / legibilidad multiplataforma | `docs/design/DESIGN_BRIEF.md` §4.11, §4.12 | ✔ — fundamenta §4.2.4, §4.3, §4.7 | — |
 | Geometría, proporciones, área de seguridad, tamaño mínimo del isotipo | Entregable de construcción del Candidato 09 (no archivado como documento independiente) | Referenciado, no duplicado (§4.4) | Pendiente: archivar formalmente la especificación de construcción si el candidato se aprueba sin condiciones |
 | Estado de aprobación del isotipo y riesgos identificados | `docs/design/BRAND_IDENTITY_VALIDATION.md` | ✔ — condiciona §4.2.1, §4.3, §4.4, §4.7 | Estado "Aprobar con ajustes"; cuatro ajustes pendientes |
 | Versiones de contraste permitidas (positivo/negativo/monocromo/una tinta) | `docs/design/BRAND_IDENTITY_VALIDATION.md`, BV-002 | ✔ (§4.5) | — |
 | Potencial de motion del isotipo | `docs/design/BRAND_IDENTITY_VALIDATION.md`, BV-007 | ✔ — fundamenta §4.8 sin diseñar la animación | — |
-| Decisión formal de adopción del Candidato 09 como isotipo oficial | `docs/design/DESIGN_DECISION_LOG.md` | No consolidado — fila DD-002/DD-005 no existe todavía | Ver observación de gobierno en §5 |
+| Decisión formal de adopción del Candidato 09 como isotipo oficial | `docs/design/decisions/DESIGN_DECISION_LOG.md` | No consolidado — fila DD-002/DD-005 no existe todavía | Ver observación de gobierno en §5 |
 | Color, tipografía, iconografía | — (documentos no creados todavía) | No consolidado — declarado explícitamente fuera de alcance (§3) | Pendiente de `COLOR_SYSTEM`, `TYPOGRAPHY_SYSTEM`, `ICONOGRAPHY` |
 
 ---
@@ -191,7 +191,7 @@ Su responsabilidad específica dentro de la Arquitectura de Marca es distinta a 
 
 `LOGO_SYSTEM.md` **no reemplaza**:
 
-- `docs/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` — siguen siendo la única fuente de identidad, arquitectura de marca, principios de percepción y concepto de diseño.
+- `docs/design/brand/BRAND_FOUNDATIONS.md`, `BRAND_ARCHITECTURE.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` — siguen siendo la única fuente de identidad, arquitectura de marca, principios de percepción y concepto de diseño.
 - `docs/design/DESIGN_BRIEF.md` — sigue siendo la única fuente del encargo de diseño y de los criterios de evaluación de propuestas.
 - `docs/design/BRAND_IDENTITY_VALIDATION.md` — sigue siendo la única fuente del resultado de auditoría de calidad del isotipo y de sus ajustes pendientes.
 - La especificación de construcción del Candidato 09 — sigue siendo la única fuente de geometría, proporciones, compensaciones ópticas, módulos, área de seguridad y tamaño mínimo (§4.4).
@@ -200,22 +200,22 @@ La responsabilidad específica de `LOGO_SYSTEM.md` dentro de la Arquitectura de 
 
 Cuando exista una discrepancia entre este documento y cualquiera de sus fuentes, prevalece la fuente original y este documento debe corregirse — mismo principio de gobierno ya declarado en `docs/enterprise/README.md` y aplicado de forma consistente en el resto de `docs/brand/`.
 
-**Ninguna versión de este documento tiene, a la fecha, aprobación formal del CEO/fundador.** Adicionalmente, ninguna variante que use el isotipo (§4.2.1, §4.3) debe considerarse de aplicación definitiva hasta que se resuelvan los cuatro ajustes pendientes de `docs/design/BRAND_IDENTITY_VALIDATION.md` y se registre formalmente, en `docs/design/DESIGN_DECISION_LOG.md`, la decisión de adopción del Candidato 09 (ver observación de gobierno en §5).
+**Ninguna versión de este documento tiene, a la fecha, aprobación formal del CEO/fundador.** Adicionalmente, ninguna variante que use el isotipo (§4.2.1, §4.3) debe considerarse de aplicación definitiva hasta que se resuelvan los cuatro ajustes pendientes de `docs/design/BRAND_IDENTITY_VALIDATION.md` y se registre formalmente, en `docs/design/decisions/DESIGN_DECISION_LOG.md`, la decisión de adopción del Candidato 09 (ver observación de gobierno en §5).
 
 ---
 
 ## 8. Documentos relacionados
 
-- `docs/brand/BRAND_FOUNDATIONS.md`
-- `docs/brand/BRAND_ARCHITECTURE.md`
-- `docs/brand/VISUAL_IDENTITY.md`
-- `docs/brand/DESIGN_CONCEPT.md`
+- `docs/design/brand/BRAND_FOUNDATIONS.md`
+- `docs/design/brand/BRAND_ARCHITECTURE.md`
+- `docs/design/brand/VISUAL_IDENTITY.md`
+- `docs/design/brand/DESIGN_CONCEPT.md`
 - `docs/design/DESIGN_BRIEF.md`
-- `docs/design/DESIGN_DECISION_LOG.md`
-- `docs/design/DESIGN_EXPLORATION.md`
+- `docs/design/decisions/DESIGN_DECISION_LOG.md`
+- `docs/archive/design/explorations/DESIGN_EXPLORATION.md`
 - `docs/design/BRAND_IDENTITY_VALIDATION.md`
 - `docs/product/PRODUCT_DEFINITION_v1.0.md`
-- `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
+- `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
 
 Documentos que, una vez creados, dependerán estructuralmente de este documento: `COLOR_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY.md`, `BRAND_GUIDELINES.md`, `GOOGLE_PLAY_ASSETS.md`, `MARKETING_GUIDELINES.md`.
 
@@ -225,7 +225,7 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la especificación oficial de estructura del sistema de logotipo: principios del sistema, componentes (isotipo, wordmark, logotipo completo, responsive logo), variantes oficiales de arquitectura, referencia a la especificación de construcción sin duplicarla, versiones de reproducción permitidas, restricciones de uso, reglas de transición responsive y principios de movimiento. No define color, tipografía, iconografía ni manual gráfico. Señala como pendiente de gobierno la ausencia de una fila formal en `DESIGN_DECISION_LOG.md` que registre la adopción del Candidato 09. | `docs/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/design/DESIGN_DECISION_LOG.md` v1.0; `docs/design/BRAND_IDENTITY_VALIDATION.md` v1.0 |
+| 1.0 | 2026-08-05 | Draft | Pendiente (CEO/fundador) | Creación inicial. Define la especificación oficial de estructura del sistema de logotipo: principios del sistema, componentes (isotipo, wordmark, logotipo completo, responsive logo), variantes oficiales de arquitectura, referencia a la especificación de construcción sin duplicarla, versiones de reproducción permitidas, restricciones de uso, reglas de transición responsive y principios de movimiento. No define color, tipografía, iconografía ni manual gráfico. Señala como pendiente de gobierno la ausencia de una fila formal en `DESIGN_DECISION_LOG.md` que registre la adopción del Candidato 09. | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1; `BRAND_ARCHITECTURE.md` v1.0; `VISUAL_IDENTITY.md` v1.0; `DESIGN_CONCEPT.md` v1.0; `docs/design/DESIGN_BRIEF.md` v1.0; `docs/design/decisions/DESIGN_DECISION_LOG.md` v1.0; `docs/design/BRAND_IDENTITY_VALIDATION.md` v1.0 |
 
 ---
 
@@ -233,10 +233,10 @@ Documentos que, una vez creados, dependerán estructuralmente de este documento:
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-05 | Definición del concepto de diseño | Director Creativo / Brand Strategist / Semiotic Designer / Enterprise Architect | `docs/brand/DESIGN_CONCEPT.md` v1.0 |
+| 2026-08-05 | Definición del concepto de diseño | Director Creativo / Brand Strategist / Semiotic Designer / Enterprise Architect | `docs/design/brand/DESIGN_CONCEPT.md` v1.0 |
 | 2026-08-06 | Redacción del Design Brief oficial de identidad visual | Creative Director / Brand Strategist / Design Director | `docs/design/DESIGN_BRIEF.md` v1.0 |
 | 2026-08-05 | Exploración, refinamiento y construcción geométrica del isotipo | Senior Identity Designer (criterio Pentagram) | Candidato 09 — especificación de construcción (entregable de proceso, no archivado) |
 | 2026-08-05 | Auditoría de calidad de identidad de marca | Brand Quality Director (criterio Pentagram / Wolff Olins / DesignStudio) | `docs/design/BRAND_IDENTITY_VALIDATION.md` v1.0 — recomendación: Aprobar con ajustes |
-| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/brand/LOGO_SYSTEM.md` v1.0 (este documento) |
+| 2026-08-05 | Definición de la especificación oficial del sistema de logotipo | Brand Architect / Identity Systems Director / Enterprise Documentation Architect | `docs/design/brand/LOGO_SYSTEM.md` v1.0 (este documento) |
 
-**Pendiente de definición:** ninguna acción anterior cuenta todavía con aprobación formal registrada del CEO/fundador. Adicionalmente, quedan pendientes: (1) la resolución de los cuatro ajustes de `docs/design/BRAND_IDENTITY_VALIDATION.md`, y (2) el registro formal en `docs/design/DESIGN_DECISION_LOG.md` de la decisión de adopción del Candidato 09 como isotipo oficial — ninguna de las dos cosas bloquea la validez estructural de este documento, pero ambas condicionan la aplicación definitiva de cualquier variante que use el isotipo.
+**Pendiente de definición:** ninguna acción anterior cuenta todavía con aprobación formal registrada del CEO/fundador. Adicionalmente, quedan pendientes: (1) la resolución de los cuatro ajustes de `docs/design/BRAND_IDENTITY_VALIDATION.md`, y (2) el registro formal en `docs/design/decisions/DESIGN_DECISION_LOG.md` de la decisión de adopción del Candidato 09 como isotipo oficial — ninguna de las dos cosas bloquea la validez estructural de este documento, pero ambas condicionan la aplicación definitiva de cualquier variante que use el isotipo.

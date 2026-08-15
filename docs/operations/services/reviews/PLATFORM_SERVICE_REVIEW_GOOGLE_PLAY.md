@@ -4,7 +4,7 @@
 
 **Nombre:** PLATFORM_SERVICE_REVIEW_GOOGLE_PLAY.md
 
-**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001` a `OPS-REV-007`.
+**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001` a `OPS-REV-007`.
 
 **Estado:** Activo
 
@@ -16,7 +16,7 @@
 
 **Clasificación:** Revisión de Servicio Externo (ítem de backlog `OPS-SVC-BKL-011`)
 
-**Documentos de los que depende:** `docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (ficha #9), `mobile/app.json`, `mobile/src/components/DonationBanner.tsx`, `mobile/src/constants/donation.ts`, `api/src/lib/adapters/googlePlayAdapter.ts`.
+**Documentos de los que depende:** `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (ficha #9), `mobile/app.json`, `mobile/src/components/DonationBanner.tsx`, `mobile/src/constants/donation.ts`, `api/src/lib/adapters/googlePlayAdapter.ts`.
 
 ---
 
@@ -33,7 +33,7 @@ Google Play Console cumple dos funciones separadas para ComparaFarma:
 |---|---|
 | Package name | `mla.app.comparafarma` |
 | versionCode actual | 31 (v1.4.0) — aprobado para producción el 2026-08-13 |
-| Cuenta | Individual, no organización — `docs/release/SERVICE_ACCOUNT_MIGRATION.md` infiere por el prefijo `mla` del bundle ID que es la cuenta personal de "Mario Lillo Alfaro" |
+| Cuenta | Individual, no organización — `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md` infiere por el prefijo `mla` del bundle ID que es la cuenta personal de "Mario Lillo Alfaro" |
 | RTDN | `GOOGLE_RTDN_SECRET` en `api/.env.example`; endpoint `POST /api/subscriptions?action=google-rtdn` |
 | Política de privacidad registrada | `https://enarhos.github.io/appComparaFarma/privacy-policy.html` (GitHub Pages, ver `OPS-REV-006`) |
 
@@ -103,7 +103,7 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 ## Documentos relacionados
 
-`docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/PLATFORM_SERVICE_REVIEW_VERCEL.md` (hallazgo relacionado sobre la misma funcionalidad de donaciones).
+`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_VERCEL.md` (hallazgo relacionado sobre la misma funcionalidad de donaciones).
 
 ## Control de Cambios
 
@@ -116,6 +116,6 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-15 | Revisión completa de Google Play Console — octavo ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/PLATFORM_SERVICE_REVIEW_GOOGLE_PLAY.md` v1.0 (este documento) |
+| 2026-08-15 | Revisión completa de Google Play Console — octavo ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_GOOGLE_PLAY.md` v1.0 (este documento) |
 
 **Nota:** este documento no tiene, a la fecha, aprobación formal del CTO — fue creado a su pedido explícito; la aprobación es un paso posterior y separado. La decisión sobre el `DonationBanner` (§8, §10) queda pendiente, y conviene tratarla junto con la decisión equivalente pendiente de `OPS-REV-005` (Vercel), ya que ambas comparten la misma causa.

@@ -4,7 +4,7 @@
 
 **Nombre:** PLATFORM_SERVICE_REVIEW_BACKLOG.md
 
-**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo ya usado por `docs/operations/PLATFORM_SERVICE_CATALOG.md` (OPS-SVC-001) y reconocido en `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md` §3.1.
+**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo ya usado por `docs/operations/PLATFORM_SERVICE_CATALOG.md` (OPS-SVC-001) y reconocido en `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md` §3.1.
 
 **Estado:** Activo
 
@@ -34,7 +34,7 @@ Este documento es el backlog maestro desde el cual se revisará, uno por uno, ca
 
 ## 3. Verificación previa
 
-Se confirmó, antes de crear este documento, que no existe un backlog equivalente: `docs/program/MASTER_BACKLOG.md` (backlog de programa, por épica/workstream, no por servicio de infraestructura), `docs/product/BACKLOG_PRODUCT.md` (backlog funcional de producto) y `docs/product/BACKLOG_TECH.md` (vacío) no cubren la revisión de servicios externos. `PRODUCTION_INFRASTRUCTURE_AUDIT.md` tiene un "Roadmap de Infraestructura" con pendientes ya identificados, pero es una sección de un Documento de Ejecución fechado, no un backlog con ciclo de vida propio — no se duplica aquí, se referencia por servicio en la columna "Documento fuente".
+Se confirmó, antes de crear este documento, que no existe un backlog equivalente: `docs/program/MASTER_BACKLOG.md` (backlog de programa, por épica/workstream, no por servicio de infraestructura), `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` (backlog funcional de producto) y `docs/product/BACKLOG_TECH.md` (estaba vacío — 0 bytes — y fue eliminado en la limpieza de gobierno documental de 2026-08-15) no cubren la revisión de servicios externos. `PRODUCTION_INFRASTRUCTURE_AUDIT.md` tiene un "Roadmap de Infraestructura" con pendientes ya identificados, pero es una sección de un Documento de Ejecución fechado, no un backlog con ciclo de vida propio — no se duplica aquí, se referencia por servicio en la columna "Documento fuente".
 
 ## 4. Backlog de servicios
 
@@ -72,7 +72,7 @@ Este backlog no reemplaza a `PLATFORM_SERVICE_CATALOG.md` (qué compone la plata
 | Inventario de servicios y su función | `docs/operations/PLATFORM_SERVICE_CATALOG.md` | ✔ (registrado como ítem de backlog) | No se repite evidencia de código |
 | Clasificación de criticidad | `docs/operations/PLATFORM_SERVICE_CATALOG.md` §6 | ✔ (heredada sin recalcular) | Única fuente de verdad de criticidad |
 | Evidencia y riesgos por servicio | `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` | — (solo referenciado) | Este backlog no repite hallazgos |
-| Propiedad de cuenta | `docs/release/SERVICE_ACCOUNT_MIGRATION.md` | — (solo referenciado para Khipu) | No se repite el paso a paso de migración |
+| Propiedad de cuenta | `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md` | — (solo referenciado para Khipu) | No se repite el paso a paso de migración |
 
 ## 7. Gobierno
 
@@ -82,7 +82,7 @@ Cada ítem de este backlog cambia de `Estado` (Pendiente → En revisión → Re
 
 ## 8. Documentos relacionados
 
-`docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/RUNBOOK.md`, `docs/release/SERVICE_ACCOUNT_MIGRATION.md`, `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md`.
+`docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/RUNBOOK.md`, `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`, `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md`.
 
 ## 9. Control de Cambios
 
@@ -94,6 +94,6 @@ Cada ítem de este backlog cambia de `Estado` (Pendiente → En revisión → Re
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-13 | Creación del backlog de revisión de servicios externos | CTO / Claude | `docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md` v1.0 (este documento) |
+| 2026-08-13 | Creación del backlog de revisión de servicios externos | CTO / Claude | `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md` v1.0 (este documento) |
 
 **Nota:** este documento no tiene, a la fecha, aprobación formal del CTO — fue creado a su pedido explícito; la aprobación es un paso posterior y separado.

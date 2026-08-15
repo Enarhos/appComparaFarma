@@ -4,7 +4,7 @@
 
 **Nombre:** PLATFORM_SERVICE_REVIEW_VERCEL.md
 
-**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001`, `OPS-REV-002`, `OPS-REV-003` y `OPS-REV-004`.
+**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo que `OPS-SVC-001`, `OPS-BKL-001`, `OPS-REV-001`, `OPS-REV-002`, `OPS-REV-003` y `OPS-REV-004`.
 
 **Estado:** Activo
 
@@ -16,7 +16,7 @@
 
 **Clasificación:** Revisión de Servicio Externo (ítem de backlog `OPS-SVC-BKL-004`)
 
-**Documentos de los que depende:** `docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fichas #1 y #2), `docs/operations/RUNBOOK.md`, `.github/workflows/ci.yml`, `api/vercel.json`, `mobile/src/constants/donation.ts`.
+**Documentos de los que depende:** `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fichas #1 y #2), `docs/operations/RUNBOOK.md`, `.github/workflows/ci.yml`, `api/vercel.json`, `mobile/src/constants/donation.ts`.
 
 ---
 
@@ -41,8 +41,8 @@ Ambos comparten el mismo mecanismo de hosting/CDN/DNS de Vercel, pero son proyec
 
 ## 3. Plan contratado
 
-- **`comparafarma-api`: Hobby, confirmado.** La evidencia no es una consulta al dashboard sino un error real de producción documentado en `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` y en el Audit original — el mensaje de error de Vercel al superar el límite de funciones por deployment identifica explícitamente el plan Hobby.
-- **`comparafarma-web`: no verificable directamente en esta sesión** (sin acceso al Dashboard de Vercel). No hay evidencia en el repo de que se haya contratado un plan Pro para este proyecto — se asume Hobby por defecto hasta confirmación directa en el Dashboard, dado que toda la infraestructura del proyecto es operada por una sola persona sin indicios de gasto adicional documentado en `docs/operations/ENVIRONMENT.md` ni en ningún otro archivo revisado.
+- **`comparafarma-api`: Hobby, confirmado.** La evidencia no es una consulta al dashboard sino un error real de producción documentado en `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` y en el Audit original — el mensaje de error de Vercel al superar el límite de funciones por deployment identifica explícitamente el plan Hobby.
+- **`comparafarma-web`: no verificable directamente en esta sesión** (sin acceso al Dashboard de Vercel). No hay evidencia en el repo de que se haya contratado un plan Pro para este proyecto — se asume Hobby por defecto hasta confirmación directa en el Dashboard, dado que toda la infraestructura del proyecto es operada por una sola persona sin indicios de gasto adicional documentado en `docs/operations/environment/ENVIRONMENT.md` ni en ningún otro archivo revisado.
 
 ## 4. Límites del plan
 
@@ -142,7 +142,7 @@ Esta revisión no reemplaza a `PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fuente origi
 | Restricción de uso comercial y ejemplo de donaciones | `vercel.com/docs/limits/fair-use-guidelines` (verificado 2026-08-14) | ✔ (§4, §5.1) | Hallazgo nuevo, no estaba en la Auditoría ni en el Catálogo |
 | Evidencia de solicitud de donaciones en producción | `mobile/src/constants/donation.ts` | ✔ (§5.1) | Confirmado hoy, links Khipu activos |
 | Conteo de entrypoints reales (`api/api/`) | Listado directo del directorio, 2026-08-14 | ✔ (§1, §4) | 10/12, igual al hallazgo original de la Auditoría |
-| Plan Hobby confirmado en `comparafarma-api` | `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` | Heredado, sin cambios | Evidencia de error real de producción, no de dashboard |
+| Plan Hobby confirmado en `comparafarma-api` | `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` | Heredado, sin cambios | Evidencia de error real de producción, no de dashboard |
 | Gate de CI vs deploy de `web/` | `.github/workflows/ci.yml` (job `web-build`) | Heredado, reconfirmado (§5.3) | Sin cambios desde la Auditoría |
 
 ## Gobierno
@@ -151,7 +151,7 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 ## Documentos relacionados
 
-`docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/RUNBOOK.md`, `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`.
+`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/RUNBOOK.md`, `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`.
 
 ## Control de Cambios
 
@@ -164,7 +164,7 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-14 | Revisión completa de Vercel — quinto ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/PLATFORM_SERVICE_REVIEW_VERCEL.md` v1.0 (este documento) |
-| 2026-08-15 | Sprint de cierre operacional — CTO fija dirección de producto (Pro antes de Premium) | CTO / Claude | `docs/operations/PLATFORM_SERVICE_REVIEW_VERCEL.md` v1.1 |
+| 2026-08-14 | Revisión completa de Vercel — quinto ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_VERCEL.md` v1.0 (este documento) |
+| 2026-08-15 | Sprint de cierre operacional — CTO fija dirección de producto (Pro antes de Premium) | CTO / Claude | `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_VERCEL.md` v1.1 |
 
 **Nota:** este documento no tiene, a la fecha, aprobación formal del CTO — fue creado a su pedido explícito; la aprobación es un paso posterior y separado. La acción recomendada (upgrade a Pro) requiere una decisión de pago del CTO, fuera del alcance de ejecución de esta revisión.

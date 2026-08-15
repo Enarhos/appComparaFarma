@@ -68,7 +68,7 @@ Alcance de la auditoría:
 Entrega esperada:
 Crear un archivo nuevo en:
 
-docs/audits/AUDIT_SEARCH_NORMALIZATION.md
+docs/archive/audits/AUDIT_SEARCH_NORMALIZATION.md
 
 El documento debe incluir:
 

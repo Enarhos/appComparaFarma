@@ -24,7 +24,7 @@ Este documento define la **estructura obligatoria** que debe seguir todo documen
 
 Su objetivo no es decidir el contenido de ningún documento. Su objetivo es asegurar que todos los documentos estratégicos compartan el mismo esqueleto de gobierno, de modo que cualquier persona del equipo pueda ubicar, en la misma sección numerada, la misma clase de información sin importar qué documento esté leyendo.
 
-Esta plantilla nace de un caso concreto: la revisión de gobierno documental aplicada a `docs/brand/BRAND_FOUNDATIONS.md` (versión 1.1). En vez de que ese estándar quedara implícito en un solo documento, se extrae aquí como referencia explícita y reutilizable. `BRAND_FOUNDATIONS.md` es, en consecuencia, el primer ejemplo real de esta plantilla ya aplicada, y se cita a lo largo de este documento como caso de referencia.
+Esta plantilla nace de un caso concreto: la revisión de gobierno documental aplicada a `docs/design/brand/BRAND_FOUNDATIONS.md` (versión 1.1). En vez de que ese estándar quedara implícito en un solo documento, se extrae aquí como referencia explícita y reutilizable. `BRAND_FOUNDATIONS.md` es, en consecuencia, el primer ejemplo real de esta plantilla ya aplicada, y se cita a lo largo de este documento como caso de referencia.
 
 Esta plantilla no reemplaza el criterio editorial de cada documento. No dice qué debe decir un documento sobre misión, visión, arquitectura o producto. Dice únicamente cómo debe organizarse para ser gobernable.
 
@@ -43,7 +43,7 @@ Esta plantilla no reemplaza el criterio editorial de cada documento. No dice qu�
 
 * El contenido conceptual de ningún documento específico (eso pertenece a cada documento).
 * Reglas de estilo narrativo, tono o redacción.
-* Identidad de marca, misión, visión o propósito de ComparaFarma (ver `docs/brand/BRAND_FOUNDATIONS.md`).
+* Identidad de marca, misión, visión o propósito de ComparaFarma (ver `docs/design/brand/BRAND_FOUNDATIONS.md`).
 * Arquitectura técnica de software (ver `docs/architecture/`).
 * Un proceso de aprobación formal de documentos (eso corresponde a un futuro documento de gobernanza si se decide crearlo).
 
@@ -183,7 +183,7 @@ Tabla obligatoria con, como mínimo, estas columnas:
 
 ## Niveles de Gobierno Documental reconocidos
 
-Estos niveles fueron identificados originalmente en `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` (§8), y se listan aquí de forma consolidada para que todo documento nuevo pueda declarar su nivel en la sección de Metadata sin tener que consultar el audit original:
+Estos niveles fueron identificados originalmente en `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` (§8), y se listan aquí de forma consolidada para que todo documento nuevo pueda declarar su nivel en la sección de Metadata sin tener que consultar el audit original:
 
 1. **Fundacionales** — documentos de origen, no derivados de ningún otro (ej. Carta del Fundador).
 2. **Estratégicos** — documentos que definen dirección de negocio de largo plazo (ej. Visión 2030, Digital Asset Register).
@@ -209,7 +209,7 @@ Ante cualquier duda sobre si un documento debe seguir esta plantilla, el criteri
 
 ## Relación con el repositorio
 
-Esta plantilla no reemplaza el contenido de ningún documento existente. No modifica `docs/brand/BRAND_FOUNDATIONS.md`, ni la Arquitectura Empresarial, ni ningún documento de estrategia o producto. Su función es exclusivamente normativa sobre la forma, no sobre el fondo.
+Esta plantilla no reemplaza el contenido de ningún documento existente. No modifica `docs/design/brand/BRAND_FOUNDATIONS.md`, ni la Arquitectura Empresarial, ni ningún documento de estrategia o producto. Su función es exclusivamente normativa sobre la forma, no sobre el fondo.
 
 Ante una discrepancia entre esta plantilla y la estructura real de un documento ya publicado, corresponde revisar dicho documento y actualizarlo para alinearlo con esta plantilla en su próxima revisión de gobierno — no alterar retroactivamente su contenido conceptual.
 
@@ -219,8 +219,8 @@ Ante una discrepancia entre esta plantilla y la estructura real de un documento 
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 | --- | --- | --- | --- | --- | --- |
-| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación de la plantilla, a partir de la revisión de gobierno documental aplicada a `BRAND_FOUNDATIONS.md` v1.1. Define la estructura obligatoria de 10 secciones para documentos estratégicos de Enterprise, Brand, Product, Strategy, Architecture y Governance. | `docs/brand/BRAND_FOUNDATIONS.md` v1.1, `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md`, `docs/enterprise/README.md`, `docs/strategy/DIGITAL_ASSET_REGISTER.md`, `docs/enterprise/BUSINESS_SERVICES.md` |
-| 1.1 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Incorporación formal de **Design System** (`docs/design-system/`) como dominio de primera clase, en las cuatro menciones de dominios reconocidos de esta plantilla (Propósito, Alcance, campo "Dominio" de Metadata, y "Aplicación de esta plantilla"). Cambio realizado como parte del Sprint DG.001 — Design System Governance, para cerrar la observación ya señalada en `docs/design-system/DESIGN_SYSTEM.md` v1.0 (nota de gobierno documental) sobre la ausencia de ese dominio en esta lista. No se modificó ninguna otra regla de gobierno, estructura de secciones ni nivel de gobierno reconocido. | `docs/design-system/DESIGN_SYSTEM.md` v1.0 (nota de gobierno documental); `docs/design-system/SPACING_SYSTEM.md`, `GRID_SYSTEM.md`, `ELEVATION_SYSTEM.md` v1.0; `docs/design-system/DESIGN_SYSTEM_DECISION_LOG.md` v1.0 |
+| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación de la plantilla, a partir de la revisión de gobierno documental aplicada a `BRAND_FOUNDATIONS.md` v1.1. Define la estructura obligatoria de 10 secciones para documentos estratégicos de Enterprise, Brand, Product, Strategy, Architecture y Governance. | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1, `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md`, `docs/enterprise/README.md`, `docs/enterprise/strategy/DIGITAL_ASSET_REGISTER.md`, `docs/enterprise/BUSINESS_SERVICES.md` |
+| 1.1 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Incorporación formal de **Design System** (`docs/design-system/`) como dominio de primera clase, en las cuatro menciones de dominios reconocidos de esta plantilla (Propósito, Alcance, campo "Dominio" de Metadata, y "Aplicación de esta plantilla"). Cambio realizado como parte del Sprint DG.001 — Design System Governance, para cerrar la observación ya señalada en `docs/design/system/DESIGN_SYSTEM.md` v1.0 (nota de gobierno documental) sobre la ausencia de ese dominio en esta lista. No se modificó ninguna otra regla de gobierno, estructura de secciones ni nivel de gobierno reconocido. | `docs/design/system/DESIGN_SYSTEM.md` v1.0 (nota de gobierno documental); `docs/design/system/SPACING_SYSTEM.md`, `GRID_SYSTEM.md`, `ELEVATION_SYSTEM.md` v1.0; `docs/design/system/DESIGN_SYSTEM_DECISION_LOG.md` v1.0 |
 
 ---
 
@@ -228,10 +228,10 @@ Ante una discrepancia entre esta plantilla y la estructura real de un documento 
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 | --- | --- | --- | --- |
-| 2026-08-02 | Auditoría de Gobierno Documental general | Enterprise Documentation Architect | `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` |
-| 2026-08-05 | Consolidación de identidad de marca | Chief Brand Officer / Corporate Historian / Document Architect | `docs/brand/BRAND_FOUNDATIONS.md` v1.0 |
-| 2026-08-05 | Revisión de gobierno documental | Enterprise Documentation Architect | `docs/brand/BRAND_FOUNDATIONS.md` v1.1 |
-| 2026-08-05 | Elevación a estándar documental de repositorio | Enterprise Documentation Architect | `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0 (este documento) |
-| 2026-08-05 | Sprint DG.001 — Design System Governance: incorporación formal del dominio Design System | Enterprise Documentation Architect / Design Governance Architect | `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.1 (este documento); `docs/design-system/README.md` v1.0; `docs/design-system/DESIGN_SYSTEM_DECISION_LOG.md` v1.0 |
+| 2026-08-02 | Auditoría de Gobierno Documental general | Enterprise Documentation Architect | `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` |
+| 2026-08-05 | Consolidación de identidad de marca | Chief Brand Officer / Corporate Historian / Document Architect | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.0 |
+| 2026-08-05 | Revisión de gobierno documental | Enterprise Documentation Architect | `docs/design/brand/BRAND_FOUNDATIONS.md` v1.1 |
+| 2026-08-05 | Elevación a estándar documental de repositorio | Enterprise Documentation Architect | `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0 (este documento) |
+| 2026-08-05 | Sprint DG.001 — Design System Governance: incorporación formal del dominio Design System | Enterprise Documentation Architect / Design Governance Architect | `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.1 (este documento); `docs/design/system/README.md` v1.0; `docs/design/system/DESIGN_SYSTEM_DECISION_LOG.md` v1.0 |
 
 **Nota:** ninguna versión de este documento ni de `BRAND_FOUNDATIONS.md` tiene, a la fecha, una aprobación formal registrada por el CEO o fundador. Esta plantilla se entrega en estado Activo porque define un estándar de forma, no una decisión de fondo; su adopción efectiva como estándar obligatorio queda sujeta a ratificación por quien corresponda.

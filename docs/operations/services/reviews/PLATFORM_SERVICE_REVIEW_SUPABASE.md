@@ -4,7 +4,7 @@
 
 **Nombre:** PLATFORM_SERVICE_REVIEW_SUPABASE.md
 
-**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo ya usado por `PLATFORM_SERVICE_CATALOG.md` (OPS-SVC-001) y `PLATFORM_SERVICE_REVIEW_BACKLOG.md` (OPS-BKL-001), reconocido en `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md` §3.1.
+**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), mismo mecanismo ya usado por `PLATFORM_SERVICE_CATALOG.md` (OPS-SVC-001) y `PLATFORM_SERVICE_REVIEW_BACKLOG.md` (OPS-BKL-001), reconocido en `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md` §3.1.
 
 **Estado:** Activo
 
@@ -16,7 +16,7 @@
 
 **Clasificación:** Revisión de Servicio Externo (ítem de backlog `OPS-SVC-BKL-001`)
 
-**Documentos de los que depende:** `docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (ficha #3, SPOF #2, Matriz de Riesgos #1), `docs/operations/ENVIRONMENT.md`, `docs/database/schema.sql`, código real de `api/src`, `web/src`, `mobile/src`.
+**Documentos de los que depende:** `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` (ficha #3, SPOF #2, Matriz de Riesgos #1), `docs/operations/environment/ENVIRONMENT.md`, `docs/technology/database/schema.sql`, código real de `api/src`, `web/src`, `mobile/src`.
 
 ---
 
@@ -24,7 +24,7 @@
 
 Supabase cumple dos funciones independientes en ComparaFarma, ambas sobre un único proyecto (`https://xzdtpypctyntkgmoceum.supabase.co`, confirmado en `web/.env.example`):
 
-**a) Base de datos Postgres.** Persiste historial de precios (`price_history`), clics de farmacia (`pharmacy_clicks`), configuración del panel admin (`app_config`), bandeja de feedback (`feedback`), catálogo canónico de medicamentos (`medications`, `medication_match_key_aliases`), alertas de precio por email (`email_alerts`), perfiles de usuario (`profiles`) y el motor de suscripciones (`subscription_plans`, `subscriptions`, `subscription_events`, `flow_customers`) — 11 tablas en total, evidenciadas en `docs/database/schema.sql` (340 líneas).
+**a) Base de datos Postgres.** Persiste historial de precios (`price_history`), clics de farmacia (`pharmacy_clicks`), configuración del panel admin (`app_config`), bandeja de feedback (`feedback`), catálogo canónico de medicamentos (`medications`, `medication_match_key_aliases`), alertas de precio por email (`email_alerts`), perfiles de usuario (`profiles`) y el motor de suscripciones (`subscription_plans`, `subscriptions`, `subscription_events`, `flow_customers`) — 11 tablas en total, evidenciadas en `docs/technology/database/schema.sql` (340 líneas).
 
 **b) Supabase Auth.** Provee login/registro/recuperación de contraseña para `web/` y `mobile/`, y OAuth de Google para el panel `/admin` de `web/` (gateado además por `ADMIN_ALLOWED_EMAILS`, `web/.env.example`).
 
@@ -36,7 +36,7 @@ Patrones de acceso confirmados en código, tres distintos:
 
 Grep confirma 50 archivos que referencian Supabase en el repo: 23 en `api/src`, 23 en `web/src`, 4 en `mobile/src`. No se encontró uso de Supabase Storage, Realtime ni Edge Functions en ningún workspace (`grep` explícito sin resultados).
 
-`docs/operations/ENVIRONMENT.md` documenta que `mobile/` funciona 100% anónima si Supabase no está configurado (degradación silenciosa a `null`/`[]`, nunca lanza), igual que `price_history`/`app_config`/`feedback`.
+`docs/operations/environment/ENVIRONMENT.md` documenta que `mobile/` funciona 100% anónima si Supabase no está configurado (degradación silenciosa a `null`/`[]`, nunca lanza), igual que `price_history`/`app_config`/`feedback`.
 
 ## 2. Inventario
 
@@ -90,7 +90,7 @@ Investigado en `supabase.com/pricing` (oficial, consultado en esta revisión) y 
 Heredados de `PRODUCTION_INFRASTRUCTURE_AUDIT.md` (ficha #3, Matriz de Riesgos Consolidada ítem Crítico #1, SPOF #2) y confirmados vigentes por esta revisión, sin cambios:
 
 1. **🔴 Alto — límite de 2 emails/hora del servicio de email integrado de Auth**, para todo el proyecto (no por usuario). Bloquea recuperación de contraseña y confirmación de registro a partir de un uso simultáneo mínimo. Confirmado en vivo por el CTO; ahora también confirmado contra la documentación oficial (§4). Sin SMTP propio configurado hoy — Resend existe en el proyecto pero para otro propósito (alertas/feedback vía `api.resend.com` directo, no conectado como proveedor SMTP de Supabase Auth).
-2. **🔴 Alto — proyecto único compartido por `api/`, `web/` y `mobile/`** (SPOF #2 de la Auditoría). Una pausa por inactividad (ahora confirmada oficialmente, §4) o una caída afecta a los tres frontends simultáneamente. `docs/architecture/IDENTITY_INTEGRATION_PLAN.md` prohíbe explícitamente crear un segundo proyecto.
+2. **🔴 Alto — proyecto único compartido por `api/`, `web/` y `mobile/`** (SPOF #2 de la Auditoría). Una pausa por inactividad (ahora confirmada oficialmente, §4) o una caída afecta a los tres frontends simultáneamente. `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` prohíbe explícitamente crear un segundo proyecto.
 3. **🟡 Medio — crecimiento no acotado de `price_history`** sin mecanismo de purga/retención (hallazgo nuevo de esta revisión, §2). Acotado por diseño a una fila por medicamento/farmacia/día, pero sin límite temporal — en varios años de operación podría acercarse al límite de 500 MB de DB, aunque no hay evidencia de que esto sea inminente (ver §7).
 4. **🟢 Bajo — RLS habilitado sin policies permisivas reales** (salvo `profiles_select_own`). Esto es una decisión de diseño ya documentada explícitamente en el propio `schema.sql` (defensa en profundidad, acceso real vía `SUPABASE_SECRET_KEY` en backend), no un hallazgo de seguridad nuevo — se registra aquí solo para que esta revisión sea autocontenida, no para reabrir el tema.
 
@@ -119,7 +119,7 @@ No se investigó activamente un cambio de proveedor (fuera del alcance de esta r
 
 - **Upgrade a plan Pro de Supabase** (mismo proveedor): resuelve simultáneamente el límite de MAU/DB/egress y — según documentación oficial de rate limits — permite subir el límite de email configurando SMTP propio con más margen. Es la alternativa de menor esfuerzo de migración (cero cambio de código, solo configuración + costo).
 - **SMTP propio sobre el plan Free actual**: no requiere upgrade de plan — sube el límite de 2 a 30 emails/hora (§4) sin cambiar de proveedor de base de datos. Es la opción que la Auditoría ya recomienda como Prioridad 1, independiente de si se hace upgrade de plan o no.
-- **Migrar de proveedor de base de datos/Auth** (ej. otro Postgres gestionado + otro proveedor de Auth): no evaluado — implicaría reescribir `api/src/lib/supabaseClient.ts`, `web/src/lib/supabase/*`, `mobile/src/lib/supabase.ts` y `sessionManager.ts`, y `docs/architecture/IDENTITY_INTEGRATION_PLAN.md` ya fija a Supabase como la decisión de arquitectura vigente — fuera del alcance de esta revisión y no fundamentado por ningún hallazgo de esta revisión (el problema es el límite de email de una función específica, no el proveedor completo).
+- **Migrar de proveedor de base de datos/Auth** (ej. otro Postgres gestionado + otro proveedor de Auth): no evaluado — implicaría reescribir `api/src/lib/supabaseClient.ts`, `web/src/lib/supabase/*`, `mobile/src/lib/supabase.ts` y `sessionManager.ts`, y `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` ya fija a Supabase como la decisión de arquitectura vigente — fuera del alcance de esta revisión y no fundamentado por ningún hallazgo de esta revisión (el problema es el límite de email de una función específica, no el proveedor completo).
 
 ## 9. Costos
 
@@ -150,7 +150,7 @@ Esta revisión no reemplaza a `PRODUCTION_INFRASTRUCTURE_AUDIT.md` (fuente origi
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Función y evidencia de uso de Supabase | `docs/database/schema.sql`, código real (`api/src`, `web/src`, `mobile/src`) | ✔ (§1, §2) | Inventario propio de esta revisión, no duplicado de otro documento |
+| Función y evidencia de uso de Supabase | `docs/technology/database/schema.sql`, código real (`api/src`, `web/src`, `mobile/src`) | ✔ (§1, §2) | Inventario propio de esta revisión, no duplicado de otro documento |
 | Clasificación de criticidad | `PLATFORM_SERVICE_CATALOG.md` §6 | Heredada, sin recalcular | Esta revisión no reevalúa criticidad |
 | Riesgos y plan ya evidenciados | `PRODUCTION_INFRASTRUCTURE_AUDIT.md` ficha #3 | Heredado (§3, §5), con una corrección puntual (§4) | La pausa por inactividad pasa de "orientativa" a confirmada oficialmente |
 | Límites y costos oficiales del plan | `supabase.com/pricing`, `supabase.com/docs/guides/auth/rate-limits` | ✔ (§4, §9) — investigado en esta revisión | Primera vez que se cita la fuente oficial directa, no de terceros |
@@ -161,18 +161,18 @@ Este documento no reemplaza `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERV
 
 ## Documentos relacionados
 
-`docs/operations/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/ENVIRONMENT.md`, `docs/database/schema.sql`, `docs/architecture/IDENTITY_INTEGRATION_PLAN.md`.
+`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_BACKLOG.md`, `docs/operations/PLATFORM_SERVICE_CATALOG.md`, `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/environment/ENVIRONMENT.md`, `docs/technology/database/schema.sql`, `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md`.
 
 ## Control de Cambios
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-13 | Activo | Pendiente (CTO) | Creación de la primera revisión individual de servicio del backlog `OPS-BKL-001` — Supabase. 10 secciones requeridas completas, ningún código/infraestructura modificado. | `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERVICE_CATALOG.md`, `docs/database/schema.sql`, `supabase.com/pricing`, `supabase.com/docs/guides/auth/rate-limits` |
+| 1.0 | 2026-08-13 | Activo | Pendiente (CTO) | Creación de la primera revisión individual de servicio del backlog `OPS-BKL-001` — Supabase. 10 secciones requeridas completas, ningún código/infraestructura modificado. | `PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `PLATFORM_SERVICE_CATALOG.md`, `docs/technology/database/schema.sql`, `supabase.com/pricing`, `supabase.com/docs/guides/auth/rate-limits` |
 
 ## Historial de Gobierno
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-13 | Revisión completa de Supabase — primer ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/PLATFORM_SERVICE_REVIEW_SUPABASE.md` v1.0 (este documento) |
+| 2026-08-13 | Revisión completa de Supabase — primer ítem ejecutado del backlog de servicios externos | CTO / Claude | `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_SUPABASE.md` v1.0 (este documento) |
 
 **Nota:** este documento no tiene, a la fecha, aprobación formal del CTO — fue creado a su pedido explícito; la aprobación es un paso posterior y separado.

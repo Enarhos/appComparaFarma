@@ -8,7 +8,7 @@
 | **Fecha** | 2026-07-21 |
 | **Autor** | Claude Code (Principal SE) |
 | **Revisores** | CTO, Tech Lead |
-| **Documentos relacionados** | `docs/architecture/DOMAIN_MODEL.md` (§6 — Oportunidades hacia un Pharmaceutical Knowledge Graph), ADR-0001, `docs/normalization.md`, `docs/database/schema.sql` |
+| **Documentos relacionados** | `docs/technology/architecture/DOMAIN_MODEL.md` (§6 — Oportunidades hacia un Pharmaceutical Knowledge Graph), ADR-0001, `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md`, `docs/technology/database/schema.sql` |
 | **Prioridad** | Media — es infraestructura habilitante, no resuelve un bug activo |
 
 ---
@@ -19,7 +19,7 @@
 
 `matchKey` (`packages/domain/src/matching.ts`) cumple dos roles a la vez: es el **algoritmo de fusión** de resultados de búsqueda (correcto y necesario, no se toca) y, por accidente, la **única noción de identidad** de un medicamento en todo el sistema — es el único campo que conecta un resultado de búsqueda con `price_history`, `pharmacy_clicks`, favoritos y alertas.
 
-Eso es frágil porque `matchKey` **no fue diseñado para ser una identidad estable**: ya cambió 10 veces (`v1`–`v10`, ver `docs/normalization.md` §5) y cada cambio invalida silenciosamente el historial de precios, las alertas y los favoritos existentes (documentado y aceptado como trade-off en RFC-001 §8, "Alertas y favoritos"). No hay forma de decir "este medicamento es el mismo que vimos hace 3 meses" de forma confiable, ni de enriquecerlo con datos que no vienen de un scraper de e-commerce (ver DOMAIN_MODEL.md §5–6: indicaciones, contraindicaciones, registro ISP, etc. se descartan hoy).
+Eso es frágil porque `matchKey` **no fue diseñado para ser una identidad estable**: ya cambió 10 veces (`v1`–`v10`, ver `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md` §5) y cada cambio invalida silenciosamente el historial de precios, las alertas y los favoritos existentes (documentado y aceptado como trade-off en RFC-001 §8, "Alertas y favoritos"). No hay forma de decir "este medicamento es el mismo que vimos hace 3 meses" de forma confiable, ni de enriquecerlo con datos que no vienen de un scraper de e-commerce (ver DOMAIN_MODEL.md §5–6: indicaciones, contraindicaciones, registro ISP, etc. se descartan hoy).
 
 ### La propuesta
 
@@ -41,8 +41,8 @@ Agregar una entidad `Medication` con un identificador permanente (`CFM-ID`, ej. 
 ## 2. Estado Actual (resumen — detalle completo en DOMAIN_MODEL.md)
 
 - `MedicationResult.matchKey` es un string derivado de texto libre, recalculado en cada búsqueda (`packages/domain/src/matching.ts`).
-- La única persistencia real que referencia un "medicamento" es la tabla `price_history` (Supabase), vía la columna `match_key text` — sin restricción de integridad referencial hacia ningún catálogo (`docs/database/schema.sql:18`).
-- `pharmacy_clicks` también usa `match_key text` como único puente hacia "qué medicamento" (`docs/database/schema.sql:32`).
+- La única persistencia real que referencia un "medicamento" es la tabla `price_history` (Supabase), vía la columna `match_key text` — sin restricción de integridad referencial hacia ningún catálogo (`docs/technology/database/schema.sql:18`).
+- `pharmacy_clicks` también usa `match_key text` como único puente hacia "qué medicamento" (`docs/technology/database/schema.sql:32`).
 - No existe ninguna tabla `medications` ni equivalente hoy.
 - El pipeline de búsqueda relevante es: `searchService.ts: searchMedicationsDetailed()` → `mergeDuplicates()` (de `@comparafarma/domain`) → `await recordPriceHistory(results).catch(() => {})` → return. **Este `recordPriceHistory` se espera (`await`) dentro del handler**, no es fire-and-forget tras la respuesta — no hay `waitUntil` ni ejecución en background en esta base de código; el patrón existente es "awaited, pero con `.catch(() => {})` para que un fallo de Supabase no rompa la búsqueda". El diseño de este RFC sigue exactamente ese mismo patrón, por consistencia y porque ya es el patrón aceptado en producción.
 - Ese `await recordPriceHistory()` solo ocurre en el camino de **cache-miss** de Redis (`getCachedSearch` no encontró nada) — es decir, el presupuesto de latencia adicional que ya se acepta hoy para escribir en Supabase es exactamente el mismo presupuesto en el que este RFC va a apoyarse, no uno nuevo.
@@ -142,7 +142,7 @@ erDiagram
     PHARMACY_CLICK }o--o| MEDICATION : "cfm_id (nullable, aditivo)"
 ```
 
-### 5.2 Esquema SQL (aditivo — sigue el estilo de `docs/database/schema.sql`, todo `if not exists`)
+### 5.2 Esquema SQL (aditivo — sigue el estilo de `docs/technology/database/schema.sql`, todo `if not exists`)
 
 ```sql
 -- ============================================================
@@ -333,7 +333,7 @@ return { results: withCanonicalIds, diagnostics: { ... } };
 
 ### Fase 1 — Esquema (30 min, reversible con `DROP TABLE`)
 - Ejecutar el SQL de §5.2 en el SQL Editor de Supabase.
-- Actualizar `docs/database/schema.sql` con la nueva sección (siguiendo su propia convención de "Fase N" ya usada en el archivo).
+- Actualizar `docs/technology/database/schema.sql` con la nueva sección (siguiendo su propia convención de "Fase N" ya usada en el archivo).
 - **Sin cambios de código todavía.** Cero impacto en producción.
 
 ### Fase 2 — Módulo de registro, sin conectar (1.5 h, reversible eliminando el archivo)
@@ -467,7 +467,7 @@ En todas las fases, el estado "apagado" es **idéntico al comportamiento actual 
 ## 11. Definition of Done
 
 ### Esquema
-- [ ] `medications` y `medication_match_key_aliases` existen en Supabase, documentadas en `docs/database/schema.sql`
+- [ ] `medications` y `medication_match_key_aliases` existen en Supabase, documentadas en `docs/technology/database/schema.sql`
 - [ ] `price_history.cfm_id` y `pharmacy_clicks.cfm_id` existen (nullable)
 
 ### Código
@@ -488,8 +488,8 @@ En todas las fases, el estado "apagado" es **idéntico al comportamiento actual 
 - [ ] Un cliente mobile/web sin rebuild sigue funcionando sin errores contra el backend actualizado
 
 ### Documentación
-- [ ] `docs/database/schema.sql` actualizado con la nueva sección
-- [ ] `docs/architecture/DOMAIN_MODEL.md` — actualizar §6 para reflejar que el primer paso incremental hacia el Knowledge Graph ya está implementado (una vez que este RFC se ejecute)
+- [ ] `docs/technology/database/schema.sql` actualizado con la nueva sección
+- [ ] `docs/technology/architecture/DOMAIN_MODEL.md` — actualizar §6 para reflejar que el primer paso incremental hacia el Knowledge Graph ya está implementado (una vez que este RFC se ejecute)
 
 ---
 
