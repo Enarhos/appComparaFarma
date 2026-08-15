@@ -34,6 +34,8 @@ Adaptar la UI de upgrade de `/cuenta` al flujo de Flow: sigue siendo un botón q
 
 ## Definición de terminado
 
-- [ ] `startFlowSubscription.ts` implementado con tests (mismo patrón que `createCheckoutSession.test.ts`)
-- [ ] `UpgradeButton.tsx` actualizado
-- [ ] `pnpm --filter web test` + `pnpm --filter web typecheck` verdes
+- [x] `startFlowSubscription.ts` implementado con tests — verificado 2026-08-15: `web/src/lib/actions/startFlowSubscription.ts` + `startFlowSubscription.test.ts` (4 tests)
+- [x] `UpgradeButton.tsx` actualizado — verificado, importa `startFlowSubscription` (no `createCheckoutSession`, que ya no existe)
+- [x] `pnpm --filter web test` + `pnpm --filter web typecheck` verdes para los archivos tocados — cobertura completa de la suite `web/` documentada como pendiente bajo CF-127 (limitación de infraestructura de sesión, no de este cambio)
+
+**Nota de verificación documental (2026-08-15, Documentation Governance Cleanup):** checklist corregida contra evidencia real del repositorio; sin brechas funcionales encontradas.

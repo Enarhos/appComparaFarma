@@ -36,6 +36,8 @@ Implementar el flujo de alta multi-paso de Flow (crear/reusar cliente → enrola
 
 ## Definición de terminado
 
-- [ ] 3 acciones implementadas en `routes/subscriptions.ts`, despachadas desde `api/api/subscriptions.ts`
-- [ ] Tests de cada acción (feliz + casos de error)
-- [ ] Verificado manualmente contra el sandbox real de Flow (reusando lo aprendido en `flow-sandbox-test.js`)
+- [x] 3 acciones implementadas en `routes/subscriptions.ts`, despachadas desde `api/api/subscriptions.ts` — verificado 2026-08-15: `start-flow-subscription`, `flow-register-return`, `flow-webhook` presentes (líneas 508-516), `api/vercel.json` conserva el glob `api/*.ts` sin funciones nuevas
+- [x] Tests de cada acción (feliz + casos de error) — verificado en `api/src/__tests__/subscriptions.test.ts`
+- [ ] Verificado manualmente contra el sandbox real de Flow — no verificable desde el repositorio; la verificación manual con credenciales reales de sandbox está documentada como pendiente bajo CF-127 (ver esa nota de cobertura)
+
+**Nota de verificación documental (2026-08-15, Documentation Governance Cleanup):** checklist corregida contra evidencia real del repositorio. El ítem de verificación manual en sandbox se deja sin marcar y su seguimiento queda consolidado en CF-127, que ya documenta explícitamente este mismo pendiente — no se duplica como acción separada.

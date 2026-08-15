@@ -36,6 +36,8 @@ Modelar la identidad de Flow por usuario (cliente + tarjeta enrolada) de forma i
 
 ## Definición de terminado
 
-- [ ] SQL agregado a `schema.sql`
-- [ ] SQL corrido en Supabase (a cargo de Mario)
-- [ ] `findFlowCustomer`/`upsertFlowCustomer` implementadas y testeadas
+- [x] SQL agregado a `schema.sql` — verificado 2026-08-15: `flow_customers` existe en `docs/database/schema.sql` (RLS habilitada, `user_id` único), `stripe_price_id` retirado
+- [ ] SQL corrido en Supabase (a cargo de Mario) — pendiente, no verificable desde el repositorio; ver `docs/program/DECISION_QUEUE.md` (mismo patrón que CF-112)
+- [x] `findFlowCustomer`/`upsertFlowCustomer` implementadas y testeadas — verificado 2026-08-15 en `api/src/lib/subscriptionsDb.ts` y `api/src/__tests__/subscriptionsDb.test.ts`
+
+**Nota de verificación documental (2026-08-15, Documentation Governance Cleanup):** el encabezado "Implementado" reflejaba correctamente el código, pero la checklist no estaba sincronizada. Corregida contra evidencia real del repositorio. El único ítem genuinamente pendiente (ejecución del SQL en Supabase) es una acción externa idéntica en naturaleza a la de CF-112 — este issue permanece en backlog activo por esa razón, no por falta de código.

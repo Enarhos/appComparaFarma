@@ -36,6 +36,8 @@ Retirar de `main` el código de Stripe implementado en la Fase 2 original — de
 
 ## Definición de terminado
 
-- [ ] Archivos/acciones de Stripe eliminados de `api/` y `web/`
-- [ ] `.env.example` actualizado
-- [ ] `pnpm typecheck` y tests verdes en los 4 workspaces
+- [x] Archivos/acciones de Stripe eliminados de `api/` y `web/` — verificado 2026-08-15: `stripeAdapter.ts`, `createCheckoutSession.ts` y sus tests no existen; único texto "stripe" restante en `api/src` es el literal de tipo `"stripe"` dentro del union `SubscriptionProvider` en `api/src/lib/subscriptionsDb.ts:18` (valor histórico del enum, sin código que lo invoque activamente) y comentarios que documentan la migración desde RFC-004 (permitidos por el propio criterio de aceptación #1 de este issue)
+- [x] `.env.example` actualizado — verificado: sin `STRIPE_SECRET_KEY`/`STRIPE_WEBHOOK_SECRET`, con `FLOW_API_KEY`/`FLOW_SECRET_KEY`/`FLOW_API_BASE_URL`
+- [ ] `pnpm typecheck` y tests verdes en los 4 workspaces — no re-ejecutado en esta tarea de limpieza documental (fuera de alcance: esta tarea no modifica código); recomendado confirmarlo en CI antes de cerrar
+
+**Nota de verificación documental (2026-08-15, Documentation Governance Cleanup):** checklist corregida contra evidencia real del repositorio. Queda un residuo no funcional: el literal `"stripe"` en el tipo `SubscriptionProvider` (`subscriptionsDb.ts:18`). No se modifica ese archivo TypeScript en esta tarea (fuera de alcance de una limpieza documental) — este issue permanece en backlog activo, no se archiva, precisamente para no perder de vista ese residuo hasta que alguien decida retirarlo del código.

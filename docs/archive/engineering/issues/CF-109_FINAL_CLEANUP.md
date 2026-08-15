@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-109 |
 | **Épica** | Shared Domain Package |
-| **Estado** | Pendiente |
+| **Estado** | ⚠️ Parcialmente implementado — alcance original superado por decisión arquitectónica posterior (verificado 2026-08-15) |
 | **Prioridad** | Alta |
 | **Estimación** | 1.5 horas |
 | **Referencia** | RFC-001 §7 Fase 6 |
@@ -108,15 +108,14 @@ Si el problema es puntual (un único import mal migrado), aplicar un hotfix dire
 
 ## Definición de terminado
 
-- [ ] `api/src/lib/normalization.ts` — eliminado
-- [ ] `api/src/lib/types.ts` — eliminado
-- [ ] `mobile/src/lib/normalization.ts` — eliminado
-- [ ] `mobile/src/lib/types.ts` — eliminado
-- [ ] `grep -r "from.*lib/normalization" api/src mobile/src` — sin resultados
-- [ ] `grep -r "from.*lib/types" api/src mobile/src` — sin resultados
-- [ ] `pnpm typecheck` — 0 errores
-- [ ] `pnpm --filter api test` — verde
-- [ ] `pnpm --filter @comparafarma/domain test` — verde
-- [ ] `expo start` compila sin errores
-- [ ] Búsqueda en emulador Android — resultados correctos
-- [ ] PR revisado y mergeado a `main`
+- [x] `api/src/lib/normalization.ts` — eliminado (verificado 2026-08-15: no existe)
+- [ ] `api/src/lib/types.ts` — **NO eliminado, por decisión** (ver nota abajo)
+- [x] `mobile/src/lib/normalization.ts` — eliminado (verificado: no existe)
+- [ ] `mobile/src/lib/types.ts` — **NO eliminado, por decisión** (ver nota abajo)
+- [x] `grep -r "from.*lib/normalization" api/src mobile/src` — sin resultados, verificado
+- [ ] `grep -r "from.*lib/types" api/src mobile/src` — tiene resultados (~28 archivos), esperado dado que el shim se mantiene
+- [~] `pnpm typecheck` / tests — no re-ejecutados en esta tarea de limpieza documental (fuera de alcance: no se modifica código); el paquete `@comparafarma/domain` y su consumo desde los shims está cubierto por trabajo posterior ya mergeado a `main` (migraciones de `packages/domain` completadas en sprints posteriores a este issue)
+- [ ] `expo start` / búsqueda en emulador — no verificado en esta tarea (fuera de alcance)
+- [x] PR revisado y mergeado a `main` — el estado actual (normalization.ts eliminado, types.ts conservado como shim) está en `main`
+
+**Nota de verificación documental (2026-08-15, Documentation Governance Cleanup) — DISCREPANCIA:** el alcance original de este issue exigía eliminar también `api/src/lib/types.ts` y `mobile/src/lib/types.ts` para que `@comparafarma/domain` fuera la única fuente de tipos. La arquitectura actual, documentada explícitamente en `CLAUDE.md` ("Los shims `mobile/src/lib/types.ts` y `api/src/lib/types.ts` re-exportan desde `@comparafarma/domain`"), conserva deliberadamente ambos archivos como shims permanentes (`export type * from "@comparafarma/domain"`) — no como copias de lógica de dominio, sino como puntos de reexport de tipos que evitan reescribir decenas de imports en todo el codebase. Esto es una decisión arquitectónica posterior que reemplaza el criterio de aceptación original de "cero archivos en `lib/types`", no un incumplimiento. La eliminación de `normalization.ts` (la parte que sí contenía lógica duplicada) sí se completó según lo planeado. Se archiva como parcialmente implementado/superseded, no se deja en backlog activo — no hay intención de completar el alcance original de eliminar los shims de tipos.

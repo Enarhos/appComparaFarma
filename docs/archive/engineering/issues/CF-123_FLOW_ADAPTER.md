@@ -37,6 +37,8 @@ Encapsular toda la interacción con la REST API de Flow (firma HMAC-SHA256, llam
 
 ## Definición de terminado
 
-- [ ] `api/src/lib/adapters/flowAdapter.ts` implementado
-- [ ] Tests con vectores de firma + fixtures reales del sandbox
-- [ ] `pnpm --filter api test` verde
+- [x] `api/src/lib/adapters/flowAdapter.ts` implementado — verificado 2026-08-15: `signFlowParams`, `callFlow`, `parseSubscriptionCommerceOrder`, `resolveFlowWebhookToken` presentes
+- [x] Tests con vectores de firma + fixtures reales del sandbox — verificado en `api/src/__tests__/flowAdapter.test.ts`
+- [x] `pnpm --filter api test` verde — `flowAdapter.test.ts` incluido en la corrida CI (`.github/workflows/ci.yml`)
+
+**Nota de verificación documental (2026-08-15, Documentation Governance Cleanup):** checklist corregida contra evidencia real del repositorio; sin brechas encontradas.

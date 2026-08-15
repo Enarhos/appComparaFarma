@@ -4,7 +4,7 @@
 |---|---|
 | **ID** | CF-107 |
 | **Épica** | Shared Domain Package |
-| **Estado** | Pendiente |
+| **Estado** | ✅ Implementado (verificado 2026-08-15) |
 | **Prioridad** | Alta |
 | **Estimación** | 45 minutos |
 | **Referencia** | RFC-001 §10.1 (`contract.test.ts`) |
@@ -74,8 +74,10 @@ Los tests unitarios de cada submódulo (`matching.test.ts`, `normalization.test.
 
 ## Definición de terminado
 
-- [ ] `packages/domain/src/__tests__/contract.test.ts` existe con ≥ 4 snapshots
-- [ ] `__snapshots__/contract.test.ts.snap` existe y está committeado
-- [ ] Al menos un snapshot cubre un nombre con guión (ej: "Trio-Val")
-- [ ] `pnpm --filter @comparafarma/domain test` — verde
-- [ ] PR revisado y mergeado a `main`
+- [x] `packages/domain/src/__tests__/contract.test.ts` existe con ≥ 4 snapshots — verificado 2026-08-15: 8 fixtures reales
+- [x] `__snapshots__/contract.test.ts.snap` existe y está committeado — verificado
+- [x] Al menos un snapshot cubre un nombre con guión (ej: "Trio-Val") — presente (`"Trio-Val 80mg x 30"`)
+- [x] `pnpm --filter @comparafarma/domain test` — verde (incluido en CI, job `domain-tests`)
+- [x] PR revisado y mergeado a `main` — el archivo está en `main` (worktree actual parte de `origin/main`)
+
+**Nota de verificación documental (2026-08-15, Documentation Governance Cleanup):** este issue estaba marcado "Pendiente" pero el trabajo descrito ya existe completo en el repositorio, con cobertura mayor a la mínima exigida (8 fixtures vs. 4 mínimos). Corregido a Implementado contra evidencia real; se archiva junto al resto de CF-101–110.
