@@ -10,7 +10,7 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 
 **Qué es**: El precio que pagas al ir físicamente a la farmacia y comprar en caja. También llamado "precio de vitrina" o "precio normal".
 
-**Disponibilidad**: Presente en las 5 farmacias que cubre este documento (Cruz Verde, Salcobrand, Ahumada, Dr. Simi, AraucoMed) — de las 9 integradas en total, las otras 4 (EcoFarmacias, Farmex, Sermecoop, EasyFarma) no están documentadas todavía en este archivo.
+**Disponibilidad**: presente en las 9 farmacias integradas — es el único canal que todas exponen siempre (nunca `null`).
 
 **En el modelo**: Campo `channels.store: number` — siempre presente, nunca null.
 
@@ -26,6 +26,10 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 - **Ahumada**: ❌ No disponible en el scraper actual.
 - **Dr. Simi**: ✅ Se usa `Price` cuando es menor que `ListPrice`.
 - **AraucoMed**: ❌ No aplica — un solo precio expuesto por el endpoint.
+- **EcoFarmacias**: ❌ No aplica — `onlinePrice` hardcodeado a `null` en el cliente (`api/src/clients/ecofarmacias.ts`), aunque la farmacia opera 100% online (`onlineOnly=true`); su precio de vitrina se mapea igual a `channels.store`.
+- **Farmex**: ❌ No aplica — `onlinePrice` hardcodeado a `null` en el cliente (`api/src/clients/farmex.ts`).
+- **Sermecoop**: ❌ No aplica — `onlinePrice` hardcodeado a `null` en el cliente (`api/src/clients/sermecoop.ts`).
+- **EasyFarma**: ❌ No aplica — `onlinePrice` hardcodeado a `null` en el cliente (`api/src/clients/easyfarma.ts`), aunque también opera 100% online (`onlineOnly=true`); su precio de vitrina se mapea igual a `channels.store`.
 
 **En el modelo**: Campo `channels.online: number | null`.
 
@@ -43,6 +47,10 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 - **Ahumada**: ✅ Detectado mediante la presencia de la imagen `badge_30x40_cmr_falabella` en el tile y el atributo `content=` de esa imagen.
 - **Dr. Simi**: ❌ No aplica.
 - **AraucoMed**: ❌ No aplica.
+- **EcoFarmacias**: ❌ No aplica — `cmrPrice` hardcodeado a `null` en el cliente.
+- **Farmex**: ✅ Precio Fonasa. El cliente (`api/src/clients/farmex.ts`) toma el precio de la variante Fonasa (`fonasaPrice`) y lo asigna a `channels.cmr` solo si es menor que el precio presencial — no es una tarjeta de fidelización en sentido estricto, pero se mapea al mismo campo porque representa un precio condicionado a un convenio específico, igual que las tarjetas de las demás farmacias.
+- **Sermecoop**: ❌ No aplica — `cmrPrice` hardcodeado a `null` en el cliente.
+- **EasyFarma**: ❌ No aplica — `cmrPrice` hardcodeado a `null` en el cliente (`api/src/clients/easyfarma.ts`), con un comentario explícito en el código que aclara que no hay canal online/CMR/SBPay distinto a nivel de producto. **Nota de discrepancia documental**: `CLAUDE.md` (tabla "Canales de Precio por Farmacia") describe actualmente a EasyFarma con `cmr = Plus`; el código real verificado en esta revisión (2026-08-15) no implementa ese canal — se deja constancia aquí para que se revise y corrija `CLAUDE.md` por separado, sin asumir cuál de los dos está en lo correcto sin una verificación adicional del comportamiento esperado.
 
 **En el modelo**: Campo `channels.cmr: number | null`.
 
@@ -58,6 +66,10 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 - **Ahumada**: ❌ No aplica.
 - **Dr. Simi**: ❌ No aplica.
 - **AraucoMed**: ❌ No aplica.
+- **EcoFarmacias**: ❌ No aplica — exclusivo de Salcobrand.
+- **Farmex**: ❌ No aplica — exclusivo de Salcobrand.
+- **Sermecoop**: ❌ No aplica — exclusivo de Salcobrand.
+- **EasyFarma**: ❌ No aplica — exclusivo de Salcobrand.
 
 **En el modelo**: Campo `channels.sbpay: number | null`.
 
@@ -94,6 +106,12 @@ Se usa para:
 | Ahumada | ✅ | ❌ null | ✅ si hay badge | ❌ null | min(store, cmr) |
 | Dr. Simi | ✅ | ✅ si `Price < ListPrice` | ❌ null | ❌ null | min(store, online) |
 | AraucoMed | ✅ | ❌ null | ❌ null | ❌ null | = store |
+| EcoFarmacias | ✅ (`onlineOnly=true`) | ❌ null | ❌ null | ❌ null | = store |
+| Farmex | ✅ | ❌ null | ✅ si Fonasa < store | ❌ null | min(store, cmr) |
+| Sermecoop | ✅ | ❌ null | ❌ null | ❌ null | = store |
+| EasyFarma | ✅ (`onlineOnly=true`) | ❌ null | ❌ null (ver nota de discrepancia arriba) | ❌ null | = store |
+
+Cobertura de este documento: **9/9 farmacias integradas** (actualizado 2026-08-15; versión anterior solo cubría 5/9 — Cruz Verde, Salcobrand, Ahumada, Dr. Simi, AraucoMed — y declaraba explícitamente la brecha).
 
 ---
 
