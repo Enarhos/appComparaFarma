@@ -75,7 +75,7 @@ afterEach(() => {
   process.env = { ...ORIGINAL_ENV };
 });
 
-describe("GET /api/search?debug=1 — autorización estricta (Sprint REL-002)", () => {
+describe("GET /api/search — busqueda publica + debug=1 privilegiado (Sprint SEC-001, antes REL-002)", () => {
   it("responde 403 si no hay API_SECRET_KEY configurado, aunque la búsqueda normal seguiría abierta", async () => {
     delete process.env.API_SECRET_KEY;
     const req = makeReq({ url: "/api/search?q=paracetamol&debug=1" });
@@ -88,18 +88,18 @@ describe("GET /api/search?debug=1 — autorización estricta (Sprint REL-002)", 
     expect(JSON.parse(res.body ?? "{}")).not.toHaveProperty("diagnostics");
   });
 
-  it("responde 401 si hay API_SECRET_KEY configurado pero no se envía x-api-key (bloqueado por la autorización general, antes de llegar al gate de debug)", async () => {
+  it("responde 403 si hay API_SECRET_KEY configurado pero no se envía x-api-key (gate de debug, ya no hay autorización general que lo bloquee antes)", async () => {
     process.env.API_SECRET_KEY = "s3cr3t";
     const req = makeReq({ url: "/api/search?q=paracetamol&debug=1" });
     const res = makeRes();
 
     await handleSearchRoute(req, res);
 
-    expect(res.statusCode).toBe(401);
+    expect(res.statusCode).toBe(403);
     expect(searchMedicationsDetailedMock).not.toHaveBeenCalled();
   });
 
-  it("responde 401 si el x-api-key enviado no coincide (bloqueado por la autorización general)", async () => {
+  it("responde 403 si el x-api-key enviado no coincide (gate de debug)", async () => {
     process.env.API_SECRET_KEY = "s3cr3t";
     const req = makeReq({
       url: "/api/search?q=paracetamol&debug=1",
@@ -109,7 +109,7 @@ describe("GET /api/search?debug=1 — autorización estricta (Sprint REL-002)", 
 
     await handleSearchRoute(req, res);
 
-    expect(res.statusCode).toBe(401);
+    expect(res.statusCode).toBe(403);
     expect(searchMedicationsDetailedMock).not.toHaveBeenCalled();
   });
 
@@ -141,13 +141,42 @@ describe("GET /api/search?debug=1 — autorización estricta (Sprint REL-002)", 
     expect(searchMedicationsDetailedMock).not.toHaveBeenCalled();
   });
 
-  it("la búsqueda normal (sin debug) sigue exigiendo x-api-key correcto si API_SECRET_KEY está configurado (comportamiento previo sin cambios)", async () => {
+  it("la búsqueda normal (sin debug) es pública ahora aunque API_SECRET_KEY esté configurado y no se envíe x-api-key (Sprint SEC-001 — cambio intencional respecto al comportamiento previo)", async () => {
     process.env.API_SECRET_KEY = "s3cr3t";
     const req = makeReq({ url: "/api/search?q=paracetamol" });
     const res = makeRes();
 
     await handleSearchRoute(req, res);
 
-    expect(res.statusCode).toBe(401);
+    expect(res.statusCode).toBe(200);
+    expect(searchMedicationsMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("la búsqueda normal (sin debug) sigue funcionando si un cliente antiguo (build ya instalado de Mobile) todavía envía un x-api-key desactualizado — se ignora sin error", async () => {
+    process.env.API_SECRET_KEY = "s3cr3t";
+    const req = makeReq({
+      url: "/api/search?q=paracetamol",
+      headers: { "x-api-key": "un-valor-viejo-cualquiera" },
+    });
+    const res = makeRes();
+
+    await handleSearchRoute(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(searchMedicationsMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("debug=1 nunca tiene fallback abierto aunque el servidor no tenga API_SECRET_KEY configurado, incluso si se envía algún x-api-key", async () => {
+    delete process.env.API_SECRET_KEY;
+    const req = makeReq({
+      url: "/api/search?q=paracetamol&debug=1",
+      headers: { "x-api-key": "cualquier-valor" },
+    });
+    const res = makeRes();
+
+    await handleSearchRoute(req, res);
+
+    expect(res.statusCode).toBe(403);
+    expect(searchMedicationsDetailedMock).not.toHaveBeenCalled();
   });
 });

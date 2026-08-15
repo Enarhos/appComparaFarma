@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 const getPriceHistoryMock = vi.hoisted(() => vi.fn());
 
@@ -8,11 +8,13 @@ vi.mock("../lib/priceHistoryQuery.js", () => ({
 
 import { handlePriceHistoryRoute } from "../routes/priceHistory.js";
 
-function makeReq(overrides: Partial<{ method: string; url: string }> = {}) {
+function makeReq(
+  overrides: Partial<{ method: string; url: string; headers: Record<string, string> }> = {}
+) {
   return {
     method: overrides.method ?? "GET",
     url: overrides.url ?? "/api/price-history?matchKey=paracetamol%7C500mg",
-    headers: {},
+    headers: overrides.headers ?? {},
     socket: { remoteAddress: "127.0.0.1" },
   };
 }
@@ -48,9 +50,15 @@ const DEFAULT_RESULT = {
   },
 };
 
+const ORIGINAL_ENV = { ...process.env };
+
 beforeEach(() => {
   getPriceHistoryMock.mockReset();
   getPriceHistoryMock.mockResolvedValue(DEFAULT_RESULT);
+});
+
+afterEach(() => {
+  process.env = { ...ORIGINAL_ENV };
 });
 
 describe("handlePriceHistoryRoute — método y parámetros", () => {
@@ -121,5 +129,41 @@ describe("handlePriceHistoryRoute — delegación a getPriceHistory", () => {
 
     expect(res.statusCode).toBe(200);
     expect(JSON.parse(res.body ?? "{}")).toEqual(DEFAULT_RESULT);
+  });
+});
+
+
+describe("handlePriceHistoryRoute — publico (Sprint SEC-001, igual que /api/search)", () => {
+  it("responde 200 sin x-api-key cuando API_SECRET_KEY no esta configurado", async () => {
+    delete process.env.API_SECRET_KEY;
+    const req = makeReq();
+    const res = makeRes();
+
+    await handlePriceHistoryRoute(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(getPriceHistoryMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("responde 200 sin x-api-key aunque API_SECRET_KEY este configurado (ya no es una superficie privilegiada)", async () => {
+    process.env.API_SECRET_KEY = "s3cr3t";
+    const req = makeReq();
+    const res = makeRes();
+
+    await handlePriceHistoryRoute(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(getPriceHistoryMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("responde 200 aunque se envie un x-api-key incorrecto (se ignora, no bloquea)", async () => {
+    process.env.API_SECRET_KEY = "s3cr3t";
+    const req = makeReq({ headers: { "x-api-key": "incorrecto" } });
+    const res = makeRes();
+
+    await handlePriceHistoryRoute(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(getPriceHistoryMock).toHaveBeenCalledTimes(1);
   });
 });

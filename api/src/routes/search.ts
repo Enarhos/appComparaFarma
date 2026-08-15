@@ -1,4 +1,4 @@
-import { isAuthorized, isDebugAuthorized } from "../middleware/auth.js";
+import { isDebugAuthorized } from "../middleware/auth.js";
 import { consumeRateLimit } from "../middleware/rateLimit.js";
 import { attachRequestId } from "../middleware/requestId.js";
 import { getCachedSearch, setCachedSearch } from "../lib/cache.js";
@@ -44,10 +44,11 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       throw new HttpError("Metodo no permitido.", 405);
     }
 
-    if (!isAuthorized(req)) {
-      throw new HttpError("No autorizado.", 401);
-    }
-
+    // Busqueda publica (Sprint SEC-001): /api/search ya no requiere x-api-key.
+    // API_SECRET_KEY se reserva para superficies privilegiadas (debug=1 via
+    // isDebugAuthorized(), y /api/subscriptions grant-manual/revoke-manual).
+    // Un x-api-key antiguo enviado por builds ya instalados de Mobile se
+    // ignora sin error — no rompe compatibilidad hacia atras.
     const clientIp = getClientIp(req);
     if (!(await consumeRateLimit(clientIp))) {
       throw new HttpError("Demasiadas solicitudes. Intenta de nuevo en un momento.", 429);

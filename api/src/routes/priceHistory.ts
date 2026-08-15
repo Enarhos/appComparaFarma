@@ -1,4 +1,3 @@
-import { isAuthorized } from "../middleware/auth.js";
 import { consumeRateLimit } from "../middleware/rateLimit.js";
 import { attachRequestId } from "../middleware/requestId.js";
 import { HttpError } from "../lib/errors.js";
@@ -33,10 +32,10 @@ export async function handlePriceHistoryRoute(reqLike: unknown, resLike: unknown
       throw new HttpError("Metodo no permitido.", 405);
     }
 
-    if (!isAuthorized(req)) {
-      throw new HttpError("No autorizado.", 401);
-    }
-
+    // Publico (Sprint SEC-001), igual que /api/search: web/ ya lo consulta
+    // server-side sin x-api-key (mobile/ guarda su historial localmente y no
+    // llama esta ruta). API_SECRET_KEY se reserva para debug=1 y para
+    // /api/subscriptions grant-manual/revoke-manual.
     const clientIp = getClientIp(req);
     if (!(await consumeRateLimit(clientIp))) {
       throw new HttpError("Demasiadas solicitudes. Intenta de nuevo en un momento.", 429);
