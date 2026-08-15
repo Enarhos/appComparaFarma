@@ -10,10 +10,37 @@ const BASE_HEADERS = {
   ...(API_SECRET_KEY ? { "x-api-key": API_SECRET_KEY } : {}),
 };
 
+/**
+ * Error estructurado para el healthcheck — nunca lleva el valor de ningún
+ * secreto ni headers completos, solo lo mínimo operacional (status HTTP y
+ * el endpoint afectado) para que el reporte JSON sea útil sin exponer nada
+ * sensible.
+ */
+class HealthcheckError extends Error {
+  constructor(message, { status = null, endpoint = null } = {}) {
+    super(message);
+    this.status = status;
+    this.endpoint = endpoint;
+  }
+}
+
 async function main() {
+  // Validación explícita: sin API_SECRET_KEY, /api/search?debug=1 responde
+  // 403 (protegido por isDebugAuthorized()) — fallar de inmediato con un
+  // mensaje claro en vez de disparar una llamada protegida que sabemos que
+  // va a fallar. Nunca se imprime el valor de la variable (está vacía en
+  // este caso; tampoco se imprimiría si tuviera valor).
+  if (!API_SECRET_KEY) {
+    throw new HealthcheckError("API_SECRET_KEY is not configured in GitHub Actions secrets", {
+      endpoint: "/api/search?debug=1 (no solicitado — falta credencial)",
+    });
+  }
+
   const health = await fetchJson(`${API_URL}/api/health`);
   if (!health.ok) {
-    throw new Error("Health endpoint did not return ok=true");
+    throw new HealthcheckError("Health endpoint did not return ok=true", {
+      endpoint: `${API_URL}/api/health`,
+    });
   }
 
   const aggregate = new Map([
@@ -31,10 +58,11 @@ async function main() {
   const summaries = [];
 
   for (const query of QUERIES) {
-    const payload = await fetchJson(`${API_URL}/api/search?q=${encodeURIComponent(query)}&debug=1`);
+    const endpoint = `${API_URL}/api/search?q=${encodeURIComponent(query)}&debug=1`;
+    const payload = await fetchJson(endpoint);
     const diagnostics = payload.diagnostics;
     if (!diagnostics || !Array.isArray(diagnostics.pharmacies)) {
-      throw new Error(`Missing diagnostics for query "${query}"`);
+      throw new HealthcheckError(`Missing diagnostics for query "${query}"`, { endpoint });
     }
 
     for (const pharmacy of diagnostics.pharmacies) {
@@ -87,17 +115,50 @@ async function main() {
 }
 
 async function fetchJson(url) {
-  const res = await fetch(url, {
-    headers: BASE_HEADERS,
-  });
+  let res;
+  try {
+    res = await fetch(url, { headers: BASE_HEADERS });
+  } catch (err) {
+    // Error de red (DNS, timeout, conexión rechazada, etc.) — el mensaje de
+    // `fetch` no incluye headers ni el valor de ningún secreto.
+    const message = err instanceof Error ? err.message : String(err);
+    throw new HealthcheckError(`Network error reaching ${url}: ${message}`, { endpoint: url });
+  }
   if (!res.ok) {
-    throw new Error(`Request failed: ${url} -> ${res.status}`);
+    throw new HealthcheckError("Request failed", { status: res.status, endpoint: url });
   }
   return await res.json();
 }
 
-main().catch((error) => {
-  console.error(error instanceof Error ? error.message : String(error));
+main().catch(async (error) => {
+  const message = error instanceof Error ? error.message : String(error);
+  console.error(message);
+
+  // Reporte mínimo también en caso de error — sin esto, el healthcheck
+  // fallaba antes de escribir reports/api-healthcheck.json y el paso
+  // `upload-artifact` (if-no-files-found: error) generaba un segundo error
+  // confuso encima del real. Nunca incluye secrets, headers completos,
+  // emails ni PII — solo ok/error/status/endpoint.
+  const report = {
+    ok: false,
+    error: message,
+    status: error?.status ?? null,
+    endpoint: error?.endpoint ?? null,
+  };
+  const json = JSON.stringify(report, null, 2);
+  console.log(json);
+
+  if (OUTPUT_FILE) {
+    try {
+      await writeFile(OUTPUT_FILE, `${json}\n`, "utf8");
+    } catch (writeErr) {
+      console.error(
+        "No se pudo escribir el reporte de error:",
+        writeErr instanceof Error ? writeErr.message : String(writeErr)
+      );
+    }
+  }
+
   process.exitCode = 1;
 });
 
