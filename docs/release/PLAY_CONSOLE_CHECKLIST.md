@@ -480,8 +480,8 @@ Los siguientes puntos pueden generar rechazo por parte de Google Play o penaliza
 | RE-4 | Target SDK ≥ 34 en AAB | ✅ Verificado (36) | 🔍 No verificado | — | Verificar en Play Console → Bundle analysis | Captura Bundle analysis → Target SDK |
 | RE-5 | Permisos de producción correctos (solo INTERNET + VIBRATE) | ✅ Verificado | ⚠️ Pendiente | Dev principal | Verificar en Play Console → Bundle analysis → Permissions | Captura Bundle analysis sin permisos de storage |
 | RE-6 | AAB firmado disponible | ✅ Verificado | ✅ Verificado | — | — | `comparafarma-v1.4.0-vc30.aab` + Prueba Interna activa |
-| RE-7 | Play App Signing habilitado | — | 🔍 No verificado | Mario | Verificar en Play Console → Setup → App integrity | Captura Play Console → App signing |
-| RE-8 | Keystore respaldada de forma segura | — | — | Dev principal | Confirmar backup externo al repo | Confirmación verbal / evidencia de backup seguro |
+| RE-7 | Play App Signing habilitado | — | ✅ Confirmado (2026-08-15, verificado por el CTO en Play Console) | Mario | — | Confirmación directa del CTO en Play Console → Setup → App integrity |
+| RE-8 | Keystore respaldada de forma segura | — | 🔍 No verificado — `HUMAN_ACTION_REQUIRED: BACKUP_ANDROID_UPLOAD_KEY` | Dev principal | Confirmar backup externo al repo | Confirmación verbal / evidencia de backup seguro |
 | RE-9 | `eas.json` track corregido a "production" | ⚠️ Pendiente | — | Dev principal | Cambiar `"track": "internal"` → `"track": "production"` en `eas.json` | Diff en repo |
 | RE-10 | Track de Prueba Interna activo (vc30) | — | ✅ Verificado | — | — | Play Console → Prueba Interna |
 | RE-11 | Promover vc30 a Producción | — | ⚠️ Pendiente | Mario | Play Console → Prueba Interna → Promover (después de resolver todos los ítems pendientes) | Play Console → Producción → rollout activo |

@@ -257,7 +257,7 @@ eas update --branch production --message "fix: ..."
 - **Bundle ID iOS**: `mla.app.comparafarma`
 - **Categoría**: Health & Fitness
 - **Política de privacidad**: `https://enarhos.github.io/appComparaFarma/privacy-policy.html`
-- **versionCode actual**: 31 (v1.4.0) — subido a Prueba Cerrada en Play Console
+- **versionCode actual**: 31 (v1.4.0) — aprobado por Google Play para producción el 2026-08-13 (pendiente de publicación/propagación completa en el listado público)
 
 ## Advertencia: Fragilidad del Scraper de Ahumada
 
@@ -266,6 +266,12 @@ eas update --branch production --message "fix: ..."
 Señal de alerta: búsquedas de medicamentos comunes no retornan resultados de Ahumada.
 
 Acción: revisar el HTML actual del sitio, actualizar los regex `tileRe`, `linkM`, `badgeM` y publicar OTA update (`eas update`).
+
+## Advertencia: MINSAL bloquea el fetch automatizado (HTTP 403) — dato de sucursales congelado desde junio
+
+`scripts-temp/fetch-branches.js` (corrido por `.github/workflows/update-branches.yml`, cron diario) intenta descargar `https://midas.minsal.cl/farmacia_v2/WS/getLocales.php` para poblar `api/src/data/branches.json`/`branches-data.ts` (consumido por el filtro de comuna en Mobile: `CommuneSelector`, `FilterSheet`, `useSearch`). Diagnóstico del 2026-08-14 (revisión `docs/operations/PLATFORM_SERVICE_REVIEW_MINSAL.md`, OPS-REV-007) confirmó, con logs reales de Actions, que **las 71/71 ejecuciones desde que existe el workflow (2026-06-03) fallan con `MINSAL HTTP 403`** — MINSAL bloquea también las IPs de GitHub Actions, no solo las de Vercel (el comentario original en `api/src/clients/minsal.ts` solo mencionaba Vercel). El dato que sirve hoy `/api/branches` es una carga manual congelada del 2026-06-08, hecha por el CTO desde su red local — no hay actualización automática funcionando.
+
+**Ya corregido (2026-08-14):** el workflow ahora tiene `continue-on-error` y crea un issue automático (`labels: monitoring, bug`) cuando el fetch falla, en vez de fallar en seco y en silencio (commit `2d5691f`). **Sin resolver todavía:** el bloqueo de IP en sí — requiere decidir una alternativa (IP residencial/self-hosted runner, u otra vía) o aceptar que este dato quedará desactualizado. No asumir que "correr el workflow de nuevo" lo va a arreglar sin cambiar la IP de origen del fetch.
 
 ## Advertencia: Metro + TypeScript ESM (packages/domain)
 
@@ -280,9 +286,11 @@ if (moduleName.endsWith(".js")) {
 ```
 No cambiar las extensiones en `packages/domain/src/index.ts` — son obligatorias para Node.js ESM.
 
-## ⚠️ Restricción activa: `mobile/` está en Prueba Cerrada de Google Play
+## Historial: restricción de `mobile/` durante Prueba Cerrada (levantada 2026-08-13)
 
-Mientras esta advertencia siga presente, **no modificar código de `mobile/`**. La app está en camino a producción en Google Play y cualquier cambio ahora arriesga esa revisión/promoción. Trabajo de backend (`api/`), de `web/`, o de infraestructura (Vercel, monitoreo) puede seguir avanzando sin problema — la restricción es específicamente sobre el código de la app móvil. Ver `docs/product/COMPANY_STRATEGY.md` sección 5 para cómo esto reordena el roadmap de "empresa" (la Fase 2b, sincronización de cuentas en la app, queda pausada por esto). Quitar esta sección una vez que la app pase de Prueba Cerrada a producción.
+Google Play aprobó el pase de `mobile/` de Prueba Cerrada a producción el 2026-08-13 (publicación/propagación del listado público aún en curso). La restricción que existía mientras la revisión estaba en curso ("no modificar código de `mobile/`") queda levantada — ya no aplica ningún bloqueo especial sobre cambios en la app móvil más allá de la disciplina normal del proyecto (branch → PR → validación → aprobación).
+
+Pendiente para una sesión de producto/estrategia (no asumir por defecto): revisar si esto reactiva la Fase 2b ("sincronización de cuentas en la app") descrita en `docs/product/COMPANY_STRATEGY.md` sección 5, que estaba pausada específicamente por esta restricción.
 
 ## Advertencia: `packages/domain` necesita compilarse a JS real
 
@@ -311,6 +319,12 @@ El 2026-07-19 el deploy estuvo roto (probablemente desde la migración a `@compa
 2. En el dashboard de Vercel del proyecto `comparafarma-api`, **Root Directory debe ser `api`** (no vacío). Sin esto, Vercel no encuentra `api/vercel.json` ni resuelve las funciones en la ruta correcta.
 3. `api/vercel.json` define `"functions": {"api/*.ts": {...}}` con un **glob explícito**. Sin esto, al subir el monorepo completo Vercel detecta cada `.ts` de `api/src/` (clientes, rutas, tests) como función independiente y supera el límite de 12 funciones del plan Hobby.
 4. `packages/domain` se compila a JS real vía `postinstall` (`tsc` → `dist/`) — ver advertencia dedicada más abajo.
+
+### ⚠️ Vercel Hobby y uso comercial (donaciones) — decisión pendiente del CTO, no técnica
+
+Revisión del 2026-08-14 (`docs/operations/PLATFORM_SERVICE_REVIEW_VERCEL.md`, OPS-REV-005) encontró que el plan Hobby de Vercel prohíbe explícitamente uso comercial, y su propia documentación oficial (`vercel.com/docs/limits/fair-use-guidelines`) lista **"Asking for Donations"** como ejemplo textual de eso. `mobile/src/constants/donation.ts` confirma que ComparaFarma ya solicita donaciones activas vía Khipu en producción (`DonationBanner`) — es decir, `comparafarma-api` y `comparafarma-web` corren hoy en un plan que Vercel define como no permitido para este uso, con riesgo real (no solo teórico) de pausa de cuenta sin aviso previo garantizado, que afectaría ambos proyectos a la vez.
+
+No hay ningún fix de código para esto — es una decisión de negocio entre dos caminos, documentada como pendiente en la revisión: (A) pagar el upgrade a Vercel Pro ($20/mes), o (B) dar de baja el `DonationBanner`/cualquier funcionalidad de pago (incluyendo no activar Flow, hoy pausado, mientras se esté en Hobby) y permanecer gratis. No asumir que el plan Hobby es "seguro" solo porque no ha pasado nada todavía.
 
 ## Cache Versioning
 
