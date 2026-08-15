@@ -2,44 +2,17 @@ import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { computeAllInOneTotals } from "@comparafarma/domain";
 import { useCartStore } from "@/store/cartStore";
 import { useConfigStore } from "@/store/configStore";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/formatters";
-import type { MedicationResult, PharmacySlug } from "@/lib/types";
-
-type PharmacyTotal = {
-  slug: PharmacySlug;
-  total: number;
-  found: number;
-  missing: number;
-};
-
-function calcTotals(items: MedicationResult[], slugs: PharmacySlug[]): PharmacyTotal[] {
-  return slugs
-    .map((slug) => {
-      let total = 0;
-      let found = 0;
-      for (const med of items) {
-        const p = med.prices.find((p) => p.pharmacySlug === slug);
-        if (p) { total += p.channels.effective; found++; }
-      }
-      return { slug, total, found, missing: items.length - found };
-    })
-    .filter((p) => p.found > 0)
-    .sort((a, b) => {
-      // Primero las farmacias con todos los medicamentos, luego por total
-      if (a.missing === 0 && b.missing > 0) return -1;
-      if (a.missing > 0 && b.missing === 0) return 1;
-      return a.total - b.total;
-    });
-}
 
 export default function CartScreen() {
   const { items, remove, clear } = useCartStore();
   const activePharmacySlugs = useConfigStore((s) => s.activePharmacySlugs);
 
-  const totals = calcTotals(items, activePharmacySlugs());
+  const totals = computeAllInOneTotals(items, activePharmacySlugs());
   const completeTotals = totals.filter((t) => t.missing === 0);
   const best = completeTotals[0];
   const second = completeTotals[1];
@@ -110,12 +83,12 @@ export default function CartScreen() {
           </Text>
           <View className="gap-2">
             {totals.map((t, index) => {
-              const ph = PHARMACIES[t.slug];
+              const ph = PHARMACIES[t.pharmacySlug];
               if (!ph) return null;
               const isWinner = index === 0 && t.missing === 0;
               return (
                 <View
-                  key={t.slug}
+                  key={t.pharmacySlug}
                   style={
                     isWinner
                       ? { borderColor: ph.color, backgroundColor: ph.bgLight }
@@ -188,10 +161,10 @@ export default function CartScreen() {
             <View className="flex-1">
               <Text className="text-sm font-bold text-green-800 dark:text-green-300">
                 Ahorras {formatCLP(savings)} comprando todo en{" "}
-                {(PHARMACIES[best.slug]?.name ?? best.slug).replace("Farmacias ", "")}
+                {(PHARMACIES[best.pharmacySlug]?.name ?? best.pharmacySlug).replace("Farmacias ", "")}
               </Text>
               <Text className="text-xs text-green-600 dark:text-green-500 mt-0.5">
-                vs {(PHARMACIES[second.slug]?.name ?? second.slug).replace("Farmacias ", "")} (
+                vs {(PHARMACIES[second.pharmacySlug]?.name ?? second.pharmacySlug).replace("Farmacias ", "")} (
                 {formatCLP(second.total)})
               </Text>
             </View>

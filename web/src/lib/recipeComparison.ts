@@ -1,65 +1,21 @@
-import type { MedicationResult, PharmacySlug } from "@comparafarma/domain";
+import { computeAllInOneTotals, type MedicationResult, type PharmacyBasketTotal, type PharmacySlug } from "@comparafarma/domain";
 
 /**
  * Cálculo de las dos alternativas de "mi receta" (Sprint E):
- *   1. Todo en una farmacia — computeAllInOneTotals()
+ *   1. Todo en una farmacia — computeAllInOneTotals() (@comparafarma/domain)
  *   2. Repartido al mejor precio por medicamento — computeSplitTotal()
  * Lógica pura, sin React/Next, para que sea trivial de testear.
  *
- * computeAllInOneTotals() es una adaptación de calcTotals() en
- * mobile/src/app/cart.tsx (no se modificó ese archivo — mobile/ está
- * congelado por la Prueba Cerrada de Google Play). Se le quitó la
- * dependencia de activePharmacySlugs()/useConfigStore: acá el universo de
- * farmacias se deriva directamente de las prices presentes en los
- * medicamentos recibidos.
+ * computeAllInOneTotals() vivía duplicada acá y en
+ * mobile/src/app/cart.tsx::calcTotals() (mismo algoritmo, verificado línea
+ * por línea) — se consolidó en @comparafarma/domain (Domain Consolidation
+ * v2, PR refactor/domain-cart-totals). Se re-exporta acá como
+ * `PharmacyTotal` solo por compatibilidad de nombre con el resto de este
+ * archivo/tests; es el mismo tipo que `PharmacyBasketTotal` de domain.
  */
 
-export interface PharmacyTotal {
-  pharmacySlug: PharmacySlug;
-  pharmacyName: string;
-  total: number;
-  found: number;
-  missing: number;
-}
-
-export function computeAllInOneTotals(medications: MedicationResult[]): PharmacyTotal[] {
-  const names = new Map<PharmacySlug, string>();
-  const slugs = new Set<PharmacySlug>();
-  for (const med of medications) {
-    for (const price of med.prices) {
-      slugs.add(price.pharmacySlug);
-      if (!names.has(price.pharmacySlug)) {
-        names.set(price.pharmacySlug, price.pharmacyName);
-      }
-    }
-  }
-
-  return Array.from(slugs)
-    .map((pharmacySlug) => {
-      let total = 0;
-      let found = 0;
-      for (const med of medications) {
-        const price = med.prices.find((p) => p.pharmacySlug === pharmacySlug);
-        if (price) {
-          total += price.channels.effective;
-          found++;
-        }
-      }
-      return {
-        pharmacySlug,
-        pharmacyName: names.get(pharmacySlug) ?? pharmacySlug,
-        total,
-        found,
-        missing: medications.length - found,
-      };
-    })
-    .filter((t) => t.found > 0)
-    .sort((a, b) => {
-      if (a.missing === 0 && b.missing > 0) return -1;
-      if (a.missing > 0 && b.missing === 0) return 1;
-      return a.total - b.total;
-    });
-}
+export { computeAllInOneTotals };
+export type PharmacyTotal = PharmacyBasketTotal;
 
 export interface SplitBreakdownItem {
   matchKey: string;

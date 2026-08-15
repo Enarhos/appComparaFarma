@@ -48,8 +48,9 @@ compara-farma/
 │           ├── normalization.ts ← cleanQuery()
 │           ├── pricing.ts       ← effectivePrice(), toPharmacyPrice(), toMedicationResult()
 │           ├── deduplication.ts ← mergeDuplicates()
+│           ├── basket.ts        ← computeAllInOneTotals() (Domain Consolidation v2)
 │           ├── index.ts         ← barrel (exports con .js para NodeNext ESM)
-│           └── __tests__/       ← 38 tests + snapshot de contrato
+│           └── __tests__/       ← 52 tests + snapshot de contrato
 ├── api/                         ← backend mínimo para Vercel
 │   ├── api/                     ← entrypoints serverless: search.ts, health.ts
 │   └── src/
