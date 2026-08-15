@@ -1,4 +1,4 @@
-import type { MedicationResult } from "@comparafarma/domain";
+import { computeSavings, type MedicationResult } from "@comparafarma/domain";
 import { formatCLP } from "./format";
 import type { PriceHistoryResult } from "./priceHistory";
 
@@ -35,18 +35,21 @@ export function buildInsights(medication: MedicationResult, history: PriceHistor
   }
 
   const sortedPrices = [...medication.prices].sort((a, b) => a.channels.effective - b.channels.effective);
-  const best = sortedPrices[0];
-  const priciest = sortedPrices[sortedPrices.length - 1];
+  const { cheapest: best, priciest, savings: diff } = computeSavings(sortedPrices);
 
   if (best) {
     insights.push(`${best.pharmacyName} posee actualmente el menor precio.`);
   }
 
   if (best && priciest && priciest !== best) {
-    const diff = priciest.channels.effective - best.channels.effective;
     insights.push(`La diferencia entre la farmacia más barata y la más cara es de ${formatCLP(diff)}.`);
     insights.push(`${priciest.pharmacyName} mantiene el precio más alto.`);
 
+    // Umbral de dispersión propio de este archivo: divide por `best` (la
+    // más barata), a diferencia del porcentaje de mobile/medication.tsx
+    // (que divide por `priciest`) — son fórmulas distintas con propósitos
+    // distintos, no se unifican (ver comentario en packages/domain/src/
+    // savings.ts).
     if (diff / best.channels.effective >= HIGH_DISPERSION_THRESHOLD) {
       insights.push("Este medicamento presenta alta dispersión de precios entre farmacias.");
     }

@@ -21,6 +21,7 @@ import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { AlertSheet } from "@/components/AlertSheet";
 import { formatCLP, scrapedAgo } from "@/lib/formatters";
 import { recordPriceSnapshot, getPriceHistory, type PriceSnapshot } from "@/lib/priceHistory";
+import { computeSavings } from "@comparafarma/domain";
 import type { PharmacyPrice, PharmacySlug } from "@/lib/types";
 
 type SortKey = "price-asc" | "price-desc";
@@ -91,11 +92,14 @@ export default function MedicationScreen() {
     );
   }, [medMatchKey, bestPrice, bestPharmacy]);
 
-  const cheapest = sortedPrices[0];
-  const priciest = sortedPrices[sortedPrices.length - 1];
-  const savings = (cheapest && priciest && sortedPrices.length > 1)
-    ? priciest.channels.effective - cheapest.channels.effective
-    : 0;
+  // computeSavings() no ordena ni filtra `sortedPrices` — recibe tal cual el
+  // array ya construido arriba (que respeta el toggle de orden "price-asc"/
+  // "price-desc" del usuario). Esto preserva a propósito un comportamiento
+  // existente: si el usuario ordena por precio descendente, cheapest/
+  // priciest quedan invertidos y `savings` da negativo, por lo que el
+  // SavingsCard (guard `savings > 0`) simplemente no se muestra. No es un
+  // bug que este PR deba corregir (ver packages/domain/src/savings.ts).
+  const { cheapest, priciest, savings } = computeSavings(sortedPrices);
   const savingsPct = (savings > 0 && priciest)
     ? Math.round((savings / priciest.channels.effective) * 100)
     : 0;
