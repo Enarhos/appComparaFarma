@@ -1,4 +1,4 @@
-import { computeAllInOneTotals, type MedicationResult, type PharmacyBasketTotal, type PharmacySlug } from "@comparafarma/domain";
+import { computeAllInOneTotals, sortByEffectivePrice, type MedicationResult, type PharmacyBasketTotal, type PharmacySlug } from "@comparafarma/domain";
 
 /**
  * Cálculo de las dos alternativas de "mi receta" (Sprint E):
@@ -34,7 +34,7 @@ export function computeSplitTotal(medications: MedicationResult[]): {
 
   for (const med of medications) {
     if (med.prices.length === 0) continue; // sin precios registrados — se excluye, ver limitaciones del sprint
-    const cheapest = [...med.prices].sort((a, b) => a.channels.effective - b.channels.effective)[0];
+    const cheapest = sortByEffectivePrice(med.prices)[0];
     breakdown.push({
       matchKey: med.matchKey,
       canonicalName: med.canonicalName,

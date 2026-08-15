@@ -12,7 +12,7 @@ export type {
 
 export { matchKey } from "./matching.js";
 export { cleanQuery } from "./normalization.js";
-export { effectivePrice, toPharmacyPrice, toMedicationResult } from "./pricing.js";
+export { effectivePrice, toPharmacyPrice, toMedicationResult, sortByEffectivePrice } from "./pricing.js";
 export { mergeDuplicates } from "./deduplication.js";
 export { computeAllInOneTotals, type PharmacyBasketTotal } from "./basket.js";
 export { computeSavings, type SavingsResult } from "./savings.js";

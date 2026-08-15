@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { computeSavings, type PharmacyPrice, type MedicationResult } from "@comparafarma/domain";
+import { computeSavings, sortByEffectivePrice, type PharmacyPrice, type MedicationResult } from "@comparafarma/domain";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/format";
 import { buildMedicationSlug } from "@/lib/medicationSlug";
@@ -19,9 +19,7 @@ export function channelChips(price: PharmacyPrice, cardLabel: string | null): { 
 }
 
 export function MedicationCard({ medication }: Props) {
-  const sortedPrices = [...medication.prices].sort(
-    (a, b) => a.channels.effective - b.channels.effective
-  );
+  const sortedPrices = sortByEffectivePrice(medication.prices);
   const { cheapest: best, savings } = computeSavings(sortedPrices);
   const bestDisplay = best ? PHARMACIES[best.pharmacySlug] : null;
 

@@ -4,6 +4,7 @@ import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useConfigStore } from "@/store/configStore";
 import { useLocationStore } from "@/store/locationStore";
+import { sortByEffectivePrice } from "@comparafarma/domain";
 import type { MedicationResult, PharmacySlug } from "@/lib/types";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/formatters";
@@ -24,10 +25,11 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
     (p) => isActive(p.pharmacySlug) && (!activePharmacies || activePharmacies.has(p.pharmacySlug))
   );
 
-  const visibleBest = visiblePrices.reduce<typeof visiblePrices[0] | null>((acc, p) => {
-    if (!acc || p.channels.effective < acc.channels.effective) return p;
-    return acc;
-  }, null);
+  // Equivalencia con el reduce() anterior demostrada antes de migrar (Domain
+  // Consolidation v4, PR refactor/domain-sort-effective-price): mismo
+  // resultado por referencia de objeto en todos los casos, incluidos
+  // empates, gracias a que Array.prototype.sort es estable.
+  const visibleBest = sortByEffectivePrice(visiblePrices)[0] ?? null;
 
   const displayPrice = visibleBest?.channels.effective ?? bestPrice;
   const displayPharmacySlug = (visibleBest?.pharmacySlug ?? bestPharmacy) as PharmacySlug;

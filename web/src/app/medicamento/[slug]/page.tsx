@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
-import { computeSavings } from "@comparafarma/domain";
+import { computeSavings, sortByEffectivePrice } from "@comparafarma/domain";
 import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP, formatDateTime, formatPercent } from "@/lib/format";
 import { PharmacyPriceCard } from "@/components/PharmacyPriceCard";
@@ -100,7 +100,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
   const hasHistory = history.series.some((s) => s.points.length > 0);
   const insights = buildInsights(medication, history);
 
-  const sortedPrices = [...medication.prices].sort((a, b) => a.channels.effective - b.channels.effective);
+  const sortedPrices = sortByEffectivePrice(medication.prices);
   const { cheapest: best, savings } = computeSavings(sortedPrices);
   const bestDisplay = best ? PHARMACIES[best.pharmacySlug] : null;
   const lastUpdatedAt = medication.prices.length
