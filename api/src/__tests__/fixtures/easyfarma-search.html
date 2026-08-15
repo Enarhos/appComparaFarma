@@ -5,6 +5,10 @@
 <section id="js-product-list">
 <div class="products row">
 
+<!-- Producto 1: precio entero simple ($690), estructura anidada REAL de
+     producción (itemprop="offers" > itemprop="priceCurrency" +
+     itemprop="price" content="..."), confirmada en investigación
+     2026-08-15+ (probe en producción, no simplificada). -->
 <article class="product-miniature js-product-miniature" data-id-product="24713" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
   <div class="thumbnail-container">
     <a class="thumbnail product-thumbnail" href="https://nuevo.easyfarma.cl/24713-paracetamol-500-mg-x-16.html">
@@ -12,16 +16,17 @@
     </a>
     <div class="product-description">
       <div class="category-default">Analgésicos</div>
-      <h3 class="h3 product-title">
-        <a href="https://nuevo.easyfarma.cl/24713-paracetamol-500-mg-x-16.html">Paracetamol 500 mg. 16 comp.</a>
-      </h3>
+      <h3 class="h3 product-title" itemprop="name"><a href="https://nuevo.easyfarma.cl/24713-paracetamol-500-mg-x-16.html">Paracetamol 500 mg. 16 comp.</a></h3>
       <div class="product-price-and-shipping">
-        <span class="price">$ 690</span>
+        <span class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <span itemprop="priceCurrency" content="CLP"></span><span itemprop="price" content="690">$ 690</span>
+        </span>
       </div>
     </div>
   </div>
 </article>
 
+<!-- Producto 2: precio de 4 cifras ($1.490). -->
 <article class="product-miniature js-product-miniature" data-id-product="104817" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
   <div class="thumbnail-container">
     <a class="thumbnail product-thumbnail" href="https://nuevo.easyfarma.cl/104817-paracetamol-gotas-100-mg-ml-15-ml.html">
@@ -29,18 +34,18 @@
     </a>
     <div class="product-description">
       <div class="category-default">MEDICAMENTOS</div>
-      <h3 class="h3 product-title">
-        <a href="https://nuevo.easyfarma.cl/104817-paracetamol-gotas-100-mg-ml-15-ml.html">Paracetamol Gotas 100 mg/mL 15 mL</a>
-      </h3>
+      <h3 class="h3 product-title" itemprop="name"><a href="https://nuevo.easyfarma.cl/104817-paracetamol-gotas-100-mg-ml-15-ml.html">Paracetamol Gotas 100 mg/mL 15 mL</a></h3>
       <div class="product-price-and-shipping">
-        <span class="price">$ 1.490</span>
+        <span class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <span itemprop="priceCurrency" content="CLP"></span><span itemprop="price" content="1490">$ 1.490</span>
+        </span>
       </div>
     </div>
   </div>
 </article>
 
-<!-- Producto sin imagen disponible: el sitio muestra un placeholder de texto
-     en vez de un <img>, así que no debe aparecer imageUrl inventado. -->
+<!-- Producto 3: precio de 5 cifras ($12.490), y sin imagen disponible
+     (placeholder de texto en vez de <img>). -->
 <article class="product-miniature js-product-miniature" data-id-product="990001" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
   <div class="thumbnail-container">
     <a class="thumbnail product-thumbnail" href="https://nuevo.easyfarma.cl/990001-ibuprofeno-600-mg-20-comp.html">
@@ -48,18 +53,38 @@
     </a>
     <div class="product-description">
       <div class="category-default">MEDICAMENTOS</div>
-      <h3 class="h3 product-title">
-        <a href="https://nuevo.easyfarma.cl/990001-ibuprofeno-600-mg-20-comp.html">Ibuprofeno 600 mg 20 comp.</a>
-      </h3>
+      <h3 class="h3 product-title" itemprop="name"><a href="https://nuevo.easyfarma.cl/990001-ibuprofeno-600-mg-20-comp.html">Ibuprofeno 600 mg 20 comp.</a></h3>
       <div class="product-price-and-shipping">
-        <span class="price">$ 12.490</span>
+        <span class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <span itemprop="priceCurrency" content="CLP"></span><span itemprop="price" content="12490">$ 12.490</span>
+        </span>
       </div>
     </div>
   </div>
 </article>
 
-<!-- Producto sin precio visible ("Consultar disponibilidad"): debe excluirse
-     del resultado sin inventar un precio, igual que el cliente anterior. -->
+<!-- Producto 4: content con decimales ("690.00") — el punto aquí es
+     separador DECIMAL, no de miles; debe interpretarse como $690, no
+     $69.000. -->
+<article class="product-miniature js-product-miniature" data-id-product="990003" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
+  <div class="thumbnail-container">
+    <a class="thumbnail product-thumbnail" href="https://nuevo.easyfarma.cl/990003-producto-con-decimales.html">
+      <img class="img-fluid" src="https://nuevo.easyfarma.cl/99998-home_default/producto-con-decimales.jpg" alt="Producto Con Decimales">
+    </a>
+    <div class="product-description">
+      <div class="category-default">MEDICAMENTOS</div>
+      <h3 class="h3 product-title" itemprop="name"><a href="https://nuevo.easyfarma.cl/990003-producto-con-decimales.html">Producto Con Decimales 100 mg</a></h3>
+      <div class="product-price-and-shipping">
+        <span class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <span itemprop="priceCurrency" content="CLP"></span><span itemprop="price" content="690.00">$ 690</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- Producto 5: sin precio visible ("Consultar disponibilidad"), sin
+     itemprop="price" en absoluto — debe excluirse sin inventar un precio. -->
 <article class="product-miniature js-product-miniature" data-id-product="990002" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
   <div class="thumbnail-container">
     <a class="thumbnail product-thumbnail" href="https://nuevo.easyfarma.cl/990002-producto-sin-precio.html">
@@ -67,9 +92,7 @@
     </a>
     <div class="product-description">
       <div class="category-default">MEDICAMENTOS</div>
-      <h3 class="h3 product-title">
-        <a href="https://nuevo.easyfarma.cl/990002-producto-sin-precio.html">Producto Sin Precio Normal 50 mg</a>
-      </h3>
+      <h3 class="h3 product-title" itemprop="name"><a href="https://nuevo.easyfarma.cl/990002-producto-sin-precio.html">Producto Sin Precio Normal 50 mg</a></h3>
       <div class="product-price-and-shipping">
         <span class="unavailable">Consultar disponibilidad</span>
       </div>

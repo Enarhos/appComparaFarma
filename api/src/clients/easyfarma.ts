@@ -41,12 +41,31 @@ const EXTRA_BROWSER_HEADERS: Record<string, string> = {
   Referer: `${BASE}/`,
 };
 
-function parsePrice(raw: string): number | null {
-  // El sitio nuevo escribe el precio como "$ 690" (con espacio) o
-  // "$ 12.490" — a diferencia del sitio anterior ("$690", sin espacio).
-  const m = raw.match(/\$\s*([\d.]+)/);
-  if (!m) return null;
-  return parseInt(m[1].replace(/\./g, ""), 10) || null;
+// Precio — leído desde el atributo `content` de la microdata schema.org
+// (`<span itemprop="price" content="690">`), NO del texto visible "$ 690".
+//
+// Investigación en producción (2026-08-15+) confirmó la causa raíz de
+// FINAL_PRODUCTS=0 en el Monitor API: el HTML real anida el texto visible
+// dos niveles más adentro de lo que asumía el parser anterior —
+//   <span class="price" itemprop="offers" ...>
+//     <span itemprop="priceCurrency" content="CLP"></span>
+//     <span itemprop="price" content="690">$ 690</span>
+//   </span>
+// — así que un regex que buscaba "$" pegado (solo con espacios) después de
+// class="price" nunca hacía match contra ningún producto real, aunque sí
+// contra el fixture de tests (que estaba simplificado y no reproducía el
+// anidado real — ver easyfarma.test.ts).
+//
+// Leer `content` es además más robusto que parsear el texto visible: viene
+// como número limpio sin símbolo de moneda ni separador de miles. OJO: el
+// punto en `content` es un separador DECIMAL (p. ej. "690.00" = $690), lo
+// opuesto al texto visible del sitio anterior donde el punto era separador
+// de MILES ("$1.490" = $1.490) — por eso ya no se reutiliza la lógica de
+// parseo de precio de otros clientes/versiones anteriores para este campo.
+function parsePriceFromContent(raw: string): number | null {
+  const value = Number.parseFloat(raw);
+  if (!Number.isFinite(value) || value <= 0) return null;
+  return Math.round(value);
 }
 
 export function parseEasyFarmaResponse(html: string): ScrapedProduct[] {
@@ -68,12 +87,17 @@ export function parseEasyFarmaResponse(html: string): ScrapedProduct[] {
     const name = nameM[2].trim();
     if (!name) continue;
 
-    // Precio — <span class="price">$ 690</span>. Si un producto no expone
-    // precio (p. ej. "Consultar disponibilidad"), se excluye sin inventar
-    // un valor, igual que el cliente anterior.
-    const priceM = block.match(/class="price"[^>]*>\s*\$\s*([\d.]+)/);
-    if (!priceM) continue;
-    const price = parsePrice(`$${priceM[1]}`);
+    // Precio — se aísla primero la etiqueta completa que tiene
+    // itemprop="price" (sin asumir que `content` viene antes o después de
+    // `itemprop` en el atributo) y luego se extrae `content="..."` de esa
+    // etiqueta. Si un producto no expone precio (p. ej. "Consultar
+    // disponibilidad", sin ningún itemprop="price"), se excluye sin
+    // inventar un valor, igual que el cliente anterior.
+    const priceTagM = block.match(/<[^>]*\bitemprop="price"[^>]*>/);
+    if (!priceTagM) continue;
+    const contentM = priceTagM[0].match(/\bcontent="([\d.]+)"/);
+    if (!contentM) continue;
+    const price = parsePriceFromContent(contentM[1]);
     if (!price || price <= 0) continue;
 
     // Imagen — <img class="... img-fluid ..." src="...">. El sitio nuevo
