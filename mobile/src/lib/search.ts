@@ -1,8 +1,12 @@
 import type { MedicationResult } from "@/lib/types";
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL?.trim() ?? "";
-const API_KEY = process.env.EXPO_PUBLIC_API_KEY?.trim() ?? "";
 
+// La busqueda es publica (Sprint SEC-001): el backend ya no exige x-api-key
+// para /api/search. EXPO_PUBLIC_API_KEY se retiro porque, al ir empaquetada
+// en el binario de la app, nunca fue realmente secreta — API_SECRET_KEY
+// queda reservado para superficies privilegiadas del backend (debug=1,
+// /api/subscriptions grant-manual/revoke-manual), nunca para Mobile.
 export async function searchMedications(
   query: string,
   signal?: AbortSignal,
@@ -19,7 +23,6 @@ export async function searchMedications(
 
   const res = await fetch(`${API_URL.replace(/\/$/, "")}/api/search?${params.toString()}`, {
     signal,
-    headers: API_KEY ? { "x-api-key": API_KEY } : undefined,
   });
 
   if (!res.ok) throw new Error(`API search failed with status ${res.status}`);
