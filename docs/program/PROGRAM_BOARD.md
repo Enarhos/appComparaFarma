@@ -134,7 +134,7 @@ Prioridades vigentes para el sprint activo "Production Release 1.0" (ver `docs/p
 
 ## 5. Relaciones
 
-Este documento consolida, sin duplicar en detalle, el estado de: `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/product/EPICS.md`/`BACKLOG_PRODUCT.md`/`ROADMAP.md`, `docs/release/PRODUCTION_READINESS_V2.md`, `docs/analysis/PROJECT_INVENTORY.md` y `docs/actas/`. Se relaciona con el resto de `docs/program/` como su vista resumen — cada sección de este documento tiene su contraparte de detalle en otro archivo del mismo dominio.
+Este documento consolida, sin duplicar en detalle, el estado de: `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/archive/product/EPICS_2026-08-15.md`/`docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`/`ROADMAP.md`, `docs/release/PRODUCTION_READINESS_V2.md`, `docs/analysis/PROJECT_INVENTORY.md` y `docs/actas/`. Se relaciona con el resto de `docs/program/` como su vista resumen — cada sección de este documento tiene su contraparte de detalle en otro archivo del mismo dominio.
 
 ---
 
@@ -145,7 +145,7 @@ Este documento consolida, sin duplicar en detalle, el estado de: `docs/enterpris
 | Estado de Enterprise | `docs/enterprise/*`, `docs/actas/20260803.md` | ✔ resumido (§4.4) | — |
 | Estado de Brand/Design | `docs/brand/*`, `docs/design/*` | ✔ resumido (§4.4) | — |
 | Estado de Launch/Google Play | `docs/release/PRODUCTION_READINESS_V2.md` | ✔ resumido (§4.4, §4.5) | Clasificación C ("no recomendable publicar todavía") citada íntegra en la fuente |
-| Estado de Product/Engineering | `docs/product/EPICS.md`, `BACKLOG_PRODUCT.md`, `DECISION_LOG.md` | ✔ resumido (§4.4) | — |
+| Estado de Product/Engineering | `docs/archive/product/EPICS_2026-08-15.md`, `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `DECISION_LOG.md` | ✔ resumido (§4.4) | — |
 | Estado de Platform | `docs/analysis/PROJECT_INVENTORY.md` | ✔ resumido (§4.4) | — |
 | Bloqueos | `docs/program/RISKS.md` | ✔ referenciado (§4.5) | Detalle completo vive en `RISKS.md` |
 | Decisiones pendientes | `docs/program/DECISION_QUEUE.md` | Referenciado (§4.6) | — |

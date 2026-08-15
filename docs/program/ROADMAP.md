@@ -97,7 +97,7 @@ Growth: depende de Product/Engineering para nuevas capacidades (bioequivalentes,
 | Launch | Confirmación de cierre de Data Safety | `docs/release/PRODUCTION_READINESS_V2.md` |
 | Product/Engineering | Sin sprint de ingeniería activo declarado; próximo candidato depende de prioridad del CEO | `docs/program/CURRENT_SPRINT.md` |
 | Platform | Sin pendiente crítico declarado | `docs/analysis/PROJECT_INVENTORY.md` |
-| Growth | Evaluar si se acota "Sprint B-lite" a Dr. Simi + Farmex (match exacto ISP) | `docs/product/BACKLOG_PRODUCT.md` |
+| Growth | Evaluar si se acota "Sprint B-lite" a Dr. Simi + Farmex (match exacto ISP) | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
 | Commercial | Definición del primer plan comercial real vendible | `docs/product/DECISION_LOG.md` (pendiente recurrente desde Fase 1 de Subscription Platform) |
 
 ---

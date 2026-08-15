@@ -19,8 +19,8 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Rol asumido en su redacción** | Portfolio Manager / Enterprise Program Manager |
 | **Nivel de Gobierno** | De decisión operativa |
 | **Clasificación** | Backlog Empresarial de Programa |
-| **Fuente Oficial** | Este documento es la fuente oficial del backlog **a nivel de programa** (épica/workstream). No reemplaza `docs/product/BACKLOG_PRODUCT.md` como fuente del detalle funcional de cada ítem de producto |
-| **Documentos de los que depende** | `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/product/EPICS.md`, `BACKLOG_PRODUCT.md`, `ROADMAP.md`, `DECISION_LOG.md`, `docs/release/PRODUCTION_READINESS_V2.md`, `docs/analysis/PROJECT_INVENTORY.md`, `docs/actas/*` |
+| **Fuente Oficial** | Este documento es la fuente oficial del backlog **a nivel de programa** (épica/workstream). No reemplaza `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` como fuente del detalle funcional de cada ítem de producto |
+| **Documentos de los que depende** | `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/archive/product/EPICS_2026-08-15.md`, `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `ROADMAP.md`, `DECISION_LOG.md`, `docs/release/PRODUCTION_READINESS_V2.md`, `docs/analysis/PROJECT_INVENTORY.md`, `docs/actas/*` |
 | **Documentos que gobierna** | Ninguno; `CURRENT_SPRINT.md` extrae de aquí el trabajo activo |
 | **Pregunta que responde** | ¿Cuáles son todas las iniciativas reales del programa, y en qué estado está cada una? |
 
@@ -84,13 +84,13 @@ Consolidar, en un solo documento y con nivel de agregación de programa (no de t
 
 | Épica | Prioridad | Estado | Dependencias | Fuente |
 |---|---|---|---|---|
-| Subscription Platform — Fase 1 (Motor + Google Play adapter) | Media (CFPS 3.0) | ✅ Implementado y mergeado | Ninguna | `docs/product/EPICS.md` |
-| Subscription Platform — Fase 2 (Web Billing, Flow) | Media (CFPS 3.2) | ✅ Implementado y mergeado (corregido de Stripe a Flow) | Fase 1 | `docs/product/EPICS.md`, `docs/engineering/rfc/RFC-005` |
-| Sprint E — Comparación de receta completa (web) | Alta (ratificado) | ✅ Implementado y mergeado | Ninguna | `docs/product/BACKLOG_PRODUCT.md` |
-| Sprint A — CFM-ID / Registro Canónico | Media (CFPS 3.0) | ✅ Implementado y mergeado (código); ejecución de migración SQL en producción no confirmada en esta revisión | Ninguna | `docs/product/BACKLOG_PRODUCT.md`; incertidumbre señalada en `docs/analysis/PROJECT_INVENTORY.md` §3 |
-| Sprint C — Alertas de precio por email (web) | Media (CFPS 3.65) | ✅ Implementado y mergeado | Ninguna | `docs/product/BACKLOG_PRODUCT.md` |
-| Sprint D — Cuenta ligera + perfil (web) | Baja (CFPS 2.9, reabierto por el CEO) | ✅ Implementado y mergeado | Ninguna | `docs/product/BACKLOG_PRODUCT.md` |
-| CF-111 — Timeout AraucoMed | Media (CFPS 3.2) | ✅ Cerrado (no reproducido) | Ninguna | `docs/product/BACKLOG_PRODUCT.md` |
+| Subscription Platform — Fase 1 (Motor + Google Play adapter) | Media (CFPS 3.0) | ✅ Implementado y mergeado | Ninguna | `docs/archive/product/EPICS_2026-08-15.md` |
+| Subscription Platform — Fase 2 (Web Billing, Flow) | Media (CFPS 3.2) | ✅ Implementado y mergeado (corregido de Stripe a Flow) | Fase 1 | `docs/archive/product/EPICS_2026-08-15.md`, `docs/engineering/rfc/RFC-005` |
+| Sprint E — Comparación de receta completa (web) | Alta (ratificado) | ✅ Implementado y mergeado | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
+| Sprint A — CFM-ID / Registro Canónico | Media (CFPS 3.0) | ✅ Implementado y mergeado (código); ejecución de migración SQL en producción no confirmada en esta revisión | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`; incertidumbre señalada en `docs/analysis/PROJECT_INVENTORY.md` §3 |
+| Sprint C — Alertas de precio por email (web) | Media (CFPS 3.65) | ✅ Implementado y mergeado | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
+| Sprint D — Cuenta ligera + perfil (web) | Baja (CFPS 2.9, reabierto por el CEO) | ✅ Implementado y mergeado | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
+| CF-111 — Timeout AraucoMed | Media (CFPS 3.2) | ✅ Cerrado (no reproducido) | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
 
 #### Platform (Web / API)
 
@@ -106,7 +106,7 @@ Consolidar, en un solo documento y con nivel de agregación de programa (no de t
 | Épica | Prioridad | Estado | Dependencias | Fuente |
 |---|---|---|---|---|
 | Favoritos, historial, búsquedas recientes (mobile) | Alta | ✅ Operativo | Ninguna | `docs/analysis/PROJECT_INVENTORY.md` §3 |
-| Spike de datos de bioequivalencia | Media | ✅ Cerrado — fuente ISP identificada (`datos.gob.cl`), match exacto viable solo en Dr. Simi/Farmex | Ninguna | `docs/product/BACKLOG_PRODUCT.md` |
+| Spike de datos de bioequivalencia | Media | ✅ Cerrado — fuente ISP identificada (`datos.gob.cl`), match exacto viable solo en Dr. Simi/Farmex | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
 
 #### Commercial
 
@@ -202,21 +202,21 @@ Consolidar, en un solo documento y con nivel de agregación de programa (no de t
 
 | Épica | Prioridad | Estado | Dependencias | Fuente |
 |---|---|---|---|---|
-| Subscription Platform — Fase 3 (Apple Billing) | — (sin CFPS todavía) | ⬜ Backlog futuro | Ninguna (mobile/ ya fuera de Prueba Cerrada desde 2026-08-08) | `docs/product/EPICS.md` |
-| Subscription Platform — Fase 4 (Plataforma Comercial: planes configurables, cupones, empresas, API Premium) | — (sin CFPS todavía) | ⬜ Backlog futuro | Fase 3 (Apple) | `docs/product/EPICS.md` |
-| Verificación end-to-end de compra real (Google Play) | Alta | 🟡 Desbloqueado (2026-08-08) — pendiente de ejecución | Ninguna (mobile/ ya fuera de Prueba Cerrada) | `docs/product/EPICS.md`, `docs/release/PRODUCTION_READINESS_V2.md` §8 |
-| Sprint B — Bioequivalentes | Media (CFPS 4.15, alto puntaje) | 🔴 Bloqueado — sin fuente de datos regulatoria confiable integrada | Spike de datos (cerrado, ver Growth) | `docs/product/BACKLOG_PRODUCT.md` |
-| Sprint F | Baja (sin puntuar) | ⬜ Backlog futuro | Ninguna | `docs/product/BACKLOG_PRODUCT.md` |
-| Backlog v1.5 (16 ítems UX) | Media | 🟡 6 hechos, 4 parciales, 6 pendientes | Ítems pendientes bloqueados por congelamiento de `mobile/` | `docs/product/BACKLOG_PRODUCT.md` |
-| Backlog v2.0 (push notifications, tab bar persistente) | Media | ⬜ No re-verificado, no iniciado | Ninguna evidenciada | `docs/product/BACKLOG_PRODUCT.md` |
+| Subscription Platform — Fase 3 (Apple Billing) | — (sin CFPS todavía) | ⬜ Backlog futuro | Ninguna (mobile/ ya fuera de Prueba Cerrada desde 2026-08-08) | `docs/archive/product/EPICS_2026-08-15.md` |
+| Subscription Platform — Fase 4 (Plataforma Comercial: planes configurables, cupones, empresas, API Premium) | — (sin CFPS todavía) | ⬜ Backlog futuro | Fase 3 (Apple) | `docs/archive/product/EPICS_2026-08-15.md` |
+| Verificación end-to-end de compra real (Google Play) | Alta | 🟡 Desbloqueado (2026-08-08) — pendiente de ejecución | Ninguna (mobile/ ya fuera de Prueba Cerrada) | `docs/archive/product/EPICS_2026-08-15.md`, `docs/release/PRODUCTION_READINESS_V2.md` §8 |
+| Sprint B — Bioequivalentes | Media (CFPS 4.15, alto puntaje) | 🔴 Bloqueado — sin fuente de datos regulatoria confiable integrada | Spike de datos (cerrado, ver Growth) | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
+| Sprint F | Baja (sin puntuar) | ⬜ Backlog futuro | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
+| Backlog v1.5 (16 ítems UX) | Media | 🟡 6 hechos, 4 parciales, 6 pendientes | Ítems pendientes bloqueados por congelamiento de `mobile/` | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
+| Backlog v2.0 (push notifications, tab bar persistente) | Media | ⬜ No re-verificado, no iniciado | Ninguna evidenciada | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
 
 #### Growth
 
 | Épica | Prioridad | Estado | Dependencias | Fuente |
 |---|---|---|---|---|
-| Bioequivalentes (funcionalidad completa) | Media (CFPS 4.15) | 🔴 Bloqueado por fuente de datos parcial | Spike (cerrado, resultado parcial) | `docs/product/BACKLOG_PRODUCT.md` |
+| Bioequivalentes (funcionalidad completa) | Media (CFPS 4.15) | 🔴 Bloqueado por fuente de datos parcial | Spike (cerrado, resultado parcial) | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
 | IA / escaneo de receta / sustitutos terapéuticos | — (idea) | ⬜ Idea, sin código | Ninguna | `docs/analysis/PROJECT_INVENTORY.md` §3 |
-| Push notifications | — (idea, backlog v2.0) | ⬜ Sin código | Ninguna | `docs/product/BACKLOG_PRODUCT.md`, `docs/analysis/PROJECT_INVENTORY.md` §3 |
+| Push notifications | — (idea, backlog v2.0) | ⬜ Sin código | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `docs/analysis/PROJECT_INVENTORY.md` §3 |
 
 #### Commercial
 
@@ -230,7 +230,7 @@ Consolidar, en un solo documento y con nivel de agregación de programa (no de t
 
 ## 5. Relaciones
 
-Este backlog se relaciona con `docs/product/BACKLOG_PRODUCT.md` y `EPICS.md` como su fuente de detalle para el workstream Product/Engineering; con `docs/enterprise/*` para el workstream Enterprise; con `docs/brand/*` y `docs/design/*` para Brand y Design; con `docs/release/PRODUCTION_READINESS_V2.md` para Launch. No sustituye a ninguno de ellos como fuente de detalle. La reclasificación por fase (§4) se relaciona directamente con `docs/program/PHASE_TRANSITION.md`, que explica el criterio general de cierre de Fase 1 sin repetir el detalle de cada ítem.
+Este backlog se relaciona con `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` y `docs/archive/product/EPICS_2026-08-15.md` como su fuente de detalle para el workstream Product/Engineering; con `docs/enterprise/*` para el workstream Enterprise; con `docs/brand/*` y `docs/design/*` para Brand y Design; con `docs/release/PRODUCTION_READINESS_V2.md` para Launch. No sustituye a ninguno de ellos como fuente de detalle. La reclasificación por fase (§4) se relaciona directamente con `docs/program/PHASE_TRANSITION.md`, que explica el criterio general de cierre de Fase 1 sin repetir el detalle de cada ítem.
 
 ---
 
@@ -238,8 +238,8 @@ Este backlog se relaciona con `docs/product/BACKLOG_PRODUCT.md` y `EPICS.md` com
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Backlog funcional de producto | `docs/product/BACKLOG_PRODUCT.md` | ✔ resumido por épica (§4.1-4.3) | El detalle de cada ítem (v15-01 a v15-16, etc.) permanece solo en la fuente |
-| Épicas de producto | `docs/product/EPICS.md` | ✔ resumido (§4.1, §4.3) | — |
+| Backlog funcional de producto | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` | ✔ resumido por épica (§4.1-4.3) | El detalle de cada ítem (v15-01 a v15-16, etc.) permanece solo en la fuente |
+| Épicas de producto | `docs/archive/product/EPICS_2026-08-15.md` | ✔ resumido (§4.1, §4.3) | — |
 | Cadena de Arquitectura Empresarial pendiente | `docs/actas/20260803.md` | ✔ resumido (§4.1, §4.3) | — |
 | Roadmap documental de Brand/Design | `docs/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md`, `docs/design/README.md` | ✔ resumido (§4.1, §4.2) | — |
 | Bloqueantes de Google Play | `docs/release/PRODUCTION_READINESS_V2.md`, `PRODUCTION_BLOCKERS_PLAN.md` | ✔ resumido (§4.1, §4.2) | — |
@@ -250,7 +250,7 @@ Este backlog se relaciona con `docs/product/BACKLOG_PRODUCT.md` y `EPICS.md` com
 
 ## 7. Gobierno
 
-Este documento no reemplaza a `docs/product/BACKLOG_PRODUCT.md` ni a ningún backlog de dominio — consolida su estado a nivel de programa. Cuando exista una discrepancia, prevalece la fuente original de cada workstream. La reclasificación por fase (v1.1) no elimina ninguna iniciativa de la v1.0 — cada ítem se conserva íntegro, solo se reorganiza bajo la fase que corresponde a su estado real.
+Este documento no reemplaza a `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` ni a ningún backlog de dominio — consolida su estado a nivel de programa. Cuando exista una discrepancia, prevalece la fuente original de cada workstream. La reclasificación por fase (v1.1) no elimina ninguna iniciativa de la v1.0 — cada ítem se conserva íntegro, solo se reorganiza bajo la fase que corresponde a su estado real.
 
 **Ninguna versión de este documento tiene, a la fecha, aprobación formal del CEO/fundador.**
 
@@ -258,7 +258,7 @@ Este documento no reemplaza a `docs/product/BACKLOG_PRODUCT.md` ni a ningún bac
 
 ## 8. Documentos relacionados
 
-`docs/program/PROGRAM_BOARD.md`, `CURRENT_SPRINT.md`, `ROADMAP.md`, `PHASE_TRANSITION.md`, `docs/product/BACKLOG_PRODUCT.md`, `EPICS.md`, `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/release/PRODUCTION_READINESS_V2.md`, `docs/analysis/PROJECT_INVENTORY.md`.
+`docs/program/PROGRAM_BOARD.md`, `CURRENT_SPRINT.md`, `ROADMAP.md`, `PHASE_TRANSITION.md`, `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `docs/archive/product/EPICS_2026-08-15.md`, `docs/enterprise/*`, `docs/brand/*`, `docs/design/*`, `docs/release/PRODUCTION_READINESS_V2.md`, `docs/analysis/PROJECT_INVENTORY.md`.
 
 ---
 

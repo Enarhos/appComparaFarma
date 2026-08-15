@@ -48,7 +48,7 @@ Este dominio existe para responder exactamente esas preguntas, todos los días, 
 **Este documento NO define:**
 
 - Contenido de identidad, estrategia, arquitectura empresarial, marca o diseño — eso sigue viviendo exclusivamente en `docs/book/`, `docs/strategy/`, `docs/enterprise/`, `docs/brand/`, `docs/design/`.
-- Backlog funcional de producto en el sentido de features/UX — eso sigue siendo `docs/product/BACKLOG_PRODUCT.md`, `EPICS.md`, `ROADMAP.md`. `docs/program/MASTER_BACKLOG.md` consolida esas iniciativas a nivel de programa (épicas/workstreams/prioridad/dependencias), no las reemplaza como fuente de detalle funcional.
+- Backlog funcional de producto en el sentido de features/UX — eso sigue siendo `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `docs/archive/product/EPICS_2026-08-15.md`, `ROADMAP.md`. `docs/program/MASTER_BACKLOG.md` consolida esas iniciativas a nivel de programa (épicas/workstreams/prioridad/dependencias), no las reemplaza como fuente de detalle funcional.
 - Decisiones técnicas de arquitectura de software — eso sigue siendo `docs/engineering/adr/` y `docs/engineering/rfc/`.
 - Ninguna estrategia nueva, ningún producto nuevo, ninguna iniciativa que no exista ya en la documentación consultada. Este dominio reconstruye el estado real; no lo inventa.
 
@@ -70,7 +70,7 @@ Este dominio existe para responder exactamente esas preguntas, todos los días, 
 
 ### 4.3 Relación con Product
 
-`docs/product/` gobierna el backlog funcional, el roadmap de producto y las decisiones operativas de ingeniería (vía `PRODUCT_DECISION_FRAMEWORK.md`, `BACKLOG_PRODUCT.md`, `EPICS.md`, `DECISION_LOG.md`). `docs/program/MASTER_BACKLOG.md` consolida esas mismas iniciativas junto con las de Enterprise, Brand, Design, Launch, Growth, Platform y Commercial, a un nivel de agregación distinto (épica/workstream, no tarea). `docs/program/` no reemplaza el proceso de scoring CFPS ni el ciclo de vida de un ítem de backlog de producto — solo refleja su estado dentro de la vista de programa completa.
+`docs/product/` gobierna el backlog funcional, el roadmap de producto y las decisiones operativas de ingeniería (vía `PRODUCT_DECISION_FRAMEWORK.md`, `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md`, `docs/archive/product/EPICS_2026-08-15.md`, `DECISION_LOG.md`). `docs/program/MASTER_BACKLOG.md` consolida esas mismas iniciativas junto con las de Enterprise, Brand, Design, Launch, Growth, Platform y Commercial, a un nivel de agregación distinto (épica/workstream, no tarea). `docs/program/` no reemplaza el proceso de scoring CFPS ni el ciclo de vida de un ítem de backlog de producto — solo refleja su estado dentro de la vista de programa completa.
 
 ### 4.4 Relación con Brand (y Design)
 
