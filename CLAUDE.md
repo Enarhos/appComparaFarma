@@ -41,16 +41,17 @@ compara-farma/
 ├── package.json                 ← pnpm workspaces: mobile + api + packages/* + web
 ├── pnpm-workspace.yaml
 ├── packages/
-│   └── domain/                  ← @comparafarma/domain (tipos + normalización compartidos)
+│   └── domain/                  ← @comparafarma/domain (reglas de negocio compartidas Mobile/Web/API)
 │       └── src/
 │           ├── types.ts         ← PharmacySlug, PriceChannels, PharmacyPrice, MedicationResult, etc.
 │           ├── matching.ts      ← matchKey()
 │           ├── normalization.ts ← cleanQuery()
-│           ├── pricing.ts       ← effectivePrice(), toPharmacyPrice(), toMedicationResult()
+│           ├── pricing.ts       ← effectivePrice(), toPharmacyPrice(), toMedicationResult(), sortByEffectivePrice() (Domain Consolidation v4)
 │           ├── deduplication.ts ← mergeDuplicates()
 │           ├── basket.ts        ← computeAllInOneTotals() (Domain Consolidation v2)
+│           ├── savings.ts       ← computeSavings() (Domain Consolidation v3)
 │           ├── index.ts         ← barrel (exports con .js para NodeNext ESM)
-│           └── __tests__/       ← 52 tests + snapshot de contrato
+│           └── __tests__/       ← 71 tests (7 archivos) + snapshot de contrato
 ├── api/                         ← backend mínimo para Vercel
 │   ├── api/                     ← entrypoints serverless: search.ts, health.ts
 │   └── src/
