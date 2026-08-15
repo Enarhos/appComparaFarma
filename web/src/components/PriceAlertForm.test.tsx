@@ -44,6 +44,56 @@ describe("PriceAlertForm", () => {
       matchKey: "paracetamol|500mg",
       canonicalName: "Paracetamol 500 mg",
       targetPrice: 900,
+      currentPrice: 1000,
+    });
+  });
+
+  it("con targetPrice === currentPrice muestra el error y no llama al backend", async () => {
+    const user = userEvent.setup();
+    render(<PriceAlertForm matchKey="a" canonicalName="Paracetamol" currentBestPrice={1000} />);
+
+    await user.click(screen.getByRole("button", { name: /Avisarme si baja de precio/ }));
+    await user.type(screen.getByLabelText("Tu email"), "a@b.com");
+    await user.clear(screen.getByLabelText("Avísame si baja de"));
+    await user.type(screen.getByLabelText("Avísame si baja de"), "1000");
+    await user.click(screen.getByRole("button", { name: "Crear alerta" }));
+
+    expect(await screen.findByText("El precio objetivo debe ser menor al precio actual.")).toBeTruthy();
+    expect(createPriceAlert).not.toHaveBeenCalled();
+  });
+
+  it("con targetPrice > currentPrice muestra el error y no llama al backend", async () => {
+    const user = userEvent.setup();
+    render(<PriceAlertForm matchKey="a" canonicalName="Paracetamol" currentBestPrice={1000} />);
+
+    await user.click(screen.getByRole("button", { name: /Avisarme si baja de precio/ }));
+    await user.type(screen.getByLabelText("Tu email"), "a@b.com");
+    await user.clear(screen.getByLabelText("Avísame si baja de"));
+    await user.type(screen.getByLabelText("Avísame si baja de"), "1200");
+    await user.click(screen.getByRole("button", { name: "Crear alerta" }));
+
+    expect(await screen.findByText("El precio objetivo debe ser menor al precio actual.")).toBeTruthy();
+    expect(createPriceAlert).not.toHaveBeenCalled();
+  });
+
+  it("con targetPrice < currentPrice sí llama al backend (permite continuar)", async () => {
+    vi.mocked(createPriceAlert).mockResolvedValue({ ok: true });
+    const user = userEvent.setup();
+    render(<PriceAlertForm matchKey="a" canonicalName="Paracetamol" currentBestPrice={1000} />);
+
+    await user.click(screen.getByRole("button", { name: /Avisarme si baja de precio/ }));
+    await user.type(screen.getByLabelText("Tu email"), "a@b.com");
+    await user.clear(screen.getByLabelText("Avísame si baja de"));
+    await user.type(screen.getByLabelText("Avísame si baja de"), "800");
+    await user.click(screen.getByRole("button", { name: "Crear alerta" }));
+
+    expect(await screen.findByText(/Revisa tu email para confirmar la alerta/)).toBeTruthy();
+    expect(createPriceAlert).toHaveBeenCalledWith({
+      email: "a@b.com",
+      matchKey: "a",
+      canonicalName: "Paracetamol",
+      targetPrice: 800,
+      currentPrice: 1000,
     });
   });
 

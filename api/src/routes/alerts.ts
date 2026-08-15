@@ -27,6 +27,13 @@ interface CreateAlertBody {
   matchKey?: string;
   canonicalName?: string;
   targetPrice?: number;
+  // Precio vigente en el momento en que el usuario crea la alerta — usado
+  // solo para exigir targetPrice < currentPrice (PR fix/price-alert-target-
+  // validation). No se persiste: emailAlertsDb/createAlert no lo recibe.
+  // Es un dato provisto por el cliente, no verificado contra una nueva
+  // búsqueda server-side (ver comentario en handleCreate) — protege
+  // coherencia funcional de la alerta, no es una garantía de seguridad.
+  currentPrice?: number;
 }
 
 async function parseBody(req: RequestLike): Promise<CreateAlertBody> {
@@ -101,6 +108,21 @@ async function handleCreate(req: RequestLike, res: ResponseLike): Promise<void> 
   }
   if (!Number.isFinite(targetPrice) || targetPrice <= 0 || targetPrice > MAX_TARGET_PRICE) {
     json(res, 400, { error: "El precio objetivo debe ser un número entre 1 y 10.000.000." }, req);
+    return;
+  }
+
+  const currentPrice = Number(body.currentPrice);
+  if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
+    json(res, 400, { error: "El precio actual es inválido." }, req);
+    return;
+  }
+  // Autoridad de la regla: el backend es quien decide, no el cliente (Web
+  // ya valida esto mismo en UX, Mobile no llama este endpoint — ver PR
+  // fix/price-alert-target-validation). currentPrice no se re-verifica
+  // contra una nueva búsqueda (evitar latencia/scraping en el path de
+  // creación) — ver nota de riesgo residual en la interfaz CreateAlertBody.
+  if (!(targetPrice < currentPrice)) {
+    json(res, 400, { error: "El precio objetivo debe ser menor al precio actual." }, req);
     return;
   }
 
