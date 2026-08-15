@@ -8,6 +8,7 @@ import { getClientIp, getHeader, getSearchParam, json, type RequestLike, type Re
 import { withTrackedUrls } from "../lib/clickTracking.js";
 import { cleanQuery } from "@comparafarma/domain";
 import { searchMedications, searchMedicationsDetailed } from "../services/searchService.js";
+import { probeEasyFarma } from "../clients/easyfarma.js";
 
 function getOrigin(req: RequestLike): string {
   const host = getHeader(req, "x-forwarded-host") ?? getHeader(req, "host") ?? "comparafarma-api.vercel.app";
@@ -32,6 +33,17 @@ function validateQuery(rawQuery: string | null): string {
 function isDebugMode(req: RequestLike): boolean {
   const debug = getSearchParam(req, "debug");
   return debug === "1" || debug === "true";
+}
+
+// Diagnóstico temporal (ver api/src/clients/easyfarma.ts): solo se activa con
+// ?debug=1&easyfarmaProbe=1, exigiendo el mismo isDebugAuthorized() de siempre.
+// No cambia el comportamiento habitual de ?debug=1 (usado por Monitor API), que
+// nunca envía este flag adicional.
+const EASYFARMA_PROBE_PARAM = "easyfarmaProbe";
+
+function isEasyFarmaProbeRequested(req: RequestLike): boolean {
+  const flag = getSearchParam(req, EASYFARMA_PROBE_PARAM);
+  return flag === "1" || flag === "true";
 }
 
 export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Promise<void> {
@@ -88,14 +100,36 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
 
     if (debugMode) {
       const execution = await searchMedicationsDetailed(query, onlySlugs);
+
+      // Diagnóstico temporal y aislado (no afecta el resto de la respuesta ni
+      // el camino que usa Monitor API, que nunca envía este flag). Ver
+      // api/src/clients/easyfarma.ts#probeEasyFarma para el detalle de qué
+      // hace y las garantías de seguridad de su salida (sin cookies, tokens
+      // ni HTML completo).
+      const easyfarmaProbe = isEasyFarmaProbeRequested(req)
+        ? await probeEasyFarma(query).catch((err) => ({
+            error: err instanceof Error ? err.message : "Unknown error",
+          }))
+        : undefined;
+
       console.info(JSON.stringify({
         requestId,
         route: "/api/search",
         query,
         cache: "bypass",
         diagnostics: execution.diagnostics,
+        ...(easyfarmaProbe ? { easyfarmaProbe } : {}),
       }));
-      json(res, 200, { ...execution, results: withTrackedUrls(execution.results, origin) }, req);
+      json(
+        res,
+        200,
+        {
+          ...execution,
+          results: withTrackedUrls(execution.results, origin),
+          ...(easyfarmaProbe ? { easyfarmaProbe } : {}),
+        },
+        req
+      );
       return;
     }
 
