@@ -1,4 +1,4 @@
-import { computeSavings, type MedicationResult } from "@comparafarma/domain";
+import { computeSavings, sortByEffectivePrice, type MedicationResult } from "@comparafarma/domain";
 import { formatCLP } from "./format";
 import type { PriceHistoryResult } from "./priceHistory";
 
@@ -34,7 +34,7 @@ export function buildInsights(medication: MedicationResult, history: PriceHistor
     }
   }
 
-  const sortedPrices = [...medication.prices].sort((a, b) => a.channels.effective - b.channels.effective);
+  const sortedPrices = sortByEffectivePrice(medication.prices);
   const { cheapest: best, priciest, savings: diff } = computeSavings(sortedPrices);
 
   if (best) {

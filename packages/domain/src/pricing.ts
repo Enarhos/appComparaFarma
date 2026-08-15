@@ -42,6 +42,36 @@ export function toPharmacyPrice(product: ScrapedProduct, pharmacySlug: PharmacyS
   };
 }
 
+/**
+ * Copia de `prices` ordenada ascendentemente por `channels.effective` — no
+ * muta el array recibido, no filtra, no deduplica, no aplica ninguna regla
+ * adicional. Es exactamente el patrón `[...prices].sort((a, b) =>
+ * a.channels.effective - b.channels.effective)` que estaba reimplementado
+ * de forma idéntica en al menos 4 lugares (Domain Consolidation v4, PR
+ * refactor/domain-sort-effective-price):
+ *   - web/src/components/MedicationCard.tsx
+ *   - web/src/app/medicamento/[slug]/page.tsx
+ *   - web/src/lib/insights.ts
+ *   - web/src/lib/recipeComparison.ts::computeSplitTotal()
+ * y, por equivalencia demostrada (mismo resultado por referencia de objeto
+ * en todos los casos, incluidos empates), reemplaza también el `reduce()`
+ * de mobile/src/components/MedicationListItem.tsx que buscaba el mínimo a
+ * mano.
+ *
+ * Confía en que `Array.prototype.sort` es estable (garantizado por spec
+ * desde ES2019, cumplido por V8/Hermes/JSC) — en empates de `effective`,
+ * conserva el orden de aparición original, igual que hacían las
+ * implementaciones que reemplaza.
+ *
+ * Deliberadamente NO usada por mobile/src/app/medication.tsx: ese archivo
+ * tiene un orden bidireccional asc/desc controlado por un toggle de UI (y
+ * `computeSavings()` depende a propósito de recibir ese array ya ordenado
+ * en cualquier sentido) — no forma parte de esta consolidación.
+ */
+export function sortByEffectivePrice(prices: PharmacyPrice[]): PharmacyPrice[] {
+  return [...prices].sort((a, b) => a.channels.effective - b.channels.effective);
+}
+
 export function toMedicationResult(product: ScrapedProduct, pharmacySlug: PharmacySlug, pharmacyName: string): MedicationResult {
   const price = toPharmacyPrice(product, pharmacySlug, pharmacyName);
   return {
