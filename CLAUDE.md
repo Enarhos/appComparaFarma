@@ -13,7 +13,7 @@ Este documento **no es documentación del proyecto** — para eso está `docs/` 
 - **Claude** — Software Factory / agente principal de implementación. Puede analizar, auditar, implementar y proponer.
 - **GitHub** — repositorio oficial y mecanismo de integración (branches + PR). `origin/main` es la única fuente oficial de código y documentación aceptados.
 
-Claude **no redefine unilateralmente** estrategia, prioridades, alcance de producto, arquitectura de alto impacto, decisiones comerciales ni gobierno documental. Si durante una implementación aparece una decisión de ese nivel, se reporta para decisión CTO/Product (formato `NEEDS_DECISION`, ver §10) en vez de asumirla en silencio.
+Claude **no redefine unilateralmente** estrategia, prioridades, alcance de producto, arquitectura de alto impacto, decisiones comerciales ni gobierno documental. Si durante una implementación aparece una decisión de ese nivel, se reporta para decisión CTO/Product (formato `NEEDS_DECISION`, ver §9) en vez de asumirla en silencio.
 
 ---
 
