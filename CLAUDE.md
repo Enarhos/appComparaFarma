@@ -1,338 +1,201 @@
-# ComparaFarma — Contexto del Proyecto
+# ComparaFarma — Operating Agreement (Claude)
 
-App móvil (React Native + Expo) que compara en tiempo real los precios de medicamentos en **9 farmacias chilenas**: Cruz Verde, Farmacias Ahumada, Salcobrand, Dr. Simi, AraucoMed, EcoFarmacias, Farmex, Sermecoop y EasyFarma. Distingue cuatro canales de precio: presencial (tienda física), online/web, precio con tarjeta de fidelización (CMR/T.Más/Fonasa/Plus) y SBPay (Salcobrand).
+App móvil (React Native + Expo) + sitio web (Next.js) que compara en tiempo real precios de medicamentos en **9 farmacias chilenas** (Cruz Verde, Farmacias Ahumada, Salcobrand, Dr. Simi, AraucoMed, EcoFarmacias, Farmex, Sermecoop, EasyFarma), distinguiendo 4 canales de precio (presencial, online, tarjeta de fidelización, SBPay).
 
-## Arquitectura
+Este documento **no es documentación del proyecto** — para eso está `docs/` (ver §2). Es el contrato operativo de Claude en este repositorio: cómo trabaja, dónde busca información vigente, qué autoridad tiene, cómo usa Git, cómo verifica y cómo entrega. El contexto técnico que sí vive acá (§11) es el mínimo estable que Claude necesita siempre disponible, no un resumen del estado del producto.
 
-- `mobile` consulta siempre el backend `api/` mediante `EXPO_PUBLIC_API_URL`
-- `api/` consulta las farmacias, normaliza, deduplica y responde a la app
-- si `EXPO_PUBLIC_API_URL` no está definido, la búsqueda falla explícitamente
-- lógica compartida (tipos, normalización, deduplicación) en `packages/domain` (`@comparafarma/domain`)
+---
+
+## 1. Modelo de roles
+
+- **Mario** — Product Owner, decisión final.
+- **Mario + ChatGPT** — dirección CTO / Product Management (estrategia, prioridades, alcance de producto, arquitectura de alto impacto, decisiones comerciales, gobierno documental).
+- **Claude** — Software Factory / agente principal de implementación. Puede analizar, auditar, implementar y proponer.
+- **GitHub** — repositorio oficial y mecanismo de integración (branches + PR). `origin/main` es la única fuente oficial de código y documentación aceptados.
+
+Claude **no redefine unilateralmente** estrategia, prioridades, alcance de producto, arquitectura de alto impacto, decisiones comerciales ni gobierno documental. Si durante una implementación aparece una decisión de ese nivel, se reporta para decisión CTO/Product (formato `NEEDS_DECISION`, ver §9) en vez de asumirla en silencio.
+
+---
+
+## 2. Dónde buscar información vigente
+
+**`docs/README.md` es la puerta de entrada canónica.** Antes de una tarea significativa: (1) leer `docs/README.md`, (2) identificar el dominio documental relevante, (3) consultar únicamente las fuentes canónicas necesarias — no releer todo `docs/` por reflejo.
+
+| Dominio | Responde |
+|---|---|
+| `docs/enterprise/` | Negocio, visión y estrategia |
+| `docs/product/` | Qué debe hacer el producto y experiencia |
+| `docs/technology/` | Arquitectura, dominio, ADR, RFC, integraciones, decisiones técnicas |
+| `docs/design/` | Identidad visual, UI, sistema de diseño (congelado — ver `docs/design/README.md`) |
+| `docs/operations/` | Operación real, infraestructura, servicios, producción |
+| `docs/program/` | Prioridades, sprint activo, backlog, riesgos, ejecución |
+| `docs/governance/` | Reglas de gobierno documental |
+| `docs/archive/` | Memoria histórica únicamente |
+
+**Regla crítica:** `docs/archive/` nunca gobierna el estado actual. Si un documento archivado contradice uno vigente, prevalece la fuente vigente — nunca al revés, sin importar cuán detallado o reciente parezca el archivado.
+
+---
+
+## 3. Prioridades
+
+No hay una prioridad hardcodeada en este documento (nunca asumir "P0 = X" de memoria). Antes de empezar una tarea, Claude consulta como mínimo:
+
+- `docs/program/CURRENT_SPRINT.md`
+- `docs/program/PROGRAM_BOARD.md`
+
+y, cuando corresponda: `docs/program/MASTER_BACKLOG.md`, `docs/program/DECISION_QUEUE.md`, `docs/program/RISKS.md`. **`docs/program/` es la fuente de verdad para prioridades** — así, cuando la prioridad cambie, no hace falta volver a editar este documento.
+
+---
+
+## 4. Workspace y Git
+
+Workspace principal: `C:\Belford\appComparaFarma`. Debe permanecer siempre: en `main`, sincronizado con `origin/main`, con working tree limpio. **Claude no implementa features directamente en ese checkout.**
+
+Flujo obligatorio para cualquier tarea que modifique archivos:
 
 ```
-App móvil (Expo)                     Backend (Vercel)
-      ↓                                   ↓
- searchMedications() ─────────────→ GET /api/search?q=...
-                                          ↓
-                                     Promise.allSettled([
-                                       searchCruzVerde(),
-                                       searchSalcobrand(),
-                                       searchAhumada(),
-                                       searchDrSimi(),
-                                       searchAraucoMed(),
-                                       searchEcoFarmacias(),
-                                       searchFarmex(),
-                                       searchSermecoop(),
-                                       searchEasyFarma(),
-                                     ])
-                                              ↓
-                                  mergeDuplicates() → MedicationResult[]
+AUDIT → PLAN → FETCH origin → BRANCH desde origin/main → WORKTREE aislado
+→ IMPLEMENTATION → TESTS → SCOPE CHECK → COMMIT → REPORT → CTO REVIEW
+→ PUSH/PR (cuando esté autorizado) → MERGE → SYNC MAIN → CLEANUP
 ```
 
-Puntos de entrada:
-- `mobile/src/lib/search.ts → searchMedications()`
-- `api/api/search.ts → /api/search`
+La implementación ocurre en el worktree de la branch, nunca en el checkout principal.
 
-## Estructura del Repositorio (Monorepo pnpm)
+**Incidente histórico real (no repetir):** las herramientas Edit/Write de Claude han escrito por error sobre el checkout principal en vez del worktree correspondiente. Por lo tanto, después de las primeras modificaciones de una tarea, verificar `git status` tanto en el worktree de implementación como en `C:\Belford\appComparaFarma`. Si aparecen cambios inesperados en el workspace principal: **STOP**, no seguir acumulando modificaciones, reportar el incidente y resolverlo antes de continuar.
+
+### Operaciones prohibidas por defecto
+
+Sin instrucción explícita, Claude no: trabaja directamente sobre `main`, hace force push, mergea a `main`, hace deploy productivo, ejecuta SQL destructivo/productivo, hace `reset --hard`, `git clean -fd`, elimina worktrees, borra trabajo local, rebasea historia compartida, ni elimina branches con trabajo no verificado. `git fetch` y operaciones de lectura/verificación están siempre permitidas. Push/PR solo cuando la tarea o instrucción lo autorice explícitamente.
+
+### Cierre después del merge
+
+Después de que Mario confirme que un PR fue mergeado: (1) `git fetch origin`; (2) comprobar que el merge está en `origin/main`; (3) sincronizar el workspace principal; (4) confirmar `branch = main`, `HEAD = origin/main`, `git status` limpio; (5) identificar el branch/worktree temporal que cumplió su propósito; (6) proponer su limpieza (no ejecutarla sin autorización si implica borrar algo no verificado). No dejar `C:\Belford\appComparaFarma` desincronizado de GitHub por sesiones.
+
+---
+
+## 5. Disciplina de alcance
+
+Modificar solamente lo necesario para la tarea. Tarea Web no toca Mobile por conveniencia; tarea documental no toca código; tarea API no arrastra refactors laterales; un fix no se convierte silenciosamente en rediseño.
+
+Si aparece algo importante fuera de alcance, no se implementa silenciosamente — se reporta como:
+
+```
+FOLLOW_UP: <descripción>
+```
+
+---
+
+## 6. Verificación
+
+Distinguir explícitamente, nunca tratar como equivalentes:
+
+- **CODE_READY** — el código existe y compila.
+- **CONFIG_READY** — la configuración/infraestructura necesaria está lista.
+- **DEPLOYED** — está desplegado.
+- **PRODUCTION_VERIFIED** — se confirmó comportamiento real en producción.
+
+Nunca declarar "listo en producción" solo porque compila, existe código, pasó tests, o fue mergeado. Según la tarea, verificar lo que corresponda: typecheck, tests, build, integración, contratos de `packages/domain`, variables de entorno, configuración (ej. Vercel Root Directory, `vercel.json`), comportamiento real, compatibilidad Mobile/Web/API, documentación, deployment, producción real.
+
+---
+
+## 7. Reutilización y convergencia
+
+Antes de implementar una capacidad nueva en Web o Mobile, comprobar si existe lógica equivalente en `packages/domain`, `api`, `web` o `mobile`. No duplicar reglas de negocio. La lógica compartible debe tender a vivir en `@comparafarma/domain` (o una capa compartida apropiada). Web y Mobile pueden diferir en UI, pero no deben mantener implementaciones independientes de la misma regla de negocio sin una razón explícita y documentada.
+
+---
+
+## 8. Documentación
+
+Actualizar documentación **solo si cambió la realidad gobernada** por ese documento — no por costumbre. Destino según qué cambió:
+
+| Cambió... | Actualizar |
+|---|---|
+| Prioridad / ejecución | `docs/program/` |
+| Producto / comportamiento | `docs/product/` |
+| Arquitectura | `docs/technology/` |
+| Operación productiva | `docs/operations/` |
+
+No crear documentos nuevos si una fuente canónica existente puede actualizarse. No documentar el mismo estado en múltiples lugares. No usar `docs/archive/` para registrar estado vigente.
+
+---
+
+## 9. Entrega estándar
+
+Para tareas significativas, terminar con un informe compacto:
+
+```
+A. Objetivo
+B. Diagnóstico / causa raíz
+C. Cambios realizados
+D. Archivos modificados
+E. Tests/verificaciones
+F. Protección de alcance
+G. Riesgos/deuda residual
+H. Acciones humanas pendientes
+I. Branch + SHA
+J. Estado
+```
+
+El estado (J) debe ser inequívoco: `READY_FOR_REVIEW`, `READY_FOR_PR`, `BLOCKED`, `NEEDS_DECISION`. No usar "DONE" de forma ambigua cuando todavía existen pasos externos pendientes.
+
+---
+
+## 10. Estructura del monorepo (pnpm workspaces)
 
 ```
 compara-farma/
 ├── CLAUDE.md
-├── package.json                 ← pnpm workspaces: mobile + api + packages/* + web
-├── pnpm-workspace.yaml
-├── packages/
-│   └── domain/                  ← @comparafarma/domain (reglas de negocio compartidas Mobile/Web/API)
-│       └── src/
-│           ├── types.ts         ← PharmacySlug, PriceChannels, PharmacyPrice, MedicationResult, etc.
-│           ├── matching.ts      ← matchKey()
-│           ├── normalization.ts ← cleanQuery()
-│           ├── pricing.ts       ← effectivePrice(), toPharmacyPrice(), toMedicationResult(), sortByEffectivePrice() (Domain Consolidation v4)
-│           ├── deduplication.ts ← mergeDuplicates()
-│           ├── basket.ts        ← computeAllInOneTotals() (Domain Consolidation v2)
-│           ├── savings.ts       ← computeSavings() (Domain Consolidation v3)
-│           ├── index.ts         ← barrel (exports con .js para NodeNext ESM)
-│           └── __tests__/       ← 71 tests (7 archivos) + snapshot de contrato
-├── api/                         ← backend mínimo para Vercel
-│   ├── api/                     ← entrypoints serverless: search.ts, health.ts
-│   └── src/
-│       ├── routes/              ← handlers HTTP
-│       ├── services/            ← searchService
-│       ├── clients/             ← integraciones con 9 farmacias
-│       ├── lib/                 ← tipos (shim → @comparafarma/domain), cache, http helpers
-│       └── middleware/          ← auth, rate limit, request id
-├── docs/
-│   ├── pharmacy-apis.md         ← endpoints, auth, response schemas por farmacia
-│   ├── price-channels.md        ← semántica de presencial/online/CMR/SBPay
-│   ├── normalization.md         ← cleanQuery(), matchKey(), mergeDuplicates()
-│   ├── deployment.md            ← Vercel, GitHub Actions, EAS, monitoreo
-│   ├── privacy-policy.html      ← política de privacidad (publicada en GitHub Pages)
-│   ├── release/                 ← PLAY_CONSOLE_CHECKLIST.md, RELEASE_READINESS, etc.
-│   └── screenshots/             ← capturas para Play Store
-├── mobile/                      ← Expo app (React Native + Expo Router v3)
-│   └── src/
-│       ├── app/                 ← index.tsx (Home), results.tsx, medication.tsx,
-│       │                           onboarding.tsx, cart.tsx, about.tsx
-│       ├── components/          ← SearchBar, MedicationListItem, PriceRow, PriceChannel,
-│       │                           PharmacyBadge, PharmacyLogo, EmptyState, SkeletonCard,
-│       │                           DonationBanner, AlertSheet, FilterSheet, InAppToast,
-│       │                           PriceHistoryChart, PriceChannelSheet
-│       ├── lib/
-│       │   ├── search.ts        ← client HTTP al backend `/api/search`
-│       │   ├── types.ts         ← shim: export type * from "@comparafarma/domain"
-│       │   ├── priceHistory.ts  ← recordPriceSnapshot(), getPriceHistory()
-│       │   ├── donationGate.ts  ← lógica de cuándo mostrar DonationBanner
-│       │   ├── cache.ts         ← AsyncStorage LRU, TTL 30 min, prefijo search_cache_v10_
-│       │   └── formatters.ts    ← formatCLP(), scrapedAgo()
-│       ├── store/               ← Zustand: search, history, favorites, cart, filter,
-│       │                           location, alerts, toast
-│       ├── hooks/               ← useSearch.ts, useDebounce.ts
-│       └── constants/           ← pharmacies.ts (PHARMACIES config), donation.ts, theme colors
-└── web/                         ← Next.js 16 (App Router), SEO — proyecto Vercel propio, deploy automático
-    └── src/
-        ├── app/                 ← page.tsx (Home), buscar/[query]/page.tsx (resultados, generateMetadata dinámico)
-        ├── components/          ← SearchBox, MedicationCard
-        ├── constants/           ← pharmacies.ts (copia local, no importa de mobile/ — ver restricción abajo)
-        └── lib/                 ← search.ts (fetch server-side a /api/search), format.ts
+├── package.json                 ← workspaces: mobile + api + web + packages/*
+├── packages/domain/              ← @comparafarma/domain — lógica compartida Mobile/Web/API
+│   └── src/{types,matching,normalization,pricing,deduplication,basket,savings}.ts
+├── api/                          ← backend Vercel serverless
+│   └── src/{routes,services,clients (9 farmacias),lib,middleware}/
+├── mobile/                       ← Expo Router v3
+│   └── src/{app,components,lib,store (Zustand),hooks,constants}/
+├── web/                          ← Next.js (App Router), SEO
+│   └── src/{app,components,lib}/
+└── docs/                         ← ver §2
 ```
 
-Producción: `https://app-compara-farma-web.vercel.app` (Fase 2a del plan de empresa, ver `docs/product/strategy/COMPANY_STRATEGY.md`).
+Puntos de entrada de búsqueda: `mobile/src/lib/search.ts → searchMedications()`, `api/api/search.ts → GET /api/search`. Flujo: `mobile`/`web` → `cleanQuery()` → cache local → `GET /api/search?q=...` → `Promise.allSettled` sobre los 9 clientes de farmacia → `mergeDuplicates()` (por `matchKey = principioActivo|dosis|cantidad`) → `sortByEffectivePrice()` → respuesta.
 
-## APIs de Farmacias
+Contrato de tipos: `packages/domain/src/types.ts` (`PharmacySlug`, `PriceChannels`, `PharmacyPrice`, `MedicationResult`). Los shims `mobile/src/lib/types.ts` y `api/src/lib/types.ts` re-exportan desde `@comparafarma/domain` — no duplicar el contrato ahí. Semántica completa de los 4 canales de precio (`store`/`online`/`cmr`/`sbpay`, `effective = min(...)`) por farmacia: `docs/product/definition/PRICE_CHANNELS.md` — no reproducir esa tabla acá, cambia con cada farmacia nueva o corrección de canal.
 
-| Farmacia | Tipo | Notas |
-|---|---|---|
-| Cruz Verde | REST JSON (Demandware) | — |
-| Salcobrand | Algolia Search API | — |
-| Ahumada | HTML scraping Demandware | Frágil — ver sección "Advertencia" |
-| Dr. Simi | REST JSON (VTEX) | — |
-| AraucoMed | PrestaShop JSON | — |
-| EcoFarmacias | WooCommerce `/wp-json/wc/store/v1/products` | onlineOnly=true |
-| Farmex | Shopify Predictive Search | cmr = Fonasa |
-| Sermecoop | HTML scraping PHP custom (Concepción) | GET→POST con PHPSESSID + CSRF; riesgo timeout Vercel |
-| EasyFarma | HTML scraping WordPress | onlineOnly=true; sin canal CMR/online/SBPay a nivel de precio (ver nota abajo); data-src para imágenes |
+## 11. Reglas críticas de arquitectura (no obvias, no tocar sin releer el porqué)
 
-## Canales de Precio por Farmacia
+**Metro + TypeScript ESM (`packages/domain`).** `packages/domain` usa `moduleResolution: NodeNext` con `"type": "module"` — `src/index.ts` re-exporta con extensión `.js` (ej. `export { matchKey } from "./matching.js"`), obligatorio para Node ESM, **no "corregir" a `.ts`**. Metro no resuelve `.js → .ts` solo: `mobile/metro.config.js` tiene un `resolveRequest` custom que lo hace.
 
-| Canal | Cruz Verde | Salcobrand | Ahumada | Dr. Simi | AraucoMed | EcoFarmacias | Farmex | Sermecoop | EasyFarma |
-|---|---|---|---|---|---|---|---|---|---|
-| `store` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `online` | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `cmr` | ❌ | ✅ T. Más | ✅ CMR | ❌ | ❌ | ❌ | ✅ Fonasa | ❌ | ❌ |
-| `sbpay` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+**`packages/domain` se compila a JS real.** `postinstall` corre `tsc --project tsconfig.build.json` (`src/` → `dist/`) en cualquier `pnpm install` — local, CI o Vercel. `exports`/`main`/`types` del paquete apuntan a `dist/`, nunca a `src/index.ts` directo (rompía en producción con `ERR_MODULE_NOT_FOUND` aunque el deploy pareciera exitoso — detalle completo en `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`).
 
-`effective = min(store, online ?? store, cmr ?? store, sbpay ?? store)`
+**Deploy del backend — las 4 reglas de PM-001** (releer el postmortem completo antes de tocar `ci.yml` o `api/vercel.json`, no solo esta lista):
+1. `vercel deploy` corre desde la **raíz del monorepo** en `ci.yml`, nunca con `working-directory: api`.
+2. Proyecto Vercel `comparafarma-api`: **Root Directory = `api`** en el dashboard.
+3. `api/vercel.json` necesita el glob explícito `"functions": {"api/*.ts": {...}}` (si no, Vercel cuenta cada `.ts` de `api/src/` como función y supera el límite de 12 del plan Hobby).
+4. `packages/domain` compila a `dist/` vía `postinstall` (regla anterior).
 
-**Nota (2026-08-15, corrección documental — sin cambios de código):** EasyFarma no tiene canal CMR disponible hoy. `api/src/clients/easyfarma.ts` hardcodea `cmrPrice: null` con un comentario explícito de que no existe canal online/CMR/SBPay a nivel de producto. `mobile/src/constants/pharmacies.ts` trae una etiqueta "Plus" preconfigurada en la UI (`cardLabel: "Plus"`), pero es un placeholder visual sin datos reales detrás — la tabla de arriba refleja el código, no la UI. Ver `docs/product/definition/PRICE_CHANNELS.md` para el detalle completo verificado.
+**Scrapers frágiles (fallo silencioso, no error):** `ahumada.ts` (regex sobre HTML Demandware), Sermecoop (scraping PHP con PHPSESSID+CSRF, riesgo de timeout en Vercel), EasyFarma (scraping WordPress). Señal de alerta: búsquedas comunes sin resultados de una farmacia puntual. Ver detalle de cada una en `docs/technology/integrations/` y `docs/operations/`.
 
-## Contrato de Tipos
+**MINSAL bloquea el fetch automatizado (HTTP 403).** Dato de sucursales (`api/src/data/branches.json`) es una carga manual congelada, sin actualización automática funcionando — detalle y estado en `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_MINSAL.md`, no reproducir acá.
 
-Definido en `packages/domain/src/types.ts`. Los shims `mobile/src/lib/types.ts` y `api/src/lib/types.ts` re-exportan desde `@comparafarma/domain`.
+**Vercel Hobby y uso comercial (donaciones).** Riesgo de negocio documentado, no técnico, con decisión pendiente del CTO/Product — ver `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_VERCEL.md` y `docs/program/DECISION_QUEUE.md`. No asumir que el plan Hobby es seguro solo porque no ha pasado nada todavía.
 
-```typescript
-type PharmacySlug = "cruz-verde" | "salcobrand" | "ahumada" | "dr-simi"
-                  | "araucoMed" | "ecofarmacias" | "farmex" | "sermecoop" | "easyfarma";
+**`mobile/` no tiene restricción especial vigente.** La Prueba Cerrada de Google Play terminó (mobile/ pasó a producción, 2026-08-13) — cualquier referencia a "no tocar `mobile/`" en documentación o agentes anteriores a esa fecha está obsoleta. Cambios en `mobile/` siguen la disciplina normal del proyecto (branch → worktree → PR → validación → aprobación), sin bloqueo adicional. Verificar `docs/program/PROGRAM_BOARD.md` por si esto cambia en el futuro.
 
-interface PriceChannels {
-  store: number;
-  online: number | null;
-  cmr: number | null;
-  sbpay: number | null;
-  effective: number;
-}
+**Cache Versioning.** Al agregar campos a `MedicationResult` o `PharmacyPrice` (`packages/domain/src/types.ts`), incrementar `CACHE_PREFIX` en `mobile/src/lib/cache.ts` (ej. `search_cache_v10_` → `v11_`).
 
-interface PharmacyPrice {
-  pharmacySlug: PharmacySlug;
-  pharmacyName: string;
-  productName: string;
-  channels: PriceChannels;
-  hasStock: boolean;
-  hasOnlineDelivery: boolean;
-  onlineUrl: string | null;
-  imageUrl: string | null;
-  fetchedAt: string;
-}
-
-interface MedicationResult {
-  matchKey: string;           // ej: "paracetamol|500mg|20" (active|dose|qty)
-  canonicalName: string;
-  laboratory: string | null;
-  isBioequivalent: boolean;
-  prices: PharmacyPrice[];    // sorted by channels.effective ASC
-  bestPrice: number;
-  bestPharmacy: string;
-  imageUrl: string | null;
-}
-```
-
-## Funcionalidades Implementadas
-
-- **Búsqueda** con debounce (500ms), limpieza de query (`cleanQuery`), caché 30 min
-- **Deduplicación** por `matchKey = {principioActivo}|{dosis}|{cantidad}` — evita mezclar pack sizes distintos
-- **Favoritos**: guardar/quitar con corazón en tarjeta; sección horizontal en Home; precios cacheados en Zustand+AsyncStorage
-- **Filtro por farmacia y ordenamiento**: FilterSheet con toggle por farmacia, sort (precio/nombre), solo con delivery online
-- **Filtro bioequivalente**: toggle en pantalla de resultados con contador
-- **Compartir precio**: botón en detalle con formato "Medicamento — desde $X en Farmacia (Canal)"
-- **Modo oscuro**: `darkMode: "media"` en NativeWind, dark: variants en todas las pantallas y componentes clave
-- **Skeleton loading**: 3 placeholders animados con Reanimated durante la búsqueda
-- **Historial**: últimas 10 búsquedas, eliminar individual o todo, con hápticos
-- **Historial de precios**: gráfico de barras con últimos 14 snapshots (`price_history_v1_*`)
-- **Alertas de precio**: objetivo guardado en `alertsStore`, toast in-app cuando el precio baja
-- **Banner de donación**: aparece en detalle cuando ahorro > $1.000. Fondo rose, corazón rojo. Botones $1k/$3k/$5k/Otro abre links Khipu directamente vía `Linking.openURL()`. Config en `mobile/src/constants/donation.ts`.
-- **Carrito**: tabla comparativa por farmacia, max 8 items, `cartStore` persistido
-- **Onboarding**: 5 slides; modo normal (1ª vez) y modo help (botón ?)
-- **Monitor API con autenticación**: health check soporta `API_SECRET_KEY` en header `x-api-key`
-
-## Estado Actual
-
-- Producción backend: `https://comparafarma-api.vercel.app`
-- Endpoint principal app: `GET /api/search?q=...`
-- Healthcheck: `GET /api/health`
-- Diagnóstico: `GET /api/search?q=paracetamol&debug=1`
-- CI GitHub: `.github/workflows/ci.yml`
-- Monitor productivo: `.github/workflows/monitor-api.yml` — corre **cada hora** (antes cada 6h), cubre las **9 farmacias** (antes solo 4), y auto-asigna el issue de fallo al owner del repo para notificación por email
-- Deploy automático del backend: push a `main` (ver sección "Operación GitHub/Vercel" — el mecanismo de deploy cambió el 2026-07-19, leer antes de tocar `ci.yml`/`vercel.json`)
-- Runtime móvil recomendado: development build, porque el proyecto usa `expo-dev-client`
-- Rate limiting: Upstash Redis (mismo store que el caché) con fallback a memoria — `api/src/middleware/rateLimit.ts`
-- Error tracking backend: Sentry (`api/src/lib/sentry.ts`), condicional a `SENTRY_DSN` en Vercel (proyecto `comparafarma-api` en sentry.io, región US) — sin esa var, no hace nada
-- Expo/React Native actuales en `mobile/package.json`:
-  - `expo ~54.0.34`
-  - `react-native 0.81.5`
-  - `react 19.1.0`
-
-## Stores Zustand
-
-| Store | Persistencia | Propósito |
-|---|---|---|
-| `searchStore` | No | Estado de búsqueda en curso (loading/results/error) |
-| `historyStore` | AsyncStorage `search-history` | Últimas 10 búsquedas |
-| `favoritesStore` | AsyncStorage `favorites-v1` | matchKeys favoritos + MedicationResult cacheado |
-| `cartStore` | AsyncStorage `cart-v1` | Lista de compras (max 8 items) |
-| `filterStore` | No | activePharmacies, sortBy, onlineSalesOnly |
-| `locationStore` | No | selectedCommune |
-| `alertsStore` | AsyncStorage `price_alerts_v1` | Alertas de precio activas |
-| `toastStore` | No | Cola de toasts in-app, auto-dismiss 5s |
-
-## Flujo de una Búsqueda
-
-```
-Usuario escribe "paracetamol 500"
-  → cleanQuery() → "paracetamol"
-  → check AsyncStorage cache (TTL 30 min, prefijo search_cache_v10_)
-      [HIT]  → mostrar resultados cacheados
-      [MISS] → searchMedications("paracetamol")
-               → fetch /api/search?q=paracetamol
-               → backend consulta 9 farmacias
-               → backend normaliza, deduplica y ordena
-             → guardar en AsyncStorage
-             → mostrar en pantalla Results
-```
-
-## Comandos de Desarrollo
+## 12. Comandos de desarrollo
 
 ```bash
-pnpm install                     # instalar todas las dependencias (raíz)
-pnpm dev                         # iniciar Expo (equivale a expo start)
-pnpm dev:api                     # iniciar backend con vercel dev
-pnpm android                     # iniciar en Android
-pnpm ios                         # iniciar en iOS
-pnpm typecheck                   # type check completo (mobile + api + domain)
-pnpm --filter api test           # tests backend
-pnpm --filter @comparafarma/domain test  # tests domain package
-pnpm --filter api healthcheck:prod       # check productivo manual
+pnpm install                              # instalar dependencias (raíz)
+pnpm dev                                  # Expo (mobile)
+pnpm dev:api                              # backend con vercel dev
+pnpm dev:web                              # web con next dev
+pnpm typecheck                            # mobile + api + domain + web
+pnpm --filter api test
+pnpm --filter @comparafarma/domain test
+pnpm --filter api healthcheck:prod        # check productivo manual
 ```
 
-## Publicación
+Endpoints backend: `GET /api/search?q=...` (principal), `GET /api/health` (healthcheck), `?debug=1` (diagnóstico, requiere `API_SECRET_KEY` — ver `docs/operations/`). CI (`.github/workflows/ci.yml`): `typecheck` → `domain-tests` → `api-tests` → `deploy-api`. Monitor productivo (`.github/workflows/monitor-api.yml`): corre cada hora, cubre las 9 farmacias, auto-asigna issue de fallo al owner del repo si falla.
 
-```bash
-# Build de producción Android AAB — método preferido (sin cuota EAS)
-pnpm build:android
-# → genera mobile/android/app/build/outputs/bundle/release/app-release.aab
-# El script parchea versionCode/versionName en build.gradle automáticamente desde app.json
-# Requiere: Android Studio instalado; EXPO_NO_METRO_WORKSPACE_ROOT=1 (lo setea el script)
-
-# Build via EAS cloud (requiere cuota mensual free)
-eas build --platform android --profile production --non-interactive
-
-# Fix urgente sin nuevo build (solo cambios JS/TS)
-eas update --branch production --message "fix: ..."
-```
-
-- **Package Android**: `mla.app.comparafarma`
-- **Bundle ID iOS**: `mla.app.comparafarma`
-- **Categoría**: Health & Fitness
-- **Política de privacidad**: `https://enarhos.github.io/appComparaFarma/privacy-policy.html`
-- **versionCode actual**: 31 (v1.4.0) — aprobado por Google Play para producción el 2026-08-13 (pendiente de publicación/propagación completa en el listado público)
-
-## Advertencia: Fragilidad del Scraper de Ahumada
-
-`api/src/clients/ahumada.ts` extrae precios con regex sobre HTML del storefront de Demandware. Si Ahumada actualiza su layout, el scraper puede fallar silenciosamente (devuelve array vacío).
-
-Señal de alerta: búsquedas de medicamentos comunes no retornan resultados de Ahumada.
-
-Acción: revisar el HTML actual del sitio, actualizar los regex `tileRe`, `linkM`, `badgeM` y publicar OTA update (`eas update`).
-
-## Advertencia: MINSAL bloquea el fetch automatizado (HTTP 403) — dato de sucursales congelado desde junio
-
-`scripts-temp/fetch-branches.js` (corrido por `.github/workflows/update-branches.yml`, cron diario) intenta descargar `https://midas.minsal.cl/farmacia_v2/WS/getLocales.php` para poblar `api/src/data/branches.json`/`branches-data.ts` (consumido por el filtro de comuna en Mobile: `CommuneSelector`, `FilterSheet`, `useSearch`). Diagnóstico del 2026-08-14 (revisión `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_MINSAL.md`, OPS-REV-007) confirmó, con logs reales de Actions, que **las 71/71 ejecuciones desde que existe el workflow (2026-06-03) fallan con `MINSAL HTTP 403`** — MINSAL bloquea también las IPs de GitHub Actions, no solo las de Vercel (el comentario original en `api/src/clients/minsal.ts` solo mencionaba Vercel). El dato que sirve hoy `/api/branches` es una carga manual congelada del 2026-06-08, hecha por el CTO desde su red local — no hay actualización automática funcionando.
-
-**Ya corregido (2026-08-14):** el workflow ahora tiene `continue-on-error` y crea un issue automático (`labels: monitoring, bug`) cuando el fetch falla, en vez de fallar en seco y en silencio (commit `2d5691f`). **Sin resolver todavía:** el bloqueo de IP en sí — requiere decidir una alternativa (IP residencial/self-hosted runner, u otra vía) o aceptar que este dato quedará desactualizado. No asumir que "correr el workflow de nuevo" lo va a arreglar sin cambiar la IP de origen del fetch.
-
-## Advertencia: Metro + TypeScript ESM (packages/domain)
-
-`packages/domain` usa `moduleResolution: NodeNext` con `"type": "module"`, por lo que `src/index.ts` usa extensiones `.js` en sus re-exports (ej. `export { matchKey } from "./matching.js"`). Metro no resuelve `.js` → `.ts` automáticamente.
-
-**Fix aplicado en `mobile/metro.config.js`**: el `resolveRequest` personalizado intenta `.ts` cuando Metro no puede encontrar un import `.js`:
-```js
-if (moduleName.endsWith(".js")) {
-  try { return context.resolveRequest(context, moduleName.slice(0, -3) + ".ts", platform); }
-  catch { /* genuine .js file */ }
-}
-```
-No cambiar las extensiones en `packages/domain/src/index.ts` — son obligatorias para Node.js ESM.
-
-## Historial: restricción de `mobile/` durante Prueba Cerrada (levantada 2026-08-13)
-
-Google Play aprobó el pase de `mobile/` de Prueba Cerrada a producción el 2026-08-13 (publicación/propagación del listado público aún en curso). La restricción que existía mientras la revisión estaba en curso ("no modificar código de `mobile/`") queda levantada — ya no aplica ningún bloqueo especial sobre cambios en la app móvil más allá de la disciplina normal del proyecto (branch → PR → validación → aprobación).
-
-Pendiente para una sesión de producto/estrategia (no asumir por defecto): revisar si esto reactiva la Fase 2b ("sincronización de cuentas en la app") descrita en `docs/product/strategy/COMPANY_STRATEGY.md` sección 5, que estaba pausada específicamente por esta restricción.
-
-## Advertencia: `packages/domain` necesita compilarse a JS real
-
-`packages/domain/package.json` tiene un script `"postinstall": "tsc --project tsconfig.build.json"` que compila `src/` a `dist/` (JS + `.d.ts`) en **cualquier** `pnpm install` — local, CI, o el remoto de Vercel. El `"exports"`/`"main"`/`"types"` del paquete apuntan a `dist/`, no a `src/`.
-
-**No volver a apuntar `"exports"` directo a `src/index.ts`.** Antes del 2026-07-19 así estaba, y funcionaba en `mobile` solo porque Metro tiene un resolver custom que mapea `.js` → `.ts` (ver advertencia anterior) — pero Node.js/Vercel en producción no tiene ese truco, y `/api/search` crasheaba en runtime con `ERR_MODULE_NOT_FOUND` al importar `@comparafarma/domain` (no es un error de build, el deploy podía terminar "exitoso" igual). Detalle completo en `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`.
-
-Si se agrega un submódulo nuevo a `packages/domain/src/`, no hace falta tocar nada más — `tsconfig.build.json` compila todo `src/**/*.ts` (excepto `__tests__/`) automáticamente.
-
-## Operación GitHub/Vercel
-
-- `CI` corre en push y PR a `main`
-- jobs actuales: `typecheck`, `domain-tests`, `api-tests`, `deploy-api`
-- `deploy-api` usa `VERCEL_TOKEN` y despliega a producción (requiere los 3 jobs anteriores)
-- `Monitor API` corre cada hora y también manualmente; pasa `API_SECRET_KEY` desde secrets
-- si el monitor falla:
-  - sube artefacto `api-healthcheck-report`
-  - crea un issue con etiqueta `monitoring`, **auto-asignado al owner del repo** (dispara email)
-  - deja la corrida en rojo
-
-### ⚠️ Deploy del backend — leer antes de tocar `ci.yml` o `vercel.json` de `api/`
-
-El 2026-07-19 el deploy estuvo roto (probablemente desde la migración a `@comparafarma/domain`) sin que nadie lo notara — el detalle completo está en `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`. Reglas que salieron de ese incidente, **no revertir sin entender por qué**:
-
-1. El step "Deploy API to Vercel" en `ci.yml` corre `vercel deploy` **desde la raíz del monorepo**, sin `working-directory: api`. Si se corre desde adentro de `api/`, Vercel solo sube esa carpeta y nunca puede resolver `"@comparafarma/domain": "workspace:*"` (falla con `EUNSUPPORTEDPROTOCOL`).
-2. En el dashboard de Vercel del proyecto `comparafarma-api`, **Root Directory debe ser `api`** (no vacío). Sin esto, Vercel no encuentra `api/vercel.json` ni resuelve las funciones en la ruta correcta.
-3. `api/vercel.json` define `"functions": {"api/*.ts": {...}}` con un **glob explícito**. Sin esto, al subir el monorepo completo Vercel detecta cada `.ts` de `api/src/` (clientes, rutas, tests) como función independiente y supera el límite de 12 funciones del plan Hobby.
-4. `packages/domain` se compila a JS real vía `postinstall` (`tsc` → `dist/`) — ver advertencia dedicada más abajo.
-
-### ⚠️ Vercel Hobby y uso comercial (donaciones) — decisión pendiente del CTO, no técnica
-
-Revisión del 2026-08-14 (`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_VERCEL.md`, OPS-REV-005) encontró que el plan Hobby de Vercel prohíbe explícitamente uso comercial, y su propia documentación oficial (`vercel.com/docs/limits/fair-use-guidelines`) lista **"Asking for Donations"** como ejemplo textual de eso. `mobile/src/constants/donation.ts` confirma que ComparaFarma ya solicita donaciones activas vía Khipu en producción (`DonationBanner`) — es decir, `comparafarma-api` y `comparafarma-web` corren hoy en un plan que Vercel define como no permitido para este uso, con riesgo real (no solo teórico) de pausa de cuenta sin aviso previo garantizado, que afectaría ambos proyectos a la vez.
-
-No hay ningún fix de código para esto — es una decisión de negocio entre dos caminos, documentada como pendiente en la revisión: (A) pagar el upgrade a Vercel Pro ($20/mes), o (B) dar de baja el `DonationBanner`/cualquier funcionalidad de pago (incluyendo no activar Flow, hoy pausado, mientras se esté en Hobby) y permanecer gratis. No asumir que el plan Hobby es "seguro" solo porque no ha pasado nada todavía.
-
-## Cache Versioning
-
-Al agregar campos a `MedicationResult` o `PharmacyPrice`, incrementar el prefijo en `mobile/src/lib/cache.ts`:
-```typescript
-const CACHE_PREFIX = "search_cache_v10_"; // incrementar al cambiar la estructura
-```
+Publicación Android: `pnpm build:android` (AAB local, método preferido) o `eas build --platform android --profile production` (cuota EAS); fix urgente JS/TS sin build nuevo: `eas update --branch production`. Detalle completo y checklist vigente: `docs/operations/` y `docs/program/PROGRAM_BOARD.md`.
