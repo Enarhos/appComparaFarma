@@ -7,17 +7,21 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 // distinto usa vi.resetModules() + import() dinámico, para forzar una
 // re-ejecución fresca de ese bloque top-level con vi.stubEnv() ya aplicado.
 //
-// Contexto (Production Reality Check, 2026-08-16): en producción,
-// /api/health reporta "not_configured" pese a que UPSTASH_REDIS_REST_URL/
-// TOKEN existen en Vercel (Production y Preview). Estos tests solo prueban
-// el comportamiento del código de este archivo — confirman que lee los
-// nombres exactos correctos, que inicializa el cliente cuando ambas env vars
-// están presentes, y que el fallback a memoria sigue funcionando cuando no
-// lo están o cuando Redis falla. NO prueban ni pueden probar la causa raíz
-// del estado observado en producción real (eso depende de la configuración
-// de Vercel/el deployment servido, fuera del alcance de un test unitario) —
-// ver UPSTASH_ROOT_CAUSE = UNCONFIRMED en el informe de cierre, revisión
-// 2026-08-16.
+// Contexto (incidente de producción, 2026-08-16 — cerrado): /api/health
+// reportó "not_configured" en producción durante un tiempo pese a que
+// UPSTASH_REDIS_REST_URL/TOKEN existían en Vercel (Production y Preview).
+// Causa raíz confirmada: la base Free anterior (`comparafarma-cache`) había
+// sido eliminada automáticamente por Upstash tras el período de inactividad
+// del plan Free (UPSTASH_ROOT_CAUSE = DELETED_FREE_UPSTASH_DATABASE) — no
+// era un bug de este código. Resuelto creando una nueva base, reemplazando
+// las credenciales en Vercel y con un redeploy limpio; verificado en vivo
+// (`/api/health` → `redis: "ok"`, UPSTASH_STATUS = PRODUCTION_VERIFIED, ver
+// docs/operations/PLATFORM_OPERATIONAL_STATUS.md). Estos tests solo prueban
+// el comportamiento del código de este archivo — que lee los nombres
+// exactos correctos, que inicializa el cliente cuando ambas env vars están
+// presentes, y que el fallback a memoria sigue funcionando cuando no lo
+// están o cuando Redis falla — se conservan porque esa cobertura sigue
+// siendo válida independientemente del incidente ya cerrado.
 
 const getMock = vi.hoisted(() => vi.fn());
 const setMock = vi.hoisted(() => vi.fn());
