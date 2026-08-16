@@ -7,14 +7,17 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 // distinto usa vi.resetModules() + import() dinámico, para forzar una
 // re-ejecución fresca de ese bloque top-level con vi.stubEnv() ya aplicado.
 //
-// Contexto (Production Reality Check, 2026-08-16): se confirmó que
-// UPSTASH_REDIS_REST_URL/TOKEN existen en Vercel (Production y Preview), pero
-// /api/health seguía reportando "not_configured". Este archivo fija con tests
-// que el código ya lee los nombres exactos correctos y that el fallback a
-// memoria sigue funcionando — la causa raíz no es un bug de código (ver
-// UPSTASH_ROOT_CAUSE = STALE_DEPLOYMENT en el informe de cierre), así que
-// estos tests documentan el comportamiento correcto ya existente, sin
-// cambiarlo.
+// Contexto (Production Reality Check, 2026-08-16): en producción,
+// /api/health reporta "not_configured" pese a que UPSTASH_REDIS_REST_URL/
+// TOKEN existen en Vercel (Production y Preview). Estos tests solo prueban
+// el comportamiento del código de este archivo — confirman que lee los
+// nombres exactos correctos, que inicializa el cliente cuando ambas env vars
+// están presentes, y que el fallback a memoria sigue funcionando cuando no
+// lo están o cuando Redis falla. NO prueban ni pueden probar la causa raíz
+// del estado observado en producción real (eso depende de la configuración
+// de Vercel/el deployment servido, fuera del alcance de un test unitario) —
+// ver UPSTASH_ROOT_CAUSE = UNCONFIRMED en el informe de cierre, revisión
+// 2026-08-16.
 
 const getMock = vi.hoisted(() => vi.fn());
 const setMock = vi.hoisted(() => vi.fn());
