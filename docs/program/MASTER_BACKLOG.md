@@ -113,7 +113,7 @@ Consolidar, en un solo documento y con nivel de agregación de programa (no de t
 | Épica | Prioridad | Estado | Dependencias | Fuente |
 |---|---|---|---|---|
 | Motor de Suscripciones (backend, agnóstico de proveedor) | Alta | ✅ Operativo | Ninguna | `docs/engineering/adr/ADR-0002` |
-| Donaciones (Khipu) | Baja | ✅ Operativo (mobile, links fijos) | Ninguna | `docs/archive/assessments/PROJECT_INVENTORY.md` §3 |
+| Donaciones (Khipu) | Baja | ⏸️ Pausado en Mobile y Web (etapa inicial + Vercel Hobby con uso comercial) — integración y capacidad de reactivación intactas | Migrar Vercel a plan compatible con uso comercial antes de reactivar Web | `docs/operations/PLATFORM_OPERATIONAL_STATUS.md` |
 
 #### Program Governance
 
