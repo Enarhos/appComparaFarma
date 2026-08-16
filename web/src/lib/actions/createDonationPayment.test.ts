@@ -1,4 +1,13 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
+
+// Este archivo prueba el comportamiento de createDonationPayment cuando las
+// donaciones NO están pausadas. El estado real de producción
+// (WEB_DONATIONS_PAUSED = true, Production Closure 2026-08-16) se prueba
+// por separado, sin mockear este módulo, en createDonationPayment.paused.test.ts.
+vi.mock("@/lib/donationsConfig", () => ({
+  WEB_DONATIONS_PAUSED: false,
+}));
+
 import { createDonationPayment } from "./createDonationPayment";
 
 afterEach(() => {

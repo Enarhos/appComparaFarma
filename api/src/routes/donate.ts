@@ -3,6 +3,7 @@ import { createKhipuPaymentV3 } from "../clients/khipu.js";
 import { consumeRateLimit } from "../middleware/rateLimit.js";
 import { HttpError } from "../lib/errors.js";
 import { captureException } from "../lib/sentry.js";
+import { WEB_DONATIONS_PAUSED } from "../lib/donationsConfig.js";
 import { applyCorsHeaders, getClientIp, json, type RequestLike, type ResponseLike } from "../lib/http.js";
 
 const VALID_AMOUNTS = [1000, 3000, 5000];
@@ -30,6 +31,13 @@ export async function handleDonateRoute(reqLike: unknown, resLike: unknown): Pro
   try {
     if ((req.method ?? "").toUpperCase() !== "POST") {
       throw new HttpError("Metodo no permitido.", 405);
+    }
+
+    if (WEB_DONATIONS_PAUSED) {
+      throw new HttpError(
+        "Los aportes están temporalmente pausados mientras ComparaFarma se encuentra en su etapa inicial de crecimiento.",
+        503
+      );
     }
 
     // Rate limiting (Sprint FEAT-WEB-DONATIONS): /api/donate ahora tiene un

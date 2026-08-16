@@ -11,6 +11,15 @@ vi.mock("../middleware/rateLimit.js", () => ({
   consumeRateLimit: (...args: unknown[]) => consumeRateLimitMock(...args),
 }));
 
+// Este archivo prueba el comportamiento de handleDonateRoute cuando las
+// donaciones NO están pausadas (validación de monto, rate limit, creación
+// del pago Khipu, manejo de errores). El estado real de producción
+// (WEB_DONATIONS_PAUSED = true, Production Closure 2026-08-16) se prueba
+// por separado, sin mockear este módulo, en donateRoutePaused.test.ts.
+vi.mock("../lib/donationsConfig.js", () => ({
+  WEB_DONATIONS_PAUSED: false,
+}));
+
 import { handleDonateRoute } from "../routes/donate.js";
 
 const ORIGINAL_ENV = { ...process.env };

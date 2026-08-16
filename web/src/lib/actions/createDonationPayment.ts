@@ -1,7 +1,11 @@
 "use server";
 
+import { WEB_DONATIONS_PAUSED } from "@/lib/donationsConfig";
+
 const API_URL = (process.env.API_URL ?? "https://comparafarma-api.vercel.app").replace(/\/$/, "");
 const GENERIC_ERROR = "No pudimos iniciar el pago. Intenta nuevamente en unos momentos.";
+const PAUSED_MESSAGE =
+  "Los aportes están temporalmente pausados mientras ComparaFarma se encuentra en su etapa inicial de crecimiento.";
 const ALLOWED_AMOUNTS = [1000, 3000, 5000] as const;
 
 export type CreateDonationPaymentResult = { ok: true; paymentUrl: string } | { ok: false; error: string };
@@ -31,8 +35,18 @@ function isValidKhipuPaymentUrl(value: unknown): value is string {
  * KHIPU_RECEIVER_ID) — el body enviado es únicamente { amount }. No se
  * loguea payment_url ni el detalle de errores de Khipu; cualquier fallo
  * devuelve el mismo mensaje genérico, nunca el cuerpo crudo de la respuesta.
+ *
+ * Pausa temporal (Production Closure, 2026-08-16, ver lib/donationsConfig.ts):
+ * si WEB_DONATIONS_PAUSED es true, esta acción NUNCA llama a fetch —
+ * devuelve directamente un resultado de error con el mensaje de pausa, sin
+ * tocar la red ni /api/donate. El backend (api/src/routes/donate.ts) tiene
+ * la misma bandera como segunda barrera, por si esta acción se saltara.
  */
 export async function createDonationPayment(amount: number): Promise<CreateDonationPaymentResult> {
+  if (WEB_DONATIONS_PAUSED) {
+    return { ok: false, error: PAUSED_MESSAGE };
+  }
+
   if (!ALLOWED_AMOUNTS.includes(amount as (typeof ALLOWED_AMOUNTS)[number])) {
     return { ok: false, error: GENERIC_ERROR };
   }
