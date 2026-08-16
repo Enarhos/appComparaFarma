@@ -50,7 +50,7 @@ Explica la semántica de los cuatro canales de precio que maneja la app y su dis
 - **EcoFarmacias**: ❌ No aplica — `cmrPrice` hardcodeado a `null` en el cliente.
 - **Farmex**: ✅ Precio Fonasa. El cliente (`api/src/clients/farmex.ts`) toma el precio de la variante Fonasa (`fonasaPrice`) y lo asigna a `channels.cmr` solo si es menor que el precio presencial — no es una tarjeta de fidelización en sentido estricto, pero se mapea al mismo campo porque representa un precio condicionado a un convenio específico, igual que las tarjetas de las demás farmacias.
 - **Sermecoop**: ❌ No aplica — `cmrPrice` hardcodeado a `null` en el cliente.
-- **EasyFarma**: ❌ No aplica — `cmrPrice` hardcodeado a `null` en el cliente (`api/src/clients/easyfarma.ts`), con un comentario explícito en el código que aclara que no hay canal online/CMR/SBPay distinto a nivel de producto. **Nota de discrepancia documental**: `CLAUDE.md` (tabla "Canales de Precio por Farmacia") describe actualmente a EasyFarma con `cmr = Plus`; el código real verificado en esta revisión (2026-08-15) no implementa ese canal — se deja constancia aquí para que se revise y corrija `CLAUDE.md` por separado, sin asumir cuál de los dos está en lo correcto sin una verificación adicional del comportamiento esperado.
+- **EasyFarma**: ❌ No aplica — `cmrPrice` hardcodeado a `null` en el cliente (`api/src/clients/easyfarma.ts`), con un comentario explícito en el código que aclara que no hay canal online/CMR/SBPay distinto a nivel de producto. **Corrección aplicada (2026-08-15, decisión CTO):** `CLAUDE.md` describía a EasyFarma con `cmr = Plus`; se corrigió para reflejar el código real (sin canal CMR) — la implementación es la evidencia autoritativa sobre lo que el sistema soporta hoy. `CLAUDE.md` y este documento quedan consistentes: EasyFarma no tiene canal CMR disponible actualmente. No se modificó `easyfarma.ts` ni se implementó el canal — es una corrección puramente documental.
 
 **En el modelo**: Campo `channels.cmr: number | null`.
 
@@ -109,7 +109,7 @@ Se usa para:
 | EcoFarmacias | ✅ (`onlineOnly=true`) | ❌ null | ❌ null | ❌ null | = store |
 | Farmex | ✅ | ❌ null | ✅ si Fonasa < store | ❌ null | min(store, cmr) |
 | Sermecoop | ✅ | ❌ null | ❌ null | ❌ null | = store |
-| EasyFarma | ✅ (`onlineOnly=true`) | ❌ null | ❌ null (ver nota de discrepancia arriba) | ❌ null | = store |
+| EasyFarma | ✅ (`onlineOnly=true`) | ❌ null | ❌ null (ver nota arriba) | ❌ null | = store |
 
 Cobertura de este documento: **9/9 farmacias integradas** (actualizado 2026-08-15; versión anterior solo cubría 5/9 — Cruz Verde, Salcobrand, Ahumada, Dr. Simi, AraucoMed — y declaraba explícitamente la brecha).
 

@@ -114,4 +114,4 @@ Todas las variables se configuran en Vercel → proyecto → Settings → Enviro
 - Revisar mensualmente `docs/product/decisions/DECISION_LOG.md` y los postmortems de `docs/engineering/postmortems/` para detectar patrones recurrentes.
 - Revisar trimestralmente las dependencias de `api/package.json`, `web/package.json`, `mobile/package.json` por vulnerabilidades conocidas (`pnpm audit`).
 - Revisar antes de cada release el checklist de `docs/archive/releases/RELEASE_CHECKLIST.md`.
-- Los documentos vacíos en `docs/product/` (`BACKLOG_TECH.md`, `KPIS.md`, `RELEASES.md`, `IDEAS.md`, `QUALITY.md`, `DATA_POLICY.md`) siguen pendientes de una decisión (poblarlos o marcarlos descartados) — no es un riesgo operacional, pero se señala aquí para que no se pierda de vista.
+- **Resuelto (2026-08-15, limpieza de gobierno documental):** los documentos que estaban vacíos en `docs/product/` (`BACKLOG_TECH.md`, `KPIS.md`, `RELEASES.md`, `IDEAS.md`, `QUALITY.md`, `DATA_POLICY.md`) se confirmaron con 0 bytes y sin contenido recuperable, y se eliminaron — la decisión pendiente que señalaba este punto ya se tomó (descartados, no poblados).

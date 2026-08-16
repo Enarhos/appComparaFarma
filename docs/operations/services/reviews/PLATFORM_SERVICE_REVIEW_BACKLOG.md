@@ -34,7 +34,7 @@ Este documento es el backlog maestro desde el cual se revisará, uno por uno, ca
 
 ## 3. Verificación previa
 
-Se confirmó, antes de crear este documento, que no existe un backlog equivalente: `docs/program/MASTER_BACKLOG.md` (backlog de programa, por épica/workstream, no por servicio de infraestructura), `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` (backlog funcional de producto) y `docs/product/BACKLOG_TECH.md` (estaba vacío — 0 bytes — y fue eliminado en la limpieza de gobierno documental de 2026-08-15) no cubren la revisión de servicios externos. `PRODUCTION_INFRASTRUCTURE_AUDIT.md` tiene un "Roadmap de Infraestructura" con pendientes ya identificados, pero es una sección de un Documento de Ejecución fechado, no un backlog con ciclo de vida propio — no se duplica aquí, se referencia por servicio en la columna "Documento fuente".
+Se confirmó, antes de crear este documento, que no existe un backlog equivalente: `docs/program/MASTER_BACKLOG.md` (backlog de programa, por épica/workstream, no por servicio de infraestructura), `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` (backlog funcional de producto) y `BACKLOG_TECH.md` (vacío, eliminado en la limpieza de 2026-08-15) no cubren la revisión de servicios externos. `PRODUCTION_INFRASTRUCTURE_AUDIT.md` tiene un "Roadmap de Infraestructura" con pendientes ya identificados, pero es una sección de un Documento de Ejecución fechado, no un backlog con ciclo de vida propio — no se duplica aquí, se referencia por servicio en la columna "Documento fuente".
 
 ## 4. Backlog de servicios
 

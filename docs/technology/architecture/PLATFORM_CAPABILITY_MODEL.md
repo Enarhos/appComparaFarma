@@ -5,7 +5,7 @@
 **Fecha de corte:** 2026-08-06
 **Alcance:** qué es capaz de hacer la Plataforma ComparaFarma — no dónde, no cómo, no con qué tecnología. Es la última capa de arquitectura funcional antes de volver al desarrollo.
 **No es:** una especificación de pantallas, APIs, tablas, tecnologías ni implementación.
-**Fuente de verdad:** `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md`, `docs/technology/domain/USER_DOMAIN_MODEL.md` y `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` (los tres, aprobados, no se repiten ni se contradicen). Documentación adicional consultada solo donde fue estrictamente necesaria: `docs/product/PRODUCT_BLUEPRINT.md`, `docs/product/ROADMAP.md`, `docs/program/ROADMAP.md`, `docs/product/definition/PERSONAS.md`, `docs/product/PRODUCT_PRINCIPLES.md`, `docs/design/brand/BRAND_FOUNDATIONS.md`. No se volvió a inspeccionar código ni el repositorio.
+**Fuente de verdad:** `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md`, `docs/technology/domain/USER_DOMAIN_MODEL.md` y `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` (los tres, aprobados, no se repiten ni se contradicen). Documentación adicional consultada solo donde fue estrictamente necesaria: `docs/product/ROADMAP.md`, `docs/program/ROADMAP.md`, `docs/product/definition/PERSONAS.md`, `docs/product/PRODUCT_PRINCIPLES.md`, `docs/design/brand/BRAND_FOUNDATIONS.md`. No se volvió a inspeccionar código ni el repositorio. (Nota de gobierno documental, 2026-08-15: este documento citaba también `docs/product/PRODUCT_BLUEPRINT.md` como consultado; se confirmó que ese archivo nunca tuvo commits en este repositorio, por lo que no pudo haber sido consultado — se retira de esta lista en vez de sostener una afirmación no verificable.)
 
 ---
 
@@ -347,7 +347,6 @@ Inteligencia
 - `docs/archive/assessments/CURRENT_PLATFORM_ASSESSMENT_2026-08-06.md` (fuente principal)
 - `docs/technology/domain/USER_DOMAIN_MODEL.md` (fuente principal)
 - `docs/technology/architecture/IDENTITY_INTEGRATION_PLAN.md` (fuente principal, versión revisada PLATFORM-002A)
-- `docs/product/PRODUCT_BLUEPRINT.md` (confirmado: índice de experiencias UX, no un modelo de capacidades — no se duplica)
 - `docs/product/ROADMAP.md` (Objetivos Estratégicos, Capacidades por objetivo, Capacidades Estratégicas y Operacionales — citado extensamente en §2, §3, §7, §8)
 - `docs/program/ROADMAP.md` (estado por workstream — Growth/Commercial, citado en §3)
 - `docs/product/definition/PERSONAS.md` (citado en §2, §8)

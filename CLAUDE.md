@@ -109,7 +109,7 @@ Producción: `https://app-compara-farma-web.vercel.app` (Fase 2a del plan de emp
 | EcoFarmacias | WooCommerce `/wp-json/wc/store/v1/products` | onlineOnly=true |
 | Farmex | Shopify Predictive Search | cmr = Fonasa |
 | Sermecoop | HTML scraping PHP custom (Concepción) | GET→POST con PHPSESSID + CSRF; riesgo timeout Vercel |
-| EasyFarma | HTML scraping WordPress | onlineOnly=true; cmr = Plus; data-src para imágenes |
+| EasyFarma | HTML scraping WordPress | onlineOnly=true; sin canal CMR/online/SBPay a nivel de precio (ver nota abajo); data-src para imágenes |
 
 ## Canales de Precio por Farmacia
 
@@ -117,10 +117,12 @@ Producción: `https://app-compara-farma-web.vercel.app` (Fase 2a del plan de emp
 |---|---|---|---|---|---|---|---|---|---|
 | `store` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `online` | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `cmr` | ❌ | ✅ T. Más | ✅ CMR | ❌ | ❌ | ❌ | ✅ Fonasa | ❌ | ✅ Plus |
+| `cmr` | ❌ | ✅ T. Más | ✅ CMR | ❌ | ❌ | ❌ | ✅ Fonasa | ❌ | ❌ |
 | `sbpay` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 `effective = min(store, online ?? store, cmr ?? store, sbpay ?? store)`
+
+**Nota (2026-08-15, corrección documental — sin cambios de código):** EasyFarma no tiene canal CMR disponible hoy. `api/src/clients/easyfarma.ts` hardcodea `cmrPrice: null` con un comentario explícito de que no existe canal online/CMR/SBPay a nivel de producto. `mobile/src/constants/pharmacies.ts` trae una etiqueta "Plus" preconfigurada en la UI (`cardLabel: "Plus"`), pero es un placeholder visual sin datos reales detrás — la tabla de arriba refleja el código, no la UI. Ver `docs/product/definition/PRICE_CHANNELS.md` para el detalle completo verificado.
 
 ## Contrato de Tipos
 

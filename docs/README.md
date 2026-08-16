@@ -22,13 +22,12 @@ Este directorio sigue un modelo de **documentación gobernada**: distingue lo vi
 ```
 docs/
 ├── README.md                  ← este archivo
-├── funcionalidades.md         ← inventario funcional vigente (mobile + web)
-├── privacy-policy.html        ← política de privacidad — NO MOVER (publicada vía GitHub Pages, ver nota abajo)
+├── privacy-policy.html        ← política de privacidad — permanece intencionalmente en la raíz (ver nota abajo)
 │
 ├── enterprise/                ← visión de negocio, estrategia funcional, portafolio
 │   └── strategy/
 ├── product/                   ← definición de producto vigente
-│   ├── definition/            ← PRICE_CHANNELS, PERSONAS, principios
+│   ├── definition/            ← PRICE_CHANNELS, PERSONAS, principios, FUNCTIONAL_CAPABILITIES (vista funcional consolidada)
 │   ├── experiences/           ← experiencias materializadas (Resultados, Ficha, Alertas...)
 │   ├── decisions/             ← DECISION_LOG (histórico append-only, vigente)
 │   ├── strategy/               ← COMPANY_STRATEGY
@@ -57,7 +56,7 @@ docs/
 ├── governance/                  ← modelo de gobierno documental, templates
 │   └── templates/
 └── archive/                     ← histórico — nunca fuente de verdad vigente
-    ├── product/, project/        ← backlogs/status de producto ya reemplazados
+    ├── product/, project/        ← backlogs/status de producto legacy (BACKLOG_PRODUCT, EPICS, FEATURE_STATUS, PROJECT_STATUS) — consultables como detalle histórico, pero `docs/program/` es la única fuente vigente de gobierno de ejecución; ningún documento archivado debe leerse como plan activo
     ├── engineering/issues/       ← issues de ingeniería cerrados (CF-XXX archivados)
     │   └── stripe/               ← issues de la integración Stripe, reemplazada por Flow
     ├── plans/, assessments/, reviews/, meetings/, releases/, design/, execution/, foundational-book/
@@ -65,10 +64,10 @@ docs/
 
 ## Reglas de este directorio
 
-- **`docs/archive/` no es basura.** Preserva el historial y las decisiones tal como se tomaron en su momento. Un documento archivado nunca debe tratarse como fuente de verdad vigente — si algo archivado y algo activo se contradicen, gana lo activo.
+- **`docs/archive/` no es basura.** Preserva el historial y las decisiones tal como se tomaron en su momento. Un documento archivado nunca debe tratarse como fuente de verdad vigente — si algo archivado y algo activo se contradicen, gana lo activo. En particular, `docs/archive/product/` y `docs/archive/project/` (backlogs y status legacy) son detalle histórico consultable, no gobierno de ejecución: `docs/program/` es la única fuente vigente para eso.
 - **`docs/program/backlog/issues/`** contiene únicamente trabajo genuinamente pendiente. Un issue con checklist "Implementado" y evidencia real en el código va a `docs/archive/engineering/issues/`, no aquí.
 - **`docs/design/`** está congelado (identidad visual, Signature Components, Component Library ya decididos) — cualquier cambio requiere un RFC, no un sprint de diseño directo. Ver `docs/design/README.md`.
-- **`docs/privacy-policy.html` no se mueve.** Está publicado directamente desde este path vía GitHub Pages (`https://enarhos.github.io/appComparaFarma/privacy-policy.html`, referenciado en Google Play) — moverlo rompería esa URL en producción.
+- **`docs/privacy-policy.html` permanece intencionalmente en la raíz de `docs/`, sin mover.** Es un activo publicado cuya ruta está referenciada externamente (GitHub Pages sirve `https://enarhos.github.io/appComparaFarma/privacy-policy.html` directamente desde este path, y esa URL está a su vez referenciada en la ficha de Google Play) — moverlo rompería esa URL pública en producción. Es una excepción de compatibilidad de URL, no un descuido de organización. No existe una copia en `docs/product/legal/` (que queda vacía como destino previsto para cuando esta excepción se resuelva) — evitar duplicar el archivo.
 
 ## Ownership
 
