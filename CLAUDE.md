@@ -95,7 +95,7 @@ compara-farma/
         └── lib/                 ← search.ts (fetch server-side a /api/search), format.ts
 ```
 
-Producción: `https://app-compara-farma-web.vercel.app` (Fase 2a del plan de empresa, ver `docs/product/COMPANY_STRATEGY.md`).
+Producción: `https://app-compara-farma-web.vercel.app` (Fase 2a del plan de empresa, ver `docs/product/strategy/COMPANY_STRATEGY.md`).
 
 ## APIs de Farmacias
 
@@ -109,7 +109,7 @@ Producción: `https://app-compara-farma-web.vercel.app` (Fase 2a del plan de emp
 | EcoFarmacias | WooCommerce `/wp-json/wc/store/v1/products` | onlineOnly=true |
 | Farmex | Shopify Predictive Search | cmr = Fonasa |
 | Sermecoop | HTML scraping PHP custom (Concepción) | GET→POST con PHPSESSID + CSRF; riesgo timeout Vercel |
-| EasyFarma | HTML scraping WordPress | onlineOnly=true; cmr = Plus; data-src para imágenes |
+| EasyFarma | HTML scraping WordPress | onlineOnly=true; sin canal CMR/online/SBPay a nivel de precio (ver nota abajo); data-src para imágenes |
 
 ## Canales de Precio por Farmacia
 
@@ -117,10 +117,12 @@ Producción: `https://app-compara-farma-web.vercel.app` (Fase 2a del plan de emp
 |---|---|---|---|---|---|---|---|---|---|
 | `store` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `online` | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `cmr` | ❌ | ✅ T. Más | ✅ CMR | ❌ | ❌ | ❌ | ✅ Fonasa | ❌ | ✅ Plus |
+| `cmr` | ❌ | ✅ T. Más | ✅ CMR | ❌ | ❌ | ❌ | ✅ Fonasa | ❌ | ❌ |
 | `sbpay` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 `effective = min(store, online ?? store, cmr ?? store, sbpay ?? store)`
+
+**Nota (2026-08-15, corrección documental — sin cambios de código):** EasyFarma no tiene canal CMR disponible hoy. `api/src/clients/easyfarma.ts` hardcodea `cmrPrice: null` con un comentario explícito de que no existe canal online/CMR/SBPay a nivel de producto. `mobile/src/constants/pharmacies.ts` trae una etiqueta "Plus" preconfigurada en la UI (`cardLabel: "Plus"`), pero es un placeholder visual sin datos reales detrás — la tabla de arriba refleja el código, no la UI. Ver `docs/product/definition/PRICE_CHANNELS.md` para el detalle completo verificado.
 
 ## Contrato de Tipos
 
@@ -271,7 +273,7 @@ Acción: revisar el HTML actual del sitio, actualizar los regex `tileRe`, `linkM
 
 ## Advertencia: MINSAL bloquea el fetch automatizado (HTTP 403) — dato de sucursales congelado desde junio
 
-`scripts-temp/fetch-branches.js` (corrido por `.github/workflows/update-branches.yml`, cron diario) intenta descargar `https://midas.minsal.cl/farmacia_v2/WS/getLocales.php` para poblar `api/src/data/branches.json`/`branches-data.ts` (consumido por el filtro de comuna en Mobile: `CommuneSelector`, `FilterSheet`, `useSearch`). Diagnóstico del 2026-08-14 (revisión `docs/operations/PLATFORM_SERVICE_REVIEW_MINSAL.md`, OPS-REV-007) confirmó, con logs reales de Actions, que **las 71/71 ejecuciones desde que existe el workflow (2026-06-03) fallan con `MINSAL HTTP 403`** — MINSAL bloquea también las IPs de GitHub Actions, no solo las de Vercel (el comentario original en `api/src/clients/minsal.ts` solo mencionaba Vercel). El dato que sirve hoy `/api/branches` es una carga manual congelada del 2026-06-08, hecha por el CTO desde su red local — no hay actualización automática funcionando.
+`scripts-temp/fetch-branches.js` (corrido por `.github/workflows/update-branches.yml`, cron diario) intenta descargar `https://midas.minsal.cl/farmacia_v2/WS/getLocales.php` para poblar `api/src/data/branches.json`/`branches-data.ts` (consumido por el filtro de comuna en Mobile: `CommuneSelector`, `FilterSheet`, `useSearch`). Diagnóstico del 2026-08-14 (revisión `docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_MINSAL.md`, OPS-REV-007) confirmó, con logs reales de Actions, que **las 71/71 ejecuciones desde que existe el workflow (2026-06-03) fallan con `MINSAL HTTP 403`** — MINSAL bloquea también las IPs de GitHub Actions, no solo las de Vercel (el comentario original en `api/src/clients/minsal.ts` solo mencionaba Vercel). El dato que sirve hoy `/api/branches` es una carga manual congelada del 2026-06-08, hecha por el CTO desde su red local — no hay actualización automática funcionando.
 
 **Ya corregido (2026-08-14):** el workflow ahora tiene `continue-on-error` y crea un issue automático (`labels: monitoring, bug`) cuando el fetch falla, en vez de fallar en seco y en silencio (commit `2d5691f`). **Sin resolver todavía:** el bloqueo de IP en sí — requiere decidir una alternativa (IP residencial/self-hosted runner, u otra vía) o aceptar que este dato quedará desactualizado. No asumir que "correr el workflow de nuevo" lo va a arreglar sin cambiar la IP de origen del fetch.
 
@@ -292,13 +294,13 @@ No cambiar las extensiones en `packages/domain/src/index.ts` — son obligatoria
 
 Google Play aprobó el pase de `mobile/` de Prueba Cerrada a producción el 2026-08-13 (publicación/propagación del listado público aún en curso). La restricción que existía mientras la revisión estaba en curso ("no modificar código de `mobile/`") queda levantada — ya no aplica ningún bloqueo especial sobre cambios en la app móvil más allá de la disciplina normal del proyecto (branch → PR → validación → aprobación).
 
-Pendiente para una sesión de producto/estrategia (no asumir por defecto): revisar si esto reactiva la Fase 2b ("sincronización de cuentas en la app") descrita en `docs/product/COMPANY_STRATEGY.md` sección 5, que estaba pausada específicamente por esta restricción.
+Pendiente para una sesión de producto/estrategia (no asumir por defecto): revisar si esto reactiva la Fase 2b ("sincronización de cuentas en la app") descrita en `docs/product/strategy/COMPANY_STRATEGY.md` sección 5, que estaba pausada específicamente por esta restricción.
 
 ## Advertencia: `packages/domain` necesita compilarse a JS real
 
 `packages/domain/package.json` tiene un script `"postinstall": "tsc --project tsconfig.build.json"` que compila `src/` a `dist/` (JS + `.d.ts`) en **cualquier** `pnpm install` — local, CI, o el remoto de Vercel. El `"exports"`/`"main"`/`"types"` del paquete apuntan a `dist/`, no a `src/`.
 
-**No volver a apuntar `"exports"` directo a `src/index.ts`.** Antes del 2026-07-19 así estaba, y funcionaba en `mobile` solo porque Metro tiene un resolver custom que mapea `.js` → `.ts` (ver advertencia anterior) — pero Node.js/Vercel en producción no tiene ese truco, y `/api/search` crasheaba en runtime con `ERR_MODULE_NOT_FOUND` al importar `@comparafarma/domain` (no es un error de build, el deploy podía terminar "exitoso" igual). Detalle completo en `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`.
+**No volver a apuntar `"exports"` directo a `src/index.ts`.** Antes del 2026-07-19 así estaba, y funcionaba en `mobile` solo porque Metro tiene un resolver custom que mapea `.js` → `.ts` (ver advertencia anterior) — pero Node.js/Vercel en producción no tiene ese truco, y `/api/search` crasheaba en runtime con `ERR_MODULE_NOT_FOUND` al importar `@comparafarma/domain` (no es un error de build, el deploy podía terminar "exitoso" igual). Detalle completo en `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`.
 
 Si se agrega un submódulo nuevo a `packages/domain/src/`, no hace falta tocar nada más — `tsconfig.build.json` compila todo `src/**/*.ts` (excepto `__tests__/`) automáticamente.
 
@@ -315,7 +317,7 @@ Si se agrega un submódulo nuevo a `packages/domain/src/`, no hace falta tocar n
 
 ### ⚠️ Deploy del backend — leer antes de tocar `ci.yml` o `vercel.json` de `api/`
 
-El 2026-07-19 el deploy estuvo roto (probablemente desde la migración a `@comparafarma/domain`) sin que nadie lo notara — el detalle completo está en `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`. Reglas que salieron de ese incidente, **no revertir sin entender por qué**:
+El 2026-07-19 el deploy estuvo roto (probablemente desde la migración a `@comparafarma/domain`) sin que nadie lo notara — el detalle completo está en `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`. Reglas que salieron de ese incidente, **no revertir sin entender por qué**:
 
 1. El step "Deploy API to Vercel" en `ci.yml` corre `vercel deploy` **desde la raíz del monorepo**, sin `working-directory: api`. Si se corre desde adentro de `api/`, Vercel solo sube esa carpeta y nunca puede resolver `"@comparafarma/domain": "workspace:*"` (falla con `EUNSUPPORTEDPROTOCOL`).
 2. En el dashboard de Vercel del proyecto `comparafarma-api`, **Root Directory debe ser `api`** (no vacío). Sin esto, Vercel no encuentra `api/vercel.json` ni resuelve las funciones en la ruta correcta.
@@ -324,7 +326,7 @@ El 2026-07-19 el deploy estuvo roto (probablemente desde la migración a `@compa
 
 ### ⚠️ Vercel Hobby y uso comercial (donaciones) — decisión pendiente del CTO, no técnica
 
-Revisión del 2026-08-14 (`docs/operations/PLATFORM_SERVICE_REVIEW_VERCEL.md`, OPS-REV-005) encontró que el plan Hobby de Vercel prohíbe explícitamente uso comercial, y su propia documentación oficial (`vercel.com/docs/limits/fair-use-guidelines`) lista **"Asking for Donations"** como ejemplo textual de eso. `mobile/src/constants/donation.ts` confirma que ComparaFarma ya solicita donaciones activas vía Khipu en producción (`DonationBanner`) — es decir, `comparafarma-api` y `comparafarma-web` corren hoy en un plan que Vercel define como no permitido para este uso, con riesgo real (no solo teórico) de pausa de cuenta sin aviso previo garantizado, que afectaría ambos proyectos a la vez.
+Revisión del 2026-08-14 (`docs/operations/services/reviews/PLATFORM_SERVICE_REVIEW_VERCEL.md`, OPS-REV-005) encontró que el plan Hobby de Vercel prohíbe explícitamente uso comercial, y su propia documentación oficial (`vercel.com/docs/limits/fair-use-guidelines`) lista **"Asking for Donations"** como ejemplo textual de eso. `mobile/src/constants/donation.ts` confirma que ComparaFarma ya solicita donaciones activas vía Khipu en producción (`DonationBanner`) — es decir, `comparafarma-api` y `comparafarma-web` corren hoy en un plan que Vercel define como no permitido para este uso, con riesgo real (no solo teórico) de pausa de cuenta sin aviso previo garantizado, que afectaría ambos proyectos a la vez.
 
 No hay ningún fix de código para esto — es una decisión de negocio entre dos caminos, documentada como pendiente en la revisión: (A) pagar el upgrade a Vercel Pro ($20/mes), o (B) dar de baja el `DonationBanner`/cualquier funcionalidad de pago (incluyendo no activar Flow, hoy pausado, mientras se esté en Hobby) y permanecer gratis. No asumir que el plan Hobby es "seguro" solo porque no ha pasado nada todavía.
 

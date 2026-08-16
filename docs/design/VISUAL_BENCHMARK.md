@@ -1,14 +1,14 @@
 # VISUAL_BENCHMARK — Benchmark Visual y Dirección Creativa (VISUAL-001)
 
-**Naturaleza de este documento:** investigación y dirección creativa. No es un documento de gobernanza de marca (no sigue `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` a propósito, por instrucción explícita del encargo VISUAL-001) y no toma ninguna decisión. No se modificó ningún archivo de `web/`, `mobile/`, `api/` ni de la arquitectura de marca ya vigente (`docs/brand/`). No contiene código, componentes, Figma ni CSS.
+**Naturaleza de este documento:** investigación y dirección creativa. No es un documento de gobernanza de marca (no sigue `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` a propósito, por instrucción explícita del encargo VISUAL-001) y no toma ninguna decisión. No se modificó ningún archivo de `web/`, `mobile/`, `api/` ni de la arquitectura de marca ya vigente (`docs/brand/`). No contiene código, componentes, Figma ni CSS.
 
 **Rol asumido:** Director de Diseño UX/UI e investigador de identidad visual.
 
 **Punto de partida obligatorio:** este benchmark no redefine la marca. Se apoya en lo que `docs/brand/` y `docs/design/` ya tienen resuelto y ratificado como arquitectura (aunque pendiente de ratificación formal del CEO/fundador en varios puntos, como señalan sus propios documentos):
 
-- **Concepto central ya aprobado como ancla de proceso:** *Orientación* (`docs/brand/DESIGN_CONCEPT.md` §4.2; `docs/design/DESIGN_DECISION_LOG.md`, DD-001).
+- **Concepto central ya aprobado como ancla de proceso:** *Orientación* (`docs/design/brand/DESIGN_CONCEPT.md` §4.2; `docs/design/decisions/DESIGN_DECISION_LOG.md`, DD-001).
 - **Territorio visual:** Decisiones, Orientación, Confianza, Cuidado familiar (`DESIGN_CONCEPT.md` §4.5).
-- **Atributos con respaldo directo:** Cercana, Confiable, Científica, Profesional; por extensión — Limpia. *Moderna* y *Optimista* siguen marcados como pendientes de definición — este benchmark los trata como hipótesis a explorar, no como atributos ya decididos (`docs/brand/VISUAL_IDENTITY.md` §4.3).
+- **Atributos con respaldo directo:** Cercana, Confiable, Científica, Profesional; por extensión — Limpia. *Moderna* y *Optimista* siguen marcados como pendientes de definición — este benchmark los trata como hipótesis a explorar, no como atributos ya decididos (`docs/design/brand/VISUAL_IDENTITY.md` §4.3).
 - **Restricciones ya vigentes** (`DESIGN_CONCEPT.md` §4.7, `VISUAL_IDENTITY.md` §4.7, `DESIGN_BRIEF.md` §4.10): nada que evoque farmacia, laboratorio, clínica, marketplace/e-commerce, aseguradora o entidad gubernamental; sin cruces farmacéuticas, batas blancas, candados/escudos tipo fintech, signos de dinero/ofertas, redes/nodos, urgencia agresiva, puentes ni prismas.
 
 Todo lo que sigue se filtra a través de estas restricciones. Cuando una referencia de benchmark choca con alguna, se señala explícitamente en la columna "Qué NO copiar" — no se descarta la referencia completa, porque casi siempre hay algo rescatable en otro nivel (principio de composición, tipografía, motion) aunque el elemento concreto no sea trasladable.
@@ -102,7 +102,7 @@ Ninguna de las tres se recomienda por sobre las otras. Se presentan para que el 
 
 ## 4. Color Research (sin definir paleta)
 
-Este apartado investiga, no decide — coherente con `docs/brand/COLOR_SYSTEM.md`, que ya define siete responsabilidades funcionales del color sin fijar ningún valor cromático.
+Este apartado investiga, no decide — coherente con `docs/design/brand/COLOR_SYSTEM.md`, que ya define siete responsabilidades funcionales del color sin fijar ningún valor cromático.
 
 **Tendencias de mercado 2026:** paletas restringidas con un acento único aplicado con disciplina; modo oscuro diseñado en paralelo al claro desde el inicio; corrientes de "color emocional" (el color como señal de estado, no solo decoración); micro-acentos tipo "neón contenido" para estados de foco o notificación sobre fondos oscuros.
 
@@ -118,7 +118,7 @@ Este apartado investiga, no decide — coherente con `docs/brand/COLOR_SYSTEM.md
 
 ## 5. Typography Research (sin decidir tipografía)
 
-Coherente con `docs/brand/TYPOGRAPHY_SYSTEM.md`, que ya define cinco capas funcionales (Display, Heading, Body, Caption, Data/Numeric) sin nombrar ninguna familia. Lo que sigue es un mapa de candidatas de mercado observadas en la investigación, no una selección.
+Coherente con `docs/design/brand/TYPOGRAPHY_SYSTEM.md`, que ya define cinco capas funcionales (Display, Heading, Body, Caption, Data/Numeric) sin nombrar ninguna familia. Lo que sigue es un mapa de candidatas de mercado observadas en la investigación, no una selección.
 
 | Familia | Por qué aparece en el mercado 2026 | Consideración para ComparaFarma |
 |---|---|---|
@@ -137,7 +137,7 @@ Coherente con `docs/brand/TYPOGRAPHY_SYSTEM.md`, que ya define cinco capas funci
 
 ## 6. Iconography Research
 
-Comparación de mercado entre las seis librerías solicitadas. Coherente con `docs/brand/ICONOGRAPHY_SYSTEM.md`, que ya define nueve categorías funcionales de iconografía sin seleccionar ninguna librería.
+Comparación de mercado entre las seis librerías solicitadas. Coherente con `docs/design/brand/ICONOGRAPHY_SYSTEM.md`, que ya define nueve categorías funcionales de iconografía sin seleccionar ninguna librería.
 
 | Librería | Volumen | Pesos/variantes | Licencia | Fortaleza | Riesgo para ComparaFarma |
 |---|---|---|---|---|---|
@@ -176,6 +176,6 @@ No se creó `docs/design/assets/benchmark/` con capturas de pantalla. Las refere
 
 Este documento no selecciona ninguna dirección, ningún color, ninguna tipografía ni ninguna librería de íconos. Es investigación y dirección creativa para que el Product Manager decida cómo continuar. Ningún archivo de `web/`, `mobile/`, `api/` ni de `docs/brand/` se modificó para producir este benchmark.
 
-**Pendiente de definición explícita, para que el proceso de diseño no la asuma:** elección entre las tres direcciones de la sección 3 (o una combinación), validación de los atributos "Moderna"/"Optimista" con evidencia real de usuario, y la ratificación general de identidad de marca que ya está pendiente en `docs/brand/BRAND_FOUNDATIONS.md` y `BRAND_ARCHITECTURE.md`.
+**Pendiente de definición explícita, para que el proceso de diseño no la asuma:** elección entre las tres direcciones de la sección 3 (o una combinación), validación de los atributos "Moderna"/"Optimista" con evidencia real de usuario, y la ratificación general de identidad de marca que ya está pendiente en `docs/design/brand/BRAND_FOUNDATIONS.md` y `BRAND_ARCHITECTURE.md`.
 
 **Esperando aprobación del Product Manager antes de iniciar cualquier diseño.**

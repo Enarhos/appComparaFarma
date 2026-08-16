@@ -2,7 +2,7 @@
 
 Contiene únicamente el trabajo activo del programa. No es un historial (→ `DONE.md`) ni un backlog completo (→ `MASTER_BACKLOG.md`).
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -82,9 +82,9 @@ Declarar, sin ambigüedad, cuál es el trabajo activo del programa en este momen
 
 | Entregable | Estado | Dependencia | Fuente |
 |---|---|---|---|
-| Evaluación de las 3 familias conceptuales (Brújula, Mapa, Constelación) contra la matriz de criterios | ⬜ No iniciado | EXP-001 | `docs/design/DESIGN_EXPLORATION.md` |
+| Evaluación de las 3 familias conceptuales (Brújula, Mapa, Constelación) contra la matriz de criterios | ⬜ No iniciado | EXP-001 | `docs/archive/design/explorations/DESIGN_EXPLORATION.md` |
 | Selección final de dirección visual | ⬜ Pendiente | Evaluación anterior | `docs/program/DECISION_QUEUE.md` DQ-001 |
-| Logo System | ⬜ No iniciado | Selección de dirección visual | `docs/brand/VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` |
+| Logo System | ⬜ No iniciado | Selección de dirección visual | `docs/design/brand/VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` |
 | Color System | ⬜ No iniciado | Selección de dirección visual (o en paralelo al Logo System) | Ídem; `DECISION_QUEUE.md` DQ-002 |
 | Typography System | ⬜ No iniciado | Logo System | Ídem |
 | Iconography | ⬜ No iniciado | Logo System, Color System | Ídem |
@@ -93,21 +93,21 @@ Declarar, sin ambigüedad, cuál es el trabajo activo del programa en este momen
 
 | Entregable | Estado | Dependencia | Fuente |
 |---|---|---|---|
-| Bloqueante B-1 — Data Safety | 🔴 Pendiente (última evidencia 2026-07-31) | Ninguna — acción exclusiva del CEO | `docs/release/PRODUCTION_READINESS_V2.md`; `DECISION_QUEUE.md` DQ-008 |
-| Icono de la app | ⬜ No iniciado | Logo System (Workstream A) | `docs/brand/VISUAL_IDENTITY.md` |
+| Bloqueante B-1 — Data Safety | 🔴 Pendiente (última evidencia 2026-07-31) | Ninguna — acción exclusiva del CEO | `docs/archive/releases/PRODUCTION_READINESS_V2.md`; `DECISION_QUEUE.md` DQ-008 |
+| Icono de la app | ⬜ No iniciado | Logo System (Workstream A) | `docs/design/brand/VISUAL_IDENTITY.md` |
 | Feature Graphic | ⬜ No iniciado | Logo/Color System (Workstream A) | Ídem |
-| Screenshots | ⬜ No iniciado | Identidad visual definida | `docs/release/PLAY_CONSOLE_CHECKLIST.md` |
+| Screenshots | ⬜ No iniciado | Identidad visual definida | `docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md` |
 | Video promocional | ⬜ Sin antecedente documental — DQ-006 | Identidad visual definida | `docs/program/DECISION_QUEUE.md` DQ-006 |
-| Store Listing | ⬜ No iniciado | Identidad visual definida | `docs/release/PLAY_CONSOLE_CHECKLIST.md` |
+| Store Listing | ⬜ No iniciado | Identidad visual definida | `docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md` |
 | ASO básico | ⬜ No iniciado | Store Listing | Ídem |
-| Corrección de `eas.json` (track de submit) | 🔴 Riesgo abierto | Ninguna | `docs/release/PRODUCTION_READINESS_V2.md` §3; `DECISION_QUEUE.md` DQ-009 |
+| Corrección de `eas.json` (track de submit) | 🔴 Riesgo abierto | Ninguna | `docs/archive/releases/PRODUCTION_READINESS_V2.md` §3; `DECISION_QUEUE.md` DQ-009 |
 
 **C. Producto**
 
 | Entregable | Estado | Dependencia | Fuente |
 |---|---|---|---|
-| Revisión final de calidad | ⬜ No iniciado | Ninguna | `docs/release/PRODUCTION_READINESS_V2.md` |
-| Checklist de Producción | 🟡 Parcial (3/4 bloqueantes históricos resueltos) | Cierre de Data Safety (Workstream B) | `docs/release/PLAY_CONSOLE_CHECKLIST.md` |
+| Revisión final de calidad | ⬜ No iniciado | Ninguna | `docs/archive/releases/PRODUCTION_READINESS_V2.md` |
+| Checklist de Producción | 🟡 Parcial (3/4 bloqueantes históricos resueltos) | Cierre de Data Safety (Workstream B) | `docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md` |
 | Analytics — estrategia más allá del evento único actual | ⬜ No iniciado | Ninguna | `DECISION_QUEUE.md` DQ-005 |
 | Validaciones finales (migración CFM-ID en producción, `API_SECRET_KEY` en Vercel) | ⬜ No verificado | Ninguna — verificación directa por el CTO | `DECISION_QUEUE.md` DQ-011, DQ-012 |
 
@@ -116,7 +116,7 @@ Declarar, sin ambigüedad, cuál es el trabajo activo del programa en este momen
 | Entregable | Estado | Dependencia | Fuente |
 |---|---|---|---|
 | Landing — aclarar si es un activo separado del sitio ya operativo | ⬜ Pendiente de definición | Ninguna | `DECISION_QUEUE.md` DQ-004 |
-| Sitio público (`app-compara-farma-web.vercel.app`) | ✅ Ya operativo | Ninguna | `docs/analysis/PROJECT_INVENTORY.md` §2 |
+| Sitio público (`app-compara-farma-web.vercel.app`) | ✅ Ya operativo | Ninguna | `docs/archive/assessments/PROJECT_INVENTORY.md` §2 |
 | Integración de la identidad visual resultante en el sitio | ⬜ No iniciado | Identidad Visual (Workstream A) | — |
 
 **Riesgos de este sprint:** ver `docs/program/RISKS.md` — en particular R-001/B-1 (Data Safety, crítico), R-002 (`eas.json`), R-014 (ninguna decisión de marca/diseño ratificada por el CEO, riesgo transversal para todo el Workstream A). No se identifican riesgos nuevos propios de este sprint más allá de los ya registrados.
@@ -141,7 +141,7 @@ Este documento extrae su contenido de `docs/program/MASTER_BACKLOG.md` (de dónd
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Cierre del último sprint de ingeniería (Subscription Platform Fase 2 corregida) | `docs/product/DECISION_LOG.md` (entrada 2026-08-03) | Referencia | Contexto de por qué no hay sprint de ingeniería activo |
+| Cierre del último sprint de ingeniería (Subscription Platform Fase 2 corregida) | `docs/product/decisions/DECISION_LOG.md` (entrada 2026-08-03) | Referencia | Contexto de por qué no hay sprint de ingeniería activo |
 | Cierre del Sprint de Gobierno — Inicialización de `docs/program/` | Instrucción directa del CEO en esta sesión | ✔ (§4.1) | Estado: Completed |
 | Apertura del sprint "Production Release 1.0" | Instrucción directa del CEO en esta sesión | ✔ (§4.2) | Workstreams A-D reconstruidos desde `MASTER_BACKLOG.md`, `RISKS.md`, `DECISION_QUEUE.md` |
 

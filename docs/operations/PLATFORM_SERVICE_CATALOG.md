@@ -4,7 +4,7 @@
 
 **Nombre:** PLATFORM_SERVICE_CATALOG.md
 
-**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), igual que Launch (`LNC-PRR-001`), Program y Design. Operations no está en la lista de dominios de adopción obligatoria de GOV-TPL-001, pero este documento cumple el criterio que la propia plantilla usa para decidir cuándo adoptarla igual: *"si el documento pretende ser una fuente de verdad estratégica que otras personas del equipo consultarán de forma recurrente, debe seguir esta plantilla"* (GOV-TPL-001, "Aplicación de esta plantilla").
+**Dominio:** Operations (`docs/operations/`) — adopción voluntaria de la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), igual que Launch (`LNC-PRR-001`), Program y Design. Operations no está en la lista de dominios de adopción obligatoria de GOV-TPL-001, pero este documento cumple el criterio que la propia plantilla usa para decidir cuándo adoptarla igual: *"si el documento pretende ser una fuente de verdad estratégica que otras personas del equipo consultarán de forma recurrente, debe seguir esta plantilla"* (GOV-TPL-001, "Aplicación de esta plantilla").
 
 **Estado:** Activo
 
@@ -16,7 +16,7 @@
 
 **Clasificación:** Documento Gobernado / Catálogo de Infraestructura
 
-**Documentos de los que depende:** `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/RUNBOOK.md`, `docs/operations/ENVIRONMENT.md`, `docs/launch/PRODUCTION_READINESS_REVIEW.md`, `docs/release/SERVICE_ACCOUNT_MIGRATION.md`, `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md`
+**Documentos de los que depende:** `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/RUNBOOK.md`, `docs/operations/environment/ENVIRONMENT.md`, `docs/archive/reviews/PRODUCTION_READINESS_REVIEW_2026-08-13.md`, `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`, `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md`
 
 > **Trazabilidad (2026-08-15):** para el estado operacional actual de cada servicio (plan, riesgo vigente, acción pendiente, owner), ver `docs/operations/PLATFORM_OPERATIONAL_STATUS.md` (OPS-STATUS-001) — este catálogo sigue siendo la fuente del inventario/propósito/criticidad de cada servicio, no de su estado más reciente.
 
@@ -40,7 +40,7 @@ Este documento es el catálogo permanente de todo servicio de infraestructura ex
 
 * **RUNBOOK** — el Runbook es la fuente de todo procedimiento operativo (deploy, rollback, incidentes, rotación, backup). Este catálogo solo indica, por servicio, que ese procedimiento existe y dónde está — nunca lo repite.
 * **ENVIRONMENT** — fuente única de cada variable de entorno, su default y su impacto si falta. Este catálogo solo indica en qué servicio se agrupan esas variables.
-* **RELEASE** (`docs/launch/PRODUCTION_READINESS_REVIEW.md` y `docs/release/`) — evalúan si la plataforma puede publicarse; este catálogo no emite veredictos de publicación, solo describe la infraestructura subyacente que esos documentos evalúan.
+* **RELEASE** (`docs/archive/reviews/PRODUCTION_READINESS_REVIEW_2026-08-13.md` y `docs/release/`) — evalúan si la plataforma puede publicarse; este catálogo no emite veredictos de publicación, solo describe la infraestructura subyacente que esos documentos evalúan.
 * **PRODUCT** — este catálogo no tiene relación de dependencia con Product; ningún servicio aquí listado es propiedad de decisiones de producto, son decisiones de infraestructura.
 * **GOVERNANCE** (`GOV-DGM-001`) — este documento sigue el modelo de Documentos Gobernados que GOV-DGM-001 formaliza; ante una discrepancia de forma (estructura, versionado), prevalece GOV-DGM-001 y GOV-TPL-001.
 
@@ -205,9 +205,9 @@ Este documento consolida, sin reemplazar: `PRODUCTION_INFRASTRUCTURE_AUDIT.md` (
 |---|---|---|---|
 | Evidencia de código, planes contratados y riesgos por servicio | `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` | ✔ (resumido, referenciado) | No se repite evidencia línea por línea |
 | Procedimientos operativos (deploy, rollback, incidentes, rotación, backup) | `docs/operations/RUNBOOK.md` | — (solo referenciado) | Este catálogo nunca describe un procedimiento |
-| Variables de entorno individuales | `docs/operations/ENVIRONMENT.md` | — (solo referenciado) | Este catálogo agrupa por servicio, no por variable |
-| Propiedad de cuenta y plan de consolidación | `docs/release/SERVICE_ACCOUNT_MIGRATION.md` | ✔ (resumido en columna "Propietario") | Documento de Ejecución (2026-06-30/2026-08-02) — no actualizado desde entonces; ver Riesgo en Anexo A de GOV-DGM-001 sobre documentos sin re-verificar |
-| Veredicto de preparación para publicar | `docs/launch/PRODUCTION_READINESS_REVIEW.md` | — (solo referenciado) | Este catálogo no emite veredictos de publicación |
+| Variables de entorno individuales | `docs/operations/environment/ENVIRONMENT.md` | — (solo referenciado) | Este catálogo agrupa por servicio, no por variable |
+| Propiedad de cuenta y plan de consolidación | `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md` | ✔ (resumido en columna "Propietario") | Documento de Ejecución (2026-06-30/2026-08-02) — no actualizado desde entonces; ver Riesgo en Anexo A de GOV-DGM-001 sobre documentos sin re-verificar |
+| Veredicto de preparación para publicar | `docs/archive/reviews/PRODUCTION_READINESS_REVIEW_2026-08-13.md` | — (solo referenciado) | Este catálogo no emite veredictos de publicación |
 | Modelo de gobierno documental aplicado a este documento | `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md` | ✔ (aplicado) | Adopción voluntaria de GOV-TPL-001 para la familia Operations, mismo mecanismo que Launch/Program/Design |
 
 ## 12. Gobierno
@@ -218,7 +218,7 @@ Este documento adopta voluntariamente la estructura de `GOV-TPL-001` para la fam
 
 ## 13. Documentos relacionados
 
-`docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/RUNBOOK.md`, `docs/operations/ENVIRONMENT.md`, `docs/release/SERVICE_ACCOUNT_MIGRATION.md`, `docs/launch/PRODUCTION_READINESS_REVIEW.md`, `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md`, `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+`docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md`, `docs/operations/RUNBOOK.md`, `docs/operations/environment/ENVIRONMENT.md`, `docs/archive/releases/SERVICE_ACCOUNT_MIGRATION.md`, `docs/archive/reviews/PRODUCTION_READINESS_REVIEW_2026-08-13.md`, `docs/governance/DOCUMENT_GOVERNANCE_MODEL.md`, `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ## 14. Control de Cambios
 

@@ -22,7 +22,7 @@
 
 Este documento formaliza, con base en la práctica ya existente del repositorio, el sistema de gobierno documental de ComparaFarma: qué tipos de documento existen, cuándo corresponde cada uno, cómo se relacionan las familias documentales entre sí, y cómo nace, evoluciona y se retira un documento.
 
-Es la versión actualizada y consolidada de la propuesta que quedó abierta en `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` §8-9 (2026-08-02) — anterior a que existieran códigos de documento, Matriz de Trazabilidad, o la mayoría de las familias que hoy componen `docs/`. Este documento no reemplaza esa auditoría (sigue siendo el registro de su propio momento), la actualiza.
+Es la versión actualizada y consolidada de la propuesta que quedó abierta en `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` §8-9 (2026-08-02) — anterior a que existieran códigos de documento, Matriz de Trazabilidad, o la mayoría de las familias que hoy componen `docs/`. Este documento no reemplaza esa auditoría (sigue siendo el registro de su propio momento), la actualiza.
 
 Este documento constituye la fuente oficial del modelo de gobierno documental de ComparaFarma. Ante una discrepancia entre este modelo y la práctica observada en el repositorio, prevalece este documento hasta que una nueva versión sea aprobada.
 
@@ -38,7 +38,7 @@ Este documento constituye la fuente oficial del modelo de gobierno documental de
 
 **Este documento NO define:**
 
-* La estructura de 10 secciones de los Documentos Gobernados — eso lo define `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), que este documento no reemplaza.
+* La estructura de 10 secciones de los Documentos Gobernados — eso lo define `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001), que este documento no reemplaza.
 * Un proceso de aprobación formal de documentos — sigue siendo un vacío heredado de GOV-TPL-001 §Alcance, que este documento no resuelve.
 * El contenido conceptual de ningún documento de negocio, producto o arquitectura.
 * Reorganización, migración o movimiento de ningún archivo existente — este documento describe el modelo y su estado de adopción, no prescribe un cambio.
@@ -87,7 +87,7 @@ Familias: Release, Domain, Operations, Execution, Analysis, Project — y, en pa
 * **Una responsabilidad por documento**, con Alcance en dos listas ("define" / "no define") — presente en Enterprise, GOV-TPL-001, Design System y Release, con la lista de "no define" apuntando, cuando es posible, a qué otro documento sí lo define.
 * **Crecimiento aditivo por referencia hacia adelante** — cada documento nuevo de una familia anticipa, en su propia sección de cierre, el nombre del documento que debería existir después. Se practica en Product (`SEARCH_EXPERIENCE.md` → ... → `USER_JOURNEYS.md`, que cierra el ciclo) y en Design System.
 * **Matriz de Trazabilidad** — presente en documentos de al menos 6 familias (Brand, Design, Design System, Launch, Product, Program); ausente en Enterprise y Strategy pese a ser obligatoria para ambas (ver Anexo A).
-* **Control de Cambios con versión semántica, sin comparabilidad implícita entre versiones** — el precedente más claro es `docs/launch/PRODUCTION_READINESS_REVIEW.md`, cuya v2.0 declara que su veredicto no es comparable numéricamente con v1.0/v1.1 porque cambió la metodología.
+* **Control de Cambios con versión semántica, sin comparabilidad implícita entre versiones** — el precedente más claro es `docs/archive/reviews/PRODUCTION_READINESS_REVIEW_2026-08-13.md`, cuya v2.0 declara que su veredicto no es comparable numéricamente con v1.0/v1.1 porque cambió la metodología.
 
 ### 3.3 Relaciones entre familias
 
@@ -99,7 +99,7 @@ Familias: Release, Domain, Operations, Execution, Analysis, Project — y, en pa
 
 1. **Nacimiento** — por referencia hacia adelante (el documento anterior anticipa el nombre del siguiente, como en Product) o por chárter de dominio (un README nuevo gobierna una carpeta ya poblada, como en Brand, Design, Design System y Program).
 2. **Evolución** — versión semántica registrada en Control de Cambios; el precedente de GOV-TPL-001 v1.0→v1.1 muestra que un documento subordinado puede motivar la actualización del documento que lo gobierna.
-3. **Reemplazo** — con supersesión declarada desde el documento sucesor, no desde el documento superado: `docs/launch/PRODUCTION_READINESS_REVIEW.md` declara en su propia metadata que unifica y sucede a `PRODUCTION_READINESS_V2.md`, `RELEASE_READINESS_V1.md` y `PLAY_CONSOLE_CHECKLIST.md` — los tres siguen existiendo como archivo.
+3. **Reemplazo** — con supersesión declarada desde el documento sucesor, no desde el documento superado: `docs/archive/reviews/PRODUCTION_READINESS_REVIEW_2026-08-13.md` declara en su propia metadata que unifica y sucede a `PRODUCTION_READINESS_V2.md`, `RELEASE_READINESS_V1.md` y `PLAY_CONSOLE_CHECKLIST.md` — los tres siguen existiendo como archivo.
 4. **Historicidad** — nivel ya reconocido por GOV-TPL-001 ("Históricos/inmutables"), aplicado en la práctica a actas y postmortems: se congelan, no se editan retroactivamente.
 5. **Pérdida de vigencia** — sin mecanismo único todavía: ningún documento del repositorio usa hoy un campo `Estado: Obsoleto` o `Estado: Deprecado` de forma literal. La supersesión (punto 3) ocurre por prosa libre en el sucesor, no por metadata en el documento superado. Es un vacío real del sistema, registrado aquí como tal.
 
@@ -107,8 +107,8 @@ Familias: Release, Domain, Operations, Execution, Analysis, Project — y, en pa
 
 Este documento depende de, y no reemplaza:
 
-* `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001) — sigue siendo la única fuente de la estructura de 10 secciones y de los niveles de gobierno reconocidos. Este documento no redefine nada de eso; opera un nivel por encima (cuándo corresponde cada tipo, no cómo se ve por dentro).
-* `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` §8-9 — sigue siendo el registro de la primera vez que se propuso este modelo; no se reescribe, se actualiza en este documento nuevo.
+* `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` (GOV-TPL-001) — sigue siendo la única fuente de la estructura de 10 secciones y de los niveles de gobierno reconocidos. Este documento no redefine nada de eso; opera un nivel por encima (cuándo corresponde cada tipo, no cómo se ve por dentro).
+* `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` §8-9 — sigue siendo el registro de la primera vez que se propuso este modelo; no se reescribe, se actualiza en este documento nuevo.
 
 Este documento es consumido por: ninguno todavía — es su primera versión.
 
@@ -116,8 +116,8 @@ Este documento es consumido por: ninguno todavía — es su primera versión.
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 | --- | --- | --- | --- |
-| Estructura de 10 secciones y niveles de gobierno | `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` | — (solo referenciado) | Este documento no la repite en detalle, solo la presupone |
-| Propuesta original de estrategia de gobierno documental | `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` §8-9 | ✔ (actualizada) | Anterior a los Documentos Gobernados; este documento la moderniza sin editarla |
+| Estructura de 10 secciones y niveles de gobierno | `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` | — (solo referenciado) | Este documento no la repite en detalle, solo la presupone |
+| Propuesta original de estrategia de gobierno documental | `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` §8-9 | ✔ (actualizada) | Anterior a los Documentos Gobernados; este documento la moderniza sin editarla |
 | Regla de única fuente de verdad | `docs/enterprise/README.md` | ✔ (referenciada) | Citada también en Brand/Design/Design System |
 | Documentos Gobernados y Documentos de Ejecución (nomenclatura) | Este documento (primera formalización explícita) | ✔ | No existía como término antes de este documento |
 | Nivel "Chárter de Dominio" | Ninguna — practicado en 4 READMEs, no reconocido en GOV-TPL-001 | — | Pendiente de reconocimiento formal, ver Anexo A |
@@ -130,24 +130,24 @@ Este documento no resuelve las situaciones descritas en el Anexo A — quedan co
 
 ## 7. Documentos relacionados
 
-* `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
-* `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md`
-* `docs/enterprise/README.md`, `docs/program/README.md`, `docs/brand/README.md`, `docs/design/README.md`, `docs/design-system/README.md` (ejemplos de Documentos Gobernados, incluidos los de adopción voluntaria)
-* `docs/operations/RUNBOOK.md`, `docs/operations/ENVIRONMENT.md`, `docs/release/RC-03_PRODUCTION_READINESS_REPORT.md`, `docs/domain/USER_DOMAIN_MODEL.md` (ejemplos de Documentos de Ejecución)
+* `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`
+* `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md`
+* `docs/enterprise/README.md`, `docs/program/README.md`, `docs/design/brand/README.md`, `docs/design/README.md`, `docs/design/system/README.md` (ejemplos de Documentos Gobernados, incluidos los de adopción voluntaria)
+* `docs/operations/RUNBOOK.md`, `docs/operations/environment/ENVIRONMENT.md`, `docs/archive/releases/RC-03_PRODUCTION_READINESS_REPORT.md`, `docs/technology/domain/USER_DOMAIN_MODEL.md` (ejemplos de Documentos de Ejecución)
 
 ## 8. Control de Cambios
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 | --- | --- | --- | --- | --- | --- |
-| 1.0 | 2026-08-13 | Activo | Aprobado (CTO), 2026-08-13 | Creación del documento como primera versión oficial, a partir de auditorías sucesivas realizadas en la misma sesión de trabajo (docs/operations, modelo de gobierno de Operations, meta-gobierno histórico, y esta especificación). Formaliza los dos tipos de documento ("Documentos Gobernados" y "Documentos de Ejecución"), las reglas comunes, el mapa de relaciones entre familias y el ciclo de vida documental, con un diagrama de una pantalla al inicio de la sección 3 y la situación de adopción del repositorio en el Anexo A. La construcción del documento incluyó una revisión editorial previa a su aprobación (nomenclatura, ubicación del anexo, lenguaje de especificación); esa revisión forma parte de esta misma versión 1.0, no de una versión separada. | `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`, `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md`, y lectura directa de documentos de 8 familias distintas |
+| 1.0 | 2026-08-13 | Activo | Aprobado (CTO), 2026-08-13 | Creación del documento como primera versión oficial, a partir de auditorías sucesivas realizadas en la misma sesión de trabajo (docs/operations, modelo de gobierno de Operations, meta-gobierno histórico, y esta especificación). Formaliza los dos tipos de documento ("Documentos Gobernados" y "Documentos de Ejecución"), las reglas comunes, el mapa de relaciones entre familias y el ciclo de vida documental, con un diagrama de una pantalla al inicio de la sección 3 y la situación de adopción del repositorio en el Anexo A. La construcción del documento incluyó una revisión editorial previa a su aprobación (nomenclatura, ubicación del anexo, lenguaje de especificación); esa revisión forma parte de esta misma versión 1.0, no de una versión separada. | `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`, `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md`, y lectura directa de documentos de 8 familias distintas |
 | 1.1 | 2026-08-13 | Activo | Pendiente (CTO) | Corrección de consistencia documental (revisión final de `PLATFORM_SERVICE_CATALOG.md`): se agrega Operations (`OPS-SVC-001`) a la lista de familias con adopción voluntaria de `GOV-TPL-001` en §3.1, junto a Launch, Program y Design — reflejando la adopción ya declarada por `docs/operations/PLATFORM_SERVICE_CATALOG.md` desde su creación. No se modifica ninguna otra regla, relación ni nivel de gobierno. | `docs/operations/PLATFORM_SERVICE_CATALOG.md` v1.0 |
 
 ## 9. Historial de Gobierno
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 | --- | --- | --- | --- |
-| 2026-08-02 | Auditoría de Gobierno Documental general | Enterprise Documentation Architect | `docs/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` |
-| 2026-08-05 | Elevación a estándar documental de repositorio | Enterprise Documentation Architect | `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0/v1.1 |
+| 2026-08-02 | Auditoría de Gobierno Documental general | Enterprise Documentation Architect | `docs/archive/audits/AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` |
+| 2026-08-05 | Elevación a estándar documental de repositorio | Enterprise Documentation Architect | `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` v1.0/v1.1 |
 | 2026-08-13 | Revisión de gobierno operacional (docs/operations) | CTO / Claude | Informe entregado en sesión de trabajo, sin documento nuevo |
 | 2026-08-13 | Revisión del modelo de gobierno de Operations frente a las demás familias | CTO / Claude | Informe entregado en sesión de trabajo, sin documento nuevo |
 | 2026-08-13 | Revisión histórica del origen de los dos tipos de documento | CTO / Claude | Informe entregado en sesión de trabajo, sin documento nuevo |
@@ -168,7 +168,7 @@ Situación del repositorio frente al modelo descrito arriba, a la fecha indicada
 2. `docs/product/README.md` (el índice del propio dominio Product) no tiene metadata, código ni versión, mientras 5 documentos "hijos" del mismo dominio sí siguen el estándar completo.
 3. Enterprise y Strategy, familias obligatorias, no usan Matriz de Trazabilidad pese a ser sección obligatoria de GOV-TPL-001 §6.
 4. `docs/operations/PRODUCTION_INFRASTRUCTURE_AUDIT.md` se describe a sí mismo como "documento permanente de gobierno operacional" en su primera línea, con formato de Documentos de Ejecución (sin Código, sin Versión, sin campo Estado).
-5. El nivel "Chárter de Dominio", en uso real y consistente en 4 documentos (`docs/brand/README.md`, `docs/design/README.md`, `docs/design-system/README.md`, `docs/program/README.md`), no está en la lista de niveles reconocidos por GOV-TPL-001 — a diferencia de "Fundacional derivado", que sí fue incorporado formalmente cuando se practicó por primera vez. Este documento no edita GOV-TPL-001 para agregarlo; queda registrado como pendiente.
-6. La decisión D-003 del acta `docs/actas/20260725.md` ("el repositorio es la única fuente oficial") difiere del estado real de `git status`: a la fecha de esta versión, la mayoría de los documentos de ambos tipos —creados después de esa acta— siguen sin comitear (`??` untracked).
+5. El nivel "Chárter de Dominio", en uso real y consistente en 4 documentos (`docs/design/brand/README.md`, `docs/design/README.md`, `docs/design/system/README.md`, `docs/program/README.md`), no está en la lista de niveles reconocidos por GOV-TPL-001 — a diferencia de "Fundacional derivado", que sí fue incorporado formalmente cuando se practicó por primera vez. Este documento no edita GOV-TPL-001 para agregarlo; queda registrado como pendiente.
+6. La decisión D-003 del acta `docs/archive/meetings/20260725.md` ("el repositorio es la única fuente oficial") difiere del estado real de `git status`: a la fecha de esta versión, la mayoría de los documentos de ambos tipos —creados después de esa acta— siguen sin comitear (`??` untracked).
 7. La asimetría de citas Enterprise↔Strategy↔Product (§3.3) no tiene todavía una regla de no-duplicación declarada, pese al riesgo teórico de solapamiento entre las tres.
 8. `AUDIT_DOCUMENTAL_GOBIERNO_CONOCIMIENTO_2026-08.md` §9 condicionó la creación de un documento de gobierno como este a completar antes cuatro pasos previos (versionar `docs/strategy/*`, fusionar duplicados de farmacias, cerrar CF-101-110, actualizar `docs/release/*`). No hay registro, a la fecha de esta versión, de que esos cuatro pasos estén completos.

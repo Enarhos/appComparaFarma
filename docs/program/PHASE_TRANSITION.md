@@ -2,7 +2,7 @@
 
 Documento único de transición formal entre la Fase 1 (Arquitectura y Fundamentos) y la Fase 2 (Ejecución y Lanzamiento) del programa ComparaFarma. No repite el detalle ya registrado en otros documentos de `docs/program/` — lo resume y referencia. Junto con `PROGRAM_BOARD.md` y `CURRENT_SPRINT.md`, este documento debe ser suficiente para que cualquier persona que se incorpore al proyecto entienda qué se construyó, en qué estado está el programa, qué falta y cuál es el foco de las próximas semanas, sin necesidad de leer ningún otro archivo.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -61,10 +61,10 @@ Detalle completo de cada entrega, con fecha y fuente, en `docs/program/MILESTONE
 
 | Activo | Dónde vive | Estado |
 |---|---|---|
-| 4 documentos de Arquitectura Empresarial (DAR, EDM, BCM, BS) | `docs/enterprise/*`, `docs/strategy/DIGITAL_ASSET_REGISTER.md` | Draft, sin ratificar |
+| 4 documentos de Arquitectura Empresarial (DAR, EDM, BCM, BS) | `docs/enterprise/*`, `docs/enterprise/strategy/DIGITAL_ASSET_REGISTER.md` | Draft, sin ratificar |
 | 5 documentos de Arquitectura de Marca | `docs/brand/*` | Draft, sin ratificar |
 | Dominio de proceso de Diseño (README, Exploration Log, Decision Log) | `docs/design/*` | Activo, sin dirección visual final |
-| Estándar de Gobierno Documental (plantilla de 10 secciones) | `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md` | Activo, aplicado en todo `docs/program/`, `docs/brand/`, `docs/enterprise/` |
+| Estándar de Gobierno Documental (plantilla de 10 secciones) | `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md` | Activo, aplicado en todo `docs/program/`, `docs/brand/`, `docs/enterprise/` |
 | Dominio de Gobierno de Programa (9 documentos + este) | `docs/program/*` | Activo |
 
 ### 4.4 Riesgos abiertos
@@ -80,7 +80,7 @@ El registro completo, con impacto, probabilidad y mitigación, vive en `docs/pro
 
 El registro completo vive en `docs/program/DECISION_QUEUE.md` (14 decisiones). Las que condicionan directamente el arranque de Fase 2:
 
-- **DQ-001 / DQ-002:** logo y sistema de colores — primer paso del Workstream A, depende de evaluar las 3 familias conceptuales ya exploradas (`docs/design/DESIGN_EXPLORATION.md`).
+- **DQ-001 / DQ-002:** logo y sistema de colores — primer paso del Workstream A, depende de evaluar las 3 familias conceptuales ya exploradas (`docs/archive/design/explorations/DESIGN_EXPLORATION.md`).
 - **DQ-008:** confirmación de cierre de Data Safety — acción exclusiva del CEO en Play Console.
 - **DQ-003:** catálogo comercial de planes vendibles — decisión de precios, no técnica.
 - **DQ-007:** ratificación formal del CEO sobre los documentos de Enterprise y Brand — transversal, no bloqueante, pero pendiente desde antes del cierre de esta fase.
@@ -99,7 +99,7 @@ El registro completo vive en `docs/program/DECISION_QUEUE.md` (14 decisiones). L
 
 - ✅ `mobile/` fuera de Prueba Cerrada (2026-08-08, confirmación del CTO en chat (confirmación del CTO en sesión de chat, 2026-08-08 — ver `CLAUDE.md`, sección "Actualización de estado (2026-08-08)"; sin artefacto de Play Console verificado de forma independiente en este repositorio)).
 - Identidad visual (Logo/Color/Typography/Iconography) decidida y aplicada de forma consistente en assets de Google Play, sitio web y (donde aplique) mobile.
-- Checklist de Producción (`docs/release/PLAY_CONSOLE_CHECKLIST.md`) en verde, incluyendo las validaciones finales de Workstream C.
+- Checklist de Producción (`docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md`) en verde, incluyendo las validaciones finales de Workstream C.
 - Ficha de Google Play completa: icono, feature graphic, screenshots, store listing y ASO básico publicados.
 - Plataforma Web integrada visualmente con la nueva identidad, sin inconsistencia entre canales.
 - Ninguno de los criterios anteriores requiere, para cumplirse, la ratificación formal del CEO sobre los documentos de Enterprise/Brand ni la definición del catálogo comercial — ambos siguen su curso en paralelo (Fase 3) y no son criterio de éxito de este lanzamiento específico.

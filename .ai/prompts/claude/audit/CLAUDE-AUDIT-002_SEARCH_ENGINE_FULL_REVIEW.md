@@ -6,7 +6,7 @@
 **Responsable:** Claude Code  
 **Revisor:** ChatGPT CTO  
 **Estado:** Draft  
-**Ubicación:** `docs/engineering/reviews/ER-002_SEARCH_ENGINE_FULL_REVIEW.md`
+**Ubicación:** `docs/technology/reviews/ER-002_SEARCH_ENGINE_FULL_REVIEW.md`
 
 ---
 

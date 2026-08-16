@@ -20,7 +20,7 @@ Servicios en producción:
 ### Backend (`api/`)
 Automático: push a `main` → `.github/workflows/ci.yml` → jobs `typecheck`, `domain-tests`, `api-tests`, `web-build` → si los 3 primeros pasan, `deploy-api` corre `vercel deploy --prod` **desde la raíz del monorepo** (no desde `api/` — ver advertencia en `CLAUDE.md` sobre `EUNSUPPORTEDPROTOCOL`). Desde RC-03, el job incluye un smoke test post-deploy (`curl` a `/api/health`, 3 reintentos) que falla el job en rojo si el deploy no responde correctamente.
 
-Reglas que no deben romperse (post-mortem `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`):
+Reglas que no deben romperse (post-mortem `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md`):
 1. El deploy corre sin `working-directory: api` en `ci.yml`.
 2. En el dashboard de Vercel del proyecto `comparafarma-api`, Root Directory = `api`.
 3. `api/vercel.json` mantiene el glob explícito `"functions": {"api/*.ts": {...}}`.
@@ -30,7 +30,7 @@ Reglas que no deben romperse (post-mortem `docs/engineering/postmortems/PM-001_D
 Deploy automático de Vercel (proyecto propio, no pasa por GitHub Actions) al detectar push a la rama conectada. Sin pasos manuales adicionales salvo confirmar que las env vars de `web/.env.example` estén configuradas en el proyecto `comparafarma-web` de Vercel.
 
 ### Mobile (`mobile/`)
-Ver `docs/release/RELEASE_CHECKLIST.md` — build manual (`pnpm build:android` o EAS), firma con `release.keystore`, subida manual a Play Console.
+Ver `docs/archive/releases/RELEASE_CHECKLIST.md` — build manual (`pnpm build:android` o EAS), firma con `release.keystore`, subida manual a Play Console.
 
 ---
 
@@ -78,7 +78,7 @@ Todas las variables se configuran en Vercel → proyecto → Settings → Enviro
 ## 5. Renovación de certificados
 
 - **TLS**: gestionado automáticamente por Vercel para todos los dominios (`*.vercel.app` y dominios propios conectados) — no requiere acción manual.
-- **Firma de Android (`release.keystore`)**: no expira en la práctica (validez hasta 2053, ver auditoría RC-02). **Actualización 2026-08-15:** Google Play App Signing está confirmado habilitado para `mla.app.comparafarma` (verificado por el CTO en Play Console → Setup → App integrity) — el `release.keystore` local es la *upload key*, no la clave definitiva de firma. Si se pierde, **sí hay recuperación**: Google Play permite un reset de upload key (ver `docs/release/PLAY_CONSOLE_CHECKLIST.md` para el procedimiento de comparación de huellas SHA-1/SHA-256). Sigue siendo recomendable mantener un backup fuera del repo para evitar la fricción de ese proceso, pero ya no es una condición de "sin recuperación posible" — ver `docs/operations/PLATFORM_OPERATIONAL_STATUS.md`.
+- **Firma de Android (`release.keystore`)**: no expira en la práctica (validez hasta 2053, ver auditoría RC-02). **Actualización 2026-08-15:** Google Play App Signing está confirmado habilitado para `mla.app.comparafarma` (verificado por el CTO en Play Console → Setup → App integrity) — el `release.keystore` local es la *upload key*, no la clave definitiva de firma. Si se pierde, **sí hay recuperación**: Google Play permite un reset de upload key (ver `docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md` para el procedimiento de comparación de huellas SHA-1/SHA-256). Sigue siendo recomendable mantener un backup fuera del repo para evitar la fricción de ese proceso, pero ya no es una condición de "sin recuperación posible" — ver `docs/operations/PLATFORM_OPERATIONAL_STATUS.md`.
 
 ---
 
@@ -107,11 +107,11 @@ Todas las variables se configuran en Vercel → proyecto → Settings → Enviro
 
 - **Base de datos**: restaurar desde el backup de Supabase (Dashboard → Database → Backups → Restore) — afecta a todo el proyecto, no hay restauración parcial por tabla desde la UI estándar.
 - **Backend/Web**: no requieren "restauración" en el sentido de datos — un rollback de deploy (sección 2) es equivalente a restaurar el código a un estado anterior conocido.
-- **Configuración (env vars)**: no hay backup automático de las env vars de Vercel. Mantener `docs/operations/ENVIRONMENT.md` actualizado como referencia de qué variables deben existir es la mitigación — considerar exportar manualmente los valores no secretos a un lugar seguro tras cada cambio de configuración.
+- **Configuración (env vars)**: no hay backup automático de las env vars de Vercel. Mantener `docs/operations/environment/ENVIRONMENT.md` actualizado como referencia de qué variables deben existir es la mitigación — considerar exportar manualmente los valores no secretos a un lugar seguro tras cada cambio de configuración.
 
 ## 10. Mantenimiento
 
-- Revisar mensualmente `docs/product/DECISION_LOG.md` y los postmortems de `docs/engineering/postmortems/` para detectar patrones recurrentes.
+- Revisar mensualmente `docs/product/decisions/DECISION_LOG.md` y los postmortems de `docs/engineering/postmortems/` para detectar patrones recurrentes.
 - Revisar trimestralmente las dependencias de `api/package.json`, `web/package.json`, `mobile/package.json` por vulnerabilidades conocidas (`pnpm audit`).
-- Revisar antes de cada release el checklist de `docs/release/RELEASE_CHECKLIST.md`.
-- Los documentos vacíos en `docs/product/` (`BACKLOG_TECH.md`, `KPIS.md`, `RELEASES.md`, `IDEAS.md`, `QUALITY.md`, `DATA_POLICY.md`) siguen pendientes de una decisión (poblarlos o marcarlos descartados) — no es un riesgo operacional, pero se señala aquí para que no se pierda de vista.
+- Revisar antes de cada release el checklist de `docs/archive/releases/RELEASE_CHECKLIST.md`.
+- **Resuelto (2026-08-15, limpieza de gobierno documental):** los documentos que estaban vacíos en `docs/product/` (`BACKLOG_TECH.md`, `KPIS.md`, `RELEASES.md`, `IDEAS.md`, `QUALITY.md`, `DATA_POLICY.md`) se confirmaron con 0 bytes y sin contenido recuperable, y se eliminaron — la decisión pendiente que señalaba este punto ya se tomó (descartados, no poblados).

@@ -16,7 +16,7 @@
 | **Nivel de Gobierno** | Estratégico |
 | **Clasificación** | Definición Oficial de Producto |
 | **Fuente Oficial** | Este documento |
-| **Documentos relacionados** | `docs/brand/BRAND_FOUNDATIONS.md`, `docs/brand/BRAND_ARCHITECTURE.md`, `docs/enterprise/BUSINESS_SERVICES.md`, `docs/program/PROGRAM_BOARD.md` |
+| **Documentos relacionados** | `docs/design/brand/BRAND_FOUNDATIONS.md`, `docs/design/brand/BRAND_ARCHITECTURE.md`, `docs/enterprise/BUSINESS_SERVICES.md`, `docs/program/PROGRAM_BOARD.md` |
 | **Pregunta que responde** | ¿Qué producto estamos lanzando en Producción? |
 
 ---
@@ -238,11 +238,11 @@ deberá actualizar este documento antes de su implementación.
 
 # 17. Documentos Relacionados
 
-- `docs/brand/BRAND_FOUNDATIONS.md`
-- `docs/brand/BRAND_ARCHITECTURE.md`
+- `docs/design/brand/BRAND_FOUNDATIONS.md`
+- `docs/design/brand/BRAND_ARCHITECTURE.md`
 - `docs/enterprise/BUSINESS_SERVICES.md`
 - `docs/program/PROGRAM_BOARD.md`
-- `docs/launch/PRODUCTION_READINESS_REVIEW.md`
+- `docs/archive/reviews/PRODUCTION_READINESS_REVIEW_2026-08-13.md`
 - `docs/program/CURRENT_SPRINT.md`
 
 ---

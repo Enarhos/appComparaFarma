@@ -133,7 +133,7 @@ Capacidades
 - Convenios
 - API Comercial
 - Publicidad ética
-- Servicios Premium — ver Epic "Subscription Platform" en `docs/product/EPICS.md` (Fase 1 en papeleo, ver `BACKLOG_PRODUCT.md`)
+- Servicios Premium — ver Epic "Subscription Platform" en `docs/archive/product/EPICS_2026-08-15.md` (Fase 1 en papeleo, ver `BACKLOG_PRODUCT.md`)
 
 ---
 

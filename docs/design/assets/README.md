@@ -2,7 +2,7 @@
 
 Este documento explica qué tipo de activos gráficos se almacenan en esta carpeta y bajo qué regla de gobierno se convierten, o no, en decisiones oficiales.
 
-Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
+Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCUMENT_TEMPLATE.md`.
 
 ---
 
@@ -20,7 +20,7 @@ Sigue obligatoriamente la estructura de `docs/templates/GOVERNED_DOCUMENT_TEMPLA
 | **Nivel de Gobierno** | Chárter de Dominio — mismo nivel introducido en `docs/design/README.md` §1, aplicado aquí al subdominio específico de almacenamiento de activos |
 | **Clasificación** | Documento de Gobierno Documental |
 | **Fuente Oficial** | Este mismo documento |
-| **Documentos de los que depende** | `docs/design/README.md`, `docs/design/DESIGN_DECISION_LOG.md` |
+| **Documentos de los que depende** | `docs/design/README.md`, `docs/design/decisions/DESIGN_DECISION_LOG.md` |
 | **Documentos que gobierna** | El uso, nomenclatura y estatus de todo archivo almacenado dentro de `docs/design/assets/` |
 | **Pregunta que responde** | ¿Qué tipo de activos gráficos viven aquí, y cuándo deja uno de ser "solo un archivo" para convertirse en una decisión oficial? |
 
@@ -44,8 +44,8 @@ Este documento fija esa regla de una vez: **ningún activo almacenado aquí es, 
 
 **Este documento NO define:**
 
-- El contenido conceptual de ningún activo específico. Cada activo se documenta en la exploración o decisión que lo originó (`docs/design/DESIGN_EXPLORATION.md` o `docs/design/DESIGN_DECISION_LOG.md`), no en este README.
-- Ninguna decisión de diseño. Corresponde exclusivamente a `docs/design/DESIGN_DECISION_LOG.md`.
+- El contenido conceptual de ningún activo específico. Cada activo se documenta en la exploración o decisión que lo originó (`docs/archive/design/explorations/DESIGN_EXPLORATION.md` o `docs/design/decisions/DESIGN_DECISION_LOG.md`), no en este README.
+- Ninguna decisión de diseño. Corresponde exclusivamente a `docs/design/decisions/DESIGN_DECISION_LOG.md`.
 - Herramientas, formatos de archivo o software de diseño a utilizar.
 
 ---
@@ -54,7 +54,7 @@ Este documento fija esa regla de una vez: **ningún activo almacenado aquí es, 
 
 ### 4.1 Tipos de activos que se almacenan aquí
 
-- **Moodboards** — collages de referencia visual, tono y textura, como el generado en la primera exploración creativa (ver `docs/design/DESIGN_EXPLORATION.md`, EXP-001).
+- **Moodboards** — collages de referencia visual, tono y textura, como el generado en la primera exploración creativa (ver `docs/archive/design/explorations/DESIGN_EXPLORATION.md`, EXP-001).
 - **Exploraciones** — cualquier material visual producido durante una sesión de exploración conceptual, aunque no haya conducido a ninguna dirección seleccionada.
 - **Logos** — propuestas de logotipo en cualquier etapa de desarrollo, aprobadas o no.
 - **Iconografía** — exploraciones o desarrollos de sistemas de íconos.
@@ -65,12 +65,12 @@ Este documento fija esa regla de una vez: **ningún activo almacenado aquí es, 
 
 ### 4.2 Regla de gobierno: un activo no es una decisión
 
-**Un activo gráfico almacenado en esta carpeta no constituye una decisión oficial de diseño hasta que exista un registro correspondiente en `docs/design/DESIGN_DECISION_LOG.md`.**
+**Un activo gráfico almacenado en esta carpeta no constituye una decisión oficial de diseño hasta que exista un registro correspondiente en `docs/design/decisions/DESIGN_DECISION_LOG.md`.**
 
 Esto significa, en la práctica:
 
 - Un moodboard o board de exploración (como `concept-board-v1.png`, ver §4.4) es material de trabajo, no una propuesta gráfica oficial, aunque contenga referencias visuales elaboradas o incluso paletas de color exploratorias.
-- Un logo guardado en esta carpeta, mientras no tenga una fila correspondiente en `docs/design/DESIGN_DECISION_LOG.md` con Estado "Aprobado", debe tratarse como una propuesta en evaluación, no como el logo de ComparaFarma.
+- Un logo guardado en esta carpeta, mientras no tenga una fila correspondiente en `docs/design/decisions/DESIGN_DECISION_LOG.md` con Estado "Aprobado", debe tratarse como una propuesta en evaluación, no como el logo de ComparaFarma.
 - Ningún archivo de esta carpeta debe usarse en producción, comunicación externa o material institucional sin que exista, primero, su decisión correspondiente registrada.
 
 ### 4.3 Convención de nomenclatura
@@ -81,13 +81,13 @@ Se recomienda, para toda exploración, el patrón `[tipo]-[tema]-v[número].ext`
 
 | Archivo | Tipo | Origen | Estatus |
 |---|---|---|---|
-| `concept-board-v1.png` | Moodboard / exploración | `docs/design/DESIGN_EXPLORATION.md`, EXP-001 | Material de exploración. No es una propuesta gráfica oficial ni una decisión de identidad visual (ver §4.2). |
+| `concept-board-v1.png` | Moodboard / exploración | `docs/archive/design/explorations/DESIGN_EXPLORATION.md`, EXP-001 | Material de exploración. No es una propuesta gráfica oficial ni una decisión de identidad visual (ver §4.2). |
 
 ---
 
 ## 5. Relaciones
 
-Este documento depende de `docs/design/README.md` (dominio) y de `docs/design/DESIGN_DECISION_LOG.md` (que es la única fuente capaz de convertir un activo de esta carpeta en una decisión oficial). No depende de `docs/design/DESIGN_EXPLORATION.md` de forma estricta, aunque en la práctica la mayoría de los activos aquí almacenados se originan en exploraciones documentadas allí.
+Este documento depende de `docs/design/README.md` (dominio) y de `docs/design/decisions/DESIGN_DECISION_LOG.md` (que es la única fuente capaz de convertir un activo de esta carpeta en una decisión oficial). No depende de `docs/archive/design/explorations/DESIGN_EXPLORATION.md` de forma estricta, aunque en la práctica la mayoría de los activos aquí almacenados se originan en exploraciones documentadas allí.
 
 ---
 
@@ -97,21 +97,21 @@ Este documento depende de `docs/design/README.md` (dominio) y de `docs/design/DE
 |---|---|---|---|
 | Regla "un activo no es una decisión" | `docs/design/README.md` §4.3, principio 2 | ✔ — desarrollada en detalle (§4.2) | Regla central de este documento |
 | Inventario de activos existentes | Este documento | ✔ (§4.4) | Un solo activo a la fecha de esta versión |
-| `concept-board-v1.png` | `docs/design/DESIGN_EXPLORATION.md`, EXP-001 | ✔ — catalogado, no redecidido | Material exploratorio; no oficial |
+| `concept-board-v1.png` | `docs/archive/design/explorations/DESIGN_EXPLORATION.md`, EXP-001 | ✔ — catalogado, no redecidido | Material exploratorio; no oficial |
 
 ---
 
 ## 7. Gobierno
 
-`docs/design/assets/README.md` **no reemplaza** `docs/design/DESIGN_DECISION_LOG.md`: ningún activo listado o descrito aquí adquiere estatus de decisión oficial por el solo hecho de estar inventariado en este documento. Este documento es gobernado por `docs/design/README.md` (§4.3, principio 2).
+`docs/design/assets/README.md` **no reemplaza** `docs/design/decisions/DESIGN_DECISION_LOG.md`: ningún activo listado o descrito aquí adquiere estatus de decisión oficial por el solo hecho de estar inventariado en este documento. Este documento es gobernado por `docs/design/README.md` (§4.3, principio 2).
 
 ---
 
 ## 8. Documentos relacionados
 
 - `docs/design/README.md` — dominio en el que vive este documento.
-- `docs/design/DESIGN_EXPLORATION.md` — origen de la mayoría de los activos aquí almacenados.
-- `docs/design/DESIGN_DECISION_LOG.md` — único documento capaz de convertir un activo en decisión oficial.
+- `docs/archive/design/explorations/DESIGN_EXPLORATION.md` — origen de la mayoría de los activos aquí almacenados.
+- `docs/design/decisions/DESIGN_DECISION_LOG.md` — único documento capaz de convertir un activo en decisión oficial.
 
 ---
 
@@ -119,7 +119,7 @@ Este documento depende de `docs/design/README.md` (dominio) y de `docs/design/DE
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial. Define los tipos de activos que se almacenan en esta carpeta, la regla de gobierno que distingue un activo exploratorio de una decisión oficial, la convención de nomenclatura, y el inventario inicial (`concept-board-v1.png`). | `docs/design/README.md` v1.0; `docs/design/DESIGN_EXPLORATION.md` v1.0; `docs/design/DESIGN_DECISION_LOG.md` v1.0 |
+| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial. Define los tipos de activos que se almacenan en esta carpeta, la regla de gobierno que distingue un activo exploratorio de una decisión oficial, la convención de nomenclatura, y el inventario inicial (`concept-board-v1.png`). | `docs/design/README.md` v1.0; `docs/archive/design/explorations/DESIGN_EXPLORATION.md` v1.0; `docs/design/decisions/DESIGN_DECISION_LOG.md` v1.0 |
 
 ---
 
@@ -127,6 +127,6 @@ Este documento depende de `docs/design/README.md` (dominio) y de `docs/design/DE
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-05 | Creación del dominio documental de proceso de diseño | Enterprise Documentation Architect / Design Governance Architect | `docs/design/README.md` v1.0, `docs/design/DESIGN_EXPLORATION.md` v1.0, `docs/design/DESIGN_DECISION_LOG.md` v1.0, `docs/design/assets/README.md` v1.0 (este documento) |
+| 2026-08-05 | Creación del dominio documental de proceso de diseño | Enterprise Documentation Architect / Design Governance Architect | `docs/design/README.md` v1.0, `docs/archive/design/explorations/DESIGN_EXPLORATION.md` v1.0, `docs/design/decisions/DESIGN_DECISION_LOG.md` v1.0, `docs/design/assets/README.md` v1.0 (este documento) |
 
 **Pendiente de definición:** ninguna acción anterior cuenta todavía con una aprobación formal registrada del CEO/fundador.

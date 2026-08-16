@@ -8,7 +8,7 @@ Mockups en `docs/product/assets/results-experience/`.
 
 ## 0. Punto de partida — qué es realmente un "resultado" en esta pantalla
 
-Antes de diseñar nada, una corrección necesaria sobre la unidad de la pantalla. `docs/product/RESULTS_EXPERIENCE.md` §4.2 define un resultado como "la constatación... de que un medicamento existe... a través de una farmacia específica." Pero la pantalla de Resultados no lista farmacias — lista **medicamentos encontrados** (`MedicationResult[]`, agrupados por `matchKey`), y cada fila resume, sin ocultarla, la mejor alternativa disponible para ese medicamento. La comparación entre farmacias para un medicamento específico ya tiene su lugar propio: la Ficha del medicamento (`docs/product/MEDICATION_DETAIL_EXPERIENCE.md`, materializada visualmente en `docs/design/assets/brand-experience/05_medication_detail.png`).
+Antes de diseñar nada, una corrección necesaria sobre la unidad de la pantalla. `docs/product/RESULTS_EXPERIENCE.md` §4.2 define un resultado como "la constatación... de que un medicamento existe... a través de una farmacia específica." Pero la pantalla de Resultados no lista farmacias — lista **medicamentos encontrados** (`MedicationResult[]`, agrupados por `matchKey`), y cada fila resume, sin ocultarla, la mejor alternativa disponible para ese medicamento. La comparación entre farmacias para un medicamento específico ya tiene su lugar propio: la Ficha del medicamento (`docs/product/experiences/MEDICATION_DETAIL_EXPERIENCE.md`, materializada visualmente en `docs/design/assets/brand-experience/05_medication_detail.png`).
 
 Esta distinción es la base de todo lo que sigue. Diseñar Resultados como si cada fila comparara farmacias (como sugería, de forma solo ilustrativa, el mockup `04_results.png` de `BRAND_EXPERIENCE_V1.md`) contradiría la estructura real del producto y generaría ruido exactamente donde el principio de Comparabilidad (`RESULTS_EXPERIENCE.md` §4.4) exige claridad. Los mockups de este documento reemplazan esa referencia ilustrativa por la estructura real.
 
@@ -33,7 +33,7 @@ Orden de la lista: por precio ascendente (mejor alternativa primero) o alfabéti
 La comparación entre medicamentos de una misma búsqueda ocurre por yuxtaposición vertical de Price Blocks alineados — nunca por una tabla con columnas repetidas por farmacia, que multiplicaría la cantidad de datos visibles por nueve y contradiría el principio de Claridad. La comparación entre farmacias para un mismo medicamento ocurre en dos niveles, no uno:
 
 - **De un vistazo, en la fila:** los puntos de disponibilidad ya comunican "existen N alternativas más" sin mostrar sus precios — suficiente para decidir si vale la pena mirar más.
-- **En detalle, en la Ficha:** la comparación completa (Comparison Card por farmacia, `docs/design/SIGNATURE_COMPONENTS.md` §6) vive en `MEDICATION_DETAIL_EXPERIENCE.md`, no se duplica aquí.
+- **En detalle, en la Ficha:** la comparación completa (Comparison Card por farmacia, `docs/design/product/SIGNATURE_COMPONENTS.md` §6) vive en `MEDICATION_DETAIL_EXPERIENCE.md`, no se duplica aquí.
 
 ## 3. Precio — protagonista, lenguaje oficial de BRAND-002
 
@@ -58,7 +58,7 @@ Hoy, la fila completa de un resultado es una única superficie de toque que nave
 ## 8. Estados especiales
 
 - **Sin resultados.** No es un estado propio de esta experiencia — pertenece a `docs/product/SEARCH_EXPERIENCE.md` §4.6 y ya está resuelto en producto por `EmptyState.tsx` (búsqueda con sugerencias de reintento). Este documento no lo rediseña; lo hereda.
-- **Sin stock.** Un medicamento cuya mejor alternativa tiene `hasStock: false` (`packages/domain`, ya existe en el contrato de datos) debe mostrarse igual — nunca ocultarse — con el precio atenuado (Price Block en escala Secondary) y una nota de "sin stock" en vez del botón implícito de disponibilidad, para no repetir el incidente ya documentado de un medicamento agotado mostrado como disponible (`RESULTS_EXPERIENCE.md` §4.3, citando `docs/product/DECISION_LOG.md`, 2026-07-31).
+- **Sin stock.** Un medicamento cuya mejor alternativa tiene `hasStock: false` (`packages/domain`, ya existe en el contrato de datos) debe mostrarse igual — nunca ocultarse — con el precio atenuado (Price Block en escala Secondary) y una nota de "sin stock" en vez del botón implícito de disponibilidad, para no repetir el incidente ya documentado de un medicamento agotado mostrado como disponible (`RESULTS_EXPERIENCE.md` §4.3, citando `docs/product/decisions/DECISION_LOG.md`, 2026-07-31).
 - **Precio actualizado.** Cuando el precio mostrado es muy reciente, una nota discreta de antigüedad ("actualizado hace 2 h", usando `scrapedAgo()` ya existente en `mobile/src/lib/formatters.ts`) refuerza la confianza sin necesitar ningún dato nuevo.
 - **Promoción / canal con descuento.** No existe, ni debe inventarse, una "promoción" pagada o editorial — sería contrario a la Neutralidad (`RESULTS_EXPERIENCE.md` §4.8, "nunca venderemos una posición privilegiada"). Lo que sí existe es un canal de precio más bajo que el presencial (tarjeta de fidelización, por ejemplo) — se representa con el glifo de Channel Bar de la sección 5, nunca con lenguaje de "oferta" o "promo."
 - **Múltiples alternativas.** Los puntos de disponibilidad (sección 1, punto 3) más el Savings Arc (sección 4) son la respuesta — nunca una tabla expandida dentro de la lista.

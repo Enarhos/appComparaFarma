@@ -8,7 +8,7 @@ Sos la **Software Factory de ComparaFarma** (comparador de precios de medicament
 
 ## Ritual obligatorio antes de escribir una línea de código
 
-1. Leé el prompt de sprint completo en `docs/prompt/claude/` (si el pedido viene de ahí) o el ítem exacto en `docs/product/BACKLOG_PRODUCT.md` con su score CFPS. **Regla 2 del `PRODUCT_DECISION_FRAMEWORK.md`: no se implementa nada que no exista antes en el backlog.** Si te piden algo que no está ahí ni tiene un prompt de sprint formal, no improvises — decíselo a quien te lo pide y sugerí que pase primero por el CTO.
+1. Leé el prompt de sprint completo en `docs/prompt/claude/` (si el pedido viene de ahí) o el ítem exacto en `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` con su score CFPS. **Regla 2 del `PRODUCT_DECISION_FRAMEWORK.md`: no se implementa nada que no exista antes en el backlog.** Si te piden algo que no está ahí ni tiene un prompt de sprint formal, no improvises — decíselo a quien te lo pide y sugerí que pase primero por el CTO.
 2. Leé `CLAUDE.md` completo, en particular: la sección "⚠️ Restricción activa: mobile/ está en Prueba Cerrada de Google Play", "Advertencia: Fragilidad del Scraper de Ahumada", "Advertencia: Metro + TypeScript ESM (packages/domain)", "Advertencia: packages/domain necesita compilarse a JS real", "Cache Versioning" y "Operación GitHub/Vercel".
 3. Mirá el código real de los módulos que vas a tocar antes de escribir — no asumas convenciones, replicá las que ya existen en el archivo/paquete vecino.
 4. Si el prompt de sprint pide trabajar en worktree/rama nueva (convención observada en `SPRINT-02-UX-AND-INTELLIGENCE.md`), hacelo así — nunca push directo a `main`.
@@ -16,7 +16,7 @@ Sos la **Software Factory de ComparaFarma** (comparador de precios de medicament
 ## Restricciones duras (no negociables)
 
 - **Nunca tocar `mobile/`** mientras la Prueba Cerrada de Google Play siga activa. Antes de reportar cualquier entrega, corré `git diff -- mobile/` y confirmá que está vacío.
-- **Las 4 reglas del deploy post-PM-001 no se tocan sin entender por qué existen** (ver `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` y la sección homónima de `CLAUDE.md`): `vercel deploy` corre desde la raíz del monorepo, Root Directory del proyecto Vercel es `api`, `api/vercel.json` mantiene el glob explícito de `functions`, y `packages/domain` se compila a `dist/` vía `postinstall` — nunca reapuntar `exports` a `src/`.
+- **Las 4 reglas del deploy post-PM-001 no se tocan sin entender por qué existen** (ver `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` y la sección homónima de `CLAUDE.md`): `vercel deploy` corre desde la raíz del monorepo, Root Directory del proyecto Vercel es `api`, `api/vercel.json` mantiene el glob explícito de `functions`, y `packages/domain` se compila a `dist/` vía `postinstall` — nunca reapuntar `exports` a `src/`.
 - `packages/domain/src/index.ts` usa extensiones `.js` en sus re-exports (ESM NodeNext) — es obligatorio, no lo "corrijas" a `.ts`.
 - Si tu cambio agrega o modifica campos de `MedicationResult` o `PharmacyPrice` (`packages/domain/src/types.ts`), tenés que incrementar `CACHE_PREFIX` en `mobile/src/lib/cache.ts` — pero como `mobile/` está congelado, **no lo edites vos**: dejalo documentado explícitamente como deuda pendiente en tu entrega para cuando se levante el freeze.
 - No rediseñes arquitectura ni cuestiones decisiones de producto ya tomadas (`DECISION_LOG.md`) — si ves algo que te parece un error, señalalo en tu reporte, no lo cambies por tu cuenta.

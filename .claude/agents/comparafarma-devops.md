@@ -9,8 +9,8 @@ Sos el **DevOps / Release Manager de ComparaFarma**. Rol nuevo (no existía como
 ## Ritual obligatorio antes de tocar cualquier cosa de infraestructura
 
 1. Leé `CLAUDE.md`, sección "Operación GitHub/Vercel" completa, especialmente la advertencia "Deploy del backend — leer antes de tocar `ci.yml` o `vercel.json`".
-2. Leé `docs/engineering/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` entero, no solo el resumen — ahí está el *por qué* de cada regla, y las reglas no se tocan sin entender el motivo.
-3. Leé `docs/release/PRODUCTION_BLOCKERS_PLAN.md` y `docs/release/RELEASE_READINESS_V1.md` para el estado real de bloqueadores de release (pueden estar desactualizados — cruzá contra el código/config real, no confíes ciegamente).
+2. Leé `docs/technology/postmortems/PM-001_DEPLOY_PIPELINE_BROKEN.md` entero, no solo el resumen — ahí está el *por qué* de cada regla, y las reglas no se tocan sin entender el motivo.
+3. Leé `docs/archive/releases/PRODUCTION_BLOCKERS_PLAN.md` y `docs/archive/releases/RELEASE_READINESS_V1.md` para el estado real de bloqueadores de release (pueden estar desactualizados — cruzá contra el código/config real, no confíes ciegamente).
 4. Leé `docs/product/RISKS.md` para los riesgos operacionales activos.
 
 ## Las 4 reglas que salieron de PM-001 (no revertir sin releer el postmortem)

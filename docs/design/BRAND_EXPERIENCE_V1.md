@@ -4,13 +4,13 @@
 
 **Actualización UX-001 (evolución, no reemplazo):** la Home Desktop y la Home Mobile fueron evolucionadas sobre esta misma base para mejorar conversión, sin tocar color, tipografía, iconografía, componentes ni Design System — ver §1.1 para el detalle de qué cambió y por qué. El resto del documento (secciones 1, 2, 3.3–3.10, 4, 5) permanece sin cambios respecto a la versión BRAND-001.
 
-**Actualización BRAND-003 (materialización de BRAND-002):** los seis conceptos propuestos en `DISTINCTIVE_PRODUCT_IDENTITY.md` — más el Empty State — ya existen como componentes visuales completos en `docs/design/SIGNATURE_COMPONENTS.md`, con tamaño, grosor, radios, variantes y estados definidos. El bloque "Ejemplo real" de la Home Desktop (§3.1) ya incorpora el primero de ellos, el Savings Arc, junto al monto de ahorro — ver §6.
+**Actualización BRAND-003 (materialización de BRAND-002):** los seis conceptos propuestos en `DISTINCTIVE_PRODUCT_IDENTITY.md` — más el Empty State — ya existen como componentes visuales completos en `docs/design/product/SIGNATURE_COMPONENTS.md`, con tamaño, grosor, radios, variantes y estados definidos. El bloque "Ejemplo real" de la Home Desktop (§3.1) ya incorpora el primero de ellos, el Savings Arc, junto al monto de ahorro — ver §6.
 
 **Decisiones ya aprobadas y respetadas aquí, sin reabrir:**
 - Dirección visual **Intelligence** — 70% Data Intelligence / 20% Minimal Tech / 10% Human + Technology.
 - Arquitectura cromática: **Brand / Accent / Feedback / Neutral.**
 - Iconografía: **Lucide** (línea simple, esquinas redondeadas, grosor de trazo constante, grilla de 24px).
-- Isotipo: **Candidato 09** (`docs/design/assets/candidato_09_plano_construccion.svg`), aplicado sin rediseñar — mismo trazo, mismo punto central, estado "Aprobar con ajustes" según `docs/brand/LOGO_SYSTEM.md`.
+- Isotipo: **Candidato 09** (`docs/design/assets/candidato_09_plano_construccion.svg`), aplicado sin rediseñar — mismo trazo, mismo punto central, estado "Aprobar con ajustes" según `docs/design/brand/LOGO_SYSTEM.md`.
 
 Todos los assets están en `docs/design/assets/brand-experience/` (SVG + PNG, 13 pares).
 
@@ -18,7 +18,7 @@ Todos los assets están en `docs/design/assets/brand-experience/` (SVG + PNG, 13
 
 ## 1. Sistema de color aplicado
 
-Arquitectura Brand / Accent / Feedback / Neutral, partiendo de la Opción A de `docs/design/COLOR_RESEARCH.md` como fuente trazable. Se ejerció el permiso explícito de este sprint: **refinar, no rediseñar**. El ajuste fue exclusivamente de luminosidad HSL (hue y saturación intactos), aplicado donde el HEX de origen no alcanzaba 4.5:1 de contraste contra blanco — el mínimo WCAG AA para texto normal.
+Arquitectura Brand / Accent / Feedback / Neutral, partiendo de la Opción A de `docs/archive/design/research/COLOR_RESEARCH.md` como fuente trazable. Se ejerció el permiso explícito de este sprint: **refinar, no rediseñar**. El ajuste fue exclusivamente de luminosidad HSL (hue y saturación intactos), aplicado donde el HEX de origen no alcanzaba 4.5:1 de contraste contra blanco — el mínimo WCAG AA para texto normal.
 
 | Rol | Color | HEX | Origen / ajuste | Contraste vs. blanco |
 |---|---|---|---|---|
@@ -45,7 +45,7 @@ Cada valor de Feedback quedó al menos un escalón de luminosidad por debajo del
 
 ## 2. Sistema tipográfico aplicado
 
-**Familia única: Inter.** Elegida (no investigada de nuevo — la investigación ya cerró en `VISUAL_BENCHMARK.md`/`VISUAL_EXPLORATION.md`), aplicada en 5 capas siguiendo la estructura de `docs/brand/TYPOGRAPHY_SYSTEM.md` §4.2:
+**Familia única: Inter.** Elegida (no investigada de nuevo — la investigación ya cerró en `VISUAL_BENCHMARK.md`/`VISUAL_EXPLORATION.md`), aplicada en 5 capas siguiendo la estructura de `docs/design/brand/TYPOGRAPHY_SYSTEM.md` §4.2:
 
 | Capa | Tamaño | Peso | Uso |
 |---|---|---|---|
@@ -145,7 +145,7 @@ Dirección Lucide ya aprobada: trazo de línea simple, grosor constante, esquina
 
 ## 6. Signature Components v1 (BRAND-003)
 
-`DISTINCTIVE_PRODUCT_IDENTITY.md` (BRAND-002) propuso seis elementos exclusivos para que ComparaFarma sea reconocible sin depender del logo. Ese sprint fue conceptual — justificación, beneficio, prioridad — pero no produjo componentes visuales reales. `docs/design/SIGNATURE_COMPONENTS.md` cierra esa distancia: define tamaño, grosor, radios, variantes y estados de los siete componentes (los seis propuestos más el Empty State, patrón ya vigente) y los muestra aplicados con datos reales.
+`DISTINCTIVE_PRODUCT_IDENTITY.md` (BRAND-002) propuso seis elementos exclusivos para que ComparaFarma sea reconocible sin depender del logo. Ese sprint fue conceptual — justificación, beneficio, prioridad — pero no produjo componentes visuales reales. `docs/design/product/SIGNATURE_COMPONENTS.md` cierra esa distancia: define tamaño, grosor, radios, variantes y estados de los siete componentes (los seis propuestos más el Empty State, patrón ya vigente) y los muestra aplicados con datos reales.
 
 Los siete comparten la misma familia de radios (10 / 8 / 6), el mismo grosor de trazo de datos (6-8px) y la misma disciplina de color: Accent para cualquier métrica propia del producto (Savings Arc), Success reservado estrictamente para una confirmación puntual (badge "Mejor precio", Price Break Marker en baja) — nunca al revés.
 
@@ -155,7 +155,7 @@ Los siete comparten la misma familia de radios (10 / 8 / 6), el mismo grosor de 
 
 El bloque "Ejemplo real" de la Home Desktop (§3.1) ya adopta el primero de los siete — el Savings Arc — junto al monto "$500", reemplazando el texto plano que tenía en la versión UX-001. Ningún otro mockup de este documento fue modificado: Resultados, Dashboard, Ficha, Header, Footer, App Icon, Splash, Componentes, Tipografía y Color permanecen exactamente como en BRAND-001, a la espera de que el comité apruebe estos siete componentes como especificación oficial antes de aplicarlos al resto de las pantallas.
 
-Detalle completo, incluidos los otros seis sheets (Savings Arc, Channel Bar, Price Block, Price Break Marker, Sparkline, Empty State) y la autoevaluación de firma visual sin logo: `docs/design/SIGNATURE_COMPONENTS.md`.
+Detalle completo, incluidos los otros seis sheets (Savings Arc, Channel Bar, Price Block, Price Break Marker, Sparkline, Empty State) y la autoevaluación de firma visual sin logo: `docs/design/product/SIGNATURE_COMPONENTS.md`.
 
 ## Cierre
 
