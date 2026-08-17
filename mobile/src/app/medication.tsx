@@ -12,8 +12,8 @@ import { useAlertsStore } from "@/store/alertsStore";
 import { PHARMACIES } from "@/constants/pharmacies";
 // DonationBanner: import retirado temporalmente del flujo visible de Mobile
 // (decisión de producto 2026-08-15 — donaciones se retiran de Mobile durante
-// la etapa inicial de adquisición de usuarios; Web sigue recibiendo donaciones
-// vía Khipu sin cambios). El componente y sus constantes se conservan intactos
+// la etapa inicial de adquisición de usuarios; Web también permanece pausada).
+// El componente y sus constantes se conservan intactos
 // para una futura reactivación — ver docs/operations/PLATFORM_OPERATIONAL_STATUS.md.
 // import { DonationBanner } from "@/components/DonationBanner";
 import { PharmacyLogo } from "@/components/PharmacyLogo";
@@ -22,6 +22,7 @@ import { AlertSheet } from "@/components/AlertSheet";
 import { formatCLP, scrapedAgo } from "@/lib/formatters";
 import { recordPriceSnapshot, getPriceHistory, type PriceSnapshot } from "@/lib/priceHistory";
 import { computeSavings } from "@comparafarma/domain";
+import { BRAND_COLORS } from "@/constants/brand";
 import type { PharmacyPrice, PharmacySlug } from "@/lib/types";
 
 type SortKey = "price-asc" | "price-desc";
@@ -59,7 +60,7 @@ export default function MedicationScreen() {
       <SafeAreaView className="flex-1 bg-gray-50 dark:bg-gray-900 items-center justify-center gap-3">
         <Ionicons name="alert-circle-outline" size={48} color="#9ca3af" />
         <Text className="text-gray-400 text-base">Medicamento no encontrado</Text>
-        <TouchableOpacity onPress={() => router.back()} className="bg-green-600 rounded-2xl px-6 py-3">
+        <TouchableOpacity onPress={() => router.back()} className="rounded-2xl px-6 py-3" style={{ backgroundColor: BRAND_COLORS.indigo }}>
           <Text className="text-white font-semibold">Volver</Text>
         </TouchableOpacity>
       </SafeAreaView>
@@ -111,7 +112,7 @@ export default function MedicationScreen() {
     const pharmacyName = PHARMACIES[bestPharmacy as PharmacySlug]?.name ?? bestPharmacy;
     try {
       await Share.share({
-        message: `${canonicalName} — desde ${formatCLP(bestPrice)} en ${pharmacyName} | ComparaFarma`,
+        message: `${canonicalName} — desde ${formatCLP(bestPrice)} en ${pharmacyName} | PreciosFarma`,
       });
     } catch { /* user cancelled */ }
   }
@@ -134,7 +135,7 @@ export default function MedicationScreen() {
       <View className="bg-white dark:bg-gray-900 px-4 pt-3 pb-4 border-b border-gray-100 dark:border-gray-800">
         <View className="flex-row items-center gap-3 mb-2">
           <TouchableOpacity onPress={() => router.back()} hitSlop={12} accessibilityLabel="Volver" accessibilityRole="button">
-            <Ionicons name="arrow-back" size={22} color="#16a34a" />
+            <Ionicons name="arrow-back" size={22} color={BRAND_COLORS.indigo} />
           </TouchableOpacity>
           <View className="flex-1" />
           <TouchableOpacity onPress={handleFavToggle} hitSlop={12} accessibilityLabel={isFav ? "Quitar de favoritos" : "Agregar a favoritos"} accessibilityRole="button">
@@ -144,7 +145,7 @@ export default function MedicationScreen() {
             <Ionicons name={hasAlert ? "notifications" : "notifications-outline"} size={22} color={hasAlert ? "#f59e0b" : "#9ca3af"} />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleCartToggle} hitSlop={12} accessibilityLabel={inCart ? "Quitar del carrito" : "Agregar al carrito"} accessibilityRole="button">
-            <Ionicons name={inCart ? "cart" : "cart-outline"} size={22} color={inCart ? "#16a34a" : "#9ca3af"} />
+            <Ionicons name={inCart ? "cart" : "cart-outline"} size={22} color={inCart ? BRAND_COLORS.indigo : "#9ca3af"} />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleShare} hitSlop={12} accessibilityLabel="Compartir precio" accessibilityRole="button">
             <Ionicons name="share-social-outline" size={22} color="#9ca3af" />
@@ -219,7 +220,8 @@ export default function MedicationScreen() {
               <TouchableOpacity
                 key={key}
                 onPress={() => setSort(key)}
-                className={`flex-1 flex-row items-center justify-center gap-1.5 py-2 rounded-xl ${sort === key ? "bg-green-600" : ""}`}
+                className="flex-1 flex-row items-center justify-center gap-1.5 py-2 rounded-xl"
+                style={sort === key ? { backgroundColor: BRAND_COLORS.indigo } : undefined}
                 accessibilityRole="button"
                 accessibilityLabel={label}
               >
@@ -265,8 +267,8 @@ export default function MedicationScreen() {
 
         {/* ── Banner de donación — retirado temporalmente de Mobile (decisión de
             producto 2026-08-15). No renderizar en Mobile hasta nueva evaluación
-            de políticas de Google Play / estrategia comercial. Web no se ve
-            afectado. ── */}
+            de políticas de Google Play / estrategia comercial. Web también
+            permanece pausada. ── */}
 
         {/* ── Footer verificación ── */}
         <View className="mx-4 mt-4 flex-row items-center gap-2 justify-center">
@@ -394,7 +396,8 @@ function PharmacyCard({
         {onlineUrl ? (
           <TouchableOpacity
             onPress={openUrl}
-            className="bg-green-600 rounded-xl px-4 py-1.5"
+            className="rounded-xl px-4 py-1.5"
+            style={{ backgroundColor: BRAND_COLORS.indigo }}
             accessibilityLabel={`Ver en ${config.name}`}
             accessibilityRole="link"
           >
@@ -436,7 +439,7 @@ function SavingsCard({
   return (
     <View className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl overflow-hidden">
       {/* Header */}
-      <View className="bg-green-600 px-4 py-3 flex-row items-center gap-2">
+      <View className="px-4 py-3 flex-row items-center gap-2" style={{ backgroundColor: BRAND_COLORS.indigo }}>
         <Ionicons name="checkmark-circle" size={20} color="#fff" />
         <View>
           <Text className="text-white font-bold text-sm">¡Excelente elección!</Text>

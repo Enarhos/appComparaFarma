@@ -1,5 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { BRAND_COLORS } from "@/constants/brand";
 
 interface EmptyStateProps {
   query: string;
@@ -26,7 +27,7 @@ export function EmptyState({ query, onRetry }: EmptyStateProps) {
       <View className="w-full bg-gray-50 dark:bg-gray-800 rounded-xl p-4 mb-5 gap-2">
         {TIPS.map((tip, i) => (
           <View key={i} className="flex-row gap-2">
-            <Ionicons name="bulb-outline" size={14} color="#16a34a" style={{ marginTop: 2 }} />
+            <Ionicons name="bulb-outline" size={14} color={BRAND_COLORS.teal} style={{ marginTop: 2 }} />
             <Text className="flex-1 text-xs text-gray-600 dark:text-gray-400 leading-4">
               {tip}
             </Text>
@@ -37,11 +38,12 @@ export function EmptyState({ query, onRetry }: EmptyStateProps) {
       {onRetry && (
         <TouchableOpacity
           onPress={onRetry}
-          className="flex-row items-center gap-2 border border-green-600 rounded-xl px-5 py-2.5"
+          className="flex-row items-center gap-2 rounded-xl px-5 py-2.5"
+          style={{ borderColor: BRAND_COLORS.indigo, borderWidth: 1 }}
           activeOpacity={0.7}
         >
-          <Ionicons name="refresh-outline" size={16} color="#16a34a" />
-          <Text className="text-green-700 dark:text-green-400 font-semibold text-sm">
+          <Ionicons name="refresh-outline" size={16} color={BRAND_COLORS.indigo} />
+          <Text className="font-semibold text-sm" style={{ color: BRAND_COLORS.indigo }}>
             Reintentar búsqueda
           </Text>
         </TouchableOpacity>

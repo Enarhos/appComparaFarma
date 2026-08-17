@@ -31,9 +31,9 @@ describe("DonationReturnPage (/apoyar/retorno)", () => {
     ).toBeTruthy();
   });
 
-  it("permite volver a ComparaFarma", () => {
+  it("permite volver a PreciosFarma", () => {
     render(<DonationReturnPage />);
-    const link = screen.getByRole("link", { name: "Volver a ComparaFarma" });
+    const link = screen.getByRole("link", { name: "Volver a PreciosFarma" });
     expect(link.getAttribute("href")).toBe("/");
   });
 });

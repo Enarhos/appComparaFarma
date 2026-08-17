@@ -1,21 +1,21 @@
 {
   "expo": {
-    "name": "ComparaFarma",
+    "name": "PreciosFarma",
     "slug": "compara-farma",
     "scheme": "comparafarma",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#16a34a"
+      "backgroundColor": "#3F3FB8"
     },
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "mla.app.comparafarma",
-      "buildNumber": "30",
+      "buildNumber": "33",
       "privacyManifests": {
         "NSPrivacyAccessedAPITypes": [
           {
@@ -28,10 +28,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#16a34a"
+        "backgroundColor": "#3F3FB8"
       },
       "package": "mla.app.comparafarma",
-      "versionCode": 31,
+      "versionCode": 33,
       "permissions": []
     },
     "web": {

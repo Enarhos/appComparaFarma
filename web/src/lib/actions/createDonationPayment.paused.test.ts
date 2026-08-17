@@ -27,7 +27,7 @@ describe("createDonationPayment — pausa real de producción", () => {
     expect(result).toEqual({
       ok: false,
       error:
-        "Los aportes están temporalmente pausados mientras ComparaFarma se encuentra en su etapa inicial de crecimiento.",
+        "Los aportes están temporalmente pausados mientras PreciosFarma se encuentra en su etapa inicial de crecimiento.",
     });
     expect(fetchMock).not.toHaveBeenCalled();
   });

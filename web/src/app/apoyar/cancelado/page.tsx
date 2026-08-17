@@ -18,7 +18,7 @@ export default function DonationCancelledPage() {
         href="/"
         className="mt-8 inline-block text-sm font-medium text-accent-ink underline underline-offset-2"
       >
-        Volver a ComparaFarma
+        Volver a PreciosFarma
       </Link>
     </main>
   );

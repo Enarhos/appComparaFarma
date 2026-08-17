@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
@@ -25,6 +25,7 @@ const QUICK_SEARCHES = ["Paracetamol", "Ibuprofeno", "Amoxicilina", "Metformina"
 const _pharmNames = Object.values(PHARMACIES).map((p) => p.name.replace("Farmacias ", ""));
 const PHARMACY_SUBTITLE =
   _pharmNames.slice(0, -1).join(", ") + " y " + _pharmNames[_pharmNames.length - 1];
+const BRAND_INDIGO = "#3F3FB8";
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -89,14 +90,13 @@ export default function HomeScreen() {
       >
         {/* ── Header: logo + acciones ── */}
         <View className="flex-row items-center mb-6">
-          {/* Logo */}
           <View className="flex-row items-center gap-2 flex-1">
-            <View className="bg-green-600 rounded-2xl w-10 h-10 items-center justify-center">
-              <Ionicons name="search" size={20} color="#fff" />
+            <View className="rounded-2xl w-10 h-10 items-center justify-center" style={{ backgroundColor: BRAND_INDIGO }}>
+              <Image source={require("../../assets/icon.png")} className="h-8 w-8" resizeMode="contain" />
             </View>
             <View>
-              <Text className="text-lg font-extrabold text-gray-900 dark:text-white leading-tight">ComparaFarma</Text>
-              <Text className="text-xs text-gray-400 leading-tight">9 farmacias en Chile</Text>
+              <Text className="text-lg font-extrabold text-gray-900 dark:text-white leading-tight">PreciosFarma</Text>
+              <Text className="text-xs text-gray-400 leading-tight">Compara precios de medicamentos</Text>
             </View>
           </View>
           {/* Acciones */}
@@ -116,9 +116,9 @@ export default function HomeScreen() {
               accessibilityLabel={cartCount > 0 ? `Carrito, ${cartCount} medicamento${cartCount > 1 ? "s" : ""}` : "Carrito vacío"}
               accessibilityRole="button"
             >
-              <Ionicons name="cart-outline" size={26} color="#16a34a" />
+              <Ionicons name="cart-outline" size={26} color={BRAND_INDIGO} />
               {cartCount > 0 && (
-                <View className="absolute -top-1 -right-1 bg-green-600 rounded-full w-4 h-4 items-center justify-center">
+                <View className="absolute -top-1 -right-1 rounded-full w-4 h-4 items-center justify-center" style={{ backgroundColor: BRAND_INDIGO }}>
                   <Text className="text-white text-xs font-bold leading-none">{cartCount}</Text>
                 </View>
               )}
@@ -135,18 +135,18 @@ export default function HomeScreen() {
               <Ionicons
                 name="person-circle-outline"
                 size={26}
-                color={isAuthenticated ? "#16a34a" : "#9ca3af"}
+                color={isAuthenticated ? BRAND_INDIGO : "#9ca3af"}
               />
             </TouchableOpacity>
           </View>
         </View>
 
         {/* ── Hero ── */}
-        <View className="bg-green-600 rounded-3xl px-5 py-5 mb-6 overflow-hidden">
+        <View className="rounded-3xl px-5 py-5 mb-6 overflow-hidden" style={{ backgroundColor: BRAND_INDIGO }}>
           <Text className="text-2xl font-extrabold text-white leading-tight mb-1">
             Buscar{"\n"}medicamento
           </Text>
-          <Text className="text-green-100 text-sm leading-snug">
+          <Text className="text-indigo-100 text-sm leading-snug">
             Encuentra el mejor precio entre{"\n"}
             <Text className="text-white font-semibold">múltiples farmacias</Text>
           </Text>
@@ -164,19 +164,19 @@ export default function HomeScreen() {
           accessibilityRole="button"
           className={`mb-3 flex-row items-center gap-2 rounded-2xl px-4 py-3 border ${
             totalFilterCount > 0
-              ? "bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800"
+              ? "bg-indigo-50 dark:bg-indigo-950 border-indigo-200 dark:border-indigo-800"
               : "bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700"
           }`}
         >
           <Ionicons
             name="options-outline"
             size={16}
-            color={totalFilterCount > 0 ? "#16a34a" : "#9ca3af"}
+            color={totalFilterCount > 0 ? BRAND_INDIGO : "#9ca3af"}
           />
           <View className="flex-1">
             {selectedCommuneName ? (
               <>
-                <Text className="text-sm font-semibold text-green-700 dark:text-green-400">
+                <Text className="text-sm font-semibold text-indigo-800 dark:text-indigo-300">
                   📍 {selectedCommuneName}
                 </Text>
                 {selectedRegion && (
@@ -190,7 +190,7 @@ export default function HomeScreen() {
             )}
           </View>
           {totalFilterCount > 0 ? (
-            <View className="bg-green-600 rounded-full px-2 py-0.5">
+            <View className="rounded-full px-2 py-0.5" style={{ backgroundColor: BRAND_INDIGO }}>
               <Text className="text-white text-xs font-bold">{totalFilterCount}</Text>
             </View>
           ) : null}
@@ -247,11 +247,11 @@ export default function HomeScreen() {
               <TouchableOpacity
                 key={term}
                 onPress={() => handleSearch(term)}
-                className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-full px-4 py-2"
+                className="bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-800 rounded-full px-4 py-2"
                 accessibilityLabel={`Buscar ${term}`}
                 accessibilityRole="button"
               >
-                <Text className="text-green-700 dark:text-green-400 text-sm font-medium">{term}</Text>
+                <Text className="text-indigo-800 dark:text-indigo-300 text-sm font-medium">{term}</Text>
               </TouchableOpacity>
             ))}
           </View>
@@ -307,8 +307,8 @@ export default function HomeScreen() {
                 accessibilityLabel={`Buscar ${label}`}
                 accessibilityRole="button"
               >
-                <View className="bg-green-50 dark:bg-green-950 rounded-xl w-8 h-8 items-center justify-center">
-                  <Ionicons name={icon as any} size={16} color="#16a34a" />
+                <View className="bg-indigo-50 dark:bg-indigo-950 rounded-xl w-8 h-8 items-center justify-center">
+                  <Ionicons name={icon as any} size={16} color={BRAND_INDIGO} />
                 </View>
                 <Text className="text-xs font-semibold text-gray-700 dark:text-gray-300">{label}</Text>
               </TouchableOpacity>
@@ -323,20 +323,20 @@ export default function HomeScreen() {
           activeOpacity={0.8}
           accessibilityLabel="Ayúdanos a mejorar — enviar sugerencias"
           accessibilityRole="button"
-          className="mt-8 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-2xl px-4 py-4 flex-row items-center"
+          className="mt-8 bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-800 rounded-2xl px-4 py-4 flex-row items-center"
         >
-          <View className="bg-green-100 dark:bg-green-900 rounded-full p-2 mr-3">
-            <Ionicons name="chatbubble-ellipses-outline" size={20} color="#16a34a" />
+          <View className="bg-indigo-100 dark:bg-indigo-900 rounded-full p-2 mr-3">
+            <Ionicons name="chatbubble-ellipses-outline" size={20} color={BRAND_INDIGO} />
           </View>
           <View className="flex-1">
-            <Text className="text-sm font-semibold text-green-800 dark:text-green-300">
+            <Text className="text-sm font-semibold text-indigo-800 dark:text-indigo-300">
               Ayúdanos a mejorar
             </Text>
-            <Text className="text-xs text-green-600 dark:text-green-500 mt-0.5">
+            <Text className="text-xs text-indigo-700 dark:text-indigo-400 mt-0.5">
               Envíanos tus sugerencias o comentarios
             </Text>
           </View>
-          <Ionicons name="chevron-forward" size={18} color="#16a34a" />
+          <Ionicons name="chevron-forward" size={18} color={BRAND_INDIGO} />
         </TouchableOpacity>
 
       </ScrollView>

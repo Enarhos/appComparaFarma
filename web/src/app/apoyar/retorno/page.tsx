@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tu aporte a ComparaFarma",
+  title: "Tu aporte a PreciosFarma",
 };
 
 /**
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function DonationReturnPage() {
   return (
     <main className="mx-auto max-w-lg px-6 py-24 text-center">
-      <h1 className="font-display text-2xl font-semibold text-ink">Gracias por apoyar ComparaFarma</h1>
+      <h1 className="font-display text-2xl font-semibold text-ink">Gracias por apoyar PreciosFarma</h1>
       <p className="mt-4 text-muted">
         Si realizaste el pago, Khipu puede tardar unos momentos en confirmarlo. Todavía no podemos verificar el
         estado del pago desde esta página, pero si el pago se completó, Khipu te lo confirmará por su parte.
@@ -26,7 +26,7 @@ export default function DonationReturnPage() {
         href="/"
         className="mt-8 inline-block text-sm font-medium text-accent-ink underline underline-offset-2"
       >
-        Volver a ComparaFarma
+        Volver a PreciosFarma
       </Link>
     </main>
   );

@@ -40,7 +40,7 @@ export function DonationBanner({ savings }: Props) {
       </View>
 
       <Text className="text-xs text-rose-700 dark:text-rose-400 leading-4">
-        ComparaFarma es gratuita y sin publicidad. Si te fue útil, apoya el proyecto con un aporte voluntario vía Khipu.
+        PreciosFarma es gratuita y sin publicidad. Si te fue útil, apoya el proyecto con un aporte voluntario vía Khipu.
       </Text>
 
       <View className="flex-row flex-wrap gap-2">

@@ -1,7 +1,7 @@
 /**
  * Pausa temporal de donaciones Web (Production Closure, 2026-08-16).
  *
- * Decisión CTO/Product: mientras ComparaFarma opere sobre Vercel Hobby y
+ * Decisión CTO/Product: mientras PreciosFarma opere sobre Vercel Hobby y
  * esté en su etapa inicial de adquisición de usuarios, toda monetización
  * activa permanece pausada. Las donaciones de Mobile ya estaban pausadas
  * desde 2026-08-15 (ver docs/operations/PLATFORM_OPERATIONAL_STATUS.md);

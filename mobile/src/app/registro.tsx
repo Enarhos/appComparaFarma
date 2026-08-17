@@ -12,6 +12,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { signUpWithPassword } from "@/lib/sessionManager";
 import { goToLogin, returnFromAuth } from "@/lib/authNavigation";
+import { BRAND_COLORS } from "@/constants/brand";
 
 type Status = "idle" | "submitting" | "check-email" | "error";
 
@@ -119,7 +120,8 @@ export default function RegistroScreen() {
             onPress={handleSubmit}
             disabled={status === "submitting"}
             activeOpacity={0.8}
-            className="bg-green-600 rounded-xl py-4 items-center"
+            className="rounded-xl py-4 items-center"
+            style={{ backgroundColor: BRAND_COLORS.indigo }}
             accessibilityRole="button"
             accessibilityLabel="Crear cuenta"
           >
@@ -137,7 +139,7 @@ export default function RegistroScreen() {
             accessibilityLabel="Ya tengo cuenta"
           >
             <Text className="text-sm text-gray-500 dark:text-gray-400">
-              ¿Ya tienes cuenta? <Text className="text-green-600 font-semibold">Ingresa acá</Text>
+              ¿Ya tienes cuenta? <Text className="font-semibold" style={{ color: BRAND_COLORS.indigo }}>Ingresa acá</Text>
             </Text>
           </TouchableOpacity>
         </ScrollView>

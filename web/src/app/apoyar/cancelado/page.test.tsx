@@ -20,9 +20,9 @@ describe("DonationCancelledPage (/apoyar/cancelado)", () => {
     expect(screen.getByText("El aporte no fue completado")).toBeTruthy();
   });
 
-  it("permite volver a ComparaFarma", () => {
+  it("permite volver a PreciosFarma", () => {
     render(<DonationCancelledPage />);
-    const link = screen.getByRole("link", { name: "Volver a ComparaFarma" });
+    const link = screen.getByRole("link", { name: "Volver a PreciosFarma" });
     expect(link.getAttribute("href")).toBe("/");
   });
 });

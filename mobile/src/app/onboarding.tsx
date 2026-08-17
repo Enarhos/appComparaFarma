@@ -6,19 +6,21 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
+const BRAND_INDIGO = "#3F3FB8";
+const ACCENT_TEAL = "#0D827B";
 
 export const ONBOARDING_KEY = "onboarding_v2_done";
 
 const SLIDES = [
   {
     icon: "storefront-outline" as const,
-    iconColor: "#16a34a",
+    iconColor: BRAND_INDIGO,
     title: "Compara precios al instante",
     body: "Busca cualquier medicamento y ve en segundos cuánto cuesta en Cruz Verde, Salcobrand, Ahumada, Dr. Simi y AraucoMed.",
   },
   {
     icon: "list-outline" as const,
-    iconColor: "#7c3aed",
+    iconColor: ACCENT_TEAL,
     title: "Elige primero, compara después",
     body: "La búsqueda muestra todos los resultados con nombre y laboratorio. Toca el que te interesa para ver los precios por farmacia y canal.",
   },
@@ -38,7 +40,7 @@ const SLIDES = [
     icon: "cart-outline" as const,
     iconColor: "#d97706",
     title: "Lista de compras inteligente",
-    body: "¿Necesitas varios medicamentos? Agrega cada uno con 🛒 desde su detalle. ComparaFarma calcula en qué farmacia te sale más barato comprarlos todos juntos.",
+    body: "¿Necesitas varios medicamentos? Agrega cada uno con 🛒 desde su detalle. PreciosFarma calcula en qué farmacia te sale más barato comprarlos todos juntos.",
   },
 ];
 
@@ -109,7 +111,7 @@ export default function OnboardingScreen() {
             key={i}
             className={`h-2 rounded-full transition-all ${
               i === currentIndex
-                ? "bg-green-600 w-6"
+                ? "bg-indigo-700 w-6"
                 : "bg-gray-200 dark:bg-gray-700 w-2"
             }`}
           />
@@ -120,7 +122,8 @@ export default function OnboardingScreen() {
       <View className="px-6 pb-8">
         <TouchableOpacity
           onPress={handleNext}
-          className="bg-green-600 rounded-2xl py-4 items-center flex-row justify-center gap-2"
+          className="rounded-2xl py-4 items-center flex-row justify-center gap-2"
+          style={{ backgroundColor: BRAND_INDIGO }}
           activeOpacity={0.8}
         >
           <Text className="text-white font-bold text-base">

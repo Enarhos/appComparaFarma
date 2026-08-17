@@ -5,7 +5,7 @@ import { WEB_DONATIONS_PAUSED } from "@/lib/donationsConfig";
 const API_URL = (process.env.API_URL ?? "https://comparafarma-api.vercel.app").replace(/\/$/, "");
 const GENERIC_ERROR = "No pudimos iniciar el pago. Intenta nuevamente en unos momentos.";
 const PAUSED_MESSAGE =
-  "Los aportes están temporalmente pausados mientras ComparaFarma se encuentra en su etapa inicial de crecimiento.";
+  "Los aportes están temporalmente pausados mientras PreciosFarma se encuentra en su etapa inicial de crecimiento.";
 const ALLOWED_AMOUNTS = [1000, 3000, 5000] as const;
 
 export type CreateDonationPaymentResult = { ok: true; paymentUrl: string } | { ok: false; error: string };

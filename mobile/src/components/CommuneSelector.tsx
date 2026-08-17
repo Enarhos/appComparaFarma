@@ -11,6 +11,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { useLocationStore } from "@/store/locationStore";
 import { getBranchIndex, getCommuneList, type BranchIndex } from "@/lib/branches";
+import { BRAND_COLORS } from "@/constants/brand";
 
 interface CommuneItem {
   key: string;
@@ -68,12 +69,12 @@ export function CommuneSelector() {
           <Ionicons
             name="location-outline"
             size={16}
-            color={selectedCommuneName ? "#16a34a" : "#9ca3af"}
+            color={selectedCommuneName ? BRAND_COLORS.indigo : "#9ca3af"}
           />
           <View className="flex-1">
             {selectedCommuneName ? (
               <>
-                <Text className="text-sm font-semibold text-green-700 dark:text-green-400">
+                <Text className="text-sm font-semibold text-indigo-800 dark:text-indigo-300">
                   {selectedCommuneName}
                 </Text>
                 <Text className="text-xs text-gray-400" numberOfLines={1}>
@@ -130,24 +131,24 @@ export function CommuneSelector() {
             activeOpacity={0.7}
             className="flex-row items-center gap-3 px-4 py-4 border-b border-gray-50 dark:border-gray-800"
           >
-            <View className="w-8 h-8 bg-green-50 dark:bg-green-950 rounded-full items-center justify-center">
-              <Ionicons name="globe-outline" size={16} color="#16a34a" />
+            <View className="w-8 h-8 bg-indigo-50 dark:bg-indigo-950 rounded-full items-center justify-center">
+              <Ionicons name="globe-outline" size={16} color={BRAND_COLORS.indigo} />
             </View>
             <View className="flex-1">
-              <Text className="text-sm font-semibold text-green-700 dark:text-green-400">
+              <Text className="text-sm font-semibold text-indigo-800 dark:text-indigo-300">
                 Todas las comunas
               </Text>
               <Text className="text-xs text-gray-400">Sin filtro geográfico</Text>
             </View>
             {!selectedCommuneName && (
-              <Ionicons name="checkmark" size={18} color="#16a34a" />
+              <Ionicons name="checkmark" size={18} color={BRAND_COLORS.indigo} />
             )}
           </TouchableOpacity>
 
           {/* Lista */}
           {loading ? (
             <View className="flex-1 items-center justify-center gap-3">
-              <ActivityIndicator size="large" color="#16a34a" />
+              <ActivityIndicator size="large" color={BRAND_COLORS.indigo} />
               <Text className="text-sm text-gray-400">Cargando comunas...</Text>
             </View>
           ) : filtered.length === 0 ? (
@@ -174,13 +175,13 @@ export function CommuneSelector() {
                     className="flex-row items-center px-4 py-3.5 border-b border-gray-50 dark:border-gray-800"
                   >
                     <View className="flex-1">
-                      <Text className={`text-sm font-medium ${isSelected ? "text-green-700 dark:text-green-400" : "text-gray-900 dark:text-white"}`}>
+                      <Text className={`text-sm font-medium ${isSelected ? "text-indigo-800 dark:text-indigo-300" : "text-gray-900 dark:text-white"}`}>
                         {item.nombre}
                       </Text>
                       <Text className="text-xs text-gray-400 mt-0.5">{item.region}</Text>
                     </View>
                     {isSelected && (
-                      <Ionicons name="checkmark" size={18} color="#16a34a" />
+                      <Ionicons name="checkmark" size={18} color={BRAND_COLORS.indigo} />
                     )}
                   </TouchableOpacity>
                 );

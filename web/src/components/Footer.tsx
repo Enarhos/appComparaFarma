@@ -1,5 +1,6 @@
 import { DonationWidget } from "./DonationWidget";
 import { WEB_DONATIONS_PAUSED } from "@/lib/donationsConfig";
+import { BrandMark } from "./BrandMark";
 
 /**
  * Footer global (Sprint FEAT-WEB-DONATIONS). Se monta una sola vez desde
@@ -17,10 +18,13 @@ export function Footer() {
   return (
     <footer className="mx-auto mt-16 max-w-5xl px-6 py-8">
       <div className="flex flex-col items-center gap-4 border-t border-line pt-6 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
-        <p className="text-xs text-muted">ComparaFarma — comparador de precios de medicamentos en Chile.</p>
+        <div className="flex flex-col items-center gap-2 sm:items-start">
+          <BrandMark className="text-accent" />
+          <p className="text-xs text-muted">Compara precios de medicamentos en Chile.</p>
+        </div>
         {WEB_DONATIONS_PAUSED ? (
           <p className="text-xs text-muted">
-            Los aportes están temporalmente pausados mientras ComparaFarma se encuentra en su etapa inicial de
+            Los aportes están temporalmente pausados mientras PreciosFarma se encuentra en su etapa inicial de
             crecimiento.
           </p>
         ) : (

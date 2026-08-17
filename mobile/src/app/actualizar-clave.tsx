@@ -12,6 +12,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { updatePassword } from "@/lib/sessionManager";
 import { router } from "expo-router";
+import { BRAND_COLORS } from "@/constants/brand";
 
 // Actualizar contraseña — Product Completion Sprint 01.
 //
@@ -72,7 +73,8 @@ export default function ActualizarClaveScreen() {
             onPress={handleSubmit}
             disabled={submitting}
             activeOpacity={0.8}
-            className="bg-green-600 rounded-xl py-4 items-center"
+            className="rounded-xl py-4 items-center"
+            style={{ backgroundColor: BRAND_COLORS.indigo }}
             accessibilityRole="button"
             accessibilityLabel="Guardar contraseña"
           >
