@@ -89,6 +89,8 @@ Declarar, sin ambigüedad, cuál es el trabajo activo del programa en este momen
 | Typography System | ⬜ No iniciado | Logo System | Ídem |
 | Iconography | ⬜ No iniciado | Logo System, Color System | Ídem |
 
+| Rebranding público ComparaFarma → PreciosFarma — Fase A (formalización + assets maestros) | 🟡 Fase A completada, en revisión CTO | Identidad visual ya aprobada (DD-001/002/003) | `docs/design/decisions/DESIGN_DECISION_LOG.md` DD-004 |
+
 **B. Google Play**
 
 | Entregable | Estado | Dependencia | Fuente |

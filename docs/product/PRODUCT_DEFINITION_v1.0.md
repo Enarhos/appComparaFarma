@@ -31,6 +31,14 @@ Este documento representa el contrato funcional del lanzamiento y prevalece sobr
 
 ---
 
+## 2.1 Actualización 2026-08-16 — Nombre público: PreciosFarma
+
+El producto que este documento define técnica y funcionalmente como "ComparaFarma 1.0" se presenta públicamente, a partir de esta fecha, con el nombre **PreciosFarma** (dominio `preciosfarma.cl`, tagline "Compara precios de medicamentos") — decisión de Mario (CTO/Product Owner) + ChatGPT (CTO/Product), registrada en `docs/design/decisions/DESIGN_DECISION_LOG.md` (DD-004) y en `docs/design/brand/BRAND_ARCHITECTURE.md` §4.2.1.
+
+El alcance funcional, la propuesta de valor y el problema que resuelve este documento (§2 y siguientes) no cambian: es el mismo producto, con nombre público nuevo. "ComparaFarma" se mantiene como identidad técnica interna (`mla.app.comparafarma`, `@comparafarma/domain`, repositorio, `comparafarma-api`) y como el nombre bajo el cual este documento fue redactado originalmente — no se reescribe el resto de este documento para sustituir el nombre, consistente con el criterio de no reescribir documentación ya vigente sin necesidad real.
+
+---
+
 # 3. Alcance
 
 ## Este documento define
