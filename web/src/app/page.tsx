@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SearchBox } from "@/components/SearchBox";
+import { BrandMark } from "@/components/BrandMark";
 import { QUICK_SEARCHES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/format";
 
@@ -16,7 +17,8 @@ export default function HomePage() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <div className="flex justify-end">
+      <div className="flex items-center justify-between gap-4">
+        <BrandMark className="text-accent" />
         <Link href="/cuenta" className="text-sm font-medium text-accent-ink underline-offset-2 hover:underline">
           Mi cuenta
         </Link>
@@ -34,7 +36,7 @@ export default function HomePage() {
             precios muy distintos.
           </h1>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-muted">
-            ComparaFarma busca el precio más bajo entre Cruz Verde, Salcobrand, Ahumada, Dr. Simi y
+            PreciosFarma busca el precio más bajo entre Cruz Verde, Salcobrand, Ahumada, Dr. Simi y
             5 farmacias más — gratis, sin publicidad y sin registro.
           </p>
 

@@ -95,7 +95,7 @@ async function resolveUserId(req: RequestLike): Promise<string | null> {
 }
 
 function getWebAppUrl(): string {
-  return (process.env.WEB_APP_URL ?? "https://app-compara-farma-web.vercel.app").trim();
+  return (process.env.WEB_APP_URL ?? "https://www.preciosfarma.cl").trim();
 }
 
 /** URL pública de esta misma API — necesaria para armar el `url_return` que le pasamos a Flow (CF-124). */

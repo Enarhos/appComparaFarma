@@ -30,7 +30,7 @@ export function DonationWidget() {
         onClick={() => setStatus("open")}
         className="text-xs font-medium text-muted underline underline-offset-2 hover:text-accent-ink"
       >
-        Apoya ComparaFarma
+        Apoya PreciosFarma
       </button>
     );
   }
@@ -64,7 +64,7 @@ export function DonationWidget() {
   return (
     <div className="flex flex-col items-center gap-2 rounded-xl border border-line bg-paper-raised p-4 text-center sm:items-end sm:text-right">
       <p className="max-w-xs text-xs text-muted">
-        ComparaFarma es gratuito. Si te resulta útil, puedes ayudarnos a mantener y mejorar el servicio.
+        PreciosFarma es gratuito. Si te resulta útil, puedes ayudarnos a mantener y mejorar el servicio.
       </p>
       <div className="flex gap-2" role="group" aria-label="Elegir monto del aporte">
         {AMOUNTS.map((amount) => (

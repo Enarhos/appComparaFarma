@@ -15,6 +15,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { PHARMACIES } from "@/constants/pharmacies";
+import { BRAND_COLORS } from "@/constants/brand";
 import type { PharmacySlug } from "@/lib/types";
 import { useFilterStore } from "@/store/filterStore";
 import { useLocationStore } from "@/store/locationStore";
@@ -232,7 +233,7 @@ export function FilterSheet({ visible, onClose }: Props) {
               <Ionicons
                 name="location-outline"
                 size={16}
-                color={selectedCommuneName ? "#16a34a" : "#9ca3af"}
+                color={selectedCommuneName ? BRAND_COLORS.indigo : "#9ca3af"}
               />
               <TextInput
                 value={showCommuneList ? communeQuery : (selectedCommuneName ?? "")}
@@ -277,7 +278,7 @@ export function FilterSheet({ visible, onClose }: Props) {
               >
                 {loadingBranches ? (
                   <View className="py-5 items-center">
-                    <ActivityIndicator size="small" color="#16a34a" />
+                    <ActivityIndicator size="small" color={BRAND_COLORS.indigo} />
                   </View>
                 ) : (
                   <ScrollView
@@ -291,12 +292,12 @@ export function FilterSheet({ visible, onClose }: Props) {
                       activeOpacity={0.7}
                       className="flex-row items-center gap-3 px-4 py-3 border-b border-gray-50 dark:border-gray-700"
                     >
-                      <Ionicons name="globe-outline" size={15} color="#16a34a" />
-                      <Text className="flex-1 text-sm font-medium text-green-700 dark:text-green-400">
+                      <Ionicons name="globe-outline" size={15} color={BRAND_COLORS.indigo} />
+                      <Text className="flex-1 text-sm font-medium text-indigo-800 dark:text-indigo-300">
                         Todas las comunas
                       </Text>
                       {!selectedCommune && (
-                        <Ionicons name="checkmark" size={16} color="#16a34a" />
+                        <Ionicons name="checkmark" size={16} color={BRAND_COLORS.indigo} />
                       )}
                     </TouchableOpacity>
 
@@ -311,7 +312,7 @@ export function FilterSheet({ visible, onClose }: Props) {
                           <Text
                             className={`text-sm font-medium ${
                               item.key === selectedCommune
-                                ? "text-green-700 dark:text-green-400"
+                                ? "text-indigo-800 dark:text-indigo-300"
                                 : "text-gray-800 dark:text-gray-200"
                             }`}
                           >
@@ -322,7 +323,7 @@ export function FilterSheet({ visible, onClose }: Props) {
                           </Text>
                         </View>
                         {item.key === selectedCommune && (
-                          <Ionicons name="checkmark" size={16} color="#16a34a" />
+                          <Ionicons name="checkmark" size={16} color={BRAND_COLORS.indigo} />
                         )}
                       </TouchableOpacity>
                     ))}
@@ -342,8 +343,8 @@ export function FilterSheet({ visible, onClose }: Props) {
             {/* Indicador de comuna activa */}
             {selectedCommuneName && !showCommuneList && (
               <View className="mt-2 flex-row items-center gap-1.5">
-                <View className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                <Text className="text-xs text-green-700">
+                <View className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: BRAND_COLORS.indigo }} />
+                <Text className="text-xs" style={{ color: BRAND_COLORS.ink }}>
                   {selectedCommuneName}
                   {selectedRegion ? ` — ${selectedRegion}` : ""}
                 </Text>
@@ -358,7 +359,7 @@ export function FilterSheet({ visible, onClose }: Props) {
                 Farmacias
               </Text>
               <TouchableOpacity onPress={selectAllPharmacies} hitSlop={8}>
-                <Text className="text-xs font-semibold text-green-600">
+                <Text className="text-xs font-semibold" style={{ color: BRAND_COLORS.indigo }}>
                   {allActive ? "Desmarcar todas" : "Todas"}
                 </Text>
               </TouchableOpacity>
@@ -398,7 +399,7 @@ export function FilterSheet({ visible, onClose }: Props) {
                   <View pointerEvents="none">
                     <Switch
                       value={isActive}
-                      trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
+                      trackColor={{ false: "#e5e7eb", true: BRAND_COLORS.indigo }}
                       thumbColor="#ffffff"
                       ios_backgroundColor="#e5e7eb"
                     />
@@ -480,7 +481,7 @@ export function FilterSheet({ visible, onClose }: Props) {
               <Switch
                 value={onlineSalesOnly}
                 onValueChange={setOnlineSalesOnly}
-                trackColor={{ false: "#e5e7eb", true: "#16a34a" }}
+                trackColor={{ false: "#e5e7eb", true: BRAND_COLORS.indigo }}
                 thumbColor="#ffffff"
                 ios_backgroundColor="#e5e7eb"
               />
@@ -516,22 +517,22 @@ export function FilterSheet({ visible, onClose }: Props) {
                 >
                   <View
                     className={`w-5 h-5 rounded-full border-2 mr-3 items-center justify-center ${
-                      selected ? "border-green-600" : "border-gray-300 dark:border-gray-600"
+                      selected ? "border-indigo-700" : "border-gray-300 dark:border-gray-600"
                     }`}
                   >
                     {selected && (
-                      <View className="w-2.5 h-2.5 rounded-full bg-green-600" />
+                      <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: BRAND_COLORS.indigo }} />
                     )}
                   </View>
                   <Ionicons
                     name={opt.icon as any}
                     size={16}
-                    color={selected ? "#16a34a" : "#9ca3af"}
+                    color={selected ? BRAND_COLORS.indigo : "#9ca3af"}
                     style={{ marginRight: 8 }}
                   />
                   <Text
                     className={`text-base ${
-                      selected ? "text-green-700 dark:text-green-400 font-semibold" : "text-gray-700 dark:text-gray-300"
+                      selected ? "text-indigo-800 dark:text-indigo-300 font-semibold" : "text-gray-700 dark:text-gray-300"
                     }`}
                   >
                     {opt.label}

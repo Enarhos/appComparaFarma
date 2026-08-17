@@ -33,7 +33,7 @@ Ambos comparten el mismo mecanismo de hosting/CDN/DNS de Vercel, pero son proyec
 
 | Dato | `comparafarma-api` | `comparafarma-web` |
 |---|---|---|
-| URL producción | `https://comparafarma-api.vercel.app` | `https://app-compara-farma-web.vercel.app` |
+| URL producción | `https://comparafarma-api.vercel.app` | `https://www.preciosfarma.cl` |
 | Project ID | `prj_zvHG2urEOjMM770FPy6B2fdhk915` (confirmado, `ci.yml`) | No verificable en el repo (no hay `vercel.json` en `web/`, el deploy no pasa por `ci.yml`) |
 | Team/Org ID | `team_QtbvbI6hTSxxSJ9qDFTv9z6S` (confirmado, `ci.yml`) | No verificable directamente — se asume el mismo team por ser una operación de una sola persona (Audit ficha #10), sin evidencia de un segundo team en el repo |
 | Región de ejecución | `iad1` (default, sin config explícita de multi-región) | `iad1` (default) |

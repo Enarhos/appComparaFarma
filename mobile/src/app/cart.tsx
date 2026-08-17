@@ -6,6 +6,7 @@ import { computeAllInOneTotals } from "@comparafarma/domain";
 import { useCartStore } from "@/store/cartStore";
 import { useConfigStore } from "@/store/configStore";
 import { PHARMACIES } from "@/constants/pharmacies";
+import { BRAND_COLORS } from "@/constants/brand";
 import { formatCLP } from "@/lib/formatters";
 
 export default function CartScreen() {
@@ -22,7 +23,7 @@ export default function CartScreen() {
   if (items.length === 0) {
     return (
       <SafeAreaView className="flex-1 bg-gray-50 dark:bg-gray-900 items-center justify-center px-8">
-        <Stack.Screen options={{ title: "Lista de compras", headerTintColor: "#16a34a" }} />
+        <Stack.Screen options={{ title: "Lista de compras", headerTintColor: BRAND_COLORS.indigo }} />
         <Ionicons name="cart-outline" size={64} color="#d1d5db" />
         <Text className="text-lg font-semibold text-gray-500 dark:text-gray-400 mt-4 text-center">
           Tu lista está vacía
@@ -37,7 +38,7 @@ export default function CartScreen() {
   return (
     <SafeAreaView className="flex-1 bg-gray-50 dark:bg-gray-900">
       <Stack.Screen
-        options={{ title: `Lista (${items.length})`, headerTintColor: "#16a34a" }}
+        options={{ title: `Lista (${items.length})`, headerTintColor: BRAND_COLORS.indigo }}
       />
       <ScrollView contentContainerClassName="px-4 py-4 gap-4">
 

@@ -8,6 +8,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
+  Image,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -19,6 +20,7 @@ const APP_VERSION = appConfig.expo.version;
 const ANDROID_VERSION_CODE = appConfig.expo.android?.versionCode;
 
 const PHARMACY_NAMES = Object.values(PHARMACIES_CONFIG).map((p) => p.name.replace("Farmacias ", ""));
+const BRAND_INDIGO = "#3F3FB8";
 
 type SubmitState = "idle" | "sending" | "success" | "error";
 
@@ -69,10 +71,10 @@ export default function AboutScreen() {
         >
           {/* Encabezado de la app */}
           <View className="items-center mb-8">
-            <View className="bg-green-50 dark:bg-green-950 rounded-2xl p-4 mb-3">
-              <Ionicons name="medkit" size={40} color="#16a34a" />
+            <View className="rounded-2xl p-4 mb-3" style={{ backgroundColor: BRAND_INDIGO }}>
+              <Image source={require("../../assets/icon.png")} className="h-10 w-10" resizeMode="contain" />
             </View>
-            <Text className="text-2xl font-bold text-green-700">ComparaFarma</Text>
+            <Text className="text-2xl font-bold" style={{ color: BRAND_INDIGO }}>PreciosFarma</Text>
             <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 text-center">
               Compara precios de medicamentos en{"\n"}
               {PHARMACY_NAMES.join(" · ")}
@@ -85,8 +87,8 @@ export default function AboutScreen() {
           {/* Formulario de feedback */}
           {submitState === "success" ? (
             <View className="items-center py-8">
-              <View className="bg-green-50 dark:bg-green-950 rounded-full p-4 mb-4">
-                <Ionicons name="checkmark-circle" size={48} color="#16a34a" />
+              <View className="bg-indigo-50 dark:bg-indigo-950 rounded-full p-4 mb-4">
+                <Ionicons name="checkmark-circle" size={48} color={BRAND_INDIGO} />
               </View>
               <Text className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 ¡Gracias!
@@ -100,15 +102,16 @@ export default function AboutScreen() {
                   setEmail("");
                   setSubmitState("idle");
                 }}
-                className="mt-6 border border-green-600 rounded-xl px-6 py-3"
+                className="mt-6 rounded-xl px-6 py-3"
+                style={{ borderColor: BRAND_INDIGO, borderWidth: 1 }}
               >
-                <Text className="text-green-700 font-semibold">Enviar otro mensaje</Text>
+                <Text className="font-semibold" style={{ color: BRAND_INDIGO }}>Enviar otro mensaje</Text>
               </TouchableOpacity>
             </View>
           ) : (
             <View>
               <View className="flex-row items-center mb-1">
-                <Ionicons name="chatbubble-ellipses-outline" size={18} color="#16a34a" />
+                <Ionicons name="chatbubble-ellipses-outline" size={18} color={BRAND_INDIGO} />
                 <Text className="text-base font-semibold text-gray-900 dark:text-white ml-2">
                   Tu opinión nos ayuda a mejorar
                 </Text>
@@ -157,7 +160,8 @@ export default function AboutScreen() {
               <TouchableOpacity
                 onPress={handleSend}
                 disabled={submitState === "sending"}
-                className="bg-green-600 rounded-xl py-4 items-center"
+                className="rounded-xl py-4 items-center"
+                style={{ backgroundColor: BRAND_INDIGO }}
                 activeOpacity={0.8}
               >
                 {submitState === "sending" ? (
@@ -179,7 +183,7 @@ export default function AboutScreen() {
               {PHARMACY_NAMES.join(", ")}
             </Text>
             <Text className="text-xs text-gray-300 dark:text-gray-700 mt-3">
-              ComparaFarma · Chile
+              PreciosFarma · Chile
             </Text>
             <Text
               className="text-xs text-gray-300 dark:text-gray-700 mt-1"

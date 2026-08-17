@@ -1,5 +1,6 @@
 import { Modal, View, Text, TouchableOpacity, ScrollView, Pressable, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { BRAND_COLORS } from "@/constants/brand";
 
 interface Props {
   visible: boolean;
@@ -76,8 +77,8 @@ export function PriceChannelSheet({ visible, onClose }: Props) {
 
           {/* Header */}
           <View className="flex-row items-center gap-3 mb-2">
-            <View className="bg-green-50 dark:bg-green-950 rounded-full p-2">
-              <Ionicons name="pricetags-outline" size={18} color="#16a34a" />
+            <View className="bg-indigo-50 dark:bg-indigo-950 rounded-full p-2">
+              <Ionicons name="pricetags-outline" size={18} color={BRAND_COLORS.indigo} />
             </View>
             <View className="flex-1">
               <Text className="text-base font-bold text-gray-900 dark:text-white">

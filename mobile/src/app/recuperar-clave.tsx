@@ -12,6 +12,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { sendPasswordReset } from "@/lib/sessionManager";
 import { goToLogin } from "@/lib/authNavigation";
+import { BRAND_COLORS } from "@/constants/brand";
 
 type Status = "idle" | "submitting" | "check-email" | "error";
 
@@ -81,7 +82,8 @@ export default function RecuperarClaveScreen() {
             onPress={handleSubmit}
             disabled={status === "submitting"}
             activeOpacity={0.8}
-            className="bg-green-600 rounded-xl py-4 items-center"
+            className="rounded-xl py-4 items-center"
+            style={{ backgroundColor: BRAND_COLORS.indigo }}
             accessibilityRole="button"
             accessibilityLabel="Enviar link"
           >
@@ -99,7 +101,7 @@ export default function RecuperarClaveScreen() {
             accessibilityLabel="Volver a ingresar"
           >
             <Text className="text-sm text-gray-500 dark:text-gray-400">
-              <Text className="text-green-600 font-semibold">Volver a ingresar</Text>
+              <Text className="font-semibold" style={{ color: BRAND_COLORS.indigo }}>Volver a ingresar</Text>
             </Text>
           </TouchableOpacity>
         </ScrollView>

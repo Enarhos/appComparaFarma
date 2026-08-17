@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { View, TextInput, TouchableOpacity, Text, Keyboard } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useDebounce } from "@/hooks/useDebounce";
+import { BRAND_COLORS } from "@/constants/brand";
 
 const DEBOUNCE_MS = 500;
 const MIN_CHARS = 3;
@@ -94,7 +95,8 @@ export function SearchBar({ onSearch, autoFocus, liveSearch = false, suggestions
         <TouchableOpacity
           onPress={handleSubmit}
           disabled={value.trim().length < MIN_CHARS}
-          className="bg-green-600 rounded-xl px-4 py-1.5 disabled:opacity-40"
+          className="rounded-xl px-4 py-1.5 disabled:opacity-40"
+          style={{ backgroundColor: BRAND_COLORS.indigo }}
         >
           <Text className="text-white font-semibold text-sm">Buscar</Text>
         </TouchableOpacity>

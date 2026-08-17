@@ -14,7 +14,7 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
       <header className="flex items-center justify-between px-6 py-4">
         <div>
           <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
-            ComparaFarma
+            PreciosFarma
           </span>
           <h1 className="font-display text-lg font-semibold text-ink">Panel admin</h1>
         </div>

@@ -37,7 +37,7 @@ API_SECRET_KEY=
 RATE_LIMIT_MAX=60
 RATE_LIMIT_WINDOW_MS=60000
 SEARCH_CACHE_TTL_MS=300000
-ALLOWED_ORIGINS=               # Opcional, coma-separado. Default: app-compara-farma-web.vercel.app + localhost:3000.
+ALLOWED_ORIGINS=               # Opcional, coma-separado. Default: www.preciosfarma.cl + localhost:3000.
                                 # Requests sin header Origin (app móvil, server-to-server, curl) no se restringen.
 SUPABASE_URL=                 # base de datos (price_history, pharmacy_clicks, app_config, feedback)
 SUPABASE_SECRET_KEY=          # bypassea RLS — nunca exponer al cliente
@@ -54,7 +54,7 @@ Web `web/`:
 
 ```bash
 API_URL=https://comparafarma-api.vercel.app
-SITE_URL=https://app-compara-farma-web.vercel.app   # usado en sitemap.xml, robots.txt y metadata OG
+SITE_URL=https://www.preciosfarma.cl   # usado en sitemap.xml, robots.txt y metadata OG
 
 # Panel /admin — mismo proyecto Supabase que api/
 NEXT_PUBLIC_SUPABASE_URL=
@@ -213,7 +213,7 @@ Ver [`docs/operations/runbooks/PHARMACY_FLAGS.md`](PHARMACY_FLAGS.md) para activ
 
 `web/` es un **proyecto Vercel separado** del de `api/` (distinto Project ID, sin relación con `.github/workflows/ci.yml`). A diferencia de `api/`, que se deploya vía CI con `vercel deploy` en un job dedicado, `web/` usa la **integración nativa de Vercel con GitHub**: cualquier push a `main` dispara un build y deploy automático directo desde Vercel, sin pasar por GitHub Actions.
 
-- **URL de producción**: `https://app-compara-farma-web.vercel.app` (sin dominio propio todavía)
+- **URL de producción**: `https://www.preciosfarma.cl`
 - **Root Directory** del proyecto en Vercel: `web`
 - **Panel admin**: `/admin` (protegido por Supabase Auth — ver `docs/technology/database/schema.sql` y variables de entorno arriba)
 
@@ -222,8 +222,8 @@ Cualquier variable nueva o cambiada — **incluidas las que no llevan prefijo `N
 
 ### Verificación rápida
 ```bash
-curl "https://app-compara-farma-web.vercel.app/sitemap.xml"
-curl "https://app-compara-farma-web.vercel.app/robots.txt"
+curl "https://www.preciosfarma.cl/sitemap.xml"
+curl "https://www.preciosfarma.cl/robots.txt"
 ```
 
 ---

@@ -14,6 +14,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useAuthStore } from "@/store/authStore";
 import { signInWithPassword } from "@/lib/sessionManager";
 import { goToRegistro, returnFromAuth } from "@/lib/authNavigation";
+import { BRAND_COLORS } from "@/constants/brand";
 
 // Login / Cuenta — Épica 1 (Identity Foundation), TASK-003 (Tasks 006 y 008
 // del plan técnico de docs/execution/EPIC-01-IDENTITY_FOUNDATION.md).
@@ -63,7 +64,7 @@ export default function LoginScreen() {
   if (!initialized) {
     return (
       <SafeAreaView className="flex-1 items-center justify-center bg-white dark:bg-gray-900">
-        <ActivityIndicator color="#16a34a" />
+        <ActivityIndicator color={BRAND_COLORS.indigo} />
       </SafeAreaView>
     );
   }
@@ -72,8 +73,8 @@ export default function LoginScreen() {
     return (
       <SafeAreaView className="flex-1 bg-white dark:bg-gray-900" edges={["bottom"]}>
         <View className="flex-1 px-6 pt-12 items-center">
-          <View className="bg-green-50 dark:bg-green-950 rounded-full p-5 mb-4">
-            <Ionicons name="person-circle-outline" size={48} color="#16a34a" />
+          <View className="bg-indigo-50 dark:bg-indigo-950 rounded-full p-5 mb-4">
+            <Ionicons name="person-circle-outline" size={48} color={BRAND_COLORS.indigo} />
           </View>
           <Text className="text-lg font-bold text-gray-900 dark:text-white">Mi cuenta</Text>
           <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1">{identity?.email}</Text>
@@ -146,7 +147,8 @@ export default function LoginScreen() {
             onPress={handleSubmit}
             disabled={submitting}
             activeOpacity={0.8}
-            className="bg-green-600 rounded-xl py-4 items-center"
+            className="rounded-xl py-4 items-center"
+            style={{ backgroundColor: BRAND_COLORS.indigo }}
             accessibilityRole="button"
             accessibilityLabel="Entrar"
           >
@@ -164,7 +166,7 @@ export default function LoginScreen() {
             accessibilityLabel="Crear cuenta"
           >
             <Text className="text-sm text-gray-500 dark:text-gray-400">
-              ¿No tienes cuenta? <Text className="text-green-600 font-semibold">Crear cuenta</Text>
+              ¿No tienes cuenta? <Text className="font-semibold" style={{ color: BRAND_COLORS.indigo }}>Crear cuenta</Text>
             </Text>
           </TouchableOpacity>
         </ScrollView>

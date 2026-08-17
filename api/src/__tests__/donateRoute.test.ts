@@ -175,8 +175,8 @@ describe("handleDonateRoute — creación del pago", () => {
     await handleDonateRoute(req, makeRes());
 
     const call = createKhipuPaymentV3Mock.mock.calls[0][0];
-    expect(call.returnUrl).toBe("https://app-compara-farma-web.vercel.app/apoyar/retorno");
-    expect(call.cancelUrl).toBe("https://app-compara-farma-web.vercel.app/apoyar/cancelado");
+    expect(call.returnUrl).toBe("https://www.preciosfarma.cl/apoyar/retorno");
+    expect(call.cancelUrl).toBe("https://www.preciosfarma.cl/apoyar/cancelado");
   });
 
   it("usa WEB_APP_URL si está configurado, sin doble slash", async () => {

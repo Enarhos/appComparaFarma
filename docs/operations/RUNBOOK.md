@@ -8,7 +8,7 @@
 
 Servicios en producción:
 - **Backend** (`api/`): `https://comparafarma-api.vercel.app` — proyecto Vercel `comparafarma-api`.
-- **Web** (`web/`): `https://app-compara-farma-web.vercel.app` — proyecto Vercel propio (deploy automático de Vercel al detectar push, no pasa por `ci.yml`).
+- **Web** (`web/`): `https://www.preciosfarma.cl` — proyecto Vercel propio (deploy automático de Vercel al detectar push, no pasa por `ci.yml`).
 - **Mobile** (`mobile/`): Google Play, package `mla.app.comparafarma`.
 - **Base de datos**: Supabase (opcional pero usada en producción para historial de precios, config, feedback, alertas, suscripciones).
 - **Caché/rate limit**: Upstash Redis (opcional, fallback a memoria).

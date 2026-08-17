@@ -44,14 +44,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // canonical ya anticipa a dónde.
   const canonicalUrl = `${getSiteUrl()}/medicamento/${canonicalSlug}`;
 
-  // Sin el sufijo "| ComparaFarma" acá: el título ya pasa por el template
-  // "%s | ComparaFarma" del layout raíz (web/src/app/layout.tsx) — agregarlo
+  // Sin el sufijo "| PreciosFarma" acá: el título ya pasa por el template
+  // "%s | PreciosFarma" del layout raíz (web/src/app/layout.tsx) — agregarlo
   // acá también duplicaba el sufijo (bug ya visto y corregido una vez en el
   // Sprint 2 original, reintroducido sin querer en el sprint de histórico).
   const title = `Precio de ${medication.canonicalName} en farmacias`;
   const description = `Compara el precio de ${medication.canonicalName} en ${medication.prices.length} farmacia${
     medication.prices.length !== 1 ? "s" : ""
-  } chilenas y revisa el historial reciente de precios en ComparaFarma.`;
+  } chilenas y revisa el historial reciente de precios en PreciosFarma.`;
 
   return {
     title,
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "ComparaFarma",
+      siteName: "PreciosFarma",
       ...(medication.imageUrl ? { images: [{ url: medication.imageUrl }] } : {}),
     },
     twitter: {

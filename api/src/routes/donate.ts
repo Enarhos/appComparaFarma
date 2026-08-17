@@ -11,7 +11,7 @@ const VALID_AMOUNTS = [1000, 3000, 5000];
 // Mismo criterio que WEB_APP_URL en subscriptions.ts (flow-register-return):
 // URL pública de web/, nunca aceptada desde el cliente (evita open redirect).
 function getWebAppUrl(): string {
-  return (process.env.WEB_APP_URL ?? "https://app-compara-farma-web.vercel.app").trim().replace(/\/$/, "");
+  return (process.env.WEB_APP_URL ?? "https://www.preciosfarma.cl").trim().replace(/\/$/, "");
 }
 
 export async function handleDonateRoute(reqLike: unknown, resLike: unknown): Promise<void> {

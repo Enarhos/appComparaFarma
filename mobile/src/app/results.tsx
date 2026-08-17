@@ -23,6 +23,7 @@ import { useFilterStore } from "@/store/filterStore";
 import { useLocationStore } from "@/store/locationStore";
 import { useSearch } from "@/hooks/useSearch";
 import { PHARMACIES } from "@/constants/pharmacies";
+import { BRAND_COLORS } from "@/constants/brand";
 import { incrementSearchCount } from "@/lib/donationGate";
 
 const TOOLTIP_KEY = "results_tooltip_v1_seen";
@@ -172,19 +173,19 @@ export default function ResultsScreen() {
             accessibilityRole="button"
             className={`flex-row items-center gap-1.5 rounded-full px-3 py-1.5 border ${
               totalFilterCount > 0
-                ? "bg-green-50 border-green-500 dark:bg-green-950"
+                ? "bg-indigo-50 border-indigo-500 dark:bg-indigo-950"
                 : "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600"
             }`}
           >
             <Ionicons
               name="options-outline"
               size={13}
-              color={totalFilterCount > 0 ? "#16a34a" : "#9ca3af"}
+              color={totalFilterCount > 0 ? BRAND_COLORS.indigo : "#9ca3af"}
             />
             <Text
               className={`text-xs font-medium ${
                 totalFilterCount > 0
-                  ? "text-green-700 dark:text-green-400"
+                  ? "text-indigo-800 dark:text-indigo-300"
                   : "text-gray-500 dark:text-gray-300"
               }`}
             >
@@ -212,12 +213,12 @@ export default function ResultsScreen() {
               onPress={clearCommune}
               accessibilityLabel={`Quitar filtro de comuna: ${selectedCommuneName}`}
               accessibilityRole="button"
-              className="flex-row items-center gap-1.5 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-full pl-3 pr-2 py-1.5"
+              className="flex-row items-center gap-1.5 bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-800 rounded-full pl-3 pr-2 py-1.5"
             >
-              <Text className="text-xs font-medium text-green-700 dark:text-green-400">
+              <Text className="text-xs font-medium text-indigo-800 dark:text-indigo-300">
                 📍 {selectedCommuneName}
               </Text>
-              <Ionicons name="close-circle" size={14} color="#16a34a" />
+              <Ionicons name="close-circle" size={14} color={BRAND_COLORS.indigo} />
             </TouchableOpacity>
           )}
           {filteredOutCount > 0 && (
@@ -225,12 +226,12 @@ export default function ResultsScreen() {
               onPress={() => setActivePharmacies(null)}
               accessibilityLabel={`Quitar filtro de farmacias — ${filteredOutCount} oculta${filteredOutCount !== 1 ? "s" : ""}`}
               accessibilityRole="button"
-              className="flex-row items-center gap-1.5 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-full pl-3 pr-2 py-1.5"
+              className="flex-row items-center gap-1.5 bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-800 rounded-full pl-3 pr-2 py-1.5"
             >
-              <Text className="text-xs font-medium text-green-700 dark:text-green-400">
+              <Text className="text-xs font-medium text-indigo-800 dark:text-indigo-300">
                 {filteredOutCount} farmacia{filteredOutCount !== 1 ? "s" : ""} oculta{filteredOutCount !== 1 ? "s" : ""}
               </Text>
-              <Ionicons name="close-circle" size={14} color="#16a34a" />
+              <Ionicons name="close-circle" size={14} color={BRAND_COLORS.indigo} />
             </TouchableOpacity>
           )}
           {onlineSalesOnly && (
@@ -238,12 +239,12 @@ export default function ResultsScreen() {
               onPress={() => setOnlineSalesOnly(false)}
               accessibilityLabel="Quitar filtro: solo con despacho a domicilio"
               accessibilityRole="button"
-              className="flex-row items-center gap-1.5 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-full pl-3 pr-2 py-1.5"
+              className="flex-row items-center gap-1.5 bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-800 rounded-full pl-3 pr-2 py-1.5"
             >
-              <Text className="text-xs font-medium text-green-700 dark:text-green-400">
+              <Text className="text-xs font-medium text-indigo-800 dark:text-indigo-300">
                 🚚 Solo despacho
               </Text>
-              <Ionicons name="close-circle" size={14} color="#16a34a" />
+              <Ionicons name="close-circle" size={14} color={BRAND_COLORS.indigo} />
             </TouchableOpacity>
           )}
         </View>
@@ -255,7 +256,7 @@ export default function ResultsScreen() {
       {/* Estado de carga */}
       {isLoading && (
         <View className="flex-row items-center gap-2 px-4 py-3">
-          <ActivityIndicator size="small" color="#16a34a" />
+          <ActivityIndicator size="small" color={BRAND_COLORS.indigo} />
           <Text className="text-sm text-gray-400 dark:text-gray-500">
             Consultando{" "}
             {Object.values(PHARMACIES)
@@ -389,8 +390,8 @@ export default function ResultsScreen() {
           <RefreshControl
             refreshing={isLoading}
             onRefresh={handleRefresh}
-            tintColor="#16a34a"
-            colors={["#16a34a"]}
+            tintColor={BRAND_COLORS.indigo}
+            colors={[BRAND_COLORS.indigo]}
           />
         }
         contentContainerClassName="px-4 py-4 gap-3"

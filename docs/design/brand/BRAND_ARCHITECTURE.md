@@ -100,6 +100,20 @@ La evidencia permite responder con precisión distinguiendo dos preguntas distin
 
 **Conclusión: la marca principal es "ComparaFarma" como nombre único, y lo que ese nombre principalmente representa —según la fuente más consolidada del repositorio— es la plataforma, no una aplicación puntual ni solo la razón social.** Empresa, plataforma y producto no son tres marcas distintas; son tres capas de una misma marca, con la plataforma como capa conceptual dominante, la empresa como su vehículo operativo, y los productos (app, web, API) como sus canales de acceso.
 
+### 4.2.1 Actualización 2026-08-16 — Rebranding público a PreciosFarma
+
+**No se reabre el análisis de §4.1/§4.2 anterior — se añade un hecho nuevo posterior a esa evidencia.**
+
+Decisión directa de Mario (CTO/Product Owner) + ChatGPT (CTO/Product), sesión 2026-08-16, registrada formalmente en `docs/design/decisions/DESIGN_DECISION_LOG.md` (DD-004): el nombre público del producto B2C cambia de **ComparaFarma** a **PreciosFarma** (dominio `preciosfarma.cl`, tagline "Compara precios de medicamentos"). Esta actualización usa exactamente el criterio de reapertura ya previsto por `docs/design/brand/DOMAIN_STATUS.md` ("Rebranding oficial"), y se aplica únicamente a la capa de nombre verbal — no a la arquitectura de marca (Branded House, §4.1), ni a la identidad visual (`VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md`, `LOGO_SYSTEM.md`, `COLOR_SYSTEM.md`, `TYPOGRAPHY_SYSTEM.md`, `ICONOGRAPHY_SYSTEM.md`), que permanecen sin cambios.
+
+**Qué cambia:** el nombre con el que el producto se presenta públicamente (app, sitio web, tiendas de aplicaciones, comunicación, legal). **Qué no cambia:** el modelo Branded House recomendado en §4.1 (sigue aplicando, ahora bajo el nombre "PreciosFarma"); la identidad técnica interna — `mla.app.comparafarma`, `@comparafarma/domain`, el repositorio `appComparaFarma`, `comparafarma-api`, los proyectos Vercel/Supabase existentes — que se mantiene por decisión explícita de reducción de riesgo, no por descuido; ni ninguna de las citas textuales de §4.1/§4.2, que siguen siendo evidencia histórica válida de por qué "ComparaFarma" fue la marca única hasta esta decisión.
+
+**Relación histórica:** PreciosFarma es la continuación pública del mismo producto y la misma plataforma descritos en este documento — no un producto nuevo, no una sub-marca, no un cambio de categoría. No se comunica públicamente como "PreciosFarma, anteriormente ComparaFarma"; esa relación queda documentada aquí solo para trazabilidad interna.
+
+Este addendum no modifica ninguna palabra de §4.1 ni de la sección "Qué palabra es la marca" / "Qué denota principalmente esa palabra" de §4.2 — ambas siguen siendo correctas sustituyendo mentalmente "ComparaFarma" por "PreciosFarma" donde el texto se refiere al nombre público de marca, y dejando "ComparaFarma" sin sustituir donde el texto se refiere a identificadores técnicos.
+
+---
+
 ### 4.3 Portafolio de Productos
 
 Reconstruido combinando evidencia de implementación real (`docs/archive/assessments/PROJECT_INVENTORY.md`, `docs/archive/releases/PRODUCTION_READINESS_V2.md`) con evidencia estratégica de lo previsto (`docs/enterprise/strategy/VISION_2030.md`, sección "Plataforma"; `docs/enterprise/strategy/DIGITAL_ASSET_REGISTER.md`; `docs/enterprise/BUSINESS_CAPABILITY_MAP.md` y `BUSINESS_SERVICES.md`, columnas de "productos consumidores"). No se incluye nada que no tenga evidencia documental o de código.

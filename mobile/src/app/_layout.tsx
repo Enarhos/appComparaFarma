@@ -9,6 +9,7 @@ import { useAlertsStore } from "@/store/alertsStore";
 import { useAuthStore } from "@/store/authStore";
 import { subscribeToAuthDeepLinks } from "@/lib/sessionManager";
 import { InAppToast } from "@/components/InAppToast";
+import { BRAND_COLORS } from "@/constants/brand";
 import "../../global.css";
 
 Sentry.init({
@@ -98,7 +99,7 @@ function RootLayout() {
     <>
       <StatusBar style="auto" />
       <InAppToast />
-      <Stack screenOptions={{ headerStyle: { backgroundColor: headerBg }, headerTintColor: "#16a34a" }}>
+      <Stack screenOptions={{ headerStyle: { backgroundColor: headerBg }, headerTintColor: BRAND_COLORS.indigo }}>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="results" options={{ title: "Resultados", headerBackTitle: "Buscar" }} />
         <Stack.Screen name="medication" options={{ headerShown: false }} />

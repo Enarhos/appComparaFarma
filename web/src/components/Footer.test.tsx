@@ -7,13 +7,13 @@ afterEach(() => {
 });
 
 describe("Footer — donaciones pausadas (Production Closure, 2026-08-16)", () => {
-  it("con WEB_DONATIONS_PAUSED=true (default real de producción) no muestra el CTA 'Apoya ComparaFarma', solo el texto neutro", async () => {
+  it("con WEB_DONATIONS_PAUSED=true (default real de producción) no muestra el CTA 'Apoya PreciosFarma', solo el texto neutro", async () => {
     const { Footer } = await import("./Footer");
     render(<Footer />);
 
-    expect(screen.queryByRole("button", { name: "Apoya ComparaFarma" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Apoya PreciosFarma" })).toBeNull();
     expect(
-      screen.getByText(/Los aportes están temporalmente pausados mientras ComparaFarma/)
+      screen.getByText(/Los aportes están temporalmente pausados mientras PreciosFarma/)
     ).toBeTruthy();
   });
 
@@ -23,7 +23,7 @@ describe("Footer — donaciones pausadas (Production Closure, 2026-08-16)", () =
     const { Footer } = await import("./Footer");
     render(<Footer />);
 
-    expect(screen.getByRole("button", { name: "Apoya ComparaFarma" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Apoya PreciosFarma" })).toBeTruthy();
     expect(screen.queryByText(/Los aportes están temporalmente pausados/)).toBeNull();
   });
 });

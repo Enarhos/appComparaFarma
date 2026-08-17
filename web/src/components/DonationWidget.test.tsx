@@ -24,7 +24,7 @@ afterEach(() => {
 describe("DonationWidget", () => {
   it("muestra el CTA colapsado inicialmente, sin selector de monto", () => {
     render(<DonationWidget />);
-    expect(screen.getByRole("button", { name: "Apoya ComparaFarma" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Apoya PreciosFarma" })).toBeTruthy();
     expect(screen.queryByText(/1\.000/)).toBeNull();
   });
 
@@ -32,10 +32,10 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
 
     expect(
-      screen.getByText(/ComparaFarma es gratuito\. Si te resulta útil, puedes ayudarnos/)
+      screen.getByText(/PreciosFarma es gratuito\. Si te resulta útil, puedes ayudarnos/)
     ).toBeTruthy();
     expect(screen.getByRole("button", { name: /1\.000/ })).toBeTruthy();
     expect(screen.getByRole("button", { name: /3\.000/ })).toBeTruthy();
@@ -50,7 +50,7 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
     await user.click(screen.getByRole("button", { name: new RegExp(`${amount / 1000}\\.000`) }));
 
     expect(createDonationPayment).toHaveBeenCalledWith(amount);
@@ -61,7 +61,7 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
     await user.click(screen.getByRole("button", { name: /1\.000/ }));
 
     const args = vi.mocked(createDonationPayment).mock.calls[0];
@@ -78,7 +78,7 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
     await user.click(screen.getByRole("button", { name: /1\.000/ }));
 
     expect(await screen.findByText("Preparando pago…")).toBeTruthy();
@@ -96,7 +96,7 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
     await user.click(screen.getByRole("button", { name: /1\.000/ }));
 
     await vi.waitFor(() => {
@@ -112,7 +112,7 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
     await user.click(screen.getByRole("button", { name: /1\.000/ }));
 
     expect(await screen.findByText("No pudimos iniciar el pago. Intenta nuevamente en unos momentos.")).toBeTruthy();
@@ -129,7 +129,7 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
     await user.click(screen.getByRole("button", { name: /1\.000/ }));
 
     const alert = await screen.findByRole("alert");
@@ -146,7 +146,7 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
     const button1000 = screen.getByRole("button", { name: /1\.000/ });
 
     // Dos clics disparados sin esperar a que React vuelva a renderizar.
@@ -160,10 +160,10 @@ describe("DonationWidget", () => {
     const user = userEvent.setup();
     render(<DonationWidget />);
 
-    await user.click(screen.getByRole("button", { name: "Apoya ComparaFarma" }));
+    await user.click(screen.getByRole("button", { name: "Apoya PreciosFarma" }));
     await user.click(screen.getByRole("button", { name: "Cerrar" }));
 
-    expect(screen.getByRole("button", { name: "Apoya ComparaFarma" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Apoya PreciosFarma" })).toBeTruthy();
     expect(screen.queryByText(/1\.000/)).toBeNull();
   });
 });

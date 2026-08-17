@@ -1,4 +1,4 @@
 export function getSiteUrl(): string {
-  const raw = process.env.SITE_URL ?? "https://comparafarma.vercel.app";
+  const raw = process.env.SITE_URL ?? "https://www.preciosfarma.cl";
   return raw.replace(/\/$/, "");
 }

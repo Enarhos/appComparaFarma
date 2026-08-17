@@ -135,6 +135,7 @@ Consolidar, en un solo documento y con nivel de agregación de programa (no de t
 | Typography System | Media | ⬜ No iniciado | Logo System | Ídem |
 | Iconography | Media | ⬜ No iniciado | Logo System, Color System | Ídem |
 | Google Play Brand / Google Play Assets | Alta | ⬜ No iniciado | Logo System, Color System | `docs/design/brand/BRAND_FOUNDATIONS.md`, `VISUAL_IDENTITY.md`; workstream B (Launch) |
+| Rebranding público ComparaFarma → PreciosFarma — Fase A (formalización + assets maestros) | Alta | 🟡 Fase A completada, en revisión CTO | Identidad visual ya aprobada (DD-001/002/003) | `docs/design/decisions/DESIGN_DECISION_LOG.md` DD-004; `docs/design/brand/BRAND_ARCHITECTURE.md` §4.2.1 |
 
 #### Design — Workstream A: Identidad Visual
 

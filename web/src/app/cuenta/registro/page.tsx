@@ -58,7 +58,7 @@ export default function CuentaRegistroPage() {
   return (
     <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6">
       <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
-        ComparaFarma
+        PreciosFarma
       </span>
       <h1 className="mt-2 font-display text-2xl font-semibold text-ink">Crear cuenta</h1>
 
