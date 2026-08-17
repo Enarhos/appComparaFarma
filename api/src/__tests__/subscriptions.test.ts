@@ -415,7 +415,7 @@ describe("action=start-flow-subscription", () => {
     await handleSubscriptionsRoute(req, res);
 
     expect(res.statusCode).toBe(200);
-    expect(jsonBody(res)).toEqual({ redirectUrl: "https://app-compara-farma-web.vercel.app/cuenta?upgrade=success" });
+    expect(jsonBody(res)).toEqual({ redirectUrl: "https://www.preciosfarma.cl/cuenta?upgrade=success" });
     expect(mocks.recordProviderEvent).toHaveBeenCalledWith(
       expect.objectContaining({ provider: "flow", providerReference: "sus_xyz", type: "purchase", userId: "user-1", planId: "premium_monthly" })
     );
@@ -431,7 +431,7 @@ describe("action=flow-register-return", () => {
     await handleSubscriptionsRoute(req, res);
 
     expect(res.statusCode).toBe(302);
-    expect(res.headers.Location).toBe("https://app-compara-farma-web.vercel.app/cuenta?upgrade=error");
+    expect(res.headers.Location).toBe("https://www.preciosfarma.cl/cuenta?upgrade=error");
   });
 
   it("con getRegisterStatus no-activo redirige a error", async () => {
@@ -443,7 +443,7 @@ describe("action=flow-register-return", () => {
 
     await handleSubscriptionsRoute(req, res);
 
-    expect(res.headers.Location).toBe("https://app-compara-farma-web.vercel.app/cuenta?upgrade=error");
+    expect(res.headers.Location).toBe("https://www.preciosfarma.cl/cuenta?upgrade=error");
   });
 
   it("con tarjeta activa y planId válido: activa flow_customers y crea la suscripción, redirige a success", async () => {
@@ -472,7 +472,7 @@ describe("action=flow-register-return", () => {
     expect(mocks.recordProviderEvent).toHaveBeenCalledWith(
       expect.objectContaining({ provider: "flow", providerReference: "sus_xyz", type: "purchase", userId: "user-1" })
     );
-    expect(res.headers.Location).toBe("https://app-compara-farma-web.vercel.app/cuenta?upgrade=success");
+    expect(res.headers.Location).toBe("https://www.preciosfarma.cl/cuenta?upgrade=success");
   });
 });
 

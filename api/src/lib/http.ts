@@ -21,7 +21,7 @@ export function getHeader(req: RequestLike, name: string): string | null {
 }
 
 const DEFAULT_ALLOWED_ORIGINS = [
-  "https://app-compara-farma-web.vercel.app",
+  "https://www.preciosfarma.cl",
   "http://localhost:3000",
 ];
 

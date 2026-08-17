@@ -34,10 +34,10 @@ Este documento es la fuente de verdad operacional sobre qué variables existen, 
 | `FLOW_API_KEY` | API Key de Flow (pagos). | Opcional (degradación explícita) | — | Production | Si falta cualquiera de las 3 variables de Flow, `start-flow-subscription` responde 503 explícito; `flow-register-return`/`flow-webhook` responden 200 con `skipped:"flow-not-configured"` (Flow exige 200 siempre en sus callbacks). |
 | `FLOW_SECRET_KEY` | Secret Key de Flow. | Igual que arriba | — | Production | Igual. |
 | `FLOW_API_BASE_URL` | `https://sandbox.flow.cl/api` (pruebas) o `https://www.flow.cl/api` (producción). | Igual que arriba | — | Production | Igual. **Sandbox y producción son cuentas separadas — no reusar credenciales.** |
-| `WEB_APP_URL` | URL pública de `web/`, usada para construir redirects tras Flow. | Opcional | `https://app-compara-farma-web.vercel.app` | Todos | Usa ese default. |
+| `WEB_APP_URL` | URL pública de `web/`, usada para construir redirects tras Flow. | Opcional | `https://www.preciosfarma.cl` | Todos | Usa ese default. |
 | `API_PUBLIC_URL` | URL pública de esta misma API, usada como `url_return` hacia Flow. | Opcional | `https://comparafarma-api.vercel.app` | Todos | Usa ese default. |
 | `DISABLED_PHARMACIES` | Lista separada por comas de `PharmacySlug` a deshabilitar. | Opcional | `""` (ninguna) | Todos | Solo se consulta si Supabase `app_config` no responde. **No documentada previamente — corregido en este sprint.** |
-| `ALLOWED_ORIGINS` | Lista de orígenes permitidos para CORS. | Opcional | `["https://app-compara-farma-web.vercel.app", "http://localhost:3000"]` | Todos | Usa esa lista fija. Requests sin header `Origin` (app móvil, server-to-server) no se ven afectados. **No documentada previamente — corregido en este sprint.** |
+| `ALLOWED_ORIGINS` | Lista de orígenes permitidos para CORS. | Opcional | `["https://www.preciosfarma.cl", "http://localhost:3000"]` | Todos | Usa esa lista fija. Requests sin header `Origin` (app móvil, server-to-server) no se ven afectados. **No documentada previamente — corregido en este sprint.** |
 | `KHIPU_RECEIVER_ID` | Receiver ID de Khipu (donaciones vía `/api/donate`). | **Obligatoria** para que `/api/donate` funcione | `""` | Production | Con vacío, `createKhipuPayment` lanza excepción explícita → `500 { error: "No se pudo crear el pago." }` (con reporte a Sentry). **No documentada previamente — corregido en este sprint.** |
 | `KHIPU_SECRET` | Secret de Khipu. | Igual que arriba | `""` | Production | Igual. |
 | `VERCEL_ENV` | Inyectada automáticamente por Vercel (`production`/`preview`/`development`). | No configurar manualmente | `development` | Automática | Usada por Sentry para etiquetar eventos y por `/api/health` para el campo `environment`. |
@@ -49,7 +49,7 @@ Este documento es la fuente de verdad operacional sobre qué variables existen, 
 |---|---|---|---|---|---|
 | `API_URL` | URL del backend (`api/`), consultado server-side. | Opcional | `https://comparafarma-api.vercel.app` | Todos | Usa ese default (apunta a producción). Sin prefijo `NEXT_PUBLIC_` a propósito — solo se usa en Server Components/Actions. |
 | `API_SECRET_KEY` (web) | Header `x-api-key` hacia `api/` para operaciones admin. | Opcional | — | Production | Si falta, el header no se envía. Si `api/` sí exige la key y `web/` no la manda, el grant/revoke manual de planes falla silenciosamente (solo `console.warn`, no rompe la página). |
-| `SITE_URL` | Dominio base para metadata/OG. | Opcional | `https://comparafarma.vercel.app` | Todos | Usa ese default — **actualizar cuando exista un dominio propio.** |
+| `SITE_URL` | Dominio base para metadata/OG. | Opcional | `https://www.preciosfarma.cl` | Todos | Usa ese default. |
 | `NEXT_PUBLIC_SUPABASE_URL` | URL del proyecto Supabase (cliente + servidor). | **Obligatoria** | — (uso con `!` non-null en código) | Todos | Excepción en runtime del SDK de Supabase — no hay degradación silenciosa. |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Anon key pública de Supabase. | **Obligatoria** | — | Todos | Igual que arriba. |
 | `SUPABASE_URL` (server-only, admin) | URL de Supabase para el cliente admin (`/admin`). | Opcional (fallback controlado) | — | Production | Sin `URL`+`SECRET_KEY`, `createAdminClient()` devuelve `null` → el panel `/admin` muestra un error explícito, no crashea. |

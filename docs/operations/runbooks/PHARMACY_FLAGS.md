@@ -8,7 +8,7 @@ Permite activar o desactivar farmacias de forma centralizada **sin publicar un n
 
 Desde el panel admin, cambio instantáneo, sin esperar redeploy:
 
-1. Entrar a **`https://app-compara-farma-web.vercel.app/admin/config`** (requiere login con Google o email/contraseña autorizado — ver `ADMIN_ALLOWED_EMAILS`)
+1. Entrar a **`https://www.preciosfarma.cl/admin/config`** (requiere login con Google o email/contraseña autorizado — ver `ADMIN_ALLOWED_EMAILS`)
 2. Destildar el checkbox de la farmacia
 3. Click **Guardar cambios** → confirma con un mensaje "Cambios guardados"
 

@@ -21,8 +21,8 @@ function makeReq(origin?: string): RequestLike {
 describe("applyCorsHeaders", () => {
   it("echoes back an allowed origin", () => {
     const res = makeRes();
-    applyCorsHeaders(res, makeReq("https://app-compara-farma-web.vercel.app"));
-    expect(res.headers["Access-Control-Allow-Origin"]).toBe("https://app-compara-farma-web.vercel.app");
+    applyCorsHeaders(res, makeReq("https://www.preciosfarma.cl"));
+    expect(res.headers["Access-Control-Allow-Origin"]).toBe("https://www.preciosfarma.cl");
     expect(res.headers["Vary"]).toBe("Origin");
   });
 
