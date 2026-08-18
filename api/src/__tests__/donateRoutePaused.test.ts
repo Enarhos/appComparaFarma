@@ -55,7 +55,7 @@ describe("handleDonateRoute — pausa real de producción (WEB_DONATIONS_PAUSED)
     expect(WEB_DONATIONS_PAUSED).toBe(true);
   });
 
-  it("responde 503 con mensaje de pausa y NO crea ningún pago Khipu", async () => {
+  it("responde 503 con error genérico y NO crea ningún pago Khipu", async () => {
     const req = makeReq({ body: { amount: 1000 } });
     const res = makeRes();
 
@@ -63,8 +63,7 @@ describe("handleDonateRoute — pausa real de producción (WEB_DONATIONS_PAUSED)
 
     expect(res.statusCode).toBe(503);
     expect(JSON.parse(res.body ?? "{}")).toEqual({
-      error:
-        "Los aportes están temporalmente pausados mientras ComparaFarma se encuentra en su etapa inicial de crecimiento.",
+      error: "No se pudo crear el pago.",
     });
     expect(createKhipuPaymentV3Mock).not.toHaveBeenCalled();
   });

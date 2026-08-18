@@ -8,11 +8,9 @@ import { BrandMark } from "./BrandMark";
  * Web sin repetir el CTA en cada página (explícitamente fuera de alcance:
  * no se agrega en cada resultado de medicamento).
  *
- * Donaciones pausadas temporalmente (Production Closure, 2026-08-16, ver
- * lib/donationsConfig.ts): mientras WEB_DONATIONS_PAUSED sea true, no se
- * monta ningún CTA activo — solo un texto neutro, sin pedir dinero y sin
- * botón hacia Khipu. DonationWidget permanece sin cambios, listo para
- * volver a montarse cuando se reactive.
+ * Mientras WEB_DONATIONS_PAUSED sea true, no se monta ningún CTA activo ni
+ * texto público de donaciones. DonationWidget permanece sin cambios, listo
+ * para volver a montarse cuando se reactive.
  */
 export function Footer() {
   return (
@@ -22,14 +20,7 @@ export function Footer() {
           <BrandMark className="text-accent" />
           <p className="text-xs text-muted">Compara precios de medicamentos en Chile.</p>
         </div>
-        {WEB_DONATIONS_PAUSED ? (
-          <p className="text-xs text-muted">
-            Los aportes están temporalmente pausados mientras PreciosFarma se encuentra en su etapa inicial de
-            crecimiento.
-          </p>
-        ) : (
-          <DonationWidget />
-        )}
+        {WEB_DONATIONS_PAUSED ? null : <DonationWidget />}
       </div>
     </footer>
   );

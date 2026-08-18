@@ -34,10 +34,7 @@ export async function handleDonateRoute(reqLike: unknown, resLike: unknown): Pro
     }
 
     if (WEB_DONATIONS_PAUSED) {
-      throw new HttpError(
-        "Los aportes están temporalmente pausados mientras ComparaFarma se encuentra en su etapa inicial de crecimiento.",
-        503
-      );
+      throw new HttpError("No se pudo crear el pago.", 503);
     }
 
     // Rate limiting (Sprint FEAT-WEB-DONATIONS): /api/donate ahora tiene un

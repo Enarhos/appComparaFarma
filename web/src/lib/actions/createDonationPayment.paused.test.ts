@@ -18,7 +18,7 @@ describe("createDonationPayment — pausa real de producción", () => {
     expect(WEB_DONATIONS_PAUSED).toBe(true);
   });
 
-  it("devuelve ok:false con el mensaje de pausa SIN llamar a fetch en absoluto", async () => {
+  it("devuelve ok:false con error genérico SIN llamar a fetch en absoluto", async () => {
     const fetchMock = vi.fn();
     vi.stubGlobal("fetch", fetchMock);
 
@@ -26,8 +26,7 @@ describe("createDonationPayment — pausa real de producción", () => {
 
     expect(result).toEqual({
       ok: false,
-      error:
-        "Los aportes están temporalmente pausados mientras PreciosFarma se encuentra en su etapa inicial de crecimiento.",
+      error: "No pudimos iniciar el pago. Intenta nuevamente en unos momentos.",
     });
     expect(fetchMock).not.toHaveBeenCalled();
   });

@@ -6,15 +6,15 @@ afterEach(() => {
   vi.doUnmock("@/lib/donationsConfig");
 });
 
-describe("Footer — donaciones pausadas (Production Closure, 2026-08-16)", () => {
-  it("con WEB_DONATIONS_PAUSED=true (default real de producción) no muestra el CTA 'Apoya PreciosFarma', solo el texto neutro", async () => {
+describe("Footer — donaciones deshabilitadas (Production Closure, 2026-08-16)", () => {
+  it("con WEB_DONATIONS_PAUSED=true (default real de producción) no muestra CTA ni mensaje público de pausa", async () => {
     const { Footer } = await import("./Footer");
     render(<Footer />);
 
     expect(screen.queryByRole("button", { name: "Apoya PreciosFarma" })).toBeNull();
-    expect(
-      screen.getByText(/Los aportes están temporalmente pausados mientras PreciosFarma/)
-    ).toBeTruthy();
+    expect(screen.queryByText(/aportes están temporalmente pausados/i)).toBeNull();
+    expect(screen.queryByText(/donaciones están pausadas/i)).toBeNull();
+    expect(screen.queryByText(/donaciones temporalmente pausadas/i)).toBeNull();
   });
 
   it("con WEB_DONATIONS_PAUSED=false monta el DonationWidget normal (CTA visible)", async () => {
@@ -24,6 +24,6 @@ describe("Footer — donaciones pausadas (Production Closure, 2026-08-16)", () =
     render(<Footer />);
 
     expect(screen.getByRole("button", { name: "Apoya PreciosFarma" })).toBeTruthy();
-    expect(screen.queryByText(/Los aportes están temporalmente pausados/)).toBeNull();
+    expect(screen.queryByText(/aportes están temporalmente pausados/i)).toBeNull();
   });
 });
