@@ -205,34 +205,36 @@ export function PriceHistoryChart({ series, referenceValue, referenceLabel }: Pr
 
       <details className="mt-4">
         <summary className="cursor-pointer text-sm font-medium text-accent-ink">Ver datos en formato de tabla</summary>
-        <table className="mt-2 w-full text-left text-sm">
-          <caption className="sr-only">Historial de precio efectivo por farmacia y fecha</caption>
-          <thead>
-            <tr className="text-muted">
-              <th scope="col" className="py-1 pr-3">
-                Farmacia
-              </th>
-              <th scope="col" className="py-1 pr-3">
-                Fecha
-              </th>
-              <th scope="col" className="py-1">
-                Precio efectivo
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {withPoints.flatMap((s) => {
-              const display = displayFor(s.pharmacySlug);
-              return s.points.map((p) => (
-                <tr key={`${s.pharmacySlug}-${p.date}`} className="border-t border-line">
-                  <td className="py-1 pr-3">{display?.name ?? s.pharmacySlug}</td>
-                  <td className="py-1 pr-3 tabular-nums">{formatDateShort(p.date)}</td>
-                  <td className="py-1 tabular-nums">{formatCLP(p.effectivePrice)}</td>
-                </tr>
-              ));
-            })}
-          </tbody>
-        </table>
+        <div className="mt-2 overflow-x-auto">
+          <table className="min-w-full text-left text-sm">
+            <caption className="sr-only">Historial de precio efectivo por farmacia y fecha</caption>
+            <thead>
+              <tr className="text-muted">
+                <th scope="col" className="py-1 pr-3">
+                  Farmacia
+                </th>
+                <th scope="col" className="py-1 pr-3">
+                  Fecha
+                </th>
+                <th scope="col" className="py-1">
+                  Precio efectivo
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {withPoints.flatMap((s) => {
+                const display = displayFor(s.pharmacySlug);
+                return s.points.map((p) => (
+                  <tr key={`${s.pharmacySlug}-${p.date}`} className="border-t border-line">
+                    <td className="py-1 pr-3">{display?.name ?? s.pharmacySlug}</td>
+                    <td className="py-1 pr-3 tabular-nums">{formatDateShort(p.date)}</td>
+                    <td className="py-1 tabular-nums">{formatCLP(p.effectivePrice)}</td>
+                  </tr>
+                ));
+              })}
+            </tbody>
+          </table>
+        </div>
       </details>
     </div>
   );

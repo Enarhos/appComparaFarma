@@ -109,7 +109,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
   const pageUrl = `${getSiteUrl()}/medicamento/${canonicalSlug}`;
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
+    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <nav className="flex flex-wrap items-center gap-1 text-sm text-muted">
           <Link href="/" className="hover:text-accent-ink">
@@ -129,7 +129,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
           (nombre/laboratorio, luego imagen/precio en una card aparte); ahora
           es un solo bloque para reducir el espacio vertical antes del
           contenido principal (comparación + histórico). */}
-      <div className="mt-4 flex items-start gap-4 rounded-2xl border border-line bg-paper-raised p-4 sm:p-5">
+      <div className="mt-4 flex flex-col items-start gap-4 rounded-2xl border border-line bg-paper-raised p-4 sm:flex-row sm:p-5">
         {medication.imageUrl && (
           // eslint-disable-next-line @next/next/no-img-element -- imágenes de dominios variables por farmacia, sin lista blanca que mantener
           <img
@@ -142,7 +142,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
         )}
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
-            <h1 className="font-display text-2xl font-semibold leading-snug text-ink">
+            <h1 className="font-display text-xl font-semibold leading-snug text-ink sm:text-2xl">
               {medication.canonicalName}
             </h1>
             {medication.isBioequivalent && (
@@ -199,8 +199,8 @@ export default async function MedicationDetailPage({ params }: PageProps) {
       {/* Sprint Web 2: el histórico pasa a ser el centro visual de la página —
           card propia con más padding, título más grande y el gráfico casi el
           doble de alto que antes (ver PriceHistoryChart). */}
-      <section className="mt-8 rounded-2xl border border-line bg-paper-raised p-5 sm:p-7">
-        <h2 className="font-display text-2xl font-semibold text-ink">Histórico de precios</h2>
+      <section className="mt-8 rounded-2xl border border-line bg-paper-raised p-4 sm:p-7">
+        <h2 className="font-display text-xl font-semibold text-ink sm:text-2xl">Histórico de precios</h2>
 
         {!hasHistory && (
           <p className="mt-3 rounded-xl border border-line bg-paper p-4 text-sm text-muted">
@@ -211,7 +211,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
 
         {hasHistory && (
           <>
-            <dl className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <dl className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <div>
                 <dt className="text-xs text-muted">Mínimo registrado</dt>
                 <dd className="mt-0.5 font-display text-lg font-semibold tabular-nums text-ink">

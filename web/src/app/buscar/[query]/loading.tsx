@@ -1,7 +1,7 @@
 function SkeletonCard() {
   return (
-    <div className="animate-pulse rounded-2xl border border-line bg-paper-raised p-5">
-      <div className="flex items-start gap-4">
+    <div className="animate-pulse rounded-2xl border border-line bg-paper-raised p-4 sm:p-5">
+      <div className="flex items-start gap-3 sm:gap-4">
         <div className="h-14 w-14 shrink-0 rounded-lg bg-line" />
         <div className="min-w-0 flex-1">
           <div className="h-5 w-2/3 rounded bg-line" />
@@ -20,7 +20,7 @@ function SkeletonCard() {
 
 export default function Loading() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
+    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <span className="sr-only" role="status">
         Cargando resultados…
       </span>

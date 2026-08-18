@@ -67,8 +67,8 @@ export function PriceAlertForm({ matchKey, canonicalName, currentBestPrice }: Pr
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-wrap items-end gap-2 rounded-xl border border-line bg-paper p-3">
-      <div className="flex flex-col gap-1">
+    <form onSubmit={handleSubmit} className="flex w-full flex-wrap items-end gap-2 rounded-xl border border-line bg-paper p-3 sm:w-auto">
+      <div className="flex min-w-0 flex-1 flex-col gap-1 sm:flex-none">
         <label htmlFor="alert-email" className="text-xs text-muted">
           Tu email
         </label>
@@ -79,7 +79,7 @@ export function PriceAlertForm({ matchKey, canonicalName, currentBestPrice }: Pr
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="tu@email.com"
-          className="rounded-md border border-line px-2 py-1 text-sm"
+          className="min-w-0 rounded-md border border-line px-2 py-1 text-sm"
         />
       </div>
       <div className="flex flex-col gap-1">

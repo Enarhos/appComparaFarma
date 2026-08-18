@@ -29,7 +29,7 @@ export default async function SearchPage({ params }: PageProps) {
   const { results, error } = await searchMedications(term);
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
+    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Link href="/" className="text-sm text-muted hover:text-accent-ink">
           ← Volver a la búsqueda
@@ -37,7 +37,7 @@ export default async function SearchPage({ params }: PageProps) {
         <RecipeLinkBadge />
       </div>
 
-      <h1 className="mt-4 font-display text-3xl font-semibold text-ink">
+      <h1 className="mt-4 font-display text-2xl font-semibold text-ink sm:text-3xl">
         Resultados para <span className="text-accent-ink">&quot;{term}&quot;</span>
       </h1>
       {results.length > 0 && (
@@ -58,7 +58,7 @@ export default async function SearchPage({ params }: PageProps) {
       )}
 
       {!error && results.length === 0 && (
-        <div className="mt-8 rounded-xl border border-line bg-paper-raised p-6 text-center">
+        <div className="mt-8 rounded-xl border border-line bg-paper-raised p-4 text-center sm:p-6">
           <p className="text-ink/80">
             No encontramos resultados para &quot;{term}&quot;.
           </p>

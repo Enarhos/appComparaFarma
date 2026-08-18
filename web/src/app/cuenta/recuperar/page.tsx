@@ -37,7 +37,7 @@ export default function CuentaRecuperarPage() {
 
   if (status === "check-email") {
     return (
-      <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6 text-center">
+      <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center px-4 text-center sm:px-6">
         <h1 className="font-display text-2xl font-semibold text-ink">Revisa tu email</h1>
         <p className="mt-3 text-sm text-muted">
           Si existe una cuenta con ese correo, te enviamos un link para elegir una contraseña nueva.
@@ -47,7 +47,7 @@ export default function CuentaRecuperarPage() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6">
+    <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center px-4 sm:px-6">
       <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
         PreciosFarma
       </span>

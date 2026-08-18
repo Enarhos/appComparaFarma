@@ -16,26 +16,26 @@ export default function HomePage() {
   const savings = priciest.price - cheapest.price;
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <div className="flex items-center justify-between gap-4">
+    <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-16 lg:py-24">
+      <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4">
         <BrandMark className="text-accent" />
         <Link href="/cuenta" className="text-sm font-medium text-accent-ink underline-offset-2 hover:underline">
           Mi cuenta
         </Link>
       </div>
 
-      <div className="mt-6 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div className="mt-6 grid gap-8 sm:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         {/* Columna de texto */}
         <div>
           <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
             9 farmacias chilenas · en tiempo real
           </span>
-          <h1 className="mt-4 text-balance font-display text-5xl font-semibold leading-[1.05] text-ink sm:text-6xl">
+          <h1 className="mt-4 text-balance font-display text-4xl font-semibold leading-[1.08] text-ink sm:text-5xl lg:text-6xl">
             El mismo remedio,
             <br />
             precios muy distintos.
           </h1>
-          <p className="mt-5 max-w-md text-lg leading-relaxed text-muted">
+          <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
             PreciosFarma busca el precio más bajo entre Cruz Verde, Salcobrand, Ahumada, Dr. Simi y
             5 farmacias más — gratis, sin publicidad y sin registro.
           </p>
@@ -49,7 +49,7 @@ export default function HomePage() {
               <Link
                 key={term}
                 href={`/buscar/${encodeURIComponent(term)}`}
-                className="rounded-full border border-line bg-paper-raised px-4 py-1.5 text-sm text-ink/80 transition hover:border-accent hover:text-accent-ink"
+                className="rounded-full border border-line bg-paper-raised px-3 py-1.5 text-sm text-ink/80 transition hover:border-accent hover:text-accent-ink sm:px-4"
               >
                 {term}
               </Link>
@@ -58,19 +58,19 @@ export default function HomePage() {
         </div>
 
         {/* Prueba visual — la tesis del producto */}
-        <div className="rounded-2xl border border-line bg-paper-raised p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+        <div className="rounded-2xl border border-line bg-paper-raised p-4 shadow-[0_1px_2px_rgba(0,0,0,0.04)] sm:p-6">
           <p className="font-sans text-xs font-medium uppercase tracking-wide text-muted">
             Paracetamol 500 mg · 16 comprimidos
           </p>
           <ul className="mt-4 flex flex-col gap-3">
             {DEMO_PRICES.map((p) => (
-              <li key={p.pharmacy} className="flex items-center gap-3">
+              <li key={p.pharmacy} className="flex flex-wrap items-center gap-x-3 gap-y-1">
                 <span
                   className="h-2.5 w-2.5 shrink-0 rounded-full"
                   style={{ backgroundColor: p.color }}
                   aria-hidden
                 />
-                <span className="flex-1 text-sm text-ink/80">{p.pharmacy}</span>
+                <span className="min-w-0 flex-1 text-sm text-ink/80">{p.pharmacy}</span>
                 <span
                   className={`font-display text-lg font-semibold tabular-nums ${
                     p.price === cheapest.price ? "text-accent-ink" : "text-ink/50 line-through decoration-ink/20"
@@ -89,7 +89,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <p className="mt-20 text-center text-sm text-muted">
+      <p className="mt-12 text-center text-sm text-muted sm:mt-20">
         ¿Prefieres usar la app?{" "}
         <a
           href="https://play.google.com/store/apps/details?id=mla.app.comparafarma"

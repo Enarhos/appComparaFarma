@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
+    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">PreciosFarma</p>
-      <h1 className="mt-2 font-display text-3xl font-semibold text-ink">Política de privacidad</h1>
+      <h1 className="mt-2 font-display text-2xl font-semibold text-ink sm:text-3xl">Política de privacidad</h1>
       <p className="mt-2 text-sm text-muted">Última actualización: 16 de agosto de 2026</p>
 
       <div className="mt-8 space-y-8 text-sm leading-7 text-ink/85">
@@ -64,7 +64,7 @@ export default function PrivacyPage() {
           </p>
           <p className="mt-3">
             Más información sobre Sentry:{" "}
-            <a className="font-medium text-accent-ink underline underline-offset-2" href="https://sentry.io/privacy/">
+            <a className="break-words font-medium text-accent-ink underline underline-offset-2" href="https://sentry.io/privacy/">
               sentry.io/privacy
             </a>
             .
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
           </p>
           <p className="mt-3">
             Más información sobre PostHog:{" "}
-            <a className="font-medium text-accent-ink underline underline-offset-2" href="https://posthog.com/privacy">
+            <a className="break-words font-medium text-accent-ink underline underline-offset-2" href="https://posthog.com/privacy">
               posthog.com/privacy
             </a>
             .
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
           <h2 className="font-display text-xl font-semibold text-ink">Contacto</h2>
           <p className="mt-3">
             Para consultas sobre privacidad puedes escribir a{" "}
-            <a className="font-medium text-accent-ink underline underline-offset-2" href="mailto:mario.lillo.alfaro@gmail.com">
+            <a className="break-words font-medium text-accent-ink underline underline-offset-2" href="mailto:mario.lillo.alfaro@gmail.com">
               mario.lillo.alfaro@gmail.com
             </a>
             .
@@ -125,7 +125,7 @@ export default function PrivacyPage() {
 
       <footer className="mt-10 border-t border-line pt-6 text-xs text-muted">
         PreciosFarma © 2026 ·{" "}
-        <a className="font-medium text-accent-ink underline underline-offset-2" href="https://github.com/Enarhos/appComparaFarma">
+        <a className="break-words font-medium text-accent-ink underline underline-offset-2" href="https://github.com/Enarhos/appComparaFarma">
           GitHub
         </a>
       </footer>

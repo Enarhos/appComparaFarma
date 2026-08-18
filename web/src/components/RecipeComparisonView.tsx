@@ -59,7 +59,7 @@ export function RecipeComparisonView() {
 
   if (items.length === 0) {
     return (
-      <div className="rounded-2xl border border-line bg-paper-raised p-8 text-center">
+      <div className="rounded-2xl border border-line bg-paper-raised p-6 text-center sm:p-8">
         <p className="text-sm text-muted">Todavía no agregaste medicamentos a tu receta.</p>
         <Link href="/" className="mt-3 inline-block text-sm font-medium text-accent-ink hover:underline">
           Buscar más medicamentos →
@@ -88,13 +88,13 @@ export function RecipeComparisonView() {
           {items.map((item) => (
             <li
               key={item.matchKey}
-              className="flex items-center justify-between gap-3 rounded-xl border border-line bg-paper-raised px-4 py-2.5"
+              className="flex flex-col items-start gap-2 rounded-xl border border-line bg-paper-raised px-4 py-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-3"
             >
               <span className="text-sm font-medium text-ink">{item.canonicalName}</span>
               <button
                 type="button"
                 onClick={() => remove(item.matchKey)}
-                className="text-xs font-medium text-muted hover:text-red-600"
+                className="self-end text-xs font-medium text-muted hover:text-red-600 sm:self-auto"
               >
                 Quitar
               </button>
@@ -117,7 +117,7 @@ export function RecipeComparisonView() {
 
       {!loading && medications && medications.length > 0 && (
         <>
-          <section className="rounded-2xl border border-line bg-paper-raised p-5">
+          <section className="rounded-2xl border border-line bg-paper-raised p-4 sm:p-5">
             <h2 className="font-display text-lg font-semibold text-ink">Todo en una farmacia</h2>
             {allInOne.length === 0 && (
               <p className="mt-2 text-sm text-muted">No encontramos ninguna farmacia con estos medicamentos.</p>
@@ -126,46 +126,46 @@ export function RecipeComparisonView() {
               {allInOne.map((t, index) => (
                 <li
                   key={t.pharmacySlug}
-                  className={`flex items-center justify-between gap-3 rounded-xl border px-4 py-2.5 ${
+                  className={`flex flex-col items-start gap-2 rounded-xl border px-4 py-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-3 ${
                     index === 0 && t.missing === 0
                       ? "border-accent-ink bg-accent-soft/40"
                       : "border-line bg-paper"
                   }`}
                 >
-                  <div>
+                  <div className="min-w-0">
                     <span className="text-sm font-semibold text-ink">{t.pharmacyName}</span>
                     {t.missing > 0 && (
-                      <span className="ml-2 text-xs text-amber-600">
+                      <span className="block text-xs text-amber-600 sm:ml-2 sm:inline">
                         Solo tiene {t.found} de {medications.length}
                       </span>
                     )}
                   </div>
-                  <span className="text-sm font-semibold tabular-nums text-ink">{formatCLP(t.total)}</span>
+                  <span className="self-end text-sm font-semibold tabular-nums text-ink sm:self-auto">{formatCLP(t.total)}</span>
                 </li>
               ))}
             </ul>
           </section>
 
-          <section className="rounded-2xl border border-line bg-paper-raised p-5">
+          <section className="rounded-2xl border border-line bg-paper-raised p-4 sm:p-5">
             <h2 className="font-display text-lg font-semibold text-ink">Repartido al mejor precio</h2>
             <ul className="mt-3 flex flex-col gap-2">
               {breakdown.map((item) => (
                 <li
                   key={item.matchKey}
-                  className="flex items-center justify-between gap-3 rounded-xl border border-line bg-paper px-4 py-2.5"
+                  className="flex flex-col items-start gap-2 rounded-xl border border-line bg-paper px-4 py-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-3"
                 >
-                  <div>
+                  <div className="min-w-0">
                     <span className="text-sm font-medium text-ink">{item.canonicalName}</span>
-                    <span className="ml-2 text-xs text-muted">en {item.pharmacyName}</span>
+                    <span className="block text-xs text-muted sm:ml-2 sm:inline">en {item.pharmacyName}</span>
                   </div>
-                  <span className="text-sm font-semibold tabular-nums text-ink">{formatCLP(item.price)}</span>
+                  <span className="self-end text-sm font-semibold tabular-nums text-ink sm:self-auto">{formatCLP(item.price)}</span>
                 </li>
               ))}
             </ul>
             <p className="mt-3 text-right text-sm font-semibold text-ink">Total: {formatCLP(splitTotal)}</p>
           </section>
 
-          <section className="rounded-2xl border border-line bg-paper-raised p-5">
+          <section className="rounded-2xl border border-line bg-paper-raised p-4 sm:p-5">
             {savings == null && (
               <p className="text-sm text-muted">
                 Ninguna farmacia tiene todos los medicamentos — no hay una alternativa de &ldquo;todo en un

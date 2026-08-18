@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main className="flex min-h-[60vh] flex-col items-center justify-center gap-4 px-6 text-center">
+    <main className="flex min-h-[60vh] flex-col items-center justify-center gap-4 px-4 text-center sm:px-6">
       <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
         PreciosFarma
       </span>

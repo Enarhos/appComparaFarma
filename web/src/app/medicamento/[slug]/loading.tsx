@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
+    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <span className="sr-only" role="status">
         Cargando ficha del medicamento…
       </span>
@@ -9,7 +9,7 @@ export default function Loading() {
       <div className="mt-2 h-4 w-1/3 animate-pulse rounded bg-line" />
 
       <div className="mt-6 animate-pulse rounded-2xl border border-line bg-paper-raised p-6">
-        <div className="flex items-start gap-5">
+        <div className="flex items-start gap-3 sm:gap-5">
           <div className="h-24 w-24 shrink-0 rounded-lg bg-line" />
           <div className="min-w-0 flex-1">
             <div className="h-8 w-1/2 rounded bg-line" />

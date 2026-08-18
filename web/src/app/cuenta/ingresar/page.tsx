@@ -38,7 +38,7 @@ function CuentaLoginForm() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6">
+    <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center px-4 sm:px-6">
       <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
         PreciosFarma
       </span>

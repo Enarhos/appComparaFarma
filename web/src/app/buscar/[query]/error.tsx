@@ -13,7 +13,7 @@ export default function SearchError({ error, reset }: Props) {
   }, [error]);
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
+    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <div className="rounded-xl border border-red-200 bg-red-50 p-6 text-center">
         <p className="font-display text-lg font-semibold text-ink">No pudimos cargar esta búsqueda</p>
         <p className="mt-1 text-sm text-red-700">

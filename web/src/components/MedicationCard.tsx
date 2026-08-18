@@ -26,8 +26,8 @@ export function MedicationCard({ medication }: Props) {
   const detailHref = `/medicamento/${buildMedicationSlug(medication)}`;
 
   return (
-    <article className="rounded-2xl border border-line bg-paper-raised p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-      <div className="flex items-start gap-4">
+    <article className="rounded-2xl border border-line bg-paper-raised p-4 shadow-[0_1px_2px_rgba(0,0,0,0.04)] sm:p-5">
+      <div className="flex items-start gap-3 sm:gap-4">
         {medication.imageUrl && (
           <Link href={detailHref} className="shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element -- imágenes de dominios variables por farmacia, sin lista blanca que mantener */}
@@ -41,8 +41,8 @@ export function MedicationCard({ medication }: Props) {
           </Link>
         )}
         <div className="min-w-0 flex-1">
-          <div className="flex items-start justify-between gap-3">
-            <h2 className="font-display text-xl font-semibold leading-snug text-ink">
+          <div className="flex flex-col items-start gap-2 sm:flex-row sm:justify-between sm:gap-3">
+            <h2 className="font-display text-lg font-semibold leading-snug text-ink sm:text-xl">
               <Link href={detailHref} className="hover:text-accent-ink">
                 {medication.canonicalName}
               </Link>
@@ -73,7 +73,7 @@ export function MedicationCard({ medication }: Props) {
         </div>
       )}
 
-      <div className="mt-2 flex flex-wrap items-center gap-3">
+      <div className="mt-2 flex flex-wrap items-start gap-3">
         <Link href={detailHref} className="text-sm font-medium text-accent-ink hover:underline">
           Ver detalle e histórico →
         </Link>
@@ -90,24 +90,24 @@ export function MedicationCard({ medication }: Props) {
           const chips = channelChips(price, display?.cardLabel ?? null);
           const row = (
             <>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                 <span
                   className="inline-block h-2.5 w-2.5 shrink-0 rounded-full"
                   style={{ backgroundColor: display?.color ?? "#9ca3af" }}
                   aria-hidden
                 />
-                <span className="flex-1 text-sm font-medium text-ink/80">
+                <span className="min-w-0 flex-[1_1_9rem] text-sm font-medium text-ink/80">
                   {display?.name ?? price.pharmacySlug}
                 </span>
                 {!price.hasStock && (
                   <span className="rounded bg-neutral-100 px-1.5 py-0.5 text-xs text-muted">Sin stock</span>
                 )}
-                <span className="text-sm font-semibold tabular-nums text-ink">
+                <span className="ml-auto text-sm font-semibold tabular-nums text-ink">
                   {formatCLP(price.channels.effective)}
                 </span>
               </div>
               {chips.length > 1 && (
-                <div className="mt-1.5 flex flex-wrap gap-1.5 pl-[18px]">
+                <div className="mt-1.5 flex flex-wrap gap-1.5 sm:pl-[18px]">
                   {chips.map((chip) => (
                     <span
                       key={chip.label}

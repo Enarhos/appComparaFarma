@@ -13,7 +13,7 @@ export default function GlobalError({ error, reset }: Props) {
   }, [error]);
 
   return (
-    <main className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center gap-4 px-6 text-center">
+    <main className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center gap-4 px-4 text-center sm:px-6">
       <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
         PreciosFarma
       </span>

@@ -14,7 +14,7 @@ import { BrandMark } from "./BrandMark";
  */
 export function Footer() {
   return (
-    <footer className="mx-auto mt-16 max-w-5xl px-6 py-8">
+    <footer className="mx-auto mt-12 max-w-5xl px-4 py-8 sm:mt-16 sm:px-6">
       <div className="flex flex-col items-center gap-4 border-t border-line pt-6 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
         <div className="flex flex-col items-center gap-2 sm:items-start">
           <BrandMark className="text-accent" />

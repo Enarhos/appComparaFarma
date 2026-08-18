@@ -80,7 +80,7 @@ function ConfirmarForm() {
 
   if (!tokenHash) {
     return (
-      <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6 text-center">
+      <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center px-4 text-center sm:px-6">
         <h1 className="font-display text-2xl font-semibold text-ink">Link incompleto</h1>
         <p className="mt-3 text-sm text-muted">
           Este link no tiene la información necesaria para confirmar. Puede que lo hayas abierto de forma incompleta —
@@ -97,7 +97,7 @@ function ConfirmarForm() {
 
   if (status === "error") {
     return (
-      <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6 text-center">
+      <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center px-4 text-center sm:px-6">
         <h1 className="font-display text-2xl font-semibold text-ink">El link ya no es válido</h1>
         <p className="mt-3 text-sm text-muted">
           Puede haber expirado o haber sido usado antes. Pide uno nuevo e intenta de nuevo.
@@ -113,7 +113,7 @@ function ConfirmarForm() {
 
   if (status === "success") {
     return (
-      <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6 text-center">
+      <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center px-4 text-center sm:px-6">
         <h1 className="font-display text-2xl font-semibold text-ink">Confirmado</h1>
         <p className="mt-3 text-sm text-muted">¿Dónde quieres continuar?</p>
         <div className="mt-6 flex flex-col gap-3">
@@ -138,7 +138,7 @@ function ConfirmarForm() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6 text-center">
+    <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center px-4 text-center sm:px-6">
       <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">
         PreciosFarma
       </span>
