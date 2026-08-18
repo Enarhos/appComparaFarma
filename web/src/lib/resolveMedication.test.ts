@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import type { MedicationResult } from "@comparafarma/domain";
-import { shortHash } from "@/lib/medicationSlug";
+import { buildMedicationSlug, medicationSlugHash, shortHash } from "@/lib/medicationSlug";
 import { resolveMedicationBySlug } from "./resolveMedication";
 
 const searchMedicationsMock = vi.fn();
@@ -49,13 +49,57 @@ describe("resolveMedicationBySlug", () => {
     const medication = makeMedication();
     searchMedicationsMock.mockResolvedValue({ results: [medication], error: null });
 
-    const slug = `paracetamol-500-mg-16-comprimidos-${shortHash(medication.matchKey)}`;
+    const slug = buildMedicationSlug(medication);
     const result = await resolveMedicationBySlug(slug);
 
     expect(result.status).toBe("ok");
     if (result.status === "ok") {
       expect(result.medication).toBe(medication);
       expect(result.canonicalSlug).toBe(slug);
+    }
+  });
+
+  it("resolves bio and non-bio results with the same matchKey to distinct generated slugs", async () => {
+    const bio = makeMedication({
+      canonicalName: "Paracetamol 500 mg 16 comprimidos",
+      isBioequivalent: true,
+      bestPrice: 359,
+    });
+    const nonBio = makeMedication({
+      canonicalName: "Paracetamol 500 mg x 16 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 450,
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [bio, nonBio], error: null });
+
+    const bioSlug = buildMedicationSlug(bio);
+    const nonBioSlug = buildMedicationSlug(nonBio);
+
+    expect(bioSlug).not.toBe(nonBioSlug);
+    expect(await resolveMedicationBySlug(bioSlug)).toMatchObject({ status: "ok", medication: bio });
+    expect(await resolveMedicationBySlug(nonBioSlug)).toMatchObject({ status: "ok", medication: nonBio });
+  });
+
+  it("resolves the legacy paracetamol link by matching the human slug when bio/non-bio share matchKey", async () => {
+    const bio = makeMedication({
+      canonicalName: "Paracetamol 500 mg 16 comprimidos",
+      isBioequivalent: true,
+      bestPrice: 359,
+    });
+    const nonBio = makeMedication({
+      canonicalName: "Paracetamol 500 mg x 16 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 450,
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [bio, nonBio], error: null });
+
+    const legacySlug = `paracetamol-500-mg-16-comprimidos-${shortHash("paracetamol|500mg|16")}`;
+    const result = await resolveMedicationBySlug(legacySlug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(bio);
+      expect(result.canonicalSlug).toBe(`paracetamol-500-mg-16-comprimidos-${medicationSlugHash(bio)}`);
     }
   });
 

@@ -1,6 +1,13 @@
 import type { MedicationResult } from "@comparafarma/domain";
 import { searchMedications } from "@/lib/search";
-import { buildMedicationSlug, parseMedicationSlug, queryFromSlug, shortHash } from "@/lib/medicationSlug";
+import {
+  buildMedicationSlug,
+  medicationSlugHash,
+  parseMedicationSlug,
+  queryFromSlug,
+  shortHash,
+  slugifyText,
+} from "@/lib/medicationSlug";
 
 export type ResolveMedicationResult =
   | { status: "not-found" }
@@ -41,7 +48,13 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
     throw new Error(`No se pudo resolver la ficha del medicamento: ${error}`);
   }
 
-  const matches = results.filter((result) => shortHash(result.matchKey) === parsed.hash);
+  let matches = results.filter((result) => medicationSlugHash(result) === parsed.hash);
+
+  if (matches.length === 0) {
+    const legacyMatches = results.filter((result) => shortHash(result.matchKey) === parsed.hash);
+    const humanMatches = legacyMatches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
+    matches = humanMatches.length > 0 ? humanMatches : legacyMatches;
+  }
 
   if (matches.length === 0) {
     return { status: "not-found" };

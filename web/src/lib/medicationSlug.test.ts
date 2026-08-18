@@ -1,6 +1,8 @@
 import { describe, it, expect } from "vitest";
 import {
   buildMedicationSlug,
+  medicationSlugHash,
+  medicationSlugIdentity,
   parseMedicationSlug,
   queryFromSlug,
   shortHash,
@@ -59,9 +61,25 @@ describe("slugifyText", () => {
 
 describe("buildMedicationSlug", () => {
   it("joins the slugified name and the hash with a single hyphen", () => {
-    const medication = { canonicalName: "Paracetamol 500 mg 16 comprimidos", matchKey: "paracetamol|500mg|16" };
+    const medication = {
+      canonicalName: "Paracetamol 500 mg 16 comprimidos",
+      matchKey: "paracetamol|500mg|16",
+      isBioequivalent: true,
+    };
     const slug = buildMedicationSlug(medication);
-    expect(slug).toBe(`paracetamol-500-mg-16-comprimidos-${shortHash(medication.matchKey)}`);
+    expect(slug).toBe(`paracetamol-500-mg-16-comprimidos-${medicationSlugHash(medication)}`);
+  });
+
+  it("includes bioequivalence classification in the stable hash identity", () => {
+    const base = { canonicalName: "Paracetamol 500 mg 16 comprimidos", matchKey: "paracetamol|500mg|16" };
+
+    expect(medicationSlugIdentity({ ...base, isBioequivalent: true })).toBe("paracetamol|500mg|16|bio:true");
+    expect(medicationSlugHash({ ...base, isBioequivalent: true })).not.toBe(
+      medicationSlugHash({ ...base, isBioequivalent: false })
+    );
+    expect(medicationSlugHash({ ...base, isBioequivalent: false })).not.toBe(
+      medicationSlugHash({ ...base, isBioequivalent: null })
+    );
   });
 });
 

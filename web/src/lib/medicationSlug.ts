@@ -31,6 +31,26 @@ export function shortHash(matchKey: string): string {
   return fnv1a64(matchKey).toString(36);
 }
 
+function bioequivalenceKey(value: boolean | null | undefined): "true" | "false" | "unknown" {
+  if (value === true) return "true";
+  if (value === false) return "false";
+  return "unknown";
+}
+
+export function medicationSlugIdentity(medication: {
+  matchKey: string;
+  isBioequivalent?: boolean | null;
+}): string {
+  return `${medication.matchKey}|bio:${bioequivalenceKey(medication.isBioequivalent)}`;
+}
+
+export function medicationSlugHash(medication: {
+  matchKey: string;
+  isBioequivalent?: boolean | null;
+}): string {
+  return shortHash(medicationSlugIdentity(medication));
+}
+
 /** NFD + strip acentos, minúsculas, no-alfanumérico -> guión, sin guiones dobles/extremos. */
 export function slugifyText(text: string): string {
   return text
@@ -41,9 +61,13 @@ export function slugifyText(text: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-export function buildMedicationSlug(medication: { canonicalName: string; matchKey: string }): string {
+export function buildMedicationSlug(medication: {
+  canonicalName: string;
+  matchKey: string;
+  isBioequivalent?: boolean | null;
+}): string {
   const human = slugifyText(medication.canonicalName) || "medicamento";
-  return `${human}-${shortHash(medication.matchKey)}`;
+  return `${human}-${medicationSlugHash(medication)}`;
 }
 
 export interface ParsedMedicationSlug {
