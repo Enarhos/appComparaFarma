@@ -62,7 +62,7 @@ export function RecipeComparisonView() {
       <div className="rounded-2xl border border-line bg-paper-raised p-8 text-center">
         <p className="text-sm text-muted">Todavía no agregaste medicamentos a tu receta.</p>
         <Link href="/" className="mt-3 inline-block text-sm font-medium text-accent-ink hover:underline">
-          Buscar un medicamento →
+          Buscar más medicamentos →
         </Link>
       </div>
     );
@@ -78,7 +78,12 @@ export function RecipeComparisonView() {
   return (
     <div className="flex flex-col gap-6">
       <section>
-        <h2 className="font-display text-lg font-semibold text-ink">Medicamentos ({items.length})</h2>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="font-display text-lg font-semibold text-ink">Medicamentos ({items.length})</h2>
+          <Link href="/" className="text-sm font-medium text-accent-ink hover:underline">
+            Buscar más medicamentos →
+          </Link>
+        </div>
         <ul className="mt-3 flex flex-col gap-2">
           {items.map((item) => (
             <li

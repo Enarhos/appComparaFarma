@@ -55,6 +55,7 @@ describe("RecipeComparisonView", () => {
   it("shows an empty state when the recipe list has no items", () => {
     render(<RecipeComparisonView />);
     expect(screen.getByText("Todavía no agregaste medicamentos a tu receta.")).toBeTruthy();
+    expect(screen.getByText("Buscar más medicamentos →").closest("a")?.getAttribute("href")).toBe("/");
   });
 
   it("fetches fresh prices and shows both comparison alternatives", async () => {
@@ -79,6 +80,20 @@ describe("RecipeComparisonView", () => {
     // Ahorro repartiendo = 1000 (mejor "todo en una") - 900 (repartido) = 100.
     expect(screen.getByText(/Total: \$900/)).toBeTruthy();
     expect(screen.getByText(/Ahorras \$100/)).toBeTruthy();
+  });
+
+  it("shows a search link when the recipe already has items without clearing the recipe", async () => {
+    const storedRecipe = [{ matchKey: "a", canonicalName: "Paracetamol", imageUrl: null }];
+    window.localStorage.setItem("recipe-list-v1", JSON.stringify(storedRecipe));
+    vi.mocked(getRecipePrices).mockResolvedValue([
+      medication("a", "Paracetamol", [price("cruz-verde", "Cruz Verde", 1000)]),
+    ]);
+
+    render(<RecipeComparisonView />);
+
+    await waitFor(() => expect(screen.getByText("Medicamentos (1)")).toBeTruthy());
+    expect(screen.getByText("Buscar más medicamentos →").closest("a")?.getAttribute("href")).toBe("/");
+    expect(JSON.parse(window.localStorage.getItem("recipe-list-v1") ?? "[]")).toEqual(storedRecipe);
   });
 
   it("warns about medications that no longer have a price without breaking the rest", async () => {
