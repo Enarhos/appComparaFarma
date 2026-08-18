@@ -3,7 +3,7 @@ import type { MedicationResult, PharmacyPrice, PharmacySlug } from "./types.js";
 export function mergeDuplicates(results: MedicationResult[]): MedicationResult[] {
   const groups = new Map<string, MedicationResult[]>();
   for (const result of results) {
-    const key = result.matchKey;
+    const key = `${result.matchKey}|bio:${bioequivalenceKey(result.isBioequivalent)}`;
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key)!.push(result);
   }
@@ -39,4 +39,10 @@ export function mergeDuplicates(results: MedicationResult[]): MedicationResult[]
       imageUrl,
     };
   });
+}
+
+function bioequivalenceKey(value: MedicationResult["isBioequivalent"]): "true" | "false" | "unknown" {
+  if (value === true) return "true";
+  if (value === false) return "false";
+  return "unknown";
 }

@@ -81,9 +81,38 @@ describe("searchMedicationsDetailed", () => {
       bestPrice: 840,
     });
   });
+
+  it("preserva resultados bio, no bio y unknown/null en la respuesta de busqueda", async () => {
+    mocks.searchCruzVerde.mockResolvedValue([
+      makeProduct("Paracetamol 500 mg 16 Comprimidos Bioequivalente", 840, null, true),
+    ]);
+    mocks.searchSalcobrand.mockResolvedValue([
+      makeProduct("Paracetamol 500mg 16 Comprimidos", 1299, null, false),
+    ]);
+    mocks.searchAhumada.mockResolvedValue([
+      makeProduct("Paracetamol 500 mg 16 comprimidos", 900, null, null),
+    ]);
+    mocks.searchDrSimi.mockResolvedValue([]);
+    mocks.searchAraucoMed.mockResolvedValue([]);
+    mocks.searchEcoFarmacias.mockResolvedValue([]);
+    mocks.searchFarmex.mockResolvedValue([]);
+    mocks.searchSermecoop.mockResolvedValue([]);
+    mocks.searchEasyFarma.mockResolvedValue([]);
+
+    const execution = await searchMedicationsDetailed("paracetamol");
+
+    expect(execution.results).toHaveLength(3);
+    expect(execution.results.map((result) => result.isBioequivalent)).toEqual([true, null, false]);
+    expect(execution.results.filter((result) => result.isBioequivalent === true)).toHaveLength(1);
+  });
 });
 
-function makeProduct(name: string, price: number, onlinePrice: number | null = null): ScrapedProduct {
+function makeProduct(
+  name: string,
+  price: number,
+  onlinePrice: number | null = null,
+  isBioequivalent: boolean | null = false
+): ScrapedProduct {
   return {
     name,
     price,
@@ -95,6 +124,6 @@ function makeProduct(name: string, price: number, onlinePrice: number | null = n
     onlineUrl: null,
     imageUrl: null,
     laboratory: null,
-    isBioequivalent: false,
+    isBioequivalent,
   };
 }

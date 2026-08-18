@@ -20,13 +20,14 @@ function makeMedResult(
   matchKey: string,
   pharmacySlug: PharmacySlug,
   effective: number,
-  imageUrl: string | null = null
+  imageUrl: string | null = null,
+  isBioequivalent: boolean | null = false
 ): MedicationResult {
   return {
     matchKey,
     canonicalName: "Test Medication",
     laboratory: null,
-    isBioequivalent: false,
+    isBioequivalent,
     prices: [makePharmacyPrice(pharmacySlug, effective)],
     bestPrice: effective,
     bestPharmacy: pharmacySlug,
@@ -78,5 +79,28 @@ describe("mergeDuplicates", () => {
     const b = makeMedResult("ibuprofeno|400mg|20", "salcobrand", 800);
     const merged = mergeDuplicates([a, b]);
     expect(merged).toHaveLength(2);
+  });
+
+  it("no fusiona bioequivalentes con no bioequivalentes aunque compartan matchKey", () => {
+    const bio = makeMedResult("paracetamol|500mg|16", "cruz-verde", 1000, null, true);
+    const nonBio = makeMedResult("paracetamol|500mg|16", "salcobrand", 800, null, false);
+
+    const merged = mergeDuplicates([bio, nonBio]);
+
+    expect(merged).toHaveLength(2);
+    expect(merged.map((item) => item.isBioequivalent).sort()).toEqual([false, true]);
+    expect(merged.find((item) => item.isBioequivalent === true)?.prices).toHaveLength(1);
+    expect(merged.find((item) => item.isBioequivalent === false)?.prices).toHaveLength(1);
+  });
+
+  it("mantiene unknown/null separado y no lo convierte implicitamente en bioequivalente", () => {
+    const unknown = makeMedResult("paracetamol|500mg|16", "cruz-verde", 1000, null, null);
+    const bio = makeMedResult("paracetamol|500mg|16", "salcobrand", 800, null, true);
+    const nonBio = makeMedResult("paracetamol|500mg|16", "ahumada", 900, null, false);
+
+    const merged = mergeDuplicates([unknown, bio, nonBio]);
+
+    expect(merged).toHaveLength(3);
+    expect(merged.map((item) => item.isBioequivalent)).toEqual([null, true, false]);
   });
 });

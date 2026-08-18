@@ -33,7 +33,7 @@ export interface MedicationResult {
   matchKey: string;
   canonicalName: string;
   laboratory: string | null;
-  isBioequivalent: boolean;
+  isBioequivalent: boolean | null;
   prices: PharmacyPrice[];
   bestPrice: number;
   bestPharmacy: string;
@@ -60,7 +60,7 @@ export interface ScrapedProduct {
   onlineUrl: string | null;
   imageUrl: string | null;
   laboratory: string | null;
-  isBioequivalent: boolean;
+  isBioequivalent: boolean | null;
 }
 
 export interface SearchRequestContext {

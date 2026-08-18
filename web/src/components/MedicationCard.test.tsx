@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 import type { ReactNode } from "react";
-import { render, screen } from "@/test-utils";
+import { cleanup, render, screen } from "@/test-utils";
 import type { MedicationResult } from "@comparafarma/domain";
 import { MedicationCard } from "./MedicationCard";
 
@@ -73,5 +73,19 @@ describe("MedicationCard", () => {
 
     const link = screen.getByText("Ver detalle e histórico →");
     expect(link.closest("a")?.getAttribute("href")).toMatch(/^\/medicamento\/paracetamol-500-mg-/);
+  });
+
+  it("shows the bioequivalent badge only when isBioequivalent is true", () => {
+    render(<MedicationCard medication={{ ...medication, isBioequivalent: true }} />);
+
+    expect(screen.getByText(/Bioequivalente/)).toBeTruthy();
+
+    cleanup();
+    render(<MedicationCard medication={{ ...medication, isBioequivalent: false }} />);
+    expect(screen.queryByText(/Bioequivalente/)).toBeNull();
+
+    cleanup();
+    render(<MedicationCard medication={{ ...medication, isBioequivalent: null }} />);
+    expect(screen.queryByText(/Bioequivalente/)).toBeNull();
   });
 });
