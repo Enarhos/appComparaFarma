@@ -13,7 +13,7 @@ export default function MiRecetaPage() {
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <h1 className="font-display text-2xl font-semibold text-ink">Mi receta</h1>
       <p className="mt-1 text-sm text-muted">
-        Compará el costo de comprar todos tus medicamentos en una sola farmacia versus repartir la compra donde
+        Compara el costo de comprar todos tus medicamentos en una sola farmacia versus repartir la compra donde
         sale más barato cada uno.
       </p>
       <div className="mt-6">
