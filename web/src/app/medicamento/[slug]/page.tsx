@@ -176,7 +176,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
               <span className="text-sm text-muted">en {bestDisplay.name}</span>
               {savings > 0 && (
                 <span className="rounded-md bg-save-soft px-2 py-0.5 text-xs font-semibold text-save">
-                  ahorrás {formatCLP(savings)} vs. la farmacia más cara
+                  ahorras {formatCLP(savings)} vs. la farmacia más cara
                 </span>
               )}
             </div>
@@ -204,7 +204,7 @@ export default async function MedicationDetailPage({ params }: PageProps) {
 
         {!hasHistory && (
           <p className="mt-3 rounded-xl border border-line bg-paper p-4 text-sm text-muted">
-            Todavía no tenemos suficiente historial registrado para este medicamento. Volvé más adelante para
+            Todavía no tenemos suficiente historial registrado para este medicamento. Vuelve más adelante para
             ver cómo evoluciona el precio.
           </p>
         )}

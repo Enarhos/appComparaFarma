@@ -63,8 +63,8 @@ export default async function SearchPage({ params }: PageProps) {
             No encontramos resultados para &quot;{term}&quot;.
           </p>
           <p className="mt-1 text-sm text-muted">
-            Probá con el principio activo (ej. &quot;Paracetamol&quot; en vez del nombre comercial) o
-            revisá la ortografía.
+            Prueba con el principio activo (ej. &quot;Paracetamol&quot; en vez del nombre comercial) o
+            revisa la ortografía.
           </p>
         </div>
       )}

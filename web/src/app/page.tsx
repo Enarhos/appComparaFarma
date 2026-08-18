@@ -83,19 +83,19 @@ export default function HomePage() {
           </ul>
           <div className="mt-5 rounded-xl bg-save-soft px-4 py-3">
             <p className="font-sans text-sm font-semibold text-save">
-              Ahorrás {formatCLP(savings)} eligiendo bien.
+              Ahorras {formatCLP(savings)} eligiendo bien.
             </p>
           </div>
         </div>
       </div>
 
       <p className="mt-20 text-center text-sm text-muted">
-        ¿Preferís usar la app?{" "}
+        ¿Prefieres usar la app?{" "}
         <a
           href="https://play.google.com/store/apps/details?id=mla.app.comparafarma"
           className="font-medium text-accent-ink underline underline-offset-2"
         >
-          Descargala en Google Play
+          Descárgala en Google Play
         </a>
       </p>
     </main>

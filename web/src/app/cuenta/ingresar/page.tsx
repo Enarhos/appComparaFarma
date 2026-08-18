@@ -6,7 +6,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 
 function errorMessage(code: string | null): string | null {
-  if (code === "auth") return "No se pudo iniciar sesión. Intentá de nuevo.";
+  if (code === "auth") return "No se pudo iniciar sesión. Intenta de nuevo.";
   return null;
 }
 

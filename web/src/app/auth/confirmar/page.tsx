@@ -84,7 +84,7 @@ function ConfirmarForm() {
         <h1 className="font-display text-2xl font-semibold text-ink">Link incompleto</h1>
         <p className="mt-3 text-sm text-muted">
           Este link no tiene la información necesaria para confirmar. Puede que lo hayas abierto de forma incompleta —
-          volvé a solicitarlo.
+          vuelve a solicitarlo.
         </p>
         <p className="mt-4">
           <Link href="/cuenta/recuperar" className="font-medium text-accent-ink hover:underline">
@@ -100,7 +100,7 @@ function ConfirmarForm() {
       <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6 text-center">
         <h1 className="font-display text-2xl font-semibold text-ink">El link ya no es válido</h1>
         <p className="mt-3 text-sm text-muted">
-          Puede haber expirado o haber sido usado antes. Pedí uno nuevo e intentá de nuevo.
+          Puede haber expirado o haber sido usado antes. Pide uno nuevo e intenta de nuevo.
         </p>
         <p className="mt-4">
           <Link href="/cuenta/recuperar" className="font-medium text-accent-ink hover:underline">
@@ -115,7 +115,7 @@ function ConfirmarForm() {
     return (
       <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6 text-center">
         <h1 className="font-display text-2xl font-semibold text-ink">Confirmado</h1>
-        <p className="mt-3 text-sm text-muted">¿Dónde querés continuar?</p>
+        <p className="mt-3 text-sm text-muted">¿Dónde quieres continuar?</p>
         <div className="mt-6 flex flex-col gap-3">
           <button
             type="button"
@@ -144,7 +144,7 @@ function ConfirmarForm() {
       </span>
       <h1 className="mt-2 font-display text-2xl font-semibold text-ink">Confirmar</h1>
       <p className="mt-3 text-sm text-muted">
-        Por tu seguridad, confirmá con el botón — no lo hacemos automáticamente al abrir el link.
+        Por tu seguridad, confirma con el botón — no lo hacemos automáticamente al abrir el link.
       </p>
       <button
         type="button"

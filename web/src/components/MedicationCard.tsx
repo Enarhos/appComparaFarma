@@ -67,7 +67,7 @@ export function MedicationCard({ medication }: Props) {
           <span className="text-sm text-muted">en {bestDisplay.name}</span>
           {savings > 0 && (
             <span className="rounded-md bg-save-soft px-2 py-0.5 text-xs font-semibold text-save">
-              ahorrás {formatCLP(savings)}
+              ahorras {formatCLP(savings)}
             </span>
           )}
         </div>

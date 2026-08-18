@@ -7,7 +7,7 @@ export default function NotFound() {
         PreciosFarma
       </span>
       <h1 className="font-display text-2xl font-semibold text-ink">Página no encontrada</h1>
-      <p className="text-sm text-muted">La página que buscás no existe o cambió de dirección.</p>
+      <p className="text-sm text-muted">La página que buscas no existe o cambió de dirección.</p>
       <Link
         href="/"
         className="rounded-xl bg-accent px-5 py-2.5 font-semibold text-white transition hover:bg-accent-ink"

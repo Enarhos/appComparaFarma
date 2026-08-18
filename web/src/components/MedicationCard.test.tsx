@@ -65,7 +65,7 @@ describe("MedicationCard", () => {
   it("shows the savings versus the most expensive pharmacy", () => {
     render(<MedicationCard medication={medication} />);
 
-    expect(screen.getByText(/ahorrás \$549/)).toBeTruthy();
+    expect(screen.getByText(/ahorras \$549/)).toBeTruthy();
   });
 
   it("links to the detail/history page for the medication's slug", () => {

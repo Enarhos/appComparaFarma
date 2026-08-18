@@ -19,7 +19,7 @@ export default function GlobalError({ error, reset }: Props) {
       </span>
       <h1 className="font-display text-2xl font-semibold text-ink">Algo salió mal</h1>
       <p className="text-sm text-muted">
-        Tuvimos un problema inesperado de nuestro lado. Podés intentar de nuevo o volver más tarde.
+        Tuvimos un problema inesperado de nuestro lado. Puedes intentar de nuevo o volver más tarde.
       </p>
       <button
         onClick={reset}

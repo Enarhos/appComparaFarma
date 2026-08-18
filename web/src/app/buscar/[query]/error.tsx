@@ -17,7 +17,7 @@ export default function SearchError({ error, reset }: Props) {
       <div className="rounded-xl border border-red-200 bg-red-50 p-6 text-center">
         <p className="font-display text-lg font-semibold text-ink">No pudimos cargar esta búsqueda</p>
         <p className="mt-1 text-sm text-red-700">
-          Puede ser un problema temporal de conexión. Intentá de nuevo en unos segundos.
+          Puede ser un problema temporal de conexión. Intenta de nuevo en unos segundos.
         </p>
         <button
           onClick={reset}
