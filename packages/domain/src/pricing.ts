@@ -84,6 +84,9 @@ export function toMedicationResult(product: ScrapedProduct, pharmacySlug: Pharma
     structuredBrand: product.laboratory,
     name: product.name,
     onlineUrl: product.onlineUrl,
+    // FASE P1 (hardening) — permite la guardia "principio activo no es
+    // marca" en resolveCommercialIdentity (ver commercialIdentity.ts).
+    matchKey: key,
   });
 
   return {

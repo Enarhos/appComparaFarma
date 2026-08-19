@@ -20,6 +20,7 @@ export {
   resolveCommercialIdentity,
   normalizeBrandToken,
   extractBrandFromUrl,
+  isPlausibleCommercialIdentity,
   bioequivalenceKey,
   presentationKey,
   UNKNOWN_COMMERCIAL_IDENTITY,
@@ -28,4 +29,5 @@ export {
   type CommercialIdentityInput,
   type CommercialIdentityResult,
   type PresentationKeyInput,
+  type PlausibilityContext,
 } from "./commercialIdentity.js";
