@@ -44,10 +44,21 @@ export function medicationSlugIdentity(medication: {
   return `${medication.matchKey}|bio:${bioequivalenceKey(medication.isBioequivalent)}`;
 }
 
+/**
+ * FASE 1 — Product Identity (2026-08-19): cuando el `MedicationResult` trae
+ * `presentationKey` (matchKey + bioequivalencia + marca — ver
+ * commercialIdentity.ts en @comparafarma/domain), el slug se calcula sobre
+ * esa identidad completa, para que dos marcas distintas con el mismo
+ * matchKey+bio (ej. Ascend vs CuraeSpring de Omeprazol 20mg x30) generen
+ * slugs distintos y cada una resuelva a su propia ficha — ver
+ * resolveMedication.ts para la cadena de fallback hacia slugs antiguos.
+ */
 export function medicationSlugHash(medication: {
   matchKey: string;
   isBioequivalent?: boolean | null;
+  presentationKey?: string;
 }): string {
+  if (medication.presentationKey) return shortHash(medication.presentationKey);
   return shortHash(medicationSlugIdentity(medication));
 }
 

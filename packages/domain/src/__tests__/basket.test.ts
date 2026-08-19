@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import type { MedicationResult, PharmacyPrice, PharmacySlug } from "../types.js";
 import { computeAllInOneTotals } from "../basket.js";
+import { presentationKey } from "../commercialIdentity.js";
 
 // Tests de caracterización — congelan el comportamiento actual de
 // mobile/src/app/cart.tsx::calcTotals() y
@@ -34,6 +35,7 @@ function medication(matchKey: string, prices: PharmacyPrice[]): MedicationResult
     bestPrice: cheapest?.channels.effective ?? 0,
     bestPharmacy: cheapest?.pharmacySlug ?? "cruz-verde",
     imageUrl: null,
+    presentationKey: presentationKey({ matchKey, isBioequivalent: false, commercialIdentity: "unknown" }),
   };
 }
 

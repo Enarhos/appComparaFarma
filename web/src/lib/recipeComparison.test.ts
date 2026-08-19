@@ -27,6 +27,7 @@ function medication(matchKey: string, prices: PharmacyPrice[]): MedicationResult
     bestPrice: cheapest?.channels.effective ?? 0,
     bestPharmacy: cheapest?.pharmacySlug ?? "",
     imageUrl: null,
+    presentationKey: `${matchKey}|bio:false|brand:unknown`,
   };
 }
 

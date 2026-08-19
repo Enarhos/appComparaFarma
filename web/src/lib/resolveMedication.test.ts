@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import type { MedicationResult } from "@comparafarma/domain";
+import { bioequivalenceKey } from "@comparafarma/domain";
 import { buildMedicationSlug, medicationSlugHash, shortHash } from "@/lib/medicationSlug";
 import { resolveMedicationBySlug } from "./resolveMedication";
 
@@ -9,8 +10,14 @@ vi.mock("@/lib/search", () => ({
   searchMedications: (...args: unknown[]) => searchMedicationsMock(...args),
 }));
 
+/**
+ * `presentationKey` se recalcula SIEMPRE a partir de `matchKey`/`isBioequivalent`
+ * finales (después de aplicar `overrides`) — igual que en producción, donde
+ * nunca queda desincronizado del resto del objeto. Se puede forzar un valor
+ * explícito pasando `presentationKey` en `overrides`.
+ */
 function makeMedication(overrides: Partial<MedicationResult> = {}): MedicationResult {
-  return {
+  const base: MedicationResult = {
     matchKey: "paracetamol|500mg|16",
     canonicalName: "Paracetamol 500 mg 16 comprimidos",
     laboratory: "Andrómaco",
@@ -18,8 +25,15 @@ function makeMedication(overrides: Partial<MedicationResult> = {}): MedicationRe
     bestPrice: 291,
     bestPharmacy: "easyfarma",
     imageUrl: null,
+    presentationKey: "",
     prices: [],
     ...overrides,
+  };
+  return {
+    ...base,
+    presentationKey:
+      overrides.presentationKey ??
+      `${base.matchKey}|bio:${bioequivalenceKey(base.isBioequivalent)}|brand:unknown`,
   };
 }
 
@@ -128,5 +142,54 @@ describe("resolveMedicationBySlug", () => {
 
     const slug = `paracetamol-500-mg-16-comprimidos-${shortHash("paracetamol|500mg|16")}`;
     await expect(resolveMedicationBySlug(slug)).rejects.toThrow();
+  });
+
+  // ==========================================================================
+  // FASE 1 — Product Identity (2026-08-19). Caso real: Omeprazol 20mg x30
+  // Ascend vs CuraeSpring comparten matchKey+bio (auditoría P0 Omeprazol).
+  // ==========================================================================
+
+  it("Caso 8 — dos marcas con el mismo matchKey+bio generan slugs distintos y ambos resuelven", async () => {
+    const ascend = makeMedication({
+      matchKey: "omeprazol|20mg|30",
+      canonicalName: "Omeprazol 20 mg x 30 cap...",
+      isBioequivalent: false,
+      bestPrice: 1490,
+      presentationKey: "omeprazol|20mg|30|bio:false|brand:ascend",
+    });
+    const curaespring = makeMedication({
+      matchKey: "omeprazol|20mg|30",
+      canonicalName: "Omeprazol 20 mg 30 Cápsulas con Gránulos",
+      isBioequivalent: false,
+      bestPrice: 2690,
+      presentationKey: "omeprazol|20mg|30|bio:false|brand:curaespring",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [ascend, curaespring], error: null });
+
+    const ascendSlug = buildMedicationSlug(ascend);
+    const curaespringSlug = buildMedicationSlug(curaespring);
+
+    expect(ascendSlug).not.toBe(curaespringSlug);
+    expect(await resolveMedicationBySlug(ascendSlug)).toMatchObject({ status: "ok", medication: ascend });
+    expect(await resolveMedicationBySlug(curaespringSlug)).toMatchObject({ status: "ok", medication: curaespring });
+  });
+
+  it("Caso 9 — un slug legacy (matchKey a secas, sin bio ni marca) sigue resolviendo", async () => {
+    const ascend = makeMedication({
+      matchKey: "omeprazol|20mg|30",
+      canonicalName: "Omeprazol 20 mg x 30",
+      isBioequivalent: false,
+      bestPrice: 1490,
+      presentationKey: "omeprazol|20mg|30|bio:false|brand:ascend",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [ascend], error: null });
+
+    const legacySlug = `omeprazol-20-mg-x-30-${shortHash("omeprazol|20mg|30")}`;
+    const result = await resolveMedicationBySlug(legacySlug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(ascend);
+    }
   });
 });

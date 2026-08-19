@@ -105,11 +105,13 @@ Con indicador de turno:
 
 ## 3. `mergeDuplicates(results: MedicationResult[]): MedicationResult[]`
 
-**Propósito**: Agrupar resultados con el mismo `matchKey` en un solo `MedicationResult` con todos los precios.
+**Propósito**: Agrupar resultados **SAME_PRODUCT** en un solo `MedicationResult` con todos los precios.
+
+> **Actualización 2026-08-19 (FASE 1 — Product Identity):** la clave de agrupación dejó de ser `matchKey` a secas — ahora es `presentationKey` (`matchKey` + bioequivalencia + identidad comercial/marca). `matchKey` sigue siendo el algoritmo descrito abajo, sin cambios; lo que cambió es que ya no alcanza por sí solo para decidir si dos ofertas son el mismo producto comercial (ver auditoría P0 Omeprazol 20mg — Ascend/OPKO/CuraeSpring compartían `matchKey` y se fusionaban incorrectamente). Detalle completo, política de fusión y normalización de marca: `docs/technology/domain/COMMERCIAL_IDENTITY.md`. El resto de esta sección (elección de nombre canónico, fusión de precios) sigue aplicando igual, solo que ahora opera dentro de cada grupo de `presentationKey`.
 
 ### Algoritmo
 
-1. Agrupar resultados por `matchKey`
+1. Agrupar resultados por `presentationKey` (antes: `matchKey`; ver actualización arriba)
 2. Para cada grupo con más de un elemento:
    - **Elegir nombre canónico**: preferir el que tiene `laboratory` no-null, luego el de nombre más corto
    - **Fusionar precios**: combinar `prices[]` de todos los miembros, manteniendo el más reciente por farmacia (`fetchedAt`)
@@ -171,8 +173,9 @@ El prefijo de caché AsyncStorage en `mobile/src/lib/cache.ts` debe **incrementa
 | `v6` | Indicador turno día/noche en matchKey |
 | `v7`–`v9` | No documentados en este archivo — revisar historial de `mobile/src/lib/cache.ts` si hace falta el detalle |
 | `v10` | `matchKey` migrado a `@comparafarma/domain` (fusión de guiones y palabras cortas) |
+| `v11` | `MedicationResult` gana `presentationKey` (FASE 1 — Product Identity, 2026-08-19); una misma búsqueda puede devolver más resultados que antes al separar marcas distintas bajo el mismo `matchKey` — ver `docs/technology/domain/COMMERCIAL_IDENTITY.md` |
 
-Prefijo actual: `search_cache_v10_` (`mobile/src/lib/cache.ts`)
+Prefijo actual: `search_cache_v11_` (`mobile/src/lib/cache.ts`)
 
 ---
 

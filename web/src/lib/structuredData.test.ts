@@ -11,6 +11,7 @@ function makeMedication(): MedicationResult {
     bestPrice: 2290,
     bestPharmacy: "salcobrand",
     imageUrl: null,
+    presentationKey: "paracetamol|500mg|bio:true|brand:unknown",
     prices: [
       {
         pharmacySlug: "salcobrand",

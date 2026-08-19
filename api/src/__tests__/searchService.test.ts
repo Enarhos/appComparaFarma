@@ -105,13 +105,54 @@ describe("searchMedicationsDetailed", () => {
     expect(execution.results.map((result) => result.isBioequivalent)).toEqual([true, null, false]);
     expect(execution.results.filter((result) => result.isBioequivalent === true)).toHaveLength(1);
   });
+
+  it("FASE 1 — Product Identity: Ascend/CuraeSpring/OPKO comparten matchKey+bio pero NO se fusionan (auditoría P0 Omeprazol, 2026-08-19)", async () => {
+    mocks.searchFarmex.mockResolvedValue([
+      makeProduct("Omeprazol 20 mg x 30 cápsulas", 990, null, false, "OPKO"),
+    ]);
+    mocks.searchCruzVerde.mockResolvedValue([
+      makeProduct("Omeprazol 20 mg 30 Cápsulas con Gránulos", 2690, null, false, "CuraeSpring"),
+    ]);
+    mocks.searchEasyFarma.mockResolvedValue([
+      makeProduct(
+        "Omeprazol 20 mg x 30 cap...",
+        1490,
+        null,
+        false,
+        null,
+        "https://nuevo.easyfarma.cl/104320-omeprazol-20-mg-x-30-cap-lab-ascend.html"
+      ),
+    ]);
+    mocks.searchSalcobrand.mockResolvedValue([]);
+    mocks.searchAhumada.mockResolvedValue([]);
+    mocks.searchDrSimi.mockResolvedValue([]);
+    mocks.searchAraucoMed.mockResolvedValue([]);
+    mocks.searchEcoFarmacias.mockResolvedValue([]);
+    mocks.searchSermecoop.mockResolvedValue([]);
+
+    const execution = await searchMedicationsDetailed("omeprazol");
+
+    expect(execution.results).toHaveLength(3);
+    const byPharmacy = Object.fromEntries(
+      execution.results.map((r) => [r.prices[0]?.pharmacySlug, r])
+    );
+    expect(byPharmacy["farmex"].prices).toHaveLength(1);
+    expect(byPharmacy["cruz-verde"].prices).toHaveLength(1);
+    expect(byPharmacy["easyfarma"].prices).toHaveLength(1);
+    // matchKey se mantiene idéntico (identidad farmacológica amplia, sin cambios)
+    expect(new Set(execution.results.map((r) => r.matchKey)).size).toBe(1);
+    // presentationKey sí distingue las tres marcas
+    expect(new Set(execution.results.map((r) => r.presentationKey)).size).toBe(3);
+  });
 });
 
 function makeProduct(
   name: string,
   price: number,
   onlinePrice: number | null = null,
-  isBioequivalent: boolean | null = false
+  isBioequivalent: boolean | null = false,
+  laboratory: string | null = null,
+  onlineUrl: string | null = null
 ): ScrapedProduct {
   return {
     name,
@@ -121,9 +162,9 @@ function makeProduct(
     sbpayPrice: null,
     hasStock: true,
     hasOnlineDelivery: true,
-    onlineUrl: null,
+    onlineUrl,
     imageUrl: null,
-    laboratory: null,
+    laboratory,
     isBioequivalent,
   };
 }

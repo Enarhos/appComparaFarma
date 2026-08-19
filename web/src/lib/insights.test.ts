@@ -26,6 +26,7 @@ function makeMedication(prices: ReturnType<typeof makePrice>[]): MedicationResul
     bestPrice: Math.min(...prices.map((p) => p.channels.effective)),
     bestPharmacy: prices[0]?.pharmacySlug ?? "",
     imageUrl: null,
+    presentationKey: "paracetamol|500mg|bio:false|brand:unknown",
     prices: prices as MedicationResult["prices"],
   };
 }

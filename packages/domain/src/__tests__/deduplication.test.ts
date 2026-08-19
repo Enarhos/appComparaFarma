@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { MedicationResult, PharmacyPrice, PharmacySlug } from "../types.js";
 import { mergeDuplicates } from "../deduplication.js";
+import { presentationKey } from "../commercialIdentity.js";
 
 function makePharmacyPrice(pharmacySlug: PharmacySlug, effective: number): PharmacyPrice {
   return {
@@ -21,17 +22,20 @@ function makeMedResult(
   pharmacySlug: PharmacySlug,
   effective: number,
   imageUrl: string | null = null,
-  isBioequivalent: boolean | null = false
+  isBioequivalent: boolean | null = false,
+  commercialIdentity = "unknown",
+  laboratory: string | null = null
 ): MedicationResult {
   return {
     matchKey,
     canonicalName: "Test Medication",
-    laboratory: null,
+    laboratory,
     isBioequivalent,
     prices: [makePharmacyPrice(pharmacySlug, effective)],
     bestPrice: effective,
     bestPharmacy: pharmacySlug,
     imageUrl,
+    presentationKey: presentationKey({ matchKey, isBioequivalent, commercialIdentity }),
   };
 }
 
@@ -102,5 +106,64 @@ describe("mergeDuplicates", () => {
 
     expect(merged).toHaveLength(3);
     expect(merged.map((item) => item.isBioequivalent)).toEqual([null, true, false]);
+  });
+
+  // ==========================================================================
+  // FASE 1 — Product Identity (2026-08-19): SAME_PRODUCT vía presentationKey.
+  // Caso real: Omeprazol 20mg x30 Ascend / CuraeSpring / OPKO comparten
+  // matchKey + bio pero son productos comerciales distintos (auditoría P0).
+  // ==========================================================================
+
+  it("Caso 1 — Ascend vs CuraeSpring vs OPKO, mismo matchKey y bio, NO se fusionan", () => {
+    const ascend = makeMedResult("omeprazol|20mg|30", "easyfarma", 1490, null, false, "ascend", "Ascend");
+    const curaespring = makeMedResult("omeprazol|20mg|30", "cruz-verde", 2690, null, false, "curaespring", "CuraeSpring");
+    const opko = makeMedResult("omeprazol|20mg|30", "farmex", 990, null, false, "opko", "OPKO");
+
+    const merged = mergeDuplicates([ascend, curaespring, opko]);
+
+    expect(merged).toHaveLength(3);
+    const byPharmacy = Object.fromEntries(merged.map((m) => [m.prices[0].pharmacySlug, m]));
+    expect(byPharmacy["easyfarma"].prices).toHaveLength(1);
+    expect(byPharmacy["cruz-verde"].prices).toHaveLength(1);
+    expect(byPharmacy["farmex"].prices).toHaveLength(1);
+  });
+
+  it("Caso 4 — marca conocida vs unknown, mismo matchKey y bio, NO se fusionan", () => {
+    const known = makeMedResult("omeprazol|20mg|30", "easyfarma", 1490, null, false, "ascend", "Ascend");
+    const unknown = makeMedResult("omeprazol|20mg|30", "ecofarmacias", 750, null, false, "unknown", null);
+
+    const merged = mergeDuplicates([known, unknown]);
+
+    expect(merged).toHaveLength(2);
+  });
+
+  it("Caso 5 — dos ofertas 'unknown' sí se agrupan entre sí (limitación conocida y aceptada)", () => {
+    const a = makeMedResult("omeprazol|20mg|30", "salcobrand", 3000, null, false, "unknown", null);
+    const b = makeMedResult("omeprazol|20mg|30", "ahumada", 3200, null, false, "unknown", null);
+
+    const merged = mergeDuplicates([a, b]);
+
+    expect(merged).toHaveLength(1);
+    expect(merged[0].prices).toHaveLength(2);
+  });
+
+  it("Caso 6 — bio=true vs bio=false nunca se fusionan aunque compartan marca", () => {
+    const bio = makeMedResult("omeprazol|20mg|30", "dr-simi", 1560, null, true, "opko", "OPKO");
+    const nonBio = makeMedResult("omeprazol|20mg|30", "farmex", 990, null, false, "opko", "OPKO");
+
+    const merged = mergeDuplicates([bio, nonBio]);
+
+    expect(merged).toHaveLength(2);
+  });
+
+  it("Caso 7 — mismo producto comercial exacto en dos farmacias SÍ se fusiona y conserva ambos precios", () => {
+    const a = makeMedResult("omeprazol|20mg|30", "farmex", 990, null, false, "opko", "OPKO");
+    const b = makeMedResult("omeprazol|20mg|30", "salcobrand", 1200, null, false, "opko", "OPKO");
+
+    const merged = mergeDuplicates([a, b]);
+
+    expect(merged).toHaveLength(1);
+    expect(merged[0].prices).toHaveLength(2);
+    expect(merged[0].bestPrice).toBe(990);
   });
 });

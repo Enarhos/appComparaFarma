@@ -56,6 +56,7 @@ function makeMedication(overrides: Partial<MedicationResult> = {}): MedicationRe
     bestPrice: 291,
     bestPharmacy: "easyfarma",
     imageUrl: null,
+    presentationKey: "paracetamol|500mg|16|bio:true|brand:unknown",
     prices: [
       {
         pharmacySlug: "easyfarma",

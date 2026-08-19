@@ -1,5 +1,6 @@
 import type { MedicationResult, PharmacyPrice, PharmacySlug, ScrapedProduct } from "./types.js";
 import { matchKey } from "./matching.js";
+import { presentationKey, resolveCommercialIdentity } from "./commercialIdentity.js";
 
 export function effectivePrice(channels: {
   store: number;
@@ -74,8 +75,19 @@ export function sortByEffectivePrice(prices: PharmacyPrice[]): PharmacyPrice[] {
 
 export function toMedicationResult(product: ScrapedProduct, pharmacySlug: PharmacySlug, pharmacyName: string): MedicationResult {
   const price = toPharmacyPrice(product, pharmacySlug, pharmacyName);
+  const key = matchKey(product.name);
+  // FASE 1 — Product Identity (2026-08-19): la identidad comercial se resuelve
+  // por-oferta, antes de mergeDuplicates, con la misma evidencia (laboratory
+  // estructurado, luego URL) sin importar de qué farmacia venga — ver
+  // commercialIdentity.ts. `matchKey` NO cambia de significado ni de cálculo.
+  const identity = resolveCommercialIdentity({
+    structuredBrand: product.laboratory,
+    name: product.name,
+    onlineUrl: product.onlineUrl,
+  });
+
   return {
-    matchKey: matchKey(product.name),
+    matchKey: key,
     canonicalName: product.name,
     laboratory: product.laboratory,
     isBioequivalent: product.isBioequivalent,
@@ -83,5 +95,10 @@ export function toMedicationResult(product: ScrapedProduct, pharmacySlug: Pharma
     bestPrice: price.channels.effective,
     bestPharmacy: pharmacySlug,
     imageUrl: product.imageUrl,
+    presentationKey: presentationKey({
+      matchKey: key,
+      isBioequivalent: product.isBioequivalent,
+      commercialIdentity: identity.commercialIdentity,
+    }),
   };
 }

@@ -83,6 +83,24 @@ describe("buildMedicationSlug", () => {
   });
 });
 
+describe("medicationSlugHash — FASE 1 Product Identity (2026-08-19)", () => {
+  it("usa presentationKey cuando está presente, en vez de reconstruir matchKey+bio", () => {
+    const withPresentationKey = { matchKey: "omeprazol|20mg|30", isBioequivalent: false, presentationKey: "omeprazol|20mg|30|bio:false|brand:ascend" };
+    expect(medicationSlugHash(withPresentationKey)).toBe(shortHash("omeprazol|20mg|30|bio:false|brand:ascend"));
+  });
+
+  it("Ascend vs CuraeSpring (mismo matchKey+bio) producen hashes distintos vía presentationKey", () => {
+    const ascend = { matchKey: "omeprazol|20mg|30", isBioequivalent: false, presentationKey: "omeprazol|20mg|30|bio:false|brand:ascend" };
+    const curaespring = { matchKey: "omeprazol|20mg|30", isBioequivalent: false, presentationKey: "omeprazol|20mg|30|bio:false|brand:curaespring" };
+    expect(medicationSlugHash(ascend)).not.toBe(medicationSlugHash(curaespring));
+  });
+
+  it("sin presentationKey, cae al esquema previo (matchKey+bio) — compatibilidad con llamadas existentes", () => {
+    const legacyShape = { matchKey: "paracetamol|500mg|16", isBioequivalent: true };
+    expect(medicationSlugHash(legacyShape)).toBe(shortHash(medicationSlugIdentity(legacyShape)));
+  });
+});
+
 describe("parseMedicationSlug", () => {
   it("parses a valid slug into human part and hash", () => {
     const parsed = parseMedicationSlug("paracetamol-500-mg-16-comprimidos-3fe2cyydzh2fb");

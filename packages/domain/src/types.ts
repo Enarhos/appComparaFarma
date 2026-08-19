@@ -47,6 +47,16 @@ export interface MedicationResult {
    * Campo puramente aditivo — mobile/ y web/ no necesitan leerlo.
    */
   cfmId?: string | null;
+  /**
+   * Identidad comercial completa (`matchKey` + bioequivalencia + marca
+   * normalizada, ej. "omeprazol|20mg|30|bio:false|brand:ascend") — ver
+   * `commercialIdentity.ts` y docs/technology/domain/COMMERCIAL_IDENTITY.md.
+   * Es la clave que `mergeDuplicates` usa para decidir SAME_PRODUCT; `matchKey`
+   * sigue siendo la identidad farmacológica amplia usada por historial,
+   * alertas, favoritos, tracking y CFM-ID (sin cambios — FASE 1, 2026-08-19).
+   * Siempre calculado (nunca ausente); no reemplaza ni renombra `matchKey`.
+   */
+  presentationKey: string;
 }
 
 export interface ScrapedProduct {

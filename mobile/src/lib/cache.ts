@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { MedicationResult } from "@/lib/types";
 
-const CACHE_PREFIX = "search_cache_v10_"; // v10: matchKey migrado a @comparafarma/domain (hyphen+short-word merging)
+const CACHE_PREFIX = "search_cache_v11_"; // v11: MedicationResult gana presentationKey (FASE 1 Product Identity, 2026-08-19) — resultados por query pueden dividirse por marca
 const TTL_MS = 30 * 60 * 1000; // 30 min
 
 interface CacheEntry {

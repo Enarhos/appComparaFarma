@@ -3,6 +3,7 @@ import { searchMedications } from "@/lib/search";
 import {
   buildMedicationSlug,
   medicationSlugHash,
+  medicationSlugIdentity,
   parseMedicationSlug,
   queryFromSlug,
   shortHash,
@@ -48,12 +49,23 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
     throw new Error(`No se pudo resolver la ficha del medicamento: ${error}`);
   }
 
+  // Gen 3 (actual) — matchKey + bioequivalencia + marca (presentationKey).
   let matches = results.filter((result) => medicationSlugHash(result) === parsed.hash);
 
   if (matches.length === 0) {
-    const legacyMatches = results.filter((result) => shortHash(result.matchKey) === parsed.hash);
-    const humanMatches = legacyMatches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
-    matches = humanMatches.length > 0 ? humanMatches : legacyMatches;
+    // Gen 2 — matchKey + bioequivalencia, sin marca (esquema previo a FASE 1
+    // Product Identity, 2026-08-19). Preserva los slugs emitidos entre el fix
+    // de bioequivalencia y este cambio.
+    const gen2Matches = results.filter((result) => shortHash(medicationSlugIdentity(result)) === parsed.hash);
+    const gen2Human = gen2Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
+    matches = gen2Human.length > 0 ? gen2Human : gen2Matches;
+  }
+
+  if (matches.length === 0) {
+    // Gen 1 (legacy) — matchKey a secas, esquema original pre-bioequivalencia.
+    const gen1Matches = results.filter((result) => shortHash(result.matchKey) === parsed.hash);
+    const gen1Human = gen1Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
+    matches = gen1Human.length > 0 ? gen1Human : gen1Matches;
   }
 
   if (matches.length === 0) {

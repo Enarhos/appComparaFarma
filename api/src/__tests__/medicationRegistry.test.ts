@@ -21,6 +21,7 @@ function makeResult(matchKey: string, canonicalName = "Paracetamol 500 mg x16"):
     bestPrice: 1000,
     bestPharmacy: "cruz-verde",
     imageUrl: null,
+    presentationKey: `${matchKey}|bio:false|brand:chile`,
   };
 }
 

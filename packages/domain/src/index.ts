@@ -16,3 +16,16 @@ export { effectivePrice, toPharmacyPrice, toMedicationResult, sortByEffectivePri
 export { mergeDuplicates } from "./deduplication.js";
 export { computeAllInOneTotals, type PharmacyBasketTotal } from "./basket.js";
 export { computeSavings, type SavingsResult } from "./savings.js";
+export {
+  resolveCommercialIdentity,
+  normalizeBrandToken,
+  extractBrandFromUrl,
+  bioequivalenceKey,
+  presentationKey,
+  UNKNOWN_COMMERCIAL_IDENTITY,
+  type CommercialIdentitySource,
+  type CommercialIdentityConfidence,
+  type CommercialIdentityInput,
+  type CommercialIdentityResult,
+  type PresentationKeyInput,
+} from "./commercialIdentity.js";

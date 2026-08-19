@@ -42,6 +42,7 @@ function medication(matchKey: string, canonicalName: string, prices: PharmacyPri
     bestPrice: prices[0]?.channels.effective ?? 0,
     bestPharmacy: prices[0]?.pharmacySlug ?? "",
     imageUrl: null,
+    presentationKey: `${matchKey}|bio:false|brand:unknown`,
   };
 }
 
