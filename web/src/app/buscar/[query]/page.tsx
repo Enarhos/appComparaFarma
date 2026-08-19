@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { searchMedications } from "@/lib/search";
-import { MedicationCard } from "@/components/MedicationCard";
+import { MedicationResultsGroup } from "@/components/MedicationResultsGroup";
+import { groupMedicationResultsByMatchKey } from "@/lib/groupMedicationResults";
 import { SearchBox } from "@/components/SearchBox";
 import { RecipeLinkBadge } from "@/components/RecipeLinkBadge";
 import { buildMedicationJsonLd, toJsonLdScript } from "@/lib/structuredData";
@@ -27,6 +28,7 @@ export default async function SearchPage({ params }: PageProps) {
   const { query } = await params;
   const term = decodeTerm(query);
   const { results, error } = await searchMedications(term);
+  const groups = groupMedicationResultsByMatchKey(results);
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
@@ -42,8 +44,9 @@ export default async function SearchPage({ params }: PageProps) {
       </h1>
       {results.length > 0 && (
         <p className="mt-1 text-sm text-muted">
-          {results.length} medicamento{results.length !== 1 ? "s" : ""} encontrado
-          {results.length !== 1 ? "s" : ""}
+          {groups.length} {groups.length === 1 ? "presentación encontrada" : "presentaciones encontradas"}
+          {" · "}
+          {results.length} {results.length === 1 ? "opción comercial" : "opciones comerciales"}
         </p>
       )}
 
@@ -71,8 +74,8 @@ export default async function SearchPage({ params }: PageProps) {
 
       {results.length > 0 && (
         <div className="mt-6 flex flex-col gap-4">
-          {results.map((medication) => (
-            <MedicationCard key={medication.matchKey} medication={medication} />
+          {groups.map((group) => (
+            <MedicationResultsGroup key={group.matchKey} group={group} />
           ))}
         </div>
       )}
