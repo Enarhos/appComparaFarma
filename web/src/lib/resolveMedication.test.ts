@@ -190,6 +190,88 @@ describe("resolveMedicationBySlug", () => {
     expect(result.status).toBe("ok");
     if (result.status === "ok") {
       expect(result.medication).toBe(ascend);
+      expect(result.needsRedirect).toBe(true);
     }
+  });
+
+  // ==========================================================================
+  // Bugfix 2026-08-19 — OPKO_DETAIL_REDIRECT_LOOP (ficha de Omeprazol/OPKO
+  // colgada indefinidamente en "Cargando ficha del medicamento..."). Ver
+  // informe de diagnóstico. Causa raíz: mergeDuplicates() en
+  // packages/domain/src/deduplication.ts puede elegir un canonicalName
+  // distinto entre una búsqueda y la siguiente para el MISMO presentationKey
+  // (según qué farmacias respondieron a tiempo, Promise.allSettled). Antes
+  // del fix, page.tsx redirigía SIEMPRE que canonicalSlug !== slug, aunque
+  // la diferencia fuera puramente el texto legible (mismo hash Gen 3) — eso
+  // producía un loop infinito de permanentRedirect. Estos casos deben FALLAR
+  // sin el campo/lógica needsRedirect.
+  // ==========================================================================
+
+  it("Caso 10 (OPKO) — match Gen 3 (presentationKey) con canonicalName distinto al de cuando se generó el slug NO pide redirect", async () => {
+    // El slug fue generado en una búsqueda anterior con esta variante de texto...
+    const opkoAtSlugTime = makeMedication({
+      matchKey: "omeprazol|20mg|30",
+      canonicalName: "Omeprazol 20 mg 30 Cápsulas OPKO",
+      isBioequivalent: false,
+      bestPrice: 1990,
+      presentationKey: "omeprazol|20mg|30|bio:false|brand:opko",
+    });
+    const requestedSlug = buildMedicationSlug(opkoAtSlugTime);
+
+    // ...pero cuando se resuelve, mergeDuplicates() esta vez produjo OTRO
+    // texto de canonicalName para el MISMO presentationKey (mismo hash Gen 3).
+    const opkoAtResolveTime = makeMedication({
+      matchKey: "omeprazol|20mg|30",
+      canonicalName: "Omeprazol 20 mg x 30 comprimidos - OPKO",
+      isBioequivalent: false,
+      bestPrice: 1990,
+      presentationKey: "omeprazol|20mg|30|bio:false|brand:opko",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [opkoAtResolveTime], error: null });
+
+    const result = await resolveMedicationBySlug(requestedSlug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(opkoAtResolveTime);
+      // El hash (identidad Gen 3) coincide, pero el texto legible difiere ->
+      // canonicalSlug distinto del slug pedido, PERO sin pedir redirect.
+      expect(result.canonicalSlug).not.toBe(requestedSlug);
+      expect(result.needsRedirect).toBe(false);
+    }
+  });
+
+  it("Caso 11 (OPKO) — el ping-pong de canonicalName entre dos búsquedas ya no dispara redirect en ninguna dirección", async () => {
+    const variantA = makeMedication({
+      matchKey: "omeprazol|20mg|30",
+      canonicalName: "Omeprazol 20 mg 30 Cápsulas OPKO",
+      isBioequivalent: false,
+      bestPrice: 1990,
+      presentationKey: "omeprazol|20mg|30|bio:false|brand:opko",
+    });
+    const variantB = makeMedication({
+      matchKey: "omeprazol|20mg|30",
+      canonicalName: "Omeprazol 20 mg x 30 comprimidos - OPKO",
+      isBioequivalent: false,
+      bestPrice: 1990,
+      presentationKey: "omeprazol|20mg|30|bio:false|brand:opko",
+    });
+    const slugA = buildMedicationSlug(variantA);
+    const slugB = buildMedicationSlug(variantB);
+    expect(slugA).not.toBe(slugB); // mismo hash, distinta parte legible
+
+    // Hop 1: se pide slugA, pero la búsqueda esta vez devuelve la variante B.
+    searchMedicationsMock.mockResolvedValueOnce({ results: [variantB], error: null });
+    const hop1 = await resolveMedicationBySlug(slugA);
+    expect(hop1.status).toBe("ok");
+    if (hop1.status === "ok") expect(hop1.needsRedirect).toBe(false);
+
+    // Hop 2: se pide slugB, y la búsqueda esta vez devuelve la variante A.
+    // Sin el fix, esto habría disparado un permanentRedirect de vuelta a slugA,
+    // y viceversa indefinidamente. Con el fix, ninguno de los dos hops pide redirect.
+    searchMedicationsMock.mockResolvedValueOnce({ results: [variantA], error: null });
+    const hop2 = await resolveMedicationBySlug(slugB);
+    expect(hop2.status).toBe("ok");
+    if (hop2.status === "ok") expect(hop2.needsRedirect).toBe(false);
   });
 });

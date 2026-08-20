@@ -90,9 +90,15 @@ export default async function MedicationDetailPage({ params }: PageProps) {
     throw new Error("Encontramos más de un medicamento para este enlace.");
   }
 
-  const { medication, canonicalSlug } = resolution;
+  const { medication, canonicalSlug, needsRedirect } = resolution;
 
-  if (canonicalSlug !== slug) {
+  // Solo redirige cuando el slug pedido usa un esquema de hash desactualizado
+  // (Gen 1/Gen 2, ver resolveMedication.ts). Si “canonicalSlug” difiere de
+  // “slug” unicamente en su parte legible (misma identidad Gen 3, distinto
+  // texto por inestabilidad de canonicalName entre busquedas — ver
+  // deduplication.ts), NO se redirige: hacerlo producia un loop infinito
+  // (bug real, Omeprazol 20mg x30 Opko — ver informe de diagnostico).
+  if (needsRedirect) {
     permanentRedirect(`/medicamento/${canonicalSlug}`);
   }
 

@@ -106,9 +106,14 @@ describe("MedicationDetailPage", () => {
     expect(notFoundMock).not.toHaveBeenCalled();
   });
 
-  it("redirects (308/permanent) to the canonical slug when the requested slug is outdated", async () => {
+  it("redirects (308/permanent) to the canonical slug when the requested slug uses a legacy hash scheme (needsRedirect: true)", async () => {
     const medication = makeMedication();
-    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG });
+    resolveMedicationBySlugMock.mockResolvedValue({
+      status: "ok",
+      medication,
+      canonicalSlug: CANONICAL_SLUG,
+      needsRedirect: true,
+    });
 
     await expect(
       MedicationDetailPage({ params: Promise.resolve({ slug: "paracetamol-500mg-nombre-viejo" }) })
@@ -120,9 +125,36 @@ describe("MedicationDetailPage", () => {
 
   it("renders without redirecting when the requested slug is already canonical", async () => {
     const medication = makeMedication();
-    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG });
+    resolveMedicationBySlugMock.mockResolvedValue({
+      status: "ok",
+      medication,
+      canonicalSlug: CANONICAL_SLUG,
+      needsRedirect: false,
+    });
 
     const result = await MedicationDetailPage({ params: Promise.resolve({ slug: CANONICAL_SLUG }) });
+
+    expect(permanentRedirectMock).not.toHaveBeenCalled();
+    expect(notFoundMock).not.toHaveBeenCalled();
+    expect(result).toBeTruthy();
+  });
+
+  it("bugfix OPKO_DETAIL_REDIRECT_LOOP — does NOT redirect when canonicalSlug differs from the requested slug but needsRedirect is false (cosmetic canonicalName drift, same Gen 3 hash)", async () => {
+    const medication = makeMedication();
+    // canonicalSlug distinto del slug pedido, pero needsRedirect: false ->
+    // esto modela el caso real Omeprazol/OPKO (mismo presentationKey, texto
+    // legible distinto entre búsquedas). Antes del fix, page.tsx comparaba
+    // canonicalSlug !== slug y redirigía siempre, produciendo un loop infinito.
+    resolveMedicationBySlugMock.mockResolvedValue({
+      status: "ok",
+      medication,
+      canonicalSlug: "omeprazol-20-mg-x-30-comprimidos-opko-abcd1234",
+      needsRedirect: false,
+    });
+
+    const result = await MedicationDetailPage({
+      params: Promise.resolve({ slug: "omeprazol-20-mg-30-capsulas-opko-abcd1234" }),
+    });
 
     expect(permanentRedirectMock).not.toHaveBeenCalled();
     expect(notFoundMock).not.toHaveBeenCalled();
@@ -133,7 +165,7 @@ describe("MedicationDetailPage", () => {
 describe("generateMetadata", () => {
   it("sets alternates.canonical to the canonical slug, not the requested one", async () => {
     const medication = makeMedication();
-    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG });
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG, needsRedirect: false });
 
     const metadata = await generateMetadata({ params: Promise.resolve({ slug: "un-slug-viejo-distinto" }) });
 
@@ -143,7 +175,7 @@ describe("generateMetadata", () => {
 
   it("sets robots to noindex,follow when the medication resolves", async () => {
     const medication = makeMedication();
-    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG });
+    resolveMedicationBySlugMock.mockResolvedValue({ status: "ok", medication, canonicalSlug: CANONICAL_SLUG, needsRedirect: false });
 
     const metadata = await generateMetadata({ params: Promise.resolve({ slug: CANONICAL_SLUG }) });
 

@@ -13,7 +13,7 @@ import {
 export type ResolveMedicationResult =
   | { status: "not-found" }
   | { status: "ambiguous"; matches: MedicationResult[] }
-  | { status: "ok"; medication: MedicationResult; canonicalSlug: string };
+  | { status: "ok"; medication: MedicationResult; canonicalSlug: string; needsRedirect: boolean };
 
 /**
  * Resuelve un slug de /medicamento/[slug] a un MedicationResult, sin ninguna
@@ -37,6 +37,23 @@ export type ResolveMedicationResult =
  * variantes del mismo matchKey en la misma búsqueda), NUNCA se elige un
  * ganador por precio, farmacia u orden — se reporta como "ambiguous" y
  * queda registrado en los logs para investigar.
+ *
+ * `needsRedirect` (bugfix 2026-08-19 — ver OPKO_DETAIL_REDIRECT_LOOP):
+ * indica si `/medicamento/[slug]/page.tsx` debe emitir un `permanentRedirect`
+ * hacia `canonicalSlug`. Es `true` SOLO cuando el slug pedido usa un esquema
+ * de hash antiguo (Gen 1/Gen 2) y necesita migrar al esquema vigente (Gen 3,
+ * `presentationKey`). Es `false` cuando el slug pedido YA matcheó por el
+ * hash Gen 3 vigente, aun si `canonicalSlug` difiere en su parte legible de
+ * `slug` — esa diferencia es puramente cosmética (viene de `canonicalName`,
+ * que `mergeDuplicates` en `packages/domain` puede resolver a un texto
+ * distinto entre una búsqueda y la siguiente cuando dos o más farmacias
+ * comparten el mismo `presentationKey` y su disponibilidad varía entre
+ * llamadas — ver `deduplication.ts`). Redirigir en ese caso, sin este fix,
+ * producía un loop infinito: cada slug se resolvía a un `canonicalSlug` con
+ * OTRO texto legible (mismo hash), disparando otro `permanentRedirect` hacia
+ * atrás indefinidamente (bug real, reproducido con Omeprazol 20mg x30 Opko;
+ * ver informe de diagnóstico). Nunca se cambia `canonicalSlug` en sí —
+ * `generateMetadata` sigue usándolo tal cual para el `<link rel="canonical">`.
  */
 export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedicationResult> {
   const parsed = parseMedicationSlug(slug);
@@ -51,6 +68,7 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
 
   // Gen 3 (actual) — matchKey + bioequivalencia + marca (presentationKey).
   let matches = results.filter((result) => medicationSlugHash(result) === parsed.hash);
+  let needsRedirect = false;
 
   if (matches.length === 0) {
     // Gen 2 — matchKey + bioequivalencia, sin marca (esquema previo a FASE 1
@@ -59,6 +77,7 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
     const gen2Matches = results.filter((result) => shortHash(medicationSlugIdentity(result)) === parsed.hash);
     const gen2Human = gen2Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
     matches = gen2Human.length > 0 ? gen2Human : gen2Matches;
+    if (matches.length > 0) needsRedirect = true;
   }
 
   if (matches.length === 0) {
@@ -66,6 +85,7 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
     const gen1Matches = results.filter((result) => shortHash(result.matchKey) === parsed.hash);
     const gen1Human = gen1Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
     matches = gen1Human.length > 0 ? gen1Human : gen1Matches;
+    if (matches.length > 0) needsRedirect = true;
   }
 
   if (matches.length === 0) {
@@ -84,5 +104,5 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
   }
 
   const medication = matches[0];
-  return { status: "ok", medication, canonicalSlug: buildMedicationSlug(medication) };
+  return { status: "ok", medication, canonicalSlug: buildMedicationSlug(medication), needsRedirect };
 }
