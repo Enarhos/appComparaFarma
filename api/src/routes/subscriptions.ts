@@ -18,6 +18,7 @@ import {
   getInvoicePeriodEnd,
   type FlowConfig,
 } from "../lib/adapters/flowAdapter.js";
+import { isDeletionPending } from "../lib/accountDeletionDb.js";
 
 // Subscription Platform — Fase 1 (RFC-003, CF-115) + Fase 2 corregida
 // (RFC-005, ADR-0004, CF-124 — reemplaza a RFC-004/Stripe, ver ambos
@@ -82,6 +83,10 @@ async function resolveUser(req: RequestLike): Promise<{ id: string; email: strin
   try {
     const { data, error } = await supabase.auth.getUser(token);
     if (error || !data.user) return null;
+    // GATE 3 (AUTH-DELETE-01, deletion_pending obligatorio): una cuenta con
+    // un borrado en curso no puede seguir operando normalmente — ver
+    // accountDeletionDb.ts para el ciclo de vida completo.
+    if (await isDeletionPending(data.user.id)) return null;
     return { id: data.user.id, email: data.user.email ?? null };
   } catch (err) {
     console.warn("resolveUser threw", err);

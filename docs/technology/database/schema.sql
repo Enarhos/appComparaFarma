@@ -338,3 +338,68 @@ create table if not exists flow_customers (
   updated_at timestamptz not null default now()
 );
 alter table flow_customers enable row level security;
+
+-- ============================================================
+-- Account Deletion — AUTH-DELETE-01 (2026-08-21) — GATE_3_AUTH_DELETE_01
+-- (informe de diseño + gates CTO). Resuelve USER_DOMAIN_MODEL.md, Decisión
+-- Pendiente #5 ("Retención tras dejar de ser Usuario").
+--
+-- ⚠️ NO EJECUTADO TODAVÍA EN PRODUCCIÓN — correr esta sección a mano en el
+-- SQL Editor de Supabase antes de desplegar api/src/routes/account.ts.
+-- Es CODE_READY, no CONFIG_READY/DEPLOYED (ver CLAUDE.md §6) hasta que
+-- alguien con acceso al proyecto la corra y lo confirme.
+--
+-- `account_deletion_requests` — control transitorio del ciclo de vida
+-- ACTIVE -> DELETION_PENDING -> DELETED. No es un histórico de cuentas
+-- eliminadas: una eliminación exitosa BORRA su propia fila de control (ver
+-- accountDeletionDb.ts) — nunca queda un registro personal permanente
+-- después del cierre (Ley 21.719 — no conservar "por si acaso").
+-- ============================================================
+
+create table if not exists account_deletion_requests (
+  id bigint generated always as identity primary key,
+  user_id uuid not null,
+  email text not null,
+  status text not null default 'pending', -- 'pending' es el único valor vigente: el éxito borra la fila, no la marca 'completed'.
+  requested_at timestamptz not null default now(),
+  last_attempt_at timestamptz not null default now(),
+  last_error text,
+  steps_completed jsonb not null default '[]'
+);
+create unique index if not exists account_deletion_requests_user_id_idx
+  on account_deletion_requests (user_id);
+alter table account_deletion_requests enable row level security;
+-- Sin policies para el rol autenticado — mismo patrón que subscriptions/
+-- flow_customers: solo api/ (SUPABASE_SECRET_KEY) lee y escribe.
+
+-- `delete_account_data` — limpieza atómica de `public.*` para una cuenta.
+-- Política activa (GATE 2, retención financiera): DELETE por defecto sobre
+-- subscription_events — no existe en este repositorio ningún fundamento
+-- legal/tributario documentado que justifique conservar `raw_payload`, así
+-- que se elimina junto con el resto (a diferencia del `on delete set null`
+-- de la FK, que solo protege contra un cascade accidental por otras vías,
+-- no expresa una decisión de retención). Si en el futuro se documenta un
+-- fundamento real (ver GATE_3_AUTH_DELETE_01_REPORT.md, sección
+-- OPEN_LEGAL_QUESTIONS), este es el único lugar que habría que cambiar.
+--
+-- Nunca toca price_history, pharmacy_clicks, medications,
+-- medication_match_key_aliases, subscription_plans ni app_config —
+-- principio rector: "eliminar identidad personal, preservar inteligencia
+-- farmacéutica no personal." (ver accountDeletion.sql.test.ts, que audita
+-- este texto para garantizarlo).
+create or replace function public.delete_account_data(p_user_id uuid, p_email text)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  delete from subscription_events
+    where subscription_id in (select id from subscriptions where user_id = p_user_id);
+  delete from flow_customers where user_id = p_user_id;
+  delete from subscriptions where user_id = p_user_id;
+  delete from email_alerts where lower(email) = lower(p_email);
+  delete from feedback where email is not null and lower(email) = lower(p_email);
+  delete from profiles where id = p_user_id;
+end;
+$$;

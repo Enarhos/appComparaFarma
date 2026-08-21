@@ -12,6 +12,7 @@ const mocks = vi.hoisted(() => ({
   findFlowCustomerByFlowCustomerId: vi.fn(),
   upsertFlowCustomer: vi.fn(),
   getUser: vi.fn(),
+  isDeletionPending: vi.fn(),
 }));
 
 vi.mock("../services/subscriptionService.js", () => ({
@@ -30,6 +31,9 @@ vi.mock("../lib/subscriptionsDb.js", () => ({
 }));
 vi.mock("../lib/supabaseClient.js", () => ({
   supabase: { auth: { getUser: mocks.getUser } },
+}));
+vi.mock("../lib/accountDeletionDb.js", () => ({
+  isDeletionPending: mocks.isDeletionPending,
 }));
 
 import { handleSubscriptionsRoute } from "../routes/subscriptions.js";
@@ -65,6 +69,7 @@ function jsonBody(res: ReturnType<typeof makeRes>) {
 
 beforeEach(() => {
   vi.resetAllMocks();
+  mocks.isDeletionPending.mockResolvedValue(false);
   delete process.env.GOOGLE_RTDN_SECRET;
   delete process.env.API_SECRET_KEY;
   delete process.env.WEB_APP_URL;
@@ -111,6 +116,19 @@ describe("action=me", () => {
     expect(res.statusCode).toBe(200);
     expect(mocks.getEntitlement).toHaveBeenCalledWith("user-1");
     expect(jsonBody(res)).toEqual({ active: true, planId: "cortesia", benefits: ["premium"], expiresAt: null });
+  });
+
+  it("con cuenta en DELETION_PENDING (AUTH-DELETE-01, GATE 3) devuelve 401 aunque el token sea válido", async () => {
+    mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1" } }, error: null });
+    mocks.isDeletionPending.mockResolvedValue(true);
+
+    const req = makeReq({ url: "/api/subscriptions?action=me", headers: { authorization: "Bearer good-token" } });
+    const res = makeRes();
+
+    await handleSubscriptionsRoute(req, res);
+
+    expect(res.statusCode).toBe(401);
+    expect(mocks.getEntitlement).not.toHaveBeenCalled();
   });
 });
 
