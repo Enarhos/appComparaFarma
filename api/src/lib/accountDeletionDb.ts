@@ -40,6 +40,41 @@ export async function isDeletionPending(userId: string): Promise<boolean> {
   }
 }
 
+export interface DeletionRequestRow {
+  email: string;
+  stepsCompleted: string[];
+}
+
+/**
+ * Lee la fila de control pendiente de un usuario, si existe — es la base
+ * del retry/resume (CTO fix, ver GATE_3_AUTH_DELETE_RETRY_REPORT.md):
+ * `steps_completed` dice qué pasos ya se completaron (hoy el único valor
+ * posible es `["public_cleanup"]`), y `email` es el correo con el que se
+ * inició ESTA solicitud de borrado — se reutiliza en el resume en vez de
+ * releer el JWT, para que un mismo intento de borrado siempre limpie
+ * exactamente el mismo email de principio a fin.
+ */
+export async function getDeletionRequest(userId: string): Promise<DeletionRequestRow | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase
+      .from(REQUESTS_TABLE)
+      .select("email, steps_completed")
+      .eq("user_id", userId)
+      .eq("status", "pending")
+      .maybeSingle();
+    if (error) {
+      console.warn("account_deletion_requests getDeletionRequest failed", error.message);
+      return null;
+    }
+    if (!data) return null;
+    return { email: data.email as string, stepsCompleted: (data.steps_completed as string[]) ?? [] };
+  } catch (err) {
+    console.warn("account_deletion_requests getDeletionRequest threw", err);
+    return null;
+  }
+}
+
 /** Marca la cuenta como DELETION_PENDING. Idempotente: una segunda llamada mientras ya está pendiente solo actualiza `last_attempt_at`. */
 export async function markDeletionPending(userId: string, email: string): Promise<void> {
   if (!supabase) return;

@@ -1,6 +1,5 @@
 import { getHeader, getSearchParam, json, type RequestLike, type ResponseLike } from "../lib/http.js";
 import { supabase } from "../lib/supabaseClient.js";
-import { isDeletionPending } from "../lib/accountDeletionDb.js";
 import { reauthenticateWithPassword, decodeJwtIssuedAt } from "../lib/reauth.js";
 import { deleteAccount } from "../services/accountDeletionService.js";
 
@@ -45,11 +44,17 @@ interface AuthenticatedUser {
 /**
  * Resuelve la identidad real desde el JWT validado por Supabase (nunca
  * desde un userId/email enviado por el cliente — sección 5, regla
- * obligatoria). Devuelve `null` también si la cuenta ya está
- * DELETION_PENDING (sección 4: una cuenta pendiente no puede operar
- * normalmente, y "iniciar el borrado de nuevo" cuenta como operar).
+ * obligatoria).
+ *
+ * A propósito NO rechaza cuentas DELETION_PENDING (CTO fix,
+ * GATE_3_AUTH_DELETE_RETRY_REPORT.md — root cause del bug original: este
+ * es precisamente el único endpoint que una cuenta pendiente DEBE poder
+ * seguir llamando, para poder reanudar/retry un borrado que quedó a
+ * medio camino). El resto de endpoints (ej. `subscriptions.ts`) usan su
+ * propio resolutor que sí bloquea — ver ese archivo para el equivalente
+ * "resolveActiveUser".
  */
-async function resolveUser(req: RequestLike): Promise<AuthenticatedUser | null> {
+async function resolveAuthenticatedUser(req: RequestLike): Promise<AuthenticatedUser | null> {
   const authHeader = getHeader(req, "authorization");
   const token = authHeader?.replace(/^Bearer\s+/i, "").trim();
   if (!token || !supabase) return null;
@@ -57,11 +62,10 @@ async function resolveUser(req: RequestLike): Promise<AuthenticatedUser | null> 
   try {
     const { data, error } = await supabase.auth.getUser(token);
     if (error || !data.user) return null;
-    if (await isDeletionPending(data.user.id)) return null;
     const provider = typeof data.user.app_metadata?.provider === "string" ? data.user.app_metadata.provider : null;
     return { id: data.user.id, email: data.user.email ?? null, provider, token };
   } catch (err) {
-    console.warn("account.resolveUser threw", err);
+    console.warn("account.resolveAuthenticatedUser threw", err);
     return null;
   }
 }
@@ -109,7 +113,7 @@ async function verifyReauthentication(
 }
 
 async function handleDelete(req: RequestLike, res: ResponseLike): Promise<void> {
-  const user = await resolveUser(req);
+  const user = await resolveAuthenticatedUser(req);
   if (!user) {
     json(res, 401, { error: "No autorizado." }, req);
     return;

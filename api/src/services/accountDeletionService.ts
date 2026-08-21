@@ -1,6 +1,7 @@
 import { supabase } from "../lib/supabaseClient.js";
 import { findActiveSubscription } from "../lib/subscriptionsDb.js";
 import {
+  getDeletionRequest,
   markDeletionPending,
   clearDeletionPending,
   markDeletionFailed,
@@ -63,29 +64,50 @@ async function deleteAuthUserWithRetry(userId: string): Promise<{ ok: true } | {
 }
 
 /**
- * Punto de entrada único. Asume que la identidad y la reautenticación ya
- * fueron verificadas por el caller (routes/account.ts) — este servicio no
- * vuelve a resolver el JWT, recibe userId/email ya autenticados.
+ * Punto de entrada único — cubre tanto el intento inicial como el
+ * retry/resume (CTO fix, GATE_3_AUTH_DELETE_RETRY_REPORT.md). Asume que la
+ * identidad y la reautenticación ya fueron verificadas por el caller
+ * (routes/account.ts, vía `resolveAuthenticatedUser` — que a propósito NO
+ * bloquea cuentas DELETION_PENDING, porque este es precisamente el
+ * endpoint que debe seguir siendo alcanzable para poder reanudar).
+ *
+ * Si ya existe una solicitud pendiente para este usuario, esto es un
+ * retry: no se vuelve a evaluar el bloqueo por suscripción activa (ya se
+ * pasó esa puerta en el intento que dejó la fila pendiente — si hubiera
+ * bloqueado, esa fila ya se habría borrado) y no se repite `public_cleanup`
+ * si `steps_completed` ya lo registra. El email usado es el de la fila de
+ * control (el mismo con el que se inició esta solicitud), no uno nuevo del
+ * JWT — determinismo de qué se está borrando de principio a fin.
  */
 export async function deleteAccount(userId: string, email: string): Promise<DeleteAccountOutcome> {
-  await markDeletionPending(userId, email);
+  const existing = await getDeletionRequest(userId);
+  const effectiveEmail = existing?.email ?? email;
+  const cleanupAlreadyDone = existing?.stepsCompleted.includes("public_cleanup") ?? false;
 
-  // Sección 9 — no romper el motor de suscripciones. Una suscripción activa
-  // con un proveedor externo real (google_play/flow) no puede cancelarse
-  // desde este backend hoy (no existe ese mecanismo en el proyecto — ver
-  // GATE_3_AUTH_DELETE_01_REPORT.md sección I) — no se inventa una llamada
-  // destructiva que no existe. `manual` (cortesía) no tiene obligación
-  // externa y sí puede cerrarse localmente como parte de la limpieza normal.
-  const activeSubscription = await findActiveSubscription(userId);
-  if (activeSubscription && activeSubscription.provider !== "manual") {
-    await clearDeletionPending(userId);
-    return { status: "blocked_active_subscription", provider: activeSubscription.provider };
+  if (!existing) {
+    await markDeletionPending(userId, effectiveEmail);
+
+    // Sección 9 — no romper el motor de suscripciones. Una suscripción
+    // activa con un proveedor externo real (google_play/flow) no puede
+    // cancelarse desde este backend hoy (no existe ese mecanismo en el
+    // proyecto — ver GATE_3_AUTH_DELETE_01_REPORT.md sección I) — no se
+    // inventa una llamada destructiva que no existe. `manual` (cortesía)
+    // no tiene obligación externa y sí puede cerrarse localmente. Este
+    // chequeo solo corre en el intento inicial: si un retry llegó hasta
+    // acá es porque ya lo pasó (o nunca hubo suscripción que lo requiriera).
+    const activeSubscription = await findActiveSubscription(userId);
+    if (activeSubscription && activeSubscription.provider !== "manual") {
+      await clearDeletionPending(userId);
+      return { status: "blocked_active_subscription", provider: activeSubscription.provider };
+    }
   }
 
-  const cleanup = await deleteAccountData(userId, email);
-  if (!cleanup.ok) {
-    await markDeletionFailed(userId, cleanup.error, []);
-    return { status: "cleanup_failed_retryable", error: cleanup.error };
+  if (!cleanupAlreadyDone) {
+    const cleanup = await deleteAccountData(userId, effectiveEmail);
+    if (!cleanup.ok) {
+      await markDeletionFailed(userId, cleanup.error, []);
+      return { status: "cleanup_failed_retryable", error: cleanup.error };
+    }
   }
 
   const authDeletion = await deleteAuthUserWithRetry(userId);

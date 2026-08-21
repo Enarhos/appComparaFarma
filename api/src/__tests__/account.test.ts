@@ -2,7 +2,6 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 
 const mocks = vi.hoisted(() => ({
   getUser: vi.fn(),
-  isDeletionPending: vi.fn(),
   reauthenticateWithPassword: vi.fn(),
   decodeJwtIssuedAt: vi.fn(),
   deleteAccount: vi.fn(),
@@ -10,9 +9,6 @@ const mocks = vi.hoisted(() => ({
 
 vi.mock("../lib/supabaseClient.js", () => ({
   supabase: { auth: { getUser: mocks.getUser } },
-}));
-vi.mock("../lib/accountDeletionDb.js", () => ({
-  isDeletionPending: mocks.isDeletionPending,
 }));
 vi.mock("../lib/reauth.js", () => ({
   reauthenticateWithPassword: mocks.reauthenticateWithPassword,
@@ -55,7 +51,6 @@ function jsonBody(res: ReturnType<typeof makeRes>) {
 
 beforeEach(() => {
   vi.resetAllMocks();
-  mocks.isDeletionPending.mockResolvedValue(false);
 });
 
 describe("action=delete — autenticación", () => {
@@ -97,17 +92,18 @@ describe("action=delete — autenticación", () => {
     expect(mocks.deleteAccount).toHaveBeenCalledWith("user-real", "real@x.cl");
   });
 
-  it("cuenta en DELETION_PENDING no puede volver a operar el endpoint (sección 4)", async () => {
+  it("cuenta en DELETION_PENDING SÍ puede volver a llamar a este endpoint — es el retry (CTO fix, sección B)", async () => {
     mocks.getUser.mockResolvedValue({ data: { user: { id: "user-1", email: "a@b.cl", app_metadata: { provider: "email" } } }, error: null });
-    mocks.isDeletionPending.mockResolvedValue(true);
+    mocks.reauthenticateWithPassword.mockResolvedValue("ok");
+    mocks.deleteAccount.mockResolvedValue({ status: "deleted" });
 
     const req = makeReq({ method: "POST", url: "/api/account?action=delete", headers: { authorization: "Bearer good" }, body: { password: "x" } });
     const res = makeRes();
 
     await handleAccountRoute(req, res);
 
-    expect(res.statusCode).toBe(401);
-    expect(mocks.deleteAccount).not.toHaveBeenCalled();
+    expect(res.statusCode).toBe(200);
+    expect(mocks.deleteAccount).toHaveBeenCalledWith("user-1", "a@b.cl");
   });
 });
 
