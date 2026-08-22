@@ -32,10 +32,11 @@ const GENERIC_ERROR = "No se pudo completar la eliminación. Intenta de nuevo m�
 
 function mapErrorResponse(status: number, body: { error?: string; code?: string; provider?: string }): DeleteAccountResult {
   if (body.code === "active_subscription_requires_cancellation") {
+    // Gate 2.1 (hardening): mensaje siempre fijo, nunca body.error.
     return {
       ok: false,
       code: "active_subscription_requires_cancellation",
-      message: body.error ?? "Tienes una suscripción activa que debe cancelarse antes de eliminar tu cuenta.",
+      message: "Tienes una suscripción activa que debe cancelarse antes de eliminar tu cuenta.",
       provider: body.provider,
     };
   }
@@ -59,7 +60,8 @@ function mapErrorResponse(status: number, body: { error?: string; code?: string;
       message: "No pudimos verificar tu identidad en este momento. Intenta más tarde.",
     };
   }
-  return { ok: false, code: "generic_error", message: body.error ?? GENERIC_ERROR };
+  // Gate 2.1 (hardening): status no reconocido -> nunca se expone body.error.
+  return { ok: false, code: "generic_error", message: GENERIC_ERROR };
 }
 
 /**

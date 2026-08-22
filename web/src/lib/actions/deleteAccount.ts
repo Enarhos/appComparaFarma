@@ -38,10 +38,13 @@ const GENERIC_ERROR = "No se pudo completar la eliminación. Intenta de nuevo m�
 function mapErrorResponse(status: number, body: { error?: string; code?: string; provider?: string }): DeleteAccountResult {
   // Casos con `code` estable — usarlo directo, sin depender del texto.
   if (body.code === "active_subscription_requires_cancellation") {
+    // Gate 2.1 (hardening): mensaje siempre fijo, nunca body.error — no se
+    // reenvía texto controlado por el backend al cliente, ni siquiera en
+    // este caso "conocido" (defensa en profundidad).
     return {
       ok: false,
       code: "active_subscription_requires_cancellation",
-      message: body.error ?? "Tienes una suscripción activa que debe cancelarse antes de eliminar tu cuenta.",
+      message: "Tienes una suscripción activa que debe cancelarse antes de eliminar tu cuenta.",
       provider: body.provider,
     };
   }
@@ -69,7 +72,10 @@ function mapErrorResponse(status: number, body: { error?: string; code?: string;
       message: "No pudimos verificar tu identidad en este momento. Intenta más tarde.",
     };
   }
-  return { ok: false, code: "generic_error", message: body.error ?? GENERIC_ERROR };
+  // Gate 2.1 (hardening): status no reconocido -> nunca se expone
+  // body.error (podría no ser ni siquiera texto de la propia app, ej. un
+  // 502 de infraestructura) — siempre el mensaje genérico fijo.
+  return { ok: false, code: "generic_error", message: GENERIC_ERROR };
 }
 
 export async function deleteAccount(password: string): Promise<DeleteAccountResult> {
@@ -90,10 +96,11 @@ export async function deleteAccount(password: string): Promise<DeleteAccountResu
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ password }),
       });
-    } catch (err) {
-      // Nunca loguear el password ni el token — solo el hecho de que la
-      // request de red falló.
-      console.warn("deleteAccount network failure", err instanceof Error ? err.message : err);
+    } catch {
+      // Gate 2.1 (hardening): ni siquiera err.message se loguea — puede
+      // filtrar detalles de red/URL. Solo un código fijo, sin excepción
+      // cruda, sin password, sin token.
+      console.warn("account_delete_failed", "network_error");
       return { ok: false, code: "network_error", message: "No pudimos conectar. Revisa tu conexión e intenta de nuevo." };
     }
 
@@ -101,8 +108,9 @@ export async function deleteAccount(password: string): Promise<DeleteAccountResu
 
     const body = (await res.json().catch(() => ({}))) as { error?: string; code?: string; provider?: string };
     return mapErrorResponse(res.status, body);
-  } catch (err) {
-    console.warn("deleteAccount failed", err instanceof Error ? err.message : err);
+  } catch {
+    // Mismo criterio: código fijo, sin excepción cruda.
+    console.warn("account_delete_failed", "generic_error");
     return { ok: false, code: "generic_error", message: GENERIC_ERROR };
   }
 }

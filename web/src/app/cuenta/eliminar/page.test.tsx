@@ -181,6 +181,26 @@ describe("EliminarCuentaPage", () => {
     expect(refreshMock).toHaveBeenCalledTimes(1);
   });
 
+  it("Gate 2.1: la contraseña se limpia del estado después de cualquier intento (éxito o error) — un reintento exige volver a escribirla", async () => {
+    vi.mocked(deleteAccount).mockResolvedValue({
+      ok: false,
+      code: "invalid_credentials",
+      message: "La contraseña no es correcta.",
+    });
+    const user = userEvent.setup();
+    render(<EliminarCuentaPage />);
+
+    await goToConfirmStep(user);
+    await user.click(screen.getByRole("button", { name: "Eliminar mi cuenta" }));
+    await screen.findByText("La contraseña no es correcta.");
+
+    // Cancelar vuelve al formulario — el campo de contraseña debe estar
+    // vacío, no debe haber sobrevivido el intento fallido en memoria.
+    await user.click(screen.getByRole("button", { name: "Cancelar" }));
+    const passwordInput = screen.getByLabelText("Confirma tu contraseña actual") as HTMLInputElement;
+    expect(passwordInput.value).toBe("");
+  });
+
   it("accesibilidad: el campo de contraseña tiene un label asociado y el área de error es aria-live", () => {
     const { container } = render(<EliminarCuentaPage />);
     const input = screen.getByLabelText("Confirma tu contraseña actual");

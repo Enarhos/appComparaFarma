@@ -51,6 +51,11 @@ export default function EliminarCuentaPage() {
 
     const result = await deleteAccount(password);
 
+    // Gate 2.1 (hardening): la contraseña ya cumplió su único propósito
+    // (esta request) — se limpia del estado apenas la respuesta vuelve,
+    // sin importar el resultado. Un reintento exige volver a escribirla.
+    setPassword("");
+
     if (result.ok) {
       setStep("success");
       // Limpieza de cliente SOLO después de un 200 confirmado del backend

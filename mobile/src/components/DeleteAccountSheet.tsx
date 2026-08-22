@@ -87,6 +87,19 @@ export function DeleteAccountSheet({ visible, onClose }: Props) {
     setStep("form");
   }
 
+  // Gate 2.1 (hardening): se limpia el estado sensible de forma síncrona y
+  // directa en el momento de cerrar — no se depende únicamente del efecto
+  // que observa `visible` (que sigue existiendo como respaldo). Todo punto
+  // de cierre (backdrop, botón "Cerrar", Cancelar de Step A, back de
+  // Android) pasa por acá.
+  function handleClose() {
+    setPassword("");
+    setError(null);
+    setSubscriptionNotice(null);
+    setStep("form");
+    onClose();
+  }
+
   function applyErrorResult(result: Extract<DeleteAccountResult, { ok: false }>) {
     if (result.code === "active_subscription_requires_cancellation") {
       setSubscriptionNotice(
@@ -127,14 +140,15 @@ export function DeleteAccountSheet({ visible, onClose }: Props) {
     // confirma que ninguno está sincronizado con la cuenta (ver informe
     // final, sección F) — son estado de Dispositivo, no de Usuario, según
     // la implementación real hoy.
+    setPassword("");
     await signOut();
     onClose();
     router.replace("/");
   }
 
   return (
-    <Modal transparent visible={mounted} animationType="none" onRequestClose={onClose}>
-      <Pressable style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.45)" }} onPress={step === "processing" ? undefined : onClose} />
+    <Modal transparent visible={mounted} animationType="none" onRequestClose={handleClose}>
+      <Pressable style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.45)" }} onPress={step === "processing" ? undefined : handleClose} />
 
       <Animated.View
         style={{
@@ -168,7 +182,7 @@ export function DeleteAccountSheet({ visible, onClose }: Props) {
               <Text className="text-lg font-bold text-gray-900 dark:text-white">Eliminar cuenta</Text>
             </View>
             <TouchableOpacity
-              onPress={onClose}
+              onPress={handleClose}
               disabled={step === "processing"}
               hitSlop={12}
               className="bg-gray-100 dark:bg-gray-700 rounded-full px-4 py-1.5"
@@ -235,7 +249,7 @@ export function DeleteAccountSheet({ visible, onClose }: Props) {
                   <Text className="font-bold text-base text-white">Continuar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  onPress={onClose}
+                  onPress={handleClose}
                   className="rounded-2xl py-3 items-center border border-gray-200 dark:border-gray-700"
                   accessibilityRole="button"
                   accessibilityLabel="Cancelar"

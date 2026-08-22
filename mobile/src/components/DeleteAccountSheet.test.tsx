@@ -182,6 +182,36 @@ describe("DeleteAccountSheet", () => {
     expect(mockSignOut).not.toHaveBeenCalled();
   });
 
+  it("Gate 2.1: Cancelar en Step A limpia la contraseña del estado inmediatamente (sin esperar a que el padre baje `visible`)", async () => {
+    const onClose = jest.fn();
+    const view = await renderSheet({ onClose });
+
+    await fireEvent.changeText(view.getByLabelText("Contraseña actual"), "mi-password-actual");
+    let input = view.getByLabelText("Contraseña actual") as unknown as { props: { value: string } };
+    expect(input.props.value).toBe("mi-password-actual");
+
+    await fireEvent.press(view.getAllByLabelText("Cancelar")[0]);
+
+    expect(onClose).toHaveBeenCalledTimes(1);
+    // handleClose limpia `password` de forma síncrona, en el mismo
+    // componente todavía montado — no depende de que el padre re-renderice
+    // con visible=false (defensa en profundidad además de ese efecto).
+    input = view.getByLabelText("Contraseña actual") as unknown as { props: { value: string } };
+    expect(input.props.value).toBe("");
+  });
+
+  it("Gate 2.1: el botón 'Cerrar' del header también limpia la contraseña", async () => {
+    const view = await renderSheet();
+
+    await fireEvent.changeText(view.getByLabelText("Contraseña actual"), "otro-secreto");
+    await fireEvent.press(view.getByLabelText("Cerrar"));
+
+    const input = view.getByLabelText("Contraseña actual") as unknown as { props: { value: string } };
+    expect(input.props.value).toBe("");
+  });
+
+
+
   it("onRequestClose (botón físico de retroceso en Android) cierra el sheet sin ejecutar el borrado", async () => {
     const onClose = jest.fn();
     const view = await renderSheet({ onClose });
