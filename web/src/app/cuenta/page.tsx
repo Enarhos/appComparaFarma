@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Link from "next/link";
 import { getCurrentProfile } from "@/lib/profile";
 import { getAvailablePlans } from "@/lib/plans";
 import { formatCLP } from "@/lib/format";
@@ -84,6 +85,16 @@ export default async function CuentaPage({ searchParams }: PageProps) {
 
       <div className="mt-6">
         <CuentaSignOutButton />
+      </div>
+
+      <div className="mt-8 border-t border-line pt-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">Zona de peligro</p>
+        <Link
+          href="/cuenta/eliminar"
+          className="mt-3 inline-block rounded-lg border border-red-200 px-3 py-1.5 text-sm text-red-600 transition hover:border-red-400 hover:text-red-700"
+        >
+          Eliminar cuenta
+        </Link>
       </div>
     </main>
   );
