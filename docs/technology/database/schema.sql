@@ -338,3 +338,134 @@ create table if not exists flow_customers (
   updated_at timestamptz not null default now()
 );
 alter table flow_customers enable row level security;
+
+-- ============================================================
+-- Account Deletion — AUTH-DELETE-01 (2026-08-21, hardened 2026-08-21) —
+-- GATE_3_AUTH_DELETE_01 + GATE_INFRA_HARDENING (informes de diseño + gates
+-- CTO). Resuelve USER_DOMAIN_MODEL.md, Decisión Pendiente #5 ("Retención
+-- tras dejar de ser Usuario").
+--
+-- ⚠️ NO EJECUTADO TODAVÍA EN PRODUCCIÓN — correr este bloque completo, tal
+-- cual (una sola transacción, no por partes), en el SQL Editor de Supabase
+-- antes de desplegar api/src/routes/account.ts. Es CODE_READY, no
+-- CONFIG_READY/DEPLOYED (ver CLAUDE.md §6) hasta que alguien con acceso al
+-- proyecto lo corra y lo confirme.
+--
+-- Reemplaza el draft original (2026-08-21) — aquel no incluía los
+-- revoke/grant de esta sección y quedaba, por defaults de Postgres/Supabase,
+-- ejecutable directamente por anon/authenticated vía `rpc/delete_account_data`
+-- con solo el anon key, sin pasar por account.ts ni por JWT/reautenticación
+-- (hallazgo de la auditoría de infraestructura previa). No se conserva ese
+-- draft en el repo — este bloque es la única versión vigente.
+--
+-- Todo el bloque corre dentro de una sola transacción: la tabla, la función
+-- y sus revoke/grant se crean atómicamente. Ninguna otra conexión puede ver
+-- un estado intermedio en el que la función exista sin sus revokes — antes
+-- del COMMIT no es visible para nadie más; después del COMMIT ya está
+-- endurecida. No existe una ventana donde quede expuesta a PUBLIC.
+--
+-- `account_deletion_requests` — control transitorio del ciclo de vida
+-- ACTIVE -> DELETION_PENDING -> DELETED. No es un histórico de cuentas
+-- eliminadas: una eliminación exitosa BORRA su propia fila de control (ver
+-- accountDeletionDb.ts) — nunca queda un registro personal permanente
+-- después del cierre (Ley 21.719 — no conservar "por si acaso").
+-- ============================================================
+
+begin;
+
+create table if not exists public.account_deletion_requests (
+  id bigint generated always as identity primary key,
+  user_id uuid not null,
+  email text not null,
+  status text not null default 'pending', -- 'pending' es el único valor vigente: el éxito borra la fila, no la marca 'completed'.
+  requested_at timestamptz not null default now(),
+  last_attempt_at timestamptz not null default now(),
+  last_error text,
+  steps_completed jsonb not null default '[]'
+);
+
+create unique index if not exists account_deletion_requests_user_id_idx
+  on public.account_deletion_requests (user_id);
+
+alter table public.account_deletion_requests enable row level security;
+-- Sin policies para el rol autenticado — mismo patrón que subscriptions/
+-- flow_customers: solo api/ (SUPABASE_SECRET_KEY -> service_role) lee y
+-- escribe. Los revoke explícitos de abajo son defensa en profundidad: no
+-- dependen únicamente de "no hay policy" para negar acceso a anon/authenticated.
+
+-- `delete_account_data` — limpieza atómica de `public.*` para una cuenta.
+-- Política activa (GATE 2, retención financiera): DELETE por defecto sobre
+-- subscription_events — no existe en este repositorio ningún fundamento
+-- legal/tributario documentado que justifique conservar `raw_payload`, así
+-- que se elimina junto con el resto (a diferencia del `on delete set null`
+-- de la FK, que solo protege contra un cascade accidental por otras vías,
+-- no expresa una decisión de retención). Si en el futuro se documenta un
+-- fundamento real (ver GATE_3_AUTH_DELETE_01_REPORT.md, sección
+-- OPEN_LEGAL_QUESTIONS), este es el único lugar que habría que cambiar.
+--
+-- Nunca toca price_history, pharmacy_clicks, medications,
+-- medication_match_key_aliases, subscription_plans ni app_config —
+-- principio rector: "eliminar identidad personal, preservar inteligencia
+-- farmacéutica no personal." (ver accountDeletionSql.test.ts, que audita
+-- este texto para garantizarlo).
+--
+-- SECURITY DEFINER + search_path fijado a `public` (mitiga search_path
+-- hijacking) + referencias internas totalmente calificadas (`public.*`) —
+-- hardening adicional que no cambia el comportamiento: aunque search_path
+-- ya está fijado, calificar explícitamente cada tabla deja la función
+-- correcta incluso si en el futuro alguien la recrea sin el `set
+-- search_path` (defensa en profundidad, no una dependencia nueva).
+create or replace function public.delete_account_data(p_user_id uuid, p_email text)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  delete from public.subscription_events
+    where subscription_id in (select id from public.subscriptions where user_id = p_user_id);
+  delete from public.flow_customers where user_id = p_user_id;
+  delete from public.subscriptions where user_id = p_user_id;
+  delete from public.email_alerts where lower(email) = lower(p_email);
+  delete from public.feedback where email is not null and lower(email) = lower(p_email);
+  delete from public.profiles where id = p_user_id;
+end;
+$$;
+
+-- ------------------------------------------------------------
+-- Revoke/grant — cierra el hallazgo de la auditoría de infraestructura:
+-- por default de Postgres, EXECUTE sobre una función nueva se concede a
+-- PUBLIC (que en Supabase incluye a anon/authenticated); y por los default
+-- privileges de este proyecto en el esquema `public`, una tabla nueva
+-- también puede heredar privilegios amplios. Ninguno de los dos defaults es
+-- aceptable para esta función/tabla: identidad y reautenticación las
+-- resuelve exclusivamente api/src/routes/account.ts (JWT validado, nunca un
+-- p_user_id/p_email que venga directo de un cliente) — el RPC no debe ser
+-- una puerta lateral que la evite.
+-- ------------------------------------------------------------
+
+revoke execute on function public.delete_account_data(uuid, text) from public;
+revoke execute on function public.delete_account_data(uuid, text) from anon;
+revoke execute on function public.delete_account_data(uuid, text) from authenticated;
+grant execute on function public.delete_account_data(uuid, text) to service_role;
+
+revoke all on table public.account_deletion_requests from anon;
+revoke all on table public.account_deletion_requests from authenticated;
+grant all on table public.account_deletion_requests to service_role;
+
+-- `id` es `generated always as identity`: Postgres crea una sequence
+-- implícita propia de la columna (nombre determinístico
+-- `account_deletion_requests_id_seq`). El privilegio sobre la tabla NO se
+-- propaga automáticamente a esa sequence — son dos objetos de privilegios
+-- independientes (mismo gotcha que las columnas `serial`): cualquier INSERT
+-- que dependa del DEFAULT (`nextval()`) requiere que el rol que ejecuta el
+-- INSERT tenga USAGE (o UPDATE) sobre la sequence, no solo sobre la tabla.
+-- No se asume que los default privileges del proyecto ya cubren esto (es
+-- precisamente el mismo mecanismo que dejó expuesta la función sin este
+-- bloque) — se deja explícito y, por el mismo criterio de defensa en
+-- profundidad, también se revoca de anon/authenticated.
+revoke all on sequence public.account_deletion_requests_id_seq from anon;
+revoke all on sequence public.account_deletion_requests_id_seq from authenticated;
+grant usage, select on sequence public.account_deletion_requests_id_seq to service_role;
+
+commit;
