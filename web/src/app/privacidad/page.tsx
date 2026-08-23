@@ -10,7 +10,7 @@ export default function PrivacyPage() {
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-ink">PreciosFarma</p>
       <h1 className="mt-2 font-display text-2xl font-semibold text-ink sm:text-3xl">Política de privacidad</h1>
-      <p className="mt-2 text-sm text-muted">Última actualización: 16 de agosto de 2026</p>
+      <p className="mt-2 text-sm text-muted">Última actualización: 22 de agosto de 2026</p>
 
       <div className="mt-8 space-y-8 text-sm leading-7 text-ink/85">
         <section>
@@ -24,14 +24,22 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-display text-xl font-semibold text-ink">Datos que recopilamos</h2>
           <p className="mt-3">
-            PreciosFarma no recopila ni almacena datos personales identificables. La búsqueda de precios no requiere
-            registro y no solicita nombre, correo electrónico, número de teléfono ni ningún otro dato que permita
-            identificar directamente a una persona.
+            Puedes usar la búsqueda y comparación de precios de PreciosFarma sin crear una cuenta. En ese caso, no se
+            solicita nombre, correo electrónico, número de teléfono ni ningún otro dato que permita identificarte
+            directamente.
           </p>
           <p className="mt-3">
-            Para mejorar la estabilidad del servicio y comprender el uso de la aplicación, se recopilan únicamente
-            datos técnicos y de uso anónimos mediante Sentry y PostHog, tal como se describe en la sección "Servicios
-            de terceros".
+            Si decides crear una cuenta —por ejemplo, para guardar alertas de precio o gestionar una suscripción—
+            PreciosFarma recopila y almacena tu correo electrónico y tu contraseña. La contraseña se guarda de forma
+            cifrada a través de nuestro proveedor de autenticación (Supabase) y PreciosFarma nunca accede a ella en
+            texto plano. Si registras una alerta de precio o nos escribes a través del formulario de contacto, tu
+            correo electrónico queda asociado a esa solicitud. Si contratas una suscripción paga, se almacenan los
+            datos necesarios para administrarla, como su estado y los eventos asociados a su procesamiento de pago.
+          </p>
+          <p className="mt-3">
+            Para mejorar la estabilidad del servicio y comprender el uso de la aplicación, se recopilan además datos
+            técnicos y de uso anónimos mediante Sentry y PostHog, tal como se describe en la sección "Servicios de
+            terceros".
           </p>
         </section>
 
@@ -85,6 +93,34 @@ export default function PrivacyPage() {
           <p className="mt-3">
             La aplicación muestra precios y enlaces hacia sitios de terceros, como las farmacias consultadas. Al abrir
             un enlace externo, se aplican las políticas de privacidad propias de ese sitio.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-xl font-semibold text-ink">Eliminación de tu cuenta</h2>
+          <p className="mt-3">
+            Si tienes una cuenta, puedes solicitar su eliminación en cualquier momento desde la propia aplicación (en
+            la Web, desde Cuenta → Eliminar cuenta; en la app móvil, desde la pantalla de cuenta → Eliminar cuenta),
+            luego de confirmar tu identidad.
+          </p>
+          <p className="mt-3">
+            La eliminación de tu cuenta es permanente y no puede deshacerse. Al eliminarla se eliminan tu perfil, tu
+            suscripción y los registros asociados a su procesamiento de pago, tus alertas de precio registradas por
+            correo y los mensajes de contacto asociados a tu correo electrónico. Este proceso elimina esos datos de
+            forma definitiva; no se trata de una anonimización.
+          </p>
+          <p className="mt-3">
+            Si tienes una suscripción paga activa, debes cancelarla antes de poder eliminar tu cuenta.
+          </p>
+          <p className="mt-3">
+            La información de precios de medicamentos y farmacias que utiliza PreciosFarma (por ejemplo, el historial
+            de precios de un medicamento) no es un dato personal ni está asociada a tu cuenta, por lo que no se
+            elimina cuando eliminas tu cuenta.
+          </p>
+          <p className="mt-3">
+            Esto se enmarca en los derechos que la normativa chilena de protección de datos personales (Ley N.º
+            21.719) reconoce a las personas sobre sus propios datos. Este texto es información general sobre el
+            funcionamiento de PreciosFarma y no constituye asesoría legal.
           </p>
         </section>
 

@@ -15,6 +15,7 @@ import { useAuthStore } from "@/store/authStore";
 import { signInWithPassword } from "@/lib/sessionManager";
 import { goToRegistro, returnFromAuth } from "@/lib/authNavigation";
 import { BRAND_COLORS } from "@/constants/brand";
+import { DeleteAccountSheet } from "@/components/DeleteAccountSheet";
 
 // Login / Cuenta — Épica 1 (Identity Foundation), TASK-003 (Tasks 006 y 008
 // del plan técnico de docs/execution/EPIC-01-IDENTITY_FOUNDATION.md).
@@ -41,6 +42,7 @@ export default function LoginScreen() {
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [deleteSheetVisible, setDeleteSheetVisible] = useState(false);
 
   async function handleSubmit() {
     if (!email.trim() || !password) {
@@ -96,7 +98,19 @@ export default function LoginScreen() {
               </>
             )}
           </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => setDeleteSheetVisible(true)}
+            activeOpacity={0.8}
+            className="mt-4"
+            accessibilityRole="button"
+            accessibilityLabel="Eliminar cuenta"
+          >
+            <Text className="text-sm text-gray-400 dark:text-gray-500">Eliminar cuenta</Text>
+          </TouchableOpacity>
         </View>
+
+        <DeleteAccountSheet visible={deleteSheetVisible} onClose={() => setDeleteSheetVisible(false)} />
       </SafeAreaView>
     );
   }
