@@ -16,13 +16,13 @@ Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCU
 | **Nombre** | DONE.md |
 | **Dominio** | Gestión de Programa (`docs/program/`) |
 | **Estado** | Activo |
-| **Versión** | 1.2 |
+| **Versión** | 1.3 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Enterprise Program Manager |
 | **Nivel de Gobierno** | Histórico / inmutable en sus filas ya registradas |
 | **Clasificación** | Memoria Histórica de Programa |
 | **Fuente Oficial** | Este documento, como memoria consolidada de programa. `docs/product/decisions/DECISION_LOG.md` sigue siendo la fuente de detalle de ingeniería de producto |
-| **Documentos de los que depende** | `docs/product/decisions/DECISION_LOG.md`, `docs/actas/*`, `docs/enterprise/*`, `docs/brand/*`, `docs/design/*` |
+| **Documentos de los que depende** | `docs/product/decisions/DECISION_LOG.md`, `docs/archive/meetings/*`, `docs/enterprise/*`, `docs/design/*`, PRs/commits de `main` |
 | **Pregunta que responde** | ¿Qué se ha logrado, en orden, a través de todo el programa? |
 
 ---
@@ -56,8 +56,12 @@ Servir como memoria permanente del proyecto a través de todos los workstreams �
 | 2026-08-02 | Corrección de referencias documentales a "LET"; Sprint D (cuenta ligera) implementado; Epic "Subscription Platform" registrada y Fase 1 (motor + Google Play adapter) implementada y mergeada |
 | 2026-08-02/03 | Subscription Platform Fase 2 implementada con Stripe, luego corregida a Flow (Stripe no admite comercios en Chile) — Fase 2 corregida implementada y mergeada; código de Stripe retirado de `main` |
 | 2026-08-15 | **Cierre de la fase Domain Consolidation v2–v4**: tres refactors funcionalmente neutros centralizan en `@comparafarma/domain` lógica que estaba duplicada entre Mobile y Web — `computeAllInOneTotals()` (v2, PR `refactor/domain-cart-totals`), `computeSavings()` (v3, PR `refactor/domain-compute-savings`) y `sortByEffectivePrice()` (v4, PR `refactor/domain-sort-effective-price`). Sin cambios de comportamiento observable en ninguno de los tres. No se planifican nuevas rondas de esta consolidación sin una nueva decisión explícita |
+| 2026-08-19 | **Product Identity Fase 1 + hardening cerrados en Producción**: `presentationKey` separa productos comerciales sin cambiar la semántica de `matchKey`; se endurece `resolveCommercialIdentity()` con política conservadora y reglas de plausibilidad; bioequivalentes/no bioequivalentes y marcas distintas dejan de fusionarse. Evidencia y residuales documentados en `docs/archive/meetings/20260819.md`. |
+| 2026-08-19 | **Product Identity Fase 2 UX Web + fix OPKO cerrados en Producción**: resultados agrupados por presentación farmacológica con productos comerciales individuales; corrección del redirect loop causado por deriva cosmética de `canonicalName` en slugs Gen 3. Smoke real de Omeprazol/OPKO, Amoxicilina y Mi receta aprobado. |
+| 2026-08-22 | **AUTH-DELETE-01 cerrado en Producción**: backend autoservicio `POST /api/account?action=delete`, identidad desde JWT, reautenticación, DELETE de datos personales, RETAIN de inteligencia farmacéutica, control `DELETION_PENDING` y retry/resume; seguridad de RPC/tabla restringida a `service_role`. PR #108, merge `7c29ea4`. |
+| 2026-08-22 | **AUTH-DELETE-02 cerrado en Producción**: UX de eliminación de cuenta en Web y Mobile, hardening de estado/logging, tests Mobile básicos incorporados y E2E real con cuenta QA descartable. Política de privacidad actualizada para cuentas/eliminación. PR #109, merge `c9b422f`. |
 
-*(Detalle línea por línea, con commits, PRs y números de test, en `docs/product/decisions/DECISION_LOG.md`, filas 1–36.)*
+*(Detalle línea por línea, con commits, PRs y números de test, en `docs/product/decisions/DECISION_LOG.md` para entregas registradas allí y en las actas 20260819/20260822 para los cierres posteriores.)*
 
 ### 4.2 Arquitectura Empresarial
 
@@ -91,12 +95,13 @@ Servir como memoria permanente del proyecto a través de todos los workstreams �
 |---|---|
 | 2026-08-05 | Dominio `docs/program/` creado: `README.md`, `PROGRAM_BOARD.md`, `MASTER_BACKLOG.md`, `CURRENT_SPRINT.md`, `ROADMAP.md`, `MILESTONES.md`, `RISKS.md`, `DECISION_QUEUE.md`, `DONE.md` (este documento) — primer centro de gobierno operativo consolidado del programa completo |
 | 2026-08-05 | **Cierre formal de la Fase 1 del programa (Arquitectura y Fundamentos) y apertura de la Fase 2 (Ejecución y Lanzamiento).** Cerrado el Sprint de Gobierno — Inicialización de `docs/program/` (Estado: Completed, registro completo en `CURRENT_SPRINT.md` §4.1); abierto el sprint "Production Release 1.0" con 4 workstreams (Identidad Visual, Google Play, Producto, Plataforma Web). `PROGRAM_BOARD.md`, `MASTER_BACKLOG.md` y `MILESTONES.md` actualizados a v1.1; creado `docs/program/PHASE_TRANSITION.md` como documento de transición entre ambas fases |
+| 2026-08-23 | **Reconciliación del gobierno con Producción al 22/08**: incorporada acta de AUTH-DELETE-01/02, `PROGRAM_BOARD.md` actualizado al commit `c9b422f` y `CURRENT_SPRINT.md` redefinido como cierre operacional de `Production Release 1.0`; no se abrió un sprint nuevo sin confirmación final de Google Play/Mobile. |
 
 ---
 
 ## 5. Relaciones
 
-Este documento resume, sin duplicar en detalle, `docs/product/decisions/DECISION_LOG.md` (§4.1) y agrega lo ya registrado en `docs/archive/meetings/20260803.md` (§4.2), `docs/brand/*` (§4.3) y `docs/design/*` (§4.4). Se relaciona con `docs/program/MILESTONES.md` como su contraparte de alto nivel — cada hito de `MILESTONES.md` agrupa una o más filas de este documento.
+Este documento resume, sin duplicar en detalle, `docs/product/decisions/DECISION_LOG.md` (§4.1) y agrega lo registrado en actas y dominios correspondientes. Se relaciona con `docs/program/MILESTONES.md` como su contraparte de alto nivel.
 
 ---
 
@@ -104,16 +109,17 @@ Este documento resume, sin duplicar en detalle, `docs/product/decisions/DECISION
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Detalle de ingeniería de producto | `docs/product/decisions/DECISION_LOG.md` | Resumido, no duplicado (§4.1) | Fuente de detalle completo |
-| Reescritura de Arquitectura Empresarial | `docs/archive/meetings/20260803.md` | ✔ (§4.2) | — |
-| Construcción de Arquitectura de Marca | `docs/brand/*` | ✔ (§4.3) | — |
-| Construcción de Arquitectura de Diseño | `docs/design/*` | ✔ (§4.4) | — |
+| Detalle de ingeniería de producto hasta entregas registradas | `docs/product/decisions/DECISION_LOG.md` | Resumido | Fuente de detalle |
+| Product Identity / UX Web / OPKO | `docs/archive/meetings/20260819.md`, commits de `main` | ✔ | Producción |
+| AUTH-DELETE-01/02 + privacidad | `docs/archive/meetings/20260822.md`, PR #108/#109 | ✔ | Producción |
+| Reescritura de Arquitectura Empresarial | `docs/archive/meetings/20260803.md` | ✔ | — |
+| Construcción de Arquitectura de Marca/Diseño | `docs/design/*` | ✔ | — |
 
 ---
 
 ## 7. Gobierno
 
-Este documento **nunca se edita retroactivamente**. No reemplaza a `docs/product/decisions/DECISION_LOG.md` como fuente de detalle de ingeniería.
+Este documento **nunca se edita retroactivamente en sus filas históricas**. Las versiones pueden actualizar metadata, relaciones y agregar nuevas filas, pero no alterar logros ya registrados.
 
 **Ninguna versión de este documento tiene, a la fecha, aprobación formal del CEO/fundador.**
 
@@ -121,7 +127,7 @@ Este documento **nunca se edita retroactivamente**. No reemplaza a `docs/product
 
 ## 8. Documentos relacionados
 
-`docs/product/decisions/DECISION_LOG.md`, `docs/program/MILESTONES.md`, `docs/program/PHASE_TRANSITION.md`, `docs/actas/*`.
+`docs/product/decisions/DECISION_LOG.md`, `docs/program/MILESTONES.md`, `docs/program/PHASE_TRANSITION.md`, `docs/archive/meetings/*`.
 
 ---
 
@@ -132,6 +138,7 @@ Este documento **nunca se edita retroactivamente**. No reemplaza a `docs/product
 | 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial de la memoria histórica de programa, consolidando logros de Ingeniería de Producto, Arquitectura Empresarial, Arquitectura de Marca, Arquitectura de Diseño y Gobierno de Programa. | Ver Matriz de Trazabilidad (§6) |
 | 1.1 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Se agrega la entrada de cierre formal de Fase 1 y apertura de Fase 2 (§4.5). No se editó ninguna fila previa. | `docs/program/PHASE_TRANSITION.md` |
 | 1.2 | 2026-08-15 | Activo | Pendiente (CEO/fundador) | Se agrega la entrada de cierre de la fase Domain Consolidation v2–v4 (§4.1). No se editó ninguna fila previa. | `CLAUDE.md`, `docs/technology/architecture/DOMAIN_MODEL.md` |
+| 1.3 | 2026-08-23 | Activo | Pendiente (CEO/fundador) | Se agregan cierres de Product Identity, UX Web/OPKO, AUTH-DELETE-01/02 y reconciliación de gobierno. No se modifica ninguna fila histórica previa. | Actas 20260819/20260822; PR #108/#109; `main` `c9b422f` |
 
 ---
 
@@ -139,8 +146,9 @@ Este documento **nunca se edita retroactivamente**. No reemplaza a `docs/product
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-05 | Creación de la memoria histórica de programa | Enterprise Program Manager | `docs/program/DONE.md` v1.0 (este documento) |
-| 2026-08-05 | Registro del cierre formal de Fase 1 | Enterprise Program Manager / PMO Director | `docs/program/DONE.md` v1.1 (este documento) |
-| 2026-08-15 | Registro del cierre de la fase Domain Consolidation v2–v4 | CTO (rol asumido) | `docs/program/DONE.md` v1.2 (este documento) |
+| 2026-08-05 | Creación de la memoria histórica de programa | Enterprise Program Manager | `docs/program/DONE.md` v1.0 |
+| 2026-08-05 | Registro del cierre formal de Fase 1 | Enterprise Program Manager / PMO Director | v1.1 |
+| 2026-08-15 | Registro del cierre de Domain Consolidation v2–v4 | CTO | v1.2 |
+| 2026-08-23 | Registro de cierres 19–22/08 y reconciliación | CTO / Enterprise Program Manager | v1.3 |
 
-**Pendiente de definición:** ninguna aprobación formal del CEO/fundador registrada todavía.
+**Pendiente de definición:** aprobación formal del CEO/fundador.
