@@ -14,128 +14,100 @@ Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCU
 | **Nombre** | CURRENT_SPRINT.md |
 | **Dominio** | Gestión de Programa (`docs/program/`) |
 | **Estado** | Activo |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Propietario** | CEO / CTO |
-| **Rol asumido en su redacción** | Enterprise Program Manager |
-| **Nivel de Gobierno** | De decisión operativa — normalmente se reemplaza por completo cada vez que cambia el sprint activo (su cierre se registra en `DONE.md`). Excepción registrada en esta versión: por tratarse de un cierre de Fase de programa, el sprint recién cerrado se documenta íntegramente en §4.1 antes de introducir el nuevo sprint activo en §4.2 |
+| **Rol asumido en su redacción** | Enterprise Program Manager / CTO |
+| **Nivel de Gobierno** | De decisión operativa — se reemplaza cuando cambia el sprint activo; su cierre se registra en `DONE.md` |
 | **Clasificación** | Documento de Ejecución de Programa |
 | **Fuente Oficial** | Este documento, para el sprint activo actual |
-| **Documentos de los que depende** | `docs/program/MASTER_BACKLOG.md`, `docs/brand/*`, `docs/design/*`, `docs/enterprise/README.md` |
+| **Documentos de los que depende** | `docs/program/MASTER_BACKLOG.md`, `docs/program/PROGRAM_BOARD.md`, `docs/archive/meetings/20260819.md`, `docs/archive/meetings/20260822.md`, commits y PRs en `main` |
+| **Última actualización** | 2026-08-23 |
 | **Pregunta que responde** | ¿Qué se está haciendo exactamente ahora mismo? |
 
 ---
 
 ## 2. Propósito
 
-Declarar, sin ambigüedad, cuál es el trabajo activo del programa en este momento — a diferencia de `MASTER_BACKLOG.md`, que contiene todo lo que existe, este documento contiene solo lo que está en curso ahora.
+Declarar sin ambigüedad el trabajo activo del programa. Esta versión reconcilia el documento con el estado real de Producción después de Product Identity, cierre de Web y eliminación autoservicio de cuenta.
 
 ---
 
 ## 3. Alcance
 
-**Este documento define:** el sprint activo, su objetivo, duración, entregables, tareas, riesgos y criterios de término.
+**Este documento define:** el sprint activo, su objetivo, entregables aún abiertos, evidencia de lo ya cerrado dentro del sprint y criterios de término.
 
-**Este documento NO define:** trabajo futuro no iniciado (→ `MASTER_BACKLOG.md`), trabajo ya cerrado (→ `DONE.md`), ni decisiones estratégicas de contenido (→ el dominio correspondiente).
+**Este documento NO define:** el backlog completo (→ `MASTER_BACKLOG.md`), el historial (→ `DONE.md`) ni decisiones estratégicas de dominio.
 
 ---
 
 ## 4. Contenido principal
 
-### 4.1 Sprint cerrado: Inicialización del dominio de gobierno de programa (`docs/program/`)
+### 4.1 Sprint activo: Production Release 1.0 — cierre operacional
 
-**Estado: Completed** (cerrado el 2026-08-05, misma sesión en que se creó). Registrado aquí de forma excepcional por instrucción directa del CEO al cerrar la Fase 1 del programa — el resumen equivalente vive también en `docs/program/DONE.md` §4.6.
+**Estado:** 🟡 Activo, en fase de cierre.
 
-**Objetivo alcanzado:** sí, íntegramente. Se creó `docs/program/` como centro oficial de gobierno operativo del programa, capaz de responder dónde está el proyecto, qué se terminó, qué está activo, qué está bloqueado, cuáles son las prioridades y qué decisiones siguen pendientes — consolidando evidencia de Enterprise, Brand, Design, Product, Release y Analysis sin inventar ninguna iniciativa nueva.
+**Decisión de reconciliación (2026-08-23):** el sprint **no se cierra todavía** porque el repositorio contiene evidencia suficiente de que gran parte del producto ya está en Producción, pero no existe una confirmación documental inequívoca y reciente del estado final de Google Play / AAB / publicación efectiva de Mobile. Abrir un sprint nuevo ahora inventaría una transición no ratificada. Por tanto se mantiene `Production Release 1.0`, reduciendo su alcance a cierre operacional y calidad de lanzamiento.
 
-**Entregables completados (9/9):**
+**Objetivo actualizado:** cerrar el lanzamiento de PreciosFarma con Web/API estables en Producción, Mobile listo para el estado final de Google Play que corresponda, cumplimiento de cuenta/privacidad completo y una revisión visible de calidad antes de declarar terminado el release.
 
-1. `docs/program/README.md` — chárter del dominio.
-2. `docs/program/PROGRAM_BOARD.md` — tablero ejecutivo.
-3. `docs/program/MASTER_BACKLOG.md` — backlog consolidado por workstream.
-4. `docs/program/CURRENT_SPRINT.md` — este documento.
-5. `docs/program/ROADMAP.md` — evolución del programa por workstream.
-6. `docs/program/MILESTONES.md` — hitos alcanzados.
-7. `docs/program/RISKS.md` — registro oficial de riesgos.
-8. `docs/program/DECISION_QUEUE.md` — decisiones pendientes.
-9. `docs/program/DONE.md` — memoria histórica de logros.
+### 4.2 Cierres ya logrados dentro del sprint
 
-**Lecciones relevantes:**
+| Entregable | Estado | Evidencia |
+|---|---|---|
+| Product Identity — `presentationKey` y separación de productos comerciales | ✅ Producción | `docs/archive/meetings/20260819.md`; commits `e75ca5b`, `73a0240` |
+| UX Web agrupada por presentación / producto comercial | ✅ Producción | `docs/archive/meetings/20260819.md`; commit `16064e8` |
+| Fix redirect loop OPKO / slugs Gen 3 | ✅ Producción | `docs/archive/meetings/20260819.md`; commit `59ef7d4` |
+| Backend de eliminación de cuenta (`AUTH-DELETE-01`) | ✅ Producción | PR #108; merge `7c29ea4` |
+| UX Web/Mobile de eliminación de cuenta (`AUTH-DELETE-02`) | ✅ Producción | PR #109; merge `c9b422f`; `docs/archive/meetings/20260822.md` |
+| Política de privacidad actualizada para cuentas y eliminación | ✅ Producción | commit `6b5e6c3`; `/privacidad` validado en Producción |
+| Infraestructura básica de tests Mobile | ✅ Incorporada | commit `1adc7ba`; 16/16 tests en cierre AUTH-DELETE-02 |
+| Web/API en Producción con health check sobre el merge actual | ✅ | `c9b422f`; cierre AUTH-DELETE-02 |
 
-- El programa había construido tres capas de arquitectura (Enterprise, Brand, Design) en paralelo, sin ningún mecanismo que las consolidara operativamente — cada dominio era internamente coherente, pero nadie tenía, antes de este sprint, una vista única de todo el programa a la vez. Ese vacío es el que este sprint cerró.
-- Ningún documento estratégico o de arquitectura tiene, a la fecha, ratificación formal del CEO/fundador — patrón recurrente en Enterprise y Brand que este sprint no resolvió (no era su objetivo) pero sí hizo visible de forma consolidada (`DECISION_QUEUE.md`, DQ-007).
-- El concepto de "Sprint" de programa, hasta este sprint, solo se usaba para ingeniería de producto (`docs/product/`) — nunca para gobierno documental. Aplicarlo aquí permitió detectar bloqueos reales (Data Safety, catálogo comercial) que estaban dispersos entre `docs/release/` y `docs/analysis/` sin una vista conjunta.
-- Consolidar bloqueos y riesgos de 4 documentos de origen distintos en `RISKS.md` confirmó que el bloqueante crítico real del programa sigue siendo uno solo (Data Safety, R-001/B-1) — no una lista larga de pendientes de igual peso.
+### 4.3 Trabajo activo / pendiente para cerrar el sprint
 
-**Trabajo pendiente (trasladado a Fase 2/Fase 3, no a este sprint):** ratificación del CEO sobre Enterprise/Brand (DQ-007); resolución de Data Safety (DQ-008); definición del catálogo comercial (DQ-003); selección de dirección visual final (DQ-001/DQ-002). Ninguno se resolvió en este sprint — todos quedan registrados en `docs/program/DECISION_QUEUE.md` y reclasificados por fase en `docs/program/MASTER_BACKLOG.md`.
+| Frente | Estado | Acción de cierre |
+|---|---|---|
+| **Google Play / Mobile** | 🟡 Requiere verificación operacional | Confirmar el estado real actual en Play Console: Producción vs etapa previa; validar que el AAB vigente corresponde al código aprobado y que no queda un gate de publicación pendiente. La documentación histórica contiene referencias contradictorias y no debe adivinarse el estado. |
+| **QA visual Web/Mobile** | 🟡 Pendiente de pasada final | Revisar calidad visible y paridad entre plataformas antes de cerrar el release; cualquier hallazgo se registra como issue concreto y no como una nueva épica genérica. |
+| **Gobierno documental** | 🟡 En reconciliación | Incorporar cierres 19–22 de agosto en `PROGRAM_BOARD.md`, `DONE.md` y actas. Esta tarea no reabre trabajo ya validado. |
+| **Checkout local principal** | ⚪ Fuera del release, housekeeping | Sigue reportado como atrasado y dirty; no usarlo para integración hasta resolver o aislar sus cambios. No es bloqueo de Producción. |
 
----
+### 4.4 Fuera del alcance de cierre inmediato
 
-### 4.2 Sprint activo: Production Release 1.0
+No se inicia automáticamente ninguno de estos frentes por el solo hecho de estar en backlog:
 
-**Objetivo:** llevar ComparaFarma a Producción en Google Play con una identidad visual profesional y una propuesta de valor consolidada.
+- catálogo comercial Premium;
+- nuevas fases de Product Identity;
+- bioequivalencia avanzada;
+- IA/escaneo de receta;
+- nueva ronda de arquitectura empresarial;
+- implementación adicional de Identity Architecture;
+- nuevas integraciones de farmacias.
 
-**Duración:** sin fecha de cierre comprometida en la documentación disponible — no se inventa ninguna.
+Requieren una decisión posterior del CEO/CTO una vez cerrado `Production Release 1.0`.
 
-**Workstreams:**
+### 4.5 Riesgos activos relevantes
 
-**A. Identidad Visual**
+1. **Estado Mobile/Google Play no reconciliado documentalmente.** Hay referencias a salida de Prueba Cerrada y, en documentación posterior, a completar AAB/cierre Mobile. Se requiere una verificación directa, no inferencia.
+2. **Documentación de programa atrasada respecto al código.** Este documento reduce la brecha, pero `MASTER_BACKLOG.md`, `RISKS.md` y `DECISION_QUEUE.md` aún pueden contener estados históricos que deben tratarse con cautela hasta su siguiente reconciliación.
+3. **Checkout local principal atrasado/dirty.** Riesgo operativo para integraciones locales, no para el código ya desplegado.
 
-| Entregable | Estado | Dependencia | Fuente |
-|---|---|---|---|
-| Evaluación de las 3 familias conceptuales (Brújula, Mapa, Constelación) contra la matriz de criterios | ⬜ No iniciado | EXP-001 | `docs/archive/design/explorations/DESIGN_EXPLORATION.md` |
-| Selección final de dirección visual | ⬜ Pendiente | Evaluación anterior | `docs/program/DECISION_QUEUE.md` DQ-001 |
-| Logo System | ⬜ No iniciado | Selección de dirección visual | `docs/design/brand/VISUAL_IDENTITY.md`, `DESIGN_CONCEPT.md` |
-| Color System | ⬜ No iniciado | Selección de dirección visual (o en paralelo al Logo System) | Ídem; `DECISION_QUEUE.md` DQ-002 |
-| Typography System | ⬜ No iniciado | Logo System | Ídem |
-| Iconography | ⬜ No iniciado | Logo System, Color System | Ídem |
+### 4.6 Criterios de término del sprint
 
-| Rebranding público ComparaFarma → PreciosFarma — Fase A (formalización + assets maestros) | 🟡 Fase A completada, en revisión CTO | Identidad visual ya aprobada (DD-001/002/003) | `docs/design/decisions/DESIGN_DECISION_LOG.md` DD-004 |
+`Production Release 1.0` se considerará cerrado cuando se cumplan todos los siguientes puntos:
 
-**B. Google Play**
-
-| Entregable | Estado | Dependencia | Fuente |
-|---|---|---|---|
-| Bloqueante B-1 — Data Safety | 🔴 Pendiente (última evidencia 2026-07-31) | Ninguna — acción exclusiva del CEO | `docs/archive/releases/PRODUCTION_READINESS_V2.md`; `DECISION_QUEUE.md` DQ-008 |
-| Icono de la app | ⬜ No iniciado | Logo System (Workstream A) | `docs/design/brand/VISUAL_IDENTITY.md` |
-| Feature Graphic | ⬜ No iniciado | Logo/Color System (Workstream A) | Ídem |
-| Screenshots | ⬜ No iniciado | Identidad visual definida | `docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md` |
-| Video promocional | ⬜ Sin antecedente documental — DQ-006 | Identidad visual definida | `docs/program/DECISION_QUEUE.md` DQ-006 |
-| Store Listing | ⬜ No iniciado | Identidad visual definida | `docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md` |
-| ASO básico | ⬜ No iniciado | Store Listing | Ídem |
-| Corrección de `eas.json` (track de submit) | 🔴 Riesgo abierto | Ninguna | `docs/archive/releases/PRODUCTION_READINESS_V2.md` §3; `DECISION_QUEUE.md` DQ-009 |
-
-**C. Producto**
-
-| Entregable | Estado | Dependencia | Fuente |
-|---|---|---|---|
-| Revisión final de calidad | ⬜ No iniciado | Ninguna | `docs/archive/releases/PRODUCTION_READINESS_V2.md` |
-| Checklist de Producción | 🟡 Parcial (3/4 bloqueantes históricos resueltos) | Cierre de Data Safety (Workstream B) | `docs/archive/releases/PLAY_CONSOLE_CHECKLIST.md` |
-| Analytics — estrategia más allá del evento único actual | ⬜ No iniciado | Ninguna | `DECISION_QUEUE.md` DQ-005 |
-| Validaciones finales (migración CFM-ID en producción, `API_SECRET_KEY` en Vercel) | ⬜ No verificado | Ninguna — verificación directa por el CTO | `DECISION_QUEUE.md` DQ-011, DQ-012 |
-
-**D. Plataforma Web**
-
-| Entregable | Estado | Dependencia | Fuente |
-|---|---|---|---|
-| Landing — aclarar si es un activo separado del sitio ya operativo | ⬜ Pendiente de definición | Ninguna | `DECISION_QUEUE.md` DQ-004 |
-| Sitio público (`app-compara-farma-web.vercel.app`) | ✅ Ya operativo | Ninguna | `docs/archive/assessments/PROJECT_INVENTORY.md` §2 |
-| Integración de la identidad visual resultante en el sitio | ⬜ No iniciado | Identidad Visual (Workstream A) | — |
-
-**Riesgos de este sprint:** ver `docs/program/RISKS.md` — en particular R-001/B-1 (Data Safety, crítico), R-002 (`eas.json`), R-014 (ninguna decisión de marca/diseño ratificada por el CEO, riesgo transversal para todo el Workstream A). No se identifican riesgos nuevos propios de este sprint más allá de los ya registrados.
-
-**Criterios de término:**
-
-- Workstream A: Logo System, Color System, Typography System e Iconography decididos (con o sin ratificación formal del CEO, según DQ-007 se resuelva).
-- Workstream B: assets de Google Play completos y Data Safety confirmado como cerrado.
-- Workstream C: Checklist de Producción en verde y validaciones finales confirmadas.
-- Workstream D: sitio web integrado visualmente con el resultado del Workstream A.
-- ✅ La app dejó Prueba Cerrada (2026-08-08) (confirmación del CTO en sesión de chat, 2026-08-08 — ver `CLAUDE.md`, sección "Actualización de estado (2026-08-08)"; sin artefacto de Play Console verificado de forma independiente en este repositorio). Publicación efectiva en Producción a confirmar por Mario en Play Console (Acción 8 de `GO_LIVE_EXECUTION_PLAN.md`).
+- estado final de Mobile/Google Play confirmado de forma explícita;
+- AAB/versión de Mobile correspondiente al release validada si todavía aplica;
+- Web/API continúan verdes en Producción;
+- eliminación de cuenta y privacidad permanecen operativas (ya cumplido, sujeto solo a regresión);
+- QA visual final sin defectos P0/P1 abiertos;
+- documentación de programa refleja el estado real suficiente para abrir el siguiente sprint sin arrastrar pendientes fantasma.
 
 ---
 
 ## 5. Relaciones
 
-Este documento extrae su contenido de `docs/program/MASTER_BACKLOG.md` (de dónde viene el trabajo activo) y alimenta a `docs/program/DONE.md` (a dónde va cuando se cierra). El cierre del sprint anterior registrado en §4.1 se relaciona directamente con `docs/program/PHASE_TRANSITION.md`, que documenta el cierre de Fase 1 a nivel de programa completo (no solo de este sprint).
+Este documento consume `MASTER_BACKLOG.md` como inventario, pero prevalece para declarar el sprint activo. Los cierres se registran en `DONE.md`; el estado ejecutivo se resume en `PROGRAM_BOARD.md`.
 
 ---
 
@@ -143,23 +115,24 @@ Este documento extrae su contenido de `docs/program/MASTER_BACKLOG.md` (de dónd
 
 | Concepto | Fuente Oficial | Consolidado aquí | Observaciones |
 |---|---|---|---|
-| Cierre del último sprint de ingeniería (Subscription Platform Fase 2 corregida) | `docs/product/decisions/DECISION_LOG.md` (entrada 2026-08-03) | Referencia | Contexto de por qué no hay sprint de ingeniería activo |
-| Cierre del Sprint de Gobierno — Inicialización de `docs/program/` | Instrucción directa del CEO en esta sesión | ✔ (§4.1) | Estado: Completed |
-| Apertura del sprint "Production Release 1.0" | Instrucción directa del CEO en esta sesión | ✔ (§4.2) | Workstreams A-D reconstruidos desde `MASTER_BACKLOG.md`, `RISKS.md`, `DECISION_QUEUE.md` |
+| Product Identity y UX Web | `docs/archive/meetings/20260819.md`, commits en `main` | ✔ | Cerrado en Producción |
+| Eliminación de cuenta backend | PR #108 / merge `7c29ea4` | ✔ | Cerrado en Producción |
+| Eliminación de cuenta Web/Mobile + privacidad | PR #109 / merge `c9b422f`, acta 20260822 | ✔ | Cerrado en Producción |
+| Estado final Google Play | Play Console / confirmación explícita del CEO | ⚠️ Pendiente | No se infiere desde referencias históricas contradictorias |
 
 ---
 
 ## 7. Gobierno
 
-Este documento se reemplaza por completo cuando cambia el sprint activo; su versión anterior no se conserva aquí — se resume en `docs/program/DONE.md` al cerrarse. Excepción de esta versión: el cierre del sprint de gobierno (§4.1) se documentó íntegramente aquí, por instrucción directa del CEO, antes de resumirse también en `DONE.md`.
+La versión 1.2 no declara un sprint nuevo: mantiene `Production Release 1.0` hasta que exista evidencia suficiente para cerrarlo. Esta es una decisión conservadora de gobierno para evitar crear trabajo o transiciones ficticias.
 
-**Ninguna versión de este documento tiene, a la fecha, aprobación formal del CEO/fundador.**
+**Aprobación formal del CEO/fundador:** pendiente.
 
 ---
 
 ## 8. Documentos relacionados
 
-`docs/program/MASTER_BACKLOG.md`, `PROGRAM_BOARD.md`, `DONE.md`, `PHASE_TRANSITION.md`, `RISKS.md`, `DECISION_QUEUE.md`.
+`docs/program/MASTER_BACKLOG.md`, `PROGRAM_BOARD.md`, `DONE.md`, `RISKS.md`, `DECISION_QUEUE.md`, `docs/archive/meetings/20260819.md`, `docs/archive/meetings/20260822.md`.
 
 ---
 
@@ -167,8 +140,9 @@ Este documento se reemplaza por completo cuando cambia el sprint activo; su vers
 
 | Versión | Fecha | Estado | Aprobación | Cambios | Base documental |
 |---|---|---|---|---|---|
-| 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Creación inicial, documentando el sprint de inicialización de `docs/program/` como trabajo activo actual. | `docs/program/MASTER_BACKLOG.md` |
-| 1.1 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Cierre formal del sprint de inicialización de `docs/program/` (Estado: Completed) y apertura del nuevo sprint activo "Production Release 1.0" con 4 workstreams (A. Identidad Visual, B. Google Play, C. Producto, D. Plataforma Web). | `docs/program/PHASE_TRANSITION.md`, `MASTER_BACKLOG.md`, `RISKS.md`, `DECISION_QUEUE.md` |
+| 1.0 | 2026-08-05 | Activo | Pendiente | Creación inicial del sprint de gobierno. | `MASTER_BACKLOG.md` |
+| 1.1 | 2026-08-05 | Activo | Pendiente | Cierre del sprint de gobierno y apertura de `Production Release 1.0`. | `PHASE_TRANSITION.md` |
+| 1.2 | 2026-08-23 | Activo | Pendiente | Reconciliación con estado real de Producción al 22/08: Product Identity, Web, AUTH-DELETE-01/02 y privacidad cerrados; `Production Release 1.0` se mantiene solo para cierre operacional Mobile/Google Play + QA final. | Actas 20260819/20260822; PR #108/#109; `main` `c9b422f` |
 
 ---
 
@@ -176,7 +150,6 @@ Este documento se reemplaza por completo cuando cambia el sprint activo; su vers
 
 | Fecha | Acción | Responsable (rol asumido) | Resultado |
 |---|---|---|---|
-| 2026-08-05 | Registro del sprint activo de inicialización del dominio de programa | Enterprise Program Manager | `docs/program/CURRENT_SPRINT.md` v1.0 (este documento) |
-| 2026-08-05 | Cierre del sprint de gobierno y apertura de "Production Release 1.0" | Enterprise Program Manager / PMO Director | `docs/program/CURRENT_SPRINT.md` v1.1 (este documento) |
-
-**Pendiente de definición:** ninguna aprobación formal del CEO/fundador registrada todavía.
+| 2026-08-05 | Registro del sprint de inicialización | Enterprise Program Manager | v1.0 |
+| 2026-08-05 | Apertura de `Production Release 1.0` | Enterprise Program Manager / PMO Director | v1.1 |
+| 2026-08-23 | Reconciliación post Product Identity + Account Deletion | CTO / Enterprise Program Manager | v1.2; sprint mantenido en cierre operacional |
