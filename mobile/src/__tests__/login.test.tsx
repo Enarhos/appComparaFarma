@@ -1,5 +1,5 @@
 import { fireEvent, render } from "@testing-library/react-native";
-import LoginScreen from "./login";
+import LoginScreen from "../app/login";
 
 const mockAuthState = {
   initialized: true,
