@@ -20,6 +20,11 @@ export interface MedicationGroup {
   matchKey: string;
   /** Título de presentación a mostrar — ver buildGroupTitle() y su limitación documentada. */
   title: string;
+  /**
+   * Imagen representativa del grupo — ver buildGroupImageUrl(). `null` si
+   * ningún producto comercial del grupo trae una imagen válida.
+   */
+  imageUrl: string | null;
   /** Productos comerciales (un MedicationResult completo por marca/presentationKey), ya ordenados — ver sortCommercialProducts(). */
   products: MedicationResult[];
 }
@@ -100,6 +105,26 @@ export function buildGroupTitle(products: MedicationResult[]): string {
 }
 
 /**
+ * Imagen representativa del grupo — bug reportado (2026-08-24, búsqueda
+ * "Ascenda"): la vista agrupada de Web (`MedicationResultsGroup`/
+ * `CommercialProductRow`) no renderizaba ninguna imagen, aunque
+ * `MedicationResult.imageUrl` llegara resuelto y válido desde la API (el
+ * dedupe de `packages/domain` ya hereda correctamente la primera imagen
+ * válida al fusionar por `presentationKey` — ver `mergeDuplicates` en
+ * `deduplication.ts` — pero ningún componente de la vista de resultados
+ * agrupados leía ese campo).
+ *
+ * Regla explícita: primera imagen no-null encontrada entre los productos del
+ * grupo, en el orden ya aprobado por `sortCommercialProducts()` (precio
+ * ascendente, con bioequivalencia y cobertura como desempate) — mismo
+ * criterio que ya usa `mergeDuplicates` a nivel de fusión por marca, aplicado
+ * aquí a nivel de agrupación por `matchKey` en Web.
+ */
+export function buildGroupImageUrl(products: MedicationResult[]): string | null {
+  return products.map((p) => p.imageUrl).find((url) => url != null) ?? null;
+}
+
+/**
  * Agrupa un array de MedicationResult (ya deduplicado por presentationKey)
  * por matchKey, preservando:
  * - el orden de aparición del primer MedicationResult de cada matchKey en el
@@ -125,7 +150,12 @@ export function groupMedicationResultsByMatchKey(results: MedicationResult[]): M
 
   return order.map((matchKey) => {
     const products = sortCommercialProducts(byMatchKey.get(matchKey)!);
-    return { matchKey, title: buildGroupTitle(products), products };
+    return {
+      matchKey,
+      title: buildGroupTitle(products),
+      imageUrl: buildGroupImageUrl(products),
+      products,
+    };
   });
 }
 

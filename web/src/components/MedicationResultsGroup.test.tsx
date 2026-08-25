@@ -90,4 +90,24 @@ describe("MedicationResultsGroup", () => {
     expect(screen.getByText("Marca0")).toBeTruthy();
     expect(screen.getByText("Marca1")).toBeTruthy();
   });
+
+  // Bug real (2026-08-24, búsqueda "Ascenda"): la imagen del producto no se
+  // mostraba en Web para resultados de esta vista agrupada, aunque la API
+  // trajera una imageUrl válida.
+  it("muestra la imagen del grupo cuando al menos un producto comercial la tiene", () => {
+    const products = makeProducts(2);
+    products[0].imageUrl = "https://example.com/ascenda.jpg";
+    const [group] = groupMedicationResultsByMatchKey(products);
+
+    const { container } = render(<MedicationResultsGroup group={group} />);
+
+    const img = container.querySelector("img");
+    expect(img?.getAttribute("src")).toBe("https://example.com/ascenda.jpg");
+  });
+
+  it("no renderiza <img> si ningún producto del grupo tiene imagen", () => {
+    const [group] = groupMedicationResultsByMatchKey(makeProducts(2));
+    const { container } = render(<MedicationResultsGroup group={group} />);
+    expect(container.querySelector("img")).toBeNull();
+  });
 });
