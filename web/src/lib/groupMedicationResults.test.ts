@@ -4,6 +4,7 @@ import {
   groupMedicationResultsByMatchKey,
   sortCommercialProducts,
   buildGroupTitle,
+  buildGroupImageUrl,
   computeRemainingOptions,
   rowVisibilityClassName,
 } from "./groupMedicationResults";
@@ -176,6 +177,63 @@ describe("buildGroupTitle", () => {
 
   it("devuelve string vacío si no hay productos, sin lanzar", () => {
     expect(buildGroupTitle([])).toBe("");
+  });
+});
+
+describe("buildGroupImageUrl", () => {
+  // Bug real (2026-08-24, búsqueda "Ascenda"): la vista agrupada no mostraba
+  // ninguna imagen aunque al menos un producto comercial del grupo trajera
+  // una imageUrl válida desde la API.
+  it("usa la primera imagen no-null encontrada entre los productos, en el orden dado", () => {
+    const withoutImage = medication({ laboratory: "A", imageUrl: null });
+    const withImage = medication({ laboratory: "B", imageUrl: "https://example.com/b.jpg" });
+    expect(buildGroupImageUrl([withoutImage, withImage])).toBe("https://example.com/b.jpg");
+  });
+
+  it("devuelve null si ningún producto del grupo tiene imagen válida", () => {
+    const a = medication({ laboratory: "A", imageUrl: null });
+    const b = medication({ laboratory: "B", imageUrl: null });
+    expect(buildGroupImageUrl([a, b])).toBeNull();
+  });
+
+  it("devuelve null si no hay productos, sin lanzar", () => {
+    expect(buildGroupImageUrl([])).toBeNull();
+  });
+});
+
+describe("groupMedicationResultsByMatchKey — imageUrl del grupo", () => {
+  it("expone en el grupo la primera imagen válida entre sus productos comerciales", () => {
+    const ascenda = medication({
+      laboratory: "Ascenda",
+      bestPrice: 19199,
+      presentationKey: "complemento|800000mg|bio:false|brand:ascenda",
+      imageUrl: "https://static.salcobrand.cl/ascenda-vainilla.jpg",
+    });
+    const nestleAscenda = medication({
+      laboratory: "Nestlé Ascenda®",
+      bestPrice: 24999,
+      presentationKey: "complemento|800000mg|bio:false|brand:nestleascenda",
+      imageUrl: "https://static.salcobrand.cl/ascenda-neutro.jpg",
+    });
+
+    const [group] = groupMedicationResultsByMatchKey([ascenda, nestleAscenda]);
+
+    // El más barato (Ascenda) queda primero tras sortCommercialProducts, así
+    // que su imagen es la que representa al grupo.
+    expect(group.imageUrl).toBe("https://static.salcobrand.cl/ascenda-vainilla.jpg");
+  });
+
+  it("hereda la imagen de un producto aunque el primero (más barato) no tenga", () => {
+    const cheapNoImage = medication({ laboratory: "A", bestPrice: 500, imageUrl: null });
+    const pricierWithImage = medication({
+      laboratory: "B",
+      bestPrice: 900,
+      imageUrl: "https://example.com/b.jpg",
+    });
+
+    const [group] = groupMedicationResultsByMatchKey([cheapNoImage, pricierWithImage]);
+
+    expect(group.imageUrl).toBe("https://example.com/b.jpg");
   });
 });
 

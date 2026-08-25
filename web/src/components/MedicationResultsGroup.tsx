@@ -29,11 +29,23 @@ export function MedicationResultsGroup({ group }: Props) {
 
   return (
     <section className="rounded-2xl border border-line bg-paper-raised p-4 shadow-[0_1px_2px_rgba(0,0,0,0.04)] sm:p-5">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-        <h2 className="font-display text-lg font-semibold leading-snug text-ink sm:text-xl">{group.title}</h2>
-        <span className="text-sm text-muted">
-          {total} {total === 1 ? "opción encontrada" : "opciones encontradas"}
-        </span>
+      <div className="flex items-start gap-3">
+        {group.imageUrl && (
+          /* eslint-disable-next-line @next/next/no-img-element -- imágenes de dominios variables por farmacia, sin lista blanca que mantener (mismo criterio que MedicationCard) */
+          <img
+            src={group.imageUrl}
+            alt=""
+            width={48}
+            height={48}
+            className="h-12 w-12 shrink-0 rounded-lg border border-line bg-white object-contain p-1"
+          />
+        )}
+        <div className="flex min-w-0 flex-1 flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+          <h2 className="font-display text-lg font-semibold leading-snug text-ink sm:text-xl">{group.title}</h2>
+          <span className="text-sm text-muted">
+            {total} {total === 1 ? "opción encontrada" : "opciones encontradas"}
+          </span>
+        </div>
       </div>
 
       <ul className="mt-3 flex flex-col">

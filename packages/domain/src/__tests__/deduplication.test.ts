@@ -166,4 +166,50 @@ describe("mergeDuplicates", () => {
     expect(merged[0].prices).toHaveLength(2);
     expect(merged[0].bestPrice).toBe(990);
   });
+
+  // ==========================================================================
+  // Bug report (2026-08-24) — búsqueda "Ascenda" en Web: "Ascenda" y "Nestlé
+  // Ascenda®" en Salcobrand aparentaban ser el mismo producto sin fusionar.
+  // Investigación con datos reales de producción (ver reporte) confirmó que
+  // en realidad son DOS SKU distintos de Salcobrand — "Complemento
+  // Nutricional Ascenda Sabor VAINILLA 800g" (SKU 584778) vs "Complemento
+  // Nutricional Infantil Ascenda Sabor NEUTRO 800g" (SKU 596311) — con
+  // sabores distintos y precios reales distintos ($23.999/$19.199 vs
+  // $24.999). Ambos comparten `matchKey` ("complemento|800000mg") porque
+  // `matchKey()` no distingue sabor para este tipo de producto (limitación
+  // preexistente de matching.ts, fuera de alcance de este fix). El siguiente
+  // test documenta que, con los datos REALES de laboratory ("Ascenda" vs
+  // "Nestlé Ascenda®"), `resolveCommercialIdentity` produce tokens de marca
+  // distintos ("ascenda" vs "nestleascenda") y por lo tanto NO se fusionan —
+  // comportamiento correcto: fusionarlos sería un falso positivo (dos
+  // presentaciones/sabores reales distintos) y, bajo la política de "misma
+  // farmacia duplicada conserva el menor precio efectivo", descartaría
+  // silenciosamente el precio de una de las dos ofertas reales.
+  it("Caso 8 — Ascenda vs Nestlé Ascenda® (Salcobrand, sabores reales distintos) NO se fusionan", () => {
+    const ascendaVainilla = makeMedResult(
+      "complemento|800000mg",
+      "salcobrand",
+      19199,
+      "https://static.salcobrand.cl/spree/products/183845/small/584778.jpg",
+      false,
+      "ascenda",
+      "Ascenda"
+    );
+    const nestleAscendaNeutro = makeMedResult(
+      "complemento|800000mg",
+      "salcobrand",
+      24999,
+      "https://static.salcobrand.cl/spree/products/198822/small/596311.jpg",
+      false,
+      "nestleascenda",
+      "Nestlé Ascenda®"
+    );
+
+    const merged = mergeDuplicates([ascendaVainilla, nestleAscendaNeutro]);
+
+    expect(merged).toHaveLength(2);
+    // Ninguna de las dos ofertas reales pierde su precio/canal.
+    expect(merged.find((m) => m.laboratory === "Ascenda")?.prices[0].channels.effective).toBe(19199);
+    expect(merged.find((m) => m.laboratory === "Nestlé Ascenda®")?.prices[0].channels.effective).toBe(24999);
+  });
 });
