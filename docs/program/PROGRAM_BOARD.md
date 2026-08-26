@@ -11,9 +11,9 @@
 | **Código** | PRG-BRD-001 |
 | **Nombre** | PROGRAM_BOARD.md |
 | **Estado** | Activo |
-| **Versión** | 1.4 |
+| **Versión** | 1.5 |
 | **Propietario** | CEO / CTO |
-| **Última actualización** | 2026-08-23 |
+| **Última actualización** | 2026-08-25 |
 
 ---
 
@@ -28,6 +28,8 @@ Web/API, Product Identity y AUTH-DELETE-01/02 están cerrados. La incertidumbre 
 Producción Mobile continúa **Inactiva**. No se ha publicado vc33 en Producción.
 
 Estado operativo: **`WAITING_FOR_GOOGLE_PLAY_REVIEW`**.
+
+Durante la espera se diagnosticó y gobernó `BIOEQUIVALENCE-DATA-QUALITY-01`. Sus decisiones de arquitectura quedaron registradas en backlog y actas, pero **no se inició implementación**. El ítem permanece fuera del sprint hasta cerrar el gate Mobile vc33.
 
 ---
 
@@ -52,7 +54,8 @@ El siguiente gate no es otro desarrollo ni otra auditoría del AAB. Es:
 | Data Safety | 🟡 En revisión | Cuestionario actualizado enviado junto al release. |
 | Google Play Producción | ⚪ Inactiva | No se publicó release nuevo. |
 | QA físico Mobile | ⏳ Pendiente | Ejecutar tras disponibilidad de vc33 para testers. |
-| Gobierno documental | 🟢 Reconciliado para el gate actual | Acta 20260823 + Sprint + Board actualizados. |
+| Bioequivalence data quality | 🟡 Documentado / gateado | Gate 1 y Gate 2 cerrados; decisiones V-1/V-2/W-1 registradas; implementación espera cierre vc33. |
+| Gobierno documental | 🟢 Reconciliado para el gate actual | Sprint, Board, Backlog y actas alineados al cierre de sesión. |
 
 ---
 
@@ -65,7 +68,9 @@ El siguiente gate no es otro desarrollo ni otra auditoría del AAB. Es:
 - SHA-256: `ea972f90938539df2b81f2dcd59dcf2a11ca728b11755d7cc42bcf03ae3df3fe`.
 - Firma: `jar verified`; certificado coincide con referencia.
 - Google Play: AAB procesado sin errores, release enviado a revisión.
-- Acta: `docs/archive/meetings/20260823_mobile_release.md`.
+- Acta Mobile: `docs/archive/meetings/20260823_mobile_release.md`.
+- `BIOEQUIVALENCE-DATA-QUALITY-01`: Gate 1 `docs/archive/meetings/20260825.md`; Gate 2 `docs/archive/meetings/20260825 - 1013PM.md`.
+- PR #125 mergeado a `main`: backlog + acta Gate 2 formalizados.
 
 ---
 
@@ -91,6 +96,7 @@ El envío no activó Producción. La versión anterior vc31 continúa disponible
 | Mobile Jest fuera de CI | Media ingeniería | Backlog técnico; no bloquea revisión actual. |
 | Falta mapping R8/ProGuard | Baja | Warning Play no bloqueante; evaluar observabilidad de crashes. |
 | Checkout principal atrasado/dirty | Media operativa | No usar para integración/release; worktrees limpios. |
+| Calidad semántica de bioequivalencia | Media producto/datos | Diseño cerrado; implementación gateada para evitar mezclar cambios con release vc33. |
 
 ---
 
@@ -98,7 +104,7 @@ El envío no activó Producción. La versión anterior vc31 continúa disponible
 
 **Esperar la revisión de Google Play.**
 
-No subir otro AAB, no cambiar versionCode, no tocar Producción y no iniciar una nueva épica durante este gate.
+No subir otro AAB, no cambiar versionCode, no tocar Producción y no iniciar la implementación de `BIOEQUIVALENCE-DATA-QUALITY-01` durante este gate.
 
 Al cambiar el estado de Play Console, verificar vc33 en Closed Testing y realizar smoke test en teléfono real.
 
@@ -108,6 +114,8 @@ Al cambiar el estado de Play Console, verificar vc33 en Closed Testing y realiza
 
 **MOBILE VC33 CLOSED TESTING APPROVED + PHYSICAL SMOKE TEST → PRODUCTION GO/NO-GO.**
 
+Después del cierre formal del release vc33, `BIOEQUIVALENCE-DATA-QUALITY-01` vuelve a quedar disponible para decisión de entrada a sprint, comenzando por la secuencia aprobada en Gate 2.
+
 ---
 
 ## 10. Control de cambios
@@ -116,3 +124,4 @@ Al cambiar el estado de Play Console, verificar vc33 en Closed Testing y realiza
 |---|---|---|
 | 1.3 | 2026-08-23 | Reconciliación post Product Identity + Account Deletion; Google Play aún por verificar. |
 | 1.4 | 2026-08-23 | Google Play verificado: vc33 construido, firmado, aceptado y enviado a Closed Testing; Data Safety en revisión; Producción permanece inactiva. |
+| 1.5 | 2026-08-25 | Cierre de sesión: BIOEQUIVALENCE-DATA-QUALITY-01 documentado y mergeado en backlog, sin implementación; se mantiene Google Play vc33 como única prioridad operativa inmediata. |
