@@ -12,13 +12,13 @@ Contiene únicamente el trabajo activo del programa. No es un historial (→ `DO
 | **Nombre** | CURRENT_SPRINT.md |
 | **Dominio** | Gestión de Programa (`docs/program/`) |
 | **Estado** | Activo |
-| **Versión** | 1.3 |
+| **Versión** | 1.4 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Enterprise Program Manager / CTO |
 | **Nivel de Gobierno** | De decisión operativa |
 | **Clasificación** | Documento de Ejecución de Programa |
 | **Fuente Oficial** | Este documento, para el sprint activo actual |
-| **Última actualización** | 2026-08-23 |
+| **Última actualización** | 2026-08-25 |
 | **Pregunta que responde** | ¿Qué se está haciendo exactamente ahora mismo? |
 
 ---
@@ -32,6 +32,8 @@ Contiene únicamente el trabajo activo del programa. No es un historial (→ `DO
 Web/API y los frentes AUTH-DELETE-01/02 permanecen cerrados. El release Mobile **PreciosFarma 1.4.1 / versionCode 33** fue construido desde `origin/main` con el fix del PR #113, firmado con la key de release correcta, aceptado por Google Play y enviado a revisión en **Prueba cerrada — Test ComparaFarma**.
 
 Estado operativo: **`WAITING_FOR_GOOGLE_PLAY_REVIEW`**.
+
+Durante la espera se cerró únicamente trabajo de diagnóstico/gobernanza sobre `BIOEQUIVALENCE-DATA-QUALITY-01`. La iniciativa quedó documentada en `MASTER_BACKLOG.md` y su Gate 2 quedó formalizado, pero **la implementación continúa explícitamente gateada por vc33 y no forma parte del sprint activo**.
 
 ---
 
@@ -50,7 +52,7 @@ Estado operativo: **`WAITING_FOR_GOOGLE_PLAY_REVIEW`**.
 | Data Safety | ⏳ | En revisión |
 | Producción Mobile | ⚪ | Inactiva; no publicada en esta sesión |
 
-Acta detallada: `docs/archive/meetings/20260823_mobile_release.md`.
+Acta detallada del release: `docs/archive/meetings/20260823_mobile_release.md`.
 
 ---
 
@@ -61,6 +63,8 @@ Acta detallada: `docs/archive/meetings/20260823_mobile_release.md`.
 3. Ejecutar smoke test físico: apertura, búsqueda, comparación de precios, login/logout y eliminación de cuenta.
 4. Si no existen defectos P0/P1, tomar decisión GO/NO-GO y avanzar a Producción.
 5. Registrar el resultado y cerrar formalmente `Production Release 1.0` cuando Mobile esté efectivamente publicado y validado.
+
+`BIOEQUIVALENCE-DATA-QUALITY-01` no entra en ejecución hasta que este gate de vc33 quede cerrado. Su próximo paso, cuando sea habilitado, será la implementación controlada de la corrección semántica y la arquitectura de agrupación ya documentadas.
 
 ---
 
@@ -91,6 +95,8 @@ Acta detallada: `docs/archive/meetings/20260823_mobile_release.md`.
 
 No iniciar automáticamente nuevas épicas durante la espera de revisión. AUTH-DELETE-01/02, Product Identity y el build vc33 no se reabren salvo incidente real.
 
+`BIOEQUIVALENCE-DATA-QUALITY-01` está **DOCUMENTED_AND_BACKLOGGED / IMPLEMENTATION_GATED_BY_MOBILE_VC33**. Sus decisiones de Gate 2 no se reabren sin evidencia nueva y ningún paso de implementación a partir del adapter fix está autorizado mientras vc33 siga en revisión.
+
 ---
 
 ## 8. Control de cambios
@@ -99,3 +105,4 @@ No iniciar automáticamente nuevas épicas durante la espera de revisión. AUTH-
 |---|---|---|
 | 1.2 | 2026-08-23 | Reconciliación post Product Identity + Account Deletion; sprint mantenido en cierre operacional. |
 | 1.3 | 2026-08-23 | Estado Mobile reconciliado con evidencia directa: AAB vc33 construido/firmado, PR #113 incluido, upload aceptado y release/Data Safety enviados a revisión en Google Play Closed Testing. |
+| 1.4 | 2026-08-25 | Cierre de sesión: `BIOEQUIVALENCE-DATA-QUALITY-01` documentado y mergeado en backlog, sin entrar al sprint; se reafirma `WAITING_FOR_GOOGLE_PLAY_REVIEW` como único gate operativo activo. |
