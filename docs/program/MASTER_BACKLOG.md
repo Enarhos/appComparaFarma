@@ -14,7 +14,7 @@ Sigue obligatoriamente la estructura de `docs/governance/templates/GOVERNED_DOCU
 | **Nombre** | MASTER_BACKLOG.md |
 | **Dominio** | Gestión de Programa (`docs/program/`) |
 | **Estado** | Activo |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Portfolio Manager / Enterprise Program Manager |
 | **Nivel de Gobierno** | De decisión operativa |
@@ -207,9 +207,42 @@ Consolidar, en un solo documento y con nivel de agregación de programa (no de t
 | Subscription Platform — Fase 4 (Plataforma Comercial: planes configurables, cupones, empresas, API Premium) | — (sin CFPS todavía) | ⬜ Backlog futuro | Fase 3 (Apple) | `docs/archive/product/EPICS_2026-08-15.md` |
 | Verificación end-to-end de compra real (Google Play) | Alta | 🟡 Desbloqueado (2026-08-08) — pendiente de ejecución | Ninguna (mobile/ ya fuera de Prueba Cerrada) | `docs/archive/product/EPICS_2026-08-15.md`, `docs/archive/releases/PRODUCTION_READINESS_V2.md` §8 |
 | Sprint B — Bioequivalentes | Media (CFPS 4.15, alto puntaje) | 🔴 Bloqueado — sin fuente de datos regulatoria confiable integrada | Spike de datos (cerrado, ver Growth) | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
+| **BIOEQUIVALENCE-DATA-QUALITY-01** — Agrupación comercial y semántica de bioequivalencia | Media (CFPS 3.70) | 🟡 Gate 2 (diseño técnico) cerrado — decisiones V-1/V-2/W-1 tomadas por CTO/Product; **cero implementación iniciada**; ejecución (Paso 2 en adelante) gateada al cierre de la revisión de Google Play de vc33 | Gate 1 (auditoría, cerrado); cierre de `Production Release 1.0` / vc33 (`docs/program/CURRENT_SPRINT.md`) para poder iniciar el Paso 2 | `docs/archive/meetings/20260825.md` (Gate 1); decisiones de Gate 2 registradas en esta entrada (sin acta formal propia en `docs/archive/meetings/` a la fecha) |
 | Sprint F | Baja (sin puntuar) | ⬜ Backlog futuro | Ninguna | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
 | Backlog v1.5 (16 ítems UX) | Media | 🟡 6 hechos, 4 parciales, 6 pendientes | Ítems pendientes bloqueados por congelamiento de `mobile/` | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
 | Backlog v2.0 (push notifications, tab bar persistente) | Media | ⬜ No re-verificado, no iniciado | Ninguna evidenciada | `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.md` |
+
+##### Detalle — BIOEQUIVALENCE-DATA-QUALITY-01
+
+Distinto de "Sprint B — Bioequivalentes" (bloqueado por falta de fuente regulatoria externa confiable): esta iniciativa no depende de datos regulatorios nuevos, corrige cómo PreciosFarma agrupa y presenta el dato de bioequivalencia que las propias farmacias ya entregan hoy.
+
+**Problema (Gate 1, cerrado — `docs/archive/meetings/20260825.md`):** un mismo `matchKey` (ej. `paracetamol|500mg|16`) puede llegar de Dr. Simi con laboratorio `ANDRÓMACO`/`isBioequivalent: true` y de Farmex con `ANDROMACO`/`isBioequivalent: false`, y hoy se muestran como productos separados porque `presentationKey` incluye `bio:true`/`bio:false`/`bio:unknown` como parte de la identidad comercial. Además, Farmex y EasyFarma hardcodean `false` (no es un "no bioequivalente" confirmado, es dato no implementado) y Cruz Verde/Salcobrand/Dr. Simi colapsan "no informado" en `false` en sus adapters. Patrón confirmado también en omeprazol, ibuprofeno, losartán y amoxicilina — no es un caso aislado de Paracetamol.
+
+**Arquitectura recomendada (Gate 2 — "Option D"):**
+- `PharmacyPrice` gana `isBioequivalent: boolean | null` (cambio aditivo al contrato de dominio).
+- `presentationKey` pierde el componente `bio:` y gana un token de forma farmacéutica (comprimidos/masticables/efervescentes ya no se fusionan incorrectamente).
+- El flag de bioequivalencia a nivel de grupo deja de heredarse del `canonical` y se deriva con una función explícita nueva (`deriveGroupBioStatus`), separada del flag por oferta.
+- `matchKey` queda intacto/persistido igual — sin impacto en histórico de precios (usa `match_key`, no `presentationKey`).
+
+**Decisiones CTO/Product ya cerradas en Gate 2 (no reabrir sin evidencia nueva):**
+- **V-1 (política de derivación del flag de grupo) — ANY:** si al menos una farmacia confirma bioequivalencia y ninguna la contradice, el grupo se muestra como bioequivalente; cada oferta individual sigue mostrando su propio estado real (ej. Farmex seguiría diciendo "no informada" si no confirma).
+- **V-2 (forma farmacéutica) — SÍ:** se agrega como token nuevo en la identidad comercial (`presentationKey`), no en `matchKey`. Corrige un false-merge ya existente hoy entre comprimidos/masticables/efervescentes.
+- **W-1 (gobernanza/timing):** la iniciativa entra al backlog ahora, pero la ejecución queda gateada. **El Paso 2 (y todos los pasos posteriores) no deben iniciarse hasta que se confirme el cierre de la revisión de Google Play del release Mobile vc33** (`docs/program/CURRENT_SPRINT.md` — estado `WAITING_FOR_GOOGLE_PLAY_REVIEW` a la fecha de esta entrada).
+
+**Secuencia de ejecución diseñada (8 pasos, ninguno iniciado):**
+0. Decisiones CTO (cerrado — esta entrada las registra).
+1. Red de seguridad de regresión: tests sobre el comportamiento actual antes de tocar nada.
+2. Adapter fix independiente (`false` → `null` en Farmex, EasyFarma, Cruz Verde, Salcobrand, Dr. Simi) — **gateado al cierre de la revisión vc33**.
+3. Instrumentación read-only para medir la frecuencia real de casos de conflicto entre farmacias.
+4. Contrato aditivo (`PharmacyPrice.isBioequivalent: boolean | null`).
+5. Derivación explícita del flag de grupo (`deriveGroupBioStatus`, política ANY).
+6. UI por oferta en Web y Mobile (mostrar el estado real de cada farmacia, no solo el del grupo).
+7. Cambio de `presentationKey` (quita `bio:`, agrega forma farmacéutica) + regeneración de slugs en Web (rotación de URLs, riesgo SEO a evaluar antes de ejecutar).
+8. Verificación en producción.
+
+**Nota de gating explícita:** ningún paso de esta secuencia a partir del Paso 2 puede iniciarse mientras `docs/program/CURRENT_SPRINT.md` mantenga a `Production Release 1.0` en estado `WAITING_FOR_GOOGLE_PLAY_REVIEW`. Cuando ese sprint cierre formalmente, esta iniciativa queda disponible para que Mario/ChatGPT decidan su entrada a un sprint futuro — su presencia en este backlog no autoriza por sí sola el inicio de implementación.
+
+**Scoring CFPS (`docs/product/decisions/PRODUCT_DECISION_FRAMEWORK.md`):** VU=4 (corrige información de bioequivalencia potencialmente errónea y duplicación visual que confunde al usuario) · VN=4 (impacto directo en confianza, criterio explícito del framework) · DF=3 (precisión de comparación es parte del valor central, pero esto es corrección de calidad de datos, no una función nueva diferenciadora) · IE=4 (alineado con independencia/precisión antes que rentabilidad, sin tocar monetización) · CT=3 (aditivo y sin romper Mobile en producción, pero toca 5 adapters + `presentationKey` + rotación de slugs SEO + UI en dos plataformas) · CM=4 (una vez implementada la derivación explícita, bajo mantenimiento) · RG=4 (riesgo mitigado por diseño: contrato aditivo, cero impacto en price history, tests de regresión antes del Paso 2; el riesgo residual mayor es la rotación SEO del Paso 7). **CFPS = (4×0.25)+(4×0.15)+(3×0.20)+(4×0.20)+(3×0.10)+(4×0.05)+(4×0.05) = 3.70 → Media.** Score de referencia para priorización de Mario/ChatGPT, no una decisión de sprint.
 
 #### Growth
 
@@ -269,6 +302,7 @@ Este documento no reemplaza a `docs/archive/product/BACKLOG_PRODUCT_2026-08-15.m
 |---|---|---|---|---|---|
 | 1.0 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Reconstrucción inicial del backlog de programa completo a partir de la documentación existente, organizado por 8 workstreams. | Ver Matriz de Trazabilidad (§6) |
 | 1.1 | 2026-08-05 | Activo | Pendiente (CEO/fundador) | Reclasificación completa de todas las iniciativas (ninguna eliminada) en FASE 1 (Completada), FASE 2 (En ejecución — sprint "Production Release 1.0") y FASE 3 (Futuro), al cierre formal de Fase 1 del programa. | `docs/program/PHASE_TRANSITION.md`, `CURRENT_SPRINT.md` |
+| 1.2 | 2026-08-25 | Activo | Pendiente (CEO/fundador) | Agregada iniciativa `BIOEQUIVALENCE-DATA-QUALITY-01` (FASE 3, Product/Engineering) al cierre de Gate 2 de diseño técnico: registro de las 3 decisiones CTO/Product (V-1 ANY, V-2 forma farmacéutica, W-1 gateo a cierre de vc33), la arquitectura recomendada (Option D), la secuencia de 8 pasos y su scoring CFPS. Sin implementación de código; ejecución explícitamente gateada. | `docs/archive/meetings/20260825.md` (Gate 1); decisiones de Gate 2 aportadas en la sesión que originó esta entrada |
 
 ---
 
