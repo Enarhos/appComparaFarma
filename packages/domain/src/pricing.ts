@@ -1,6 +1,7 @@
 import type { MedicationResult, PharmacyPrice, PharmacySlug, ScrapedProduct } from "./types.js";
 import { combinationKey, matchKey } from "./matching.js";
-import { presentationKey, resolveCommercialIdentity } from "./commercialIdentity.js";
+import { bioequivalenceKey, presentationKey, resolveCommercialIdentity } from "./commercialIdentity.js";
+import { commercialVariantKey, dosageFormClass, type ProductIdentity } from "./productIdentity.js";
 
 export function effectivePrice(channels: {
   store: number;
@@ -73,6 +74,32 @@ export function sortByEffectivePrice(prices: PharmacyPrice[]): PharmacyPrice[] {
   return [...prices].sort((a, b) => a.channels.effective - b.channels.effective);
 }
 
+/**
+ * CF-SEARCH-001 — atributos de identidad de UNA oferta, extraídos del mismo
+ * `ScrapedProduct` del que sale su `PharmacyPrice`. Se expone aparte de
+ * `toMedicationResult` para que `deduplication.ts` pueda validar
+ * compatibilidad (`isSameProduct`) sin re-parsear nombres ni depender del
+ * formato concatenado de `presentationKey`.
+ */
+export function toProductIdentity(product: ScrapedProduct): ProductIdentity {
+  const key = matchKey(product.name);
+  const identity = resolveCommercialIdentity({
+    structuredBrand: product.laboratory,
+    name: product.name,
+    onlineUrl: product.onlineUrl,
+    matchKey: key,
+  });
+
+  return {
+    pharmacologicalKey: key,
+    bioequivalence: bioequivalenceKey(product.isBioequivalent),
+    commercialIdentity: identity.commercialIdentity,
+    combination: combinationKey(product.name),
+    commercialVariant: commercialVariantKey(product.name),
+    dosageForm: dosageFormClass(product.name),
+  };
+}
+
 export function toMedicationResult(product: ScrapedProduct, pharmacySlug: PharmacySlug, pharmacyName: string): MedicationResult {
   const price = toPharmacyPrice(product, pharmacySlug, pharmacyName);
   const key = matchKey(product.name);
@@ -108,6 +135,13 @@ export function toMedicationResult(product: ScrapedProduct, pharmacySlug: Pharma
       // — ver matching.ts. Devuelve `null` para monofármacos, así que la clave
       // de esos NO cambia.
       combinationKey: combinationKey(product.name),
+      // CF-SEARCH-001 (2026-08-27): `matchKey` conserva un solo token de
+      // nombre, así que todas las variantes comerciales de una misma familia
+      // de marca y mismo laboratorio (Tapsin Rojo / Forte / Periodo / Duo /
+      // Instaflu, todas de Maver) colapsaban en una sola tarjeta. Estos dos
+      // ejes las separan sin tocar `matchKey` — ver productIdentity.ts.
+      commercialVariant: commercialVariantKey(product.name),
+      dosageForm: dosageFormClass(product.name),
     }),
   };
 }

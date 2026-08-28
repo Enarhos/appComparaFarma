@@ -286,7 +286,7 @@ const RUNON_LENGTH_THRESHOLD = 20;
  * política conservadora prohíbe. Ver
  * docs/technology/domain/COMMERCIAL_IDENTITY.md para el caso documentado.
  */
-const KNOWN_ACTIVE_INGREDIENTS = new Set([
+export const KNOWN_ACTIVE_INGREDIENTS = new Set([
   "omeprazol",
   "esomeprazol",
   "ibuprofeno",
@@ -566,6 +566,29 @@ export interface PresentationKeyInput {
    * tabla.
    */
   combinationKey?: string | null;
+  /**
+   * CF-SEARCH-001 (2026-08-27) — calificador comercial dentro de la familia de
+   * marca (`commercialVariantKey()` en productIdentity.ts): "rojo", "forte",
+   * "instaflu", "periodo", "infantil", "m"... `null` cuando el nombre no
+   * declara ninguno.
+   *
+   * Existe porque `matchKey` conserva UN solo token de nombre (la cabecera de
+   * marca) y `brand:` no discrimina dentro de un mismo laboratorio: todas las
+   * variantes de Tapsin de Maver con la misma cantidad colapsaban en una sola
+   * tarjeta con precios de medicamentos distintos.
+   */
+  commercialVariant?: string | null;
+  /**
+   * CF-SEARCH-001 (2026-08-27) — clase gruesa de forma farmacéutica
+   * (`dosageFormClass()` en productIdentity.ts). `null`/ausente cuando el
+   * nombre no la declara, que es un caso frecuente y legítimo.
+   *
+   * Separa presentaciones que no pueden ser el mismo artículo: producción
+   * 2026-08-27 fusionaba en una tarjeta `tapsin|1000mg|20|bio:false|brand:maver`
+   * los comprimidos de Farmex con los sobres de polvo efervescente de
+   * AraucoMed y Dr. Simi.
+   */
+  dosageForm?: string | null;
 }
 
 /**
@@ -580,8 +603,18 @@ export interface PresentationKeyInput {
  * igual que antes de S-1, así que el fix no rota la identidad (ni, en Web, el
  * hash del slug) del ~99% del catálogo que no es combinación — ver la cadena
  * de generaciones en web/src/lib/resolveMedication.ts.
+ *
+ * CF-SEARCH-001 (2026-08-27) agrega `|var:` y `|form:` con la misma mecánica
+ * aditiva y en ese orden fijo, siempre después de `|combo:`. A diferencia de
+ * `|combo:`, `|form:` está presente en la mayoría del catálogo, así que esta
+ * versión SÍ rota el hash de slug de la mayoría de las fichas Web — la cadena
+ * de generaciones de `web/src/lib/resolveMedication.ts` incorpora Gen 5 para
+ * que los links ya emitidos sigan resolviendo (y redirijan) en vez de romperse.
  */
 export function presentationKey(input: PresentationKeyInput): string {
-  const base = `${input.matchKey}|bio:${bioequivalenceKey(input.isBioequivalent)}|brand:${input.commercialIdentity}`;
-  return input.combinationKey ? `${base}|combo:${input.combinationKey}` : base;
+  let key = `${input.matchKey}|bio:${bioequivalenceKey(input.isBioequivalent)}|brand:${input.commercialIdentity}`;
+  if (input.combinationKey) key += `|combo:${input.combinationKey}`;
+  if (input.commercialVariant) key += `|var:${input.commercialVariant}`;
+  if (input.dosageForm) key += `|form:${input.dosageForm}`;
+  return key;
 }

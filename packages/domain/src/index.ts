@@ -10,9 +10,22 @@ export type {
   SearchExecution,
 } from "./types.js";
 
-export { matchKey, combinationKey } from "./matching.js";
+export { matchKey, combinationKey, normalizedWords, brandHeadTokens } from "./matching.js";
 export { cleanQuery } from "./normalization.js";
-export { effectivePrice, toPharmacyPrice, toMedicationResult, sortByEffectivePrice } from "./pricing.js";
+export {
+  effectivePrice,
+  toPharmacyPrice,
+  toMedicationResult,
+  toProductIdentity,
+  sortByEffectivePrice,
+} from "./pricing.js";
+export {
+  commercialVariantKey,
+  dosageFormClass,
+  isSameProduct,
+  type DosageFormClass,
+  type ProductIdentity,
+} from "./productIdentity.js";
 export { mergeDuplicates } from "./deduplication.js";
 export { computeAllInOneTotals, type PharmacyBasketTotal } from "./basket.js";
 export { computeSavings, type SavingsResult } from "./savings.js";

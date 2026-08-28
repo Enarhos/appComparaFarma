@@ -1,4 +1,15 @@
-const STOP_WORDS = new Set([
+/**
+ * Vocabulario de ruido de `matchKey()`. Se exporta (CF-SEARCH-001, 2026-08-27)
+ * para que `productIdentity.ts` derive la variante comercial sobre EXACTAMENTE
+ * el mismo vocabulario que `matchKey()` usa para elegir su cabecera de marca —
+ * si las dos listas divergieran, la variante podría "descubrir" como
+ * calificador una palabra que `matchKey` ya consumió como marca, o al revés.
+ *
+ * Sigue siendo la lista congelada de `matchKey`: agregarle o quitarle entradas
+ * cambia claves persistidas (`price_history`, `medication_match_key_aliases`,
+ * `pharmacy_clicks`, `email_alerts`) y está prohibido sin migración explícita.
+ */
+export const STOP_WORDS = new Set([
   "x", "de", "la", "el", "los", "las", "con", "para", "sin", "por",
   "comp", "comprimido", "comprimidos", "capsula", "capsulas", "tab",
   "tableta", "tabletas", "sol", "solucion", "jarabe", "suspension",
@@ -10,27 +21,61 @@ const STOP_WORDS = new Set([
   "dia", "noche", "dn", "yn",
 ]);
 
+/**
+ * Tokenización compartida por `matchKey()` y por la extracción de variante
+ * comercial (`productIdentity.ts`, CF-SEARCH-001): sin acentos, minúsculas,
+ * guiones intra-palabra colapsados ("Co-Amoxiclav" → "coamoxiclav"), resto de
+ * la puntuación como separador.
+ *
+ * Se extrajo tal cual del cuerpo de `matchKey()` sin cambiar una sola
+ * operación: el objetivo es que ambas capas partan de la MISMA lista de
+ * palabras, no reordenar ni "mejorar" la normalización de `matchKey`, cuyo
+ * resultado está persistido.
+ */
+export function normalizedWords(name: string): string[] {
+  return stripAccentsLower(name)
+    .replace(/(\w)-(\w)/g, "$1$2")
+    .replace(/[^\w\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ");
+}
+
+function isBrandWord(word: string): boolean {
+  return word.length >= 2 && !STOP_WORDS.has(word) && !/^\d/.test(word) && /^[a-z]+$/.test(word);
+}
+
+/**
+ * Token(es) que `matchKey()` consume como cabecera de marca/principio activo —
+ * el primero, más el segundo cuando ambos son cortos ("Trio Val" → ["trio",
+ * "val"], que `matchKey` concatena en "trioval").
+ *
+ * Existe para que `productIdentity.ts` sepa EXACTAMENTE dónde termina la marca
+ * y empieza el calificador comercial. Si se dedujera por separado, "Trio Val
+ * 500 mg" derivaría "val" como variante y no agruparía con "Trio-Val 500 mg"
+ * (cuyo guión colapsa a un solo token) — un falso split introducido por
+ * duplicar la regla en vez de reusarla.
+ */
+export function brandHeadTokens(words: string[]): string[] {
+  const brandWords = words.filter(isBrandWord);
+  const first = brandWords[0];
+  if (!first) return [];
+  if (first.length <= 4 && brandWords[1] && brandWords[1].length <= 4) {
+    return [first, brandWords[1]];
+  }
+  return [first];
+}
+
 export function matchKey(name: string): string {
   const raw = name.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const mlHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*ml\b/gi)];
   const mgHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*mg\b/gi)];
   const mcgHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:mcg|µg|ug)\b/gi)];
   const gHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*g\b/gi)];
-  const lower = raw
-    .replace(/(\w)-(\w)/g, "$1$2")
-    .replace(/[^\w\s]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-  const words = lower.split(" ");
+  const words = normalizedWords(name);
+  const lower = words.join(" ");
 
-  const brandWords = words.filter(
-    (w) => w.length >= 2 && !STOP_WORDS.has(w) && !/^\d/.test(w) && /^[a-z]+$/.test(w)
-  );
-
-  let first = brandWords[0] ?? "";
-  if (first.length >= 2 && first.length <= 4 && brandWords[1] && brandWords[1].length <= 4) {
-    first = first + brandWords[1];
-  }
+  let first = brandHeadTokens(words).join("");
 
   if (!first) {
     for (const w of words) {
@@ -97,7 +142,7 @@ export function matchKey(name: string): string {
  * commercialIdentity.ts: categoría acotada y explícita, no un intento de
  * enumerar toda la química farmacéutica.
  */
-const SALT_QUALIFIER_WORDS = new Set([
+export const SALT_QUALIFIER_WORDS = new Set([
   "potasico", "potasica", "sodico", "sodica", "calcico", "calcica",
   "magnesico", "magnesica", "clorhidrato", "hidrocloruro", "bromhidrato",
   "sulfato", "fosfato", "nitrato", "acetato", "maleato", "mesilato",
@@ -123,7 +168,7 @@ const SALT_QUALIFIER_WORDS = new Set([
  * commercialIdentity.ts; se mantiene acá aparte para no invertir la dirección
  * de dependencia entre ambos módulos (matching.ts no importa nada).
  */
-const PRESENTATION_FORM_WORDS = new Set([
+export const PRESENTATION_FORM_WORDS = new Set([
   "recubiertos", "recubierta", "recubiertas",
   "gragea", "grageas", "sobre", "sobres", "sachet", "sachets",
   "ampollas", "ampolleta", "ampolletas", "vial", "viales", "jeringa", "jeringas",
