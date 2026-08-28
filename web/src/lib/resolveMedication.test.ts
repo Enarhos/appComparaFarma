@@ -117,14 +117,17 @@ describe("resolveMedicationBySlug", () => {
     }
   });
 
-  it("returns ambiguous (never picks a winner) when two results share the same hash", async () => {
+  it("returns ambiguous (never picks a winner) when two results share the same hash VIGENTE (Gen 5)", async () => {
     const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
     const sameMatchKey = "paracetamol|500mg|16";
     const cheap = makeMedication({ matchKey: sameMatchKey, bestPrice: 100, canonicalName: "A" });
     const expensive = makeMedication({ matchKey: sameMatchKey, bestPrice: 999, canonicalName: "B" });
     searchMedicationsMock.mockResolvedValue({ results: [expensive, cheap], error: null });
 
-    const slug = `paracetamol-500-mg-16-comprimidos-${shortHash(sameMatchKey)}`;
+    // Hash de la generación vigente: ambos resultados comparten
+    // `presentationKey`, así que la ambigüedad NO viene de un slug antiguo sino
+    // de una anomalía de datos (QA-01, 2026-08-28).
+    const slug = `paracetamol-500-mg-16-comprimidos-${medicationSlugHash(cheap)}`;
     const result = await resolveMedicationBySlug(slug);
 
     expect(result.status).toBe("ambiguous");
@@ -450,6 +453,114 @@ describe("resolveMedicationBySlug", () => {
     expect(result.status).toBe("ok");
     if (result.status === "ok") {
       expect(result.medication).toBe(combo);
+      expect(result.needsRedirect).toBe(true);
+    }
+  });
+
+  // ==========================================================================
+  // QA-01 (auditoría pre-PR de CF-SEARCH-001, 2026-08-28). Un slug de una
+  // generación antigua puede matchear 2+ productos porque su identidad se
+  // dividió en varias fichas con los ejes `|var:`/`|form:` (medido: 6 de 32
+  // grupos divididos). Antes de este fix eso devolvía "ambiguous" y la ficha
+  // lanzaba una excepción -> HTTP 500 en una URL potencialmente indexada.
+  // Ahora se resuelve como "not-found" (404 limpio + noindex), sin elegir un
+  // ganador entre productos DISTINTOS.
+  // ==========================================================================
+
+  it("Caso 19 (QA-01) — un slug Gen 4 que tras el split matchea 2 productos devuelve not-found, no ambiguous", async () => {
+    const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    // Mismo `presentationKey` Gen 4 ("tapsin|6|bio:false|brand:maver") para los
+    // dos: antes de CF-SEARCH-001 eran UNA sola ficha.
+    const rojo = makeMedication({
+      matchKey: "tapsin|6",
+      canonicalName: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 500,
+      presentationKey: "tapsin|6|bio:false|brand:maver|var:rojo|form:solid-oral",
+    });
+    const noche = makeMedication({
+      matchKey: "tapsin|6",
+      canonicalName: "Tapsin Noche x 6 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 460,
+      presentationKey: "tapsin|6|bio:false|brand:maver|var:noche|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [rojo, noche], error: null });
+
+    // Slug emitido antes del split, con el texto legible de la ficha unificada
+    // (que hoy no coincide con ninguno de los dos nombres actuales).
+    const gen4Slug = `tapsin-x-6-comprimidos-maver-${shortHash("tapsin|6|bio:false|brand:maver")}`;
+    const result = await resolveMedicationBySlug(gen4Slug);
+
+    expect(result).toEqual({ status: "not-found" });
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect.stringContaining("medication_slug_legacy_ambiguous")
+    );
+    // No se reporta como colisión de hash: no lo es, y ese evento se usa para
+    // detectar anomalías reales de datos.
+    expect(consoleErrorSpy).not.toHaveBeenCalledWith(
+      expect.stringContaining("medication_slug_hash_collision")
+    );
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it("Caso 20 (QA-01) — tampoco lanza cuando el texto legible del slug antiguo matchea a los 2 productos del split", async () => {
+    const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    // Dos farmacias que escriben el producto con el MISMO nombre pero cuya
+    // forma farmacéutica difiere: el desempate por `humanPart` no discrimina.
+    const comprimidos = makeMedication({
+      matchKey: "ibuprofeno|400mg|10",
+      canonicalName: "Ibuprofeno 400 mg x 10",
+      isBioequivalent: true,
+      bestPrice: 990,
+      presentationKey: "ibuprofeno|400mg|10|bio:true|brand:mintlab|form:solid-oral",
+    });
+    const gel = makeMedication({
+      matchKey: "ibuprofeno|400mg|10",
+      canonicalName: "Ibuprofeno 400 mg x 10",
+      isBioequivalent: true,
+      bestPrice: 1290,
+      presentationKey: "ibuprofeno|400mg|10|bio:true|brand:mintlab|form:topical",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [comprimidos, gel], error: null });
+
+    const gen4Slug = `ibuprofeno-400-mg-x-10-${shortHash("ibuprofeno|400mg|10|bio:true|brand:mintlab")}`;
+
+    // Lo que garantiza el fix: la resolución no lanza y no deja que la ficha
+    // responda 500 — devuelve un estado manejado.
+    await expect(resolveMedicationBySlug(gen4Slug)).resolves.toEqual({ status: "not-found" });
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect.stringContaining("medication_slug_legacy_ambiguous")
+    );
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it("Caso 21 (QA-01) — el fix no rompe el desempate por texto legible: si el slug antiguo identifica a UNO, sigue resolviendo con redirect", async () => {
+    const rojo = makeMedication({
+      matchKey: "tapsin|6",
+      canonicalName: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 500,
+      presentationKey: "tapsin|6|bio:false|brand:maver|var:rojo|form:solid-oral",
+    });
+    const noche = makeMedication({
+      matchKey: "tapsin|6",
+      canonicalName: "Tapsin Noche x 6 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 460,
+      presentationKey: "tapsin|6|bio:false|brand:maver|var:noche|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [rojo, noche], error: null });
+
+    const gen4Slug = `${slugifyText(rojo.canonicalName)}-${shortHash("tapsin|6|bio:false|brand:maver")}`;
+    const result = await resolveMedicationBySlug(gen4Slug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(rojo);
+      expect(result.canonicalSlug).toBe(buildMedicationSlug(rojo));
       expect(result.needsRedirect).toBe(true);
     }
   });

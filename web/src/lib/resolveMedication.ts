@@ -35,10 +35,27 @@ export type ResolveMedicationResult =
  * un registro persistido (ese es exactamente el rol futuro de CFM-ID /
  * RFC-002, fuera de alcance de este sprint).
  *
- * Si el hash del slug matchea más de un resultado (colisión, o dos
- * variantes del mismo matchKey en la misma búsqueda), NUNCA se elige un
- * ganador por precio, farmacia u orden — se reporta como "ambiguous" y
- * queda registrado en los logs para investigar.
+ * Si el hash del slug matchea más de un resultado, NUNCA se elige un ganador
+ * por precio, farmacia u orden. Hay dos casos distintos, y se distinguen
+ * (QA-01, 2026-08-28):
+ *
+ *   a) El hash vino de una GENERACIÓN ANTIGUA (Gen 1-4, `needsRedirect`) y hoy
+ *      matchea 2+ productos porque esa identidad se dividió en varias fichas
+ *      (típicamente por los ejes `|var:`/`|form:` que agregó CF-SEARCH-001).
+ *      No es una anomalía: es el efecto esperado del split sobre links viejos
+ *      (medido: 6 de 32 grupos divididos caen acá). El slug ya no identifica un
+ *      producto, así que se registra `medication_slug_legacy_ambiguous` y se
+ *      devuelve "not-found" -> 404 limpio y `noindex` en la ficha. NO se elige
+ *      uno de los candidatos para redirigir: son productos DISTINTOS (ej.
+ *      Tapsin Rojo vs Tapsin Noche), y un 301 al equivocado es exactamente el
+ *      riesgo que S-1 y CF-SEARCH-001 corrigen (ver Caso 15).
+ *
+ *   b) El hash vino de la generación VIGENTE (Gen 5) y aun así matchea 2+
+ *      resultados: eso sí es una anomalía (colisión de `shortHash`, o dos
+ *      resultados con el mismo `presentationKey` que `mergeDuplicates` debería
+ *      haber fusionado). Se registra `medication_slug_hash_collision` y se
+ *      devuelve "ambiguous"; la ficha lo trata como 404 (nunca un 500 — ver
+ *      page.tsx), pero el evento queda en los logs para investigar.
  *
  * Generaciones de hash soportadas, en orden de intento:
  *   Gen 5 (vigente) — `presentationKey` completa, con `|var:` (variante
@@ -141,6 +158,20 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
   }
 
   if (matches.length > 1) {
+    // `needsRedirect` es true exactamente cuando el hash matcheó por una
+    // generación antigua: ese es el discriminante entre el caso (a) esperado
+    // por el split y el caso (b) anómalo — ver el comentario de arriba.
+    if (needsRedirect) {
+      console.error(
+        JSON.stringify({
+          event: "medication_slug_legacy_ambiguous",
+          slug,
+          presentationKeys: matches.map((match) => match.presentationKey),
+        })
+      );
+      return { status: "not-found" };
+    }
+
     console.error(
       JSON.stringify({
         event: "medication_slug_hash_collision",

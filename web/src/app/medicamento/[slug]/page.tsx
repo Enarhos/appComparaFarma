@@ -87,7 +87,11 @@ export default async function MedicationDetailPage({ params }: PageProps) {
 
   if (resolution.status === "ambiguous") {
     // No se elige un ganador por precio/farmacia/orden — ver resolveMedication.ts.
-    throw new Error("Encontramos más de un medicamento para este enlace.");
+    // QA-01 (2026-08-28): antes esto lanzaba una excepción, es decir un HTTP 500
+    // en una URL que puede estar indexada. Se responde 404 (la ficha no es
+    // resoluble sin inventar un ganador) y la anomalía queda igual en los logs
+    // como `medication_slug_hash_collision` desde resolveMedicationBySlug.
+    notFound();
   }
 
   const { medication, canonicalSlug, needsRedirect } = resolution;
