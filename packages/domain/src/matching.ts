@@ -106,6 +106,41 @@ const SALT_QUALIFIER_WORDS = new Set([
   "micronizado",
 ]);
 
+/**
+ * Palabras de forma farmacéutica/presentación en plural o variante que
+ * `STOP_WORDS` no cubre ("recubiertos", "dispersables", "oral", "sobres").
+ *
+ * Se mantienen SEPARADAS de `STOP_WORDS` porque esa lista alimenta a
+ * `matchKey()`, cuyo valor está persistido en historiales y alertas: agregarle
+ * entradas cambiaría claves ya guardadas. Esta lista la usa EXCLUSIVAMENTE
+ * `combinationKey()`.
+ *
+ * Existe por evidencia real (listados en vivo de Ahumada, 2026-08-27): sin ella
+ * "Hyzaar 50 mg/12.5 mg x 30 Comprimidos Recubiertos" derivaba
+ * `combo:recubiertos`, y dos farmacias que describen la misma presentación con
+ * palabras distintas dejaban de agruparse — el fix de S-1 habría causado una
+ * regresión de fusión. Es la misma categoría que `DOSAGE_FORM_WORDS` en
+ * commercialIdentity.ts; se mantiene acá aparte para no invertir la dirección
+ * de dependencia entre ambos módulos (matching.ts no importa nada).
+ */
+const PRESENTATION_FORM_WORDS = new Set([
+  "recubiertos", "recubierta", "recubiertas",
+  "gragea", "grageas", "sobre", "sobres", "sachet", "sachets",
+  "ampollas", "ampolleta", "ampolletas", "vial", "viales", "jeringa", "jeringas",
+  "dispersable", "dispersables", "masticable", "masticables",
+  "efervescente", "efervescentes", "sublingual", "vaginal", "oftalmica", "otica",
+  "blando", "blanda", "blandos", "blandas",
+  "granulo", "granulos", "granulado", "granulados",
+  "gota", "parches", "supositorios", "ovulo", "ovulos",
+  "oral", "topico", "topica", "topicos", "topicas",
+  "locion", "pomada", "unguento", "spray", "liquido", "liquida",
+  "frasco", "frascos", "envase", "estuche", "caja", "bolsa", "tira", "tiras",
+  "unidad", "unidades", "soluciones", "suspensiones", "inyectables",
+  "dosis", "dosificacion", "inhalacion", "inhalaciones", "puff", "puffs",
+  "aplicacion", "aplicaciones", "actuacion", "actuaciones", "nebulizacion",
+  "pulverizacion", "disparo", "disparos",
+]);
+
 /** Longitud mínima de un token para tratarlo como nombre de principio activo. */
 const INGREDIENT_MIN_LENGTH = 4;
 
@@ -128,8 +163,20 @@ function stripAccentsLower(name: string): string {
 /**
  * Tokens con forma de nombre de principio activo, en orden de aparición:
  * puramente alfabéticos, de al menos `INGREDIENT_MIN_LENGTH` letras, que no
- * sean forma farmacéutica/unidad (`STOP_WORDS`) ni sal/calificador químico.
+ * sean forma farmacéutica/unidad (`STOP_WORDS` + `PRESENTATION_FORM_WORDS`) ni
+ * sal/calificador químico (`SALT_QUALIFIER_WORDS`).
  */
+function isIngredientToken(word: string | undefined): word is string {
+  return (
+    word !== undefined &&
+    word.length >= INGREDIENT_MIN_LENGTH &&
+    /^[a-z]+$/.test(word) &&
+    !STOP_WORDS.has(word) &&
+    !PRESENTATION_FORM_WORDS.has(word) &&
+    !SALT_QUALIFIER_WORDS.has(word)
+  );
+}
+
 function ingredientTokens(raw: string): string[] {
   return raw
     .replace(/(\w)-(\w)/g, "$1$2")
@@ -137,62 +184,59 @@ function ingredientTokens(raw: string): string[] {
     .replace(/\s+/g, " ")
     .trim()
     .split(" ")
-    .filter(
-      (w) =>
-        w.length >= INGREDIENT_MIN_LENGTH &&
-        /^[a-z]+$/.test(w) &&
-        !STOP_WORDS.has(w) &&
-        !SALT_QUALIFIER_WORDS.has(w)
-    );
+    .filter(isIngredientToken);
 }
 
 /**
- * Índice del primer separador explícito de principios activos (`+` o `/`), o
- * `-1`. Reglas deliberadamente asimétricas por lo ambiguo que es cada símbolo
- * en nombres reales:
- *   - `+` cuenta si hay una palabra de >= 4 letras a alguno de los dos lados
- *     ("Losartán Potásico + Hidroclorotiazida"). Descarta "Día + Noche"
- *     (palabras cortas) por longitud.
- *   - `/` cuenta SOLO si a la derecha hay una palabra de >= 4 letras
- *     ("Losartán/Hidroclorotiazida", "875 mg / Ácido Clavulánico"). Si a la
- *     derecha hay un número es una razón de dosis o de volumen ("50/12,5mg",
- *     "100 mg/5 ml"), no un separador de ingredientes.
- * `-` NO se considera: `matchKey()` ya une las palabras que separa
+ * Principio activo que sigue INMEDIATAMENTE a un separador explícito (`+` o
+ * `/`), o `null`. La adyacencia es estricta a propósito: el token debe ser la
+ * primera palabra a la derecha del símbolo, no "el primer ingrediente que
+ * aparezca en algún lugar después".
+ *
+ * Sin esa restricción, nombres reales (Ahumada en vivo, 2026-08-27) derivaban
+ * tokens de cualquier cosa que viniera más adelante: "Salbutamol 100 mcg/Dosis
+ * x 200 Dosis Aerosol para Inhalación Oral FAES FARMA CHILE" —un
+ * MONOFÁRMACO— saltaba "dosis"/"aerosol" y terminaba en el nombre del
+ * laboratorio.
+ *
+ * `-` NO se considera separador: `matchKey()` ya une las palabras que separa
  * (`(\w)-(\w)` → `$1$2`), así que "Sulfametoxazol-Trimetoprima" ya produce un
  * `matchKey` distinto del monofármaco sin necesidad de este token.
  */
-function combinationSeparatorIndex(raw: string): number {
+function ingredientAfterSeparator(raw: string): string | null {
   for (let i = 0; i < raw.length; i++) {
     const char = raw[i];
     if (char !== "+" && char !== "/") continue;
-
-    const rightWord = /^\s*([a-z]{4,})\b/.exec(raw.slice(i + 1))?.[1];
-    if (char === "/") {
-      if (rightWord) return i;
-      continue;
-    }
-
-    const leftWord = /([a-z]{4,})\s*$/.exec(raw.slice(0, i))?.[1];
-    if (rightWord || leftWord) return i;
+    const rightWord = /^\s*([a-z]+)/.exec(raw.slice(i + 1))?.[1];
+    if (isIngredientToken(rightWord)) return rightWord;
   }
-  return -1;
+  return null;
 }
 
 /**
  * Token que identifica al SEGUNDO principio activo de una combinación, o `null`
  * si el nombre no describe una combinación.
  *
- * Requiere DOS condiciones (no basta con que haya varias palabras largas, para
- * no partir monofármacos con nombre compuesto):
- *   1. una señal de combinación — separador explícito entre ingredientes, o una
- *      razón de dosis masa/masa;
- *   2. que existan al menos dos tokens con forma de principio activo.
+ * Dos caminos, ninguno basado en "hay varias palabras largas" (eso partiría
+ * monofármacos con nombre compuesto):
+ *   1. Separador explícito entre ingredientes: se toma el principio activo
+ *      INMEDIATAMENTE a la derecha del `+` o `/`. Maneja principios activos de
+ *      nombre compuesto ("Ácido Acetilsalicílico + Cafeína" → "cafeina").
+ *   2. Razón de dosis masa/masa sin separador entre palabras: el segundo
+ *      ingrediente se busca SOLO en el encabezado del nombre, antes del primer
+ *      dígito ("Losartan Hidroclorotiazida 50/12,5mg" → "hidroclorotiazida"):
+ *      sin separador los dos principios activos van siempre juntos delante de
+ *      la concentración, y todo lo que sigue al primer dígito es dosis,
+ *      cantidad, forma farmacéutica o laboratorio.
  *
- * Cuando hay separador explícito se prefiere el primer ingrediente a su
- * derecha (maneja principios activos de nombre compuesto: "Ácido
- * Acetilsalicílico + Cafeína" → "cafeina"); si no lo hay, se usa el segundo
- * token de la lista completa ("Losartan Hidroclorotiazida 50/12,5mg" →
- * "hidroclorotiazida").
+ * Ambas restricciones (adyacencia al separador, y encabezado antes del primer
+ * dígito) salieron de verificar la función contra 206 nombres reales de 12
+ * búsquedas en vivo de Ahumada (2026-08-27): sin ellas aparecían falsos
+ * positivos como `combo:recubiertos` ("Hyzaar 50 mg/12.5 mg x 30 Comprimidos
+ * Recubiertos"), `combo:dosis` ("Salbutamol 100 mcg/Dosis x 200 Dosis") o el
+ * nombre del laboratorio, que habrían partido en dos tarjetas al MISMO producto
+ * listado por dos farmacias con distinta redacción — una regresión de fusión
+ * causada por el propio fix.
  *
  * Limitaciones conocidas y aceptadas (todas en la dirección conservadora del
  * proyecto: preferir un falso negativo — dos tarjetas para el mismo producto —
@@ -210,16 +254,12 @@ function combinationSeparatorIndex(raw: string): number {
 export function combinationKey(name: string): string | null {
   const raw = stripAccentsLower(name);
 
-  const separatorIndex = combinationSeparatorIndex(raw);
-  if (separatorIndex < 0 && !DOSE_RATIO_RE.test(raw)) return null;
+  const afterSeparator = ingredientAfterSeparator(raw);
+  if (afterSeparator && afterSeparator !== ingredientTokens(raw)[0]) return afterSeparator;
 
-  const tokens = ingredientTokens(raw);
-  if (tokens.length < 2) return null;
+  if (!DOSE_RATIO_RE.test(raw)) return null;
 
-  if (separatorIndex >= 0) {
-    const afterSeparator = ingredientTokens(raw.slice(separatorIndex + 1))[0];
-    if (afterSeparator && afterSeparator !== tokens[0]) return afterSeparator;
-  }
-
-  return tokens[1];
+  const firstDigit = raw.search(/\d/);
+  const head = firstDigit >= 0 ? raw.slice(0, firstDigit) : raw;
+  return ingredientTokens(head)[1] ?? null;
 }

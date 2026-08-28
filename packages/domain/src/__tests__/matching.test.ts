@@ -179,6 +179,78 @@ describe("combinationKey — detección de combinaciones (S-1)", () => {
     expect(matchKey("Hyzaar 50/12,5mg x30com").startsWith("hyzaar")).toBe(true);
   });
 
+  // -------------------------------------------------------------------------
+  // NO-REGRESIÓN sobre nombres LIVE de Farmacias Ahumada (2026-08-27, GET
+  // read-only sobre Search-Show con q=losartan/amoxicilina). Son COMBINACIONES
+  // de MARCA: el nombre no expone sus principios activos, así que el token
+  // correcto es `null`. Antes de restringir la búsqueda al encabezado del
+  // nombre, todos derivaban un token de PRESENTACIÓN ("combo:recubiertos",
+  // "combo:dispersables", "combo:oral"), lo que habría partido en dos tarjetas
+  // al mismo producto listado por dos farmacias que describen la presentación
+  // con palabras distintas — una regresión de fusión causada por el propio fix.
+  // -------------------------------------------------------------------------
+  it("[no-regresión, datos reales] una combinación de MARCA no deriva token de presentación", () => {
+    const reales = [
+      "Hyzaar 50 mg/12.5 mg x 30 Comprimidos Recubiertos",
+      "Hyzaar Forte 100 mg/25 mg x 30 Comprimidos Recubiertos",
+      "Simperten-D 100 mg/25 mg x 30 Comprimidos Recubiertos",
+      "Losapres-D 50 mg/12.5 mg x 30 Comprimidos Recubiertos",
+      "Clavam Duo 875 mg/125 mg x 14 Comprimidos Recubiertos",
+      "Clavinex Duo CD 875 mg/125 mg x 14 Comprimidos Dispersables",
+      "Ambilan Bid Forte 800 mg/57 mg x 90 mL Polvo Para Suspensión Oral",
+    ];
+    for (const name of reales) {
+      expect({ name, combo: combinationKey(name) }).toEqual({ name, combo: null });
+    }
+  });
+
+  it("[datos reales] la combinación que SÍ nombra sus principios activos deriva el token correcto", () => {
+    expect(
+      combinationKey("Losartan/Hidroclorotiazida 50 mg/12.5 mg x 30 Comprimidos Recubiertos ASCEND")
+    ).toBe("hidroclorotiazida");
+  });
+
+  it("[no-regresión, datos reales] un inhalador monofármaco no es una combinación", () => {
+    // "100 mcg/Dosis" es una razón masa/dosis, no masa/masa. Sin la
+    // restricción de adyacencia al separador estos derivaban "combo:dosis" o
+    // incluso el nombre del laboratorio, y se habrían separado del mismo
+    // producto listado por otra farmacia sin la palabra "Dosis".
+    const inhaladores = [
+      "Salbutamol 100 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral FAES FARMA CHILE",
+      "Fesema LF 100 mcg/Dosis 200 Dosis Aerosol para Inhalación",
+      "Brexovent LF 125 mcg/dosis 120 Dosis Aerosol para Inhalación",
+      "Fluxamol HFA 250 mcg/25 mcg/Dosis 120 Dosis Aerosol para Inhalación",
+      "Salbutral AC 100 mcg/20 mcg/Dosis x 250 Dosis Aerosol para Inhalación Oral",
+    ];
+    for (const name of inhaladores) {
+      expect({ name, combo: combinationKey(name) }).toEqual({ name, combo: null });
+    }
+  });
+
+  it("[datos reales] segunda colisión real encontrada al validar: Salbutamol vs Salbutamol+Beclometasona", () => {
+    // Ahumada en vivo (2026-08-27, q=salbutamol): ambos comparten
+    // matchKey `salbutamol|100mcg|200` y se estaban fusionando en una sola
+    // tarjeta, igual que el caso Losartán que originó S-1.
+    const mono = "Salbutamol 100 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral FAES FARMA CHILE";
+    const combo =
+      "Salbutamol + Beclometasona 100 mcg/50 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral CHEMOPHARMA";
+    expect(matchKey(mono)).toBe(matchKey(combo));
+    expect(combinationKey(mono)).toBeNull();
+    expect(combinationKey(combo)).toBe("beclometasona");
+  });
+
+  it("[datos reales] Amoxicilina + Ácido Clavulánico se detecta como combinación", () => {
+    expect(combinationKey("Amoxicilina 500 mg + Acido Clavulanico 125 mg 20 Comprimidos Recubiertos")).toBe(
+      "acido"
+    );
+    // Y no colisiona con la amoxicilina sola, que es el punto del fix.
+    expect(combinationKey("Amoxicilina 500 mg x 20 Comprimidos Recubiertos")).toBeNull();
+  });
+
+  it("[no-regresión] un separador seguido de forma farmacéutica no es una combinación", () => {
+    expect(combinationKey("Ibuprofeno 400 mg / Comprimidos Recubiertos x 20")).toBeNull();
+  });
+
   it("[no-regresión] los guiones los sigue resolviendo matchKey, no combinationKey", () => {
     // "Co-Amoxiclav"/"Trio-Val" se unen en matchKey ((\w)-(\w) -> $1$2), así
     // que ya producen una identidad propia sin necesidad del token nuevo.
