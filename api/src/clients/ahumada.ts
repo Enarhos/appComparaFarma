@@ -23,6 +23,33 @@ function decodeHtml(str: string): string {
     .replace(/&#(\d+);/g, (_, n: string) => String.fromCharCode(Number(n)));
 }
 
+/**
+ * S-2 (SEARCH-MATCHING-QA-01, Gate 2) — detección del badge de bioequivalencia.
+ *
+ * Ahumada emite el CONTENEDOR `sellcondition-bioequivalent-badges` en TODOS
+ * los tiles, esté vacío o no. El badge REAL solo existe cuando dentro de ese
+ * contenedor aparece
+ *   <div class="bioequivalent-badge-container">
+ *     <img class="js-popover bioequivalent-badge" ...>
+ *   </div>
+ *
+ * El chequeo anterior era `block.includes("bioequivalent-badge")`, que matchea
+ * el contenedor vacío por substring (`...-bioequivalent-badgeS` lo contiene) y
+ * marcaba el 100% de los resultados de Ahumada como bioequivalentes (medido en
+ * producción 2026-08-27: 8 búsquedas, 0 ofertas con `isBioequivalent=false`).
+ *
+ * La corrección exige un TOKEN de clase exacto: lookbehind de comilla/espacio a
+ * la izquierda (el contenedor lo falla, porque ahí viene precedido por `-`) y
+ * ausencia de `[\w-]` a la derecha (el plural `-badges` lo falla). Se mantiene
+ * el enfoque por regex del resto de este adaptador; no se introduce ninguna
+ * librería de parsing HTML nueva.
+ */
+const BIOEQUIVALENT_BADGE_RE = /class="[^"]*(?<=["\s])bioequivalent-badge(?:-container)?(?![\w-])/;
+
+export function hasBioequivalentBadge(block: string): boolean {
+  return BIOEQUIVALENT_BADGE_RE.test(block);
+}
+
 export function parseAhumadaHtml(html: string): ScrapedProduct[] {
   const results: ScrapedProduct[] = [];
   const seen = new Set<string>();
@@ -80,7 +107,7 @@ export function parseAhumadaHtml(html: string): ScrapedProduct[] {
       onlineUrl: href.startsWith("http") ? href : `${BASE}${href}`,
       imageUrl,
       laboratory: null,
-      isBioequivalent: block.includes("bioequivalent-badge"),
+      isBioequivalent: hasBioequivalentBadge(block),
     });
   }
 

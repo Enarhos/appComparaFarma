@@ -7,9 +7,17 @@
  *
  * Convención (igual que en packages/domain/src/__tests__/
  * searchQualityQA.characterization.test.ts):
- *   - `it(...)`       con "[DEFECTO ...]" → congela el defecto actual.
- *   - `it.fails(...)` con "[DESEADO]"     → expresa el comportamiento correcto;
- *                                            pasa mientras el defecto exista.
+ *   - `it(...)`       con "[DEFECTO ...]"   → congela el defecto actual.
+ *   - `it.fails(...)` con "[DESEADO]"       → expresa el comportamiento correcto;
+ *                                              pasa mientras el defecto exista.
+ *   - `it(...)`       con "[CORREGIDO S-X]" → el Gate 2 ya corrigió ese defecto;
+ *                                              el test dejó de congelarlo y pasó
+ *                                              a verificar el comportamiento
+ *                                              correcto, conservando en el
+ *                                              comentario qué defecto cubría.
+ *
+ * Gate 2 (2026-08-27) corrigió S-2 (Ahumada/bioequivalencia). Los demás
+ * defectos caracterizados acá siguen abiertos y fuera de alcance.
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -27,7 +35,7 @@ const realHtml = readFileSync(
   "utf8"
 );
 
-describe("QA-04 — Ahumada marca TODOS sus productos como bioequivalentes", () => {
+describe("QA-04 / S-2 — Ahumada marcaba TODOS sus productos como bioequivalentes (corregido en Gate 2)", () => {
   it("el fixture real contiene el contenedor que el sitio emite en todos los tiles", () => {
     // `sellcondition-bioequivalent-badges` es el contenedor; aparece siempre.
     // `bioequivalent-badge-container` es el badge de verdad; aparece solo
@@ -37,10 +45,18 @@ describe("QA-04 — Ahumada marca TODOS sus productos como bioequivalentes", () 
     expect(parseAhumadaHtml(realHtml)).toHaveLength(2);
   });
 
-  it("[DEFECTO QA-04] `block.includes(\"bioequivalent-badge\")` matchea el contenedor vacío", () => {
-    // Causa raíz: el contenedor se llama `sellcondition-bioequivalent-badgeS`
-    // y CONTIENE la subcadena `bioequivalent-badge`. El chequeo por substring
-    // de api/src/clients/ahumada.ts no distingue contenedor de badge.
+  it("[CORREGIDO S-2] el contenedor vacío YA NO cuenta como badge", () => {
+    // DEFECTO ORIGINAL (Gate 1): el contenedor se llama
+    // `sellcondition-bioequivalent-badgeS` y CONTIENE la subcadena
+    // `bioequivalent-badge`; el chequeo por substring de
+    // api/src/clients/ahumada.ts no distinguía contenedor de badge, así que el
+    // tile SIN badge real ("Tapsin 1g Efervescente") salía con
+    // `isBioequivalent: true`. Medido en producción 2026-08-27: en las 8
+    // búsquedas capturadas (ibuprofeno x3, omeprazol, losartan, paracetamol
+    // x2, tapsin) Ahumada devolvió 0 ofertas con `isBioequivalent=false`.
+    //
+    // FIX (Gate 2, S-2): `hasBioequivalentBadge()` exige un token de clase
+    // exacto. Este test pasó de congelar el defecto a verificar la corrección.
     const results = parseAhumadaHtml(realHtml);
 
     const sinBadge = results.find((r) => r.name.includes("Tapsin 1g Efervescente"));
@@ -49,34 +65,32 @@ describe("QA-04 — Ahumada marca TODOS sus productos como bioequivalentes", () 
     expect(sinBadge).toBeDefined();
     expect(conBadge).toBeDefined();
 
-    // El que SÍ tiene badge real: correcto.
     expect(conBadge!.isBioequivalent).toBe(true);
-    // El que NO tiene badge real: falso positivo.
-    expect(sinBadge!.isBioequivalent).toBe(true);
+    expect(sinBadge!.isBioequivalent).toBe(false);
 
-    // Consecuencia medida en producción (2026-08-27): en las 8 búsquedas
-    // capturadas (ibuprofeno x3, omeprazol, losartan, paracetamol x2, tapsin)
-    // Ahumada devolvió 0 ofertas con isBioequivalent=false. 100% true.
-    expect(results.every((r) => r.isBioequivalent)).toBe(true);
+    // Ya no es "100% true": el mismo HTML real produce ahora 1 de 2.
+    expect(results.every((r) => r.isBioequivalent)).toBe(false);
   });
 
-  it.fails("[DESEADO] un producto sin badge real no debería marcarse bioequivalente", () => {
+  it("[CORREGIDO S-2] un producto sin badge real no se marca bioequivalente", () => {
+    // Era el `it.fails("[DESEADO] ...")` del Gate 1 — ahora es una aserción
+    // normal porque el comportamiento deseado es el vigente.
     const results = parseAhumadaHtml(realHtml);
     const sinBadge = results.find((r) => r.name.includes("Tapsin 1g Efervescente"));
     expect(sinBadge!.isBioequivalent).toBe(false);
   });
 
-  it("[HALLAZGO] el fixture existente `ahumada-search.html` no reproduce el marcado real", () => {
-    // No se modifica ni se borra el fixture/test existente (ahumada.test.ts
-    // sigue pasando). Se deja registrado por qué ese test verde convivía con
-    // un defecto del 100% en producción: es HTML simplificado escrito a mano,
-    // sin el contenedor `sellcondition-bioequivalent-badges`. Mismo patrón ya
-    // documentado para el parser de precios de EasyFarma.
-    const legacy = readFileSync(
+  it("[CORREGIDO S-2] el fixture `ahumada-search.html` ya reproduce el marcado real", () => {
+    // HALLAZGO ORIGINAL (Gate 1): `ahumada-search.html` era HTML simplificado
+    // escrito a mano, SIN el contenedor `sellcondition-bioequivalent-badges` —
+    // por eso `ahumada.test.ts` quedaba verde mientras producción fallaba al
+    // 100%. El Gate 2 lo reemplazó por marcado real de la misma captura.
+    const fixture = readFileSync(
       join(import.meta.dirname, "fixtures", "ahumada-search.html"),
       "utf8"
     );
-    expect(legacy).not.toContain("sellcondition-bioequivalent-badges");
+    expect(fixture).toContain("sellcondition-bioequivalent-badges");
+    expect(fixture).toContain("bioequivalent-badge-container");
   });
 });
 

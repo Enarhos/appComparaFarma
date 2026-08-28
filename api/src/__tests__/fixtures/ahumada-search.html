@@ -1,24 +1,198 @@
-<html>
-  <body>
-    <div class="product product-tile-wrapper" data-pid="84574">
-      <div class="pdp-link">
-        <a href="/paracetamol-500-mg-x-16-comprimidos-84574.html">Paracetamol 500 mg x 16 Comprimidos</a>
-      </div>
-      <div class="promotion-badge-container">$731</div>
-      <img class="tile-image" src="https://cdn.example.com/84574.jpg" />
-      <div class="bioequivalent-badge"></div>
+<!--
+FIXTURE — Farmacias Ahumada, listado de búsqueda.
+
+REEMPLAZO (SEARCH-MATCHING-QA-01, Gate 2, fix S-2): la versión anterior de este
+archivo era HTML simplificado escrito a mano y NO reproducía el marcado real de
+bioequivalencia — en particular NO traía el contenedor
+`sellcondition-bioequivalent-badges`, que el sitio real emite en TODOS los
+tiles (vacío o no). Por eso `ahumada.test.ts` quedaba verde mientras el parser
+marcaba el 100% de la producción como bioequivalente.
+
+Esta versión usa el MARCADO REAL capturado de
+https://www.farmaciasahumada.cl/on/demandware.store/Sites-ahumada-cl-Site/default/Search-ShowAjax
+(2026-08-27, GET read-only — misma captura que
+`ahumada-search-real-bio-badges.html`), con la estructura de tile intacta y
+solo los datos de producto sustituidos por los dos escenarios que este fixture
+necesita cubrir:
+
+  - data-pid 84574 "Paracetamol 500 mg x 16 Comprimidos"
+        contenedor `sellcondition-bioequivalent-badges` CON el badge real
+        (`bioequivalent-badge-container` + `js-popover bioequivalent-badge`)
+        => isBioequivalent = true. Precio directo $731, sin CMR.
+  - data-pid 92080 "Bufferin Forte Paracetamol 1 G 18 Comprimidos"
+        contenedor `sellcondition-bioequivalent-badges` presente pero VACÍO
+        => isBioequivalent = false (antes del fix: true, falso positivo).
+        Precio badge CMR $10.990 + precio de lista $12.990 (badge Falabella).
+-->
+<html><body><div class="row product-grid">
+<div class="product product-tile-wrapper h-100 w-100 pb-lg-4 pb-3"
+    data-show-quickview-on-product-tile="true"
+    data-show-add-to-cart-cta-on-product-tile="true" data-pid="84574" >
+<div
+    class="product-tile h-100 d-flex flex-column justify-space-between bg-white  "
+    data-pid="84574"
+    data-bundled-products="null"
+    data-plp-default-quantity="1.0"
+    data-categories="Medicamentos,Dolor, Fiebre e Inflamaci&oacute;n,Anlag&eacute;sicos"
+    >
+    <!-- dwMarker="product" dwContentID="cf38beba606b147736ea34eea4" -->
+<div class="extra-badges-bien-estar d-flex flex-column">
+</div>
+
+<div class="image-container position-relative overflow-hidden">
+    <a href="/paracetamol-500-mg-x-16-comprimidos-84574.html">
+        <img class="tile-image"
+            src="https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa5407c19/images/products/84574/84574.jpg?sw=247&amp;sh=247&amp;sm=fit"
+            alt="Paracetamol 500 mg x 16 Comprimidos"
+            title="Paracetamol 500 mg x 16 Comprimidos, "
+            itemprop="image"/>
+    </a>
+
+    <div class="position-absolute sellcondition-bioequivalent-badges d-flex flex-column">
+            <div class="bioequivalent-badge-container">
+                <img
+                    data-content="&lt;span&gt; Bioequivalente &lt;/span&gt;"
+                    data-toggle="popover"
+                    class="js-popover bioequivalent-badge"
+                    src="https://www.farmaciasahumada.cl/on/demandware.static/-/Sites-ahumada-cl-Library/default/dw061d47ef/images/badges/ico_b.png"
+                />
+            </div>
     </div>
 
-    <div class="product product-tile-wrapper" data-pid="92080">
-      <div class="pdp-link">
-        <a href="/bufferin-forte-paracetamol-1-g-18-comprimidos-92080.html">Bufferin Forte Paracetamol 1 G 18 Comprimidos</a>
-      </div>
-      <div class="promotion-badge-container">$10.990</div>
-      <img class="promotion-badge" src="/badge_30x40_cmr_falabella.png" content="10990" />
-      <meta content="12990" />
-      <img class="tile-image" src="https://cdn.example.com/92080.jpg" />
+    <div class="position-absolute extra-badges d-flex flex-column">
+    </div>
+</div>
+
+    <div class="tile-body ">
+        <div class="product-tile-brand">
+        <span class="link" href="/paracetamol-500-mg-x-16-comprimidos-84574.html">Laboratorio Chile</span>
+</div>
+
+        <div class="pdp-link">
+    <a class="link" href="/paracetamol-500-mg-x-16-comprimidos-84574.html">Paracetamol 500 mg x 16 Comprimidos</a>
+</div>
+
+    <div class="price">
+    <span class="d-block default-price">
+        <span class="sales d-flex ">
+<div class="promotion-badge-container flex-row align-items-center ml-0 ">
+        $731
+</div>
+        </span>
+    </span>
+</span>
+    </div>
     </div>
 
-    <div class="col-12 grid-footer"></div>
-  </body>
-</html>
+    <div class="tile-cta mt-auto">
+<div class="row cart-and-ipay mx-auto mw-100 ">
+    <div class="col-sm-12 px-0">
+        <input type="hidden" class="add-to-cart-url" value="/monte-seu-pacote">
+        <button
+            class="btn primary-btn btn-primary px-2 w-100 product-tile-add-to-cart "
+            data-toggle="modal"
+            data-target="#chooseBonusProductModal"
+            data-pid="84574"
+            data-is-unavailable="false"
+            >
+            Agregar al Carrito
+        </button>
+    </div>
+</div>
+    </div>
+    <!-- END_dwmarker -->
+</div>
+</div>
+
+    <div class="col-6 col-lg-4 col-xl-3">
+<div class="product product-tile-wrapper h-100 w-100 pb-lg-4 pb-3"
+    data-show-quickview-on-product-tile="true"
+    data-show-add-to-cart-cta-on-product-tile="true" data-pid="92080" >
+<div
+    class="product-tile h-100 d-flex flex-column justify-space-between bg-white pt-0 "
+    data-pid="92080"
+    data-bundled-products="null"
+    data-plp-default-quantity="1.0"
+    data-categories="Medicamentos,Dolor, Fiebre e Inflamaci&oacute;n,Anlag&eacute;sicos"
+    >
+    <!-- dwMarker="product" dwContentID="ad18ea4019dfb3927d1f62c091" -->
+<div class="extra-badges-bien-estar d-flex flex-column">
+</div>
+
+<div class="image-container position-relative overflow-hidden">
+    <a href="/bufferin-forte-paracetamol-1-g-18-comprimidos-92080.html">
+        <img class="tile-image"
+            src="https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb36b4590/images/products/92080/92080.jpg?sw=247&amp;sh=247&amp;sm=fit"
+            alt="Bufferin Forte Paracetamol 1 G 18 Comprimidos"
+            title="Bufferin Forte Paracetamol 1 G 18 Comprimidos, "
+            itemprop="image"/>
+    </a>
+
+    <div class="position-absolute sellcondition-bioequivalent-badges d-flex flex-column">
+    </div>
+
+    <div class="position-absolute extra-badges d-flex flex-column">
+    </div>
+</div>
+
+    <div class="tile-body ">
+        <div class="product-tile-brand">
+        <span class="link" href="/bufferin-forte-paracetamol-1-g-18-comprimidos-92080.html">Opella Healthcare</span>
+</div>
+
+        <div class="pdp-link">
+    <a class="link" href="/bufferin-forte-paracetamol-1-g-18-comprimidos-92080.html">Bufferin Forte Paracetamol 1 G 18 Comprimidos</a>
+</div>
+
+    <div class="price">
+    <span class="d-block default-price">
+        <span class="sales d-flex ">
+<div class="promotion-badge-container flex-row align-items-center ml-0 ">
+        $10.990
+            <img class="promotion-badge" alt="promotion badge" src="https://www.farmaciasahumada.cl/on/demandware.static/-/Sites-ahumada-cl-Library/default/dw7bd08930/images/badges/badge_30x40_cmr_falabella.png" onerror="this.style.display='none';"/>
+</div>
+        </span>
+    </span>
+
+        <del class="text-decoration-none ">
+            <span class="strike-through list text-decoration-none">
+                <span class="value" content="12990">
+                    <span class="sr-only">
+                        Price reduced from
+                    </span>
+                    $12.990
+                    <span class="sr-only">
+                        to
+                    </span>
+                </span>
+                <span class="ml-1 text-decoration-none price-internet">
+                    Precio normal
+                </span>
+            </span>
+        </del>
+</span>
+    </div>
+    </div>
+
+    <div class="tile-cta mt-auto">
+<div class="row cart-and-ipay mx-auto mw-100 ">
+    <div class="col-sm-12 px-0">
+        <input type="hidden" class="add-to-cart-url" value="/monte-seu-pacote">
+        <button
+            class="btn primary-btn btn-primary px-2 w-100 product-tile-add-to-cart "
+            data-toggle="modal"
+            data-target="#chooseBonusProductModal"
+            data-pid="92080"
+            data-is-unavailable="false"
+            >
+            Agregar al Carrito
+        </button>
+    </div>
+</div>
+    </div>
+    <!-- END_dwmarker -->
+</div>
+</div>
+
+<div class="col-12 grid-footer"></div>
+</div></body></html>
