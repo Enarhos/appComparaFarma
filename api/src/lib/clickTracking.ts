@@ -1,31 +1,20 @@
 import { supabase } from "./supabaseClient.js";
+import { isPharmacyOwnedUrl } from "./pharmacyDomains.js";
 import type { MedicationResult, PharmacySlug } from "./types.js";
 
 const TABLE = "pharmacy_clicks";
 
-// Dominio raíz real de cada farmacia — usado para validar que /api/go solo
-// redirige a un sitio conocido (previene open redirect / phishing).
-const ALLOWED_DOMAINS: Record<PharmacySlug, string> = {
-  "cruz-verde": "cruzverde.cl",
-  salcobrand: "salcobrand.cl",
-  ahumada: "farmaciasahumada.cl",
-  "dr-simi": "drsimi.cl",
-  araucomed: "araucomed.com",
-  ecofarmacias: "ecofarmacias.cl",
-  farmex: "farmex.cl",
-  sermecoop: "farmaciasermecoop.cl",
-  easyfarma: "easyfarma.cl",
-};
-
+/**
+ * Valida que `/api/go` solo redirija a un sitio propio de la farmacia
+ * (previene open redirect / phishing).
+ *
+ * CF-SEARCH-001: el registro de dominios se movió a `pharmacyDomains.ts` para
+ * compartirlo con la validación de ingesta de `searchService.ts` — mismo
+ * criterio en los dos extremos del pipeline, una sola lista que mantener.
+ * El contrato de esta función no cambia.
+ */
 export function isAllowedRedirectUrl(slug: PharmacySlug, rawUrl: string): boolean {
-  try {
-    const { hostname, protocol } = new URL(rawUrl);
-    if (protocol !== "https:") return false;
-    const domain = ALLOWED_DOMAINS[slug];
-    return domain != null && (hostname === domain || hostname.endsWith(`.${domain}`));
-  } catch {
-    return false;
-  }
+  return isPharmacyOwnedUrl(slug, rawUrl);
 }
 
 export async function recordClick(

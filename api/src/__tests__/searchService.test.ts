@@ -28,6 +28,7 @@ vi.mock("../clients/easyfarma.js", () => ({ searchEasyFarma: mocks.searchEasyFar
 // exactamente el camino que ejercita "sin Supabase configurado".
 
 import { searchMedicationsDetailed } from "../services/searchService.js";
+import { isAllowedRedirectUrl } from "../lib/clickTracking.js";
 
 describe("searchMedicationsDetailed", () => {
   beforeEach(() => {
@@ -143,6 +144,62 @@ describe("searchMedicationsDetailed", () => {
     expect(new Set(execution.results.map((r) => r.matchKey)).size).toBe(1);
     // presentationKey sí distingue las tres marcas
     expect(new Set(execution.results.map((r) => r.presentationKey)).size).toBe(3);
+  });
+
+  it("CF-SEARCH-001: una URL que no pertenece a la farmacia se descarta en la ingesta", async () => {
+    // AraucoMed, EcoFarmacias y EasyFarma toman la URL COMPLETA de su fuente
+    // externa (campo `url` del JSON de PrestaShop, `permalink` de WordPress,
+    // href del HTML scrapeado) — un cambio de feed puede introducir un enlace
+    // a otro sitio sin que ningún parser falle. La oferta se conserva (el
+    // precio es válido); lo que se anula es el enlace.
+    mocks.searchAraucoMed.mockResolvedValue([
+      makeProduct(
+        "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos",
+        500,
+        null,
+        false,
+        "Maver",
+        "https://www.ecofarmacias.cl/producto/tapsin-x-6/"
+      ),
+    ]);
+    mocks.searchEcoFarmacias.mockResolvedValue([
+      makeProduct(
+        "Tapsin X 6 Comprimidos (Maver)",
+        460,
+        null,
+        false,
+        "Maver",
+        "https://www.ecofarmacias.cl/producto/tapsin-x-6/"
+      ),
+    ]);
+    mocks.searchCruzVerde.mockResolvedValue([]);
+    mocks.searchSalcobrand.mockResolvedValue([]);
+    mocks.searchAhumada.mockResolvedValue([]);
+    mocks.searchDrSimi.mockResolvedValue([]);
+    mocks.searchFarmex.mockResolvedValue([]);
+    mocks.searchSermecoop.mockResolvedValue([]);
+    mocks.searchEasyFarma.mockResolvedValue([]);
+
+    const execution = await searchMedicationsDetailed("tapsin");
+
+    // Dos productos comerciales distintos: NO se fusionan (CF-SEARCH-001).
+    expect(execution.results).toHaveLength(2);
+
+    const prices = execution.results.flatMap((result) => result.prices);
+    const araucomedPrice = prices.find((price) => price.pharmacySlug === "araucomed")!;
+    const ecoPrice = prices.find((price) => price.pharmacySlug === "ecofarmacias")!;
+
+    expect(araucomedPrice.onlineUrl).toBeNull();
+    expect(ecoPrice.onlineUrl).toBe("https://www.ecofarmacias.cl/producto/tapsin-x-6/");
+
+    // Invariante de integridad de oferta: ninguna URL de la respuesta apunta a
+    // un dominio distinto del de su propia farmacia.
+    for (const result of execution.results) {
+      for (const price of result.prices) {
+        if (!price.onlineUrl) continue;
+        expect(isAllowedRedirectUrl(price.pharmacySlug, price.onlineUrl)).toBe(true);
+      }
+    }
   });
 });
 
