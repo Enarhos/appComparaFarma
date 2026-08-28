@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import type { MedicationResult, PharmacyPrice, PharmacySlug } from "../types.js";
+import type { MedicationResult, PharmacyPrice, PharmacySlug, ScrapedProduct } from "../types.js";
 import { mergeDuplicates } from "../deduplication.js";
 import { presentationKey } from "../commercialIdentity.js";
+import { toMedicationResult } from "../pricing.js";
 
 function makePharmacyPrice(pharmacySlug: PharmacySlug, effective: number): PharmacyPrice {
   return {
@@ -211,5 +212,80 @@ describe("mergeDuplicates", () => {
     // Ninguna de las dos ofertas reales pierde su precio/canal.
     expect(merged.find((m) => m.laboratory === "Ascenda")?.prices[0].channels.effective).toBe(19199);
     expect(merged.find((m) => m.laboratory === "Nestlé Ascenda®")?.prices[0].channels.effective).toBe(24999);
+  });
+});
+
+/**
+ * S-1 (SEARCH-MATCHING-QA-01, Gate 2) — `mergeDuplicates` NO se modificó.
+ *
+ * La corrección vive íntegramente en `presentationKey` (commercialIdentity.ts),
+ * que ya es la clave de agrupación. Estos casos ejercitan el pipeline REAL
+ * (`toMedicationResult` → `mergeDuplicates`, igual que searchService) para
+ * confirmarlo con evidencia en vez de asumirlo.
+ */
+describe("mergeDuplicates — combinación vs monofármaco (S-1)", () => {
+  function offer(
+    pharmacySlug: PharmacySlug,
+    name: string,
+    price: number,
+    laboratory: string | null = null
+  ): MedicationResult {
+    const product: ScrapedProduct = {
+      name,
+      price,
+      onlinePrice: null,
+      cmrPrice: null,
+      sbpayPrice: null,
+      hasStock: true,
+      hasOnlineDelivery: true,
+      onlineUrl: null,
+      imageUrl: null,
+      laboratory,
+      isBioequivalent: false,
+    };
+    return toMedicationResult(product, pharmacySlug, pharmacySlug);
+  }
+
+  it("no fusiona el monofármaco con su combinación aunque compartan matchKey, marca y bio", () => {
+    const mono = offer("araucomed", "Losartan Potasico 50 mg x 30 comprimidos. (Ascend)", 990, "Ascend");
+    const combo = offer(
+      "farmex",
+      "Losartán Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos",
+      1990,
+      "Ascend"
+    );
+
+    expect(mono.matchKey).toBe(combo.matchKey);
+    const merged = mergeDuplicates([mono, combo]);
+    expect(merged).toHaveLength(2);
+    expect(merged.map((m) => m.bestPrice).sort((a, b) => a - b)).toEqual([990, 1990]);
+  });
+
+  it("dos farmacias que listan la MISMA combinación sí se siguen fusionando", () => {
+    // La separación es contra el monofármaco, no entre farmacias: si el token
+    // de combinación no fuera estable entre variantes de escritura, este caso
+    // se partiría en dos tarjetas y el usuario perdería la comparación.
+    const farmex = offer("farmex", "Losartán Potásico + Hidroclorotiazida 50/12,5 mg x 30 comprimidos", 1990);
+    const eco = offer("ecofarmacias", "Losartan/Hidroclorotiazida 50/12,5 mg x 30 comprimidos", 1490);
+
+    expect(farmex.presentationKey).toBe(eco.presentationKey);
+    const merged = mergeDuplicates([farmex, eco]);
+    expect(merged).toHaveLength(1);
+    expect(merged[0].prices).toHaveLength(2);
+    expect(merged[0].bestPrice).toBe(1490);
+  });
+
+  it("[no-regresión] los monofármacos se siguen agrupando exactamente igual que antes de S-1", () => {
+    const cruzVerde = offer("cruz-verde", "Paracetamol 500 mg x 16 Comprimidos", 800, "Andrómaco");
+    const ahumada = offer("ahumada", "Paracetamol 500 mg x 16 comprimidos", 618, "ANDROMACO");
+
+    // Clave idéntica byte a byte a la de antes del fix: sin segmento `|combo:`.
+    expect(cruzVerde.presentationKey).toBe("paracetamol|500mg|16|bio:false|brand:andromaco");
+    expect(cruzVerde.presentationKey).toBe(ahumada.presentationKey);
+
+    const merged = mergeDuplicates([cruzVerde, ahumada]);
+    expect(merged).toHaveLength(1);
+    expect(merged[0].prices).toHaveLength(2);
+    expect(merged[0].bestPrice).toBe(618);
   });
 });

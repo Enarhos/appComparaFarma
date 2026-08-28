@@ -17,6 +17,14 @@
  *                      FAIL en cuanto el Gate 2 lo arregle. Es el "test que
  *                      falla intencionalmente" pedido por el Gate 1: deja el
  *                      defecto documentado y ejecutable sin romper CI.
+ *   - `it(...)` con "[CORREGIDO S-X]" → el Gate 2 ya corrigió ese defecto: el
+ *                      test dejó de congelarlo y pasó a verificar el
+ *                      comportamiento correcto, conservando en el comentario
+ *                      cuál era el defecto y qué evidencia lo respaldaba.
+ *
+ * Gate 2 (2026-08-27) corrigió S-1 (colisión monofármaco/combinación, vía
+ * `presentationKey`) y S-2 (bioequivalencia de Ahumada, lado API). El resto de
+ * los defectos caracterizados acá sigue abierto y fuera de alcance.
  *
  * Todos los datos de entrada son literales observados en producción real
  * (`GET https://comparafarma-api.vercel.app/api/search`, read-only,
@@ -330,14 +338,22 @@ describe("QA-01 — fragmentación de identidad comercial", () => {
 //                x 30 comprimidos"                                     $1990
 // ---------------------------------------------------------------------------
 describe("SUB-HALLAZGO — combinaciones fusionadas con el monofármaco", () => {
-  it("[DEFECTO] losartán+HCTZ produce el mismo matchKey que losartán solo", () => {
+  it("[SIN CAMBIOS, por diseño] losartán+HCTZ sigue produciendo el mismo matchKey que losartán solo", () => {
+    // `matchKey` NO se corrigió a propósito: su valor está persistido en
+    // price_history, medication_match_key_aliases, pharmacy_clicks y
+    // email_alerts. Cambiarlo invalidaría los históricos. La separación se
+    // resuelve en `presentationKey` (ver el test siguiente).
     expect(matchKey("Losartan Potasico 50 mg x 30 comprimidos")).toBe("losartan|50mg|30");
     expect(
       matchKey("Losartán Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos")
     ).toBe("losartan|50mg|30");
   });
 
-  it("[DEFECTO] y por lo tanto se fusionan en una sola tarjeta si comparten marca y bio", () => {
+  it("[CORREGIDO S-1] ya NO se fusionan en una sola tarjeta, aunque compartan matchKey, marca y bio", () => {
+    // DEFECTO ORIGINAL (Gate 1): con matchKey, marca y bio idénticos, ambos
+    // caían en el mismo `presentationKey` y `mergeDuplicates` los devolvía como
+    // UNA tarjeta con dos precios de dos medicamentos distintos ($990 el
+    // monofármaco y $1990 la combinación) — un "ahorro" del 50% inexistente.
     const mono = offer("araucomed", {
       name: "Losartan Potasico 50 mg x 30 comprimidos. (Ascend)",
       laboratory: "Ascend",
@@ -348,16 +364,28 @@ describe("SUB-HALLAZGO — combinaciones fusionadas con el monofármaco", () => 
       laboratory: "Ascend",
       price: 1990,
     });
+
+    expect(mono.matchKey).toBe(combo.matchKey);
+    expect(mono.presentationKey).toBe("losartan|50mg|30|bio:false|brand:ascend");
+    expect(combo.presentationKey).toBe(
+      "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida"
+    );
+
     const merged = mergeDuplicates([mono, combo]);
-    expect(merged).toHaveLength(1);
-    // El usuario ve UNA tarjeta con dos precios de dos medicamentos distintos.
-    expect(merged[0].prices).toHaveLength(2);
+    expect(merged).toHaveLength(2);
+    expect(merged.every((r) => r.prices.length === 1)).toBe(true);
   });
 
-  it.fails("[DESEADO] un monofármaco y su combinación nunca deberían compartir identidad", () => {
-    expect(
-      matchKey("Losartán Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos")
-    ).not.toBe(matchKey("Losartan Potasico 50 mg x 30 comprimidos"));
+  it("[CORREGIDO S-1] un monofármaco y su combinación nunca comparten identidad de presentación", () => {
+    // Era el `it.fails("[DESEADO] ...")` del Gate 1, que se expresaba sobre
+    // `matchKey`. La corrección aprobada va en `presentationKey`, así que la
+    // aserción se reexpresa sobre la clave que efectivamente decide
+    // SAME_PRODUCT en `mergeDuplicates`.
+    const mono = offer("araucomed", { name: "Losartan Potasico 50 mg x 30 comprimidos" });
+    const combo = offer("farmex", {
+      name: "Losartán Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos",
+    });
+    expect(combo.presentationKey).not.toBe(mono.presentationKey);
   });
 
   it("[DEFECTO] la dosis capturada de una combinación depende del espaciado del nombre", () => {
