@@ -15,7 +15,7 @@ interface Props {
 }
 
 export function MedicationListItem({ medication, activePharmacies }: Props) {
-  const { canonicalName, laboratory, isBioequivalent, prices, matchKey, imageUrl, bestPrice, bestPharmacy } = medication;
+  const { canonicalName, laboratory, isBioequivalent, prices, matchKey, presentationKey, imageUrl, bestPrice, bestPharmacy } = medication;
   const router = useRouter();
   const [imgError, setImgError] = useState(false);
   const isActive = useConfigStore((s) => s.isActive);
@@ -37,7 +37,22 @@ export function MedicationListItem({ medication, activePharmacies }: Props) {
   const displayColor = PHARMACIES[displayPharmacySlug]?.color ?? "#16a34a";
 
   function handlePress() {
-    router.push({ pathname: "/medication", params: { matchKey } });
+    // CF-SEARCH-001 — se navega por `presentationKey`, no por `matchKey`.
+    // Desde FASE 1 — Product Identity (2026-08-19) `mergeDuplicates` agrupa por
+    // `presentationKey`, así que `matchKey` DEJÓ de ser único en la lista de
+    // resultados: varias tarjetas distintas pueden compartirlo. La ficha
+    // resolvía con `results.find(r => r.matchKey === key)` y devolvía siempre
+    // la primera coincidencia — que, como la lista viene ordenada por precio,
+    // es la más barata.
+    //
+    // Efecto observado en producción (query "tapsin", 2026-08-27): tocar
+    // "Tapsin Rojo Dolor de Cabeza Tira x 6" (AraucoMed, $500, matchKey
+    // `tapsin|6`) abría la ficha de "Tapsin X 6 Comprimidos" (EcoFarmacias,
+    // $460, mismo `tapsin|6`) y el enlace llevaba a EcoFarmacias.
+    //
+    // `matchKey` se sigue enviando: es la clave de historial/alertas/
+    // favoritos y el fallback para navegaciones emitidas antes de este cambio.
+    router.push({ pathname: "/medication", params: { matchKey, presentationKey } });
   }
 
   return (

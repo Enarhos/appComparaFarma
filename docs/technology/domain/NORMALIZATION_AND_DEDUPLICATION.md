@@ -109,13 +109,17 @@ Con indicador de turno:
 
 > **Actualización 2026-08-19 (FASE 1 — Product Identity):** la clave de agrupación dejó de ser `matchKey` a secas — ahora es `presentationKey` (`matchKey` + bioequivalencia + identidad comercial/marca). `matchKey` sigue siendo el algoritmo descrito abajo, sin cambios; lo que cambió es que ya no alcanza por sí solo para decidir si dos ofertas son el mismo producto comercial (ver auditoría P0 Omeprazol 20mg — Ascend/OPKO/CuraeSpring compartían `matchKey` y se fusionaban incorrectamente). Detalle completo, política de fusión y normalización de marca: `docs/technology/domain/COMMERCIAL_IDENTITY.md`. El resto de esta sección (elección de nombre canónico, fusión de precios) sigue aplicando igual, solo que ahora opera dentro de cada grupo de `presentationKey`.
 
+> **Actualización 2026-08-27 (CF-SEARCH-001 — Product Identity & False Merge):** `presentationKey` incorpora dos ejes más, `|var:` (variante comercial dentro de la familia de marca) y `|form:` (clase gruesa de forma farmacéutica), y `mergeDuplicates` valida explícitamente la compatibilidad de identidad antes de fusionar. `matchKey` sigue sin cambios. Motivo: `brand:` no discrimina dentro de un mismo laboratorio, así que Tapsin Rojo, Forte, Periodo, Duo, Migraña e Instaflu —todos de Maver— colapsaban en una sola tarjeta con un "ahorro" inexistente. Diseño completo, evidencia de producción, impacto medido y falsos splits aceptados: `docs/technology/domain/PRODUCT_IDENTITY.md`.
+
 ### Algoritmo
 
-1. Agrupar resultados por `presentationKey` (antes: `matchKey`; ver actualización arriba)
+1. Agrupar resultados por `presentationKey` (antes: `matchKey`; ver actualizaciones arriba)
 2. Para cada grupo con más de un elemento:
-   - **Elegir nombre canónico**: preferir el que tiene `laboratory` no-null, luego el de nombre más corto
-   - **Fusionar precios**: combinar `prices[]` de todos los miembros, manteniendo el más reciente por farmacia (`fetchedAt`)
+   - **Quedarse con una oferta por farmacia**: la de menor `channels.effective`, conservando el `MedicationResult` de origen junto al precio
+   - **Elegir nombre canónico entre las ofertas que sobrevivieron**: preferir la que tiene `laboratory` no-null, luego la de nombre más corto, con desempates deterministas (precio, luego slug de farmacia). Desde CF-SEARCH-001 la elección se restringe a las ofertas presentes en `prices[]` — antes podía titular la tarjeta con una oferta descartada del grupo
+   - **Validar compatibilidad de identidad** antes de fusionar: una oferta cuyo nombre contradice a la canónica (principio activo/dosis/cantidad, combinación, variante comercial o forma farmacéutica) no se mezcla; sale como tarjeta propia
    - **Ordenar precios** por `channels.effective` ASC
+   - **Imagen**: de la oferta canónica; si no tiene, de la más barata que sí tenga — nunca de una oferta descartada
 3. Retornar un array de `MedicationResult` con precios fusionados
 
 ### Ejemplo visual
@@ -174,8 +178,9 @@ El prefijo de caché AsyncStorage en `mobile/src/lib/cache.ts` debe **incrementa
 | `v7`–`v9` | No documentados en este archivo — revisar historial de `mobile/src/lib/cache.ts` si hace falta el detalle |
 | `v10` | `matchKey` migrado a `@comparafarma/domain` (fusión de guiones y palabras cortas) |
 | `v11` | `MedicationResult` gana `presentationKey` (FASE 1 — Product Identity, 2026-08-19); una misma búsqueda puede devolver más resultados que antes al separar marcas distintas bajo el mismo `matchKey` — ver `docs/technology/domain/COMMERCIAL_IDENTITY.md` |
+| `v12` | `presentationKey` incorpora `\|var:` y `\|form:` (CF-SEARCH-001, 2026-08-27): cambia su VALOR para la mayoría del catálogo y la ficha de Mobile pasó a resolverse por esa clave — un resultado cacheado con la clave vieja ya no corresponde al mismo agrupamiento ni resuelve la ficha. Ver `docs/technology/domain/PRODUCT_IDENTITY.md` |
 
-Prefijo actual: `search_cache_v11_` (`mobile/src/lib/cache.ts`)
+Prefijo actual: `search_cache_v12_` (`mobile/src/lib/cache.ts`)
 
 ---
 

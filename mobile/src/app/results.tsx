@@ -13,6 +13,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { MedicationResult, PharmacySlug } from "@/lib/types";
 import { useLocalSearchParams } from "expo-router";
 import { MedicationListItem } from "@/components/MedicationListItem";
+import { medicationListKey } from "@/lib/medicationListKey";
 import { SkeletonCard } from "@/components/SkeletonCard";
 import { EmptyState } from "@/components/EmptyState";
 import { FilterSheet } from "@/components/FilterSheet";
@@ -332,9 +333,12 @@ export default function ResultsScreen() {
         </TouchableOpacity>
       )}
 
+      {/* CF-SEARCH-001 (QA-02): la clave de lista es `presentationKey` (la misma
+          identidad con la que se navega a la ficha), no `matchKey` — dejó de ser
+          único por tarjeta. Ver medicationListKey.ts. */}
       <FlatList
         data={(isLoading ? SKELETON_KEYS : displayResults) as (string | MedicationResult)[]}
-        keyExtractor={(item) => (typeof item === "string" ? item : item.matchKey)}
+        keyExtractor={medicationListKey}
         renderItem={({ item }) =>
           typeof item === "string" ? (
             <SkeletonCard />

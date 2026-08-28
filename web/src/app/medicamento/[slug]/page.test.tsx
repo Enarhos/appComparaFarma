@@ -94,16 +94,19 @@ describe("MedicationDetailPage", () => {
     expect(permanentRedirectMock).not.toHaveBeenCalled();
   });
 
-  it("throws without picking a winner when the resolution is ambiguous", async () => {
+  it("QA-01 — responde 404 (no un 500) y sin elegir un ganador cuando la resolución es ambigua", async () => {
     const medication = makeMedication();
     resolveMedicationBySlugMock.mockResolvedValue({ status: "ambiguous", matches: [medication, medication] });
 
+    // notFound() de Next también corta el render lanzando (NEXT_NOT_FOUND), pero
+    // es un 404 controlado: antes de este fix la página lanzaba un Error propio,
+    // es decir un HTTP 500 en una URL potencialmente indexada.
     await expect(
       MedicationDetailPage({ params: Promise.resolve({ slug: CANONICAL_SLUG }) })
-    ).rejects.toThrow();
+    ).rejects.toThrow("NEXT_NOT_FOUND");
 
+    expect(notFoundMock).toHaveBeenCalled();
     expect(permanentRedirectMock).not.toHaveBeenCalled();
-    expect(notFoundMock).not.toHaveBeenCalled();
   });
 
   it("redirects (308/permanent) to the canonical slug when the requested slug uses a legacy hash scheme (needsRedirect: true)", async () => {

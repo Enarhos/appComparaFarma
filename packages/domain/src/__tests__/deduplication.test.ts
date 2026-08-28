@@ -279,8 +279,13 @@ describe("mergeDuplicates — combinación vs monofármaco (S-1)", () => {
     const cruzVerde = offer("cruz-verde", "Paracetamol 500 mg x 16 Comprimidos", 800, "Andrómaco");
     const ahumada = offer("ahumada", "Paracetamol 500 mg x 16 comprimidos", 618, "ANDROMACO");
 
-    // Clave idéntica byte a byte a la de antes del fix: sin segmento `|combo:`.
-    expect(cruzVerde.presentationKey).toBe("paracetamol|500mg|16|bio:false|brand:andromaco");
+    // Sin segmento `|combo:` (no es una combinación) ni `|var:` (ninguna de
+    // las dos declara calificador comercial). CF-SEARCH-001 agrega
+    // `|form:solid-oral`: ambas escriben "comprimidos", así que el eje nuevo
+    // NO las separa — que es justamente lo que este no-regresión verifica.
+    expect(cruzVerde.presentationKey).toBe(
+      "paracetamol|500mg|16|bio:false|brand:andromaco|form:solid-oral"
+    );
     expect(cruzVerde.presentationKey).toBe(ahumada.presentationKey);
 
     const merged = mergeDuplicates([cruzVerde, ahumada]);

@@ -9,6 +9,7 @@ import { searchEasyFarma } from "../clients/easyfarma.js";
 import { searchSalcobrand } from "../clients/salcobrand.js";
 import { mergeDuplicates, toMedicationResult } from "@comparafarma/domain";
 import { PHARMACY_NAMES } from "../lib/pharmacies.js";
+import { sanitizePharmacyUrl } from "../lib/pharmacyDomains.js";
 import { getDisabledPharmacies } from "../lib/pharmacyFlags.js";
 import { recordPriceHistory } from "../lib/priceHistoryDb.js";
 import { attachCanonicalIds } from "../lib/medicationRegistry.js";
@@ -104,7 +105,22 @@ export async function searchMedicationsDetailed(
   const all: MedicationResult[] = [];
   for (const { slug, products } of sourceResults) {
     for (const product of products) {
-      all.push(toMedicationResult(product, slug, PHARMACY_NAMES[slug]));
+      // CF-SEARCH-001 — la URL de producto se valida contra los dominios
+      // propios de LA MISMA farmacia que la entregó, antes de entrar al
+      // pipeline. Tres de los nueve clientes (AraucoMed, EcoFarmacias,
+      // EasyFarma) toman la URL completa de la fuente externa sin
+      // construirla, así que un cambio de feed o de plantilla puede
+      // introducir un enlace a otro sitio sin que ningún parser falle.
+      // Sanear acá —y no solo en `/api/go`— garantiza el invariante de
+      // integridad de oferta en toda la respuesta: `pharmacy`, `price`,
+      // `channels` y `onlineUrl` provienen siempre de la misma fuente.
+      all.push(
+        toMedicationResult(
+          { ...product, onlineUrl: sanitizePharmacyUrl(slug, product.onlineUrl) },
+          slug,
+          PHARMACY_NAMES[slug]
+        )
+      );
     }
   }
 

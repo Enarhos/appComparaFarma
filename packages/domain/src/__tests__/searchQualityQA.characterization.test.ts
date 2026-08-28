@@ -288,9 +288,11 @@ describe("QA-01 — fragmentación de identidad comercial", () => {
     expect(eco.matchKey).toBe("losartan|50mg|30");
     expect(farmex.matchKey).toBe("losartan|50mg|30");
 
-    // Se parte por DOS ejes independientes a la vez:
-    expect(eco.presentationKey).toBe("losartan|50mg|30|bio:true|brand:unknown");
-    expect(farmex.presentationKey).toBe("losartan|50mg|30|bio:false|brand:chile");
+    // Se parte por DOS ejes independientes a la vez (bio y marca). El eje de
+    // forma farmacéutica que agrega CF-SEARCH-001 coincide en ambas
+    // ("comprimidos"), así que no aporta ni quita separación acá.
+    expect(eco.presentationKey).toBe("losartan|50mg|30|bio:true|brand:unknown|form:solid-oral");
+    expect(farmex.presentationKey).toBe("losartan|50mg|30|bio:false|brand:chile|form:solid-oral");
     expect(mergeDuplicates([eco, farmex])).toHaveLength(2);
   });
 
@@ -314,15 +316,44 @@ describe("QA-01 — fragmentación de identidad comercial", () => {
     expect(mergeDuplicates([eco, farmex])).toHaveLength(2);
   });
 
-  it("[OK, deseado] Tapsin de EcoFarmacias y de AraucoMed NO se fusionan (QA-01D)", () => {
-    // "Tapsin X 6 Comprimidos (Maver)" vs "Tapsin Rojo Dolor de Cabeza Tira
-    // x 6...". No hay evidencia de misma composición/EAN, así que la política
-    // conservadora acierta al mantenerlos separados.
+  it("[CORREGIDO CF-SEARCH-001] Tapsin de EcoFarmacias y de AraucoMed NO se fusionan (QA-01D)", () => {
+    // ESTE TEST PASABA POR LA RAZÓN EQUIVOCADA hasta CF-SEARCH-001, y quedó
+    // documentado como hallazgo del ticket: solo EcoFarmacias recibía
+    // `laboratory`, así que la separación venía del eje `brand:` (maver vs
+    // unknown), no de que el algoritmo distinguiera los dos productos. En
+    // producción AraucoMed SÍ entrega `manufacturer_name: "Maver"` para su
+    // catálogo Tapsin (ver api/src/clients/araucomed.ts), de modo que el par
+    // real caía en el mismo `presentationKey` y se fusionaba — que es
+    // exactamente el defecto reportado.
+    //
+    // Se conserva el caso original y se agrega la versión con laboratorio en
+    // AMBAS ofertas, que es la que ejercita de verdad la corrección.
     const merged = mergeDuplicates([
       offer("ecofarmacias", { name: "Tapsin X 6 Comprimidos (Maver)", laboratory: "Maver" }),
       offer("araucomed", { name: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos" }),
     ]);
     expect(merged).toHaveLength(2);
+
+    const eco = offer("ecofarmacias", {
+      name: "Tapsin X 6 Comprimidos (Maver)",
+      laboratory: "Maver",
+      price: 460,
+    });
+    const araucomed = offer("araucomed", {
+      name: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos",
+      laboratory: "Maver",
+      price: 500,
+    });
+
+    // Misma identidad farmacológica, misma marca, misma bioequivalencia: antes
+    // del fix nada los distinguía.
+    expect(eco.matchKey).toBe(araucomed.matchKey);
+    expect(eco.matchKey).toBe("tapsin|6");
+
+    // Lo que los separa ahora es el calificador comercial.
+    expect(eco.presentationKey).toBe("tapsin|6|bio:false|brand:maver|form:solid-oral");
+    expect(araucomed.presentationKey).toBe("tapsin|6|bio:false|brand:maver|var:rojo|form:solid-oral");
+    expect(mergeDuplicates([eco, araucomed])).toHaveLength(2);
   });
 });
 
@@ -366,9 +397,13 @@ describe("SUB-HALLAZGO — combinaciones fusionadas con el monofármaco", () => 
     });
 
     expect(mono.matchKey).toBe(combo.matchKey);
-    expect(mono.presentationKey).toBe("losartan|50mg|30|bio:false|brand:ascend");
+    // CF-SEARCH-001 agrega `|form:` al final. El monofármaco no declara
+    // calificador comercial y la combinación tampoco (`commercialVariantKey`
+    // devuelve null cuando el nombre es una combinación: lo que sigue a la
+    // marca son los otros principios activos, no una variante).
+    expect(mono.presentationKey).toBe("losartan|50mg|30|bio:false|brand:ascend|form:solid-oral");
     expect(combo.presentationKey).toBe(
-      "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida"
+      "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida|form:solid-oral"
     );
 
     const merged = mergeDuplicates([mono, combo]);
