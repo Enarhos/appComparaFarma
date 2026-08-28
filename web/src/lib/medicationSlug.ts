@@ -45,6 +45,26 @@ export function medicationSlugIdentity(medication: {
 }
 
 /**
+ * Segmento `|combo:<segundo principio activo>` que `presentationKey()` agrega
+ * al final cuando la oferta es una COMBINACIÓN (S-1, SEARCH-MATCHING-QA-01
+ * Gate 2, 2026-08-27 — ver `combinationKey()` en @comparafarma/domain).
+ */
+const COMBINATION_SEGMENT_PATTERN = /\|combo:[^|]*$/;
+
+/**
+ * Gen 3 — `presentationKey` tal como se calculaba ANTES de S-1, es decir sin el
+ * segmento `|combo:`. Se usa solo para resolver slugs emitidos antes de ese fix.
+ *
+ * Por diseño, S-1 agrega el segmento al FINAL y únicamente a las combinaciones:
+ * para todo el resto del catálogo esta función devuelve la cadena idéntica y el
+ * hash del slug NO rota. El único conjunto de URLs afectado es el de los
+ * productos de combinación, que es justamente el que esta generación cubre.
+ */
+export function presentationKeyWithoutCombination(presentationKey: string): string {
+  return presentationKey.replace(COMBINATION_SEGMENT_PATTERN, "");
+}
+
+/**
  * FASE 1 — Product Identity (2026-08-19): cuando el `MedicationResult` trae
  * `presentationKey` (matchKey + bioequivalencia + marca — ver
  * commercialIdentity.ts en @comparafarma/domain), el slug se calcula sobre
@@ -52,6 +72,10 @@ export function medicationSlugIdentity(medication: {
  * matchKey+bio (ej. Ascend vs CuraeSpring de Omeprazol 20mg x30) generen
  * slugs distintos y cada una resuelva a su propia ficha — ver
  * resolveMedication.ts para la cadena de fallback hacia slugs antiguos.
+ *
+ * S-1 (2026-08-27) no cambió esta función: `presentationKey` sigue siendo la
+ * identidad de slug vigente, ahora con el segmento `|combo:` para las
+ * combinaciones (Gen 4).
  */
 export function medicationSlugHash(medication: {
   matchKey: string;

@@ -5,6 +5,7 @@ import {
   medicationSlugHash,
   medicationSlugIdentity,
   parseMedicationSlug,
+  presentationKeyWithoutCombination,
   queryFromSlug,
   shortHash,
   slugifyText,
@@ -38,12 +39,20 @@ export type ResolveMedicationResult =
  * ganador por precio, farmacia u orden — se reporta como "ambiguous" y
  * queda registrado en los logs para investigar.
  *
+ * Generaciones de hash soportadas, en orden de intento:
+ *   Gen 4 (vigente) — `presentationKey` completa, con `|combo:` para las
+ *                     combinaciones (S-1, 2026-08-27).
+ *   Gen 3           — `presentationKey` sin `|combo:` (FASE 1 Product Identity,
+ *                     2026-08-19). Solo difiere de Gen 4 en combinaciones.
+ *   Gen 2           — matchKey + bioequivalencia, sin marca.
+ *   Gen 1           — matchKey a secas.
+ *
  * `needsRedirect` (bugfix 2026-08-19 — ver OPKO_DETAIL_REDIRECT_LOOP):
  * indica si `/medicamento/[slug]/page.tsx` debe emitir un `permanentRedirect`
  * hacia `canonicalSlug`. Es `true` SOLO cuando el slug pedido usa un esquema
- * de hash antiguo (Gen 1/Gen 2) y necesita migrar al esquema vigente (Gen 3,
- * `presentationKey`). Es `false` cuando el slug pedido YA matcheó por el
- * hash Gen 3 vigente, aun si `canonicalSlug` difiere en su parte legible de
+ * de hash antiguo (Gen 1/Gen 2/Gen 3) y necesita migrar al esquema vigente
+ * (Gen 4). Es `false` cuando el slug pedido YA matcheó por el
+ * hash Gen 4 vigente, aun si `canonicalSlug` difiere en su parte legible de
  * `slug` — esa diferencia es puramente cosmética (viene de `canonicalName`,
  * que `mergeDuplicates` en `packages/domain` puede resolver a un texto
  * distinto entre una búsqueda y la siguiente cuando dos o más farmacias
@@ -66,9 +75,26 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
     throw new Error(`No se pudo resolver la ficha del medicamento: ${error}`);
   }
 
-  // Gen 3 (actual) — matchKey + bioequivalencia + marca (presentationKey).
+  // Gen 4 (actual) — presentationKey completa: matchKey + bioequivalencia +
+  // marca + combinación (`|combo:` desde S-1, 2026-08-27).
   let matches = results.filter((result) => medicationSlugHash(result) === parsed.hash);
   let needsRedirect = false;
+
+  if (matches.length === 0) {
+    // Gen 3 — presentationKey SIN el segmento `|combo:` (esquema previo a S-1).
+    // Solo cambia el hash de los productos de COMBINACIÓN: para el resto del
+    // catálogo Gen 4 y Gen 3 son la misma cadena, así que este paso no puede
+    // devolver nada nuevo si Gen 4 ya falló. Preserva los links emitidos antes
+    // del fix para las combinaciones, que sí rotaron de hash.
+    const gen3Matches = results.filter(
+      (result) =>
+        result.presentationKey.length > 0 &&
+        shortHash(presentationKeyWithoutCombination(result.presentationKey)) === parsed.hash
+    );
+    const gen3Human = gen3Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
+    matches = gen3Human.length > 0 ? gen3Human : gen3Matches;
+    if (matches.length > 0) needsRedirect = true;
+  }
 
   if (matches.length === 0) {
     // Gen 2 — matchKey + bioequivalencia, sin marca (esquema previo a FASE 1
