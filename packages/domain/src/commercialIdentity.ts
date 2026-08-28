@@ -552,13 +552,36 @@ export interface PresentationKeyInput {
   matchKey: string;
   isBioequivalent: boolean | null | undefined;
   commercialIdentity: string;
+  /**
+   * S-1 (SEARCH-MATCHING-QA-01, Gate 2) — token del SEGUNDO principio activo
+   * cuando la oferta es una COMBINACIÓN (`combinationKey()` en matching.ts);
+   * `null`/ausente para monofármacos, que es el caso mayoritario.
+   *
+   * Existe porque `matchKey` solo lee el primer principio activo y la primera
+   * concentración, así que un monofármaco y su combinación comparten
+   * `matchKey` y terminaban FUSIONADOS en una sola tarjeta (riesgo clínico:
+   * dos medicamentos distintos con un "ahorro" que no existe). `matchKey` no
+   * se puede cambiar — su valor está persistido en historiales y alertas — así
+   * que la separación se resuelve en esta capa, que no persiste en ninguna
+   * tabla.
+   */
+  combinationKey?: string | null;
 }
 
 /**
  * Identidad comercial completa para decidir SAME_PRODUCT:
- * `matchKey` (farmacológico) + bioequivalencia + identidad comercial.
+ * `matchKey` (farmacológico) + bioequivalencia + identidad comercial
+ * (+ combinación, si corresponde).
  * Ejemplo: "omeprazol|20mg|30|bio:false|brand:ascend".
+ * Ejemplo combinación: "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida".
+ *
+ * El segmento `|combo:` se AGREGA AL FINAL y solo cuando la oferta es una
+ * combinación. Es deliberado: la clave de un monofármaco queda byte a byte
+ * igual que antes de S-1, así que el fix no rota la identidad (ni, en Web, el
+ * hash del slug) del ~99% del catálogo que no es combinación — ver la cadena
+ * de generaciones en web/src/lib/resolveMedication.ts.
  */
 export function presentationKey(input: PresentationKeyInput): string {
-  return `${input.matchKey}|bio:${bioequivalenceKey(input.isBioequivalent)}|brand:${input.commercialIdentity}`;
+  const base = `${input.matchKey}|bio:${bioequivalenceKey(input.isBioequivalent)}|brand:${input.commercialIdentity}`;
+  return input.combinationKey ? `${base}|combo:${input.combinationKey}` : base;
 }

@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import type { MedicationResult } from "@comparafarma/domain";
 import { bioequivalenceKey } from "@comparafarma/domain";
-import { buildMedicationSlug, medicationSlugHash, shortHash } from "@/lib/medicationSlug";
+import { buildMedicationSlug, medicationSlugHash, shortHash, slugifyText } from "@/lib/medicationSlug";
 import { resolveMedicationBySlug } from "./resolveMedication";
 
 const searchMedicationsMock = vi.fn();
@@ -273,5 +273,117 @@ describe("resolveMedicationBySlug", () => {
     const hop2 = await resolveMedicationBySlug(slugB);
     expect(hop2.status).toBe("ok");
     if (hop2.status === "ok") expect(hop2.needsRedirect).toBe(false);
+  });
+
+  // ==========================================================================
+  // S-1 (SEARCH-MATCHING-QA-01, Gate 2, 2026-08-27) — Gen 4.
+  // `presentationKey` ganó el segmento `|combo:` para las COMBINACIONES, así
+  // que su hash de slug rotó. Los links viejos de esos productos deben seguir
+  // resolviendo (con redirect) en vez de dar 404; el resto del catálogo no
+  // debe rotar ni redirigir.
+  // ==========================================================================
+
+  it("Caso 12 (S-1) — un slug Gen 3 de una COMBINACIÓN resuelve con needsRedirect al slug Gen 4", async () => {
+    const combo = makeMedication({
+      matchKey: "losartan|50mg|30",
+      canonicalName: "Losartan Potasico Hidroclorotiazida 50/12,5 mg x 30 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 1990,
+      presentationKey: "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [combo], error: null });
+
+    // Slug emitido ANTES del fix: mismo texto legible, hash de la clave sin
+    // el segmento `|combo:`.
+    const gen3Slug = `${slugifyText(combo.canonicalName)}-${shortHash("losartan|50mg|30|bio:false|brand:ascend")}`;
+    const gen4Slug = buildMedicationSlug(combo);
+    expect(gen3Slug).not.toBe(gen4Slug);
+
+    const result = await resolveMedicationBySlug(gen3Slug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(combo);
+      expect(result.canonicalSlug).toBe(gen4Slug);
+      expect(result.needsRedirect).toBe(true);
+    }
+  });
+
+  it("Caso 13 (S-1) — el slug Gen 4 de la combinación resuelve directo, sin redirect", async () => {
+    const combo = makeMedication({
+      matchKey: "losartan|50mg|30",
+      canonicalName: "Losartan Potasico Hidroclorotiazida 50/12,5 mg x 30 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 1990,
+      presentationKey: "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [combo], error: null });
+
+    const result = await resolveMedicationBySlug(buildMedicationSlug(combo));
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") expect(result.needsRedirect).toBe(false);
+  });
+
+  it("Caso 14 (S-1) — un producto que NO es combinación no rota de hash ni pide redirect", async () => {
+    // El 99% del catálogo: Gen 4 y Gen 3 son la MISMA cadena, así que el slug
+    // emitido antes del fix sigue siendo el vigente.
+    const mono = makeMedication({
+      matchKey: "losartan|50mg|30",
+      canonicalName: "Losartan Potasico 50 mg x 30 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 990,
+      presentationKey: "losartan|50mg|30|bio:false|brand:ascend",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [mono], error: null });
+
+    const slugAntesDelFix = `${slugifyText(mono.canonicalName)}-${shortHash("losartan|50mg|30|bio:false|brand:ascend")}`;
+    expect(slugAntesDelFix).toBe(buildMedicationSlug(mono));
+
+    const result = await resolveMedicationBySlug(slugAntesDelFix);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(mono);
+      expect(result.needsRedirect).toBe(false);
+    }
+  });
+
+  it("Caso 15 (S-1) — el slug Gen 3 de la combinación NO resuelve al monofármaco", async () => {
+    // Riesgo real del fallback: el monofármaco tiene HOY exactamente la clave
+    // que la combinación tenía antes del fix. La cadena debe resolver por Gen 4
+    // al monofármaco (su propio slug) y nunca devolver la combinación, ni al
+    // revés — si esto se rompe, un link viejo de la combinación llevaría a la
+    // ficha del monofármaco, que es el mismo riesgo clínico que S-1 corrige.
+    const mono = makeMedication({
+      matchKey: "losartan|50mg|30",
+      canonicalName: "Losartan Potasico 50 mg x 30 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 990,
+      presentationKey: "losartan|50mg|30|bio:false|brand:ascend",
+    });
+    const combo = makeMedication({
+      matchKey: "losartan|50mg|30",
+      canonicalName: "Losartan Potasico Hidroclorotiazida 50/12,5 mg x 30 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 1990,
+      presentationKey: "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [mono, combo], error: null });
+
+    const gen3ComboSlug = `${slugifyText(combo.canonicalName)}-${shortHash("losartan|50mg|30|bio:false|brand:ascend")}`;
+    const result = await resolveMedicationBySlug(gen3ComboSlug);
+
+    // Gen 4 matchea el MONOFÁRMACO por hash, pero su parte legible es otra;
+    // el desempate por texto legible no aplica en Gen 4 (solo en las
+    // generaciones legacy), así que se reporta la coincidencia sin inventar un
+    // ganador entre productos distintos.
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(mono);
+      expect(result.needsRedirect).toBe(false);
+      // Nunca devuelve la combinación bajo un hash que ya no es el suyo.
+      expect(result.medication).not.toBe(combo);
+    }
   });
 });

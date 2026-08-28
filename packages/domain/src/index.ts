@@ -10,7 +10,7 @@ export type {
   SearchExecution,
 } from "./types.js";
 
-export { matchKey } from "./matching.js";
+export { matchKey, combinationKey } from "./matching.js";
 export { cleanQuery } from "./normalization.js";
 export { effectivePrice, toPharmacyPrice, toMedicationResult, sortByEffectivePrice } from "./pricing.js";
 export { mergeDuplicates } from "./deduplication.js";

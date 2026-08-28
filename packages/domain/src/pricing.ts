@@ -1,5 +1,5 @@
 import type { MedicationResult, PharmacyPrice, PharmacySlug, ScrapedProduct } from "./types.js";
-import { matchKey } from "./matching.js";
+import { combinationKey, matchKey } from "./matching.js";
 import { presentationKey, resolveCommercialIdentity } from "./commercialIdentity.js";
 
 export function effectivePrice(channels: {
@@ -102,6 +102,12 @@ export function toMedicationResult(product: ScrapedProduct, pharmacySlug: Pharma
       matchKey: key,
       isBioequivalent: product.isBioequivalent,
       commercialIdentity: identity.commercialIdentity,
+      // S-1 (Gate 2, 2026-08-27): un monofármaco y su combinación comparten
+      // `matchKey` (que solo lee el primer principio activo) y se fusionaban en
+      // una sola tarjeta. `combinationKey` los separa acá, sin tocar `matchKey`
+      // — ver matching.ts. Devuelve `null` para monofármacos, así que la clave
+      // de esos NO cambia.
+      combinationKey: combinationKey(product.name),
     }),
   };
 }

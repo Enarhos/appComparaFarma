@@ -4,6 +4,7 @@ import {
   medicationSlugHash,
   medicationSlugIdentity,
   parseMedicationSlug,
+  presentationKeyWithoutCombination,
   queryFromSlug,
   shortHash,
   slugifyText,
@@ -127,5 +128,46 @@ describe("parseMedicationSlug", () => {
 describe("queryFromSlug", () => {
   it("turns hyphens back into spaces", () => {
     expect(queryFromSlug("paracetamol-500-mg-16-comprimidos")).toBe("paracetamol 500 mg 16 comprimidos");
+  });
+});
+
+/**
+ * S-1 (SEARCH-MATCHING-QA-01, Gate 2, 2026-08-27) — `presentationKey` ganó el
+ * segmento `|combo:` para las combinaciones, así que el hash del slug (Gen 4)
+ * rota SOLO para ellas. Gen 3 es la misma clave sin ese segmento.
+ */
+describe("presentationKeyWithoutCombination — Gen 3 (previa a S-1)", () => {
+  const combo = "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida";
+  const mono = "losartan|50mg|30|bio:false|brand:ascend";
+
+  it("quita el segmento |combo: de una combinación", () => {
+    expect(presentationKeyWithoutCombination(combo)).toBe(mono);
+  });
+
+  it("deja intacta la clave de un producto que no es combinación", () => {
+    // Garantía central del diseño: sin rotación de slugs para el catálogo que
+    // no es combinación.
+    for (const key of [
+      "paracetamol|500mg|16|bio:true|brand:andromaco",
+      "omeprazol|20mg|30|bio:false|brand:ascend",
+      "ibuprofeno|400mg|20|bio:unknown|brand:unknown",
+    ]) {
+      expect(presentationKeyWithoutCombination(key)).toBe(key);
+      expect(shortHash(presentationKeyWithoutCombination(key))).toBe(shortHash(key));
+    }
+  });
+
+  it("una combinación cambia de hash respecto de Gen 3; un monofármaco no", () => {
+    expect(shortHash(combo)).not.toBe(shortHash(presentationKeyWithoutCombination(combo)));
+    expect(medicationSlugHash({ matchKey: "losartan|50mg|30", isBioequivalent: false, presentationKey: mono })).toBe(
+      shortHash(mono)
+    );
+  });
+
+  it("solo quita el segmento final, nunca una marca que contenga el texto", () => {
+    // `brand:` se normaliza a [a-z0-9] y va antes que `combo:`; el patrón está
+    // anclado al final para no comerse nada más.
+    const key = "x|bio:false|brand:combolabs";
+    expect(presentationKeyWithoutCombination(key)).toBe(key);
   });
 });
