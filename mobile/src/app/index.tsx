@@ -74,7 +74,11 @@ export default function HomeScreen() {
     const med = cachedResults[matchKey];
     if (!med) return;
     setResults([med]);
-    router.push({ pathname: "/medication", params: { matchKey } });
+    // CF-SEARCH-001 — se envía también `presentationKey` (identidad de la
+    // tarjeta) para tener un único contrato de navegación hacia /medication.
+    // Acá `results` queda con un solo elemento, así que la resolución no era
+    // ambigua; el favorito sí sigue guardado por `matchKey` — ver FOLLOW_UP.
+    router.push({ pathname: "/medication", params: { matchKey, presentationKey: med.presentationKey } });
   }
 
   const favMeds = favKeys.map((k) => cachedResults[k]).filter(Boolean);

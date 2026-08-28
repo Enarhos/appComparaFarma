@@ -21,6 +21,7 @@ import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { AlertSheet } from "@/components/AlertSheet";
 import { formatCLP, scrapedAgo } from "@/lib/formatters";
 import { recordPriceSnapshot, getPriceHistory, type PriceSnapshot } from "@/lib/priceHistory";
+import { resolveMedicationCard } from "@/lib/resolveMedicationCard";
 import { computeSavings } from "@comparafarma/domain";
 import { BRAND_COLORS } from "@/constants/brand";
 import type { PharmacyPrice, PharmacySlug } from "@/lib/types";
@@ -37,7 +38,10 @@ function parseUnitQty(matchKey: string): { qty: number; perUnitLabel: string } |
 }
 
 export default function MedicationScreen() {
-  const { matchKey: key } = useLocalSearchParams<{ matchKey: string }>();
+  const { matchKey: key, presentationKey: presentationKeyParam } = useLocalSearchParams<{
+    matchKey: string;
+    presentationKey?: string;
+  }>();
   const results = useSearchStore((s) => s.results);
   const [imgError, setImgError] = useState(false);
   const [sort, setSort] = useState<SortKey>("price-asc");
@@ -50,7 +54,13 @@ export default function MedicationScreen() {
   const { getAlert } = useAlertsStore();
   const router = useRouter();
 
-  const medication = results.find((r) => r.matchKey === key);
+  // CF-SEARCH-001 — la resolución vive en `resolveMedicationCard` para poder
+  // testearla sin montar la pantalla; ahí está documentado por qué `matchKey`
+  // dejó de ser suficiente.
+  const medication = resolveMedicationCard(results, {
+    presentationKey: presentationKeyParam,
+    matchKey: key,
+  });
   const inCart = medication ? isInCart(medication.matchKey) : false;
   const isFav = medication ? favKeys.includes(medication.matchKey) : false;
   const hasAlert = medication ? !!getAlert(medication.matchKey) : false;
