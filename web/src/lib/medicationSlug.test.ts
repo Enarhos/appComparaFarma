@@ -5,6 +5,7 @@ import {
   medicationSlugIdentity,
   parseMedicationSlug,
   presentationKeyWithoutCombination,
+  presentationKeyWithoutIdentityAttributes,
   queryFromSlug,
   shortHash,
   slugifyText,
@@ -169,5 +170,53 @@ describe("presentationKeyWithoutCombination — Gen 3 (previa a S-1)", () => {
     // anclado al final para no comerse nada más.
     const key = "x|bio:false|brand:combolabs";
     expect(presentationKeyWithoutCombination(key)).toBe(key);
+  });
+
+  it("CF-SEARCH-001: sigue recuperando Gen 3 cuando |combo: ya no es el último segmento", () => {
+    // El patrón de `|combo:` está anclado al FINAL; con `|var:`/`|form:`
+    // detrás, sin quitarlos primero Gen 3 dejaba de resolver las
+    // combinaciones.
+    expect(
+      presentationKeyWithoutCombination(
+        "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida|form:solid-oral"
+      )
+    ).toBe(mono);
+  });
+});
+
+/**
+ * CF-SEARCH-001 (2026-08-27) — `presentationKey` incorpora `|var:` (variante
+ * comercial) y `|form:` (forma farmacéutica). A diferencia de `|combo:`,
+ * `|form:` está presente en casi todo el catálogo, así que Gen 4 es la
+ * generación que sostiene los links ya emitidos.
+ */
+describe("presentationKeyWithoutIdentityAttributes — Gen 4 (previa a CF-SEARCH-001)", () => {
+  it("quita |var: y |form: conservando el resto de la clave", () => {
+    expect(
+      presentationKeyWithoutIdentityAttributes("tapsin|6|bio:false|brand:maver|var:rojo|form:solid-oral")
+    ).toBe("tapsin|6|bio:false|brand:maver");
+    expect(presentationKeyWithoutIdentityAttributes("tapsin|6|bio:false|brand:maver|form:solid-oral")).toBe(
+      "tapsin|6|bio:false|brand:maver"
+    );
+  });
+
+  it("deja intacta una clave sin esos segmentos", () => {
+    const key = "paracetamol|500mg|16|bio:true|brand:andromaco";
+    expect(presentationKeyWithoutIdentityAttributes(key)).toBe(key);
+  });
+
+  it("no toca una marca que contenga literalmente 'var' o 'form'", () => {
+    const key = "x|bio:false|brand:varifarma";
+    expect(presentationKeyWithoutIdentityAttributes(key)).toBe(key);
+    const key2 = "x|bio:false|brand:formulab";
+    expect(presentationKeyWithoutIdentityAttributes(key2)).toBe(key2);
+  });
+
+  it("el hash rota cuando hay atributos nuevos y no rota cuando no los hay", () => {
+    const conForma = "tapsin|6|bio:false|brand:maver|form:solid-oral";
+    expect(shortHash(conForma)).not.toBe(shortHash(presentationKeyWithoutIdentityAttributes(conForma)));
+
+    const sinForma = "tapsin|6|bio:false|brand:maver";
+    expect(shortHash(sinForma)).toBe(shortHash(presentationKeyWithoutIdentityAttributes(sinForma)));
   });
 });

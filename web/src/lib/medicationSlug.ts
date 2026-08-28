@@ -52,6 +52,25 @@ export function medicationSlugIdentity(medication: {
 const COMBINATION_SEGMENT_PATTERN = /\|combo:[^|]*$/;
 
 /**
+ * Segmentos `|var:` (variante comercial) y `|form:` (forma farmacéutica) que
+ * `presentationKey()` agrega desde CF-SEARCH-001 (2026-08-27) — ver
+ * `productIdentity.ts` en @comparafarma/domain.
+ */
+const IDENTITY_ATTRIBUTE_SEGMENTS_PATTERN = /\|(?:var|form):[^|]*/g;
+
+/**
+ * Gen 4 — `presentationKey` tal como se calculaba ANTES de CF-SEARCH-001, es
+ * decir sin `|var:` ni `|form:`.
+ *
+ * A diferencia de `|combo:` (que solo afecta a las combinaciones), `|form:`
+ * está presente en la mayoría del catálogo: esta generación es la que evita
+ * que se rompan casi todos los links de ficha ya emitidos.
+ */
+export function presentationKeyWithoutIdentityAttributes(presentationKey: string): string {
+  return presentationKey.replace(IDENTITY_ATTRIBUTE_SEGMENTS_PATTERN, "");
+}
+
+/**
  * Gen 3 — `presentationKey` tal como se calculaba ANTES de S-1, es decir sin el
  * segmento `|combo:`. Se usa solo para resolver slugs emitidos antes de ese fix.
  *
@@ -59,9 +78,17 @@ const COMBINATION_SEGMENT_PATTERN = /\|combo:[^|]*$/;
  * para todo el resto del catálogo esta función devuelve la cadena idéntica y el
  * hash del slug NO rota. El único conjunto de URLs afectado es el de los
  * productos de combinación, que es justamente el que esta generación cubre.
+ *
+ * CF-SEARCH-001: se quitan primero `|var:`/`|form:`, porque el patrón de
+ * `|combo:` está anclado al FINAL de la cadena y esos segmentos ahora van
+ * después. Sin ese paso previo, Gen 3 dejaría de recuperar los slugs de las
+ * combinaciones.
  */
 export function presentationKeyWithoutCombination(presentationKey: string): string {
-  return presentationKey.replace(COMBINATION_SEGMENT_PATTERN, "");
+  return presentationKeyWithoutIdentityAttributes(presentationKey).replace(
+    COMBINATION_SEGMENT_PATTERN,
+    ""
+  );
 }
 
 /**

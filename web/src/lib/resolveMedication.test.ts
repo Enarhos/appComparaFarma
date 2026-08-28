@@ -386,4 +386,71 @@ describe("resolveMedicationBySlug", () => {
       expect(result.medication).not.toBe(combo);
     }
   });
+
+  it("Caso 16 (CF-SEARCH-001) — un slug Gen 4 resuelve con needsRedirect al slug Gen 5", async () => {
+    // A diferencia de S-1 (que solo rotó el hash de las combinaciones),
+    // `|form:` está presente en casi todo el catálogo: prácticamente todos los
+    // links de ficha ya emitidos entran por esta generación.
+    const med = makeMedication({
+      matchKey: "tapsin|6",
+      canonicalName: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 500,
+      presentationKey: "tapsin|6|bio:false|brand:maver|var:rojo|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [med], error: null });
+
+    const gen4Slug = `${slugifyText(med.canonicalName)}-${shortHash("tapsin|6|bio:false|brand:maver")}`;
+    const gen5Slug = buildMedicationSlug(med);
+    expect(gen4Slug).not.toBe(gen5Slug);
+
+    const result = await resolveMedicationBySlug(gen4Slug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(med);
+      expect(result.canonicalSlug).toBe(gen5Slug);
+      expect(result.needsRedirect).toBe(true);
+    }
+  });
+
+  it("Caso 17 (CF-SEARCH-001) — el slug Gen 5 vigente resuelve directo, sin redirect", async () => {
+    const med = makeMedication({
+      matchKey: "tapsin|6",
+      canonicalName: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 500,
+      presentationKey: "tapsin|6|bio:false|brand:maver|var:rojo|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [med], error: null });
+
+    const result = await resolveMedicationBySlug(buildMedicationSlug(med));
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") expect(result.needsRedirect).toBe(false);
+  });
+
+  it("Caso 18 (CF-SEARCH-001) — Gen 3 sigue funcionando aunque `|combo:` ya no sea el último segmento", async () => {
+    // El patrón de Gen 3 está anclado al FINAL de la cadena; con `|var:`/
+    // `|form:` después, había que quitarlos primero o Gen 3 dejaba de
+    // recuperar los slugs de las combinaciones.
+    const combo = makeMedication({
+      matchKey: "losartan|50mg|30",
+      canonicalName: "Losartan Potasico Hidroclorotiazida 50/12,5 mg x 30 comprimidos",
+      isBioequivalent: false,
+      bestPrice: 1990,
+      presentationKey:
+        "losartan|50mg|30|bio:false|brand:ascend|combo:hidroclorotiazida|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [combo], error: null });
+
+    const gen3Slug = `${slugifyText(combo.canonicalName)}-${shortHash("losartan|50mg|30|bio:false|brand:ascend")}`;
+    const result = await resolveMedicationBySlug(gen3Slug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(combo);
+      expect(result.needsRedirect).toBe(true);
+    }
+  });
 });

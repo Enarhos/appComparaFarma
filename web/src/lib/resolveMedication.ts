@@ -6,6 +6,7 @@ import {
   medicationSlugIdentity,
   parseMedicationSlug,
   presentationKeyWithoutCombination,
+  presentationKeyWithoutIdentityAttributes,
   queryFromSlug,
   shortHash,
   slugifyText,
@@ -40,8 +41,14 @@ export type ResolveMedicationResult =
  * queda registrado en los logs para investigar.
  *
  * Generaciones de hash soportadas, en orden de intento:
- *   Gen 4 (vigente) — `presentationKey` completa, con `|combo:` para las
- *                     combinaciones (S-1, 2026-08-27).
+ *   Gen 5 (vigente) — `presentationKey` completa, con `|var:` (variante
+ *                     comercial) y `|form:` (forma farmacéutica)
+ *                     (CF-SEARCH-001, 2026-08-27).
+ *   Gen 4           — `presentationKey` sin `|var:` ni `|form:` (S-1). A
+ *                     diferencia de Gen 3, esta generación cubre a CASI TODO
+ *                     el catálogo: `|form:` está presente en la mayoría de las
+ *                     fichas, así que casi todos los slugs emitidos antes de
+ *                     CF-SEARCH-001 resuelven por acá y redirigen a Gen 5.
  *   Gen 3           — `presentationKey` sin `|combo:` (FASE 1 Product Identity,
  *                     2026-08-19). Solo difiere de Gen 4 en combinaciones.
  *   Gen 2           — matchKey + bioequivalencia, sin marca.
@@ -75,10 +82,25 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
     throw new Error(`No se pudo resolver la ficha del medicamento: ${error}`);
   }
 
-  // Gen 4 (actual) — presentationKey completa: matchKey + bioequivalencia +
-  // marca + combinación (`|combo:` desde S-1, 2026-08-27).
+  // Gen 5 (actual) — presentationKey completa: matchKey + bioequivalencia +
+  // marca + combinación + variante comercial + forma farmacéutica
+  // (`|var:`/`|form:` desde CF-SEARCH-001, 2026-08-27).
   let matches = results.filter((result) => medicationSlugHash(result) === parsed.hash);
   let needsRedirect = false;
+
+  if (matches.length === 0) {
+    // Gen 4 — presentationKey SIN `|var:` ni `|form:` (esquema previo a
+    // CF-SEARCH-001). Preserva los links emitidos antes de ese cambio, que es
+    // prácticamente todo el catálogo indexado.
+    const gen4Matches = results.filter(
+      (result) =>
+        result.presentationKey.length > 0 &&
+        shortHash(presentationKeyWithoutIdentityAttributes(result.presentationKey)) === parsed.hash
+    );
+    const gen4Human = gen4Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
+    matches = gen4Human.length > 0 ? gen4Human : gen4Matches;
+    if (matches.length > 0) needsRedirect = true;
+  }
 
   if (matches.length === 0) {
     // Gen 3 — presentationKey SIN el segmento `|combo:` (esquema previo a S-1).
