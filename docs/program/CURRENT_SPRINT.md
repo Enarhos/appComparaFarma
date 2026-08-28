@@ -12,13 +12,13 @@ Contiene únicamente el trabajo activo del programa. No es un historial (→ `DO
 | **Nombre** | CURRENT_SPRINT.md |
 | **Dominio** | Gestión de Programa (`docs/program/`) |
 | **Estado** | Activo |
-| **Versión** | 1.4 |
+| **Versión** | 1.5 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Enterprise Program Manager / CTO |
 | **Nivel de Gobierno** | De decisión operativa |
 | **Clasificación** | Documento de Ejecución de Programa |
 | **Fuente Oficial** | Este documento, para el sprint activo actual |
-| **Última actualización** | 2026-08-25 |
+| **Última actualización** | 2026-08-27 |
 | **Pregunta que responde** | ¿Qué se está haciendo exactamente ahora mismo? |
 
 ---
@@ -34,6 +34,8 @@ Web/API y los frentes AUTH-DELETE-01/02 permanecen cerrados. El release Mobile *
 Estado operativo: **`WAITING_FOR_GOOGLE_PLAY_REVIEW`**.
 
 Durante la espera se cerró únicamente trabajo de diagnóstico/gobernanza sobre `BIOEQUIVALENCE-DATA-QUALITY-01`. La iniciativa quedó documentada en `MASTER_BACKLOG.md` y su Gate 2 quedó formalizado, pero **la implementación continúa explícitamente gateada por vc33 y no forma parte del sprint activo**.
+
+También se cerró, en branch propia, `CF-SEARCH-001` (identidad de producto: falso merge de variantes comerciales, navegación por clave no única en Mobile e integridad de oferta en `mergeDuplicates`) — implementado y testeado en `fix/cf-search-001-product-identity`, **pusheado a `origin` y pendiente de PR/review**, sin mergear a `origin/main`. No es parte del release Mobile vc33 en revisión ni lo bloquea.
 
 ---
 
@@ -66,6 +68,8 @@ Acta detallada del release: `docs/archive/meetings/20260823_mobile_release.md`.
 
 `BIOEQUIVALENCE-DATA-QUALITY-01` no entra en ejecución hasta que este gate de vc33 quede cerrado. Su próximo paso, cuando sea habilitado, será la implementación controlada de la corrección semántica y la arquitectura de agrupación ya documentadas.
 
+`CF-SEARCH-001` queda pendiente de PR/review y decisión de merge por Mario/ChatGPT; su FOLLOW_UP (migración de `matchKey` no único en favoritos/carrito/alertas/historial de Mobile) queda registrado en `MASTER_BACKLOG.md` sin implementar, a la espera de decisión de producto.
+
 ---
 
 ## 5. Warnings no bloqueantes
@@ -97,6 +101,8 @@ No iniciar automáticamente nuevas épicas durante la espera de revisión. AUTH-
 
 `BIOEQUIVALENCE-DATA-QUALITY-01` está **DOCUMENTED_AND_BACKLOGGED / IMPLEMENTATION_GATED_BY_MOBILE_VC33**. Sus decisiones de Gate 2 no se reabren sin evidencia nueva y ningún paso de implementación a partir del adapter fix está autorizado mientras vc33 siga en revisión.
 
+`CF-SEARCH-001` está **IMPLEMENTED_PENDING_PR_REVIEW**. No se reabre el diseño ni se toca la branch `fix/cf-search-001-product-identity` fuera del flujo normal de PR; el FOLLOW_UP de claves persistidas en Mobile no se implementa sin decisión explícita de Mario/ChatGPT.
+
 ---
 
 ## 8. Control de cambios
@@ -106,3 +112,4 @@ No iniciar automáticamente nuevas épicas durante la espera de revisión. AUTH-
 | 1.2 | 2026-08-23 | Reconciliación post Product Identity + Account Deletion; sprint mantenido en cierre operacional. |
 | 1.3 | 2026-08-23 | Estado Mobile reconciliado con evidencia directa: AAB vc33 construido/firmado, PR #113 incluido, upload aceptado y release/Data Safety enviados a revisión en Google Play Closed Testing. |
 | 1.4 | 2026-08-25 | Cierre de sesión: `BIOEQUIVALENCE-DATA-QUALITY-01` documentado y mergeado en backlog, sin entrar al sprint; se reafirma `WAITING_FOR_GOOGLE_PLAY_REVIEW` como único gate operativo activo. |
+| 1.5 | 2026-08-27 | Referencia de `CF-SEARCH-001` (identidad de producto y deduplicación segura): implementado y testeado en branch propia, pendiente de PR/review, no mergeado a `origin/main`; no bloquea ni forma parte del release Mobile vc33. FOLLOW_UP de claves persistidas en Mobile referenciado, pendiente de decisión de producto. |
