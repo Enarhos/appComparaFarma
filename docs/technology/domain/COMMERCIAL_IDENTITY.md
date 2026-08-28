@@ -5,7 +5,9 @@
 | **Fecha** | 2026-08-19 (FASE 1), actualizado 2026-08-19 (FASE P1 — hardening) |
 | **Estado** | Implementado (FASE 1 + FASE P1) |
 | **Origen** | Auditoría P0 — fusión incorrecta de Omeprazol 20mg x30 (Ascend / OPKO-Ley Cenabast / CuraeSpring) bajo el mismo `matchKey`. FASE P1: auditoría de producción real (5 búsquedas) encontró `commercialIdentity` inválidos ("detalleproducto", "recubiertos", "chile" vía URL, "100ml", "x30com", el propio principio activo, etc.) — ver §5. |
-| **Documentos relacionados** | `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md` (matchKey, mergeDuplicates — sin cambios en su cálculo), `docs/technology/decisions/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md` (CFM-ID — ver FOLLOW_UP §6) |
+| **Documentos relacionados** | `docs/technology/domain/NORMALIZATION_AND_DEDUPLICATION.md` (matchKey, mergeDuplicates — sin cambios en su cálculo), `docs/technology/domain/PRODUCT_IDENTITY.md` (CF-SEARCH-001 — ejes `\|var:`/`\|form:` de `presentationKey` e integridad de oferta), `docs/technology/decisions/rfc/RFC-002_CANONICAL_MEDICATION_REGISTRY.md` (CFM-ID — ver FOLLOW_UP §6) |
+
+> **Actualización 2026-08-27 (CF-SEARCH-001).** `resolveCommercialIdentity` no cambió, pero se comprobó su límite: resuelve el **laboratorio**, que es el mismo para todas las variantes comerciales de una familia de marca (Tapsin Rojo, Forte, Periodo, Duo, Migraña e Instaflu son todos de Maver). El eje `brand:` por sí solo no puede separarlas, y la separación que a veces se observaba era accidental — dependía de que una farmacia entregara `laboratory` y la otra no (`brand:maver` vs `brand:unknown`). `presentationKey` incorporó por eso los ejes `\|var:` y `\|form:`; ver `PRODUCT_IDENTITY.md`.
 
 ## 1. Dos identidades, dos propósitos
 

@@ -36,7 +36,7 @@ docs/
 ├── technology/                ← arquitectura técnica vigente
 │   ├── architecture/          ← DOMAIN_MODEL, PLATFORM_CAPABILITY_MODEL, IDENTITY_INTEGRATION_PLAN
 │   ├── decisions/              ← adr/, rfc/ (Architecture/Request for Comments Decision Records)
-│   ├── domain/                 ← USER_DOMAIN_MODEL
+│   ├── domain/                 ← USER_DOMAIN_MODEL, PRODUCT_IDENTITY, COMMERCIAL_IDENTITY, NORMALIZATION_AND_DEDUPLICATION
 │   ├── integrations/           ← documentación de integraciones con farmacias
 │   ├── database/               ← schema.sql
 │   ├── reviews/                ← Engineering Reviews (ER-XXX) vigentes
