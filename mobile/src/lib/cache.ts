@@ -1,6 +1,14 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { MedicationResult } from "@/lib/types";
 
+// v13 (CF-SEARCH-002, 2026-08-28): `MedicationResult` gana `lexicalMatch` y
+// `concentrationMatch` (packages/domain/src/types.ts), y —más importante— el
+// ORDEN de la lista cacheada pasó a depender de la intención de la consulta.
+// Una entrada v12 se guardó ordenada solo por precio y sin cohortes: servirla
+// mostraría un Ibuprofeno 400 mg antes que el 600 mg pedido, que es
+// exactamente el defecto QA-05 que este ticket corrige. Además la clave de
+// caché cambió de forma (`queryIntentCacheKey`), así que las entradas viejas
+// quedan inalcanzables por diseño.
 // v12 (CF-SEARCH-001, 2026-08-27): `presentationKey` incorpora los segmentos
 // `|var:` (variante comercial) y `|form:` (forma farmacéutica), así que su
 // VALOR cambia para la mayoría del catálogo y una tarjeta cacheada con la
@@ -9,7 +17,7 @@ import type { MedicationResult } from "@/lib/types";
 // resultados v11 desde el caché dejaría la ficha sin resolver por la clave
 // nueva.
 // v11: MedicationResult gana presentationKey (FASE 1 Product Identity, 2026-08-19) — resultados por query pueden dividirse por marca
-const CACHE_PREFIX = "search_cache_v12_";
+const CACHE_PREFIX = "search_cache_v13_";
 const TTL_MS = 30 * 60 * 1000; // 30 min
 
 interface CacheEntry {
