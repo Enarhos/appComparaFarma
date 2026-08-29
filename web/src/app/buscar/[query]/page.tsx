@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { parseQueryIntent } from "@comparafarma/domain";
 import { searchMedications } from "@/lib/search";
 import { MedicationResultsGroup } from "@/components/MedicationResultsGroup";
-import { groupMedicationResultsByMatchKey } from "@/lib/groupMedicationResults";
+import {
+  groupMedicationResultsByMatchKey,
+  splitGroupsByConcentration,
+} from "@/lib/groupMedicationResults";
 import { SearchBox } from "@/components/SearchBox";
 import { RecipeLinkBadge } from "@/components/RecipeLinkBadge";
 import { buildMedicationJsonLd, toJsonLdScript } from "@/lib/structuredData";
@@ -29,6 +33,13 @@ export default async function SearchPage({ params }: PageProps) {
   const term = decodeTerm(query);
   const { results, error } = await searchMedications(term);
   const groups = groupMedicationResultsByMatchKey(results);
+  // CF-SEARCH-002 — la API ya clasificó cada resultado por cohorte de
+  // concentración (`concentrationMatch`). Acá solo se separan las secciones;
+  // no se vuelve a parsear ningún nombre ni se reordena nada.
+  const { primary, other } = splitGroupsByConcentration(groups);
+  // Solo para el encabezado de la sección secundaria: el principio activo tal
+  // como lo entendió el dominio, sin la concentración.
+  const activeTerm = parseQueryIntent(term).retrievalQuery || term;
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
@@ -72,12 +83,32 @@ export default async function SearchPage({ params }: PageProps) {
         </div>
       )}
 
-      {results.length > 0 && (
+      {primary.length > 0 && (
         <div className="mt-6 flex flex-col gap-4">
-          {groups.map((group) => (
+          {primary.map((group) => (
             <MedicationResultsGroup key={group.matchKey} group={group} />
           ))}
         </div>
+      )}
+
+      {/* CF-SEARCH-002 — otras concentraciones del mismo principio activo. No
+          se ocultan (podrían ser lo que el usuario necesita), pero quedan
+          claramente separadas de lo que pidió y nunca por delante. */}
+      {other.length > 0 && (
+        <section className="mt-10">
+          <h2 className="font-display text-lg font-semibold text-ink sm:text-xl">
+            Otras concentraciones de {activeTerm}
+          </h2>
+          <p className="mt-1 text-sm text-muted">
+            No coinciden con la concentración que buscaste. Revisa la dosis antes de comparar
+            precios.
+          </p>
+          <div className="mt-4 flex flex-col gap-4">
+            {other.map((group) => (
+              <MedicationResultsGroup key={group.matchKey} group={group} />
+            ))}
+          </div>
+        </section>
       )}
 
       {results.length > 0 && (

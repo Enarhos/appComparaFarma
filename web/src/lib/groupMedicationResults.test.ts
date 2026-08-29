@@ -7,6 +7,7 @@ import {
   buildGroupImageUrl,
   computeRemainingOptions,
   rowVisibilityClassName,
+  splitGroupsByConcentration,
 } from "./groupMedicationResults";
 
 function price(overrides: Partial<PharmacyPrice> = {}): PharmacyPrice {
@@ -308,5 +309,79 @@ describe("orden de operaciones: filtrar ANTES de agrupar", () => {
     // El grupo cuyo único producto no era bioequivalente no debe aparecer
     // como grupo vacío ni de ninguna otra forma.
     expect(groups.some((g) => g.matchKey === "solo-no-bio")).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// CF-SEARCH-002 — separación de secciones por cohorte de concentración.
+// ---------------------------------------------------------------------------
+describe("splitGroupsByConcentration (CF-SEARCH-002)", () => {
+  const ibuprofeno = (
+    dose: string,
+    concentrationMatch: MedicationResult["concentrationMatch"],
+    bestPrice: number
+  ) =>
+    medication({
+      matchKey: `ibuprofeno|${dose}|20`,
+      canonicalName: `Ibuprofeno ${dose} x 20 comprimidos`,
+      presentationKey: `ibuprofeno|${dose}|20|bio:false|brand:unknown|form:solid-oral`,
+      concentrationMatch,
+      bestPrice,
+    });
+
+  it("el grupo hereda la cohorte que la API ya asignó a sus productos", () => {
+    const groups = groupMedicationResultsByMatchKey([
+      ibuprofeno("600mg", "exact", 1190),
+      ibuprofeno("400mg", "other", 642),
+    ]);
+    expect(groups.map((g) => g.concentrationMatch)).toEqual(["exact", "other"]);
+  });
+
+  it("'exact' y 'unknown' quedan en la sección principal; 'other' en la secundaria", () => {
+    const { primary, other } = splitGroupsByConcentration(
+      groupMedicationResultsByMatchKey([
+        ibuprofeno("600mg", "exact", 1190),
+        ibuprofeno("", "unknown", 100),
+        ibuprofeno("400mg", "other", 642),
+        ibuprofeno("200mg", "other", 1200),
+      ])
+    );
+    expect(primary.map((g) => g.concentrationMatch)).toEqual(["exact", "unknown"]);
+    expect(other.map((g) => g.matchKey)).toEqual(["ibuprofeno|400mg|20", "ibuprofeno|200mg|20"]);
+  });
+
+  it("sin concentración en la consulta, TODO queda en la sección principal", () => {
+    // La API omite `concentrationMatch` cuando no hay cohorte que asignar: no
+    // debe aparecer una sección "Otras concentraciones" inventada.
+    const { primary, other } = splitGroupsByConcentration(
+      groupMedicationResultsByMatchKey([
+        medication({ matchKey: "ibuprofeno|600mg|20", presentationKey: "a" }),
+        medication({ matchKey: "ibuprofeno|400mg|20", presentationKey: "b" }),
+      ])
+    );
+    expect(primary).toHaveLength(2);
+    expect(other).toHaveLength(0);
+  });
+
+  it("no reordena: conserva el orden que decidió el dominio", () => {
+    const groups = groupMedicationResultsByMatchKey([
+      ibuprofeno("600mg", "exact", 9553),
+      ibuprofeno("400mg", "other", 642),
+    ]);
+    const { primary, other } = splitGroupsByConcentration(groups);
+    // El 400 mg es más barato y aun así está en la sección secundaria.
+    expect(primary[0].matchKey).toBe("ibuprofeno|600mg|20");
+    expect(other[0].matchKey).toBe("ibuprofeno|400mg|20");
+    expect(other[0].products[0].bestPrice).toBeLessThan(primary[0].products[0].bestPrice);
+  });
+
+  it("ningún grupo se pierde en la partición", () => {
+    const groups = groupMedicationResultsByMatchKey([
+      ibuprofeno("600mg", "exact", 1190),
+      ibuprofeno("400mg", "other", 642),
+      ibuprofeno("200mg", "other", 1200),
+    ]);
+    const { primary, other } = splitGroupsByConcentration(groups);
+    expect(primary.length + other.length).toBe(groups.length);
   });
 });
