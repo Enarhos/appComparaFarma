@@ -8,10 +8,30 @@ export type {
   PharmacySearchDiagnostic,
   SearchDiagnostics,
   SearchExecution,
+  LexicalMatch,
+  ConcentrationMatch,
 } from "./types.js";
 
 export { matchKey, combinationKey, normalizedWords, brandHeadTokens } from "./matching.js";
 export { cleanQuery } from "./normalization.js";
+export {
+  parseQueryIntent,
+  parseConcentration,
+  parseQuantity,
+  concentrationKey,
+  queryIntentCacheKey,
+  isSameConcentration,
+  isSameMeasurement,
+  type Measurement,
+  type Concentration,
+  type QueryIntent,
+} from "./queryIntent.js";
+export {
+  evaluateResultRelevance,
+  rankByRelevance,
+  type ResultRelevance,
+  type SoftMatch,
+} from "./relevance.js";
 export {
   effectivePrice,
   toPharmacyPrice,
