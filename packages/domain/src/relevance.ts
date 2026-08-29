@@ -352,10 +352,22 @@ export function rankByRelevance(
 ): MedicationResult[] {
   const scored = results.map((result) => {
     const relevance = evaluateResultRelevance(intent, result);
+    // Se descarta cualquier anotación PREVIA antes de escribir la de esta
+    // intención. Sin este descarte, `...result` arrastraba el
+    // `concentrationMatch` de otra consulta cuando la actual no pide
+    // concentración —y la rama de abajo, al omitir el campo, no lo borraba—.
+    // Es un caso real, no teórico: la caché de RETRIEVAL de `/api/search`
+    // guarda los resultados YA anotados, así que "ibuprofeno 600 mg" seguido
+    // de "ibuprofeno" servía la consulta amplia con las cohortes de la
+    // primera, y Web/Mobile —que leen el CAMPO, no el orden— mandaban 63 de 92
+    // tarjetas a "Otras concentraciones" y hundían el ibuprofeno más barato
+    // del catálogo hasta la posición 29. Ver QA-01 de la revisión de esta
+    // branch y el JSDoc de idempotencia más abajo.
+    const { lexicalMatch: _previousLexical, concentrationMatch: _previousCohort, ...base } = result;
     return {
       key: sortKey(result, relevance),
       result: {
-        ...result,
+        ...base,
         lexicalMatch: relevance.lexicalMatch,
         // Ausente —y no `"exact"` fabricado— cuando la consulta no pidió
         // concentración: el contrato distingue "no aplica" de "coincide".

@@ -350,6 +350,40 @@ describe("rankByRelevance — composición y propiedades", () => {
     );
   });
 
+  it("[QA-01] re-rankear con una intención SIN concentración borra la cohorte de la anterior", () => {
+    // Regresión medida sobre datos reales (2026-08-28, 92 tarjetas de
+    // "ibuprofeno"): la caché de RETRIEVAL de /api/search guarda los resultados
+    // YA anotados, así que "ibuprofeno 600 mg" seguido de "ibuprofeno" —dentro
+    // del TTL de 5 min y con la MISMA clave de retrieval— devolvía la consulta
+    // amplia arrastrando las cohortes de la primera: 63 de 92 tarjetas con
+    // `concentrationMatch: "other"` para una consulta que no pidió ninguna
+    // concentración. Web las mandaba a "Otras concentraciones" y Mobile hundía
+    // el ibuprofeno más barato del catálogo a la posición 29.
+    const anotado = rankByRelevance(parseQueryIntent("ibuprofeno 600 mg"), ibuprofenoCatalog());
+    expect(anotado.some((r) => r.concentrationMatch === "other")).toBe(true);
+
+    const amplio = rankByRelevance(parseQueryIntent("ibuprofeno"), anotado);
+    expect(amplio.every((r) => r.concentrationMatch === undefined)).toBe(true);
+    expect(amplio.every((r) => !("concentrationMatch" in r))).toBe(true);
+
+    // Y es indistinguible de rankear la misma consulta desde cero.
+    const desdeCero = rankByRelevance(parseQueryIntent("ibuprofeno"), ibuprofenoCatalog());
+    expect(amplio.map((r) => [r.canonicalName, r.concentrationMatch, r.lexicalMatch])).toEqual(
+      desdeCero.map((r) => [r.canonicalName, r.concentrationMatch, r.lexicalMatch])
+    );
+  });
+
+  it("[QA-01] un `lexicalMatch` previo tampoco sobrevive a una consulta distinta", () => {
+    const anotado = rankByRelevance(parseQueryIntent("omeprazol"), [
+      offer("dr-simi", { name: "Esomeprazol 20 mg x 30 Cápsulas", price: 100 }),
+    ]);
+    expect(anotado[0].lexicalMatch).toBe("mismatch");
+    // La misma tarjeta, servida desde el retrieval para la consulta que sí le
+    // corresponde, deja de estar marcada como incompatible.
+    const reRankeado = rankByRelevance(parseQueryIntent("esomeprazol"), anotado);
+    expect(reRankeado[0].lexicalMatch).toBe("exact");
+  });
+
   it("preserva `presentationKey` y el resto del contrato de cada resultado", () => {
     const [original] = ibuprofenoCatalog();
     const [ranked] = rankByRelevance(parseQueryIntent("ibuprofeno 400 mg"), [original]);

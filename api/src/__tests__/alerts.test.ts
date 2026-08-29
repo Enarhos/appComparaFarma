@@ -300,6 +300,48 @@ describe("handleAlertsRoute — check (cron)", () => {
     expect(mocks.touchLastChecked).toHaveBeenCalledWith([1]);
   });
 
+  it("[QA-02] evalúa la tarjeta MÁS BARATA con ese matchKey, sea cual sea el orden de la lista", async () => {
+    // Desde CF-SEARCH-001 varias tarjetas comerciales comparten un mismo
+    // `matchKey` (dedupe por `presentationKey`), y desde CF-SEARCH-002
+    // `rankByRelevance()` reordena la lista por cohorte y por cantidad/forma
+    // antes de devolverla. Con el `find()` anterior, la alerta se evaluaba
+    // contra la PRIMERA tarjeta del array: caso real medido en producción
+    // ("tapsin|n|6"), $460 pasó a $4.399 y la alerta dejó de dispararse.
+    mocks.getActiveAlerts.mockResolvedValue([
+      { id: 1, email: "a@b.com", matchKey: "tapsin|n|6", canonicalName: "Tapsin X 6 comprimidos Noche (Maver)", targetPrice: 500, status: "active", token: "t1" },
+    ]);
+    mocks.searchMedications.mockResolvedValue([
+      { matchKey: "tapsin|n|6", bestPrice: 4399, bestPharmacy: "ahumada" },
+      { matchKey: "tapsin|n|6", bestPrice: 460, bestPharmacy: "cruz-verde" },
+    ]);
+
+    const req = makeReq({ url: "/api/alerts?action=check&secret=s3cr3t" });
+    const res = makeRes();
+
+    await handleAlertsRoute(req, res);
+
+    expect(mocks.markTriggered).toHaveBeenCalledWith(1, 460);
+    expect(JSON.parse(res.body ?? "{}")).toEqual({ checked: 1, triggered: 1 });
+  });
+
+  it("[QA-02] sigue sin disparar cuando ninguna tarjeta del matchKey baja del objetivo", async () => {
+    mocks.getActiveAlerts.mockResolvedValue([
+      { id: 1, email: "a@b.com", matchKey: "tapsin|n|6", canonicalName: "Tapsin Noche", targetPrice: 400, status: "active", token: "t1" },
+    ]);
+    mocks.searchMedications.mockResolvedValue([
+      { matchKey: "tapsin|n|6", bestPrice: 4399, bestPharmacy: "ahumada" },
+      { matchKey: "tapsin|n|6", bestPrice: 460, bestPharmacy: "cruz-verde" },
+    ]);
+
+    const req = makeReq({ url: "/api/alerts?action=check&secret=s3cr3t" });
+    const res = makeRes();
+
+    await handleAlertsRoute(req, res);
+
+    expect(mocks.markTriggered).not.toHaveBeenCalled();
+    expect(mocks.sendEmail).not.toHaveBeenCalled();
+  });
+
   it("no lanza si searchMedications falla para un grupo, y sigue con los demás", async () => {
     mocks.getActiveAlerts.mockResolvedValue([
       { id: 1, email: "a@b.com", matchKey: "x", canonicalName: "Roto", targetPrice: 100, status: "active", token: "t1" },

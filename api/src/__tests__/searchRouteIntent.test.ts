@@ -30,7 +30,7 @@ vi.mock("../lib/cache.js", () => ({
 }));
 
 import { handleSearchRoute } from "../routes/search.js";
-import { toMedicationResult } from "@comparafarma/domain";
+import { parseQueryIntent, rankByRelevance, toMedicationResult } from "@comparafarma/domain";
 
 function makeReq(url: string) {
   return { method: "GET", url, headers: {}, socket: { remoteAddress: "127.0.0.1" } };
@@ -166,6 +166,26 @@ describe("GET /api/search — reutilización del retrieval sin contaminación de
       ["ibuprofeno|400mg|20", "other"],
       ["ibuprofeno|200mg|20", "other"],
     ]);
+  });
+
+  it("[QA-01] un retrieval guardado con cohortes no las filtra a una consulta SIN concentración", async () => {
+    // `setCachedRetrieval` guarda lo que devuelve `searchMedications()`, que ya
+    // viene anotado por `rankByRelevance`. El escenario es el de dos usuarios
+    // dentro del TTL de 5 min y con la MISMA clave de retrieval ("ibuprofeno"):
+    // el primero busca "ibuprofeno 600 mg", el segundo "ibuprofeno" a secas.
+    const anotado = rankByRelevance(parseQueryIntent("ibuprofeno 600 mg"), IBUPROFENO_CATALOG);
+    expect(anotado.some((r) => r.concentrationMatch === "other")).toBe(true);
+    getCachedRetrievalMock.mockResolvedValue(anotado);
+
+    const res = makeRes();
+    await handleSearchRoute(makeReq("/api/search?q=ibuprofeno"), res);
+
+    const body = JSON.parse(res.body ?? "[]") as MedicationResult[];
+    // La consulta no pidió concentración: no existe cohorte que exponer, y
+    // Web/Mobile —que leen el CAMPO— no deben separar "Otras concentraciones".
+    expect(body.every((r) => r.concentrationMatch === undefined)).toBe(true);
+    // Y el orden vuelve a ser el histórico: el más barato primero.
+    expect(body.map((r) => r.bestPrice)).toEqual([642, 1190, 1200]);
   });
 
   it("el hit de retrieval no se sirve como hit de respuesta (el header sigue siendo miss)", async () => {
