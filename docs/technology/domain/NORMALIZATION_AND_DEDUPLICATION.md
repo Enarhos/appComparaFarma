@@ -1,6 +1,6 @@
 # Normalización de Búsqueda y Deduplicación
 
-Documentación de los algoritmos clave, que viven en el paquete compartido `packages/domain/src/` (`@comparafarma/domain`): `normalization.ts` (`cleanQuery`), `matching.ts` (`matchKey`), `pricing.ts` (`effectivePrice`/`toPharmacyPrice`), `deduplication.ts` (`mergeDuplicates`). Son críticos para que la búsqueda funcione bien y para que el mismo medicamento vendido bajo nombres distintos en cada farmacia aparezca agrupado correctamente.
+Documentación de los algoritmos clave, que viven en el paquete compartido `packages/domain/src/` (`@comparafarma/domain`): `normalization.ts` (`cleanQuery`), `matching.ts` (`matchKey`), `pricing.ts` (`effectivePrice`/`toPharmacyPrice`), `deduplication.ts` (`mergeDuplicates`), `queryIntent.ts` (`parseQueryIntent`) y `relevance.ts` (`evaluateResultRelevance`/`rankByRelevance`). Son críticos para que la búsqueda funcione bien y para que el mismo medicamento vendido bajo nombres distintos en cada farmacia aparezca agrupado correctamente.
 
 > **Antes** esta lógica vivía duplicada en `api/src/lib/normalization.ts` y `mobile/src/lib/normalization.ts` — la migración a `packages/domain` (ver `ADR-0001_SHARED_DOMAIN_PACKAGE.md`) eliminó ese riesgo de divergencia: hoy `api/` y `mobile/` importan la misma implementación, no hay dos copias que sincronizar.
 
@@ -32,6 +32,71 @@ Documentación de los algoritmos clave, que viven en el paquete compartido `pack
 "Metformina 850 mg comp. Recubierto"       → "Metformina"
 "FRENALER-D (R) Comp."                    → "FRENALER-D"
 ```
+
+> **Actualización 2026-08-28 (CF-SEARCH-002 — Query Intent & Relevance):** `cleanQuery` NO cambió y sigue siendo la función de RECUPERACIÓN: es el texto que se manda a los 9 buscadores de farmacia, y restringirlo devuelve menos resultados. Lo que se agregó es una capa paralela (`parseQueryIntent`, §1-bis) que lee del texto crudo los atributos que `cleanQuery` descarta y los usa DESPUÉS del retrieval, para evaluar y ordenar. Los dos conceptos no deben volver a mezclarse.
+
+---
+
+## 1-bis. `parseQueryIntent(rawQuery: string): QueryIntent` y la capa de relevancia
+
+**Contexto (CF-SEARCH-002, 2026-08-28).** Hasta este ticket el pipeline nunca comparaba un resultado contra la consulta que lo trajo: `searchService` hacía `mergeDuplicates(...)` y ordenaba solo por precio. De ahí los dos defectos de QA que este cambio cierra, ambos medidos en producción:
+
+- **QA-02** — `q=omeprazol` devolvía 36 tarjetas, 11 de ellas **esomeprazol** (otro principio activo). Los buscadores de cada farmacia hacen ese match porque `"esomeprazol"` contiene `"omeprazol"` como substring.
+- **QA-05** — `q=ibuprofeno 200 mg`, `400 mg` y `600 mg` devolvían las **mismas 110 tarjetas**, y la 2ª y 3ª respondían `x-search-cache: hit` sobre la entrada de la 1ª: la clave de caché era `cleanQuery(raw)`, que descarta la concentración.
+
+### Tres conceptos separados
+
+| Concepto | Qué es | Dónde se usa |
+|---|---|---|
+| `rawQuery` | lo que escribió el usuario | entrada de `parseQueryIntent` |
+| `retrievalQuery` | `cleanQuery(rawQuery)` | lo que reciben las 9 farmacias, y la clave de caché de **retrieval** |
+| `queryIntent` | intención estructurada (`concentration`, `quantity`, `dosageForm`, `terms`) | evaluación y orden **después** del retrieval, y la clave de caché de **respuesta** |
+
+La intención **nunca** filtra lo que se le pide a las farmacias.
+
+### `Concentration` — razón estructurada, no cadena
+
+```ts
+type Measurement   = { value: number; unit: string };
+type Concentration = { numerator: Measurement; denominator: Measurement | null };
+```
+
+- `600 mg` → `{numerator:{600,"mg"}, denominator:null}` (dosis absoluta).
+- `250 mg / 5 ml` → `{numerator:{250,"mg"}, denominator:{5,"ml"}}` — **nunca** se colapsa a una unidad compuesta `"mg/5ml"`, que sería incomparable con `50 mg/ml`.
+- `20 mg/ml` → denominador implícito normalizado a `{1,"ml"}` (decisión documentada).
+- La comparación es por **razón** (`250 mg/5 ml` === `50 mg/ml`) y convierte dentro de una familia de unidades (`0,5 g` === `500 mg`). Una dosis absoluta nunca es igual a una razón.
+- Una razón **masa/masa** (`50 mg / 12,5 mg`) se lee como firma de COMBINACIÓN, no de concentración — misma regla que `combinationKey` (S-1). El tipo admite `mg/g`, `%`, `UI/ml` o dosis por inhalación sin cambios; lo acotado es la tabla de conversión.
+
+### `evaluateResultRelevance(intent, result)` — QA-02
+
+Compara por **token completo** (`normalizedWords`, la misma tokenización de `matchKey`), nunca por `includes()` sobre el nombre:
+
+| `lexicalMatch` | Criterio | Ejemplo real |
+|---|---|---|
+| `exact` | todos los términos aparecen como token completo | `omeprazol` → "Omeprazol 20 mg x 30..." |
+| `compatible` | sin evidencia en contra (típicamente una marca) | `omeprazol` → "Lomex 20 Mg X 28 Caps" |
+| `mismatch` | el término solo aparece como substring de otro nombre farmacológico, y en ningún lado completo | `omeprazol` → "Esomeprazol 40 mg x 30" |
+
+Dos guardas evitan falsos positivos: el token debe tener ≥5 caracteres, y la diferencia de longitud entre ambos debe ser ≥2 (un carácter es plural o corrupción de datos — caso real: "Tapsí­n" con soft hyphen tokeniza `tapsi` y degradaba dos Tapsin reales).
+
+Un `mismatch` **no se elimina**: queda al final del orden y etiquetado. Política conservadora de siempre.
+
+### Cohorte de concentración y orden — QA-05
+
+`rankByRelevance(intent, results)` anota cada `MedicationResult` con `lexicalMatch` y `concentrationMatch` (`exact` | `unknown` | `other`) y ordena por, en este orden de prioridad:
+
+1. `mismatch` al final (única degradación léxica; `exact` y `compatible` comparten tier — PreciosFarma es primariamente un comparador de precios).
+2. **Cohorte de concentración: EXACT → UNKNOWN → OTHER.** Límite duro: **el precio no lo cruza nunca**. Un Ibuprofeno 400 mg a \$642 no puede aparecer antes que un Ibuprofeno 600 mg a \$9.553 si se buscó 600 mg.
+3. Cantidad y forma farmacéutica, como señales suaves (`exact > unknown > different`), que desempatan dentro de la cohorte y nunca la cruzan.
+4. `bestPrice`, el criterio histórico.
+
+Si la consulta **no** trae concentración, `concentrationMatch` queda **ausente** en todos los resultados y el criterio 2 no altera nada: "ibuprofeno" a secas se comporta exactamente como antes. `unknown` (nombre truncado por la farmacia) va entre medio: no se puede afirmar que sea la dosis pedida ni que no lo sea, y descartarlo destruiría recall real.
+
+### Contrato y caché
+
+- `MedicationResult` gana dos campos **opcionales y aditivos**: `lexicalMatch` y `concentrationMatch`. Se eligió metadata por resultado en vez de envolver la respuesta en dos arrays porque `/api/search` devuelve hoy un `MedicationResult[]` desnudo y los binarios de Mobile ya publicados lo leen así — envolverlo los rompería.
+- La caché de `/api/search` pasó a **dos niveles**: `cfsearch:r:` (retrieval, clave = `retrievalQuery`, compartida entre intenciones para no triplicar el scraping) y `cfsearch:v2:` (respuesta, clave = `queryIntentCacheKey(intent)`, ej. `ibuprofeno|dose:600mg|qty:20`). Un hit de retrieval se **re-rankea** con la intención real antes de responder.
+- Web y Mobile **consumen** la clasificación; no la recalculan ni vuelven a parsear nombres.
 
 ---
 
