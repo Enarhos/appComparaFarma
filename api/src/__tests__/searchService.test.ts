@@ -29,6 +29,7 @@ vi.mock("../clients/easyfarma.js", () => ({ searchEasyFarma: mocks.searchEasyFar
 
 import { searchMedicationsDetailed } from "../services/searchService.js";
 import { isAllowedRedirectUrl } from "../lib/clickTracking.js";
+import { parseQueryIntent } from "@comparafarma/domain";
 
 describe("searchMedicationsDetailed", () => {
   beforeEach(() => {
@@ -200,6 +201,107 @@ describe("searchMedicationsDetailed", () => {
         expect(isAllowedRedirectUrl(price.pharmacySlug, price.onlineUrl)).toBe(true);
       }
     }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// CF-SEARCH-002 — la intención de consulta atraviesa el servicio.
+// ---------------------------------------------------------------------------
+describe("searchMedicationsDetailed — Query Intent (CF-SEARCH-002)", () => {
+  beforeEach(() => {
+    vi.resetAllMocks();
+  });
+
+  function silenceAllExcept(...active: Array<keyof typeof mocks>) {
+    for (const key of Object.keys(mocks) as Array<keyof typeof mocks>) {
+      if (!active.includes(key)) mocks[key].mockResolvedValue([]);
+    }
+  }
+
+  function ibuprofenoCatalog() {
+    mocks.searchAraucoMed.mockResolvedValue([makeProduct("Ibuprofeno 400 mg x 20 comp", 642)]);
+    mocks.searchCruzVerde.mockResolvedValue([
+      makeProduct("Ibuprofeno 600 mg 20 comprimidos recubiertos", 9553),
+    ]);
+    mocks.searchEasyFarma.mockResolvedValue([makeProduct("Ibuprofeno 600 Mg 20 Comp....", 1190)]);
+    mocks.searchDrSimi.mockResolvedValue([
+      makeProduct("Ibuprofeno 200 mg 20 comprimidos recubiertos", 1200),
+    ]);
+    silenceAllExcept("searchAraucoMed", "searchCruzVerde", "searchEasyFarma", "searchDrSimi");
+  }
+
+  it("a las 9 farmacias les llega la consulta AMPLIA, nunca la concentración", async () => {
+    // Invariante de baseline: la intención evalúa lo que volvió, jamás
+    // restringe lo que se pide. Si esto cambiara, cada farmacia devolvería
+    // menos resultados y el recall caería.
+    ibuprofenoCatalog();
+    await searchMedicationsDetailed("ibuprofeno 600 mg x 20 comprimidos");
+    for (const mock of Object.values(mocks)) {
+      expect(mock).toHaveBeenCalledWith("ibuprofeno");
+    }
+  });
+
+  it("QA-05 — buscando 600 mg, ningún 400/200 mg aparece antes, aunque sea más barato", async () => {
+    ibuprofenoCatalog();
+    const execution = await searchMedicationsDetailed("ibuprofeno 600 mg");
+
+    // Las dos ofertas de 600 mg comparten `presentationKey` y `mergeDuplicates`
+    // las fusiona en UNA tarjeta con dos precios ($1.190 y $9.553) — el
+    // comportamiento de deduplicación no cambia con este ticket.
+    expect(execution.results.map((r) => [r.matchKey, r.concentrationMatch, r.bestPrice])).toEqual([
+      ["ibuprofeno|600mg|20", "exact", 1190],
+      ["ibuprofeno|400mg|20", "other", 642],
+      ["ibuprofeno|200mg|20", "other", 1200],
+    ]);
+    // La garantía dura: el 400 mg es MÁS BARATO que la tarjeta de 600 mg y aun
+    // así queda detrás. El precio no cruza el límite de cohorte.
+    expect(execution.results[1].bestPrice).toBeLessThan(execution.results[0].bestPrice);
+  });
+
+  it("QA-05 — sin concentración, el orden por precio queda intacto y no se asigna cohorte", async () => {
+    ibuprofenoCatalog();
+    const execution = await searchMedicationsDetailed("ibuprofeno");
+
+    expect(execution.results.map((r) => r.bestPrice)).toEqual([642, 1190, 1200]);
+    expect(execution.results.every((r) => r.concentrationMatch === undefined)).toBe(true);
+  });
+
+  it("QA-02 — el esomeprazol de una búsqueda de omeprazol queda último y etiquetado, sin desaparecer", async () => {
+    mocks.searchAraucoMed.mockResolvedValue([makeProduct("Omeprazol 20 mg x 30 cápsulas", 990)]);
+    mocks.searchDrSimi.mockResolvedValue([makeProduct("Esomeprazol 20 mg x 30 Cápsulas", 100)]);
+    mocks.searchFarmex.mockResolvedValue([makeProduct("Lomex 20 Mg X 28 Caps", 5000)]);
+    silenceAllExcept("searchAraucoMed", "searchDrSimi", "searchFarmex");
+
+    const execution = await searchMedicationsDetailed("omeprazol");
+
+    // Nada se descarta: entran 3 ofertas, salen 3 tarjetas.
+    expect(execution.results).toHaveLength(3);
+    expect(execution.results.map((r) => [r.matchKey, r.lexicalMatch])).toEqual([
+      ["omeprazol|20mg|30", "exact"],
+      // La marca conserva su lugar por precio — el recall de marca no se toca.
+      ["lomex|20mg|28", "compatible"],
+      ["esomeprazol|20mg|30", "mismatch"],
+    ]);
+  });
+
+  it("acepta una QueryIntent ya parseada y produce el mismo resultado que el texto crudo", async () => {
+    ibuprofenoCatalog();
+    const desdeTexto = await searchMedicationsDetailed("ibuprofeno 600 mg");
+    ibuprofenoCatalog();
+    const desdeIntent = await searchMedicationsDetailed(parseQueryIntent("ibuprofeno 600 mg"));
+
+    expect(desdeIntent.results.map((r) => r.matchKey)).toEqual(
+      desdeTexto.results.map((r) => r.matchKey)
+    );
+    // `diagnostics.query` sigue siendo la consulta de recuperación.
+    expect(desdeIntent.diagnostics.query).toBe("ibuprofeno");
+  });
+
+  it("la clasificación nunca reduce el número de tarjetas respecto de mergeDuplicates", async () => {
+    ibuprofenoCatalog();
+    const execution = await searchMedicationsDetailed("ibuprofeno 600 mg");
+    expect(execution.results).toHaveLength(execution.diagnostics.mergedResults);
+    expect(execution.diagnostics.totalResults).toBe(4); // 4 ofertas -> 3 tarjetas
   });
 });
 

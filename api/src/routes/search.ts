@@ -1,12 +1,17 @@
 import { isDebugAuthorized } from "../middleware/auth.js";
 import { consumeRateLimit } from "../middleware/rateLimit.js";
 import { attachRequestId } from "../middleware/requestId.js";
-import { getCachedSearch, setCachedSearch } from "../lib/cache.js";
+import {
+  getCachedRetrieval,
+  getCachedSearch,
+  setCachedRetrieval,
+  setCachedSearch,
+} from "../lib/cache.js";
 import { HttpError } from "../lib/errors.js";
 import { captureException } from "../lib/sentry.js";
 import { getClientIp, getHeader, getSearchParam, json, type RequestLike, type ResponseLike } from "../lib/http.js";
 import { withTrackedUrls } from "../lib/clickTracking.js";
-import { cleanQuery } from "@comparafarma/domain";
+import { parseQueryIntent, queryIntentCacheKey, rankByRelevance, type QueryIntent } from "@comparafarma/domain";
 import { searchMedications, searchMedicationsDetailed } from "../services/searchService.js";
 
 function getOrigin(req: RequestLike): string {
@@ -14,7 +19,17 @@ function getOrigin(req: RequestLike): string {
   return `https://${host}`;
 }
 
-function validateQuery(rawQuery: string | null): string {
+/**
+ * CF-SEARCH-002 — la validación se hace sobre el texto CRUDO y devuelve la
+ * intención, no la consulta limpia.
+ *
+ * Antes devolvía `cleanQuery(raw)` y ese valor se usaba para todo: retrieval,
+ * caché y logs. Con eso, la concentración se perdía antes de que nadie pudiera
+ * usarla. Ahora `cleanQuery` sigue decidiendo si la consulta es interpretable
+ * (mismo 400, mismo mensaje, mismo umbral) pero viaja dentro de la intención
+ * como `retrievalQuery`.
+ */
+function validateQuery(rawQuery: string | null): QueryIntent {
   if (!rawQuery || rawQuery.trim().length < 2) {
     throw new HttpError("Debes indicar un termino de busqueda valido.", 400);
   }
@@ -22,11 +37,16 @@ function validateQuery(rawQuery: string | null): string {
     throw new HttpError("La busqueda es demasiado larga.", 400);
   }
 
-  const cleaned = cleanQuery(rawQuery);
-  if (!cleaned) {
+  const intent = parseQueryIntent(rawQuery);
+  if (!intent.retrievalQuery) {
     throw new HttpError("No se pudo interpretar la busqueda.", 400);
   }
-  return cleaned;
+  return intent;
+}
+
+/** Sufijo de filtro geográfico, común a las claves de ambos niveles de caché. */
+function pharmacySuffix(onlySlugs: string[] | undefined): string {
+  return onlySlugs ? `:${[...onlySlugs].sort().join(",")}` : "";
 }
 
 function isDebugMode(req: RequestLike): boolean {
@@ -59,7 +79,8 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       throw new HttpError("No autorizado para modo debug.", 403);
     }
 
-    const query = validateQuery(getSearchParam(req, "q"));
+    const intent = validateQuery(getSearchParam(req, "q"));
+    const query = intent.retrievalQuery;
 
     // Filtro geográfico: ?pharmacies=cruz-verde,dr-simi
     const pharmaciesParam = getSearchParam(req, "pharmacies");
@@ -68,15 +89,23 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       : undefined;
 
     const origin = getOrigin(req);
-    const cacheKey = query.toLowerCase() + (onlySlugs ? `:${[...onlySlugs].sort().join(",")}` : "");
+    const suffix = pharmacySuffix(onlySlugs);
+    // CF-SEARCH-002 — la clave de RESPUESTA incorpora la intención completa
+    // (dosis, cantidad, forma). Es lo que impide que "ibuprofeno 400 mg"
+    // reciba la respuesta ya rankeada de "ibuprofeno 600 mg", que es el
+    // mecanismo exacto de QA-05 medido en producción.
+    const responseCacheKey = queryIntentCacheKey(intent) + suffix;
+    const retrievalCacheKey = query.toLowerCase().trim() + suffix;
+
     if (!debugMode) {
-      const cached = await getCachedSearch(cacheKey);
+      const cached = await getCachedSearch(responseCacheKey);
       if (cached) {
         res.setHeader("x-search-cache", "hit");
         console.info(JSON.stringify({
           requestId,
           route: "/api/search",
           query,
+          intent: responseCacheKey,
           cache: "hit",
           results: cached.length,
         }));
@@ -88,11 +117,12 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
     res.setHeader("x-search-cache", "miss");
 
     if (debugMode) {
-      const execution = await searchMedicationsDetailed(query, onlySlugs);
+      const execution = await searchMedicationsDetailed(intent, onlySlugs);
       console.info(JSON.stringify({
         requestId,
         route: "/api/search",
         query,
+        intent: responseCacheKey,
         cache: "bypass",
         diagnostics: execution.diagnostics,
       }));
@@ -100,13 +130,29 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       return;
     }
 
-    const results = await searchMedications(query, onlySlugs);
-    await setCachedSearch(cacheKey, results);
+    // Nivel RETRIEVAL: si otra intención de la misma consulta amplia ya trajo
+    // los resultados, se reutilizan y se vuelven a clasificar con ESTA
+    // intención en vez de volver a golpear a las 9 farmacias. `rankByRelevance`
+    // recalcula toda la evidencia desde los nombres, así que la anotación con
+    // la que se guardaron no contamina esta respuesta.
+    const retrieved = await getCachedRetrieval(retrievalCacheKey);
+    let results;
+    if (retrieved) {
+      res.setHeader("x-search-retrieval-cache", "hit");
+      results = rankByRelevance(intent, retrieved);
+    } else {
+      results = await searchMedications(intent, onlySlugs);
+      await setCachedRetrieval(retrievalCacheKey, results);
+    }
+
+    await setCachedSearch(responseCacheKey, results);
     console.info(JSON.stringify({
       requestId,
       route: "/api/search",
       query,
+      intent: responseCacheKey,
       cache: "miss",
+      retrievalCache: retrieved ? "hit" : "miss",
       results: results.length,
     }));
     json(res, 200, withTrackedUrls(results, origin), req);
