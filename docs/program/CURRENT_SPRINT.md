@@ -12,7 +12,7 @@ Contiene únicamente el trabajo activo del programa. No es un historial (→ `DO
 | **Nombre** | CURRENT_SPRINT.md |
 | **Dominio** | Gestión de Programa (`docs/program/`) |
 | **Estado** | Activo |
-| **Versión** | 1.6 |
+| **Versión** | 1.7 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Enterprise Program Manager / CTO |
 | **Nivel de Gobierno** | De decisión operativa |
@@ -37,7 +37,7 @@ Además, ya existe generado y verificado localmente el AAB release candidate **P
 
 Durante la espera se cerró únicamente trabajo de diagnóstico/gobernanza sobre `BIOEQUIVALENCE-DATA-QUALITY-01`. La iniciativa quedó documentada en `MASTER_BACKLOG.md` y su Gate 2 quedó formalizado, pero **la implementación continúa explícitamente gateada por vc33 y no forma parte del sprint activo**.
 
-También se cerró, en branch propia, `CF-SEARCH-001` (identidad de producto: falso merge de variantes comerciales, navegación por clave no única en Mobile e integridad de oferta en `mergeDuplicates`) — implementado y testeado en `fix/cf-search-001-product-identity`, **pusheado a `origin` y pendiente de PR/review**, sin mergear a `origin/main`. No es parte del release Mobile vc33 (ya aprobado por Google Play) ni lo bloquea.
+`CF-SEARCH-001` (identidad de producto: falso merge de variantes comerciales, navegación por clave no única en Mobile e integridad de oferta en `mergeDuplicates`) — implementado y testeado en `fix/cf-search-001-product-identity` — quedó **mergeado a `origin/main` vía PR #132**. `CF-SEARCH-002` (intención de consulta y relevancia) quedó **mergeado a `origin/main` vía PR #133**. El SHA `f59a4da`, usado como base del AAB release candidate 1.4.2/vc34, es ancestro confirmado de ambos merges. La Web ya desplegada en producción fue validada visualmente para la consulta "ibuprofeno 600 mg": los resultados de 600 mg aparecen priorizados antes que los de 400/200 mg. Ninguno de los dos ítems es parte del release Mobile vc33 (ya aprobado por Google Play) ni lo bloquea.
 
 ---
 
@@ -71,7 +71,7 @@ Acta detallada del release: `docs/archive/meetings/20260823_mobile_release.md`.
 
 `BIOEQUIVALENCE-DATA-QUALITY-01` no entra en ejecución hasta que este gate de vc33 quede cerrado. Su próximo paso, cuando sea habilitado, será la implementación controlada de la corrección semántica y la arquitectura de agrupación ya documentadas.
 
-`CF-SEARCH-001` queda pendiente de PR/review y decisión de merge por Mario/ChatGPT; su FOLLOW_UP (migración de `matchKey` no único en favoritos/carrito/alertas/historial de Mobile) queda registrado en `MASTER_BACKLOG.md` sin implementar, a la espera de decisión de producto.
+`CF-SEARCH-001` y `CF-SEARCH-002` ya están mergeados a `origin/main` (PR #132 y #133 respectivamente); su FOLLOW_UP (migración de `matchKey` no único en favoritos/carrito/alertas/historial de Mobile) queda registrado en `MASTER_BACKLOG.md` sin implementar, a la espera de decisión de producto.
 
 ---
 
@@ -106,7 +106,7 @@ La promoción de vc33 a Producción requiere decisión GO/NO-GO explícita, resp
 
 `BIOEQUIVALENCE-DATA-QUALITY-01` está **DOCUMENTED_AND_BACKLOGGED / IMPLEMENTATION_GATED_BY_MOBILE_VC33**. Sus decisiones de Gate 2 no se reabren sin evidencia nueva y ningún paso de implementación a partir del adapter fix está autorizado mientras el gate vc33 (smoke test físico + decisión GO/NO-GO a Producción) siga abierto.
 
-`CF-SEARCH-001` está **IMPLEMENTED_PENDING_PR_REVIEW**. No se reabre el diseño ni se toca la branch `fix/cf-search-001-product-identity` fuera del flujo normal de PR; el FOLLOW_UP de claves persistidas en Mobile no se implementa sin decisión explícita de Mario/ChatGPT.
+`CF-SEARCH-001` y `CF-SEARCH-002` están **MERGED_TO_MAIN** (PR #132 y #133 respectivamente, confirmados en `origin/main`). No se reabre el diseño; el FOLLOW_UP de claves persistidas en Mobile no se implementa sin decisión explícita de Mario/ChatGPT.
 
 ---
 
@@ -119,3 +119,4 @@ La promoción de vc33 a Producción requiere decisión GO/NO-GO explícita, resp
 | 1.4 | 2026-08-25 | Cierre de sesión: `BIOEQUIVALENCE-DATA-QUALITY-01` documentado y mergeado en backlog, sin entrar al sprint; se reafirma `WAITING_FOR_GOOGLE_PLAY_REVIEW` como único gate operativo activo. |
 | 1.5 | 2026-08-27 | Referencia de `CF-SEARCH-001` (identidad de producto y deduplicación segura): implementado y testeado en branch propia, pendiente de PR/review, no mergeado a `origin/main`; no bloquea ni forma parte del release Mobile vc33. FOLLOW_UP de claves persistidas en Mobile referenciado, pendiente de decisión de producto. |
 | 1.6 | 2026-08-29 | Google Play aprobó vc33: publicado en Closed Testing `Test ComparaFarma`, disponible para testers, NO promovido a Producción (confirmado por Mario vía Play Console). Se retira `WAITING_FOR_GOOGLE_PLAY_REVIEW` (gate cumplido); pendiente ahora smoke test físico + decisión GO/NO-GO. Se registra la existencia del AAB release candidate 1.4.2/versionCode 34 (CF-SEARCH-001 + CF-SEARCH-002), generado y verificado localmente, pendiente de decisión explícita de Mario para subir a Closed Testing — sin autorizarlo en esta reconciliación. |
+| 1.7 | 2026-08-29 | Corrección: `CF-SEARCH-001` (PR #132) y `CF-SEARCH-002` (PR #133) ya están **mergeados a `origin/main`** — quedan referencias residuales de "pendiente de PR/review" corregidas en §2, §4 y §7. Se registra que el SHA `f59a4da` (base del AAB vc34) es ancestro confirmado de ambos merges, y que la Web ya desplegada fue validada visualmente para "ibuprofeno 600 mg" (prioriza correctamente 600mg sobre 400/200mg). No cambia el estado de Producción Mobile ni la decisión pendiente de subir vc34 a Closed Testing, que siguen abiertos. |
