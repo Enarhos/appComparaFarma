@@ -57,7 +57,40 @@ export interface MedicationResult {
    * Siempre calculado (nunca ausente); no reemplaza ni renombra `matchKey`.
    */
   presentationKey: string;
+  /**
+   * CF-SEARCH-002 — compatibilidad léxica/farmacológica con la consulta que
+   * trajo este resultado (`"exact" | "compatible" | "mismatch"`, ver
+   * relevance.ts). Lo escribe `rankByRelevance()` después de
+   * `mergeDuplicates`; por eso es opcional: un `MedicationResult` recién
+   * construido por `toMedicationResult()` todavía no tiene consulta asociada.
+   *
+   * `"mismatch"` significa evidencia FUERTE de que es otro principio activo
+   * (el caso QA-02 "omeprazol" → "Esomeprazol"). El resultado NO se elimina:
+   * queda al final del orden y el cliente decide cómo presentarlo.
+   */
+  lexicalMatch?: LexicalMatch;
+  /**
+   * CF-SEARCH-002 — cohorte de concentración respecto de la pedida en la
+   * consulta (`"exact" | "unknown" | "other"`).
+   *
+   * AUSENTE cuando la consulta no declaró concentración: en ese caso no existe
+   * cohorte y no debe inducirse ninguna preferencia por dosis. Un cliente que
+   * ignore el campo sigue funcionando; los que lo leen separan "Resultados
+   * para X 600 mg" de "Otras concentraciones de X" sin volver a parsear
+   * nombres.
+   */
+  concentrationMatch?: ConcentrationMatch;
 }
+
+/**
+ * CF-SEARCH-002 — categorías de relevancia. Se definen acá, junto al resto del
+ * contrato que consumen `mobile`/`web`/`api`, y `relevance.ts` las importa de
+ * este archivo: son parte de la respuesta pública de `/api/search`, no un
+ * detalle interno del algoritmo. La semántica de cada valor está documentada
+ * en relevance.ts.
+ */
+export type LexicalMatch = "exact" | "compatible" | "mismatch";
+export type ConcentrationMatch = "exact" | "unknown" | "other";
 
 export interface ScrapedProduct {
   name: string;

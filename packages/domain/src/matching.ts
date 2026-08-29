@@ -66,6 +66,24 @@ export function brandHeadTokens(words: string[]): string[] {
   return [first];
 }
 
+/**
+ * Unidades por envase declaradas en un texto: `x <n>` o `<n> <sustantivo de
+ * cantidad>`. Grupo 1 = la forma con `x`, grupo 2 = la forma con sustantivo.
+ *
+ * Se extrajo LITERALMENTE del cuerpo de `matchKey()` (CF-SEARCH-002,
+ * 2026-08-28) — misma expresión, mismos flags, mismo uso vía `String.match`
+ * sin `g`, así que el valor de `matchKey` no cambia en ningún caso. Se exporta
+ * para que `queryIntent.ts` lea la cantidad de la CONSULTA con exactamente la
+ * misma regla con la que `matchKey` la lee del NOMBRE del producto: si fueran
+ * dos expresiones distintas, una consulta podría pedir una cantidad que ningún
+ * nombre produce jamás y la señal quedaría muerta.
+ *
+ * Sin flag `g` a propósito: es seguro compartir la instancia entre módulos
+ * porque `String.prototype.match` sin `g` no usa ni modifica `lastIndex`.
+ */
+export const QUANTITY_PATTERN =
+  /(?:\bx\s*(\d+)|\b(\d+)\s*(?:sobres?|comprimidos?|comp|c[aá]psulas?|cap|tab|tabletas?|amp(?:ollas?)?|parches?|grageas?|sachets?|unidades?)\b)/i;
+
 export function matchKey(name: string): string {
   const raw = name.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const mlHits = [...raw.matchAll(/(\d+(?:[.,]\d+)?)\s*ml\b/gi)];
@@ -98,9 +116,7 @@ export function matchKey(name: string): string {
     dose = `${mg}mg`;
   }
 
-  const qtyM = raw.match(
-    /(?:\bx\s*(\d+)|\b(\d+)\s*(?:sobres?|comprimidos?|comp|c[aá]psulas?|cap|tab|tabletas?|amp(?:ollas?)?|parches?|grageas?|sachets?|unidades?)\b)/i
-  );
+  const qtyM = raw.match(QUANTITY_PATTERN);
   const qty = qtyM ? (qtyM[1] ?? qtyM[2] ?? "") : "";
   const normalizedQty = qty === "1" ? "" : qty;
 

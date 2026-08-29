@@ -16,8 +16,10 @@
  *                                              correcto, conservando en el
  *                                              comentario qué defecto cubría.
  *
- * Gate 2 (2026-08-27) corrigió S-2 (Ahumada/bioequivalencia). Los demás
- * defectos caracterizados acá siguen abiertos y fuera de alcance.
+ * Gate 2 (2026-08-27) corrigió S-2 (Ahumada/bioequivalencia). CF-SEARCH-002
+ * (2026-08-28) corrigió la clave de caché de QA-05. Los demás defectos
+ * caracterizados acá siguen abiertos y fuera de alcance (EasyFarma
+ * `isBioequivalent` fabricado, GTIN/EAN ausente del contrato).
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -25,7 +27,7 @@ import { describe, expect, it } from "vitest";
 
 import { parseAhumadaHtml } from "../clients/ahumada.js";
 import { parseEasyFarmaResponse } from "../clients/easyfarma.js";
-import { cleanQuery } from "@comparafarma/domain";
+import { cleanQuery, parseQueryIntent, queryIntentCacheKey } from "@comparafarma/domain";
 
 // Captura literal de https://www.farmaciasahumada.cl/on/demandware.store/
 // Sites-ahumada-cl-Site/default/Search-ShowAjax?q=tapsin (2026-08-27, GET
@@ -129,16 +131,37 @@ describe("QA-03/QA-04 — EasyFarma nunca declara bioequivalencia ni laboratorio
 });
 
 describe("QA-05 — la clave de caché de /api/search ignora la concentración", () => {
-  it("[DEFECTO QA-05] tres concentraciones distintas comparten cacheKey", () => {
-    // api/src/routes/search.ts: `const cacheKey = query.toLowerCase() + ...`
-    // donde `query = cleanQuery(rawQuery)`. Reproducido contra producción:
-    // "ibuprofeno 400 mg" respondió `x-search-cache: miss` y las consultas
-    // siguientes de 600 mg y 200 mg respondieron `hit` con los mismos 108
-    // resultados / 29 Bio.
+  it("[SIN CAMBIOS, por diseño] las cuatro consultas comparten la clave de RETRIEVAL", () => {
+    // La consulta amplia sigue siendo la misma para las cuatro, y eso es
+    // deliberado: es lo que se le manda a los 9 scrapers, y es la clave del
+    // nivel `cfsearch:r:` de la caché. Gracias a eso, pedir 200, 400 y 600 mg
+    // NO multiplica por tres el scraping.
     const keys = ["ibuprofeno 400 mg", "ibuprofeno 600 mg", "ibuprofeno 200 mg", "ibuprofeno"].map(
       (q) => cleanQuery(q).toLowerCase()
     );
     expect(new Set(keys).size).toBe(1);
     expect(keys[0]).toBe("ibuprofeno");
+  });
+
+  it("[CORREGIDO CF-SEARCH-002] la clave de RESPUESTA ya no las colapsa", () => {
+    // DEFECTO ORIGINAL (Gate 1), api/src/routes/search.ts:
+    //   `const cacheKey = query.toLowerCase() + ...`  con `query = cleanQuery(raw)`
+    // Reproducido contra producción dos veces (2026-08-27 y 2026-08-28):
+    // "ibuprofeno 400 mg" respondió `x-search-cache: miss` y las consultas
+    // siguientes de 600 mg y 200 mg respondieron `hit` con los mismos
+    // resultados ya rankeados por precio.
+    //
+    // FIX: la clave de respuesta es `queryIntentCacheKey(intent)`, que
+    // incorpora dosis, cantidad y forma.
+    const keys = ["ibuprofeno 400 mg", "ibuprofeno 600 mg", "ibuprofeno 200 mg", "ibuprofeno"].map(
+      (q) => queryIntentCacheKey(parseQueryIntent(q))
+    );
+    expect(new Set(keys).size).toBe(4);
+    expect(keys).toEqual([
+      "ibuprofeno|dose:400mg",
+      "ibuprofeno|dose:600mg",
+      "ibuprofeno|dose:200mg",
+      "ibuprofeno",
+    ]);
   });
 });

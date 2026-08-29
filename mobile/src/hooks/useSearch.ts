@@ -1,6 +1,6 @@
 import { useRef, useCallback } from "react";
 import * as Sentry from "@sentry/react-native";
-import { cleanQuery } from "@comparafarma/domain";
+import { parseQueryIntent, queryIntentCacheKey } from "@comparafarma/domain";
 import { searchMedications } from "@/lib/search";
 import { getCached, setCached } from "@/lib/cache";
 import { useSearchStore } from "@/store/searchStore";
@@ -22,11 +22,24 @@ export function useSearch() {
     abortRef.current?.abort();
     abortRef.current = new AbortController();
 
-    const query = cleanQuery(rawQuery);
+    // CF-SEARCH-002 — Mobile enviaba `cleanQuery(rawQuery)` a la API, así que
+    // la concentración se perdía ANTES de salir del teléfono y el backend no
+    // podía usarla ni para la caché ni para el orden. Ahora se manda el texto
+    // crudo y el backend deriva la misma consulta amplia internamente
+    // (`intent.retrievalQuery === cleanQuery(rawQuery)`), sin cambiar lo que
+    // reciben las 9 farmacias.
+    const intent = parseQueryIntent(rawQuery);
+    const query = intent.retrievalQuery;
     if (!query) {
       setResults([]);
       return;
     }
+
+    // La API rechaza con 400 cualquier `q` de más de 120 caracteres. Para un
+    // texto largo (pegar una receta completa) se cae al comportamiento
+    // anterior: se manda la consulta amplia, que siempre es más corta. Se
+    // pierde la intención en ese caso, no los resultados.
+    const apiQuery = rawQuery.trim().length <= 120 ? rawQuery.trim() : query;
 
     setQuery(rawQuery);
     setLoading();
@@ -46,7 +59,13 @@ export function useSearch() {
       }
     }
 
-    const cacheKey = (query.toLowerCase().trim()) + (onlyPharmacies ? `:${[...onlyPharmacies].sort().join(",")}` : "");
+    // CF-SEARCH-002 — misma corrección que en el backend: la clave incorpora
+    // la intención (dosis, cantidad, forma). Con la clave anterior
+    // ("ibuprofeno" para las tres), buscar 400 mg después de 600 mg servía la
+    // lista cacheada de 600 mg desde AsyncStorage sin siquiera llamar a la API.
+    const cacheKey =
+      queryIntentCacheKey(intent) +
+      (onlyPharmacies ? `:${[...onlyPharmacies].sort().join(",")}` : "");
     if (!bypassCache) {
       const cached = await getCached(cacheKey);
       if (cached) {
@@ -56,7 +75,7 @@ export function useSearch() {
     }
 
     try {
-      const results = await searchMedications(query, abortRef.current.signal, onlyPharmacies);
+      const results = await searchMedications(apiQuery, abortRef.current.signal, onlyPharmacies);
       await setCached(cacheKey, results);
       setResults(results);
       captureSearch(rawQuery, query, results, selectedCommune ?? null);

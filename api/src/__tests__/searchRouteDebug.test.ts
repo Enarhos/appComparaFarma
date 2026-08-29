@@ -4,6 +4,10 @@ const searchMedicationsMock = vi.hoisted(() => vi.fn());
 const searchMedicationsDetailedMock = vi.hoisted(() => vi.fn());
 const getCachedSearchMock = vi.hoisted(() => vi.fn());
 const setCachedSearchMock = vi.hoisted(() => vi.fn());
+// CF-SEARCH-002 — la ruta pasó a usar DOS niveles de caché (ver cache.ts):
+// respuesta (clave por intención) y retrieval (clave por consulta amplia).
+const getCachedRetrievalMock = vi.hoisted(() => vi.fn());
+const setCachedRetrievalMock = vi.hoisted(() => vi.fn());
 
 vi.mock("../services/searchService.js", () => ({
   searchMedications: (...args: unknown[]) => searchMedicationsMock(...args),
@@ -13,6 +17,8 @@ vi.mock("../services/searchService.js", () => ({
 vi.mock("../lib/cache.js", () => ({
   getCachedSearch: (...args: unknown[]) => getCachedSearchMock(...args),
   setCachedSearch: (...args: unknown[]) => setCachedSearchMock(...args),
+  getCachedRetrieval: (...args: unknown[]) => getCachedRetrievalMock(...args),
+  setCachedRetrieval: (...args: unknown[]) => setCachedRetrievalMock(...args),
 }));
 
 import { handleSearchRoute } from "../routes/search.js";
@@ -48,7 +54,10 @@ beforeEach(() => {
   searchMedicationsDetailedMock.mockReset();
   getCachedSearchMock.mockReset();
   setCachedSearchMock.mockReset();
+  getCachedRetrievalMock.mockReset();
+  setCachedRetrievalMock.mockReset();
   getCachedSearchMock.mockResolvedValue(null);
+  getCachedRetrievalMock.mockResolvedValue(null);
   searchMedicationsMock.mockResolvedValue([]);
   searchMedicationsDetailedMock.mockResolvedValue({
     results: [],

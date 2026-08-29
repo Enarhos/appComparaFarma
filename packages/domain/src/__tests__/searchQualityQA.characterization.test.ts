@@ -23,8 +23,13 @@
  *                      cuál era el defecto y qué evidencia lo respaldaba.
  *
  * Gate 2 (2026-08-27) corrigió S-1 (colisión monofármaco/combinación, vía
- * `presentationKey`) y S-2 (bioequivalencia de Ahumada, lado API). El resto de
- * los defectos caracterizados acá sigue abierto y fuera de alcance.
+ * `presentationKey`) y S-2 (bioequivalencia de Ahumada, lado API).
+ * CF-SEARCH-001 (2026-08-27) corrigió QA-01D (variantes comerciales de una
+ * misma marca fusionadas). CF-SEARCH-002 (2026-08-28) corrigió QA-02
+ * (relevancia léxica) y QA-05 (concentración en clave de caché y en el orden).
+ * El resto de los defectos caracterizados acá sigue abierto y fuera de alcance
+ * — en particular QA-01A/QA-01C (fragmentación por `bio:`/marca, gateados en
+ * BIOEQUIVALENCE-DATA-QUALITY-01) y QA-03 (GTIN/EAN ausente del contrato).
  *
  * Todos los datos de entrada son literales observados en producción real
  * (`GET https://comparafarma-api.vercel.app/api/search`, read-only,
@@ -36,6 +41,8 @@ import { matchKey } from "../matching.js";
 import { cleanQuery } from "../normalization.js";
 import { mergeDuplicates } from "../deduplication.js";
 import { toMedicationResult } from "../pricing.js";
+import { parseQueryIntent, queryIntentCacheKey } from "../queryIntent.js";
+import { evaluateResultRelevance, rankByRelevance } from "../relevance.js";
 import type { MedicationResult, PharmacySlug, ScrapedProduct } from "../types.js";
 
 function scraped(over: Partial<ScrapedProduct> & { name: string }): ScrapedProduct {
@@ -70,27 +77,39 @@ function offer(
 // clave de caché.
 // ---------------------------------------------------------------------------
 describe("QA-05 — cleanQuery descarta la concentración de la consulta", () => {
-  it("[DEFECTO QA-05] tres concentraciones distintas de ibuprofeno producen la MISMA query", () => {
+  it("[SIN CAMBIOS, por diseño] tres concentraciones distintas de ibuprofeno producen la MISMA query de RECUPERACIÓN", () => {
+    // `cleanQuery` sigue siendo —a propósito— la función de recuperación
+    // amplia: es lo que se le manda a los 9 buscadores de farmacia, y
+    // restringirla devolvería menos resultados. CF-SEARCH-002 NO la convirtió
+    // en un parser farmacológico; agregó `parseQueryIntent` en paralelo (ver
+    // el test siguiente y queryIntent.test.ts).
     expect(cleanQuery("ibuprofeno 200 mg")).toBe("ibuprofeno");
     expect(cleanQuery("ibuprofeno 400 mg")).toBe("ibuprofeno");
     expect(cleanQuery("ibuprofeno 600 mg")).toBe("ibuprofeno");
+  });
 
-    // Consecuencia directa: la clave de caché de /api/search (`query
-    // .toLowerCase()`, api/src/routes/search.ts) y la de Mobile
-    // (mobile/src/hooks/useSearch.ts) son idénticas para las tres.
-    const cacheKeys = new Set(
-      ["ibuprofeno 200 mg", "ibuprofeno 400 mg", "ibuprofeno 600 mg"].map((q) =>
-        cleanQuery(q).toLowerCase().trim()
-      )
+  it("[CORREGIDO CF-SEARCH-002] una consulta con concentración YA se distingue de otra concentración", () => {
+    // Era `it.fails("[DESEADO] ...")` del Gate 1, expresado sobre `cleanQuery`.
+    // La corrección aprobada NO va en `cleanQuery` (rompería el recall) sino
+    // en la capa de intención, que es la que decide la clave de caché y el
+    // orden. La aserción se reexpresa sobre esa capa.
+    //
+    // DEFECTO ORIGINAL, medido en producción (2026-08-27 y de nuevo el
+    // 2026-08-28): "ibuprofeno 200/400/600 mg" devolvieron las MISMAS 110
+    // tarjetas, y la 2ª y la 3ª respondieron `x-search-cache: hit` sobre la
+    // entrada creada por la 1ª.
+    const keys = ["ibuprofeno 200 mg", "ibuprofeno 400 mg", "ibuprofeno 600 mg"].map((q) =>
+      queryIntentCacheKey(parseQueryIntent(q))
     );
-    expect(cacheKeys.size).toBe(1);
+    expect(new Set(keys).size).toBe(3);
+    expect(keys).toEqual([
+      "ibuprofeno|dose:200mg",
+      "ibuprofeno|dose:400mg",
+      "ibuprofeno|dose:600mg",
+    ]);
   });
 
-  it.fails("[DESEADO] una consulta con concentración debería distinguirse de otra concentración", () => {
-    expect(cleanQuery("ibuprofeno 400 mg")).not.toBe(cleanQuery("ibuprofeno 600 mg"));
-  });
-
-  it("[DEFECTO QA-05] la cantidad/presentación de la consulta también se descarta", () => {
+  it("[SIN CAMBIOS, por diseño] la cantidad/presentación tampoco restringe la RECUPERACIÓN", () => {
     // Observado: "paracetamol 500 mg 16 comprimidos" (134/43 Bio) devolvió lo
     // mismo que "paracetamol 500 mg" (134/43 Bio, cache=hit). El 136/134 que
     // reportó QA es variación temporal del scraping, no diferencia semántica.
@@ -98,10 +117,15 @@ describe("QA-05 — cleanQuery descarta la concentración de la consulta", () =>
     expect(cleanQuery("paracetamol 500 mg")).toBe("paracetamol");
   });
 
-  it.fails("[DESEADO] una consulta más específica no debería colapsar a la menos específica", () => {
-    expect(cleanQuery("paracetamol 500 mg 16 comprimidos")).not.toBe(
-      cleanQuery("paracetamol 500 mg")
-    );
+  it("[CORREGIDO CF-SEARCH-002] una consulta más específica YA no colapsa a la menos específica", () => {
+    // Era `it.fails("[DESEADO] ...")` del Gate 1, reexpresado sobre la capa
+    // de intención por el mismo motivo que el caso de concentración.
+    const conCantidad = parseQueryIntent("paracetamol 500 mg 16 comprimidos");
+    const sinCantidad = parseQueryIntent("paracetamol 500 mg");
+
+    expect(conCantidad.quantity).toBe(16);
+    expect(sinCantidad.quantity).toBeNull();
+    expect(queryIntentCacheKey(conCantidad)).not.toBe(queryIntentCacheKey(sinCantidad));
   });
 
   it("[DEFECTO QA-05] la marca sí sobrevive a cleanQuery, solo se pierden los atributos numéricos", () => {
@@ -134,28 +158,54 @@ describe("QA-02 — omeprazol vs esomeprazol", () => {
     expect(merged).toHaveLength(2);
   });
 
-  it("[DEFECTO QA-02] no existe ninguna función de relevancia consulta→resultado en el dominio", () => {
-    // Causa raíz: `esomeprazol` contiene literalmente `omeprazol` como
-    // substring, y el motor de búsqueda de cada farmacia hace ese match. El
-    // pipeline propio (searchService → toMedicationResult → mergeDuplicates →
-    // sort por precio) NUNCA compara el resultado contra la consulta, así que
-    // no tiene forma de descartarlo.
+  it("[CORREGIDO CF-SEARCH-002] el dominio YA expone la capa de relevancia consulta→resultado", () => {
+    // DEFECTO ORIGINAL (Gate 1): `esomeprazol` contiene literalmente
+    // `omeprazol` como substring, y el motor de búsqueda de cada farmacia hace
+    // ese match. El pipeline propio (searchService → toMedicationResult →
+    // mergeDuplicates → sort por precio) NUNCA comparaba el resultado contra
+    // la consulta, así que no tenía forma de degradarlo. Este test congelaba
+    // esa ausencia (`expect(relevanceLike).toEqual([])`).
     //
-    // Este test congela esa ausencia: si el Gate 2 agrega un filtro de
-    // relevancia al dominio, esta aserción debe actualizarse a propósito.
+    // FIX (CF-SEARCH-002): queryIntent.ts + relevance.ts. El test pasó de
+    // congelar la ausencia a verificar que la capa existe y está exportada
+    // desde `@comparafarma/domain` — que es lo que permite que Web y Mobile
+    // consuman resultados ya clasificados sin re-parsear nombres.
     const relevanceLike = Object.keys(domainIndex).filter((k) =>
       /relevan|score|rank|filterByQuery|matchesQuery|parseQuery/i.test(k)
     );
-    expect(relevanceLike).toEqual([]);
+    expect(relevanceLike.sort()).toEqual([
+      "evaluateResultRelevance",
+      "parseQueryIntent",
+      "rankByRelevance",
+    ]);
   });
 
-  it.fails("[DESEADO] debería existir una regla general que rechace un principio activo que solo contiene al buscado como substring", () => {
-    // Regla general esperada (NO un caso hardcodeado omeprazol/esomeprazol):
-    // el token de principio activo del resultado debe coincidir por token
-    // completo con el de la consulta, no por inclusión.
+  it("[CORREGIDO CF-SEARCH-002] existe una regla GENERAL que rechaza el principio activo que solo contiene al buscado como substring", () => {
+    // Era el `it.fails("[DESEADO] ...")` del Gate 1. La regla implementada NO
+    // es un caso hardcodeado omeprazol/esomeprazol: exige coincidencia por
+    // TOKEN COMPLETO (ver relevance.ts). Se conserva la aserción original
+    // sobre `matchKey` —que sigue siendo cierta y explica el defecto— y se
+    // agrega la verificación de la corrección real.
     const consulta = "omeprazol";
     const resultado = matchKey("Esomeprazol 20 mg x 30 cápsulas").split("|")[0];
-    expect(resultado.includes(consulta)).toBe(false);
+    // La condición que el buscador de cada farmacia usa para traerlo sigue
+    // siendo cierta: por eso el resultado LLEGA. Lo que cambió es que ya no se
+    // acepta como coincidencia.
+    expect(resultado.includes(consulta)).toBe(true);
+
+    const relevancia = evaluateResultRelevance(
+      parseQueryIntent(consulta),
+      offer("dr-simi", { name: "Esomeprazol 20 mg x 30 cápsulas" })
+    );
+    expect(relevancia.lexicalMatch).toBe("mismatch");
+
+    // Y la misma regla, sin nombrar ningún principio activo en el código.
+    expect(
+      evaluateResultRelevance(
+        parseQueryIntent("ketoprofeno"),
+        offer("dr-simi", { name: "Dexketoprofeno 25 mg x 20 comprimidos" })
+      ).lexicalMatch
+    ).toBe("mismatch");
   });
 });
 
@@ -478,13 +528,18 @@ describe("QA-01/QA-05 — forma farmacéutica y cantidad en la identidad", () =>
 // consulta participa.
 // ---------------------------------------------------------------------------
 describe("QA-05 — ranking exclusivamente por precio", () => {
-  it("[DEFECTO QA-05] buscando 600mg, los 400mg quedan primero solo por ser más baratos", () => {
-    const results = [
-      offer("dr-simi", { name: "Ibuprofeno 600 mg 20 comprimidos recubiertos", laboratory: "OPKO", price: 1200 }),
-      offer("farmex", { name: "Ibuprofeno 400 mg x 20 comprimidos", laboratory: "CHILE", price: 690 }),
-      offer("dr-simi", { name: "Ibuprofeno 200 mg 20 comprimidos recubiertos", laboratory: "ASCEND", price: 1200 }),
-    ];
-    const ordered = mergeDuplicates(results).sort((a, b) => a.bestPrice - b.bestPrice);
+  const catalogo = () => [
+    offer("dr-simi", { name: "Ibuprofeno 600 mg 20 comprimidos recubiertos", laboratory: "OPKO", price: 1200 }),
+    offer("farmex", { name: "Ibuprofeno 400 mg x 20 comprimidos", laboratory: "CHILE", price: 690 }),
+    offer("dr-simi", { name: "Ibuprofeno 200 mg 20 comprimidos recubiertos", laboratory: "ASCEND", price: 1200 }),
+  ];
+
+  it("[SIN CAMBIOS] el orden BASE de mergeDuplicates sigue siendo solo por precio", () => {
+    // `mergeDuplicates` no conoce la consulta y no debe conocerla: sigue
+    // devolviendo las tarjetas ordenadas por precio. Lo que agregó
+    // CF-SEARCH-002 es una etapa POSTERIOR (`rankByRelevance`), no un cambio
+    // de la deduplicación.
+    const ordered = mergeDuplicates(catalogo()).sort((a, b) => a.bestPrice - b.bestPrice);
     expect(ordered.map((r) => r.matchKey)).toEqual([
       "ibuprofeno|400mg|20",
       "ibuprofeno|600mg|20",
@@ -492,13 +547,33 @@ describe("QA-05 — ranking exclusivamente por precio", () => {
     ]);
   });
 
-  it.fails("[DESEADO] la concentración pedida debería quedar primera", () => {
-    const results = [
-      offer("dr-simi", { name: "Ibuprofeno 600 mg 20 comprimidos recubiertos", laboratory: "OPKO", price: 1200 }),
-      offer("farmex", { name: "Ibuprofeno 400 mg x 20 comprimidos", laboratory: "CHILE", price: 690 }),
-    ];
-    const ordered = mergeDuplicates(results).sort((a, b) => a.bestPrice - b.bestPrice);
+  it("[CORREGIDO CF-SEARCH-002] la concentración pedida queda primera", () => {
+    // Era el `it.fails("[DESEADO] ...")` del Gate 1. Se conserva el caso
+    // original —600 mg a $1.200 contra 400 mg a $690— que es exactamente el
+    // que fallaba: el más barato NO es el que pidió el usuario.
+    const ordered = rankByRelevance(
+      parseQueryIntent("ibuprofeno 600 mg"),
+      mergeDuplicates(catalogo()).sort((a, b) => a.bestPrice - b.bestPrice)
+    );
     expect(ordered[0].matchKey).toBe("ibuprofeno|600mg|20");
+    expect(ordered[0].bestPrice).toBe(1200);
+    expect(ordered[0].concentrationMatch).toBe("exact");
+
+    // Y las otras concentraciones no desaparecen: quedan detrás, etiquetadas.
+    expect(ordered.map((r) => [r.matchKey, r.concentrationMatch])).toEqual([
+      ["ibuprofeno|600mg|20", "exact"],
+      ["ibuprofeno|400mg|20", "other"],
+      ["ibuprofeno|200mg|20", "other"],
+    ]);
+  });
+
+  it("[CORREGIDO CF-SEARCH-002] sin concentración en la consulta, el orden por precio se conserva intacto", () => {
+    // La otra mitad del requisito: no inventar preferencia de dosis cuando el
+    // usuario no la pidió.
+    const base = mergeDuplicates(catalogo()).sort((a, b) => a.bestPrice - b.bestPrice);
+    const ordered = rankByRelevance(parseQueryIntent("ibuprofeno"), base);
+    expect(ordered.map((r) => r.matchKey)).toEqual(base.map((r) => r.matchKey));
+    expect(ordered.every((r) => r.concentrationMatch === undefined)).toBe(true);
   });
 });
 

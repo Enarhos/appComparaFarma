@@ -13,11 +13,22 @@
  * semánticos ya expuestos por `MedicationResult`: `matchKey`, `canonicalName`,
  * `laboratory`, `isBioequivalent`, `bestPrice`, `prices`.
  */
-import type { MedicationResult } from "@comparafarma/domain";
+import type { ConcentrationMatch, MedicationResult } from "@comparafarma/domain";
 
 export interface MedicationGroup {
   /** Identidad farmacológica amplia compartida por todos los productos del grupo. */
   matchKey: string;
+  /**
+   * CF-SEARCH-002 — cohorte de concentración del grupo, o `undefined` cuando
+   * la consulta no pidió concentración y por lo tanto no hay cohortes.
+   *
+   * Es una LECTURA del campo que ya trae cada `MedicationResult` desde la API,
+   * no un recálculo: la regla de "no parsear nombres en el cliente" se aplica
+   * igual que la de "no parsear `presentationKey`". Un grupo es homogéneo por
+   * construcción — `matchKey` incluye el segmento de dosis, así que todos sus
+   * productos comparten concentración y, por lo tanto, cohorte.
+   */
+  concentrationMatch?: ConcentrationMatch;
   /** Título de presentación a mostrar — ver buildGroupTitle() y su limitación documentada. */
   title: string;
   /**
@@ -155,8 +166,35 @@ export function groupMedicationResultsByMatchKey(results: MedicationResult[]): M
       title: buildGroupTitle(products),
       imageUrl: buildGroupImageUrl(products),
       products,
+      concentrationMatch: products[0]?.concentrationMatch,
     };
   });
+}
+
+/**
+ * CF-SEARCH-002 — separa los grupos en los que responden a la concentración
+ * pedida y los que son OTRA concentración del mismo principio activo.
+ *
+ * `primary` son las cohortes `exact` y `unknown`: la dosis pedida más aquellas
+ * cuyo nombre no la declara (no se puede afirmar que NO sean lo buscado, y
+ * esconderlas destruiría recall real — varias farmacias truncan el nombre).
+ * `other` son las cohortes `other`.
+ *
+ * Cuando la consulta no trae concentración, `concentrationMatch` llega
+ * `undefined` en todos los resultados y TODO cae en `primary`: no se inventa
+ * una sección de "otras concentraciones" que no corresponde.
+ *
+ * No reordena: preserva el orden que ya decidió `rankByRelevance` en el
+ * dominio, que es el único lugar donde vive esa regla.
+ */
+export function splitGroupsByConcentration(groups: MedicationGroup[]): {
+  primary: MedicationGroup[];
+  other: MedicationGroup[];
+} {
+  return {
+    primary: groups.filter((group) => group.concentrationMatch !== "other"),
+    other: groups.filter((group) => group.concentrationMatch === "other"),
+  };
 }
 
 export interface RemainingOptionsCount {

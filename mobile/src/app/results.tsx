@@ -10,10 +10,15 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import type { MedicationResult, PharmacySlug } from "@/lib/types";
+import type { PharmacySlug } from "@/lib/types";
 import { useLocalSearchParams } from "expo-router";
 import { MedicationListItem } from "@/components/MedicationListItem";
 import { medicationListKey } from "@/lib/medicationListKey";
+import {
+  OTHER_CONCENTRATIONS_HEADER,
+  buildResultListItems,
+  type ResultListItem,
+} from "@/lib/resultSections";
 import { SkeletonCard } from "@/components/SkeletonCard";
 import { EmptyState } from "@/components/EmptyState";
 import { FilterSheet } from "@/components/FilterSheet";
@@ -96,11 +101,12 @@ export default function ResultsScreen() {
       med.prices.some((p) => onlineSlugs.includes(p.pharmacySlug))
     );
   }
-  displayResults = [...displayResults].sort((a, b) =>
-    sortBy === "name"
-      ? a.canonicalName.localeCompare(b.canonicalName, "es")
-      : a.bestPrice - b.bestPrice
-  );
+  // CF-SEARCH-002 — el reorden local ya no puede ser un `sort` plano por
+  // precio: deshacía el ranking por cohorte de concentración que la API aplica
+  // (`concentrationMatch`), devolviendo un 400 mg más barato por delante del
+  // 600 mg pedido. La cohorte manda; el criterio del usuario ordena DENTRO de
+  // cada cohorte. Ver lib/resultSections.ts.
+  const listItems = buildResultListItems(displayResults, sortBy);
 
   const showBioBanner =
     !bioOnly && bioCount > 0 && results.length > bioCount && status === "success";
@@ -337,11 +343,26 @@ export default function ResultsScreen() {
           identidad con la que se navega a la ficha), no `matchKey` — dejó de ser
           único por tarjeta. Ver medicationListKey.ts. */}
       <FlatList
-        data={(isLoading ? SKELETON_KEYS : displayResults) as (string | MedicationResult)[]}
+        data={(isLoading ? SKELETON_KEYS : listItems) as ResultListItem[]}
         keyExtractor={medicationListKey}
         renderItem={({ item }) =>
           typeof item === "string" ? (
-            <SkeletonCard />
+            item === OTHER_CONCENTRATIONS_HEADER ? (
+              /* CF-SEARCH-002 — las otras concentraciones no se ocultan (pueden
+                 ser lo que el usuario necesita), pero quedan separadas de lo
+                 que pidió y nunca por delante. */
+              <View className="pt-4 pb-1">
+                <Text className="text-sm font-semibold text-gray-700 dark:text-gray-200">
+                  Otras concentraciones
+                </Text>
+                <Text className="text-xs text-gray-400 mt-0.5">
+                  No coinciden con la concentración que buscaste — revisa la dosis antes de comparar
+                  precios.
+                </Text>
+              </View>
+            ) : (
+              <SkeletonCard />
+            )
           ) : (
             <MedicationListItem
               medication={item}

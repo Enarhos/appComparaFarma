@@ -11,6 +11,7 @@ import {
   type EmailAlert,
 } from "../lib/emailAlertsDb.js";
 import { searchMedications } from "../services/searchService.js";
+import type { MedicationResult } from "../lib/types.js";
 
 // Sprint C — alertas de precio por email en web/, sin cuenta de usuario.
 // docs/prompt/claude/PROMPT_CLAUDE_SPRINT_C_ALERTAS_EMAIL.md
@@ -185,6 +186,36 @@ async function handleUnsubscribe(res: ResponseLike, token: string): Promise<void
   }
 }
 
+/**
+ * Tarjeta MÁS BARATA con ese `matchKey`, o `undefined` si ninguna lo tiene.
+ *
+ * Antes era `results.find(r => r.matchKey === alert.matchKey)`, que dependía de
+ * que la lista llegara ordenada por `bestPrice` ascendente. Desde CF-SEARCH-001
+ * la deduplicación es por `presentationKey`, así que VARIAS tarjetas comerciales
+ * comparten un mismo `matchKey` ("Tapsin Sobre Noche" y "Tapsin Instaflu Noche",
+ * ambas `tapsin|n`), y desde CF-SEARCH-002 `rankByRelevance()` reordena la lista
+ * por cohorte de concentración y por cantidad/forma antes de devolverla. Medido
+ * sobre datos reales de producción (1.492 alertas simuladas sobre 20 búsquedas):
+ * en 88 casos `find()` pasó a devolver OTRA tarjeta, siempre con otro precio
+ * —hasta $460 → $4.399—, y como el disparo compara `bestPrice > targetPrice`, la
+ * alerta simplemente dejaba de dispararse en silencio.
+ *
+ * Elegir el mínimo hace la evaluación INDEPENDIENTE del orden de la lista: ni
+ * este cambio de ranking ni ninguno futuro puede volver a alterar qué precio se
+ * compara contra el objetivo del usuario.
+ */
+function cheapestByMatchKey(
+  results: MedicationResult[],
+  key: string
+): MedicationResult | undefined {
+  let best: MedicationResult | undefined;
+  for (const result of results) {
+    if (result.matchKey !== key) continue;
+    if (!best || result.bestPrice < best.bestPrice) best = result;
+  }
+  return best;
+}
+
 async function handleCheck(req: RequestLike, res: ResponseLike): Promise<void> {
   const secret = getSearchParam(req, "secret");
   const expected = process.env.CRON_SECRET?.trim();
@@ -226,7 +257,7 @@ async function handleCheck(req: RequestLike, res: ResponseLike): Promise<void> {
 
     for (const alert of group) {
       checkedIds.push(alert.id);
-      const match = results.find((r) => r.matchKey === alert.matchKey);
+      const match = cheapestByMatchKey(results, alert.matchKey);
       if (!match || match.bestPrice > alert.targetPrice) continue;
 
       await markTriggered(alert.id, match.bestPrice);
