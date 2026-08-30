@@ -108,6 +108,15 @@ function RootLayout() {
         <Stack.Screen name="onboarding" options={{ headerShown: false }} />
         <Stack.Screen name="login" options={{ title: "Cuenta", headerBackTitle: "Inicio" }} />
         <Stack.Screen name="registro" options={{ title: "Crear cuenta", headerBackTitle: "Cuenta" }} />
+        {/* ACCOUNT-UX-01 (revisión Mario): se declara ahora porque esta Task
+            agrega la primera navegación real dentro de la app hacia esta
+            pantalla (desde `login.tsx`) — mismo patrón que `registro` arriba
+            (back hacia "Cuenta", título propio). `actualizar-clave` queda
+            deliberadamente sin declarar: se abre solo por deep link de
+            recuperación, sin una pantalla previa predecible en el stack, así
+            que "back" no tiene un destino consistente que decidir acá — ver
+            informe de esta Task (FOLLOW_UP). */}
+        <Stack.Screen name="recuperar-clave" options={{ title: "Recuperar contraseña", headerBackTitle: "Cuenta" }} />
       </Stack>
     </>
   );

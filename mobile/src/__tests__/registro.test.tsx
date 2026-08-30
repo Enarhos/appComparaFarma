@@ -30,7 +30,7 @@ describe("RegistroScreen", () => {
   // ACCOUNT-UX-01, problema 2.
   it("explica para qué sirve una cuenta antes del formulario", async () => {
     const view = await render(<RegistroScreen />);
-    expect(view.getByText("¿Para qué sirve crear una cuenta?")).toBeTruthy();
+    expect(view.getByText("La cuenta es opcional")).toBeTruthy();
   });
 
   // ACCOUNT-UX-01, problema 3.

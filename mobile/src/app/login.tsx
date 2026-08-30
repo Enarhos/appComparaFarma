@@ -13,7 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { useAuthStore } from "@/store/authStore";
 import { signInWithPassword } from "@/lib/sessionManager";
-import { goToRegistro, returnFromAuth } from "@/lib/authNavigation";
+import { goToRegistro, goToRecuperarClave, returnFromAuth } from "@/lib/authNavigation";
 import { BRAND_COLORS } from "@/constants/brand";
 import { DeleteAccountSheet } from "@/components/DeleteAccountSheet";
 import { AccountPurposeNote } from "@/components/AccountPurposeNote";
@@ -192,6 +192,19 @@ export default function LoginScreen() {
             ) : (
               <Text className="text-white font-semibold text-base">Entrar</Text>
             )}
+          </TouchableOpacity>
+
+          {/* ACCOUNT-UX-01 (revisión Mario): expone `recuperar-clave.tsx`,
+              antes solo alcanzable por deep link. Discreta a propósito (texto
+              chico, sin color de marca) para no competir con el CTA
+              principal "Entrar". */}
+          <TouchableOpacity
+            onPress={goToRecuperarClave}
+            className="mt-3 items-center"
+            accessibilityRole="button"
+            accessibilityLabel="¿Olvidaste tu contraseña?"
+          >
+            <Text className="text-xs text-gray-400 dark:text-gray-500">¿Olvidaste tu contraseña?</Text>
           </TouchableOpacity>
 
           <TouchableOpacity

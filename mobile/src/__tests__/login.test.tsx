@@ -22,6 +22,7 @@ jest.mock("@/lib/sessionManager", () => ({
 
 jest.mock("@/lib/authNavigation", () => ({
   goToRegistro: jest.fn(),
+  goToRecuperarClave: jest.fn(),
   returnFromAuth: jest.fn(),
 }));
 
@@ -64,7 +65,7 @@ describe("LoginScreen (autenticado)", () => {
 
   it("no muestra la explicación de para qué sirve una cuenta (ya la tiene)", async () => {
     const view = await render(<LoginScreen />);
-    expect(view.queryByText("¿Para qué sirve crear una cuenta?")).toBeNull();
+    expect(view.queryByText("La cuenta es opcional")).toBeNull();
   });
 });
 
@@ -84,7 +85,24 @@ describe("LoginScreen (sin sesión)", () => {
   // ACCOUNT-UX-01, problema 2.
   it("explica para qué sirve una cuenta antes de ofrecer crearla", async () => {
     const view = await render(<LoginScreen />);
-    expect(view.getByText("¿Para qué sirve crear una cuenta?")).toBeTruthy();
+    expect(view.getByText("La cuenta es opcional")).toBeTruthy();
     expect(view.getByLabelText("Crear cuenta")).toBeTruthy();
+  });
+
+  // ACCOUNT-UX-01 (revisión Mario): la recuperación de contraseña ya
+  // funcionaba (`recuperar-clave.tsx` + `sessionManager.sendPasswordReset`),
+  // pero solo era alcanzable por deep link. Esta Task la expone desde Login.
+  it("ofrece recuperar la contraseña y navega a la pantalla existente", async () => {
+    const { goToRecuperarClave } = jest.requireMock("@/lib/authNavigation") as {
+      goToRecuperarClave: jest.Mock;
+    };
+    const view = await render(<LoginScreen />);
+
+    const link = view.getByLabelText("¿Olvidaste tu contraseña?");
+    expect(link).toBeTruthy();
+
+    await fireEvent.press(link);
+
+    expect(goToRecuperarClave).toHaveBeenCalledTimes(1);
   });
 });
