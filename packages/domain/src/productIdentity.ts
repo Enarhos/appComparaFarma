@@ -411,7 +411,205 @@ export function dosageFormClass(name: string): DosageFormClass | null {
 const GLUED_SOLID_COUNT_TOKEN = /^x?\d+(com|comp|comps|cap|caps|cps|tab|tabs)$/;
 
 // ---------------------------------------------------------------------------
-// C. IDENTIDAD DE PRODUCTO Y COMPATIBILIDAD
+// C. CANTIDAD POR ENVASE
+// ---------------------------------------------------------------------------
+
+/**
+ * PROBLEMA QUE RESUELVE
+ * ---------------------
+ * El único eje de cantidad que la deduplicación tenía hasta acá era el segmento
+ * de `matchKey`, y ese segmento NO representa fielmente lo que declara el
+ * nombre. Dos defectos concretos, verificados sobre 1.389 ofertas reales de 21
+ * búsquedas de producción (read-only, 2026-08-30):
+ *
+ *   1. `matching.ts` normaliza `qty === "1"` a cadena vacía, así que una oferta
+ *      que declara EXPLÍCITAMENTE una unidad queda indistinguible de una que no
+ *      declara cantidad alguna. 17 ofertas reales hoy, entre ellas
+ *      "Tapsin Compuesto Noche 5g **1 Sobre** Polvo Para Solución Oral"
+ *      (Ahumada) → `tapsin|5000mg|n`, exactamente igual que un nombre sin
+ *      cantidad.
+ *   2. La lista de sustantivos de `QUANTITY_PATTERN` está incompleta: no cubre
+ *      `supositorio(s)`, `óvulo(s)`, `perla(s)`, `pastilla(s)`, `comps`, `cps`
+ *      ni `tabs`. 15 ofertas reales declaran N>1 unidades y `matchKey` las lee
+ *      como cantidad ausente — "Diclofenaco 50 mg **5 supositorios**"
+ *      (Dr. Simi) → `diclofenaco|50mg`, "Next Fwd **24 Tabs** /50" (Cruz Verde)
+ *      → `nextfwd`.
+ *
+ * Sumadas, 32 ofertas (2,3 % de la muestra) tienen su cantidad INVISIBLE para
+ * la clave de agrupación. Cualquier par de ellas que coincida en el resto de la
+ * identidad se fusiona sin ninguna validación de cantidad, porque
+ * `canMergeOffers()` delegaba ese eje enteramente en `matchKey`. Es el defecto
+ * que produjo el reporte de QA "1 sobre comparado contra caja de 6 sobres":
+ * una comparación de precio engañosa, no un duplicado estético.
+ *
+ * `matchKey` NO se toca (valor persistido en `price_history`,
+ * `medication_match_key_aliases`, `pharmacy_clicks`, `email_alerts`): la
+ * cantidad se vuelve a leer acá, con cobertura completa, como un eje propio de
+ * la capa de identidad.
+ */
+
+/**
+ * Sustantivos que cuentan UNIDADES DE UN ENVASE. Se mantiene SEPARADO de
+ * `COUNT_NOUNS` (más arriba en este módulo) a propósito: aquella lista alimenta
+ * a `isAttributeBoundary()`, de la que depende `commercialVariantKey()` y, por
+ * lo tanto, el segmento `|var:` de `presentationKey`. Agregarle entradas
+ * movería el corte de la variante en nombres reales y rotaría claves —y, en
+ * Web, slugs de ficha— sin ninguna relación con este fix.
+ */
+const UNIT_COUNT_NOUNS = new Set([
+  "comprimido", "comprimidos", "com", "comp", "comps",
+  "capsula", "capsulas", "cap", "caps", "cps",
+  "tableta", "tabletas", "tab", "tabs",
+  "gragea", "grageas", "perla", "perlas", "pastilla", "pastillas",
+  "sobre", "sobres", "sachet", "sachets",
+  "supositorio", "supositorios", "suposit", "ovulo", "ovulos",
+  "ampolla", "ampollas", "ampolleta", "ampolletas", "jeringa", "jeringas",
+  "parche", "parches", "unidad", "unidades", "und",
+]);
+
+/**
+ * Unidades de MEDIDA (masa, volumen, actuaciones). Un número seguido de una de
+ * ellas describe la dosis o el contenido del envase, nunca cuántas unidades
+ * trae: "Amoxicilina 250mg/5ml x **60 ml**" son 60 mililitros de jarabe, no 60
+ * cápsulas, y "Tapsin SC Paracetamol **1 gr** x 20 Comprimidos" son 20
+ * comprimidos de 1 gramo, no 1 unidad.
+ *
+ * Es la lista que hace segura la lectura de `x <n>` sin sustantivo: sin ella,
+ * 178 ofertas reales de la muestra (todos los jarabes, suspensiones, gotas y
+ * aerosoles) derivarían una "cantidad" que es en realidad su volumen.
+ */
+const MEASURE_UNITS = new Set([
+  "mg", "g", "gr", "gramo", "gramos", "miligramo", "miligramos",
+  "ml", "cc", "l", "litro", "litros", "mililitro", "mililitros",
+  "mcg", "ug", "ui", "iu", "kg",
+  "dosis", "puff", "puffs", "inhalacion", "inhalaciones",
+  "aplicacion", "aplicaciones", "actuacion", "actuaciones",
+  "disparo", "disparos", "pulverizacion", "pulverizaciones",
+]);
+
+/**
+ * Sustantivo de unidad en SINGULAR. Cuando el nombre no declara ningún número
+ * de unidades pero nombra la unidad en singular, la presentación es de UNA
+ * unidad: "Tapsin **Sobre** Noche (Maver)" (EcoFarmacias) y "Tapsin Noche
+ * Limonada **Sobre** (ai)" (Sermecoop) son el sachet suelto, no la caja.
+ *
+ * Es el caso exacto del reporte de QA —un sobre suelto comparado contra una
+ * caja de 6— y sin esta lectura quedaría como "cantidad desconocida", es decir
+ * como comodín que se fusiona con cualquier tamaño de envase.
+ *
+ * La regla se restringe al singular y solo se aplica cuando NO se encontró
+ * ningún número de unidades en el nombre. Medido sobre las 1.389 ofertas de la
+ * muestra: 24 nombres usan un sustantivo de unidad en singular y solo 4 lo
+ * hacen sin número; los 4 son sachets sueltos. No hay en el catálogo real un
+ * solo caso en que un envase multi-unidad se describa con la unidad en
+ * singular y sin cantidad.
+ */
+const SINGULAR_UNIT_NOUNS = new Set([
+  "sobre", "sachet", "comprimido", "capsula", "tableta", "gragea",
+  "supositorio", "ovulo", "ampolla", "ampolleta", "jeringa",
+  "parche", "perla", "pastilla",
+]);
+
+/** `24`, `x24`, `por10` — número con el prefijo de cantidad opcionalmente pegado. */
+const COUNT_NUMBER_TOKEN = /^(?:x|por)?(\d+)$/;
+
+/** `x80com`, `100comp`, `x10cap` — cantidad y abreviatura de forma sin espacio. */
+const GLUED_COUNT_TOKEN = /^x?(\d+)(?:com|comp|comps|cap|caps|cps|tab|tabs)$/;
+
+/**
+ * Unidades por envase declaradas en el nombre, o `null` si el nombre no las
+ * declara.
+ *
+ * A diferencia del segmento de cantidad de `matchKey`, distingue los TRES
+ * estados que la deduplicación necesita:
+ *   - `1`    — declara explícitamente una unidad ("… 1 Sobre …", "x 1 Ampolla")
+ *   - `N`    — declara explícitamente N unidades ("6 Sobres", "x80com.")
+ *   - `null` — el nombre no declara cantidad, o la declara de forma ambigua
+ *
+ * Formatos reconocidos, todos observados en el catálogo real:
+ *   `6 Sobres` · `20 Comprimidos` · `5 Supositorios` · `24 Tabs` · `30 Cap`
+ *   `x 6 comprimidos` · `X 24 comp.` · `por 10 caps.` · `por10 comprimidos`
+ *   `x80com.` · `100comp` · `Caja 6 sobres`
+ *   `x 6` / `x 60…`  (EasyFarma trunca el nombre y deja la cantidad suelta)
+ *
+ * Se devuelve `null` —y no un número— cuando el único candidato va seguido de
+ * una unidad de medida (`x 60 ml`, `x5g`, `x 200 Dosis`). Es la dirección
+ * conservadora: una cantidad inventada a partir de un volumen sería peor que no
+ * tener cantidad, porque el eje se usa para PROHIBIR fusiones.
+ */
+export function unitCountKey(name: string): number | null {
+  // Sin `withoutAnnotations()`: Farmex declara la cantidad DENTRO del paréntesis
+  // ("Tapsin Caliente Noche - Sabor Limón - Sobre de 5 g ( 1 sobre )") y
+  // descartarlo perdería el dato.
+  const tokens = normalizedWords(name);
+
+  for (let i = 0; i < tokens.length; i++) {
+    const token = tokens[i];
+    if (!token) continue;
+
+    const glued = GLUED_COUNT_TOKEN.exec(token);
+    if (glued) return Number(glued[1]);
+
+    const number = COUNT_NUMBER_TOKEN.exec(token);
+    if (!number) continue;
+
+    const next = tokens[i + 1];
+    if (next !== undefined && UNIT_COUNT_NOUNS.has(next)) return Number(number[1]);
+    if (next !== undefined && MEASURE_UNITS.has(next)) continue;
+
+    // `x <n>` / `por <n>` sin sustantivo detrás. Se acepta como cantidad solo
+    // acá, después de haber descartado las unidades de medida.
+    const prefixed = token !== number[1];
+    const previous = tokens[i - 1];
+    if (prefixed || previous === "x" || previous === "por") return Number(number[1]);
+  }
+
+  // Ningún número de unidades en el nombre. La unidad nombrada en singular es
+  // la última evidencia disponible de que la presentación es de una sola —
+  // ver `SINGULAR_UNIT_NOUNS`.
+  if (tokens.some((token) => SINGULAR_UNIT_NOUNS.has(token))) return 1;
+
+  return null;
+}
+
+/**
+ * POLÍTICA DE CANTIDAD (asimétrica y deliberada) — `true` si dos ofertas pueden
+ * pertenecer a la misma tarjeta según su cantidad declarada.
+ *
+ *   - Ambas EXPLÍCITAS y DISTINTAS  → `false`. Regla dura: dos fuentes que
+ *     declaran cantidades distintas son evidencia positiva y directa de que son
+ *     presentaciones distintas. Incluye el caso `1` vs `N`, que es precisamente
+ *     el que `matchKey` no puede expresar.
+ *   - Ambas EXPLÍCITAS e IGUALES    → `true`, sin importar cómo esté escrita la
+ *     cantidad (`x 6`, `6 sobres`, `caja 6 sobres`, `x80com.` ≡ `x 80
+ *     comprimidos`).
+ *   - Una EXPLÍCITA y otra AUSENTE  → `true`. **No** se trata la ausencia como
+ *     incompatible.
+ *
+ * Por qué la ausencia NO bloquea la fusión, aunque la política general del
+ * proyecto sea "ante duda, no fusionar": esa política se aplica ante una
+ * CONTRADICCIÓN, y acá no hay ninguna. No declarar la cantidad no afirma nada;
+ * declarar una distinta sí. En el catálogo real la ausencia es siempre un
+ * defecto de transcripción de la farmacia sobre el MISMO envase, nunca un
+ * envase distinto — EasyFarma trunca ("Omeprazol 20 mg x 60…"), AraucoMed pega
+ * la abreviatura ("x80com."). En la muestra de 21 búsquedas, los 4 grupos con
+ * cantidad declarada en una fuente y ausente en la otra eran los 4 el mismo
+ * producto; bloquearlos habría partido 4 tarjetas correctas sin evitar ni un
+ * solo falso merge. Es la misma asimetría que ya rige `dosageForm` (`null`
+ * compatible con cualquier clase, ver `dosageFormClass`).
+ *
+ * El riesgo que esa asimetría deja abierto —una cantidad no detectada actuando
+ * como comodín— se contiene por el otro lado: `unitCountKey()` cubre los
+ * formatos y sustantivos que `matchKey` no cubre, así que los casos que antes
+ * caían en "desconocida" ahora caen en "explícita" y quedan bajo la regla dura.
+ */
+export function isCompatibleUnitCount(a: number | null, b: number | null): boolean {
+  if (a === null || b === null) return true;
+  return a === b;
+}
+
+// ---------------------------------------------------------------------------
+// D. IDENTIDAD DE PRODUCTO Y COMPATIBILIDAD
 // ---------------------------------------------------------------------------
 
 /**
@@ -437,6 +635,13 @@ export interface ProductIdentity {
   commercialVariant: string | null;
   /** Clase gruesa de forma farmacéutica, o `null` si el nombre no la declara. */
   dosageForm: DosageFormClass | null;
+  /**
+   * Unidades por envase declaradas en el nombre, o `null` si no las declara.
+   * Eje propio, independiente del segmento de cantidad de `matchKey`, que
+   * confunde "1 unidad" con "cantidad ausente" y no reconoce varios
+   * sustantivos reales — ver `unitCountKey()`.
+   */
+  unitCount: number | null;
 }
 
 /**
@@ -455,6 +660,10 @@ export interface ProductIdentity {
  *   - `dosageForm`: `null` es compatible con cualquier clase; dos clases
  *     conocidas y distintas son incompatibles. Omitir la forma es habitual y
  *     no es evidencia de nada; declararla distinta sí lo es.
+ *   - `unitCount`: dos cantidades EXPLÍCITAS y distintas son incompatibles
+ *     (incluido `1` vs `N`); la ausencia es compatible con cualquiera. La
+ *     justificación completa de esa asimetría está en
+ *     `isCompatibleUnitCount()`.
  *
  * El laboratorio NO se usa como señal de exclusión adicional acá: ya está en
  * `commercialIdentity`, y la auditoría Losartán/Laboratorio Chile mostró que
@@ -469,5 +678,6 @@ export function isSameProduct(a: ProductIdentity, b: ProductIdentity): boolean {
   if (a.combination !== b.combination) return false;
   if (a.commercialVariant !== b.commercialVariant) return false;
   if (a.dosageForm !== null && b.dosageForm !== null && a.dosageForm !== b.dosageForm) return false;
+  if (!isCompatibleUnitCount(a.unitCount, b.unitCount)) return false;
   return true;
 }
