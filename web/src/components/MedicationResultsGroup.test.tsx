@@ -110,4 +110,24 @@ describe("MedicationResultsGroup", () => {
     const { container } = render(<MedicationResultsGroup group={group} />);
     expect(container.querySelector("img")).toBeNull();
   });
+
+  // CF-WEB-001 — a 320px el título convive con la miniatura de 48px y le
+  // quedan ~196px. Nombres reales con tokens compuestos sin espacio
+  // ("Vildagliptina/Metformina", "Clorhidrato/Paracetamol") no tenían punto
+  // de corte y se salían de la tarjeta. jsdom no mide layout: se verifica el
+  // contrato CSS que habilita el corte (la comprobación visual real está en
+  // web/e2e/responsive.spec.ts).
+  it("el título del grupo permite cortar tokens largos y encogerse (CF-WEB-001)", () => {
+    const products = makeProducts(1);
+    products[0].canonicalName = "Vildagliptina/Metformina Clorhidrato 50/850 Mg X 60 comprimidos recubiertos";
+    const [group] = groupMedicationResultsByMatchKey(products);
+
+    render(<MedicationResultsGroup group={group} />);
+    const title = screen.getByRole("heading", {
+      name: "Vildagliptina/Metformina Clorhidrato 50/850 Mg X 60 comprimidos recubiertos",
+    });
+
+    expect(title.className).toContain("break-words");
+    expect(title.className).toContain("min-w-0");
+  });
 });

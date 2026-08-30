@@ -38,12 +38,20 @@ export function CommercialProductRow({ medication }: Props) {
   return (
     <div className="border-t border-line first:border-t-0">
       <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3">
-        <div className="flex min-w-0 flex-1 items-center gap-2">
+        {/* CF-WEB-001 — `flex-1` (flex-basis 0) hacía que este bloque nunca
+            provocara el wrap del contenedor: se encogía hasta ~12px mientras
+            sus hijos `shrink-0` (badge bioequivalente + "N farmacias") se
+            desbordaban y se superponían con el precio a ≤430px, dejando la
+            marca comercial ilegible o directamente invisible. Con una
+            flex-basis real (mismo idiom que `flex-[1_1_9rem]` de las filas de
+            farmacia y `flex-[1_1_12rem]` de PharmacyPriceCard) el contenedor
+            padre sí hace wrap en móvil y a ≥sm el layout queda idéntico. */}
+        <div className="flex min-w-0 flex-[1_1_11rem] flex-wrap items-center gap-x-2 gap-y-1">
           <span
             className={
               isUnknownBrand
-                ? "min-w-0 truncate text-sm font-medium text-muted"
-                : "min-w-0 truncate text-sm font-medium text-ink"
+                ? "min-w-0 max-w-full truncate text-sm font-medium text-muted"
+                : "min-w-0 max-w-full truncate text-sm font-medium text-ink"
             }
           >
             {brandLabel}
@@ -57,7 +65,7 @@ export function CommercialProductRow({ medication }: Props) {
             {pharmacyCount} farmacia{pharmacyCount !== 1 ? "s" : ""}
           </span>
         </div>
-        <div className="flex shrink-0 items-center gap-3">
+        <div className="ml-auto flex shrink-0 items-center gap-3">
           <span className="text-sm font-semibold tabular-nums text-ink">
             desde {formatCLP(medication.bestPrice)}
           </span>

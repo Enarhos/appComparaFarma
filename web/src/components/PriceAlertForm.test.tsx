@@ -120,4 +120,21 @@ describe("PriceAlertForm", () => {
     expect(screen.getByRole("button", { name: /Avisarme si baja de precio/ })).toBeTruthy();
     expect(screen.queryByLabelText("Tu email")).toBeNull();
   });
+
+  // CF-WEB-001 — con `flex-1` (flex-basis 0) el grupo del email se encogía a
+  // ~3-18px a ≤390px: el input quedaba inutilizable y su label se superponía
+  // con "Avísame si baja de". jsdom no mide layout, así que se blinda el
+  // contrato CSS (la verificación visual real está en web/e2e/responsive.spec.ts).
+  it("el grupo del email declara flex-basis real para poder hacer wrap en móvil (CF-WEB-001)", async () => {
+    const user = userEvent.setup();
+    render(<PriceAlertForm matchKey="a" canonicalName="Paracetamol" currentBestPrice={1000} />);
+
+    await user.click(screen.getByRole("button", { name: /Avisarme si baja de precio/ }));
+
+    const emailGroup = screen.getByLabelText("Tu email").parentElement;
+    expect(emailGroup?.className).toContain("flex-[1_1_11rem]");
+    expect(emailGroup?.className.split(/\s+/)).not.toContain("flex-1");
+    // A partir de `sm` el layout de escritorio se mantiene tal cual estaba.
+    expect(emailGroup?.className).toContain("sm:flex-none");
+  });
 });

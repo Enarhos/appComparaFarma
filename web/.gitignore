@@ -3,3 +3,10 @@
 .env*.local
 next-env.d.ts
 *.tsbuildinfo
+
+# Artefactos de Playwright (CF-WEB-001) — traces, screenshots y reportes de
+# corridas locales, no forman parte del repositorio.
+test-results/
+playwright-report/
+blob-report/
+.playwright/
