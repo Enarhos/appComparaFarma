@@ -12,13 +12,13 @@ Contiene únicamente el trabajo activo del programa. No es un historial (→ `DO
 | **Nombre** | CURRENT_SPRINT.md |
 | **Dominio** | Gestión de Programa (`docs/program/`) |
 | **Estado** | Activo |
-| **Versión** | 1.7 |
+| **Versión** | 1.8 |
 | **Propietario** | CEO / CTO |
 | **Rol asumido en su redacción** | Enterprise Program Manager / CTO |
 | **Nivel de Gobierno** | De decisión operativa |
 | **Clasificación** | Documento de Ejecución de Programa |
 | **Fuente Oficial** | Este documento, para el sprint activo actual |
-| **Última actualización** | 2026-08-29 |
+| **Última actualización** | 2026-08-30 |
 | **Pregunta que responde** | ¿Qué se está haciendo exactamente ahora mismo? |
 
 ---
@@ -27,17 +27,21 @@ Contiene únicamente el trabajo activo del programa. No es un historial (→ `DO
 
 ### Production Release 1.0 — cierre operacional
 
-**Estado:** 🟡 Activo — vc33 aprobada por Google Play; pendiente smoke test físico y decisión GO/NO-GO a Producción.
+**Estado:** 🟡 Activo — Mobile 1.4.2/vc34 enviado a revisión de Google Play en Closed Testing; Producción continúa inactiva.
 
-Web/API y los frentes AUTH-DELETE-01/02 permanecen cerrados. El release Mobile **PreciosFarma 1.4.1 / versionCode 33** fue construido desde `origin/main` con el fix del PR #113, firmado con la key de release correcta, aceptado por Google Play, enviado a revisión en **Prueba cerrada — Test ComparaFarma** y **ya APROBADO por Google Play** (confirmado por Mario vía verificación directa en Play Console): publicado en ese canal, disponible para los testers, **no promovido a Producción**.
+Web/API y AUTH-DELETE-01/02 permanecen cerrados. `CF-SEARCH-001` (PR #132) y `CF-SEARCH-002` (PR #133) están mergeados a `origin/main` y desplegados en Web; la validación visual de `ibuprofeno 600 mg` confirmó la priorización correcta por concentración.
 
-Estado operativo: **`CLOSED_TESTING_APPROVED_AWAITING_SMOKE_TEST_AND_PRODUCTION_DECISION`** (reemplaza a `WAITING_FOR_GOOGLE_PLAY_REVIEW`, gate cumplido).
+El release **PreciosFarma 1.4.1 / versionCode 33** fue aprobado por Google Play y quedó disponible en `Prueba cerrada — Test ComparaFarma`. Se instaló desde Google Play en un dispositivo real y se verificó la versión 1.4.1. Ese cliente, sin embargo, antecede los cambios Mobile de Query Intent/Relevance incorporados en vc34.
 
-Además, ya existe generado y verificado localmente el AAB release candidate **PreciosFarma 1.4.2 / versionCode 34** (incorpora `CF-SEARCH-001` y `CF-SEARCH-002`, ya mergeados a `origin/main` vía PR #132 y #133), en branch/worktree aislada `release/mobile-1.4.2-vc34`, con firma del mismo lineage de release que vc33 y tests en verde. **No fue subido a Google Play**; queda pendiente de decisión explícita de Mario para iniciar el envío a Closed Testing.
+El AAB **PreciosFarma 1.4.2 / versionCode 34** fue generado y verificado desde el SHA `f59a4daaa3635da66a8fedc7101540560e86e8c8`, firmado con el mismo lineage de release que vc33 y posteriormente autorizado por Mario exclusivamente para **Closed Testing**. Fue subido a Google Play y enviado a revisión en `Test ComparaFarma`. El Resumen de publicación mostró un único cambio: `Prueba cerrada - Test ComparaFarma → PreciosFarma 1.4.2 → Iniciar lanzamiento completo`. **No se autorizó ni realizó ninguna promoción a Producción.**
 
-Durante la espera se cerró únicamente trabajo de diagnóstico/gobernanza sobre `BIOEQUIVALENCE-DATA-QUALITY-01`. La iniciativa quedó documentada en `MASTER_BACKLOG.md` y su Gate 2 quedó formalizado, pero **la implementación continúa explícitamente gateada por vc33 y no forma parte del sprint activo**.
+Estado operativo: **`VC34_GOOGLE_PLAY_REVIEW_AWAITING_PHYSICAL_CERTIFICATION`**.
 
-`CF-SEARCH-001` (identidad de producto: falso merge de variantes comerciales, navegación por clave no única en Mobile e integridad de oferta en `mergeDuplicates`) — implementado y testeado en `fix/cf-search-001-product-identity` — quedó **mergeado a `origin/main` vía PR #132**. `CF-SEARCH-002` (intención de consulta y relevancia) quedó **mergeado a `origin/main` vía PR #133**. El SHA `f59a4da`, usado como base del AAB release candidate 1.4.2/vc34, es ancestro confirmado de ambos merges. La Web ya desplegada en producción fue validada visualmente para la consulta "ibuprofeno 600 mg": los resultados de 600 mg aparecen priorizados antes que los de 400/200 mg. Ninguno de los dos ítems es parte del release Mobile vc33 (ya aprobado por Google Play) ni lo bloquea.
+Durante la espera, `CF-WEB-001 — Responsive Layout & Text Overflow` fue implementado, validado, mergeado vía PR #136 y desplegado. Su alcance principal queda cerrado. Permanece como follow-up no bloqueante `CF-WEB-001-FU1 — Mobile Price History Chart Readability — P2`.
+
+`ACCOUNT-UX-01` fue auditado e implementado en Mobile. El trabajo confirma que la cuenta es opcional y que hoy no sincroniza favoritos/historial/alertas entre dispositivos; el cambio mejora la señal de sesión, muestra el email real de verificación y expone la recuperación de contraseña ya existente. PR #138 está abierto; este trabajo es posterior a vc34 y **no forma parte del AAB actualmente en revisión**.
+
+`BIOEQUIVALENCE-DATA-QUALITY-01` permanece documentado y gateado; Option D/tri-state y la corrección semántica de datos no están implementadas.
 
 ---
 
@@ -45,44 +49,38 @@ Durante la espera se cerró únicamente trabajo de diagnóstico/gobernanza sobre
 
 | Entregable | Estado | Evidencia |
 |---|---|---|
-| Fix test dentro de Expo Router | ✅ Mergeado | PR #113; commit `bd85446`; incluido en `origin/main` `f0e807e` |
-| Mobile tests | ✅ | 16/16 PASS |
-| Mobile typecheck | ✅ | Limpio |
-| AAB PreciosFarma 1.4.1 vc33 | ✅ | SHA-256 `ea972f90938539df2b81f2dcd59dcf2a11ca728b11755d7cc42bcf03ae3df3fe` |
-| Firma release | ✅ | `jarsigner`: jar verified; certificado coincide con referencia |
-| targetSdk | ✅ | 36 |
-| Upload Google Play | ✅ | Procesado sin errores |
-| Closed Testing vc33 | ✅ | Aprobado por Google Play; publicado en `Test ComparaFarma`, disponible para testers |
-| Data Safety | ✅ | Aprobado junto al release |
-| Producción Mobile | ⚪ | Inactiva; vc33 no promovida — decisión GO/NO-GO pendiente |
-
-Acta detallada del release: `docs/archive/meetings/20260823_mobile_release.md`.
+| Closed Testing vc33 | ✅ | Aprobado por Google Play; publicado en `Test ComparaFarma`; instalación física confirmada |
+| AAB PreciosFarma 1.4.2 vc34 | ✅ Verificado | SHA-256 `a5c3daf50ce3d3e05f55e898ac86e03b6c9faffd1369f742d12083c8248a2461` |
+| versionCode / versionName | ✅ | 34 / 1.4.2 |
+| targetSdk / minSdk | ✅ | 36 / 24 |
+| Firma release | ✅ | `jar verified`; mismo certificado/lineage que vc33 |
+| Base de código vc34 | ✅ | `f59a4daaa3635da66a8fedc7101540560e86e8c8` (incluye PR #132 + #133) |
+| Upload Google Play vc34 | ✅ | Procesado en Closed Testing |
+| Revisión Google Play vc34 | ⏳ | `Cambios en revisión` — `Test ComparaFarma`, PreciosFarma 1.4.2 |
+| Producción Mobile | ⚪ | Inactiva; sin autorización de Producción |
 
 ---
 
 ## 4. Trabajo activo / pendiente
 
-1. ~~Esperar revisión Google Play.~~ **Cumplido:** Google Play aprobó vc33.
-2. Confirmar que **1.4.1/vc33** está disponible para testers e instalar/actualizar desde Google Play en un teléfono real.
-3. Ejecutar smoke test físico: apertura, búsqueda, comparación de precios, login/logout y eliminación de cuenta.
-4. Si no existen defectos P0/P1, tomar decisión GO/NO-GO y avanzar a Producción.
-5. Registrar el resultado y cerrar formalmente `Production Release 1.0` cuando Mobile esté efectivamente publicado y validado.
-6. Decisión separada y explícita de Mario: si/cuándo subir el AAB release candidate 1.4.2/vc34 (ya generado y verificado localmente) a Closed Testing. No se sube sin esa autorización.
-
-`BIOEQUIVALENCE-DATA-QUALITY-01` no entra en ejecución hasta que este gate de vc33 quede cerrado. Su próximo paso, cuando sea habilitado, será la implementación controlada de la corrección semántica y la arquitectura de agrupación ya documentadas.
-
-`CF-SEARCH-001` y `CF-SEARCH-002` ya están mergeados a `origin/main` (PR #132 y #133 respectivamente); su FOLLOW_UP (migración de `matchKey` no único en favoritos/carrito/alertas/historial de Mobile) queda registrado en `MASTER_BACKLOG.md` sin implementar, a la espera de decisión de producto.
+1. Esperar la resolución de Google Play para **PreciosFarma 1.4.2/vc34** en Closed Testing.
+2. Una vez aprobada: comprobar que `Test ComparaFarma` muestra 1.4.2/vc34 y actualizar/instalar desde Google Play en un Android físico.
+3. Ejecutar certificación física mínima de búsqueda sobre: `omeprazol`, `esomeprazol`, `ibuprofeno`, `ibuprofeno 200 mg`, `ibuprofeno 400 mg`, `ibuprofeno 600 mg`, seguido inmediatamente de `ibuprofeno`, `paracetamol 500 mg x16`, `Tapsin`, `losartan 50 mg`, `losartan + HCTZ`; incluir smoke de navegación/identidad de presentación.
+4. Resolver antes de Producción los pendientes de publicación: nombre público Play `ComparaFarma → PreciosFarma` y URL vigente de política de privacidad.
+5. Solo después de certificación física sin P0/P1, tomar decisión explícita GO/NO-GO a Producción.
+6. Completar review/merge de `ACCOUNT-UX-01` (PR #138) como trabajo posterior a vc34; no reconstruir vc34 por este cambio.
+7. Incorporar en una tarea documental separada los follow-ups `CF-WEB-001-FU1` y el comportamiento de Stack/header para `actualizar-clave.tsx`.
 
 ---
 
 ## 5. Warnings no bloqueantes
 
-- `EXPO_PUBLIC_SENTRY_DSN` ausente en el entorno usado para el build vc33.
-- Build local requirió ampliar temporalmente Metaspace de Gradle.
-- Tests Jest Mobile no tienen job explícito en CI.
 - Play Console advierte ausencia de archivo de desofuscación R8/ProGuard.
-- Publicación gestionada está desactivada; observar el efecto de la aprobación de Google sobre los cambios enviados.
+- Estado de `EXPO_PUBLIC_SENTRY_DSN` debe reevaluarse para un build futuro; no bloquea vc34 mientras no cambie el release gate.
+- Tests Jest Mobile no tienen job explícito en CI.
+- E2E responsive de Web usan API/scrapers reales y deliberadamente no son gate de CI.
 - Checkout principal local atrasado/dirty: no usar para releases/integraciones; continuar con worktrees limpios.
+- `BIOEQUIVALENCE-DATA-QUALITY-01` sigue abierto como deuda de calidad semántica.
 
 ---
 
@@ -90,9 +88,11 @@ Acta detallada del release: `docs/archive/meetings/20260823_mobile_release.md`.
 
 `Production Release 1.0` se cierra cuando:
 
-- vc33 haya terminado la revisión de Google Play (✅ cumplido: aprobado);
-- el build aprobado se haya probado desde Google Play en dispositivo físico;
-- no haya P0/P1 abiertos;
+- vc34 haya terminado la revisión de Google Play en Closed Testing;
+- vc34 se haya instalado desde Google Play y certificado en dispositivo físico;
+- no haya P0/P1 abiertos de búsqueda/identidad del release;
+- nombre público y política de privacidad de la ficha Play estén resueltos;
+- exista GO explícito del Founder para Producción;
 - Mobile haya sido promovido/publicado en Producción;
 - estado final quede registrado en acta, `PROGRAM_BOARD.md`, `DONE.md` y `MILESTONES.md`.
 
@@ -100,13 +100,12 @@ Acta detallada del release: `docs/archive/meetings/20260823_mobile_release.md`.
 
 ## 7. Gobierno
 
-El gate de espera de revisión de Google Play quedó cumplido (vc33 aprobado). No iniciar automáticamente nuevas épicas hasta el cierre formal de `Production Release 1.0`. AUTH-DELETE-01/02, Product Identity y el build vc33 no se reabren salvo incidente real.
-
-La promoción de vc33 a Producción requiere decisión GO/NO-GO explícita, respaldada por el smoke test físico — no se asume por la sola aprobación de Google Play. La subida del release candidate 1.4.2/vc34 a Closed Testing requiere decisión explícita separada de Mario; no está autorizada por esta reconciliación.
-
-`BIOEQUIVALENCE-DATA-QUALITY-01` está **DOCUMENTED_AND_BACKLOGGED / IMPLEMENTATION_GATED_BY_MOBILE_VC33**. Sus decisiones de Gate 2 no se reabren sin evidencia nueva y ningún paso de implementación a partir del adapter fix está autorizado mientras el gate vc33 (smoke test físico + decisión GO/NO-GO a Producción) siga abierto.
-
-`CF-SEARCH-001` y `CF-SEARCH-002` están **MERGED_TO_MAIN** (PR #132 y #133 respectivamente, confirmados en `origin/main`). No se reabre el diseño; el FOLLOW_UP de claves persistidas en Mobile no se implementa sin decisión explícita de Mario/ChatGPT.
+- **No tocar Producción en Google Play sin autorización explícita de Mario.**
+- vc34 está autorizado únicamente para Closed Testing y se encuentra en revisión.
+- `ACCOUNT-UX-01` es posterior a vc34; su merge no invalida el AAB ya generado porque no forma parte de ese artefacto.
+- `CF-WEB-001` queda cerrado/mergeado/desplegado; `CF-WEB-001-FU1` es P2 no bloqueante.
+- `BIOEQUIVALENCE-DATA-QUALITY-01` permanece documentado y sin implementación de Option D.
+- `CF-SEARCH-001` y `CF-SEARCH-002` están **MERGED_TO_MAIN** y no se reabren sin evidencia nueva.
 
 ---
 
@@ -114,9 +113,6 @@ La promoción de vc33 a Producción requiere decisión GO/NO-GO explícita, resp
 
 | Versión | Fecha | Cambios |
 |---|---|---|
-| 1.2 | 2026-08-23 | Reconciliación post Product Identity + Account Deletion; sprint mantenido en cierre operacional. |
-| 1.3 | 2026-08-23 | Estado Mobile reconciliado con evidencia directa: AAB vc33 construido/firmado, PR #113 incluido, upload aceptado y release/Data Safety enviados a revisión en Google Play Closed Testing. |
-| 1.4 | 2026-08-25 | Cierre de sesión: `BIOEQUIVALENCE-DATA-QUALITY-01` documentado y mergeado en backlog, sin entrar al sprint; se reafirma `WAITING_FOR_GOOGLE_PLAY_REVIEW` como único gate operativo activo. |
-| 1.5 | 2026-08-27 | Referencia de `CF-SEARCH-001` (identidad de producto y deduplicación segura): implementado y testeado en branch propia, pendiente de PR/review, no mergeado a `origin/main`; no bloquea ni forma parte del release Mobile vc33. FOLLOW_UP de claves persistidas en Mobile referenciado, pendiente de decisión de producto. |
-| 1.6 | 2026-08-29 | Google Play aprobó vc33: publicado en Closed Testing `Test ComparaFarma`, disponible para testers, NO promovido a Producción (confirmado por Mario vía Play Console). Se retira `WAITING_FOR_GOOGLE_PLAY_REVIEW` (gate cumplido); pendiente ahora smoke test físico + decisión GO/NO-GO. Se registra la existencia del AAB release candidate 1.4.2/versionCode 34 (CF-SEARCH-001 + CF-SEARCH-002), generado y verificado localmente, pendiente de decisión explícita de Mario para subir a Closed Testing — sin autorizarlo en esta reconciliación. |
-| 1.7 | 2026-08-29 | Corrección: `CF-SEARCH-001` (PR #132) y `CF-SEARCH-002` (PR #133) ya están **mergeados a `origin/main`** — quedan referencias residuales de "pendiente de PR/review" corregidas en §2, §4 y §7. Se registra que el SHA `f59a4da` (base del AAB vc34) es ancestro confirmado de ambos merges, y que la Web ya desplegada fue validada visualmente para "ibuprofeno 600 mg" (prioriza correctamente 600mg sobre 400/200mg). No cambia el estado de Producción Mobile ni la decisión pendiente de subir vc34 a Closed Testing, que siguen abiertos. |
+| 1.6 | 2026-08-29 | Google Play aprobó vc33; publicado en Closed Testing, no promovido a Producción. Se registró vc34 como AAB generado pendiente de autorización. |
+| 1.7 | 2026-08-29 | Corrección de estado: CF-SEARCH-001 PR #132 y CF-SEARCH-002 PR #133 ya mergeados; Web validada para `ibuprofeno 600 mg`. |
+| 1.8 | 2026-08-30 | Reconciliación operacional: vc34 fue autorizado exclusivamente para Closed Testing, subido y enviado a revisión; Production continúa inactiva. CF-WEB-001 PR #136 queda mergeado/desplegado. ACCOUNT-UX-01 queda en PR #138 abierto y fuera del AAB vc34. Se actualiza el próximo gate a certificación física de vc34 y se registran pendientes pre-Producción de listing/política de privacidad. |
