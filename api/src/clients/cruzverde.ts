@@ -17,6 +17,30 @@ function toSlug(name: string): string {
     .replace(/^-|-$/g, "");
 }
 
+/**
+ * Atributos de Demandware que podrían transportar la bioequivalencia si Cruz
+ * Verde los expusiera en el índice de búsqueda. `c_isBioequivalent` es el
+ * nombre REAL verificado en el endpoint de detalle; los otros dos son los que
+ * leía el código anterior y se conservan por compatibilidad defensiva.
+ */
+const CRUZ_VERDE_BIO_ATTRIBUTES = [
+  "c_isBioequivalent",
+  "bioequivalent_indicator",
+  "c_bioequivalente",
+] as const;
+
+/**
+ * Solo un booleano REAL cuenta como evidencia. Ausencia, `null` o cualquier
+ * otro tipo ⇒ `null` ("no informado"), nunca `false`.
+ */
+function readCruzVerdeBioequivalence(hit: Record<string, unknown>): boolean | null {
+  for (const attribute of CRUZ_VERDE_BIO_ATTRIBUTES) {
+    const value = hit[attribute];
+    if (typeof value === "boolean") return value;
+  }
+  return null;
+}
+
 export function parseCruzVerdeResponse(
   data: { hits?: Record<string, unknown>[] },
   query: string
@@ -40,7 +64,29 @@ export function parseCruzVerdeResponse(
       onlineUrl: id ? `${BASE}/${toSlug(name)}/${id}.html` : `${BASE}/search?q=${encodeURIComponent(name)}`,
       imageUrl,
       laboratory: (hit.brand as string) ?? null,
-      isBioequivalent: Boolean(hit.bioequivalent_indicator ?? hit.c_bioequivalente ?? false),
+      // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): el endpoint
+      // `product_search` de Demandware NO devuelve ningún atributo de
+      // bioequivalencia. Auditado contra la fuente real (omeprazol,
+      // paracetamol; 27 hits): las claves presentes en cada `hit` son
+      // `_type, currency, hit_type, image, link, orderable, price, prices,
+      // product_id, product_name, product_type, represented_product` — ni
+      // `bioequivalent_indicator` ni `c_bioequivalente` (los dos nombres que
+      // leía el código anterior) existen ahí, ni tampoco el nombre real del
+      // atributo, que es `c_isBioequivalent`. El `?? false` final convertía
+      // ese `undefined` en `false` para el 100% de las ofertas de Cruz Verde
+      // (medido en producción: 0 de 170 ofertas con `true`), afirmando "no es
+      // bioequivalente" sin ninguna evidencia.
+      //
+      // El atributo SÍ existe, pero solo en el endpoint de DETALLE de producto
+      // (`/products/{id}` → `c_isBioequivalent`, `c_bioequivalence`,
+      // `c_bioequivalentSubCategoryID`). Consumirlo exige una request adicional
+      // por producto: es una capacidad nueva con impacto de latencia/cuota, no
+      // parte de esta corrección semántica — ver FOLLOW_UP del informe.
+      //
+      // Se mantiene la lectura de los tres nombres posibles por si Cruz Verde
+      // los agrega al índice de búsqueda, pero SOLO se acepta un booleano real:
+      // cualquier otra cosa (incluida la ausencia) es `null`.
+      isBioequivalent: readCruzVerdeBioequivalence(hit),
     }];
   });
 }

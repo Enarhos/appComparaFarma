@@ -68,7 +68,11 @@ describe("QA-04 / S-2 — Ahumada marcaba TODOS sus productos como bioequivalent
     expect(conBadge).toBeDefined();
 
     expect(conBadge!.isBioequivalent).toBe(true);
-    expect(sinBadge!.isBioequivalent).toBe(false);
+    // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): antes se esperaba `false`.
+    // La ausencia del badge no es una afirmación de Ahumada de que el producto
+    // NO sea bioequivalente (no existe badge negativo en su marcado), así que
+    // el contrato correcto es `null` = no informado.
+    expect(sinBadge!.isBioequivalent).toBeNull();
 
     // Ya no es "100% true": el mismo HTML real produce ahora 1 de 2.
     expect(results.every((r) => r.isBioequivalent)).toBe(false);
@@ -77,9 +81,11 @@ describe("QA-04 / S-2 — Ahumada marcaba TODOS sus productos como bioequivalent
   it("[CORREGIDO S-2] un producto sin badge real no se marca bioequivalente", () => {
     // Era el `it.fails("[DESEADO] ...")` del Gate 1 — ahora es una aserción
     // normal porque el comportamiento deseado es el vigente.
+    // BIOEQUIVALENCE-DATA-QUALITY-01: el valor correcto es `null`, no `false`.
     const results = parseAhumadaHtml(realHtml);
     const sinBadge = results.find((r) => r.name.includes("Tapsin 1g Efervescente"));
-    expect(sinBadge!.isBioequivalent).toBe(false);
+    expect(sinBadge!.isBioequivalent).toBeNull();
+    expect(sinBadge!.isBioequivalent).not.toBe(false);
   });
 
   it("[CORREGIDO S-2] el fixture `ahumada-search.html` ya reproduce el marcado real", () => {
@@ -99,19 +105,26 @@ describe("QA-04 / S-2 — Ahumada marcaba TODOS sus productos como bioequivalent
 describe("QA-03/QA-04 — EasyFarma nunca declara bioequivalencia ni laboratorio", () => {
   const html = readFileSync(join(import.meta.dirname, "fixtures", "easyfarma-search.html"), "utf8");
 
-  it("[DEFECTO] EasyFarma devuelve isBioequivalent=false fijo, no `null` (desconocido)", () => {
-    // El listado de EasyFarma no expone bioequivalencia. Devolver `false`
-    // afirma "NO es bioequivalente", que es una afirmación distinta de "no
-    // se sabe". Como `bio:` forma parte de `presentationKey`, ese `false`
-    // fabricado parte grupos contra farmacias que sí declaran `true`.
-    // Misma forma en api/src/clients/farmex.ts.
+  // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): estos dos tests congelaban el
+  // defecto — `[DEFECTO]` exigía el `false` fijo y `[DESEADO]` era el
+  // `it.fails` con el comportamiento correcto. El defecto está corregido en el
+  // adaptador, así que se invierten: el primero pasa a prohibir que el `false`
+  // vuelva, el segundo pasa a ser una aserción normal.
+  it("[CORREGIDO] EasyFarma ya no afirma `false`: sin dato en la fuente, sin afirmación", () => {
+    // El listado de EasyFarma no expone bioequivalencia (re-auditado
+    // 2026-08-30 contra el HTML real: cero ocurrencias de "bioequivalen" en
+    // 207 KB de listado). Devolver `false` afirmaba "NO es bioequivalente",
+    // que es una afirmación distinta de "no se sabe". Como `bio:` forma parte
+    // de `presentationKey`, ese `false` fabricado partía grupos contra
+    // farmacias que sí declaran `true`. Misma corrección en
+    // api/src/clients/farmex.ts.
     const results = parseEasyFarmaResponse(html);
     expect(results.length).toBeGreaterThan(0);
-    expect(results.every((r) => r.isBioequivalent === false)).toBe(true);
+    expect(results.some((r) => r.isBioequivalent === false)).toBe(false);
     expect(results.every((r) => r.laboratory === null)).toBe(true);
   });
 
-  it.fails("[DESEADO] la ausencia de dato debería representarse como `null`", () => {
+  it("[CORREGIDO] la ausencia de dato se representa como `null`", () => {
     const results = parseEasyFarmaResponse(html);
     expect(results.every((r) => r.isBioequivalent === null)).toBe(true);
   });

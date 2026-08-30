@@ -1,5 +1,6 @@
 import type { ScrapedProduct } from "../lib/types.js";
 import { fetchWithTimeout } from "../lib/timeout.js";
+import { positiveBioSignal } from "../lib/bioequivalence.js";
 
 const BASE = "https://www.farmaciasermecoop.cl";
 const HOME = `${BASE}/index.php/web/index`;
@@ -51,8 +52,13 @@ export function parseSermecoopHtml(html: string): ScrapedProduct[] {
     const imgMatch = block.match(/src="(\/themes\/fscoop\/images\/medicamentos\/[^"]+)"/);
     const imageUrl = imgMatch ? `${BASE}${imgMatch[1]}` : null;
 
-    // Bioequivalent flag
-    const isBioequivalent = block.includes("bioeq1.png");
+    // Bioequivalent flag — BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): el
+    // badge `<div class="label-top3"><img src=".../bioeq1.png">` es evidencia
+    // POSITIVA por producto (verificado en el HTML real: aparece dentro de la
+    // tarjeta, no en un contenedor global del theme). Su ausencia no es una
+    // afirmación de Sermecoop: no existe ningún marcador de "no
+    // bioequivalente". Ausencia ⇒ `null`.
+    const isBioequivalent = positiveBioSignal(block.includes("bioeq1.png"));
 
     results.push({
       name,

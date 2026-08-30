@@ -1,5 +1,6 @@
 import type { ScrapedProduct } from "../lib/types.js";
 import { fetchWithTimeout } from "../lib/timeout.js";
+import { positiveBioSignal } from "../lib/bioequivalence.js";
 
 const BASE = "https://www.farmaciasahumada.cl";
 const SEARCH = `${BASE}/on/demandware.store/Sites-ahumada-cl-Site/es_CL/Search-Show`;
@@ -107,7 +108,14 @@ export function parseAhumadaHtml(html: string): ScrapedProduct[] {
       onlineUrl: href.startsWith("http") ? href : `${BASE}${href}`,
       imageUrl,
       laboratory: null,
-      isBioequivalent: hasBioequivalentBadge(block),
+      // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): el badge es evidencia
+      // POSITIVA (`<img class="js-popover bioequivalent-badge"` con
+      // `data-content="<span> Bioequivalente </span>"`). Su AUSENCIA no es una
+      // afirmación de Ahumada de que el producto no sea bioequivalente: el
+      // contenedor `sellcondition-bioequivalent-badges` se emite vacío en todos
+      // los tiles y no hay ningún marcador de "no bioequivalente". Por eso la
+      // ausencia es `null`, no `false`.
+      isBioequivalent: positiveBioSignal(hasBioequivalentBadge(block)),
     });
   }
 

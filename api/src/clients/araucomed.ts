@@ -1,5 +1,6 @@
 import type { ScrapedProduct } from "../lib/types.js";
 import { fetchWithTimeout } from "../lib/timeout.js";
+import { positiveBioSignal } from "../lib/bioequivalence.js";
 
 const BASE = "https://farmacia.araucomed.com";
 
@@ -72,7 +73,28 @@ export function parseAraucoMedResponse(data: SearchResponse): ScrapedProduct[] {
       onlineUrl: p.url ?? null,
       imageUrl: p.cover?.bySize?.home_default?.url ?? null,
       laboratory: p.manufacturer_name ?? null,
-      isBioequivalent: /bioequivalen/i.test(p.name + " " + stripHtml(p.description_short)),
+      // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): buscar "bioequivalen" en
+      // el nombre/descripción corta es evidencia POSITIVA débil pero honesta
+      // (si AraucoMed lo escribe, lo está afirmando). Lo que NO es evidencia es
+      // no encontrarlo: en la auditoría de la fuente real (omeprazol, 12
+      // productos) el texto no lo menciona NUNCA, así que este detector produce
+      // `false` para el 100% del catálogo (confirmado en producción: 0 de 169
+      // ofertas con `true`). Eso era afirmar "no es bioequivalente" 169 veces
+      // sin un solo dato. Ausencia ⇒ `null`.
+      //
+      // AraucoMed sí tiene una señal estructurada real —`category_name ===
+      // "Bioequivalentes"`, presente en 5 de esos 12 productos— pero es la
+      // categoría PRIMARIA, no una marca de bioequivalencia: el mismo Omeprazol
+      // de Ascend aparece en "Bioequivalentes" en su presentación x60 y en
+      // "Antiulcerosos" en la x30. Sirve como evidencia positiva, jamás como
+      // negativa, y usarla es una capacidad nueva — ver FOLLOW_UP del informe.
+      // (El sticker `bioequivalente-2026.png` de `rendered_products` NO sirve:
+      // el theme lo emite en los 12 tiles, sea el producto bioequivalente o no
+      // — es el mismo patrón de "contenedor siempre presente" que causó el
+      // falso positivo masivo de Ahumada.)
+      isBioequivalent: positiveBioSignal(
+        /bioequivalen/i.test(p.name + " " + stripHtml(p.description_short))
+      ),
     }));
 }
 
