@@ -13,6 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { signUpWithPassword } from "@/lib/sessionManager";
 import { goToLogin, returnFromAuth } from "@/lib/authNavigation";
 import { BRAND_COLORS } from "@/constants/brand";
+import { AccountPurposeNote } from "@/components/AccountPurposeNote";
 
 type Status = "idle" | "submitting" | "check-email" | "error";
 
@@ -37,6 +38,22 @@ export default function RegistroScreen() {
   const [password, setPassword] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+  // ACCOUNT-UX-01 (problema 3): dirección exacta a la que se envió la
+  // verificación. Se congela en el submit, en vez de leer `email` al pintar el
+  // estado "check-email", para que la pantalla de confirmación muestre siempre
+  // el valor que realmente se le pasó a `signUpWithPassword` (ya trimmeado) y
+  // no pueda desincronizarse del envío real.
+  //
+  // Es el dato que la Persona acaba de escribir en este formulario — no se le
+  // pide a ningún backend (no existe, ni debe existir, un endpoint que
+  // devuelva el email de una cuenta sin sesión: sería un oráculo de cuentas
+  // ajenas). Tampoco se persiste en AsyncStorage: al salir de esta pantalla el
+  // valor se pierde a propósito, porque no hay ninguna acción posterior que lo
+  // consuma (hoy no existe "reenviar verificación" en Mobile, y agregarla es
+  // capacidad nueva, fuera de ACCOUNT-UX-01). Si la dirección quedó mal
+  // escrita, el camino real es volver atrás y registrarse de nuevo — que es
+  // exactamente lo que dice el texto de abajo.
+  const [verificationEmail, setVerificationEmail] = useState("");
 
   async function handleSubmit() {
     if (!email.trim() || password.length < 6) {
@@ -47,7 +64,8 @@ export default function RegistroScreen() {
     setError(null);
     setStatus("submitting");
 
-    const outcome = await signUpWithPassword(email.trim(), password);
+    const submittedEmail = email.trim();
+    const outcome = await signUpWithPassword(submittedEmail, password);
 
     // Mensaje genérico siempre — nunca el error real de Supabase (mismo
     // criterio que web/src/app/cuenta/registro/page.tsx aplicado a Mobile).
@@ -60,6 +78,7 @@ export default function RegistroScreen() {
       returnFromAuth();
       return;
     }
+    setVerificationEmail(submittedEmail);
     setStatus("check-email");
   }
 
@@ -68,7 +87,16 @@ export default function RegistroScreen() {
       <SafeAreaView className="flex-1 items-center justify-center bg-white dark:bg-gray-900 px-6">
         <Text className="text-xl font-bold text-gray-900 dark:text-white text-center">Revisa tu correo</Text>
         <Text className="text-sm text-gray-500 dark:text-gray-400 text-center mt-3 leading-5">
-          Te enviamos un link para confirmar tu cuenta. Ábrelo desde este dispositivo para volver a la app.
+          Te enviamos un link para confirmar tu cuenta a:
+        </Text>
+        <Text className="text-base font-semibold text-gray-900 dark:text-white text-center mt-2">
+          {verificationEmail}
+        </Text>
+        <Text className="text-sm text-gray-500 dark:text-gray-400 text-center mt-3 leading-5">
+          Ábrelo desde este dispositivo para volver a la app.
+        </Text>
+        <Text className="text-xs text-gray-400 dark:text-gray-500 text-center mt-4 leading-5">
+          Si esa dirección no es correcta, vuelve atrás y crea la cuenta de nuevo con tu correo.
         </Text>
       </SafeAreaView>
     );
@@ -79,9 +107,14 @@ export default function RegistroScreen() {
       <KeyboardAvoidingView className="flex-1" behavior={Platform.OS === "ios" ? "padding" : "height"}>
         <ScrollView contentContainerClassName="px-6 pt-12 pb-10" keyboardShouldPersistTaps="handled">
           <Text className="text-2xl font-bold text-gray-900 dark:text-white">Crear cuenta</Text>
-          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 mb-6">
+          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 mb-4">
             Opcional — puedes seguir comparando precios sin una cuenta.
           </Text>
+
+          {/* ACCOUNT-UX-01 (problema 2): expectativa explícita antes de pedir
+              email y contraseña — mismo bloque que el estado no autenticado de
+              `login.tsx`. */}
+          <AccountPurposeNote />
 
           {error && (
             <View className="bg-red-50 dark:bg-red-950 rounded-lg px-3 py-2 mb-4">
