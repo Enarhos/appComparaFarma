@@ -75,7 +75,18 @@ export function parseFarmexResponse(products: ShopifyProduct[]): ScrapedProduct[
       onlineUrl: `${BASE}${primary.url}`,
       imageUrl: primary.image ?? null,
       laboratory: lab,
-      isBioequivalent: false,
+      // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): Farmex no entrega el dato.
+      // El `false` anterior no era "Farmex confirma que no es bioequivalente":
+      // era un placeholder de dato no implementado, publicado como afirmación
+      // en el 100% de sus ofertas (producción: 0 de 71 con `true`).
+      // Auditado en la fuente real (`/search/suggest.json`, paracetamol): el
+      // payload de Shopify expone `title`, `vendor`, `tags`, `type`, `body`,
+      // `handle`, `url` — ninguno con información de bioequivalencia. La única
+      // coincidencia textual de "bioequivalente" en toda la respuesta está en
+      // el `handle`/`url` de UN producto ("paraceta-bioequivalente-
+      // comprimidos-paracetamol"), un slug de comercio arbitrario que no es una
+      // señal sistemática y no se usa como evidencia.
+      isBioequivalent: null,
     });
   }
 

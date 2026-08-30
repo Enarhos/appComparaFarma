@@ -47,7 +47,7 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | URL producto | Construida con `product_id` + slug | ✅ |
 | Imagen | `hit.image.dis_base_link` | ✅ |
 | Laboratorio | `hit.brand` | ✅ (agregado en code review) |
-| Bioequivalente | `hit.bioequivalent_indicator` | ✅ (agregado en code review) |
+| Bioequivalente | — | ❌ — `product_search` no expone ningún atributo de bioequivalencia; el real (`c_isBioequivalent`) solo existe en el endpoint de detalle. Ver § Bioequivalencia |
 
 **Limitaciones:**
 - `client_id` no es oficial — puede cambiar sin aviso
@@ -81,7 +81,7 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | URL producto | Construida con `hit.slug` + `hit.sku` | ✅ |
 | Imagen | `hit.catalog_image_url` | ✅ |
 | Laboratorio | `hit.brand` | ✅ |
-| Bioequivalente | `hit.bioequivalent_filter.has_bioequivalent` | ✅ |
+| Bioequivalente | — | ❌ — `bioequivalent_filter` indica si el producto TIENE bioequivalentes, no si LO ES. Ver § Bioequivalencia |
 
 **Limitaciones:**
 - API key pública hardcoded — podría rotarse
@@ -112,7 +112,7 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | URL producto | `href` del link del tile | ✅ |
 | Imagen | Regex `tile-image` en HTML | ✅ |
 | Laboratorio | — | ❌ |
-| Bioequivalente | Clase `bioequivalent-badge` en HTML | ✅ |
+| Bioequivalente | Token de clase exacto `bioequivalent-badge` en el tile | ✅ solo positiva — la ausencia del badge es `null`, no `false`. Ver § Bioequivalencia |
 
 **Limitaciones:**
 - 🔴 **MUY FRÁGIL** — cualquier cambio en el layout rompe el scraper silenciosamente
@@ -147,7 +147,7 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | URL producto | `product.link` | ✅ |
 | Imagen | `items[0].images[0].imageUrl` | ✅ |
 | Laboratorio | `product.brand` | ✅ |
-| Bioequivalente | `product.Bioequivalente[0] === "SI"` | ✅ |
+| Bioequivalente | `product.Bioequivalente` = `["SI"]` / `["NO"]` | ✅ positiva **y** negativa — única farmacia con evidencia negativa explícita. Ver § Bioequivalencia |
 
 **Limitaciones:**
 - `commertialOffer` es un typo heredado de VTEX (así se llama el campo en la API real)
@@ -178,12 +178,12 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | URL producto | `product.url` | ✅ |
 | Imagen | `product.cover.bySize.home_default.url` | ✅ |
 | Laboratorio | `product.manufacturer_name` | ✅ |
-| Bioequivalente | Regex `/bioequivalen/i` sobre nombre + descripción | ✅ |
+| Bioequivalente | Regex `/bioequivalen/i` sobre nombre + descripción | ⚠️ teórica — no matcheó ningún producto real en la auditoría; la ausencia es `null`. Ver § Bioequivalencia |
 
 **Limitaciones actuales:**
 - API REST admin (`/api/`, distinta de este endpoint ajax) existe pero requiere autenticación (401) — no se usa
 - Solo 1 sucursal física (Quilicura, Santiago)
-- Bioequivalente se infiere por texto, no por un campo estructurado — puede haber falsos negativos si el texto no incluye la palabra
+- Bioequivalente se infiere por texto, no por un campo estructurado — en la auditoría 2026-08-30 no matcheó ningún producto real, así que en la práctica AraucoMed no informa bioequivalencia (`null`). El sticker `bioequivalente-2026.png` de `rendered_products` NO sirve: el theme lo inyecta en todos los tiles
 
 ---
 
@@ -213,7 +213,7 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | URL producto | `product.permalink` | ✅ |
 | Imagen | `product.images[0].src` | ✅ |
 | SKU / EAN | `product.sku` | ✅ |
-| Bioequivalente | `"Bioequivalentes"` en `product.categories[].name` | ✅ |
+| Bioequivalente | categoría `medicamentos-bioequivalentes` | ✅ solo positiva — la taxonomía es curada a mano; su ausencia es `null`. Ver § Bioequivalencia |
 | Receta requerida | `"Receta Simple"` en `product.categories[].name` | ✅ |
 | Cenabast | `"Cenabast"` en `product.categories[].name` | ✅ |
 | Laboratorio | — | ❌ |
@@ -316,12 +316,14 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | Imagen | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | URL producto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Laboratorio | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ |
-| Bioequivalente | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Bioequivalente ¹ | ❌ | ❌ | ✅ pos. | ✅ pos.+neg. | ⚠️ | ✅ pos. | ❌ |
 | Receta requerida | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | SKU / EAN | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ |
 | Indicaciones médicas | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | Contraindicaciones | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | Posología | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+
+¹ "pos." = solo evidencia positiva (la ausencia de señal es `null`, nunca `false`). Detalle completo en § Bioequivalencia — semántica del dato por farmacia.
 
 ---
 
@@ -338,3 +340,91 @@ Documento de referencia para todas las farmacias integradas o en evaluación. In
 | Ahumada | HTML Scraping Demandware | Alto — regex frágil, OCAPI bloqueado |
 | COFAR | Desconocido (SPA) | — |
 | Liga Farmacia | Desconocido (SPA) | — |
+
+---
+
+## Bioequivalencia — semántica del dato por farmacia
+
+**Fuente canónica de este tema.** Las filas "Bioequivalente" de cada farmacia y
+de la comparativa apuntan acá; no repetir la matriz en otro documento.
+
+**Estado:** vigente · **Auditoría:** 2026-08-30 (`BIOEQUIVALENCE-DATA-QUALITY-01`,
+GET read-only contra las 9 fuentes + 10 búsquedas de producción, 914 tarjetas /
+1.081 ofertas).
+
+`ScrapedProduct.isBioequivalent` y `MedicationResult.isBioequivalent`
+(`packages/domain/src/types.ts`) son `boolean | null`, con tres significados que
+**no son intercambiables**:
+
+| Valor | Significa |
+|---|---|
+| `true` | la fuente afirma que ESE producto/presentación es bioequivalente |
+| `false` | la fuente afirma que NO lo es (evidencia negativa explícita) |
+| `null` | la fuente no entrega el dato |
+
+**Regla de producto (no negociable):** ante evidencia insuficiente o
+contradictoria se representa `null`. Nunca se infiere `true` ni `false`, y nunca
+se propaga el estado de una oferta a otra — ni siquiera entre farmacias que
+venden aparentemente el mismo producto.
+
+### Matriz por farmacia
+
+| Farmacia | ¿Entrega dato? | Fuente exacta | Evidencia positiva | Evidencia negativa | Valor cuando no hay señal |
+|---|---|---|---|---|---|
+| Cruz Verde | ❌ en búsqueda | `product_search` no devuelve ningún atributo de bioequivalencia | — | — | `null` |
+| Salcobrand | ❌ | `bioequivalent_filter` describe si el producto TIENE bioequivalentes, no si LO ES | — | — | `null` |
+| Ahumada | ✅ solo positiva | `<img class="js-popover bioequivalent-badge">` dentro del tile | badge presente | — | `null` |
+| Dr. Simi | ✅ positiva y negativa | `product.Bioequivalente` = `["SI"]` / `["NO"]` (VTEX) | `"SI"` | `"NO"` | `null` |
+| AraucoMed | ⚠️ teórica | regex `/bioequivalen/i` sobre `name` + `description_short` | mención textual | — | `null` |
+| EcoFarmacias | ✅ solo positiva | categoría `medicamentos-bioequivalentes` (WooCommerce) | categoría presente | — | `null` |
+| Farmex | ❌ | el payload de Shopify no tiene el dato | — | — | `null` |
+| Sermecoop | ✅ solo positiva | badge `<div class="label-top3"><img src=".../bioeq1.png">` | badge presente | — | `null` |
+| EasyFarma | ❌ | el HTML del listado no menciona bioequivalencia | — | — | `null` |
+
+**Dr. Simi es hoy la ÚNICA fuente con evidencia negativa explícita.** En
+producción, por lo tanto, el dato real es efectivamente `true | null` salvo lo
+que aporta Dr. Simi — aunque el contrato soporte los tres estados.
+
+### Trampas verificadas (no volver a caer)
+
+- **Contenedor siempre presente ≠ badge.** Ahumada emite
+  `sellcondition-bioequivalent-badges` vacío en TODOS los tiles; un `includes()`
+  por substring marcaba el 100% del catálogo como bioequivalente (S-2,
+  `SEARCH-MATCHING-QA-01`). AraucoMed tiene el mismo patrón con el sticker
+  `bioequivalente-2026.png`, que su theme inyecta en los 12 tiles de una
+  búsqueda sin importar el producto: **no usarlo como señal**.
+- **Salcobrand: `has_bioequivalent` habla de otra cosa.** El propio campo trae su
+  etiqueta: `"Bioequivalentes"` / `"Sin Bioequivalentes"` = *tiene* / *no tiene*
+  bioequivalentes disponibles. Verificado en el índice real: `Lipitor (R)` y
+  `Cozaar (R)` —los REFERENTES, que por definición no son bioequivalentes de
+  nadie— vienen con `true`, mientras que `Omeprazol (B)` y `Tapsin Forte (B)`
+  —con el sello del ISP en su propio nombre— vienen con `false`.
+- **La categoría primaria no es una certificación.** En AraucoMed el mismo
+  Omeprazol 20 mg de Ascend está en la categoría "Bioequivalentes" en su
+  presentación x60 y en "Antiulcerosos" en la x30. Sirve como evidencia
+  positiva; jamás como negativa.
+- **La taxonomía curada a mano es incompleta.** En EcoFarmacias, "Dropol
+  Paracetamol 1gr x 20" está en `medicamentos-bioequivalentes` y "Paracetamol
+  1gr x 20 (Hospifarma)" no.
+
+### Señales disponibles y todavía no consumidas
+
+No son defectos: son capacidades nuevas, con decisión de producto y/o costo de
+infraestructura pendientes.
+
+| Farmacia | Señal | Por qué no se usa hoy |
+|---|---|---|
+| Cruz Verde | `c_isBioequivalent` (booleano real) en el endpoint de DETALLE `/products/{id}` | exige una request extra por producto — impacto de latencia y de cuota |
+| Salcobrand | sello `(B)` en `name`, `drug_patent_type_filter` (`"Genérico"`/`"Marca"`) | extraer bioequivalencia de texto libre es una capacidad nueva; `drug_patent_type_filter` no es bioequivalencia (hay `(B)` con `"Marca"`) |
+| AraucoMed | `category_name === "Bioequivalentes"` | evidencia positiva parcial e inconsistente por presentación |
+
+### Dónde vive la regla en el código
+
+- `api/src/lib/bioequivalence.ts` — `positiveBioSignal()`: presencia ⇒ `true`,
+  ausencia ⇒ `null`. Es el traductor común de los detectores positivos.
+- `packages/domain/src/commercialIdentity.ts` — `bioequivalenceKey()`: los tres
+  estados como componente `|bio:` de `presentationKey`; nunca se fusionan entre sí.
+- `packages/domain/src/__tests__/bioequivalencePropagation.test.ts` — casos
+  adversariales de no-propagación (forma, concentración, cantidad, laboratorio,
+  combinación, contradicción, ausencia total).
+- `api/src/__tests__/bioequivalenceSemantics.test.ts` — esta matriz, ejecutable.

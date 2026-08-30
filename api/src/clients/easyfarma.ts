@@ -115,7 +115,15 @@ export function parseEasyFarmaResponse(html: string): ScrapedProduct[] {
       onlineUrl,
       imageUrl,
       laboratory: null,
-      isBioequivalent: false,
+      // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): EasyFarma no entrega el
+      // dato. El `false` anterior era un placeholder de dato no implementado,
+      // publicado como afirmación en el 100% de sus ofertas (producción: 0 de
+      // 98 con `true`). Auditado sobre el HTML real del listado
+      // (`leoproductsearch`, paracetamol, 207 KB): cero ocurrencias de
+      // "bioequivalen" en toda la página — no hay badge, clase ni texto que
+      // consumir. Mismo criterio que el resto de este cliente: no se inventa
+      // lo que el HTML no expone.
+      isBioequivalent: null,
     });
   }
 

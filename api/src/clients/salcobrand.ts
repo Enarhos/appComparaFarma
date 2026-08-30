@@ -26,7 +26,6 @@ export function parseSalcobrandResponse(
     const name = String(hit.name ?? query);
     const slug = (hit.slug as string) ?? "";
     const sku = (hit.sku as string) ?? "";
-    const bio = (hit.bioequivalent_filter as Record<string, unknown>) ?? {};
 
     let onlineUrl: string | null = null;
     if (slug && sku) onlineUrl = `${BASE}/products/${slug}?default_sku=${sku}`;
@@ -45,7 +44,40 @@ export function parseSalcobrandResponse(
       onlineUrl,
       imageUrl,
       laboratory: (hit.brand as string) ?? null,
-      isBioequivalent: Boolean(bio.has_bioequivalent ?? false),
+      // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): Salcobrand NO expone si un
+      // producto ES bioequivalente. El campo que se leía hasta ahora,
+      // `bioequivalent_filter.has_bioequivalent`, es una FACETA DE BÚSQUEDA que
+      // indica si ESE producto TIENE bioequivalentes disponibles — otra cosa, y
+      // en la práctica casi la inversa.
+      //
+      // Evidencia directa del índice Algolia real (`sb_variant_production`,
+      // 2026-08-30). El propio campo trae su etiqueta en castellano:
+      //   "Lipitor (R) Atorvastatina 20mg 30 Comp."
+      //       -> {has_bioequivalent: true,  label: "Bioequivalentes"}
+      //   "Cozaar (R) Losartán 50mg 30 Comp."
+      //       -> {has_bioequivalent: true,  label: "Bioequivalentes"}
+      //   "Omeprazol (B) 20mg 30 Cápsulas Recubiertas"
+      //       -> {has_bioequivalent: false, label: "Sin Bioequivalentes"}
+      //   "Tapsin Forte (B) Paracetamol 20 Comp. Recubiertos"
+      //       -> {has_bioequivalent: false, label: "Sin Bioequivalentes"}
+      // Lipitor y Cozaar son los productos REFERENTES —marcados "(R)" por la
+      // propia Salcobrand— y por definición no son bioequivalentes de nadie:
+      // son la referencia contra la que se mide la bioequivalencia. Los que sí
+      // llevan el sello "(B)" del ISP en su nombre salían marcados `false`.
+      // Medido en producción (10 búsquedas, 174 ofertas de Salcobrand): 7 de 7
+      // productos "(R)" se publicaban como "🌿 Bioequivalente", y 34 de 92
+      // ofertas con `false` llevaban "(B)" en su propio nombre.
+      //
+      // No es una ausencia de dato que se colapsa a `false` (el defecto del
+      // resto de los adaptadores): es una lectura semánticamente equivocada que
+      // genera falsos positivos Y falsos negativos. Se deja de leer.
+      //
+      // El sello "(B)" del nombre y `drug_patent_type_filter`
+      // ("Genérico"/"Marca") son señales candidatas para una fase futura, pero
+      // extraer bioequivalencia de texto libre es una capacidad nueva que
+      // necesita decisión de Product — ver FOLLOW_UP del informe. Hasta
+      // entonces, Salcobrand no informa bioequivalencia.
+      isBioequivalent: null,
     }];
   });
 }

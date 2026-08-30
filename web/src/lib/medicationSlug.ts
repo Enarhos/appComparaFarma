@@ -31,6 +31,14 @@ export function shortHash(matchKey: string): string {
   return fnv1a64(matchKey).toString(36);
 }
 
+/**
+ * Token `|bio:` de `presentationKey` — el ÚNICO segmento cuyo VALOR (no su
+ * presencia) cambió con BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30).
+ */
+const BIO_SEGMENT_PATTERN = /\|bio:(?:true|false|unknown)(?=\||$)/;
+
+const BIO_VALUES = ["true", "false", "unknown"] as const;
+
 function bioequivalenceKey(value: boolean | null | undefined): "true" | "false" | "unknown" {
   if (value === true) return "true";
   if (value === false) return "false";
@@ -42,6 +50,15 @@ export function medicationSlugIdentity(medication: {
   isBioequivalent?: boolean | null;
 }): string {
   return `${medication.matchKey}|bio:${bioequivalenceKey(medication.isBioequivalent)}`;
+}
+
+/**
+ * Gen 2 con los otros valores posibles de bioequivalencia — mismo motivo que
+ * `presentationKeyBioVariants` (ver más abajo): Gen 2 también incluye el token
+ * `|bio:`, así que los slugs emitidos bajo ese esquema rotaron igual.
+ */
+export function medicationSlugIdentityBioVariants(medication: { matchKey: string }): string[] {
+  return BIO_VALUES.map((value) => `${medication.matchKey}|bio:${value}`);
 }
 
 /**
@@ -57,6 +74,41 @@ const COMBINATION_SEGMENT_PATTERN = /\|combo:[^|]*$/;
  * `productIdentity.ts` en @comparafarma/domain.
  */
 const IDENTITY_ATTRIBUTE_SEGMENTS_PATTERN = /\|(?:var|form):[^|]*/g;
+
+/**
+ * Gen 6 — variantes de `presentationKey` con los OTROS valores posibles de
+ * `|bio:`.
+ *
+ * BIOEQUIVALENCE-DATA-QUALITY-01 corrigió la semántica del dato en 9 de 9
+ * adaptadores: donde la farmacia no informa bioequivalencia, `isBioequivalent`
+ * pasó de `false` (una afirmación falsa) a `null`. Eso no cambia la FORMA de
+ * `presentationKey` —sigue teniendo su `|bio:`— pero sí su VALOR:
+ * `|bio:false` → `|bio:unknown` en la mayoría del catálogo, y `|bio:true` →
+ * `|bio:unknown` en las ofertas que venían de la lectura equivocada de
+ * Salcobrand. Medido sobre producción real (10 búsquedas, 914 tarjetas,
+ * 2026-08-30): **81,7 % de las tarjetas rotan su `presentationKey`** y, con
+ * ella, el hash de su slug.
+ *
+ * Las generaciones existentes (Gen 4/Gen 3) no alcanzan: ellas QUITAN
+ * segmentos, y acá el segmento sigue estando con otro valor. Sin esta
+ * generación, 4 de cada 5 URLs de ficha ya emitidas (e indexadas) darían 404.
+ *
+ * A diferencia de las demás generaciones, esta no es una transformación única
+ * sino un pequeño conjunto de candidatos: la clave vieja pudo haber tenido
+ * `true` o `false` donde hoy hay `unknown`, y no hay forma de saber cuál sin
+ * volver a scrapear con el código viejo. Son 2 hashes extra por resultado y
+ * por generación — barato y determinista. Se aplica combinado con las
+ * transformaciones de Gen 4/Gen 3, porque un link viejo puede necesitar las
+ * dos cosas a la vez (haber sido emitido antes de CF-SEARCH-001 Y antes de
+ * esta corrección).
+ */
+export function presentationKeyBioVariants(presentationKey: string): string[] {
+  const match = presentationKey.match(BIO_SEGMENT_PATTERN);
+  if (!match) return [];
+  return BIO_VALUES.map((value) => presentationKey.replace(BIO_SEGMENT_PATTERN, `|bio:${value}`)).filter(
+    (candidate) => candidate !== presentationKey
+  );
+}
 
 /**
  * Gen 4 — `presentationKey` tal como se calculaba ANTES de CF-SEARCH-001, es

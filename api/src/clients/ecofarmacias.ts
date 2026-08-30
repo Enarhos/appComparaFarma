@@ -1,5 +1,6 @@
 import type { ScrapedProduct } from "../lib/types.js";
 import { fetchWithTimeout } from "../lib/timeout.js";
+import { positiveBioSignal } from "../lib/bioequivalence.js";
 
 const BASE = "https://www.ecofarmacias.cl";
 
@@ -34,8 +35,18 @@ export function parseEcoFarmaciasResponse(products: WooProduct[]): ScrapedProduc
     const price = parseInt(p.prices?.price ?? "0", 10);
     if (!price || price <= 0) return [];
 
-    const isBioequivalent = (p.categories ?? []).some(
-      (c) => c?.slug?.includes("bioequivalente") || c?.name?.toLowerCase().includes("bioequivalente")
+    // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): la categoría
+    // `medicamentos-bioequivalentes` es evidencia POSITIVA explícita — es una
+    // clasificación deliberada del catálogo de EcoFarmacias. Su ausencia NO es
+    // evidencia negativa: la taxonomía es curada a mano y resulta inconsistente
+    // entre productos equivalentes (auditado en la fuente real, 2026-08-30:
+    // "Dropol Paracetamol 1gr x 20" está en la categoría y "Paracetamol 1gr x
+    // 20 (Hospifarma)" no; "Kitadol paracetamol 500mg x24 (LCh)" tampoco,
+    // aunque Salcobrand lo publica con el sello "(B)"). Ausencia ⇒ `null`.
+    const isBioequivalent = positiveBioSignal(
+      (p.categories ?? []).some(
+        (c) => c?.slug?.includes("bioequivalente") || c?.name?.toLowerCase().includes("bioequivalente")
+      )
     );
 
     return [{

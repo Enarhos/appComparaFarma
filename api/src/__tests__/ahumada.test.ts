@@ -36,7 +36,9 @@ describe("parseAhumadaHtml", () => {
       name: "Bufferin Forte Paracetamol 1 G 18 Comprimidos",
       price: 12990,
       cmrPrice: 10990,
-      isBioequivalent: false,
+      // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): sin badge, Ahumada no
+      // afirma nada — `null` (no informado), ya no `false`.
+      isBioequivalent: null,
     });
   });
 });
@@ -64,7 +66,11 @@ describe("parseAhumadaHtml — bioequivalencia (fix S-2)", () => {
 
   it("un tile con el contenedor VACÍO nunca se marca bioequivalente", () => {
     const bufferin = parseAhumadaHtml(html).find((r) => r.name.includes("Bufferin Forte"));
-    expect(bufferin!.isBioequivalent).toBe(false);
+    // BIOEQUIVALENCE-DATA-QUALITY-01: "no bioequivalente" y "no informado" no
+    // son lo mismo. El contenedor vacío es ausencia de evidencia, no evidencia
+    // negativa: el contrato correcto es `null`.
+    expect(bufferin!.isBioequivalent).toBeNull();
+    expect(bufferin!.isBioequivalent).not.toBe(true);
   });
 
   it("sobre la captura real del sitio, distingue los dos tiles (1 de 2 bioequivalente)", () => {
@@ -72,9 +78,10 @@ describe("parseAhumadaHtml — bioequivalencia (fix S-2)", () => {
     const sinBadge = results.find((r) => r.name.includes("Tapsin 1g Efervescente"));
     const conBadge = results.find((r) => r.name.includes("Tapsin Puro Sin Cafeina"));
 
-    expect(sinBadge!.isBioequivalent).toBe(false);
+    expect(sinBadge!.isBioequivalent).toBeNull();
     expect(conBadge!.isBioequivalent).toBe(true);
-    expect(results.filter((r) => r.isBioequivalent)).toHaveLength(1);
+    expect(results.filter((r) => r.isBioequivalent === true)).toHaveLength(1);
+    expect(results.filter((r) => r.isBioequivalent === false)).toHaveLength(0);
   });
 
   it("hasBioequivalentBadge exige un token de clase exacto, no una subcadena", () => {

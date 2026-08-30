@@ -4,7 +4,9 @@ import {
   buildMedicationSlug,
   medicationSlugHash,
   medicationSlugIdentity,
+  medicationSlugIdentityBioVariants,
   parseMedicationSlug,
+  presentationKeyBioVariants,
   presentationKeyWithoutCombination,
   presentationKeyWithoutIdentityAttributes,
   queryFromSlug,
@@ -61,6 +63,16 @@ export type ResolveMedicationResult =
  *   Gen 5 (vigente) — `presentationKey` completa, con `|var:` (variante
  *                     comercial) y `|form:` (forma farmacéutica)
  *                     (CF-SEARCH-001, 2026-08-27).
+ *   Gen 6-bio       — la misma clave de Gen 5/Gen 4/Gen 3/Gen 2 pero con OTRO
+ *                     valor en `|bio:` (BIOEQUIVALENCE-DATA-QUALITY-01,
+ *                     2026-08-30). No es una generación de FORMA sino de VALOR:
+ *                     al dejar de afirmar `false` donde la farmacia no informa,
+ *                     `|bio:false` pasó a `|bio:unknown` en el 81,7 % de las
+ *                     tarjetas (medido sobre producción real: 914 tarjetas de
+ *                     10 búsquedas, 2026-08-30). Sin este paso, 4 de cada 5 URLs
+ *                     de ficha ya indexadas devolverían 404. Se prueba junto a
+ *                     cada generación de forma, porque un link viejo puede ser
+ *                     anterior a los dos cambios.
  *   Gen 4           — `presentationKey` sin `|var:` ni `|form:` (S-1). A
  *                     diferencia de Gen 3, esta generación cubre a CASI TODO
  *                     el catálogo: `|form:` está presente en la mayoría de las
@@ -105,18 +117,40 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
   let matches = results.filter((result) => medicationSlugHash(result) === parsed.hash);
   let needsRedirect = false;
 
+  // Aplica una generación antigua: se queda con los resultados cuyo hash
+  // coincide con alguna de las claves que produce `keysOf`, prefiriendo los que
+  // además coinciden en la parte legible del slug, y marca el resultado para
+  // redirect. Extraído para que sumar la variante de `|bio:` a cada generación
+  // no signifique repetir el mismo bloque cinco veces.
+  const tryGeneration = (keysOf: (result: MedicationResult) => string[]): void => {
+    const genMatches = results.filter((result) =>
+      keysOf(result).some((key) => key.length > 0 && shortHash(key) === parsed.hash)
+    );
+    const genHuman = genMatches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
+    const chosen = genHuman.length > 0 ? genHuman : genMatches;
+    if (chosen.length === 0) return;
+    matches = chosen;
+    needsRedirect = true;
+  };
+
+  if (matches.length === 0) {
+    // Gen 6-bio sobre Gen 5 — la clave vigente con el `|bio:` que tenía ANTES
+    // de BIOEQUIVALENCE-DATA-QUALITY-01. Es el caso mayoritario de los links ya
+    // emitidos: el 81,7 % de las tarjetas rotó su `presentationKey` solo por el
+    // cambio de valor de ese token.
+    tryGeneration((result) => presentationKeyBioVariants(result.presentationKey));
+  }
+
   if (matches.length === 0) {
     // Gen 4 — presentationKey SIN `|var:` ni `|form:` (esquema previo a
     // CF-SEARCH-001). Preserva los links emitidos antes de ese cambio, que es
-    // prácticamente todo el catálogo indexado.
-    const gen4Matches = results.filter(
-      (result) =>
-        result.presentationKey.length > 0 &&
-        shortHash(presentationKeyWithoutIdentityAttributes(result.presentationKey)) === parsed.hash
-    );
-    const gen4Human = gen4Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
-    matches = gen4Human.length > 0 ? gen4Human : gen4Matches;
-    if (matches.length > 0) needsRedirect = true;
+    // prácticamente todo el catálogo indexado. Se prueba también con los otros
+    // valores de `|bio:`: un link puede ser anterior a los dos cambios.
+    tryGeneration((result) => {
+      if (result.presentationKey.length === 0) return [];
+      const gen4 = presentationKeyWithoutIdentityAttributes(result.presentationKey);
+      return [gen4, ...presentationKeyBioVariants(gen4)];
+    });
   }
 
   if (matches.length === 0) {
@@ -125,32 +159,28 @@ export async function resolveMedicationBySlug(slug: string): Promise<ResolveMedi
     // catálogo Gen 4 y Gen 3 son la misma cadena, así que este paso no puede
     // devolver nada nuevo si Gen 4 ya falló. Preserva los links emitidos antes
     // del fix para las combinaciones, que sí rotaron de hash.
-    const gen3Matches = results.filter(
-      (result) =>
-        result.presentationKey.length > 0 &&
-        shortHash(presentationKeyWithoutCombination(result.presentationKey)) === parsed.hash
-    );
-    const gen3Human = gen3Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
-    matches = gen3Human.length > 0 ? gen3Human : gen3Matches;
-    if (matches.length > 0) needsRedirect = true;
+    tryGeneration((result) => {
+      if (result.presentationKey.length === 0) return [];
+      const gen3 = presentationKeyWithoutCombination(result.presentationKey);
+      return [gen3, ...presentationKeyBioVariants(gen3)];
+    });
   }
 
   if (matches.length === 0) {
     // Gen 2 — matchKey + bioequivalencia, sin marca (esquema previo a FASE 1
     // Product Identity, 2026-08-19). Preserva los slugs emitidos entre el fix
-    // de bioequivalencia y este cambio.
-    const gen2Matches = results.filter((result) => shortHash(medicationSlugIdentity(result)) === parsed.hash);
-    const gen2Human = gen2Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
-    matches = gen2Human.length > 0 ? gen2Human : gen2Matches;
-    if (matches.length > 0) needsRedirect = true;
+    // de bioequivalencia y este cambio. También incluye `|bio:`, así que se
+    // prueban sus tres valores posibles.
+    tryGeneration((result) => [
+      medicationSlugIdentity(result),
+      ...medicationSlugIdentityBioVariants(result),
+    ]);
   }
 
   if (matches.length === 0) {
     // Gen 1 (legacy) — matchKey a secas, esquema original pre-bioequivalencia.
-    const gen1Matches = results.filter((result) => shortHash(result.matchKey) === parsed.hash);
-    const gen1Human = gen1Matches.filter((result) => slugifyText(result.canonicalName) === parsed.humanPart);
-    matches = gen1Human.length > 0 ? gen1Human : gen1Matches;
-    if (matches.length > 0) needsRedirect = true;
+    // No contiene `|bio:`, así que esta corrección no lo afecta.
+    tryGeneration((result) => [result.matchKey]);
   }
 
   if (matches.length === 0) {

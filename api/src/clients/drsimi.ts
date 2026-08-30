@@ -10,6 +10,33 @@ function isRelevant(productName: string, query: string): boolean {
   return queryWords.some((word) => nameLower.includes(word));
 }
 
+/**
+ * BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30) — Dr. Simi es la ÚNICA de las 9
+ * farmacias que entrega hoy evidencia NEGATIVA explícita: su API VTEX expone
+ * el campo `Bioequivalente` como array de un elemento con vocabulario cerrado
+ * `["SI"]` / `["NO"]`. Auditado contra la fuente real (4 consultas, 52
+ * productos, 2026-08-30): el campo estaba presente en el 100% de los productos
+ * y no apareció ningún valor fuera de ese vocabulario.
+ *
+ * Por eso, y solo acá, `false` significa de verdad "la fuente afirma que NO es
+ * bioequivalente" y no "no sabemos".
+ *
+ * El código anterior (`(bioArr?.[0] ?? "").toUpperCase() === "SI"`) devolvía
+ * `false` tanto para "NO" como para el campo ausente o con un valor
+ * inesperado, colapsando evidencia negativa real con ausencia de dato. No se
+ * observó ese caso en producción, pero la fuente puede dejar de enviar el
+ * campo en cualquier momento sin avisar (es un scraper de catálogo de terceros)
+ * y ahí el defecto se volvería silencioso.
+ */
+function readDrSimiBioequivalence(raw: unknown): boolean | null {
+  const value = Array.isArray(raw) ? raw[0] : raw;
+  if (typeof value !== "string") return null;
+  const normalized = value.trim().toUpperCase();
+  if (normalized === "SI" || normalized === "SÍ") return true;
+  if (normalized === "NO") return false;
+  return null;
+}
+
 export function parseDrSimiResponse(
   products: Record<string, unknown>[],
   query: string
@@ -30,8 +57,7 @@ export function parseDrSimiResponse(
     const onlinePrice = salePrice < storePrice ? salePrice : null;
     const images = items[0].images as { imageUrl?: string }[] | undefined;
     const imageUrl = images?.[0]?.imageUrl ?? null;
-    const bioArr = product.Bioequivalente as string[] | undefined;
-    const isBioequivalent = (bioArr?.[0] ?? "").toUpperCase() === "SI";
+    const isBioequivalent = readDrSimiBioequivalence(product.Bioequivalente);
     const name = String(product.productName ?? query);
     if (!isRelevant(name, query)) return [];
 
