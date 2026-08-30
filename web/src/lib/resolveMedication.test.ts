@@ -564,4 +564,142 @@ describe("resolveMedicationBySlug", () => {
       expect(result.needsRedirect).toBe(true);
     }
   });
+  /**
+   * BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30) — Gen 6-bio.
+   *
+   * Al dejar de afirmar `false` donde la farmacia no informa, el VALOR del
+   * token `|bio:` de `presentationKey` cambió para el 81,7 % de las tarjetas
+   * (medido sobre 914 tarjetas de 10 búsquedas de producción). El hash del slug
+   * rota con él. Las generaciones anteriores no lo cubren: ellas QUITAN
+   * segmentos, y acá el segmento sigue presente con otro valor.
+   */
+  it("Gen 6-bio — un slug emitido con `bio:false` resuelve a la tarjeta que hoy es `bio:unknown`, con redirect", async () => {
+    const medication = makeMedication({
+      matchKey: "atorvastatina|20mg|30",
+      canonicalName: "Atorvastatina 20 mg 30 Comprimidos",
+      isBioequivalent: null,
+      presentationKey: "atorvastatina|20mg|30|bio:unknown|brand:unknown|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [medication], error: null });
+
+    const legacySlug = `${slugifyText(medication.canonicalName)}-${shortHash(
+      "atorvastatina|20mg|30|bio:false|brand:unknown|form:solid-oral"
+    )}`;
+    const result = await resolveMedicationBySlug(legacySlug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(medication);
+      expect(result.canonicalSlug).toBe(buildMedicationSlug(medication));
+      expect(result.needsRedirect).toBe(true);
+    }
+  });
+
+  it("Gen 6-bio — también recupera los slugs que venían de la lectura equivocada de Salcobrand (`bio:true`)", async () => {
+    const medication = makeMedication({
+      matchKey: "lipitor|20mg|30",
+      canonicalName: "Lipitor Atorvastatina 20mg 30 Comprimidos Recubiertos",
+      isBioequivalent: null,
+      presentationKey: "lipitor|20mg|30|bio:unknown|brand:lipitor|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [medication], error: null });
+
+    const legacySlug = `${slugifyText(medication.canonicalName)}-${shortHash(
+      "lipitor|20mg|30|bio:true|brand:lipitor|form:solid-oral"
+    )}`;
+    const result = await resolveMedicationBySlug(legacySlug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.needsRedirect).toBe(true);
+    }
+  });
+
+  it("Gen 6-bio combinada con Gen 4 — slug anterior a CF-SEARCH-001 Y a esta corrección", async () => {
+    const medication = makeMedication({
+      matchKey: "omeprazol|20mg|30",
+      canonicalName: "Omeprazol 20 mg 30 Cápsulas",
+      isBioequivalent: null,
+      presentationKey: "omeprazol|20mg|30|bio:unknown|brand:ascend|var:granulos|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [medication], error: null });
+
+    // Sin `|var:`/`|form:` (Gen 4) y con el `bio:false` de entonces.
+    const legacySlug = `${slugifyText(medication.canonicalName)}-${shortHash(
+      "omeprazol|20mg|30|bio:false|brand:ascend"
+    )}`;
+    const result = await resolveMedicationBySlug(legacySlug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.needsRedirect).toBe(true);
+    }
+  });
+
+  it("Gen 6-bio combinada con Gen 2 — slug de matchKey+bio, sin marca", async () => {
+    const medication = makeMedication({
+      matchKey: "metformina|850mg|30",
+      canonicalName: "Metformina 850 mg 30 Comprimidos",
+      isBioequivalent: null,
+      presentationKey: "metformina|850mg|30|bio:unknown|brand:unknown|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [medication], error: null });
+
+    const legacySlug = `${slugifyText(medication.canonicalName)}-${shortHash(
+      "metformina|850mg|30|bio:false"
+    )}`;
+    const result = await resolveMedicationBySlug(legacySlug);
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.needsRedirect).toBe(true);
+    }
+  });
+
+  it("Gen 6-bio NO altera el caso vigente: un slug actual sigue resolviendo sin redirect", async () => {
+    const medication = makeMedication({
+      matchKey: "atorvastatina|20mg|30",
+      canonicalName: "Atorvastatina 20 mg 30 Comprimidos",
+      isBioequivalent: null,
+      presentationKey: "atorvastatina|20mg|30|bio:unknown|brand:unknown|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({ results: [medication], error: null });
+
+    const result = await resolveMedicationBySlug(buildMedicationSlug(medication));
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.needsRedirect).toBe(false);
+    }
+  });
+
+  it("Gen 6-bio no puede secuestrar un slug que YA resuelve por la generación vigente de otra tarjeta", async () => {
+    // La tarjeta A tiene hoy `bio:true` (evidencia real de una farmacia) y la
+    // tarjeta B `bio:unknown`. El slug vigente de A no debe caer nunca en B por
+    // el intento de variantes: Gen 5 exacto se evalúa primero y gana.
+    const conEvidencia = makeMedication({
+      matchKey: "amoxicilina|500mg|21",
+      canonicalName: "Amoxicilina 500 mg 21 Cápsulas",
+      isBioequivalent: true,
+      presentationKey: "amoxicilina|500mg|21|bio:true|brand:unknown|form:solid-oral",
+    });
+    const sinEvidencia = makeMedication({
+      matchKey: "amoxicilina|500mg|21",
+      canonicalName: "Amoxicilina 500 mg 21 Cápsulas",
+      isBioequivalent: null,
+      presentationKey: "amoxicilina|500mg|21|bio:unknown|brand:unknown|form:solid-oral",
+    });
+    searchMedicationsMock.mockResolvedValue({
+      results: [sinEvidencia, conEvidencia],
+      error: null,
+    });
+
+    const result = await resolveMedicationBySlug(buildMedicationSlug(conEvidencia));
+
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
+      expect(result.medication).toBe(conEvidencia);
+      expect(result.needsRedirect).toBe(false);
+    }
+  });
 });

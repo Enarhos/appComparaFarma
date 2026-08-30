@@ -3,7 +3,9 @@ import {
   buildMedicationSlug,
   medicationSlugHash,
   medicationSlugIdentity,
+  medicationSlugIdentityBioVariants,
   parseMedicationSlug,
+  presentationKeyBioVariants,
   presentationKeyWithoutCombination,
   presentationKeyWithoutIdentityAttributes,
   queryFromSlug,
@@ -218,5 +220,74 @@ describe("presentationKeyWithoutIdentityAttributes — Gen 4 (previa a CF-SEARCH
 
     const sinForma = "tapsin|6|bio:false|brand:maver";
     expect(shortHash(sinForma)).toBe(shortHash(presentationKeyWithoutIdentityAttributes(sinForma)));
+  });
+});
+
+/**
+ * BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30) — Gen 6-bio.
+ *
+ * La corrección semántica de los adaptadores no cambia la FORMA de
+ * `presentationKey` sino el VALOR de su token `|bio:`. Estas son las variantes
+ * que permiten seguir resolviendo los slugs ya emitidos.
+ */
+describe("presentationKeyBioVariants", () => {
+  it("devuelve las otras dos variantes de `|bio:`, sin repetir la vigente", () => {
+    const actual = "atorvastatina|20mg|30|bio:unknown|brand:unknown|form:solid-oral";
+    expect(presentationKeyBioVariants(actual).sort()).toEqual(
+      [
+        "atorvastatina|20mg|30|bio:false|brand:unknown|form:solid-oral",
+        "atorvastatina|20mg|30|bio:true|brand:unknown|form:solid-oral",
+      ].sort()
+    );
+  });
+
+  it("sustituye solo el token `|bio:` y deja intactos `|combo:`, `|var:` y `|form:`", () => {
+    const actual =
+      "losartan|50mg|30|bio:unknown|brand:ascend|combo:hidroclorotiazida|var:forte|form:solid-oral";
+    for (const variant of presentationKeyBioVariants(actual)) {
+      expect(variant).toContain("|combo:hidroclorotiazida");
+      expect(variant).toContain("|var:forte");
+      expect(variant).toContain("|form:solid-oral");
+      expect(variant).toContain("|brand:ascend");
+      expect(variant.startsWith("losartan|50mg|30|bio:")).toBe(true);
+    }
+  });
+
+  it("no toca un valor de marca que contenga la palabra `bio`", () => {
+    // `|bio:` se ancla al inicio de segmento y a uno de los tres valores
+    // válidos: una marca como "biosano" no puede confundirse con el token.
+    const actual = "omeprazol|20mg|30|bio:unknown|brand:biosano";
+    for (const variant of presentationKeyBioVariants(actual)) {
+      expect(variant).toContain("|brand:biosano");
+    }
+    expect(presentationKeyBioVariants(actual)).toHaveLength(2);
+  });
+
+  it("devuelve vacío si la clave no tiene token `|bio:` (nada que recuperar)", () => {
+    expect(presentationKeyBioVariants("paracetamol|500mg|16")).toEqual([]);
+    expect(presentationKeyBioVariants("")).toEqual([]);
+  });
+
+  it("cada variante produce un hash distinto — es exactamente la rotación a compensar", () => {
+    const actual = "atorvastatina|20mg|30|bio:unknown|brand:unknown|form:solid-oral";
+    const hashes = [actual, ...presentationKeyBioVariants(actual)].map(shortHash);
+    expect(new Set(hashes).size).toBe(3);
+  });
+});
+
+describe("medicationSlugIdentityBioVariants (Gen 2)", () => {
+  it("cubre los tres valores posibles del token, incluida la identidad vigente", () => {
+    expect(medicationSlugIdentityBioVariants({ matchKey: "paracetamol|500mg|16" })).toEqual([
+      "paracetamol|500mg|16|bio:true",
+      "paracetamol|500mg|16|bio:false",
+      "paracetamol|500mg|16|bio:unknown",
+    ]);
+  });
+
+  it("incluye siempre la identidad Gen 2 que produce `medicationSlugIdentity`", () => {
+    const medication = { matchKey: "paracetamol|500mg|16", isBioequivalent: null };
+    expect(medicationSlugIdentityBioVariants(medication)).toContain(
+      medicationSlugIdentity(medication)
+    );
   });
 });
