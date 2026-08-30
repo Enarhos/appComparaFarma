@@ -14,8 +14,7 @@ import { useFilterStore } from "@/store/filterStore";
 import { useFavoritesStore } from "@/store/favoritesStore";
 import { useSearchStore } from "@/store/searchStore";
 import { useCartStore } from "@/store/cartStore";
-import { useAuthStore } from "@/store/authStore";
-import { goToLogin } from "@/lib/authNavigation";
+import { AccountButton } from "@/components/AccountButton";
 import { formatCLP } from "@/lib/formatters";
 import { PHARMACIES } from "@/constants/pharmacies";
 import type { PharmacySlug } from "@/lib/types";
@@ -48,7 +47,6 @@ export default function HomeScreen() {
   const { keys: favKeys, cachedResults } = useFavoritesStore();
   const setResults = useSearchStore((s) => s.setResults);
   const cartCount = useCartStore((s) => s.items.length);
-  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
   const filteredOutCount = (Object.keys(PHARMACIES) as PharmacySlug[]).filter(
     (s) => !isPharmacyVisible(s)
@@ -129,19 +127,10 @@ export default function HomeScreen() {
             </TouchableOpacity>
             {/* Identity Foundation (Épica 1, TASK-003): login/registro/logout
                 son opcionales — no bloquean ningún flujo de búsqueda o
-                comparación de precios (Principio 1, USER_DOMAIN_MODEL.md). */}
-            <TouchableOpacity
-              onPress={goToLogin}
-              hitSlop={12}
-              accessibilityLabel={isAuthenticated ? "Mi cuenta" : "Iniciar sesión"}
-              accessibilityRole="button"
-            >
-              <Ionicons
-                name="person-circle-outline"
-                size={26}
-                color={isAuthenticated ? BRAND_INDIGO : "#9ca3af"}
-              />
-            </TouchableOpacity>
+                comparación de precios (Principio 1, USER_DOMAIN_MODEL.md).
+                ACCOUNT-UX-01: la señal de sesión iniciada vive en
+                `components/AccountButton.tsx`, no inline acá. */}
+            <AccountButton />
           </View>
         </View>
 

@@ -13,9 +13,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { useAuthStore } from "@/store/authStore";
 import { signInWithPassword } from "@/lib/sessionManager";
-import { goToRegistro, returnFromAuth } from "@/lib/authNavigation";
+import { goToRegistro, goToRecuperarClave, returnFromAuth } from "@/lib/authNavigation";
 import { BRAND_COLORS } from "@/constants/brand";
 import { DeleteAccountSheet } from "@/components/DeleteAccountSheet";
+import { AccountPurposeNote } from "@/components/AccountPurposeNote";
 
 // Login / Cuenta — Épica 1 (Identity Foundation), TASK-003 (Tasks 006 y 008
 // del plan técnico de docs/execution/EPIC-01-IDENTITY_FOUNDATION.md).
@@ -79,7 +80,22 @@ export default function LoginScreen() {
             <Ionicons name="person-circle-outline" size={48} color={BRAND_COLORS.indigo} />
           </View>
           <Text className="text-lg font-bold text-gray-900 dark:text-white">Mi cuenta</Text>
-          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1">{identity?.email}</Text>
+
+          {/* ACCOUNT-UX-01 (problema 1): el estado de sesión se dice con
+              palabras, no solo con el email suelto que estaba antes acá —
+              misma señal (check + color teal) que el badge de
+              `components/AccountButton.tsx` en el header de Home. */}
+          <View
+            className="flex-row items-center gap-1.5 mt-2 rounded-full px-3 py-1"
+            style={{ backgroundColor: "rgba(13, 130, 123, 0.12)" }}
+          >
+            <Ionicons name="checkmark-circle" size={14} color={BRAND_COLORS.teal} />
+            <Text className="text-xs font-semibold" style={{ color: BRAND_COLORS.teal }}>
+              Sesión iniciada
+            </Text>
+          </View>
+
+          <Text className="text-sm font-medium text-gray-700 dark:text-gray-300 mt-2">{identity?.email}</Text>
 
           <TouchableOpacity
             onPress={signOut}
@@ -120,9 +136,14 @@ export default function LoginScreen() {
       <KeyboardAvoidingView className="flex-1" behavior={Platform.OS === "ios" ? "padding" : "height"}>
         <ScrollView contentContainerClassName="px-6 pt-12 pb-10" keyboardShouldPersistTaps="handled">
           <Text className="text-2xl font-bold text-gray-900 dark:text-white">Iniciar sesión</Text>
-          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 mb-6">
+          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 mb-4">
             Opcional — puedes seguir comparando precios sin una cuenta.
           </Text>
+
+          {/* ACCOUNT-UX-01 (problema 2): mismo bloque que `registro.tsx`, para
+              que quien llega a Ingresar sin cuenta también sepa qué gana (y
+              qué no) creando una, antes de tocar "Crear cuenta". */}
+          <AccountPurposeNote />
 
           {error && (
             <View className="bg-red-50 dark:bg-red-950 rounded-lg px-3 py-2 mb-4">
@@ -171,6 +192,19 @@ export default function LoginScreen() {
             ) : (
               <Text className="text-white font-semibold text-base">Entrar</Text>
             )}
+          </TouchableOpacity>
+
+          {/* ACCOUNT-UX-01 (revisión Mario): expone `recuperar-clave.tsx`,
+              antes solo alcanzable por deep link. Discreta a propósito (texto
+              chico, sin color de marca) para no competir con el CTA
+              principal "Entrar". */}
+          <TouchableOpacity
+            onPress={goToRecuperarClave}
+            className="mt-3 items-center"
+            accessibilityRole="button"
+            accessibilityLabel="¿Olvidaste tu contraseña?"
+          >
+            <Text className="text-xs text-gray-400 dark:text-gray-500">¿Olvidaste tu contraseña?</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
