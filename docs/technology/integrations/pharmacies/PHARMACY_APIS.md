@@ -118,6 +118,7 @@ Content-Type: application/json
 | `hit.cmr_price` | `channels.cmr` | Precio Tarjeta Más cuando viene informado |
 | `hit.direct_discount_sbpay` | `channels.sbpay` | Solo si es menor a `normal_price` |
 | `hit.internet_price` | *(ignorar)* | Campo presente pero siempre null en el índice |
+| `hit.bioequivalent_filter` | *(ignorar)* | **No es "es bioequivalente"** sino "tiene bioequivalentes disponibles" (`label`: `"Bioequivalentes"` / `"Sin Bioequivalentes"`). `isBioequivalent` queda `null` — ver `FARMACIAS.md` § Bioequivalencia |
 | `hit.has_stock` | `hasStock` | |
 | `hit.package_delivery` | `hasOnlineDelivery` | |
 
@@ -261,7 +262,7 @@ _to=23
 | — | `channels.cmr = null` | No expone precio con tarjeta |
 | `commertialOffer.IsAvailable` + `AvailableQuantity > 0` | `hasStock` | |
 | `product.brand` | `laboratory` | |
-| `product.Bioequivalente[0] === "SI"` | `isBioequivalent` | |
+| `product.Bioequivalente` | `isBioequivalent` | `["SI"]` ⇒ `true`, `["NO"]` ⇒ `false`, ausente o fuera de ese vocabulario ⇒ `null`. Única fuente con evidencia negativa explícita — ver `FARMACIAS.md` § Bioequivalencia |
 
 ### Quirks conocidos
 - Filtro `isRelevant()`: descarta resultados donde ninguna palabra de ≥3 letras de la query aparece en el nombre del producto — la búsqueda VTEX a veces devuelve resultados poco relacionados
@@ -292,7 +293,7 @@ Accept: application/json
 | — | `channels.online = null`, `channels.cmr = null` | Solo un canal disponible |
 | `product.active === 1` | `hasStock` | También se filtra `price_amount > 0` |
 | `product.manufacturer_name` | `laboratory` | |
-| Regex `/bioequivalen/i` sobre `name + description_short` (con HTML despojado) | `isBioequivalent` | Detección por texto, no un campo estructurado |
+| Regex `/bioequivalen/i` sobre `name + description_short` (con HTML despojado) | `isBioequivalent` | Detección por texto, no un campo estructurado. Solo evidencia POSITIVA: si no matchea, el valor es `null` — no `false`. En la auditoría 2026-08-30 no matcheó ningún producto real |
 
 ### Quirks conocidos
 - La API REST admin oficial (`/api/`) existe pero requiere autenticación (401) — no se usa, este es un endpoint distinto del storefront
