@@ -135,4 +135,44 @@ describe("CommercialProductRow", () => {
     expect(screen.getByText("Farmex")).toBeTruthy();
     expect(screen.queryByText("EasyFarma")).toBeNull();
   });
+
+  // CF-WEB-001 — regresión de layout responsive. jsdom no calcula layout, así
+  // que no se puede medir el desborde real acá (esa verificación es la suite
+  // Playwright de web/e2e/responsive.spec.ts, que sí mide en un navegador).
+  // Lo que sí se puede blindar es el contrato CSS que causaba el bug: con
+  // `flex-1` (flex-basis 0) este contenedor se encogía a ~12px mientras el
+  // badge y el contador `shrink-0` se desbordaban y se superponían con el
+  // precio a ≤430px. Se exige una flex-basis explícita distinta de cero.
+  describe("layout responsive de la fila de marca (CF-WEB-001)", () => {
+    it("el bloque de marca declara una flex-basis real, no flex-1, para que el contenedor pueda hacer wrap", () => {
+      const { container } = render(<CommercialProductRow medication={medication()} />);
+      const brandCluster = screen.getByText("CuraeSpring").parentElement;
+
+      expect(brandCluster?.className).toContain("flex-[1_1_11rem]");
+      expect(brandCluster?.className.split(/\s+/)).not.toContain("flex-1");
+      // Debe poder encogerse y repartir sus hijos en varias líneas.
+      expect(brandCluster?.className).toContain("min-w-0");
+      expect(brandCluster?.className).toContain("flex-wrap");
+      expect(container.firstChild).toBeTruthy();
+    });
+
+    it("el nombre de marca trunca dentro de su caja en vez de desbordarla", () => {
+      render(
+        <CommercialProductRow
+          medication={medication({ laboratory: "LABORATORIO FARMACEUTICO INTERNACIONAL DE CHILE LIMITADA" })}
+        />
+      );
+      const label = screen.getByText("LABORATORIO FARMACEUTICO INTERNACIONAL DE CHILE LIMITADA");
+      expect(label.className).toContain("truncate");
+      expect(label.className).toContain("min-w-0");
+      expect(label.className).toContain("max-w-full");
+    });
+
+    it("el bloque de precio queda alineado a la derecha cuando cae a su propia línea", () => {
+      render(<CommercialProductRow medication={medication()} />);
+      const priceBlock = screen.getByText(/desde \$990/).parentElement;
+      expect(priceBlock?.className).toContain("ml-auto");
+      expect(priceBlock?.className).toContain("shrink-0");
+    });
+  });
 });

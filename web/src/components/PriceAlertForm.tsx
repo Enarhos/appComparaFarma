@@ -68,7 +68,12 @@ export function PriceAlertForm({ matchKey, canonicalName, currentBestPrice }: Pr
 
   return (
     <form onSubmit={handleSubmit} className="flex w-full flex-wrap items-end gap-2 rounded-xl border border-line bg-paper p-3 sm:w-auto">
-      <div className="flex min-w-0 flex-1 flex-col gap-1 sm:flex-none">
+      {/* CF-WEB-001 — con `flex-1` (flex-basis 0) el campo de email se
+          encogía a ~3-18px a ≤390px: el input quedaba inutilizable y su label
+          se superponía con "Avísame si baja de". Una flex-basis real hace que
+          el `flex-wrap` del form sí opere en móvil. `sm:flex-none` se mantiene,
+          así que el layout de escritorio no cambia. */}
+      <div className="flex min-w-0 flex-[1_1_11rem] flex-col gap-1 sm:flex-none">
         <label htmlFor="alert-email" className="text-xs text-muted">
           Tu email
         </label>

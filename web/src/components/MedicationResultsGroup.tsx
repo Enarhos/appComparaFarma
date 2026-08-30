@@ -41,7 +41,15 @@ export function MedicationResultsGroup({ group }: Props) {
           />
         )}
         <div className="flex min-w-0 flex-1 flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-          <h2 className="font-display text-lg font-semibold leading-snug text-ink sm:text-xl">{group.title}</h2>
+          {/* CF-WEB-001 — el título convive con la miniatura de 48px, así que
+              a 320px le quedan ~196px: nombres con tokens compuestos largos y
+              sin espacio ("Vildagliptina/Metformina", "Clorhidrato/Paracetamol")
+              no tenían punto de corte y se salían de la tarjeta. `min-w-0`
+              permite que el ítem flex se encoja y `break-words` habilita el
+              corte dentro del token solo cuando no entra completo. */}
+          <h2 className="min-w-0 break-words font-display text-lg font-semibold leading-snug text-ink sm:text-xl">
+            {group.title}
+          </h2>
           <span className="text-sm text-muted">
             {total} {total === 1 ? "opción encontrada" : "opciones encontradas"}
           </span>
