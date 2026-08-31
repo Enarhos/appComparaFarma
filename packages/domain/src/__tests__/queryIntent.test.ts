@@ -8,15 +8,17 @@
 import { describe, expect, it } from "vitest";
 
 import { cleanQuery } from "../normalization.js";
+import { parseQuantity, parseQueryIntent, queryIntentCacheKey } from "../queryIntent.js";
+// CF-SEARCH-003 movió estas primitivas a `concentration.ts` (ver la cabecera de
+// ese módulo). Los casos de abajo NO se tocaron: verifican exactamente el mismo
+// comportamiento sobre las mismas entradas, y son la evidencia de que el
+// movimiento no cambió semántica.
 import {
   concentrationKey,
   isSameConcentration,
   isSameMeasurement,
   parseConcentration,
-  parseQuantity,
-  parseQueryIntent,
-  queryIntentCacheKey,
-} from "../queryIntent.js";
+} from "../concentration.js";
 
 describe("parseQueryIntent — contrato del ticket", () => {
   it("el ejemplo de referencia se parsea exactamente como especifica CF-SEARCH-002", () => {

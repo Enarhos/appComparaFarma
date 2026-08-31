@@ -1,0 +1,31 @@
+{
+  "note": "Dataset CF-SEARCH-003. `required` = minimo obligatorio del ticket. `investigation` = formas liquidas y controles solidos que la auditoria del catalogo indico como relevantes: marcas de los falsos merges (alledryl, cidoten, tocalm, mintamox), otras suspensiones/gotas/jarabes, e inyectables (unica otra familia con razon masa/volumen frecuente). paracetamol/omeprazol/aspirina son el control solido: el eje no debe tocarlos.",
+  "required": [
+    "ambroxol",
+    "ibuprofeno",
+    "betametasona",
+    "pyriped",
+    "muxol",
+    "amoxicilina suspension",
+    "nistatina",
+    "dipirona"
+  ],
+  "investigation": [
+    "alledryl",
+    "cidoten",
+    "tocalm",
+    "mintamox",
+    "loratadina jarabe",
+    "paracetamol jarabe",
+    "cefadroxilo suspension",
+    "azitromicina suspension",
+    "salbutamol",
+    "diclofenaco",
+    "vitamina d gotas",
+    "clorfenamina jarabe",
+    "ketoprofeno",
+    "paracetamol",
+    "omeprazol",
+    "aspirina"
+  ]
+}

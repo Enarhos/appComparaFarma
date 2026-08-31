@@ -1,0 +1,624 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "muxol",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=muxol",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:50:47.325Z",
+  "completedAt": "2026-08-31T03:50:54.329Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 18,
+  "results": [
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Adulto 30mg/5ml jarabe 100ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Muxol jarabe adulto 100ml Saval DESCUENTO",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmuxol-jarabe-adulto-100-mlsaval-descuento%2F&cfmId=CFM-000997",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/06/muxol-100ml-adulto.jpg",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Muxol Adulto 30mg/5ml jarabe 100ml",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=muxol%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fmuxol-adulto-30mg-5ml-jarabe-100ml&cfmId=CFM-000997",
+          "imageUrl": "https://farmacia.araucomed.com/5839-home_default/muxol-adulto-30mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+          "channels": {
+            "store": 4890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D16812%26d_%3D1&cfmId=CFM-000997",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060009738.jpg?v=6a94fa1d7b6ea",
+          "fetchedAt": "2026-08-31T03:50:53.925Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://farmacia.araucomed.com/5839-home_default/muxol-adulto-30mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml|100",
+      "canonicalName": "Muxol Pediátrico 15mg/5ml jarabe x 100 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Muxol Pediátrico 15mg/5ml jarabe x 100 ml.",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=muxol%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fmuxol-pediatrico-15mg-5ml-jarabe-100ml&cfmId=CFM-001433",
+          "imageUrl": "https://farmacia.araucomed.com/5840-home_default/muxol-pediatrico-15mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 3490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5840-home_default/muxol-pediatrico-15mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "muxol|100ml|100|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001433",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol jarabe infantil 100ml Saval DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Muxol jarabe infantil 100ml Saval DESCUENTO",
+          "channels": {
+            "store": 3580,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3580
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmuxol-jarabe-infantil-100ml-saval-descuento%2F&cfmId=CFM-000997",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/04/muxol-15-5-x-100.jpg",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Muxol Jarabe Pediátrico Ambroxol 300 mg / 100 ml",
+          "channels": {
+            "store": 6190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmuxol-jarabe-pediatrico-ambroxol-300-mg-100-ml%2F6178.html&cfmId=CFM-000997",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwacaf2cbd/images/large/6178-1.jpg",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 3580,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/04/muxol-15-5-x-100.jpg",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Adulto Ambroxol Jarabe 100ml",
+      "laboratory": "Muxol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Muxol Adulto Ambroxol Jarabe 100ml",
+          "channels": {
+            "store": 7399,
+            "online": 4661,
+            "cmr": null,
+            "sbpay": 3921,
+            "effective": 3921
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=muxol%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmuxol-adulto-ambroxol-jarabe-100ml%3Fdefault_sku%3D2979230&cfmId=CFM-000997",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/170054/small/2979230.jpg?1765396260",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 3921,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/170054/small/2979230.jpg?1765396260",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:muxol|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml",
+          "channels": {
+            "store": 4590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmuxol-jarabe-adulto-ambroxol-600-mg-100-ml%2F6179.html&cfmId=CFM-000997",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbca2355f/images/large/6179-1.jpg",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 4590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbca2355f/images/large/6179-1.jpg",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml",
+          "channels": {
+            "store": 4590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmuxol-jarabe-adulto-ambroxol-clorhidrato-600-mg-100-ml-9257.html&cfmId=CFM-000997",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd8dcf54c/images/products/9257/9257.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 4590,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd8dcf54c/images/products/9257/9257.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "muxol|100ml|bio:true|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml|100",
+      "canonicalName": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+      "laboratory": "EUROLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+          "channels": {
+            "store": 5190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=muxol%7C100ml%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmuxol-jarabe-adulto-ambroxol%3F_pos%3D1%26_psq%3Dmuxol%26_psid%3D61ffcebbf%26_ss%3De&cfmId=CFM-001433",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/muxol-jarabe-adulto-ambroxol-30-mg-5-ml-x-100-ml-eurolab-836144.jpg?v=1763923904",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 5190,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/muxol-jarabe-adulto-ambroxol-30-mg-5-ml-x-100-ml-eurolab-836144.jpg?v=1763923904",
+      "presentationKey": "muxol|100ml|100|bio:unknown|brand:eurolab|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001433",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml|100",
+      "canonicalName": "Muxol Pediátrico 15 mg / 5mL x 100 mL",
+      "laboratory": "LAB. SAVAL",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Muxol Pediátrico 15 mg / 5mL x 100 mL",
+          "channels": {
+            "store": 5390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=muxol%7C100ml%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmuxol-pediatrico-15-mg-5ml-x-100-ml%3F_pos%3D7%26_psq%3Dmuxol%26_psid%3D61ffcebbf%26_ss%3De&cfmId=CFM-001433",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/muxol-pediatrico-15-mg-5ml-x-100-ml-lab-saval-258175.jpg?v=1692989566",
+          "fetchedAt": "2026-08-31T03:50:53.925Z"
+        }
+      ],
+      "bestPrice": 5390,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/muxol-pediatrico-15-mg-5ml-x-100-ml-lab-saval-258175.jpg?v=1692989566",
+      "presentationKey": "muxol|100ml|100|bio:unknown|brand:saval|var:infantil",
+      "cfmId": "CFM-001433",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol",
+      "canonicalName": "Muxol Adulto Jarabe...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Muxol Adulto Jarabe...",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=muxol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25414-muxol-adulto-jarabe-x-100ml.html&cfmId=CFM-001440",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:50:53.925Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "muxol|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001440",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol",
+      "canonicalName": "Muxol Pediatrico Jarabe x...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Muxol Pediatrico Jarabe x...",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=muxol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25413-muxol-pediatrico-jarabe-x-100ml.html&cfmId=CFM-001440",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:50:53.925Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "muxol|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001440",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Pediátrico Ambroxol Jarabe 100ml",
+      "laboratory": "Muxol Pediatrico",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Muxol Pediátrico Ambroxol Jarabe 100ml",
+          "channels": {
+            "store": 10999,
+            "online": 6929,
+            "cmr": null,
+            "sbpay": 5829,
+            "effective": 5829
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=muxol%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmuxol-pediatrico-ambroxol-jarabe-100ml%3Fdefault_sku%3D2979220&cfmId=CFM-000997",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/185031/small/2979220_1.jpg?1777407458",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 5829,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/185031/small/2979220_1.jpg?1777407458",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:muxolpediatrico|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Jarabe Pediátrico Ambroxol Clorhidrato 300 mg 100 ml",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Muxol Jarabe Pediátrico Ambroxol Clorhidrato 300 mg 100 ml",
+          "channels": {
+            "store": 6190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmuxol-jarabe-pediatrico-ambroxol-clorhidrato-300-mg-100-ml-9166.html&cfmId=CFM-000997",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd8b1abce/images/products/9166/9166.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 6190,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd8b1abce/images/products/9166/9166.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "muxol|100ml|bio:true|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxelix|120ml",
+      "canonicalName": "Muxelix Hedera Helix Jarabe 120ml",
+      "laboratory": "Muxelix",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Muxelix Hedera Helix Jarabe 120ml",
+          "channels": {
+            "store": 12999,
+            "online": 7669,
+            "cmr": null,
+            "sbpay": 6370,
+            "effective": 6370
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=muxelix%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmuxelix-hedera-helix-jarabe-120ml%3Fdefault_sku%3D2970424&cfmId=CFM-014021",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149777/small/2970424.jpg?1751030765",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 6370,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149777/small/2970424.jpg?1751030765",
+      "presentationKey": "muxelix|120ml|bio:unknown|brand:muxelix|var:hedera|form:fluid-oral",
+      "cfmId": "CFM-014021",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "muxol|30mg|20",
+      "canonicalName": "Muxol 30 mg x 20 comprimidos",
+      "laboratory": "LAB. SAVAL",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Muxol 30 mg x 20 comprimidos",
+          "channels": {
+            "store": 7090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=muxol%7C30mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmuxol-30-mg-x-20-comp%3F_pos%3D4%26_psq%3Dmuxol%26_psid%3D61ffcebbf%26_ss%3De&cfmId=CFM-001437",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/muxol-30-mg-x-20-comprimidos-farmex-pluxee-persistente-943878.webp?v=1784664024",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 7090,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/muxol-30-mg-x-20-comprimidos-farmex-pluxee-persistente-943878.webp?v=1784664024",
+      "presentationKey": "muxol|30mg|20|bio:unknown|brand:saval|form:solid-oral",
+      "cfmId": "CFM-001437",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|20",
+      "canonicalName": "Muxol Ambroxol 20 Comprimidos",
+      "laboratory": "Muxol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Muxol Ambroxol 20 Comprimidos",
+          "channels": {
+            "store": 11399,
+            "online": 10031,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10031
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=muxol%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmuxol-ambroxol-20-comprimidos%3Fdefault_sku%3D2979200&cfmId=CFM-001441",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/128966/small/2979200_1.jpg?1733505011",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 10031,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/128966/small/2979200_1.jpg?1733505011",
+      "presentationKey": "muxol|20|bio:unknown|brand:muxol|var:ambroxol|form:solid-oral",
+      "cfmId": "CFM-001441",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|30mg|20",
+      "canonicalName": "Muxol Ambroxol 30 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Muxol Ambroxol 30 mg 20 Comprimidos",
+          "channels": {
+            "store": 11190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=muxol%7C30mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmuxol-ambroxol-30-mg-20-comprimidos%2F6176.html&cfmId=CFM-001437",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw56d5e471/images/large/6176-1.jpg",
+          "fetchedAt": "2026-08-31T03:50:53.923Z"
+        }
+      ],
+      "bestPrice": 11190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw56d5e471/images/large/6176-1.jpg",
+      "presentationKey": "muxol|30mg|20|bio:unknown|brand:unknown|var:ambroxol|form:solid-oral",
+      "cfmId": "CFM-001437",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jakavi|10mg|60",
+      "canonicalName": "Jakavi Ruxolitinib 10mg 60 Comprimidos",
+      "laboratory": "Jakavi",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Jakavi Ruxolitinib 10mg 60 Comprimidos",
+          "channels": {
+            "store": 4244999,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4244999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=jakavi%7C10mg%7C60&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fjakavi-ruxolitinib-10mg-60-comprimidos%3Fdefault_sku%3D296425&cfmId=CFM-009480",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/191468/small/296425_-_Huincha.jpg?1780416914",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 4244999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/191468/small/296425_-_Huincha.jpg?1780416914",
+      "presentationKey": "jakavi|10mg|60|bio:unknown|brand:jakavi|var:ruxolitinib|form:solid-oral",
+      "cfmId": "CFM-009480",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "jakavi|15mg|60",
+      "canonicalName": "Jakavi Ruxolitinib 15mg 60 Comprimidos",
+      "laboratory": "Jakavi",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Jakavi Ruxolitinib 15mg 60 Comprimidos",
+          "channels": {
+            "store": 4275599,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4275599
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=jakavi%7C15mg%7C60&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fjakavi-ruxolitinib-15mg-60-comprimidos%3Fdefault_sku%3D296580&cfmId=CFM-009481",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/191466/small/296580_-_Huincha.jpg?1780416594",
+          "fetchedAt": "2026-08-31T03:50:53.924Z"
+        }
+      ],
+      "bestPrice": 4275599,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/191466/small/296580_-_Huincha.jpg?1780416594",
+      "presentationKey": "jakavi|15mg|60|bio:unknown|brand:jakavi|var:ruxolitinib|form:solid-oral",
+      "cfmId": "CFM-009481",
+      "lexicalMatch": "compatible"
+    }
+  ]
+}

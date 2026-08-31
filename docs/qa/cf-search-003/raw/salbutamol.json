@@ -1,0 +1,2394 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "salbutamol",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=salbutamol",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:52:31.871Z",
+  "completedAt": "2026-08-31T03:52:40.927Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 74,
+  "results": [
+    {
+      "matchKey": "salbutamol|2mg",
+      "canonicalName": "Salbutamol 2 mg comprimidos",
+      "laboratory": "DR. SIMI",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Salbutamol 2 mg comprimidos",
+          "channels": {
+            "store": 1290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=salbutamol%7C2mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fsalbutamol-2-mg-20-comprimidos-ch0082nd%2Fp&cfmId=CFM-001982",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157241/CH0082ND.jpg?v=638016277627100000",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 1290,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157241/CH0082ND.jpg?v=638016277627100000",
+      "presentationKey": "salbutamol|2mg|bio:false|brand:drsimi|form:solid-oral",
+      "cfmId": "CFM-001982",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol 100mcg 200 dosis Faes Farma (Cenabast)",
+      "laboratory": "Faes Farma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol 100mcg 200 dosis Faes Farma (Cenabast)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-100mcg-200-dosis-faes-farma-cenabast&cfmId=CFM-002219",
+          "imageUrl": "https://farmacia.araucomed.com/8936-home_default/salbutamol-100mcg-200-dosis-faes-farma-cenabast.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8936-home_default/salbutamol-100mcg-200-dosis-faes-farma-cenabast.jpg",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:faesfarma",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sacrusyt|100mcg",
+      "canonicalName": "Sacrusyt HFA 100mcg 200 dosis (Cenabast)",
+      "laboratory": "Biosyntec",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Sacrusyt HFA 100mcg 200 dosis (Cenabast)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=sacrusyt%7C100mcg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsacrusyt-hfa-100mcg-200-dosis-cenabast&cfmId=CFM-003954",
+          "imageUrl": "https://farmacia.araucomed.com/7039-home_default/sacrusyt-hfa-100mcg-200-dosis-cenabast.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7039-home_default/sacrusyt-hfa-100mcg-200-dosis-cenabast.jpg",
+      "presentationKey": "sacrusyt|100mcg|bio:unknown|brand:biosyntec|var:hfa",
+      "cfmId": "CFM-003954",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "salbutamol|100ml|100",
+      "canonicalName": "Salbutamol Jarabe 2 mg / 5 mL x 100 mL",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol 2mg/5ml jarabe x 100 ml. (Mintlab)",
+          "channels": {
+            "store": 1500,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1500
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-2mg-5ml-jarabe-120ml-mintlab&cfmId=CFM-003289",
+          "imageUrl": "https://farmacia.araucomed.com/5918-home_default/salbutamol-2mg-5ml-jarabe-120ml-mintlab.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Salbutamol Jarabe 2 mg / 5 mL x 100 mL",
+          "channels": {
+            "store": 1690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=salbutamol%7C100ml%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsalbutamol-jarabe-salbutamol%3F_pos%3D4%26_psq%3Dsalbutamol%26_psid%3D82d4ffed5%26_ss%3De&cfmId=CFM-003289",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-jarabe-2-mg-5-ml-x-100-ml-mintlab-770843.webp?v=1758736797",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 1500,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-jarabe-2-mg-5-ml-x-100-ml-mintlab-770843.webp?v=1758736797",
+      "presentationKey": "salbutamol|100ml|100|bio:unknown|brand:mintlab|form:fluid-oral",
+      "cfmId": "CFM-003289",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol 100Mcg inhalador 200 dosis (Hospifarma)",
+      "laboratory": "Hospifarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol 100Mcg inhalador 200 dosis (Hospifarma)",
+          "channels": {
+            "store": 1590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1590
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-100mcg-inhalador-200-dosis-hospifarma&cfmId=CFM-002219",
+          "imageUrl": "https://farmacia.araucomed.com/7000-home_default/salbutamol-100mcg-inhalador-200-dosis-hospifarma.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 1590,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7000-home_default/salbutamol-100mcg-inhalador-200-dosis-hospifarma.jpg",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:hospifarma|form:inhaled",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol 100mcg 200 dosis. Mintlab (Cenabast)",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol 100mcg 200 dosis. Mintlab (Cenabast)",
+          "channels": {
+            "store": 1790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-100mcg-200-dosis-mintlab-cenabast&cfmId=CFM-002219",
+          "imageUrl": "https://farmacia.araucomed.com/11048-home_default/salbutamol-100mcg-200-dosis-mintlab-cenabast.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 1790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/11048-home_default/salbutamol-100mcg-200-dosis-mintlab-cenabast.jpg",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:mintlab",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol SACRUSYT HFA 100mcg (BIOSyntec) (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Salbutamol SACRUSYT HFA 100mcg (BIOSyntec) (Cenabast)",
+          "channels": {
+            "store": 1790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsalbutamol-sacrusyt-hfa-aerosol-para-inhalacion-100-mcg-dosis%2F&cfmId=CFM-002219",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/03/salbutamol-100-mcg.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 1790,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/03/salbutamol-100-mcg.jpg",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:unknown|var:sacrusyt",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol LF 100mcg inhalador 200 dosis (Mintlab)",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol LF 100mcg inhalador 200 dosis (Mintlab)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-lf-100mcg-inhalador-200-dosis-mintlab&cfmId=CFM-002219",
+          "imageUrl": "https://farmacia.araucomed.com/9672-home_default/salbutamol-lf-100mcg-inhalador-200-dosis-mintlab.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9672-home_default/salbutamol-lf-100mcg-inhalador-200-dosis-mintlab.jpg",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:mintlab|var:lf|form:inhaled",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg|200",
+      "canonicalName": "Salbutamol 100 mcg / dosis x 200 dosis",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol 100 mcg  x 200 dosis. (Mintlab)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C100mcg%7C200&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-100-mcg-x-200-dosis-mintlab&cfmId=CFM-003295",
+          "imageUrl": "https://farmacia.araucomed.com/13075-home_default/salbutamol-100-mcg-x-200-dosis-mintlab.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Salbutamol 100 mcg / dosis x 200 dosis",
+          "channels": {
+            "store": 2390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=salbutamol%7C100mcg%7C200&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsalbutamol-100-mcg-dosis-x-200%3F_pos%3D1%26_psq%3Dsalbutamol%26_psid%3D82d4ffed5%26_ss%3De&cfmId=CFM-003295",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-100-mcg-dosis-x-200-dosis-mintlab-834276.jpg?v=1758737615",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-100-mcg-dosis-x-200-dosis-mintlab-834276.jpg?v=1758737615",
+      "presentationKey": "salbutamol|100mcg|200|bio:unknown|brand:mintlab",
+      "cfmId": "CFM-003295",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg|200",
+      "canonicalName": "Salbutamol 100 Mcg/ds X 200 Ds",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Salbutamol 100 mcg/dosis x 200 dosis -Cenabast",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=salbutamol%7C100mcg%7C200&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsalbutamol-100-mcg-dosis-x-200-dosis-cenabast%2F&cfmId=CFM-003295",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/09/Salbutamol-100-mcg-dosis-x-200-dosis-1.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Salbutamol 100 Mcg/ds X 200 Ds",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=salbutamol%7C100mcg%7C200&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20748%26d_%3D1&cfmId=CFM-003295",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804629440529.jpg?v=6a94fa85d1b8c",
+          "fetchedAt": "2026-08-31T03:52:40.402Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804629440529.jpg?v=6a94fa85d1b8c",
+      "presentationKey": "salbutamol|100mcg|200|bio:unknown|brand:unknown",
+      "cfmId": "CFM-003295",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg|200",
+      "canonicalName": "Salbutamol 100 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral FAES FARMA CHILE",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Salbutamol 100 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral FAES FARMA CHILE",
+          "channels": {
+            "store": 2022,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2022
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=salbutamol%7C100mcg%7C200&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsalbutamol-100-mcg-dosis-x-200-dosis-aerosol-para-inhalacion-oral-faes-farma-chile-90338.html&cfmId=CFM-003295",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf7e36822/images/products/90338/90338.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 2022,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf7e36822/images/products/90338/90338.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "salbutamol|100mcg|200|bio:unknown|brand:unknown|form:inhaled",
+      "cfmId": "CFM-003295",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol 100mcg Inhalador 200 Dosis",
+      "laboratory": "Salbutamol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Salbutamol 100mcg Inhalador 200 Dosis",
+          "channels": {
+            "store": 2299,
+            "online": 2023,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2023
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalbutamol-100-mcg-inhalador%3Fdefault_sku%3D582109&cfmId=CFM-002219",
+          "imageUrl": "https://static.salcobrandonline.cl/spree/products/81386/small/582109.jpg?1665763685",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 2023,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrandonline.cl/spree/products/81386/small/582109.jpg?1665763685",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:salbutamol|form:inhaled",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg|250",
+      "canonicalName": "Salbutamol 100 mcg  x 250 dosis. (Chemopharma)",
+      "laboratory": "Chemopharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol 100 mcg  x 250 dosis. (Chemopharma)",
+          "channels": {
+            "store": 2290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C100mcg%7C250&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-100-mcg-x-250-dosis-chemopharma&cfmId=CFM-003282",
+          "imageUrl": "https://farmacia.araucomed.com/14628-home_default/salbutamol-100-mcg-x-250-dosis-chemopharma.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 2290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14628-home_default/salbutamol-100-mcg-x-250-dosis-chemopharma.jpg",
+      "presentationKey": "salbutamol|100mcg|250|bio:unknown|brand:chemopharma",
+      "cfmId": "CFM-003282",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol 100 mcg / dosis Aerosol para inhalación",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Salbutamol 100 mcg / dosis Aerosol para inhalación",
+          "channels": {
+            "store": 2640,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2640
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsalbutamol-100-mcg-dosis-aerosol-para-inhalacion%2F&cfmId=CFM-002219",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/salbutamol-200-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 2640,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/salbutamol-200-dosis.jpg",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:unknown|form:inhaled",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100ml|100",
+      "canonicalName": "Salbutamol 2 mg/5 mL x 100 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Salbutamol 2 mg/5 mL x 100 mL Jarabe",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": 2707,
+            "sbpay": null,
+            "effective": 2707
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=salbutamol%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsalbutamol-2-mg-5-ml-x-100-ml-jarabe-3277.html&cfmId=CFM-003289",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa82a8c5f/images/products/3277/3277.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 2707,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa82a8c5f/images/products/3277/3277.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "salbutamol|100ml|100|bio:true|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-003289",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mg|200",
+      "canonicalName": "Salbutamol 100 mg / dosis x 200 dosis",
+      "laboratory": "OPKO",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Salbutamol 100 mg / dosis x 200 dosis",
+          "channels": {
+            "store": 2795,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2795
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=salbutamol%7C100mg%7C200&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsalbutamol-100-mg-200-dosis-opko%3F_pos%3D2%26_psq%3Dsalbutamol%26_psid%3D82d4ffed5%26_ss%3De&cfmId=CFM-003278",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-100-mg-dosis-x-200-dosis-opko-511929.webp?v=1737062687",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 2795,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-100-mg-dosis-x-200-dosis-opko-511929.webp?v=1737062687",
+      "presentationKey": "salbutamol|100mg|200|bio:unknown|brand:opko",
+      "cfmId": "CFM-003278",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mg|200",
+      "canonicalName": "Salbutamol 100 mg / dosis x 200 dosis.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Salbutamol 100 mg / dosis x 200 dosis.",
+          "channels": {
+            "store": 2795,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2795
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=salbutamol%7C100mg%7C200&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsalbutamol-100-mg-dosis-x-200-dosis-3%3F_pos%3D5%26_psq%3Dsalbutamol%26_psid%3D82d4ffed5%26_ss%3De&cfmId=CFM-003278",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-100-mg-dosis-x-200-dosis-opko-511929_385d5eeb-b677-433b-bf0e-4a36c4ed8599.webp?v=1787934362",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 2795,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-100-mg-dosis-x-200-dosis-opko-511929_385d5eeb-b677-433b-bf0e-4a36c4ed8599.webp?v=1787934362",
+      "presentationKey": "salbutamol|100mg|200|bio:unknown|brand:unknown",
+      "cfmId": "CFM-003278",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol 100 mcg/dosis aerosol para inhalación 200 dosis",
+      "laboratory": "HOSPIFARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Salbutamol 100 mcg/dosis aerosol para inhalación 200 dosis",
+          "channels": {
+            "store": 2800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2800
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Fwww.drsimi.cl%2Fsalbutamol-100-mcg-spray-200-dosis%2Fp&cfmId=CFM-002219",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159745/1780-1-pag.webp?v=638943232225900000",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 2800,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159745/1780-1-pag.webp?v=638943232225900000",
+      "presentationKey": "salbutamol|100mcg|bio:false|brand:hospifarma|form:inhaled",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|120ml",
+      "canonicalName": "Salbutamol 2mg/5ml Jarabe 120ml",
+      "laboratory": "Salbutamol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Salbutamol 2mg/5ml Jarabe 120ml",
+          "channels": {
+            "store": 3399,
+            "online": 2991,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2991
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=salbutamol%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalbutamol-2mg-5ml-jbe-x120ml%3Fdefault_sku%3D2203026&cfmId=CFM-003280",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/37672/small/SKU_2203026.jpg?1641477281",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 2991,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/37672/small/SKU_2203026.jpg?1641477281",
+      "presentationKey": "salbutamol|120ml|bio:unknown|brand:salbutamol|form:fluid-oral",
+      "cfmId": "CFM-003280",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100ml",
+      "canonicalName": "Salbutamol 2 mg/5mL Jarabe 100 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Salbutamol 2 mg/5mL Jarabe 100 mL",
+          "channels": {
+            "store": 3590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=salbutamol%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsalbutamol-2-mg-5ml-jarabe-100-ml%2F268738.html&cfmId=CFM-003276",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfb8add80/images/large/268738.1.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 3590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfb8add80/images/large/268738.1.jpg",
+      "presentationKey": "salbutamol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-003276",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol LF 100 mcg / Dosis Inhalador Bucal 200 Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Salbutamol LF 100 mcg / Dosis Inhalador Bucal 200 Dosis",
+          "channels": {
+            "store": 3690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsalbutamol-lf-100-mcg-dosis-inhalador-bucal-200-dosis%2F225472.html&cfmId=CFM-002219",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw73314a03/images/large/225472-salbutamol-lf-inhalador-bucal-200-dosis-salbutamol-100-mcg-ds.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 3690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw73314a03/images/large/225472-salbutamol-lf-inhalador-bucal-200-dosis-salbutamol-100-mcg-ds.jpg",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:unknown|var:lf|form:inhaled",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol 100 mcg/dosis aerosol LF para inhalación bucal 250 dosis",
+      "laboratory": "CHEMOPHARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Salbutamol 100 mcg/dosis aerosol LF para inhalación bucal 250 dosis",
+          "channels": {
+            "store": 4000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Fwww.drsimi.cl%2Fsalbutamol-100-mcg-dosis-aerosol-l-f-para-inhalacion-bucal-250-dosis%2Fp&cfmId=CFM-002219",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158596/CH5978-1.jpg?v=638677962558470000",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 4000,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158596/CH5978-1.jpg?v=638677962558470000",
+      "presentationKey": "salbutamol|100mcg|bio:false|brand:chemopharma|form:inhaled",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|50mcg|200",
+      "canonicalName": "SALBUTAMOL &#8211; BECLOMETASONA Inhalador (100/50 mcg/dosis) x 200 dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "SALBUTAMOL &#8211; BECLOMETASONA Inhalador (100/50 mcg/dosis) x 200 dosis",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=salbutamol%7C50mcg%7C200&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsalbutamol-beclometasona-inhalador%2F&cfmId=CFM-003291",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/salbutamol.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 4290,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/salbutamol.jpg",
+      "presentationKey": "salbutamol|50mcg|200|bio:unknown|brand:unknown|var:beclometasona|form:inhaled",
+      "cfmId": "CFM-003291",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|200",
+      "canonicalName": "Salbutamol + Beclometasona 100 / 50 x 200 dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Salbutamol + Beclometasona 100 / 50 x 200 dosis",
+          "channels": {
+            "store": 4346,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4346
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=salbutamol%7C200&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsalbutamol-beclometasona-100-50-x-200-dosis-3%3F_pos%3D6%26_psq%3Dsalbutamol%26_psid%3D82d4ffed5%26_ss%3De&cfmId=CFM-003281",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-beclometasona-100-50-x-200-dosis-farmex-banmedica-persistente-265920.jpg?v=1714713623",
+          "fetchedAt": "2026-08-31T03:52:40.402Z"
+        }
+      ],
+      "bestPrice": 4346,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/salbutamol-beclometasona-100-50-x-200-dosis-farmex-banmedica-persistente-265920.jpg?v=1714713623",
+      "presentationKey": "salbutamol|200|bio:unknown|brand:unknown|combo:beclometasona",
+      "cfmId": "CFM-003281",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol",
+      "canonicalName": "Salbutamol Beclometasona Inhalador 200 dosis (Chemopharma)",
+      "laboratory": "Chemopharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol Beclometasona Inhalador 200 dosis (Chemopharma)",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-beclometasona-inh-200-dosis-chemopharma&cfmId=CFM-003296",
+          "imageUrl": "https://farmacia.araucomed.com/4152-home_default/salbutamol-beclometasona-inh-200-dosis-chemopharma.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 4490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/4152-home_default/salbutamol-beclometasona-inh-200-dosis-chemopharma.jpg",
+      "presentationKey": "salbutamol|bio:unknown|brand:chemopharma|var:beclometasona|form:inhaled",
+      "cfmId": "CFM-003296",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "butotal|100mcg",
+      "canonicalName": "Butotal Salbutamol 100mcg Inhalador 250 Dosis",
+      "laboratory": "Butotal",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Butotal Salbutamol 100mcg Inhalador 250 Dosis",
+          "channels": {
+            "store": 5699,
+            "online": 5015,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5015
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=butotal%7C100mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbutotal-salbutamol-100mcg-inhalador-250-dosis%3Fdefault_sku%3D850094&cfmId=CFM-003287",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27800/small/850094.jpg?1641479709",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 5015,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27800/small/850094.jpg?1641479709",
+      "presentationKey": "butotal|100mcg|bio:unknown|brand:butotal|form:inhaled",
+      "cfmId": "CFM-003287",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg|200",
+      "canonicalName": "Salbutamol + Beclometasona 100 mcg/50 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral CHEMOPHARMA",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Salbutamol + Beclometasona 100 mcg/50 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral CHEMOPHARMA",
+          "channels": {
+            "store": 6560,
+            "online": null,
+            "cmr": 5249,
+            "sbpay": null,
+            "effective": 5249
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=salbutamol%7C100mcg%7C200&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsalbutamol-beclometasona-100-mcg-50-mcg-dosis-x-200-dosis-aerosol-para-inhalacion-oral-chemopharma-46533.html&cfmId=CFM-003295",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa2b2505d/images/products/46533/46533.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 5249,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa2b2505d/images/products/46533/46533.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "salbutamol|100mcg|200|bio:unknown|brand:unknown|combo:beclometasona|form:inhaled",
+      "cfmId": "CFM-003295",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "butotal|100mcg",
+      "canonicalName": "Butotal Salbutamol 100 mcg Inhalador Bucal 250 Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Butotal Salbutamol 100 mcg Inhalador Bucal 250 Dosis",
+          "channels": {
+            "store": 5690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=butotal%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbutotal-salbutamol-100-mcg-inhalador-bucal-250-dosis%2F251207.html&cfmId=CFM-003287",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw36c4c5e7/images/large/251207-butotal-salbutamol-100-mcg-inhalador-bucal-250-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 5690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw36c4c5e7/images/large/251207-butotal-salbutamol-100-mcg-inhalador-bucal-250-dosis.jpg",
+      "presentationKey": "butotal|100mcg|bio:unknown|brand:unknown|form:inhaled",
+      "cfmId": "CFM-003287",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "asmaventb",
+      "canonicalName": "Asmavent-b Inhalador 200 dosis",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Asmavent-b Inhalador 200 dosis",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=asmaventb&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fasmavent-b-inhalador-200-dosis&cfmId=CFM-003955",
+          "imageUrl": "https://farmacia.araucomed.com/4149-home_default/asmavent-b-inhalador-200-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/4149-home_default/asmavent-b-inhalador-200-dosis.jpg",
+      "presentationKey": "asmaventb|bio:unknown|brand:mintlab|form:inhaled",
+      "cfmId": "CFM-003955",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aerohaler|100mcg",
+      "canonicalName": "Aerohaler Salbutamol 100mcg/dosis Aerosol para Inhalación 200 Dosis",
+      "laboratory": "Aerohaler",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Aerohaler Salbutamol 100mcg/dosis Aerosol para Inhalación 200 Dosis",
+          "channels": {
+            "store": 7799,
+            "online": 6863,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6863
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=aerohaler%7C100mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Faerohaler-salbutamol-100mcg-dosis-aerosol-para-inhalacion-200-dosis%3Fdefault_sku%3D591711&cfmId=CFM-003286",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149245/small/591711_1.jpg?1750772484",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 6863,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149245/small/591711_1.jpg?1750772484",
+      "presentationKey": "aerohaler|100mcg|bio:unknown|brand:aerohaler|form:inhaled",
+      "cfmId": "CFM-003286",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|100mcg",
+      "canonicalName": "Salbutamol con Beclometasona Salbutamol 100 mcg Inhalador Bucal 200 Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Salbutamol con Beclometasona Salbutamol 100 mcg Inhalador Bucal 200 Dosis",
+          "channels": {
+            "store": 7290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=salbutamol%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsalbutamol-con-beclometasona-salbutamol-100-mcg-inhalador-bucal-200-dosis%2F199454.html&cfmId=CFM-002219",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw945527c4/images/large/199454-1.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 7290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw945527c4/images/large/199454-1.jpg",
+      "presentationKey": "salbutamol|100mcg|bio:unknown|brand:unknown|var:beclometasona|form:inhaled",
+      "cfmId": "CFM-002219",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sinasmal|100mcg",
+      "canonicalName": "Sinasmal SF salbutamol 100mcg dosis inhalador 200 DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Sinasmal SF salbutamol 100mcg dosis inhalador 200 DESCUENTO",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=sinasmal%7C100mcg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsinasmal-sf-salbutamol-100mcg-dosis-inhalador-200-descuento%2F&cfmId=CFM-003293",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/06/sinasmalSFsalbutamol100mcgaerosol.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Sinasmal Sf Salbutamol 100 mcg / DS Inhalador Bucal 200 Dosis",
+          "channels": {
+            "store": 14040,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14040
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=sinasmal%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsinasmal-sf-salbutamol-100-mcg-ds-inhalador-bucal-200-dosis%2F263288.html&cfmId=CFM-003293",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb47dfb79/images/large/263288-sinasmal-sf-inhalador-bucal-200-dosis-salbutamol-100-mcg-ds.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/06/sinasmalSFsalbutamol100mcgaerosol.jpg",
+      "presentationKey": "sinasmal|100mcg|bio:unknown|brand:unknown|var:sf|form:inhaled",
+      "cfmId": "CFM-003293",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "asmavent|100mcg",
+      "canonicalName": "Asmavent Sf Salbutamol 100 mcg/Dosis Inhalador Bucal 200 Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Asmavent Sf Salbutamol 100 mcg/Dosis Inhalador Bucal 200 Dosis",
+          "channels": {
+            "store": 8340,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8340
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=asmavent%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fasmavent-sf-salbutamol-100-mcg-dosis-inhalador-bucal-200-dosis%2F262866.html&cfmId=CFM-003277",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9ec80944/images/large/262866-asmavent-sf-inhalador-bucal-200-dosis-salbutamol-100-mcg-ds.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 8340,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9ec80944/images/large/262866-asmavent-sf-inhalador-bucal-200-dosis-salbutamol-100-mcg-ds.jpg",
+      "presentationKey": "asmavent|100mcg|bio:unknown|brand:unknown|var:sf|form:inhaled",
+      "cfmId": "CFM-003277",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aerohaler|100mcg",
+      "canonicalName": "Aerohaler Aerosol Para Inhalar 100 mcg/Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Aerohaler Aerosol Para Inhalar 100 mcg/Dosis",
+          "channels": {
+            "store": 8390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=aerohaler%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Faerohaler-aerosol-para-inhalar-100-mcg-dosis%2F575124.html&cfmId=CFM-003286",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf61da4a1/images/large/575124-1.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 8390,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf61da4a1/images/large/575124-1.jpg",
+      "presentationKey": "aerohaler|100mcg|bio:unknown|brand:unknown|var:inhalar|form:inhaled",
+      "cfmId": "CFM-003286",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "salbutamol",
+      "canonicalName": "Salbutamol / Beclometasona Inhalación 200 Dosis",
+      "laboratory": "Salbutamol Beclomet",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Salbutamol / Beclometasona Inhalación 200 Dosis",
+          "channels": {
+            "store": 9999,
+            "online": 8799,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8799
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=salbutamol&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalbutamol-beclometasona-inhalacion-200-dosis%3Fdefault_sku%3D2980482&cfmId=CFM-003296",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/74724/small/2980482.jpg?1654889651",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 8799,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/74724/small/2980482.jpg?1654889651",
+      "presentationKey": "salbutamol|bio:unknown|brand:salbutamolbeclomet|combo:beclometasona|form:inhaled",
+      "cfmId": "CFM-003296",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|20ml|20",
+      "canonicalName": "Salbutamol Solución para nebulizar 5mg/ml x 20 ml. (Ethon)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol Solución para nebulizar 5mg/ml x 20 ml. (Ethon)",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C20ml%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-solucion-5mg-ml-x20ml-ethon&cfmId=CFM-001983",
+          "imageUrl": "https://farmacia.araucomed.com/8205-home_default/salbutamol-solucion-5mg-ml-x20ml-ethon.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8205-home_default/salbutamol-solucion-5mg-ml-x20ml-ethon.jpg",
+      "presentationKey": "salbutamol|20ml|20|bio:unknown|brand:unknown|var:nebulizar|form:fluid-oral",
+      "cfmId": "CFM-001983",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|20ml|20",
+      "canonicalName": "Salbutamol Solución para Nebulizador 5 mg / mL x 20 mL",
+      "laboratory": "LAFEDAR",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Salbutamol Solución para Nebulizador 5 mg / mL x 20 mL",
+          "channels": {
+            "store": 9190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=salbutamol%7C20ml%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsalbutamol-sol-para-nebulizador-5-mg-ml-x-20-ml%3F_pos%3D3%26_psq%3Dsalbutamol%26_psid%3D82d4ffed5%26_ss%3De&cfmId=CFM-001983",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/salbutamol-sol-para-nebulizador-5-mgml-x-20-ml-lafedar-528916.jpg?v=1692989692",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 9190,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/salbutamol-sol-para-nebulizador-5-mgml-x-20-ml-lafedar-528916.jpg?v=1692989692",
+      "presentationKey": "salbutamol|20ml|20|bio:unknown|brand:lafedar|var:nebulizador|form:fluid-oral",
+      "cfmId": "CFM-001983",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sinasmal|100mcg",
+      "canonicalName": "Sinasmal SF salbutamol 100mcg/sosis inhalador 200 dosis  (Lab Chile) DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Sinasmal SF salbutamol 100mcg/sosis inhalador 200 dosis  (Lab Chile) DESCUENTO",
+          "channels": {
+            "store": 9600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9600
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=sinasmal%7C100mcg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsinasmal-sf-salbutamol-100mcg-sosis-inhalador-200-dosis-lab-chile-descuento%2F&cfmId=CFM-003293",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/202918-scaled.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 9600,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/202918-scaled.jpg",
+      "presentationKey": "sinasmal|100mcg|bio:unknown|brand:unknown|combo:sosis|form:inhaled",
+      "cfmId": "CFM-003293",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|20ml|20",
+      "canonicalName": "Salbutamol Solución para nebulizar 5mg/ml x 20 ml. (Ladefar)",
+      "laboratory": "Ladefar",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutamol Solución para nebulizar 5mg/ml x 20 ml. (Ladefar)",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutamol%7C20ml%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutamol-solucion-para-nebulizar-5mg-ml-x-20-ml-ladefar&cfmId=CFM-001983",
+          "imageUrl": "https://farmacia.araucomed.com/14199-home_default/salbutamol-solucion-para-nebulizar-5mg-ml-x-20-ml-ladefar.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14199-home_default/salbutamol-solucion-para-nebulizar-5mg-ml-x-20-ml-ladefar.jpg",
+      "presentationKey": "salbutamol|20ml|20|bio:unknown|brand:ladefar|var:nebulizar|form:fluid-oral",
+      "cfmId": "CFM-001983",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sinasmal|100mcg|200",
+      "canonicalName": "Sinasmal SF 100 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Sinasmal SF 100 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral",
+          "channels": {
+            "store": 14429,
+            "online": null,
+            "cmr": 10822,
+            "sbpay": null,
+            "effective": 10822
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=sinasmal%7C100mcg%7C200&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsinasmal-sf-100-mcg-dosis-x-200-dosis-aerosol-para-inhalacion-oral-70239.html&cfmId=CFM-003279",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1d17e58d/images/products/70239/70239.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 10822,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1d17e58d/images/products/70239/70239.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "sinasmal|100mcg|200|bio:unknown|brand:unknown|var:sf|form:inhaled",
+      "cfmId": "CFM-003279",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "bropil|100mcg|200",
+      "canonicalName": "Bropil LF 100 mcg/dosis x 200 Dosis Aerosol para Inhalación",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Bropil LF 100 mcg/dosis x 200 Dosis Aerosol para Inhalación",
+          "channels": {
+            "store": 14649,
+            "online": null,
+            "cmr": 10987,
+            "sbpay": null,
+            "effective": 10987
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=bropil%7C100mcg%7C200&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbropil-lf-100-mcg-dosis-x-200-dosis-aerosol-para-inhalacion-62242.html&cfmId=CFM-003300",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc104b441/images/products/62242/62242.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 10987,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc104b441/images/products/62242/62242.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "bropil|100mcg|200|bio:unknown|brand:unknown|var:lf|form:inhaled",
+      "cfmId": "CFM-003300",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "butocort",
+      "canonicalName": "Butocort Inhalador 250 dosis",
+      "laboratory": "Pablo Cassara",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Butocort Inhalador 250 dosis",
+          "channels": {
+            "store": 10990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=butocort&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fbutocort-inhalador-250-dosis&cfmId=CFM-003285",
+          "imageUrl": "https://farmacia.araucomed.com/10893-home_default/butocort-inhalador-250-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 10990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10893-home_default/butocort-inhalador-250-dosis.jpg",
+      "presentationKey": "butocort|bio:unknown|brand:pablocassara|form:inhaled",
+      "cfmId": "CFM-003285",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "salbutamol|20ml",
+      "canonicalName": "Salbutamol 0.5% Nebulizador 20ml",
+      "laboratory": "Salbutamol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Salbutamol 0.5% Nebulizador 20ml",
+          "channels": {
+            "store": 13099,
+            "online": 11527,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11527
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=salbutamol%7C20ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalbutamol-0-5-nebulizador-20ml%3Fdefault_sku%3D1190022&cfmId=CFM-000095",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/72410/small/1190022.jpg?1652283026",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 11527,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/72410/small/1190022.jpg?1652283026",
+      "presentationKey": "salbutamol|20ml|bio:unknown|brand:salbutamol|var:nebulizador",
+      "cfmId": "CFM-000095",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|20ml|20",
+      "canonicalName": "Salbutamol 5 mg/ml x 20 ml Solución para Nebulización BPH S.A.",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Salbutamol 5 mg/ml x 20 ml Solución para Nebulización BPH S.A.",
+          "channels": {
+            "store": 11960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=salbutamol%7C20ml%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsalbutamol-5-mg-ml-x-20-ml-solucion-para-nebulizacion-bph-s.a.-87321.html&cfmId=CFM-001983",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2cce8a67/images/products/87321/87321.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 11960,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2cce8a67/images/products/87321/87321.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "salbutamol|20ml|20|bio:true|brand:unknown|form:inhaled",
+      "cfmId": "CFM-001983",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "herolan|200",
+      "canonicalName": "Herolan SF Inhalador x 200 dosis",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Herolan SF Inhalador x 200 dosis",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=herolan%7C200&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fherolan-sf-inhalador-x-200-dosis&cfmId=CFM-003956",
+          "imageUrl": "https://farmacia.araucomed.com/13788-home_default/herolan-sf-inhalador-x-200-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 11990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13788-home_default/herolan-sf-inhalador-x-200-dosis.jpg",
+      "presentationKey": "herolan|200|bio:unknown|brand:mintlab|var:sf|form:inhaled",
+      "cfmId": "CFM-003956",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "asmaventb|100mcg",
+      "canonicalName": "Asmavent-B Salbutamol 100 mcg + Beclometasona 50 mcg/Dosis Inhalador Bucal 200 Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Asmavent-B Salbutamol 100 mcg + Beclometasona 50 mcg/Dosis Inhalador Bucal 200 Dosis",
+          "channels": {
+            "store": 12240,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12240
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=asmaventb%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fasmavent-b-salbutamol-100-mcg-beclometasona-50-mcg-dosis-inhalador-bucal-200-dosis%2F193086.html&cfmId=CFM-003283",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0e884ec7/images/large/193086.1.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 12240,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0e884ec7/images/large/193086.1.jpg",
+      "presentationKey": "asmaventb|100mcg|bio:unknown|brand:unknown|combo:beclometasona|form:inhaled",
+      "cfmId": "CFM-003283",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sinasmal|100mcg",
+      "canonicalName": "Sinasmal SF Salbutamol 100mcg Inhalador 200 Dosis",
+      "laboratory": "Sinasmal",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Sinasmal SF Salbutamol 100mcg Inhalador 200 Dosis",
+          "channels": {
+            "store": 13999,
+            "online": 12319,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12319
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=sinasmal%7C100mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Finhalador-sinasmal-sf-100mcg%3Fdefault_sku%3D437097&cfmId=CFM-003293",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27719/small/437097.jpg?1641479716",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 12319,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27719/small/437097.jpg?1641479716",
+      "presentationKey": "sinasmal|100mcg|bio:unknown|brand:sinasmal|var:sf|form:inhaled",
+      "cfmId": "CFM-003293",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "bropil|100mcg",
+      "canonicalName": "Bropil LF Salbutamol 100mcg Inhalación 200 Dosis",
+      "laboratory": "Bropil Lf",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Bropil LF Salbutamol 100mcg Inhalación 200 Dosis",
+          "channels": {
+            "store": 14199,
+            "online": 12495,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12495
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=bropil%7C100mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbropil-lf-salbutamol-100mcg-inhalacion-200-dosis%3Fdefault_sku%3D2832017&cfmId=CFM-003288",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/45779/small/2832017_%281%29.jpg?1641476832",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 12495,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/45779/small/2832017_%281%29.jpg?1641476832",
+      "presentationKey": "bropil|100mcg|bio:unknown|brand:bropillf|var:lf|form:inhaled",
+      "cfmId": "CFM-003288",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutral|250",
+      "canonicalName": "Salbutral AC aerosol x 250 dosis.",
+      "laboratory": "Pablo Cassara",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Salbutral AC aerosol x 250 dosis.",
+          "channels": {
+            "store": 12990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=salbutral%7C250&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Fsalbutral-ac-aerosol-250-dosis&cfmId=CFM-001964",
+          "imageUrl": "https://farmacia.araucomed.com/4004-home_default/salbutral-ac-aerosol-250-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 12990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/4004-home_default/salbutral-ac-aerosol-250-dosis.jpg",
+      "presentationKey": "salbutral|250|bio:unknown|brand:pablocassara|var:ac|form:inhaled",
+      "cfmId": "CFM-001964",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "butocort|250",
+      "canonicalName": "Butocort x 250 Dosis Aerosol Para Inhalación",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Butocort x 250 Dosis Aerosol Para Inhalación",
+          "channels": {
+            "store": 14934,
+            "online": null,
+            "cmr": 13177,
+            "sbpay": null,
+            "effective": 13177
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=butocort%7C250&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbutocort-x-250-dosis-aerosol-para-inhalacion-48600.html&cfmId=CFM-003290",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4a65fccd/images/products/48600/48600.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 13177,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4a65fccd/images/products/48600/48600.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "butocort|250|bio:unknown|brand:unknown|form:inhaled",
+      "cfmId": "CFM-003290",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "salbutral|100mcg|250",
+      "canonicalName": "Salbutral AC 100 mcg/20 mcg/Dosis x 250 Dosis Aerosol para Inhalación Oral",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Salbutral AC 100 mcg/20 mcg/Dosis x 250 Dosis Aerosol para Inhalación Oral",
+          "channels": {
+            "store": 14959,
+            "online": null,
+            "cmr": 13199,
+            "sbpay": null,
+            "effective": 13199
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=salbutral%7C100mcg%7C250&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsalbutral-ac-100-mcg-20-mcg-dosis-x-250-dosis-aerosol-para-inhalacion-oral-78479.html&cfmId=CFM-001972",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw769fe992/images/products/78479/78479.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 13199,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw769fe992/images/products/78479/78479.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "salbutral|100mcg|250|bio:unknown|brand:unknown|var:ac|form:inhaled",
+      "cfmId": "CFM-001972",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "salbutamol|20ml",
+      "canonicalName": "Salbutamol 0,5% Solución para Nebulización 20 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Salbutamol 0,5% Solución para Nebulización 20 mL",
+          "channels": {
+            "store": 13490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=salbutamol%7C20ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsalbutamol-0-5-solucion-para-nebulizacion-20-ml%2F268913.html&cfmId=CFM-000095",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7d03d13a/images/large/268913-salbutamol-5-mg-solucion-20-ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 13490,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7d03d13a/images/large/268913-salbutamol-5-mg-solucion-20-ml.jpg",
+      "presentationKey": "salbutamol|20ml|bio:unknown|brand:unknown|form:inhaled",
+      "cfmId": "CFM-000095",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "butocort",
+      "canonicalName": "Butocort HFA Salbutamol / Beclometasona Inhalación 250 Dosis",
+      "laboratory": "Butocort",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Butocort HFA Salbutamol / Beclometasona Inhalación 250 Dosis",
+          "channels": {
+            "store": 16799,
+            "online": 14783,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14783
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=butocort&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbutocort-hfa-salbutamol-beclometasona-inhalacion-250-dosis%3Fdefault_sku%3D851009&cfmId=CFM-003285",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/64221/small/851009.jpg?1641328785",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 14783,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/64221/small/851009.jpg?1641328785",
+      "presentationKey": "butocort|bio:unknown|brand:butocort|combo:beclometasona|form:inhaled",
+      "cfmId": "CFM-003285",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "fesema|100mcg|200",
+      "canonicalName": "Fesema LF inhalador 100 mcg. x 200 dosis.",
+      "laboratory": "Etex",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Fesema LF inhalador 100 mcg. x 200 dosis.",
+          "channels": {
+            "store": 14990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=fesema%7C100mcg%7C200&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Ffesema-lf-inhalador-100mcg-200-dosis&cfmId=CFM-003953",
+          "imageUrl": "https://farmacia.araucomed.com/3888-home_default/fesema-lf-inhalador-100mcg-200-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 14990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3888-home_default/fesema-lf-inhalador-100mcg-200-dosis.jpg",
+      "presentationKey": "fesema|100mcg|200|bio:unknown|brand:etex|var:lf|form:inhaled",
+      "cfmId": "CFM-003953",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "salbutral",
+      "canonicalName": "Salbutral AC Salbutamol / Ipratropio Bromuro Aerosol Inhalación 250 Dosis",
+      "laboratory": "Salbutral AC",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Salbutral AC Salbutamol / Ipratropio Bromuro Aerosol Inhalación 250 Dosis",
+          "channels": {
+            "store": 17299,
+            "online": 15223,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15223
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=salbutral&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalbutral-ac-salbutamol-ipratropio-bromuro-aerosol-inhalacion-250-dosis%3Fdefault_sku%3D851611&cfmId=CFM-001971",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/45014/small/851611_%281%29.jpg?1641476878",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 15223,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/45014/small/851611_%281%29.jpg?1641476878",
+      "presentationKey": "salbutral|bio:unknown|brand:salbutralac|combo:ipratropio|form:inhaled",
+      "cfmId": "CFM-001971",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|20ml",
+      "canonicalName": "Salbutamol 0,5 % solución para nebulización 20 mL",
+      "laboratory": "ETHON",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Salbutamol 0,5 % solución para nebulización 20 mL",
+          "channels": {
+            "store": 15480,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15480
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=salbutamol%7C20ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fsalbutamol-0-5-solucion-para-nebulizacion-20-ml%2Fp&cfmId=CFM-000095",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160507/CH7102-1.jpg?v=639094416510330000",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 15480,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160507/CH7102-1.jpg?v=639094416510330000",
+      "presentationKey": "salbutamol|20ml|bio:true|brand:ethon|form:inhaled",
+      "cfmId": "CFM-000095",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aerolin|100mcg",
+      "canonicalName": "Aerolin LF inhalador 100mcg 200 dosis",
+      "laboratory": "Etex",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Aerolin LF inhalador 100mcg 200 dosis",
+          "channels": {
+            "store": 16490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=aerolin%7C100mcg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fasma%2Faerolin-lf-inhalador-100mcg-200-dosis&cfmId=CFM-002221",
+          "imageUrl": "https://farmacia.araucomed.com/9791-home_default/aerolin-lf-inhalador-100mcg-200-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 16490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9791-home_default/aerolin-lf-inhalador-100mcg-200-dosis.jpg",
+      "presentationKey": "aerolin|100mcg|bio:unknown|brand:etex|var:lf|form:inhaled",
+      "cfmId": "CFM-002221",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "fesema|100mcg",
+      "canonicalName": "Fesema LF 100 mcg/Dosis 200 Dosis Aerosol para Inhalación",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Fesema LF 100 mcg/Dosis 200 Dosis Aerosol para Inhalación",
+          "channels": {
+            "store": 16813,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16813
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=fesema%7C100mcg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ffesema-lf-100-mcg-dosis-200-dosis-aerosol-para-inhalacion-25700.html&cfmId=CFM-002321",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9fd15084/images/products/25700/25700.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Fesema Lf Salbutamol 100 mcg/DS Inhalador Bucal 200 Dosis",
+          "channels": {
+            "store": 23740,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23740
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=fesema%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Ffesema-lf-salbutamol-100-mcg-ds-inhalador-bucal-200-dosis%2F104023.html&cfmId=CFM-002321",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw462e4fc0/images/large/104023-fesema-lf-inhalador-bucal-200-dosis-salbutamol-100-mcg-ds.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 16813,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9fd15084/images/products/25700/25700.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "fesema|100mcg|bio:unknown|brand:unknown|var:lf|form:inhaled",
+      "cfmId": "CFM-002321",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutamol|20ml",
+      "canonicalName": "Salbutamol (B) 5mg/ml Solución Nebulizadora 20ml",
+      "laboratory": "Salbutamol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Salbutamol (B) 5mg/ml Solución Nebulizadora 20ml",
+          "channels": {
+            "store": 19399,
+            "online": 17071,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17071
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=salbutamol%7C20ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalbutamol-b-5mg-ml-solucion-nebulizadora-20ml%3Fdefault_sku%3D572425&cfmId=CFM-000095",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/135657/small/572425.jpg?1740579901",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 17071,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/135657/small/572425.jpg?1740579901",
+      "presentationKey": "salbutamol|20ml|bio:unknown|brand:salbutamol|form:fluid-oral",
+      "cfmId": "CFM-000095",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutral|100mcg",
+      "canonicalName": "Salbutral AC salbutamol 100 mcg/dosis ipatropio bromuro 20 mcg/dosis aerosol para inhalación 250 dosis",
+      "laboratory": "D&M PHARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Salbutral AC salbutamol 100 mcg/dosis ipatropio bromuro 20 mcg/dosis aerosol para inhalación 250 dosis",
+          "channels": {
+            "store": 17160,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17160
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=salbutral%7C100mcg&url=https%3A%2F%2Fwww.drsimi.cl%2Fsalbutral-ac-salbutamol-100-mcg-dosis-ipatropio-bromuro-20-mcg-dosis-aerosol-para-inhalacion-250-dosis%2Fp&cfmId=CFM-001979",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160865/CH6308-01.jpg?v=639162241462370000",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 17160,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160865/CH6308-01.jpg?v=639162241462370000",
+      "presentationKey": "salbutral|100mcg|bio:false|brand:dmpharma|var:ac|form:inhaled",
+      "cfmId": "CFM-001979",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salbutral|100mcg",
+      "canonicalName": "Salbutral Salbutamol 100 mcg/DS Bromuro de Ipratropio 20mcg/DS Inhalador Bucal 250 Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Salbutral Salbutamol 100 mcg/DS Bromuro de Ipratropio 20mcg/DS Inhalador Bucal 250 Dosis",
+          "channels": {
+            "store": 17290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=salbutral%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsalbutral-salbutamol-100-mcg-ds-bromuro-de-ipratropio-20mcg-ds-inhalador-bucal-250-dosis%2F272083.html&cfmId=CFM-001979",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5dbaa3ab/images/large/272083-salbutral-salbutamol-120-mcgds-inhalador-bucal-250-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 17290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5dbaa3ab/images/large/272083-salbutral-salbutamol-120-mcgds-inhalador-bucal-250-dosis.jpg",
+      "presentationKey": "salbutral|100mcg|bio:unknown|brand:unknown|form:inhaled",
+      "cfmId": "CFM-001979",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "fesema|100mcg",
+      "canonicalName": "Fesema LF Salbutamol 100mcg Inhalación 200 Dosis",
+      "laboratory": "Fesema LF",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Fesema LF Salbutamol 100mcg Inhalación 200 Dosis",
+          "channels": {
+            "store": 23999,
+            "online": 17999,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=fesema%7C100mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ffesema-lf-salbutamol-100mcg-inhalacion-200-dosis%3Fdefault_sku%3D650544&cfmId=CFM-002321",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/35210/small/650544.jpg?1641477433",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 17999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/35210/small/650544.jpg?1641477433",
+      "presentationKey": "fesema|100mcg|bio:unknown|brand:fesemalf|var:lf|form:inhaled",
+      "cfmId": "CFM-002321",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aerolin|100mcg",
+      "canonicalName": "Aerolin LF Salbutamol 100 mcg / DS Inhalador Bucal 200 Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Aerolin LF Salbutamol 100 mcg / DS Inhalador Bucal 200 Dosis",
+          "channels": {
+            "store": 18217,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18217
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=aerolin%7C100mcg&url=https%3A%2F%2Fwww.cruzverde.cl%2Faerolin-lf-salbutamol-100-mcg-ds-inhalador-bucal-200-dosis%2F60150.html&cfmId=CFM-002221",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfd640542/images/large/60150-aerolin-lf-salbutamol-100-mcgds-inhalador-bucal-200-dosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 18217,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfd640542/images/large/60150-aerolin-lf-salbutamol-100-mcgds-inhalador-bucal-200-dosis.jpg",
+      "presentationKey": "aerolin|100mcg|bio:unknown|brand:unknown|var:lf|form:inhaled",
+      "cfmId": "CFM-002221",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aerolin|100mcg",
+      "canonicalName": "Aerolin LF Salbutamol 100mcg Inhalación 200 Dosis",
+      "laboratory": "Aerolin",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Aerolin LF Salbutamol 100mcg Inhalación 200 Dosis",
+          "channels": {
+            "store": 24299,
+            "online": 18224,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18224
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=aerolin%7C100mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalbutamol-100mcg-inh-e28f2b9c-9314-4c75-a188-15fa18c7accf%3Fdefault_sku%3D1000248&cfmId=CFM-002221",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27849/small/1000248.jpg?1641479702",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 18224,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27849/small/1000248.jpg?1641479702",
+      "presentationKey": "aerolin|100mcg|bio:unknown|brand:aerolin|var:lf|form:inhaled",
+      "cfmId": "CFM-002221",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aerolin|100mcg|200",
+      "canonicalName": "Aerolin LF 100 mcg x 200 Dosis Aerosol Para Inhalación",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Aerolin LF 100 mcg x 200 Dosis Aerosol Para Inhalación",
+          "channels": {
+            "store": 25609,
+            "online": null,
+            "cmr": 19207,
+            "sbpay": null,
+            "effective": 19207
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=aerolin%7C100mcg%7C200&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Faerolin-lf-100-mcg-x-200-dosis-aerosol-para-inhalacion-25687.html&cfmId=CFM-002220",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa8366c8e/images/products/25687/25687.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 19207,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa8366c8e/images/products/25687/25687.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "aerolin|100mcg|200|bio:unknown|brand:unknown|var:lf|form:inhaled",
+      "cfmId": "CFM-002220",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aerolin",
+      "canonicalName": "Aerolin Salbutamol Inhalador Bucal 200 Dosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Aerolin Salbutamol Inhalador Bucal 200 Dosis",
+          "channels": {
+            "store": 19750,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19750
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=aerolin&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Faerolin-solucion-para-inhalacion-por-nebulizador%2F&cfmId=CFM-003292",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/Aerolin.jpeg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 19750,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/Aerolin.jpeg",
+      "presentationKey": "aerolin|bio:unknown|brand:unknown|var:bucal|form:inhaled",
+      "cfmId": "CFM-003292",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "herolan|10ml",
+      "canonicalName": "Herolan SF Salbutamol 10 Ml  200 Dosis",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Herolan SF Salbutamol 10 Ml  200 Dosis",
+          "channels": {
+            "store": 21800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21800
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=herolan%7C10ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fherolan-sf-salbutamol-beclometasona-dipropionato-10-ml-aerosol-para-inhalacion-200-dosis%2F&cfmId=CFM-003299",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/7800007770707.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.401Z"
+        }
+      ],
+      "bestPrice": 21800,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/7800007770707.jpg",
+      "presentationKey": "herolan|10ml|bio:true|brand:unknown|var:sf",
+      "cfmId": "CFM-003299",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "herolan|10ml|200",
+      "canonicalName": "Herolan SF 10 mL x 200 Dosis Aerosol Para Inhalación",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Herolan SF 10 mL x 200 Dosis Aerosol Para Inhalación",
+          "channels": {
+            "store": 30399,
+            "online": null,
+            "cmr": 22799,
+            "sbpay": null,
+            "effective": 22799
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=herolan%7C10ml%7C200&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fherolan-sf-10-ml-x-200-dosis-aerosol-para-inhalacion-70238.html&cfmId=CFM-003301",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8dff53ab/images/products/70238/70238.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 22799,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8dff53ab/images/products/70238/70238.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "herolan|10ml|200|bio:unknown|brand:unknown|var:sf|form:inhaled",
+      "cfmId": "CFM-003301",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "herolan",
+      "canonicalName": "Herolan SF Salbutamol / Beclometasona Inhalación 200 Dosis",
+      "laboratory": "Herolan",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Herolan SF Salbutamol / Beclometasona Inhalación 200 Dosis",
+          "channels": {
+            "store": 29799,
+            "online": 26223,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 26223
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=herolan&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fprincipio-activo-beclometasona-salbutamol%3Fdefault_sku%3D437070&cfmId=CFM-003298",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/57316/small/437070.jpg?1641329185",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 26223,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/57316/small/437070.jpg?1641329185",
+      "presentationKey": "herolan|bio:unknown|brand:herolan|combo:beclometasona|form:inhaled",
+      "cfmId": "CFM-003298",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aerolin|20ml",
+      "canonicalName": "Aerolin (salbutamol) 0,5% Solución Nebulizacion 20ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Aerolin (salbutamol) 0,5% Solución Nebulizacion 20ml",
+          "channels": {
+            "store": 30990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 30990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=aerolin%7C20ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20751%26d_%3D1&cfmId=CFM-001739",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800029000066.jpg?v=6a94fa85d1c67",
+          "fetchedAt": "2026-08-31T03:52:40.402Z"
+        }
+      ],
+      "bestPrice": 30990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800029000066.jpg?v=6a94fa85d1c67",
+      "presentationKey": "aerolin|20ml|bio:unknown|brand:unknown|form:inhaled",
+      "cfmId": "CFM-001739",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "fluxamol|250mcg",
+      "canonicalName": "Fluxamol HFA 250 mcg/25 mcg/Dosis 120 Dosis Aerosol para Inhalación",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Fluxamol HFA 250 mcg/25 mcg/Dosis 120 Dosis Aerosol para Inhalación",
+          "channels": {
+            "store": 35008,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 35008
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=fluxamol%7C250mcg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ffluxamol-hfa-250-mcg-25-mcg-dosis-120-dosis-aerosol-para-inhalacion-73833.html&cfmId=CFM-003297",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf3ed37b2/images/products/73833/73833.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 35008,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf3ed37b2/images/products/73833/73833.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "fluxamol|250mcg|bio:unknown|brand:unknown|var:hfa|form:inhaled",
+      "cfmId": "CFM-003297",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aerolin|20ml",
+      "canonicalName": "Aerolin Salbutamol 0,5% Solución para Respirador 20 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Aerolin Salbutamol 0,5% Solución para Respirador 20 mL",
+          "channels": {
+            "store": 35190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 35190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=aerolin%7C20ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Faerolin-salbutamol-0-5-solucion-para-respirador-20-ml%2F60008.html&cfmId=CFM-001739",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw208a02e1/images/large/60008-aerolin-salbutamol-5-mg-solucion-20-ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:40.398Z"
+        }
+      ],
+      "bestPrice": 35190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw208a02e1/images/large/60008-aerolin-salbutamol-5-mg-solucion-20-ml.jpg",
+      "presentationKey": "aerolin|20ml|bio:unknown|brand:unknown|var:respirador|form:fluid-oral",
+      "cfmId": "CFM-001739",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "brexovent|125mcg",
+      "canonicalName": "Brexovent LF 125 mcg/dosis 120 Dosis Aerosol para Inhalación",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Brexovent LF 125 mcg/dosis 120 Dosis Aerosol para Inhalación",
+          "channels": {
+            "store": 35489,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 35489
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=brexovent%7C125mcg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbrexovent-lf-125-mcg-dosis-120-dosis-aerosol-para-inhalacion-20009.html&cfmId=CFM-003284",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw41f14b96/images/products/20009/20009.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.399Z"
+        }
+      ],
+      "bestPrice": 35489,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw41f14b96/images/products/20009/20009.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "brexovent|125mcg|bio:unknown|brand:unknown|var:lf|form:inhaled",
+      "cfmId": "CFM-003284",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "tuberbut|300mg|56",
+      "canonicalName": "Tuberbut inhalada 300 mg x 56 ampollas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Tuberbut inhalada 300 mg x 56 ampollas",
+          "channels": {
+            "store": 1712899,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1712899
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tuberbut%7C300mg%7C56&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftuberbut-inhalada-300-mg-x-56-ampollas-91451.html&cfmId=CFM-003294",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw28b3d1d6/images/products/91451/91451.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:40.400Z"
+        }
+      ],
+      "bestPrice": 1712899,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw28b3d1d6/images/products/91451/91451.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "tuberbut|300mg|56|bio:unknown|brand:unknown|var:inhalada|form:injectable",
+      "cfmId": "CFM-003294",
+      "lexicalMatch": "compatible"
+    }
+  ]
+}

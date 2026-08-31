@@ -1,0 +1,359 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "pyriped",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=pyriped",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:50:39.118Z",
+  "completedAt": "2026-08-31T03:50:46.116Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 10,
+  "results": [
+    {
+      "matchKey": "pyriped|100ml|100",
+      "canonicalName": "Pyriped Forte jarabe 200mg/5ml x 100 ml.",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Pyriped Forte jarabe 200mg/5ml x 100 ml.",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=pyriped%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fpyriped-forte-jarabe-200mg-5ml-x100ml&cfmId=CFM-001335",
+          "imageUrl": "https://farmacia.araucomed.com/8526-home_default/pyriped-forte-jarabe-200mg-5ml-x100ml.jpg",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8526-home_default/pyriped-forte-jarabe-200mg-5ml-x100ml.jpg",
+      "presentationKey": "pyriped|100ml|100|bio:unknown|brand:mintlab|var:forte|form:fluid-oral",
+      "cfmId": "CFM-001335",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|400mg|10",
+      "canonicalName": "Pyriped Ibuprofeno 400Mg 10 Cápsulas Blandas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Pyriped Ibuprofeno 400Mg 10 Cápsulas Blandas",
+          "channels": {
+            "store": 2290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=pyriped%7C400mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpyriped-ibuprofeno-400mg-10-capsulas-blandas%2F575224.html&cfmId=CFM-000145",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4d261fb6/images/large/575224-1.jpg",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 2290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4d261fb6/images/large/575224-1.jpg",
+      "presentationKey": "pyriped|400mg|10|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000145",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|100ml|100",
+      "canonicalName": "Pyriped 100 mg / 5 mL x 100 mL",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Pyriped 100 mg / 5 mL x 100 mL",
+          "channels": {
+            "store": 2595,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2595
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=pyriped%7C100ml%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fpyriped-100-mg-5-ml-x-100-ml%3F_pos%3D1%26_psq%3Dpyriped%26_psid%3D43d8c463b%26_ss%3De&cfmId=CFM-001335",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/pyriped-100-mg-5-ml-x-100-ml-mintlab-235509.jpg?v=1692989585",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 2595,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/pyriped-100-mg-5-ml-x-100-ml-mintlab-235509.jpg?v=1692989585",
+      "presentationKey": "pyriped|100ml|100|bio:unknown|brand:mintlab",
+      "cfmId": "CFM-001335",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|100ml",
+      "canonicalName": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=pyriped%7C100ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20963%26d_%3D1&cfmId=CFM-000098",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800063330129.jpg?v=6a94fa1548e6e",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=pyriped%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fibuprofeno-suspension-oral-200mg-5ml-100ml-2%2F&cfmId=CFM-000098",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/140701-pyripedfortejbex100ml.jpg",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL",
+          "channels": {
+            "store": 8040,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8040
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=pyriped%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpyriped-ibuprofeno-100-mg-5ml-suspension-100-ml%2F193020.html&cfmId=CFM-000098",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwea64435a/images/large/193020-pyriped-ibuprofeno-100-mg5ml-suspension-100-ml.jpg",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800063330129.jpg?v=6a94fa1548e6e",
+      "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000098",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|400mg|20",
+      "canonicalName": "Pyriped 400 mg x 20 cápsulas",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Pyriped 400 mg x 20 cápsulas",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=pyriped%7C400mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fpyriped-400-mg-x-20-capsulas%3F_pos%3D2%26_psq%3Dpyriped%26_psid%3D43d8c463b%26_ss%3De&cfmId=CFM-000148",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/pyriped-400-mg-x-20-capsulas-mintlab-994125.jpg?v=1692989486",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/pyriped-400-mg-x-20-capsulas-mintlab-994125.jpg?v=1692989486",
+      "presentationKey": "pyriped|400mg|20|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-000148",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|400mg",
+      "canonicalName": "Pyriped 400 mg. 20 cáps....",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Pyriped 400 mg. 20 cáps....",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=pyriped%7C400mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F33769-pyriped-400-mg-20-caps-blandas.html&cfmId=CFM-000122",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "pyriped|400mg|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000122",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|100ml|100",
+      "canonicalName": "Pyriped Forte 200 mg / 5 mL x 100 mL",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Pyriped Forte 200 mg / 5 mL x 100 mL",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=pyriped%7C100ml%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fpyriped-forte-200-mg-5-ml-x-100-ml%3F_pos%3D5%26_psq%3Dpyriped%26_psid%3D43d8c463b%26_ss%3De&cfmId=CFM-001335",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/pyriped-forte-200-mg-5-ml-x-100-ml-mintlab-708460.jpg?v=1692989588",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 4290,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/pyriped-forte-200-mg-5-ml-x-100-ml-mintlab-708460.jpg?v=1692989588",
+      "presentationKey": "pyriped|100ml|100|bio:unknown|brand:mintlab|var:forte",
+      "cfmId": "CFM-001335",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|400mg|20",
+      "canonicalName": "Pyriped Ibuprofeno 400 mg 20 Cápsulas Blandas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Pyriped Ibuprofeno 400 mg 20 Cápsulas Blandas",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=pyriped%7C400mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpyriped-ibuprofeno-400-mg-20-capsulas-blandas%2F263909.html&cfmId=CFM-000148",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw30a105cf/images/large/263909-pyriped-capsulas-blandas-20-unidades-ibuprofeno-400-mg.jpg",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 4490,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw30a105cf/images/large/263909-pyriped-capsulas-blandas-20-unidades-ibuprofeno-400-mg.jpg",
+      "presentationKey": "pyriped|400mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000148",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|100ml",
+      "canonicalName": "Pyriped forte 200mg/5ml 100 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Pyriped forte 200mg/5ml 100 ml",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=pyriped%7C100ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103572-pyriped-forte-200mg-5ml-100-ml.html&cfmId=CFM-000098",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|var:forte",
+      "cfmId": "CFM-000098",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pyriped|100ml",
+      "canonicalName": "Pyriped Forte Ibuprofeno 200 mg / 5 mL Suspensión Oral 100 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Pyriped Forte Ibuprofeno 200 mg / 5 mL Suspensión Oral 100 mL",
+          "channels": {
+            "store": 5290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=pyriped%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpyriped-forte-ibuprofeno-200-mg-5-ml-suspension-oral-100-ml%2F268737.html&cfmId=CFM-000098",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3e81fad8/images/large/268737.1.jpg",
+          "fetchedAt": "2026-08-31T03:50:45.703Z"
+        }
+      ],
+      "bestPrice": 5290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3e81fad8/images/large/268737.1.jpg",
+      "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-000098",
+      "lexicalMatch": "exact"
+    }
+  ]
+}

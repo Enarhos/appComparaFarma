@@ -1,0 +1,4185 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "amoxicilina suspension",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=amoxicilina%20suspension",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:50:55.533Z",
+  "completedAt": "2026-08-31T03:51:03.944Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 123,
+  "results": [
+    {
+      "matchKey": "amoxicilina|60ml|60",
+      "canonicalName": "Amoxicilina 250 Mg/5 Ml Jarabe X 60 Ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina 250 Mg/5 Ml Jarabe X 60 Ml",
+          "channels": {
+            "store": 1390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C60ml%7C60&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19997%26d_%3D1&cfmId=CFM-000880",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804673040065.jpg?v=6a94fa25d366c",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 1390,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804673040065.jpg?v=6a94fa25d366c",
+      "presentationKey": "amoxicilina|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000880",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|60ml",
+      "canonicalName": "Amoxicilina 250mg/5ml Jarabe 60ml",
+      "laboratory": "Amoxicilina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina 250mg/5ml Suspensión Oral 60ml",
+          "channels": {
+            "store": 1590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1590
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C60ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D1713%26d_%3D1&cfmId=CFM-000905",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620833610.jpg?v=6a94fa25d3c00",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Amoxicilina 250 mg/5 mL susp. Frasco 60 mL",
+          "channels": {
+            "store": 2022,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2022
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amoxicilina%7C60ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famoxicilina-250-mg-5-ml-susp.-frasco-60-ml-94434.html&cfmId=CFM-000905",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwddfe8453/images/products/94434/94434.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        },
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Amoxicilina 250mg/5ml Jarabe 60ml",
+          "channels": {
+            "store": 3199,
+            "online": 2815,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2815
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=amoxicilina%7C60ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Famoxicilina-250mg-5ml-jarabe-60ml%3Fdefault_sku%3D590259&cfmId=CFM-000905",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/134426/small/590259.jpg?1738159119",
+          "fetchedAt": "2026-08-31T03:51:03.065Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amoxicilina 250 mg/5mL Jarabe 60 mL",
+          "channels": {
+            "store": 3290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amoxicilina%7C60ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Famoxicilina-250-mg-5ml-jarabe-60-ml%2F199013.html&cfmId=CFM-000905",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw05d26403/images/large/199013-1.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 1590,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/134426/small/590259.jpg?1738159119",
+      "presentationKey": "amoxicilina|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000905",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|60ml",
+      "canonicalName": "Amoxicilina 250 mg/5 mL polvo para suspensión oral 60 mL",
+      "laboratory": "HOSPIFARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Amoxicilina 250 mg/5 mL polvo para suspensión oral 60 mL",
+          "channels": {
+            "store": 2200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=amoxicilina%7C60ml&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-250-mg-5ml-suspension-60-ml%2Fp&cfmId=CFM-000905",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159715/Amoxicilina_polvo_para_suspension_oral_250_mg_5_ml_front.jpg?v=638936263359600000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 2200,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159715/Amoxicilina_polvo_para_suspension_oral_250_mg_5_ml_front.jpg?v=638936263359600000",
+      "presentationKey": "amoxicilina|60ml|bio:false|brand:hospifarma|form:fluid-oral",
+      "cfmId": "CFM-000905",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|60ml",
+      "canonicalName": "Amoxicilina 500 mg/5 mL polvo para suspensión oral 60 mL",
+      "laboratory": "OPKO",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Amoxicilina 500 mg/5 mL polvo para suspensión oral 60 mL",
+          "channels": {
+            "store": 2400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=amoxicilina%7C60ml&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-500-mg-5ml-suspension-60-ml%2Fp&cfmId=CFM-000905",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156968/CH0009.jpg?v=638012014791100000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 2400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156968/CH0009.jpg?v=638012014791100000",
+      "presentationKey": "amoxicilina|60ml|bio:false|brand:opko|form:fluid-oral",
+      "cfmId": "CFM-000905",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina",
+      "canonicalName": "Amoxicilina / Ácido Clavulánico 250/62,5 Polvo Para Suspensión Oral",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoxicilina / Ácido Clavulánico 250/62,5 Polvo Para Suspensión Oral",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoxicilina&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoxicilina-acido-clavulanico-250-625-polvo-para-suspension-oral%2F&cfmId=CFM-000907",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/07/amoxicilina-250.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 2690,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/07/amoxicilina-250.jpg",
+      "presentationKey": "amoxicilina|bio:unknown|brand:unknown|combo:acido|form:fluid-oral",
+      "cfmId": "CFM-000907",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|70ml",
+      "canonicalName": "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml",
+          "channels": {
+            "store": 5960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5960
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoxicilina%7C70ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoxicilina-acido-clavulanico-400-57mg-suspension-oral-70ml%2F&cfmId=CFM-000890",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/02/amoxicilina-70ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 5960,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/02/amoxicilina-70ml.jpg",
+      "presentationKey": "amoxicilina|70ml|bio:unknown|brand:unknown|combo:acido|form:fluid-oral",
+      "cfmId": "CFM-000890",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|70ml",
+      "canonicalName": "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml (Seven Pharma)",
+      "laboratory": "Seven Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml (Seven Pharma)",
+          "channels": {
+            "store": 6290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoxicilina%7C70ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoxicilina-acido-clavulanico-400-57mg-suspension-oral-70ml-seven-pharma&cfmId=CFM-000890",
+          "imageUrl": "https://farmacia.araucomed.com/13939-home_default/amoxicilina-acido-clavulanico-400-57mg-suspension-oral-70ml-seven-pharma.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 6290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13939-home_default/amoxicilina-acido-clavulanico-400-57mg-suspension-oral-70ml-seven-pharma.jpg",
+      "presentationKey": "amoxicilina|70ml|bio:unknown|brand:sevenpharma|combo:acido|form:fluid-oral",
+      "cfmId": "CFM-000890",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|70ml",
+      "canonicalName": "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml (Hospifarma)",
+      "laboratory": "Hospifarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml (Hospifarma)",
+          "channels": {
+            "store": 6290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoxicilina%7C70ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fzolimax-duo-400-57-x70ml&cfmId=CFM-000890",
+          "imageUrl": "https://farmacia.araucomed.com/10834-home_default/zolimax-duo-400-57-x70ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 6290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10834-home_default/zolimax-duo-400-57-x70ml.jpg",
+      "presentationKey": "amoxicilina|70ml|bio:unknown|brand:hospifarma|combo:acido|form:fluid-oral",
+      "cfmId": "CFM-000890",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|70ml",
+      "canonicalName": "Amoxicilina 400 mg ácido clavulánico 57 mg polvo para suspensión oral 70 mL",
+      "laboratory": "SEVEN PHARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Amoxicilina 400 mg ácido clavulánico 57 mg polvo para suspensión oral 70 mL",
+          "channels": {
+            "store": 7960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=amoxicilina%7C70ml&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-ac-clav-400-57-1-polvo-para-suspension-oral-ch50380-1%2Fp&cfmId=CFM-000890",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159738/Amoxicilina-Acido-Clavulanico-400ml-CH50380-front.jpg?v=638942367260270000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 7960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159738/Amoxicilina-Acido-Clavulanico-400ml-CH50380-front.jpg?v=638942367260270000",
+      "presentationKey": "amoxicilina|70ml|bio:false|brand:sevenpharma|form:fluid-oral",
+      "cfmId": "CFM-000890",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|70ml|70",
+      "canonicalName": "Amoxicilina/Ácido Clavulánico Suspension 400/57 Mg X 70 Ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina/Ácido Clavulánico Suspension 400/57 Mg X 70 Ml",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C70ml%7C70&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D21044%26d_%3D1&cfmId=CFM-000889",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804640560893.jpg?v=6a94fa25d4602",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804640560893.jpg?v=6a94fa25d4602",
+      "presentationKey": "amoxicilina|70ml|70|bio:unknown|brand:unknown|combo:acido|form:fluid-oral",
+      "cfmId": "CFM-000889",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|70ml",
+      "canonicalName": "Amoval Duo 400mg/5ml solucion oral 70ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoval Duo 400mg/5ml solucion oral 70ml",
+          "channels": {
+            "store": 9790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoval%7C70ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoval-duo-400mg-5ml-solucion-oral-70ml&cfmId=CFM-000887",
+          "imageUrl": "https://farmacia.araucomed.com/1217-home_default/amoval-duo-400mg-5ml-solucion-oral-70ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoval Duo 400 (amoxicilina) 400mg/5ml Susp Oral 70ml",
+          "channels": {
+            "store": 12790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoval%7C70ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19627%26d_%3D1&cfmId=CFM-000887",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060113633.jpg?v=6a94fa25d3cac",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 9790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1217-home_default/amoval-duo-400mg-5ml-solucion-oral-70ml.jpg",
+      "presentationKey": "amoval|70ml|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000887",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|100ml",
+      "canonicalName": "Amoval 250mg/5ml jarabe 100ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoval 250mg/5ml jarabe 100ml",
+          "channels": {
+            "store": 10490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoval%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoval-250mg-5ml-jarabe-100ml&cfmId=CFM-000892",
+          "imageUrl": "https://farmacia.araucomed.com/1215-home_default/amoval-250mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoval (amoxicilina) 250mg/5ml Suspensión Oral 100ml",
+          "channels": {
+            "store": 12790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoval%7C100ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D1692%26d_%3D1&cfmId=CFM-000892",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060111264.jpg?v=6a94fa25d3b50",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 10490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1215-home_default/amoval-250mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "amoval|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000892",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavinex|35ml",
+      "canonicalName": "Clavinex Duo Forte 800/57 suspensión oral 35 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clavinex Duo Forte 800/57 suspensión oral 35 ml.",
+          "channels": {
+            "store": 13490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clavinex%7C35ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fclavinex-duo-forte-800-57-suspension-oral-35-ml&cfmId=CFM-000918",
+          "imageUrl": "https://farmacia.araucomed.com/13680-home_default/clavinex-duo-forte-800-57-suspension-oral-35-ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 13490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13680-home_default/clavinex-duo-forte-800-57-suspension-oral-35-ml.jpg",
+      "presentationKey": "clavinex|35ml|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000918",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clavam|70ml",
+      "canonicalName": "Clavam Duo amoxicilina 400 mg ácido clavulánico 57 mg polvo para suspensión oral 70 mL",
+      "laboratory": "EUROFARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Clavam Duo amoxicilina 400 mg ácido clavulánico 57 mg polvo para suspensión oral 70 mL",
+          "channels": {
+            "store": 13960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=clavam%7C70ml&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-ac--clav-400-57-1-polvo-para-suspension-oral-con-solvente-70-ml-amoxicilina-acido-clavulanico%2Fp&cfmId=CFM-000916",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159328/Amox-CH5038-1.jpg?v=639074524354500000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 13960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159328/Amox-CH5038-1.jpg?v=639074524354500000",
+      "presentationKey": "clavam|70ml|bio:false|brand:eurofarma|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000916",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavinex|35ml|35",
+      "canonicalName": "Clavinex Duo 400/57 solución oral x 35 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clavinex Duo 400/57 solución oral x 35 ml.",
+          "channels": {
+            "store": 13990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clavinex%7C35ml%7C35&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fclavinex-duo-400-57-solucion-oral-x-35-ml&cfmId=CFM-000900",
+          "imageUrl": "https://farmacia.araucomed.com/13681-home_default/clavinex-duo-400-57-solucion-oral-x-35-ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 13990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13681-home_default/clavinex-duo-400-57-solucion-oral-x-35-ml.jpg",
+      "presentationKey": "clavinex|35ml|35|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000900",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amoval|100ml|100",
+      "canonicalName": "Amoval 250 mg/5 mL x 100 mL Polvo Para Suspensión Oral",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoval Amoxicilina 250 mg/5ml Suspensión x 100 mL DESCUENTO",
+          "channels": {
+            "store": 14200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoval%7C100ml%7C100&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoval-amoxicilina-250-mg-5ml-suspension-x-100-ml-descuento%2F&cfmId=CFM-000915",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/amoval-250.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Amoval 250 mg/5 mL x 100 mL Polvo Para Suspensión Oral",
+          "channels": {
+            "store": 19609,
+            "online": null,
+            "cmr": 17302,
+            "sbpay": null,
+            "effective": 17302
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amoval%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famoval-250-mg-5-ml-x-100-ml-polvo-para-suspension-oral-11211.html&cfmId=CFM-000915",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5b6e0d7f/images/products/11211/11211.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 14200,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5b6e0d7f/images/products/11211/11211.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "amoval|100ml|100|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000915",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|50ml|50",
+      "canonicalName": "Amoval Duo (amoxicilina) 1000mg/5ml Jarabe X50 Ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoval Duo (amoxicilina) 1000mg/5ml Jarabe X50 Ml",
+          "channels": {
+            "store": 14390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoval%7C50ml%7C50&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20756%26d_%3D1&cfmId=CFM-000899",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060120099.jpg?v=6a94fa25d39f6",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Amoval Duo 1000 mg/5 mL x 50 mL Polvo Para Suspensión Oral Con Solvente",
+          "channels": {
+            "store": 21649,
+            "online": null,
+            "cmr": 16237,
+            "sbpay": null,
+            "effective": 16237
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amoval%7C50ml%7C50&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famoval-duo-1000-mg-5-ml-x-50-ml-polvo-para-suspension-oral-con-solvente-47367.html&cfmId=CFM-000899",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw670de3f2/images/products/47367/47367.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 14390,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060120099.jpg?v=6a94fa25d39f6",
+      "presentationKey": "amoval|50ml|50|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000899",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|120ml",
+      "canonicalName": "Amoval Duo 1000mg/5ml solucion oral 120ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoval Duo 1000mg/5ml solucion oral 120ml",
+          "channels": {
+            "store": 17990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoval%7C120ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoval-duo-1000mg-5ml-solucion-oral-120ml&cfmId=CFM-000926",
+          "imageUrl": "https://farmacia.araucomed.com/9393-home_default/amoval-duo-1000mg-5ml-solucion-oral-120ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 17990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9393-home_default/amoval-duo-1000mg-5ml-solucion-oral-120ml.jpg",
+      "presentationKey": "amoval|120ml|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000926",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "maximox|70ml",
+      "canonicalName": "Maximox 400/57 Amoxicilina 57 mg/5mL Suspensión 70 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Maximox 400/57 Amoxicilina 57 mg/5mL Suspensión 70 mL",
+          "channels": {
+            "store": 18190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18190
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=maximox%7C70ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmaximox-400-57-amoxicilina-57-mg-5ml-suspension-70-ml%2F&cfmId=CFM-000895",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/04/maximox-400-x-70.png",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 18190,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/04/maximox-400-x-70.png",
+      "presentationKey": "maximox|70ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000895",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|70ml|70",
+      "canonicalName": "Amoval Duo  400 mg/5mL x 70 mL Polvo Para Suspensión Oral",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Amoval Duo  400 mg/5mL x 70 mL Polvo Para Suspensión Oral",
+          "channels": {
+            "store": 20722,
+            "online": null,
+            "cmr": 18284,
+            "sbpay": null,
+            "effective": 18284
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amoval%7C70ml%7C70&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famoval-duo--400-mg-5ml-x-70-ml-polvo-para-suspension-oral-23097.html&cfmId=CFM-000933",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw67d73c83/images/products/23097/23097.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 18284,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw67d73c83/images/products/23097/23097.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "amoval|70ml|70|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000933",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amoval|90ml",
+      "canonicalName": "Amoval Duo (amoxicilina) 1000mg/5ml Suspensión Oral 90ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoval Duo (amoxicilina) 1000mg/5ml Suspensión Oral 90ml",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoval%7C90ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20757%26d_%3D1&cfmId=CFM-000930",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060119918.jpg?v=6a94fa25d3aa3",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 19990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060119918.jpg?v=6a94fa25d3aa3",
+      "presentationKey": "amoval|90ml|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000930",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "maximox|70ml|70",
+      "canonicalName": "Maximox 400 mg/57 mg x 70 mL Polvo Para Suspensión Oral Con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Maximox 400 mg/57 mg x 70 mL Polvo Para Suspensión Oral Con Solvente",
+          "channels": {
+            "store": 27289,
+            "online": null,
+            "cmr": 20467,
+            "sbpay": null,
+            "effective": 20467
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=maximox%7C70ml%7C70&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmaximox-400-mg-57-mg-x-70-ml-polvo-para-suspension-oral-con-solvente-68506.html&cfmId=CFM-001239",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4720acb7/images/products/68506/68506.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 20467,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4720acb7/images/products/68506/68506.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "maximox|70ml|70|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001239",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clavinex|70ml",
+      "canonicalName": "Clavinex Duo Forte 800/57 suspensión oral 70 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clavinex Duo Forte 800/57 suspensión oral 70 ml.",
+          "channels": {
+            "store": 20990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 20990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clavinex%7C70ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fclavinex-duo-forte-800-57-solucion-oral-70ml&cfmId=CFM-000937",
+          "imageUrl": "https://farmacia.araucomed.com/1214-home_default/clavinex-duo-forte-800-57-solucion-oral-70ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clavinex Duo Forte Amoxicilina 70ml susp oral DESCUENTO",
+          "channels": {
+            "store": 21990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clavinex%7C70ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclavinex-duo-forte-amoxicilina-70ml-acido-clavulanico-susp-oral-descuento%2F&cfmId=CFM-000937",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/11/clavinexduoforteamoxicilina800mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 20990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1214-home_default/clavinex-duo-forte-800-57-solucion-oral-70ml.jpg",
+      "presentationKey": "clavinex|70ml|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000937",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amobiotic|90ml|90",
+      "canonicalName": "Amobiotic BID 1000 mg/5 mL x 90 mL Polvo para Suspensión Oral con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Amobiotic BID 1000 mg/5 mL x 90 mL Polvo para Suspensión Oral con Solvente",
+          "channels": {
+            "store": 23833,
+            "online": null,
+            "cmr": 21029,
+            "sbpay": null,
+            "effective": 21029
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amobiotic%7C90ml%7C90&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famobiotic-bid-1000-mg-5-ml-x-90-ml-polvo-para-suspension-oral-con-solvente-40951.html&cfmId=CFM-000913",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwcd78b1bf/images/products/40951/40951.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 21029,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwcd78b1bf/images/products/40951/40951.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "amobiotic|90ml|90|bio:unknown|brand:unknown|var:bid|form:fluid-oral",
+      "cfmId": "CFM-000913",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ambilan|70ml",
+      "canonicalName": "Ambilan Bid 400/57 Suspensión Oral 70 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Ambilan Bid 400/57 Suspensión Oral 70 mL",
+          "channels": {
+            "store": 21102,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21102
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=ambilan%7C70ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fambilan-bid-400-57-suspension-oral-70-ml-94520.html&cfmId=CFM-000920",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwaf0b5c3f/images/products/94520/94520.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 21102,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwaf0b5c3f/images/products/94520/94520.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "ambilan|70ml|bio:unknown|brand:unknown|var:bid|form:fluid-oral",
+      "cfmId": "CFM-000920",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amoval|90ml|90",
+      "canonicalName": "Amoval Duo 1000 mg/5 mL x 90 mL Polvo Para Suspensión Oral Con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Amoval Duo 1000 mg/5 mL x 90 mL Polvo Para Suspensión Oral Con Solvente",
+          "channels": {
+            "store": 23918,
+            "online": null,
+            "cmr": 21104,
+            "sbpay": null,
+            "effective": 21104
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amoval%7C90ml%7C90&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famoval-duo-1000-mg-5-ml-x-90-ml-polvo-para-suspension-oral-con-solvente-47369.html&cfmId=CFM-000945",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw87a3319e/images/products/47369/47369.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 21104,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw87a3319e/images/products/47369/47369.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "amoval|90ml|90|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000945",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amoval|120ml|120",
+      "canonicalName": "Amoval Duo 1000 mg/5ml x 120 ml Polvo para Suspensión Oral con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Amoval Duo 1000 mg/5ml x 120 ml Polvo para Suspensión Oral con Solvente",
+          "channels": {
+            "store": 28449,
+            "online": null,
+            "cmr": 21337,
+            "sbpay": null,
+            "effective": 21337
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amoval%7C120ml%7C120&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famoval-duo-1000-mg-5ml-x-120-ml-polvo-para-suspension-oral-con-solvente-89898.html&cfmId=CFM-000935",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdd5b0c72/images/products/89898/89898.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 21337,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdd5b0c72/images/products/89898/89898.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "amoval|120ml|120|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-000935",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ambilan|70ml",
+      "canonicalName": "Ambilan Bid Forte Amoxicilina / Ácido Clavulánico Suspensión Oral 70ml",
+      "laboratory": "Ambilan Bid",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ambilan Bid Forte Amoxicilina / Ácido Clavulánico Suspensión Oral 70ml",
+          "channels": {
+            "store": 29799,
+            "online": 23839,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23839
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ambilan%7C70ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fambilan-bid-forte-amoxicilina-acido-clavulanico-suspension-oral-70ml%3Fdefault_sku%3D590255&cfmId=CFM-000920",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/138122/small/590255_1.jpg?1742305887",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 23839,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/138122/small/590255_1.jpg?1742305887",
+      "presentationKey": "ambilan|70ml|bio:unknown|brand:ambilanbid|combo:acido|form:fluid-oral",
+      "cfmId": "CFM-000920",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ambilan|90ml",
+      "canonicalName": "Ambilan Bid Forte (amoxicilina/clavulanico) 800/57mg Susp Oral 90ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Ambilan Bid Forte (amoxicilina/clavulanico) 800/57mg Susp Oral 90ml",
+          "channels": {
+            "store": 25990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=ambilan%7C90ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D21758%26d_%3D1&cfmId=CFM-000914",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007782120.jpg?v=6a94fa25d41f3",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 25990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007782120.jpg?v=6a94fa25d41f3",
+      "presentationKey": "ambilan|90ml|bio:unknown|brand:unknown|combo:clavulanico|form:fluid-oral",
+      "cfmId": "CFM-000914",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ambilan|90ml|90",
+      "canonicalName": "Ambilan Bid Forte 800 mg/57 mg x 90 mL Polvo Para Suspensión Oral",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Ambilan Bid Forte 800 mg/57 mg x 90 mL Polvo Para Suspensión Oral",
+          "channels": {
+            "store": 29591,
+            "online": null,
+            "cmr": 27742,
+            "sbpay": null,
+            "effective": 27742
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=ambilan%7C90ml%7C90&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fambilan-bid-forte-800-mg-57-mg-x-90-ml-polvo-para-suspension-oral-46933.html&cfmId=CFM-001240",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7978570b/images/products/46933/46933.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 27742,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7978570b/images/products/46933/46933.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "ambilan|90ml|90|bio:unknown|brand:unknown|var:bid|form:fluid-oral",
+      "cfmId": "CFM-001240",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clavinex|100ml|100",
+      "canonicalName": "Clavinex Duo Forte 800 mg/57 mg/5 ml x 100 ml Polvo para Suspensión Oral con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Clavinex Duo Forte 800 mg/57 mg/5 ml x 100 ml Polvo para Suspensión Oral con Solvente",
+          "channels": {
+            "store": 37509,
+            "online": null,
+            "cmr": 28132,
+            "sbpay": null,
+            "effective": 28132
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clavinex%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclavinex-duo-forte-800-mg-57-mg-5-ml-x-100-ml-polvo-para-suspension-oral-con-solvente-87875.html&cfmId=CFM-001237",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw33e0206b/images/products/87875/87875.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 28132,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw33e0206b/images/products/87875/87875.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "clavinex|100ml|100|bio:unknown|brand:unknown|var:duo|form:fluid-oral",
+      "cfmId": "CFM-001237",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ambilan|90ml",
+      "canonicalName": "Ambilan Bid Forte Amoxicilina / Ácido Clavulánico Suspensión Oral 90ml",
+      "laboratory": "Ambilan Bid",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ambilan Bid Forte Amoxicilina / Ácido Clavulánico Suspensión Oral 90ml",
+          "channels": {
+            "store": 35499,
+            "online": 28399,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ambilan%7C90ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fambilan-bid-forte-amoxicilina-acido-clavulanico-suspension-oral-90ml%3Fdefault_sku%3D438212&cfmId=CFM-000914",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27762/small/438212.jpg?1641479713",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 28399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27762/small/438212.jpg?1641479713",
+      "presentationKey": "ambilan|90ml|bio:unknown|brand:ambilanbid|combo:acido|form:fluid-oral",
+      "cfmId": "CFM-000914",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|60ml|60",
+      "canonicalName": "Amoxicilina 500 mg / 5 mL x 60 mL \"Ley Cenabast\"",
+      "laboratory": "OPKO",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Amoxicilina 500 mg / 5 mL x 60 mL \"Ley Cenabast\"",
+          "channels": {
+            "store": 1795,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1795
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=amoxicilina%7C60ml%7C60&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Famoxicilina-500-mg-5-ml-x-60-ml-ley-cenabast%3F_pos%3D7%26_psq%3Damoxicilina%26_psid%3D6a1f2ab31%26_ss%3De&cfmId=CFM-000880",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-500-mg-5-ml-x-60-ml-ley-cenabast-opko-839422.jpg?v=1692989446",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 1795,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-500-mg-5-ml-x-60-ml-ley-cenabast-opko-839422.jpg?v=1692989446",
+      "presentationKey": "amoxicilina|60ml|60|bio:unknown|brand:opko",
+      "cfmId": "CFM-000880",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|5ml",
+      "canonicalName": "Amoxicilina 250 mg/5ml 60...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina 250 mg/5ml 60...",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina%7C5ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102869-amoxicilina-250-mg-5ml-60-ml-curaespring.html&cfmId=CFM-001241",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|5ml|bio:unknown|brand:curaespring",
+      "cfmId": "CFM-001241",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|60ml|60",
+      "canonicalName": "Amoxicilina 250mg/5ml x 60 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina 250mg/5ml x 60 ml",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina%7C60ml%7C60&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F32707-amoxicilina-250mg-5ml.html&cfmId=CFM-000880",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|60ml|60|bio:unknown|brand:unknown",
+      "cfmId": "CFM-000880",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|60ml",
+      "canonicalName": "Amoxicilina 250 mg/5 ml 60 ml (CuraeSpring)",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoxicilina 250 mg/5 ml 60 ml (CuraeSpring)",
+          "channels": {
+            "store": 2100,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2100
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoxicilina%7C60ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoxicilina-250-mg-5-ml-60-ml-curaespring%2F&cfmId=CFM-000905",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/11/amoxicilina-250.png",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 2100,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/11/amoxicilina-250.png",
+      "presentationKey": "amoxicilina|60ml|bio:true|brand:unknown",
+      "cfmId": "CFM-000905",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|5ml",
+      "canonicalName": "Amoxicilina 500 mg/5mL...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina 500 mg/5mL...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina%7C5ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26106-amoxicilina-500mg-susp-60-ml.html&cfmId=CFM-001241",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|5ml|bio:unknown|brand:unknown",
+      "cfmId": "CFM-001241",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|60ml",
+      "canonicalName": "Amoxicilina 500mg/5ml 60 Ml...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina 500mg/5ml 60 Ml...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina%7C60ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103873-amoxicilina-500mg-5ml-60-ml-lab-opko.html&cfmId=CFM-000905",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|60ml|bio:unknown|brand:opko",
+      "cfmId": "CFM-000905",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina",
+      "canonicalName": "Amoxicilina/Acido...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina/Acido...",
+          "channels": {
+            "store": 7490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102872-amoxicilina-acido-clavulanico-400mg-57mg-70-ml.html&cfmId=CFM-000907",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 7490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|bio:unknown|brand:unknown|combo:acido",
+      "cfmId": "CFM-000907",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina",
+      "canonicalName": "Amoxicilina + Acido...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina + Acido...",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103308-amoxicilina-acido-clavulanico-500-125-x-20-comp-lab-ascend.html&cfmId=CFM-000907",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|bio:unknown|brand:ascend|combo:acido",
+      "cfmId": "CFM-000907",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina",
+      "canonicalName": "Amoxicilina + Ac...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina + Ac...",
+          "channels": {
+            "store": 10490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F32716-amoxicilina-acido-clavulanico-875-125-mg-x-20.html&cfmId=CFM-000907",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 10490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|bio:unknown|brand:unknown|var:ac",
+      "cfmId": "CFM-000907",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "synulox|200mg",
+      "canonicalName": "Synulox (Amoxicilina 200mg-Ácido clauvuláncio 50mg) **Uso Veterinario**",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Synulox (Amoxicilina 200mg-Ácido clauvuláncio 50mg) **Uso Veterinario**",
+          "channels": {
+            "store": 10790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=synulox%7C200mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsynulox-amoxicilina-200mg-acido-clauvulancio-50mg-uso-perritos%2F&cfmId=CFM-000903",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/07/Synolux.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        }
+      ],
+      "bestPrice": 10790,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/07/Synolux.jpg",
+      "presentationKey": "synulox|200mg|bio:unknown|brand:unknown|var:uso",
+      "cfmId": "CFM-000903",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amobiotic|90ml",
+      "canonicalName": "Amobiotic Bid 1000 Con Solvente Amoxicilina 1000mg/ 5 ml 90 Ml",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amobiotic Bid 1000 Con Solvente Amoxicilina 1000mg/ 5 ml 90 Ml",
+          "channels": {
+            "store": 18490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amobiotic%7C90ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famobiotic-bid-1000-con-solvente-amoxicilina-1000mg-5-ml-90-ml%2F&cfmId=CFM-000947",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/09/998794.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        }
+      ],
+      "bestPrice": 18490,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/09/998794.jpg",
+      "presentationKey": "amobiotic|90ml|bio:true|brand:unknown|var:bid",
+      "cfmId": "CFM-000947",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavinex|100ml",
+      "canonicalName": "Clavinex duo forte amoxicilina 800mg ácido clavulánico 57mg 100ml DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clavinex duo forte amoxicilina 800mg ácido clavulánico 57mg 100ml DESCUENTO",
+          "channels": {
+            "store": 22490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clavinex%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclavinex-duo-forte-amoxicilina-800mg-acido-clavulanico-57mg-100ml-descuento%2F&cfmId=CFM-000908",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/6e47862641be35da0c3c42dade0f40bd74d6e6f0e75b3b5b1cd90897bc422504.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 22490,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/6e47862641be35da0c3c42dade0f40bd74d6e6f0e75b3b5b1cd90897bc422504.jpg",
+      "presentationKey": "clavinex|100ml|bio:unknown|brand:unknown|var:duo",
+      "cfmId": "CFM-000908",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavinex|70ml",
+      "canonicalName": "Clavinex Duo Amoxicilina 400 Mg / Acido Clavulánico 57 mg 70 Ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clavinex Duo Amoxicilina 400 Mg / Acido Clavulánico 57 mg 70 Ml",
+          "channels": {
+            "store": 27690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clavinex%7C70ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclavinex-duo-amoxicilina-400-mg-acido-clavulanico-57-mg-70-ml%2F&cfmId=CFM-000937",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/08/7800060111691.png",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        }
+      ],
+      "bestPrice": 27690,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/08/7800060111691.png",
+      "presentationKey": "clavinex|70ml|bio:unknown|brand:unknown|combo:acido",
+      "cfmId": "CFM-000937",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "zomel|500mg",
+      "canonicalName": "Zomel HP Triterapia 1 g/500 mg/20 mg 14 Blister",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Zomel HP Triterapia 1 g/500 mg/20 mg 14 Blister",
+          "channels": {
+            "store": 49393,
+            "online": null,
+            "cmr": 43582,
+            "sbpay": null,
+            "effective": 43582
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=zomel%7C500mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fzomel-hp-triterapia-1-g-500-mg-20-mg-14-blister-75761.html&cfmId=CFM-000941",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2ee7f034/images/products/75761/75761.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 43582,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2ee7f034/images/products/75761/75761.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "zomel|500mg|bio:unknown|brand:unknown|combo:triterapia",
+      "cfmId": "CFM-000941",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amoxicilina|750mg|10",
+      "canonicalName": "Amoxicilina 750mg 10 Comprimidos",
+      "laboratory": "Amoxicilina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Amoxicilina 750 mg x 10 comprimidos.",
+          "channels": {
+            "store": 1572,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1572
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=amoxicilina%7C750mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Famoxicilina-750-mg-x-10-comprimidos%3F_pos%3D9%26_psq%3Damoxicilina%26_psid%3D6a1f2ab31%26_ss%3De&cfmId=CFM-000885",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/amoxicilina-750-mg-x-10-comprimidos-mintlab-750580_cccd56af-e90e-4053-8309-f340846a635c.webp?v=1787929652",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina 750mg 10 Comprimidos",
+          "channels": {
+            "store": 3290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C750mg%7C10&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D1701%26d_%3D1&cfmId=CFM-000885",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800063110547.jpg?v=6a94fa25d40b7",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amoxicilina 750 mg 10 Comprimidos",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amoxicilina%7C750mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Famoxicilina-750-mg-10-comprimidos%2F199267.html&cfmId=CFM-000885",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwcb601c13/images/large/199267.1.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.063Z"
+        },
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Amoxicilina 750mg 10 Comprimidos",
+          "channels": {
+            "store": 7999,
+            "online": 7039,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7039
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=amoxicilina%7C750mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Famoxicilina-750mg-10-comprimidos%3Fdefault_sku%3D2201054&cfmId=CFM-000885",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/196530/small/2201054_1.jpg?1785269691",
+          "fetchedAt": "2026-08-31T03:51:03.065Z"
+        }
+      ],
+      "bestPrice": 1572,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/196530/small/2201054_1.jpg?1785269691",
+      "presentationKey": "amoxicilina|750mg|10|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000885",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|21",
+      "canonicalName": "Amoxicilina 500 mg x 21 cápsulas. (Mintlab)",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoxicilina 500 mg x 21 cápsulas. (Mintlab)",
+          "channels": {
+            "store": 1690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoxicilina%7C500mg%7C21&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoxicilina-500mg-x21cap-mintlab&cfmId=CFM-000884",
+          "imageUrl": "https://farmacia.araucomed.com/3338-home_default/amoxicilina-500mg-x21cap-mintlab.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 1690,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3338-home_default/amoxicilina-500mg-x21cap-mintlab.jpg",
+      "presentationKey": "amoxicilina|500mg|21|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-000884",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|750mg|10",
+      "canonicalName": "Amoxicilina 750 mg x 10 comprimidos",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Amoxicilina 750 mg x 10 comprimidos",
+          "channels": {
+            "store": 1690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=amoxicilina%7C750mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Famoxicilina-comprimidos%3F_pos%3D1%26_psq%3Damoxicilina%26_psid%3D6a1f2ab31%26_ss%3De&cfmId=CFM-000885",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-750-mg-x-10-comprimidos-mintlab-750580.webp?v=1692989472",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        }
+      ],
+      "bestPrice": 1690,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-750-mg-x-10-comprimidos-mintlab-750580.webp?v=1692989472",
+      "presentationKey": "amoxicilina|750mg|10|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-000885",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|21",
+      "canonicalName": "Amoxicilina 500mg 21 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoxicilina 500 mg x 21 cápsulas (DFM) CENABAST",
+          "channels": {
+            "store": 1890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoxicilina%7C500mg%7C21&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoxicilina-500-mg-x-21-capsulas-dfm-cenabast%2F&cfmId=CFM-000884",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/07/Amoxicilina-500-mg-x-21.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina 500mg 21 Comprimidos",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C500mg%7C21&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19027%26d_%3D1&cfmId=CFM-000884",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620834471.jpg?v=6a94fa25d3735",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 1890,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620834471.jpg?v=6a94fa25d3735",
+      "presentationKey": "amoxicilina|500mg|21|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000884",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|750mg|10",
+      "canonicalName": "Amoxicilina 750 Mg 10 Comp...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina 750 Mg 10 Comp...",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina%7C750mg%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102790-amoxicilina-750-mg-10-comp-lab-milab.html&cfmId=CFM-000885",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|750mg|10|bio:unknown|brand:milab|form:solid-oral",
+      "cfmId": "CFM-000885",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|21",
+      "canonicalName": "Amoxicilina 500 mg x 21 cápsulas",
+      "laboratory": "OPKO",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Amoxicilina 500 mg x 21 cápsulas",
+          "channels": {
+            "store": 2090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=amoxicilina%7C500mg%7C21&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Famoxicilina-500-mg-x-21-capsulas-opko%3F_pos%3D4%26_psq%3Damoxicilina%26_psid%3D6a1f2ab31%26_ss%3De&cfmId=CFM-000884",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-500-mg-x-21-capsulas-opko-622370.jpg?v=1692989523",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        }
+      ],
+      "bestPrice": 2090,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-500-mg-x-21-capsulas-opko-622370.jpg?v=1692989523",
+      "presentationKey": "amoxicilina|500mg|21|bio:unknown|brand:opko|form:solid-oral",
+      "cfmId": "CFM-000884",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|21",
+      "canonicalName": "Amoxicilina 500 mg 21 cápsulas",
+      "laboratory": "OPKO",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Amoxicilina 500 mg 21 cápsulas",
+          "channels": {
+            "store": 2800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2800
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=amoxicilina%7C500mg%7C21&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-500-mg-21-capsulas%2Fp&cfmId=CFM-000884",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156942/BE0155.jpg?v=638012014700170000",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 2800,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156942/BE0155.jpg?v=638012014700170000",
+      "presentationKey": "amoxicilina|500mg|21|bio:true|brand:opko|form:solid-oral",
+      "cfmId": "CFM-000884",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|750mg|10",
+      "canonicalName": "Amoxicilina 750 mg 10 comprimidos",
+      "laboratory": "MILAB",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Amoxicilina 750 mg 10 comprimidos",
+          "channels": {
+            "store": 2920,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2920
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=amoxicilina%7C750mg%7C10&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-750-mg-10-comprimidos%2Fp&cfmId=CFM-000885",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155424/CH0011-1.jpg?v=638852483295030000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 2920,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155424/CH0011-1.jpg?v=638852483295030000",
+      "presentationKey": "amoxicilina|750mg|10|bio:true|brand:milab|form:solid-oral",
+      "cfmId": "CFM-000885",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg",
+      "canonicalName": "Amoxicilina 500 mg 21 Caps....",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amoxicilina 500 mg 21 Caps....",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amoxicilina%7C500mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F41837-amoxicilina-500mg-x-21-caps-lab-mintlab.html&cfmId=CFM-001242",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:03.075Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amoxicilina|500mg|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-001242",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|20",
+      "canonicalName": "Amoxicilina+Acido Clavulanico Clav 500/125  X 20 Comprimidos Recubiertos (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoxicilina+Acido Clavulanico Clav 500/125  X 20 Comprimidos Recubiertos (Cenabast)",
+          "channels": {
+            "store": 4980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4980
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoxicilina%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoxicilinaacido-clavulanico-clav-500-125-x-20-comprimidos-recubiertos-cenabast%2F&cfmId=CFM-000803",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/04/amoxi.webp",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 4980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/04/amoxi.webp",
+      "presentationKey": "amoxicilina|20|bio:true|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000803",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|21",
+      "canonicalName": "Amoxicilina (B) 500mg 21 Cápsulas",
+      "laboratory": "Amoxicilina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amoxicilina 500 mg 21 Cápsulas",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amoxicilina%7C500mg%7C21&url=https%3A%2F%2Fwww.cruzverde.cl%2Famoxicilina-500-mg-21-capsulas%2F296838.html&cfmId=CFM-000884",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3d7b391/images/large/296838.1.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.063Z"
+        },
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Amoxicilina (B) 500mg 21 Cápsulas",
+          "channels": {
+            "store": 5699,
+            "online": 5015,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5015
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=amoxicilina%7C500mg%7C21&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fopko-amoxicilina-b-500mg-21-capsulas%3Fdefault_sku%3D1763363&cfmId=CFM-000884",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/37355/small/1763363.jpg?1641477300",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/37355/small/1763363.jpg?1641477300",
+      "presentationKey": "amoxicilina|500mg|21|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000884",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|20",
+      "canonicalName": "Amoxicilina Acido Clavulanico 500/125 x 20 comprimidos (Ascend)",
+      "laboratory": "Ascend",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoxicilina Acido Clavulanico 500/125 x 20 comprimidos (Ascend)",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoxicilina%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoxicilina-acido-clavulanico-500-125-x-20-comprimidos-ascend&cfmId=CFM-000803",
+          "imageUrl": "https://farmacia.araucomed.com/10369-home_default/amoxicilina-acido-clavulanico-500-125-x-20-comprimidos-ascend.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10369-home_default/amoxicilina-acido-clavulanico-500-125-x-20-comprimidos-ascend.jpg",
+      "presentationKey": "amoxicilina|20|bio:unknown|brand:ascend|form:solid-oral",
+      "cfmId": "CFM-000803",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "medoclav|14",
+      "canonicalName": "Medoclav 875/125 x 14 comprimidos. (Pharmatech)",
+      "laboratory": "Pharmatech",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Medoclav 875/125 x 14 comprimidos. (Pharmatech)",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=medoclav%7C14&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fmedoclav-875-125-x-14-comprimidos-pharmatech&cfmId=CFM-000897",
+          "imageUrl": "https://farmacia.araucomed.com/14662-home_default/medoclav-875-125-x-14-comprimidos-pharmatech.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14662-home_default/medoclav-875-125-x-14-comprimidos-pharmatech.jpg",
+      "presentationKey": "medoclav|14|bio:unknown|brand:pharmatech|form:solid-oral",
+      "cfmId": "CFM-000897",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|20",
+      "canonicalName": "Amoxicilina + Ácido Clavulánico 500 mg / 125 mg x 20 comprimidos",
+      "laboratory": "ASCEND",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Amoxicilina + Ácido Clavulánico 500 mg / 125 mg x 20 comprimidos",
+          "channels": {
+            "store": 5895,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5895
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=amoxicilina%7C500mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Famoxicilina-acido-clavulanico-500-125-mg-x-20-comprimidos-recubiertos%3F_pos%3D6%26_psq%3Damoxicilina%26_psid%3D6a1f2ab31%26_ss%3De&cfmId=CFM-000866",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-acido-clavulanico-500-125-mg-x-20-comprimidos-recubiertos-ascend-483645.jpg?v=1692989572",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        }
+      ],
+      "bestPrice": 5895,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-acido-clavulanico-500-125-mg-x-20-comprimidos-recubiertos-ascend-483645.jpg?v=1692989572",
+      "presentationKey": "amoxicilina|500mg|20|bio:unknown|brand:ascend|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000866",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|125mg|20",
+      "canonicalName": "Amoxicilina Acido Clavulanico 875/125mg x 20 comprimidos. (CuraeSpring)",
+      "laboratory": "CuraeSpring",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoxicilina Acido Clavulanico 875/125mg x 20 comprimidos. (CuraeSpring)",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoxicilina%7C125mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoxicilina-acido-clavulanico-875-125mg-x-20-comprimidos-curaespring&cfmId=CFM-000886",
+          "imageUrl": "https://farmacia.araucomed.com/13464-home_default/amoxicilina-acido-clavulanico-875-125mg-x-20-comprimidos-curaespring.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13464-home_default/amoxicilina-acido-clavulanico-875-125mg-x-20-comprimidos-curaespring.jpg",
+      "presentationKey": "amoxicilina|125mg|20|bio:unknown|brand:curaespring|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000886",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|875mg|14",
+      "canonicalName": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 14 comprimidos",
+      "laboratory": "opko",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 14 comprimidos",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=amoxicilina%7C875mg%7C14&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Famoxicilina-ac-clavulanico-875-125-x-14-comp%3F_pos%3D5%26_psq%3Damoxicilina%26_psid%3D6a1f2ab31%26_ss%3De&cfmId=CFM-000894",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-acido-clavulanico-875-125-x-14-comp-opko-973768.jpg?v=1692989468",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/amoxicilina-acido-clavulanico-875-125-x-14-comp-opko-973768.jpg?v=1692989468",
+      "presentationKey": "amoxicilina|875mg|14|bio:unknown|brand:opko|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000894",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|875mg|20",
+      "canonicalName": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 20 comprimidos",
+      "laboratory": "CuraeSpring",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 20 comprimidos",
+          "channels": {
+            "store": 6695,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6695
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=amoxicilina%7C875mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Famoxicilina-acido-clavulanico-875-mg-125-mg-x-20-comprimidos-2%3F_pos%3D2%26_psq%3Damoxicilina%26_psid%3D6a1f2ab31%26_ss%3De&cfmId=CFM-000902",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/amoxicilina-acido-clavulanico-875-mg-125-mg-x-20-comprimidos-curaespring-761759.jpg?v=1771697461",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        }
+      ],
+      "bestPrice": 6695,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/amoxicilina-acido-clavulanico-875-mg-125-mg-x-20-comprimidos-curaespring-761759.jpg?v=1771697461",
+      "presentationKey": "amoxicilina|875mg|20|bio:unknown|brand:curaespring|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000902",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|875mg|20",
+      "canonicalName": "Amoxicilina 875mg/acido Clavulanico 125mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoxicilina+ácido Clavulánico 875mg 125mg por 20 comprimidos Ascend (Cenabast)",
+          "channels": {
+            "store": 6770,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6770
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoxicilina%7C875mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoxicilinaacido-clavulanico-875mg-125mg-por-20-comp-descuento%2F&cfmId=CFM-000902",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/AMOXICILINA-875.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina 875mg/acido Clavulanico 125mg 20 Comprimidos",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C875mg%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D1719%26d_%3D1&cfmId=CFM-000902",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620833818.jpg?v=6a94fa25d4402",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 6770,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620833818.jpg?v=6a94fa25d4402",
+      "presentationKey": "amoxicilina|875mg|20|bio:true|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000902",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|20",
+      "canonicalName": "Amoxicilina 500mg/acido Clavulanico 125mg 20 Comprimidos Ethon",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina 500mg/acido Clavulanico 125mg 20 Comprimidos Ethon",
+          "channels": {
+            "store": 6890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C500mg%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D1716%26d_%3D1&cfmId=CFM-000866",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804633500387.jpg?v=6a94fa25d400c",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 6890,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804633500387.jpg?v=6a94fa25d400c",
+      "presentationKey": "amoxicilina|500mg|20|bio:true|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000866",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|20",
+      "canonicalName": "Amoxicilina 500 mg ácido clavulánico 125 mg 20 comprimidos recubiertos",
+      "laboratory": "ASCEND",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Amoxicilina 500 mg ácido clavulánico 125 mg 20 comprimidos recubiertos",
+          "channels": {
+            "store": 7800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7800
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=amoxicilina%7C500mg%7C20&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-acido-clavulanico-500-125-comprimidos-recubiertos%2Fp&cfmId=CFM-000866",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159283/CH7473---1-antigua.webp?v=639074524422970000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 7800,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159283/CH7473---1-antigua.webp?v=639074524422970000",
+      "presentationKey": "amoxicilina|500mg|20|bio:true|brand:ascend|form:solid-oral",
+      "cfmId": "CFM-000866",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|875mg|14",
+      "canonicalName": "Amoxicilina 875mg/acido Clavulanico 125mg 14 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina 875mg/acido Clavulanico 125mg 14 Comprimidos",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C875mg%7C14&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D1703%26d_%3D1&cfmId=CFM-000894",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620833535.jpg?v=6a94fa25d44ad",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620833535.jpg?v=6a94fa25d44ad",
+      "presentationKey": "amoxicilina|875mg|14|bio:true|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000894",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|125mg|14",
+      "canonicalName": "Amoxicilina/Ácido Clavulánico 875/125 Mg X 14 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina/Ácido Clavulánico 875/125 Mg X 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C125mg%7C14&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D21197%26d_%3D1&cfmId=CFM-000881",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804633500622.jpg?v=6a94fa25d46ad",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804633500622.jpg?v=6a94fa25d46ad",
+      "presentationKey": "amoxicilina|125mg|14|bio:true|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000881",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|875mg|14",
+      "canonicalName": "Amoxicilina 875 mg ácido clavulánico 125 mg 14 comprimidos recubiertos",
+      "laboratory": "OPKO",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Amoxicilina 875 mg ácido clavulánico 125 mg 14 comprimidos recubiertos",
+          "channels": {
+            "store": 8200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=amoxicilina%7C875mg%7C14&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-acido-clavulanico-875-125-comprimidos-recubiertos%2Fp&cfmId=CFM-000894",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159765/BE0015---1---OPKO.jpg?v=638943609013870000",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 8200,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159765/BE0015---1---OPKO.jpg?v=638943609013870000",
+      "presentationKey": "amoxicilina|875mg|14|bio:true|brand:opko|form:solid-oral",
+      "cfmId": "CFM-000894",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|500mg|20",
+      "canonicalName": "Amoxicilina 500 mg + Acido Clavulánico 125 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amoxicilina 500 mg + Acido Clavulánico 125 mg 20 Comprimidos",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amoxicilina%7C500mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Famoxicilina-500-mg-acido-clavulanico-125-mg-20-comprimidos%2F275149.html&cfmId=CFM-000866",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw846f3396/images/large/275149-amoxcilina-+-acido-clavulanico-125-mg-20-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.063Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw846f3396/images/large/275149-amoxcilina-+-acido-clavulanico-125-mg-20-comprimidos.jpg",
+      "presentationKey": "amoxicilina|500mg|20|bio:unknown|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000866",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|125mg|20",
+      "canonicalName": "Amoxicilina/Ácido Clavulánico 875/125 Mg X 20 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoxicilina/Ácido Clavulánico 875/125 Mg X 20 Comprimidos Recubiertos",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoxicilina%7C125mg%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20201%26d_%3D1&cfmId=CFM-000886",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804650884637.jpg?v=6a94fa25d4758",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804650884637.jpg?v=6a94fa25d4758",
+      "presentationKey": "amoxicilina|125mg|20|bio:true|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000886",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amobiotic|1000mg|14",
+      "canonicalName": "Amobiotic 1 g. x 14 comprimidos.",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amobiotic 1 g. x 14 comprimidos.",
+          "channels": {
+            "store": 9490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amobiotic%7C1000mg%7C14&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famobiotic-1g-x14com&cfmId=CFM-000883",
+          "imageUrl": "https://farmacia.araucomed.com/1181-home_default/amobiotic-1g-x14com.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 9490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1181-home_default/amobiotic-1g-x14com.jpg",
+      "presentationKey": "amobiotic|1000mg|14|bio:unknown|brand:chile|form:solid-oral",
+      "cfmId": "CFM-000883",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "novamox|14",
+      "canonicalName": "Novamox amoxicilina 1gr 14 comprimidos dispersables Pasteur DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Novamox amoxicilina 1gr 14 comprimidos dispersables Pasteur DESCUENTO",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=novamox%7C14&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnovamox-amoxicilina-1gr-14-comprimidos-dispersables-pasteur-descuento%2F&cfmId=CFM-000888",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/12/Novamox-scaled.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/12/Novamox-scaled.jpg",
+      "presentationKey": "novamox|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000888",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|14",
+      "canonicalName": "Amoxicilina / Ácido Clavulánico (B) 875/125 14 Comprimidos Recubiertos",
+      "laboratory": "Amoxicilina / Ácido Clavulánico",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Amoxicilina / Ácido Clavulánico (B) 875/125 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 12299,
+            "online": 10823,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10823
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=amoxicilina%7C14&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fopko-amoxicilina-acido-clavulanico-b-875-125-14-comprimidos-recubiertos%3Fdefault_sku%3D1768030&cfmId=CFM-000893",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/37365/small/1768030.jpg?1641477298",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 10823,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/37365/small/1768030.jpg?1641477298",
+      "presentationKey": "amoxicilina|14|bio:unknown|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000893",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "novamox|1000mg|14",
+      "canonicalName": "Novamox amoxicilina 1 g 14 comprimidos dispersables",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Novamox amoxicilina 1 g 14 comprimidos dispersables",
+          "channels": {
+            "store": 11400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=novamox%7C1000mg%7C14&url=https%3A%2F%2Fwww.drsimi.cl%2Fnovamox-amoxicilina-1-gr-14-comprimidos-dispersables%2Fp&cfmId=CFM-000904",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156053/CH5035-1.jpg?v=637964772138570000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 11400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156053/CH5035-1.jpg?v=637964772138570000",
+      "presentationKey": "novamox|1000mg|14|bio:true|brand:pasteur|form:solid-oral",
+      "cfmId": "CFM-000904",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|20",
+      "canonicalName": "Amoxicilina / Acido Clavulánico (B) 500/125 20 Comprimidos Recubiertos",
+      "laboratory": "Amoxicilina+Clavulanico",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Amoxicilina / Acido Clavulánico (B) 500/125 20 Comprimidos Recubiertos",
+          "channels": {
+            "store": 13099,
+            "online": 11527,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11527
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=amoxicilina%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Famoxicilina-acido-clavulanico-b-500-125-20-comprimidos-recubiertos%3Fdefault_sku%3D1763275&cfmId=CFM-000803",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/37336/small/1763275.jpg?1641477302",
+          "fetchedAt": "2026-08-31T03:51:03.065Z"
+        }
+      ],
+      "bestPrice": 11527,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/37336/small/1763275.jpg?1641477302",
+      "presentationKey": "amoxicilina|20|bio:unknown|brand:unknown|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000803",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "optamox|875mg|14",
+      "canonicalName": "Optamox 875 mg x 14 comprimidos",
+      "laboratory": "Pharma Investi",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Optamox 875 mg x 14 comprimidos",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=optamox%7C875mg%7C14&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Foptamox-875-mg-x-14-comprimidos&cfmId=CFM-000924",
+          "imageUrl": "https://farmacia.araucomed.com/10882-home_default/optamox-875-mg-x-14-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 11990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10882-home_default/optamox-875-mg-x-14-comprimidos.jpg",
+      "presentationKey": "optamox|875mg|14|bio:unknown|brand:pharmainvesti|form:solid-oral",
+      "cfmId": "CFM-000924",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "maximox|14",
+      "canonicalName": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 14 Comprimidos Recubiertos",
+      "laboratory": "Maximox",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 26699,
+            "online": 12282,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12282
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=maximox%7C14&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Facido-clavulanico-125mg-amoxicilina-875mg-oral-solido-83a0ca42-b9c7-4c3b-b584-25d831bd287e%3Fdefault_sku%3D2501113&cfmId=CFM-000919",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28027/small/2501113.jpg?1641479685",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 12282,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28027/small/2501113.jpg?1641479685",
+      "presentationKey": "maximox|14|bio:unknown|brand:maximox|var:cido|form:solid-oral",
+      "cfmId": "CFM-000919",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amobiotic|1000mg|14",
+      "canonicalName": "Amobiotic Amoxicilina 1g x 14 comprimidos dispersables Lab Chile DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amobiotic Amoxicilina 1g x 14 comprimidos dispersables Lab Chile DESCUENTO",
+          "channels": {
+            "store": 12950,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12950
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amobiotic%7C1000mg%7C14&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famobiotic-amoxicilina-1g-x-14-comprimidos-dispersables-lab-chile-descuento%2F&cfmId=CFM-000883",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/439263.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.071Z"
+        }
+      ],
+      "bestPrice": 12950,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/439263.jpg",
+      "presentationKey": "amobiotic|1000mg|14|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000883",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "novamox|1000mg|14",
+      "canonicalName": "Novamox (B) Amoxicilina 1g 14 Comprimidos",
+      "laboratory": "Novamox",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Novamox (B) Amoxicilina 1g 14 Comprimidos",
+          "channels": {
+            "store": 15299,
+            "online": 13463,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13463
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=novamox%7C1000mg%7C14&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnovamox-b-amoxicilina-1g-14-comprimidos%3Fdefault_sku%3D2501096&cfmId=CFM-000904",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/148128/small/2501096_1.jpg?1750173608",
+          "fetchedAt": "2026-08-31T03:51:03.065Z"
+        }
+      ],
+      "bestPrice": 13463,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/148128/small/2501096_1.jpg?1750173608",
+      "presentationKey": "novamox|1000mg|14|bio:unknown|brand:novamox|form:solid-oral",
+      "cfmId": "CFM-000904",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "optamox|875mg|21",
+      "canonicalName": "Optamox 875 mg x 21 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Optamox 875 mg x 21 Comprimidos Recubiertos",
+          "channels": {
+            "store": 15376,
+            "online": null,
+            "cmr": 13567,
+            "sbpay": null,
+            "effective": 13567
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=optamox%7C875mg%7C21&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Foptamox-875-mg-x-21-comprimidos-recubiertos-64562.html&cfmId=CFM-000901",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2f1629ad/images/products/64562/64562.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 13567,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2f1629ad/images/products/64562/64562.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "optamox|875mg|21|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000901",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amobiotic|1000mg|14",
+      "canonicalName": "Amobiotic 1 g x 14 Comprimidos Dispersables",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Amobiotic 1 g x 14 Comprimidos Dispersables",
+          "channels": {
+            "store": 15631,
+            "online": null,
+            "cmr": 13792,
+            "sbpay": null,
+            "effective": 13792
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amobiotic%7C1000mg%7C14&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famobiotic-1-g-x-14-comprimidos-dispersables-20397.html&cfmId=CFM-000883",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw78ddb62d/images/products/20397/20397.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amobiotic Amoxicilina 1000 mg 14 Comprimidos",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amobiotic%7C1000mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Famobiotic-amoxicilina-1000-mg-14-comprimidos%2F1451.html&cfmId=CFM-000883",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw46c5cbc1/images/large/1451-2-amobiotic-comprimido-14-unidades-amoxicilina-1000-mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 13792,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw78ddb62d/images/products/20397/20397.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "amobiotic|1000mg|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000883",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|14",
+      "canonicalName": "Amoval 1 gramo x 14 comprimidos dispersables.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoval 1 gramo x 14 comprimidos dispersables.",
+          "channels": {
+            "store": 13890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoval%7C14&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoval-1g-x14com&cfmId=CFM-000882",
+          "imageUrl": "https://farmacia.araucomed.com/1182-home_default/amoval-1g-x14com.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoval Amoxicilina 1gr 14 Comprimidos Dispersables",
+          "channels": {
+            "store": 14470,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14470
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoval%7C14&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoval-amoxicilina-1gr-14-comprimidos-dispersables%2F&cfmId=CFM-000882",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/2970138.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoval (amoxicilina) 1gr 14 Comprimidos Dispersable",
+          "channels": {
+            "store": 16990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoval%7C14&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19426%26d_%3D1&cfmId=CFM-000882",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060111189.jpg?v=6a94fa25d3897",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 13890,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1182-home_default/amoval-1g-x14com.jpg",
+      "presentationKey": "amoval|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000882",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amobiotic|14",
+      "canonicalName": "Amobiotic (amoxicilina) 1gr 14 Comprimidos Dispersables",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amobiotic (amoxicilina) 1gr 14 Comprimidos Dispersables",
+          "channels": {
+            "store": 13990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amobiotic%7C14&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19025%26d_%3D1&cfmId=CFM-000906",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007782397.jpg?v=6a94fa25d37e7",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 13990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007782397.jpg?v=6a94fa25d37e7",
+      "presentationKey": "amobiotic|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000906",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavam|875mg|14",
+      "canonicalName": "Clavam Duo 875 mg/125 mg x 14 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Clavam Duo 875 mg/125 mg x 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 14024,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14024
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clavam%7C875mg%7C14&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclavam-duo-875-mg-125-mg-x-14-comprimidos-recubiertos-76448.html&cfmId=CFM-000936",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1396ac2c/images/products/76448/76448.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 14024,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1396ac2c/images/products/76448/76448.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "clavam|875mg|14|bio:true|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000936",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amoval|1000mg|14",
+      "canonicalName": "Amoval Amoxicilina 1g 14 Comprimidos Dispersables",
+      "laboratory": "Amoval",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Amoval Amoxicilina 1g 14 Comprimidos Dispersables",
+          "channels": {
+            "store": 19399,
+            "online": 14549,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14549
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=amoval%7C1000mg%7C14&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Famoval-amoxicilina-1g-14-comprimidos-dispersables%3Fdefault_sku%3D2970138&cfmId=CFM-000910",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/139227/small/2970138_1.jpg?1743687579",
+          "fetchedAt": "2026-08-31T03:51:03.065Z"
+        }
+      ],
+      "bestPrice": 14549,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/139227/small/2970138_1.jpg?1743687579",
+      "presentationKey": "amoval|1000mg|14|bio:unknown|brand:amoval|form:solid-oral",
+      "cfmId": "CFM-000910",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|1000mg|14",
+      "canonicalName": "AMOVAL Amoxicilina 1 g 14 comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "AMOVAL Amoxicilina 1 g 14 comprimidos",
+          "channels": {
+            "store": 16583,
+            "online": null,
+            "cmr": 14632,
+            "sbpay": null,
+            "effective": 14632
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amoval%7C1000mg%7C14&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famoval-amoxicilina-1-g-14-comprimidos-16344.html&cfmId=CFM-000910",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2a385123/images/products/16344/16344.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 14632,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2a385123/images/products/16344/16344.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "amoval|1000mg|14|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000910",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "optamox|875mg|21",
+      "canonicalName": "Optamox amoxicilina 875 mg 21 comprimidos recubiertos",
+      "laboratory": "MEGALABS",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Optamox amoxicilina 875 mg 21 comprimidos recubiertos",
+          "channels": {
+            "store": 15200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=optamox%7C875mg%7C21&url=https%3A%2F%2Fwww.drsimi.cl%2Foptamox-amoxicilina-875-mg-21-comprimidos%2Fp&cfmId=CFM-000901",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155441/CH5196-1.jpg?v=638664167547400000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 15200,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155441/CH5196-1.jpg?v=638664167547400000",
+      "presentationKey": "optamox|875mg|21|bio:false|brand:megalabs|form:solid-oral",
+      "cfmId": "CFM-000901",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "novamox|1000mg|14",
+      "canonicalName": "Novamox Amoxicilina 1000 mg 14 Comprimidos Dispersable",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Novamox Amoxicilina 1000 mg 14 Comprimidos Dispersable",
+          "channels": {
+            "store": 15290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=novamox%7C1000mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnovamox-amoxicilina-1000-mg-14-comprimidos-dispersable%2F260321.html&cfmId=CFM-000904",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw843cfab2/images/large/260321-novamox-comprimido-dispersable-14-unidades-amoxicilina-1000-mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 15290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw843cfab2/images/large/260321-novamox-comprimido-dispersable-14-unidades-amoxicilina-1000-mg.jpg",
+      "presentationKey": "novamox|1000mg|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000904",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|500mg|21",
+      "canonicalName": "Amoval Amoxicilina 500 mg 21 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoval (amoxicilina) 500mg 21 Comprimidos",
+          "channels": {
+            "store": 15390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoval%7C500mg%7C21&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20450%26d_%3D1&cfmId=CFM-000932",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060017245.jpg?v=6a94fa25d3d58",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amoval Amoxicilina 500 mg 21 Comprimidos",
+          "channels": {
+            "store": 28240,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28240
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amoval%7C500mg%7C21&url=https%3A%2F%2Fwww.cruzverde.cl%2Famoval-amoxicilina-500-mg-21-comprimidos%2F6093.html&cfmId=CFM-000932",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa5af5983/images/large/6093-1.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 15390,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa5af5983/images/large/6093-1.jpg",
+      "presentationKey": "amoval|500mg|21|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000932",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "moxivulan|125mg|14",
+      "canonicalName": "Moxivulan Ácido Clavulánico 125mg Amoxicilina 875mg 14 Comprimidos Recubiertos",
+      "laboratory": "Moxivulan",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Moxivulan Ácido Clavulánico 125mg Amoxicilina 875mg 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 17499,
+            "online": 15399,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=moxivulan%7C125mg%7C14&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmoxivulan-acido-clavulanico-125mg-amoxicilina-875mg-14-comprimidos-recubiertos%3Fdefault_sku%3D3310312&cfmId=CFM-000898",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149534/small/3310312.jpg?1750797653",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 15399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149534/small/3310312.jpg?1750797653",
+      "presentationKey": "moxivulan|125mg|14|bio:unknown|brand:moxivulan|form:solid-oral",
+      "cfmId": "CFM-000898",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "maximox|20",
+      "canonicalName": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 20 Comprimidos Recubiertos",
+      "laboratory": "Maximox",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 20 Comprimidos Recubiertos",
+          "channels": {
+            "store": 27999,
+            "online": 15959,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15959
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=maximox%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Facido-clavulanico-125mg-amoxicilina-875mg-oral-solido-717e7b95-7249-428c-b210-d0853378111c%3Fdefault_sku%3D2501114&cfmId=CFM-000917",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28028/small/2501114.jpg?1641479685",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 15959,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28028/small/2501114.jpg?1641479685",
+      "presentationKey": "maximox|20|bio:unknown|brand:maximox|var:cido|form:solid-oral",
+      "cfmId": "CFM-000917",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "novamox|1000mg|20",
+      "canonicalName": "Novamox 1 g x 20 Comprimidos Dispersables",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Novamox 1 g x 20 Comprimidos Dispersables",
+          "channels": {
+            "store": 21449,
+            "online": null,
+            "cmr": 16087,
+            "sbpay": null,
+            "effective": 16087
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=novamox%7C1000mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnovamox-1-g-x-20-comprimidos-dispersables-88103.html&cfmId=CFM-000923",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe91d091e/images/products/88103/88103.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 16087,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe91d091e/images/products/88103/88103.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "novamox|1000mg|20|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000923",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "optamox|875mg|14",
+      "canonicalName": "Optamox 875 mg x 14 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Optamox 875 mg x 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 21699,
+            "online": null,
+            "cmr": 16274,
+            "sbpay": null,
+            "effective": 16274
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=optamox%7C875mg%7C14&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Foptamox-875-mg-x-14-comprimidos-recubiertos-28045.html&cfmId=CFM-000924",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwcb7b40cd/images/products/28045/28045.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 16274,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwcb7b40cd/images/products/28045/28045.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "optamox|875mg|14|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000924",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "amoval|1000mg|20",
+      "canonicalName": "AMOVAL Amoxicilina 1 g 20 comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "AMOVAL Amoxicilina 1 g 20 comprimidos",
+          "channels": {
+            "store": 18997,
+            "online": null,
+            "cmr": 16762,
+            "sbpay": null,
+            "effective": 16762
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=amoval%7C1000mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Famoval-amoxicilina-1-g-20-comprimidos-39171.html&cfmId=CFM-000921",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1c9a4c01/images/products/39171/39171.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.067Z"
+        }
+      ],
+      "bestPrice": 16762,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1c9a4c01/images/products/39171/39171.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "amoval|1000mg|20|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000921",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoxicilina|250mg|500",
+      "canonicalName": "Amoxicilina 250 mg 500 cápsulas",
+      "laboratory": "DR. SIMI",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Amoxicilina 250 mg 500 cápsulas",
+          "channels": {
+            "store": 16807,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16807
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=amoxicilina%7C250mg%7C500&url=https%3A%2F%2Fwww.drsimi.cl%2Famoxicilina-250-mg-500-capsulas%2Fp&cfmId=CFM-000922",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157096/CH7117.jpg?v=638012015239270000",
+          "fetchedAt": "2026-08-31T03:51:03.069Z"
+        }
+      ],
+      "bestPrice": 16807,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157096/CH7117.jpg?v=638012015239270000",
+      "presentationKey": "amoxicilina|250mg|500|bio:false|brand:drsimi|form:solid-oral",
+      "cfmId": "CFM-000922",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|20",
+      "canonicalName": "Amoval Amoxicilina 1gr 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Amoval 1 gramo x 20 comprimidos dispersables.",
+          "channels": {
+            "store": 16990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=amoval%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Famoval-1g-x20com&cfmId=CFM-000912",
+          "imageUrl": "https://farmacia.araucomed.com/1183-home_default/amoval-1g-x20com.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Amoval Amoxicilina 1gr 20 Comprimidos",
+          "channels": {
+            "store": 19150,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19150
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=amoval%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Famoval-amoxicilina-1gr-20-comprimidos%2F&cfmId=CFM-000912",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/08/amoval-1g.png",
+          "fetchedAt": "2026-08-31T03:51:03.072Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Amoval (amoxicilina) 1gr 20 Comprimidos Dispersable",
+          "channels": {
+            "store": 19690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=amoval%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19424%26d_%3D1&cfmId=CFM-000912",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060117464.jpg?v=6a94fa25d3944",
+          "fetchedAt": "2026-08-31T03:51:03.073Z"
+        }
+      ],
+      "bestPrice": 16990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/08/amoval-1g.png",
+      "presentationKey": "amoval|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000912",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "moxivulan|875mg|14",
+      "canonicalName": "Moxivulan 875/125 Amoxicilina 875 mg Ácido Clavulánico 125 mg 14 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Moxivulan 875/125 Amoxicilina 875 mg Ácido Clavulánico 125 mg 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 17340,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17340
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=moxivulan%7C875mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmoxivulan-875-125-amoxicilina-875-mg-acido-clavulanico-125-mg-14-comprimidos-recubiertos%2F392524.html&cfmId=CFM-000911",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa876ccf1/images/large/392524-moxivulan-875125-amoxicilina-875-mg-acido-clavulanico-125-mg-14-comprimidos-recubiertos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.063Z"
+        }
+      ],
+      "bestPrice": 17340,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa876ccf1/images/large/392524-moxivulan-875125-amoxicilina-875-mg-acido-clavulanico-125-mg-14-comprimidos-recubiertos.jpg",
+      "presentationKey": "moxivulan|875mg|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000911",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "optamox|875mg|21",
+      "canonicalName": "Optamox Amoxicilina 875 mg 21 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Optamox Amoxicilina 875 mg 21 Comprimidos",
+          "channels": {
+            "store": 17590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=optamox%7C875mg%7C21&url=https%3A%2F%2Fwww.cruzverde.cl%2Foptamox-amoxicilina-875-mg-21-comprimidos%2F259180.html&cfmId=CFM-000901",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw01e93138/images/large/259180-optamox-amoxicilina-875-mg-21-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 17590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw01e93138/images/large/259180-optamox-amoxicilina-875-mg-21-comprimidos.jpg",
+      "presentationKey": "optamox|875mg|21|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000901",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "novamox|1000mg|20",
+      "canonicalName": "Novamox (B) Amoxicilina 1g 20 Comprimidos",
+      "laboratory": "Novamox",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Novamox (B) Amoxicilina 1g 20 Comprimidos",
+          "channels": {
+            "store": 20599,
+            "online": 18127,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18127
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=novamox%7C1000mg%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnovamox-b-amoxicilina-1g-20-comprimidos%3Fdefault_sku%3D574764&cfmId=CFM-000923",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/148116/small/574764_1.jpg?1750173415",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 18127,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/148116/small/574764_1.jpg?1750173415",
+      "presentationKey": "novamox|1000mg|20|bio:unknown|brand:novamox|form:solid-oral",
+      "cfmId": "CFM-000923",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|1000mg|14",
+      "canonicalName": "Amoval Amoxicilina 1000 mg 14 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amoval Amoxicilina 1000 mg 14 Comprimidos",
+          "channels": {
+            "store": 18540,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18540
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amoval%7C1000mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Famoval-amoxicilina-1000-mg-14-comprimidos%2F6261.html&cfmId=CFM-000910",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw639676df/images/large/6261-amoval-amoxicilina-1000-mg-14-comprimidos-recubierto.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 18540,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw639676df/images/large/6261-amoval-amoxicilina-1000-mg-14-comprimidos-recubierto.jpg",
+      "presentationKey": "amoval|1000mg|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000910",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "zolimax|875mg|14",
+      "canonicalName": "Zolimax Duo 875/125 Amoxicilina 875 mg 14 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Zolimax Duo 875/125 Amoxicilina 875 mg 14 Comprimidos",
+          "channels": {
+            "store": 19540,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19540
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=zolimax%7C875mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Fzolimax-duo-875-125-amoxicilina-875-mg-14-comprimidos%2F292268.html&cfmId=CFM-000896",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb9a89204/images/large/292268-zolimax-duo-875125-14-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.063Z"
+        }
+      ],
+      "bestPrice": 19540,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb9a89204/images/large/292268-zolimax-duo-875125-14-comprimidos.jpg",
+      "presentationKey": "zolimax|875mg|14|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000896",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "zolimax|875mg|20",
+      "canonicalName": "Zolimax Duo 875/125 Amoxicilina 875 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Zolimax Duo 875/125 Amoxicilina 875 mg 20 Comprimidos",
+          "channels": {
+            "store": 19791,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19791
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=zolimax%7C875mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fzolimax-duo-875-125-amoxicilina-875-mg-20-comprimidos%2F292269.html&cfmId=CFM-000925",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf2e66f38/images/large/292269-zolimax-duo-875125-20-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.063Z"
+        }
+      ],
+      "bestPrice": 19791,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf2e66f38/images/large/292269-zolimax-duo-875125-20-comprimidos.jpg",
+      "presentationKey": "zolimax|875mg|20|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000925",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "optamox|875mg|14",
+      "canonicalName": "Optamox Amoxicilina 875 mg 14 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Optamox Amoxicilina 875 mg 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 20590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 20590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=optamox%7C875mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Foptamox-amoxicilina-875-mg-14-comprimidos-recubiertos%2F161148.html&cfmId=CFM-000924",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4716d9c8/images/large/161148-optamox-amoxicilina-875-mg-14-comprimidos-recubiertos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 20590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4716d9c8/images/large/161148-optamox-amoxicilina-875-mg-14-comprimidos-recubiertos.jpg",
+      "presentationKey": "optamox|875mg|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000924",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "novamox|1000mg|20",
+      "canonicalName": "Novamox Amoxicilina 1000 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Novamox Amoxicilina 1000 mg 20 Comprimidos",
+          "channels": {
+            "store": 20590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 20590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=novamox%7C1000mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnovamox-amoxicilina-1000-mg-20-comprimidos%2F259836.html&cfmId=CFM-000923",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw699a3557/images/large/259836-novamox-amoxicilina-1000-mg-20-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 20590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw699a3557/images/large/259836-novamox-amoxicilina-1000-mg-20-comprimidos.jpg",
+      "presentationKey": "novamox|1000mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000923",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ambilan|125mg|14",
+      "canonicalName": "Ambilan Bid (amoxicilina/clavulanico) 875/125mg 14 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Ambilan Bid (amoxicilina/clavulanico) 875/125mg 14 Comprimidos",
+          "channels": {
+            "store": 22090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22090
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=ambilan%7C125mg%7C14&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19281%26d_%3D1&cfmId=CFM-000939",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007744623.jpg?v=6a94fa25d4357",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 22090,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007744623.jpg?v=6a94fa25d4357",
+      "presentationKey": "ambilan|125mg|14|bio:unknown|brand:unknown|combo:clavulanico|form:solid-oral",
+      "cfmId": "CFM-000939",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavam|14",
+      "canonicalName": "Clavam Duo (B) Amoxicilina / ícido Clavulánico 875/125 14 Comprimidos Recubiertos",
+      "laboratory": "Clavam Duo",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clavam Duo (B) Amoxicilina / ícido Clavulánico 875/125 14 Comprimidos Recubiertos",
+          "channels": {
+            "store": 25899,
+            "online": 22791,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22791
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clavam%7C14&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Facido-clavulanico-125mg-amoxicilina-875mg-oral-solido-557ff42a-e4f7-41e5-afa0-b21c0e4e3a55%3Fdefault_sku%3D3402056&cfmId=CFM-000928",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/23100/small/3402056.jpg?1641479949",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 22791,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/23100/small/3402056.jpg?1641479949",
+      "presentationKey": "clavam|14|bio:unknown|brand:clavamduo|var:duo|form:solid-oral",
+      "cfmId": "CFM-000928",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavinex|14",
+      "canonicalName": "Clavinex Duo CD 875/125 x 14 comprimidos.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clavinex Duo CD 875/125 x 14 comprimidos.",
+          "channels": {
+            "store": 23490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clavinex%7C14&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fclavinex-duo-cd-875-125-x14com&cfmId=CFM-000940",
+          "imageUrl": "https://farmacia.araucomed.com/3755-home_default/clavinex-duo-cd-875-125-x14com.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 23490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3755-home_default/clavinex-duo-cd-875-125-x14com.jpg",
+      "presentationKey": "clavinex|14|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000940",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clavam|875mg|14",
+      "canonicalName": "Clavam Duo Amoxicilina 875 mg 14 Comprimidos Recubierto",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clavam Duo Amoxicilina 875 mg 14 Comprimidos Recubierto",
+          "channels": {
+            "store": 24250,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24250
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clavam%7C875mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclavam-duo-amoxicilina-875-mg-14-comprimidos-recubierto%2F268905.html&cfmId=CFM-000936",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw04cfe69b/images/large/268905-clavam-duo-comprimido-recubierto-14-unidades-amoxicilina-875-mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.063Z"
+        }
+      ],
+      "bestPrice": 24250,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw04cfe69b/images/large/268905-clavam-duo-comprimido-recubierto-14-unidades-amoxicilina-875-mg.jpg",
+      "presentationKey": "clavam|875mg|14|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000936",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|1000mg|20",
+      "canonicalName": "Amoval Amoxicilina 1000 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amoval Amoxicilina 1000 mg 20 Comprimidos",
+          "channels": {
+            "store": 24580,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24580
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amoval%7C1000mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Famoval-amoxicilina-1000-mg-20-comprimidos%2F6376.html&cfmId=CFM-000921",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw55940582/images/large/6376-amoval-amoxicilina-1000-mg-20-comprimidos-recubierto.jpg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 24580,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw55940582/images/large/6376-amoval-amoxicilina-1000-mg-20-comprimidos-recubierto.jpg.jpg",
+      "presentationKey": "amoval|1000mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000921",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavam|20",
+      "canonicalName": "Clavam Duo (B) Amoxicilina / ícido Clavulánico 875/125 20 Comprimidos Recubiertos",
+      "laboratory": "Clavam Duo",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clavam Duo (B) Amoxicilina / ícido Clavulánico 875/125 20 Comprimidos Recubiertos",
+          "channels": {
+            "store": 28799,
+            "online": 25343,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25343
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clavam%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Facido-clavulanico-125mg-amoxicilina-875mg-oral-solido-173dd599-892c-4243-923c-7305fe1fdf4b%3Fdefault_sku%3D3402057&cfmId=CFM-000929",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/42285/small/3402057_001.jpg?1641477031",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 25343,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/42285/small/3402057_001.jpg?1641477031",
+      "presentationKey": "clavam|20|bio:unknown|brand:clavamduo|var:duo|form:solid-oral",
+      "cfmId": "CFM-000929",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "maximox|875mg|14",
+      "canonicalName": "Maximox Amoxicilina 875 mg 14 Comprimidos Recubierto",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Maximox Amoxicilina 875 mg 14 Comprimidos Recubierto",
+          "channels": {
+            "store": 26690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 26690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=maximox%7C875mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmaximox-amoxicilina-875-mg-14-comprimidos-recubierto%2F259539.html&cfmId=CFM-000943",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw193dc6e6/images/large/259539-maximox-amoxicilina-875-mg-14-comprimidos-recubierto.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 26690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw193dc6e6/images/large/259539-maximox-amoxicilina-875-mg-14-comprimidos-recubierto.jpg",
+      "presentationKey": "maximox|875mg|14|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000943",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amobiotic|1000mg|20",
+      "canonicalName": "Amobiotic Amoxicilina 1000 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amobiotic Amoxicilina 1000 mg 20 Comprimidos",
+          "channels": {
+            "store": 27290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amobiotic%7C1000mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Famobiotic-amoxicilina-1000-mg-20-comprimidos%2F1505.html&cfmId=CFM-000909",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf7fe521e/images/large/1505-amobiotic-amoxicilina-1000-mg-20-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 27290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf7fe521e/images/large/1505-amobiotic-amoxicilina-1000-mg-20-comprimidos.jpg",
+      "presentationKey": "amobiotic|1000mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000909",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavinex|125mg|20",
+      "canonicalName": "Clavinex Duo CD 875/125 mg. x 20 comprimidos dispersables.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clavinex Duo CD 875/125 mg. x 20 comprimidos dispersables.",
+          "channels": {
+            "store": 27490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clavinex%7C125mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fclavinex-duo-cd-875-125-x20com&cfmId=CFM-001238",
+          "imageUrl": "https://farmacia.araucomed.com/3757-home_default/clavinex-duo-cd-875-125-x20com.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.070Z"
+        }
+      ],
+      "bestPrice": 27490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3757-home_default/clavinex-duo-cd-875-125-x20com.jpg",
+      "presentationKey": "clavinex|125mg|20|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-001238",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ambilan|20",
+      "canonicalName": "Ambilan Bid 875/125 20 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Ambilan Bid 875/125 20 Comprimidos Recubiertos",
+          "channels": {
+            "store": 27509,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27509
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=ambilan%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fambilan-bid-875-125-20-comprimidos-recubiertos-94711.html&cfmId=CFM-001236",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb6748b67/images/products/94711/94711.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        }
+      ],
+      "bestPrice": 27509,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb6748b67/images/products/94711/94711.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "ambilan|20|bio:true|brand:unknown|var:bid|form:solid-oral",
+      "cfmId": "CFM-001236",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clavinex|875mg|14",
+      "canonicalName": "Clavinex Duo CD Amoxicilina 875 mg 14 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Clavinex Duo CD 875 mg/125 mg x 14 Comprimidos Dispersables",
+          "channels": {
+            "store": 31577,
+            "online": null,
+            "cmr": 27862,
+            "sbpay": null,
+            "effective": 27862
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clavinex%7C875mg%7C14&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclavinex-duo-cd-875-mg-125-mg-x-14-comprimidos-dispersables-81775.html&cfmId=CFM-000944",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9099938a/images/products/81775/81775.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:03.068Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clavinex Duo CD Amoxicilina 875 mg 14 Comprimidos",
+          "channels": {
+            "store": 35790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 35790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clavinex%7C875mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclavinex-duo-cd-amoxicilina-875-mg-14-comprimidos%2F277271.html&cfmId=CFM-000944",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwcb0bf34c/images/large/277271-clavinex-duo-cd-comprimido-dispersable-14-unidades-amoxicilina-875-mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 27862,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwcb0bf34c/images/large/277271-clavinex-duo-cd-comprimido-dispersable-14-unidades-amoxicilina-875-mg.jpg",
+      "presentationKey": "clavinex|875mg|14|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000944",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavam|875mg|20",
+      "canonicalName": "Clavam Duo Amoxicilina 875 mg 20 Comprimidos Recubierto",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clavam Duo Amoxicilina 875 mg 20 Comprimidos Recubierto",
+          "channels": {
+            "store": 27890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clavam%7C875mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclavam-duo-amoxicilina-875-mg-20-comprimidos-recubierto%2F272673.html&cfmId=CFM-000891",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw48412391/images/large/272673-clavam-duo-comprimido-recubierto-20-unidades-amoxicilina-875-mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.063Z"
+        }
+      ],
+      "bestPrice": 27890,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw48412391/images/large/272673-clavam-duo-comprimido-recubierto-20-unidades-amoxicilina-875-mg.jpg",
+      "presentationKey": "clavam|875mg|20|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000891",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "maximox|875mg|20",
+      "canonicalName": "Maximox Amoxicilina 875 mg 20 Comprimidos Recubierto",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Maximox Amoxicilina 875 mg 20 Comprimidos Recubierto",
+          "channels": {
+            "store": 27890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=maximox%7C875mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmaximox-amoxicilina-875-mg-20-comprimidos-recubierto%2F260548.html&cfmId=CFM-000942",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4a8e54ee/images/large/260548-maximox-comprimido-recubierto-20-unidades-amoxicilina-875-mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 27890,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4a8e54ee/images/large/260548-maximox-comprimido-recubierto-20-unidades-amoxicilina-875-mg.jpg",
+      "presentationKey": "maximox|875mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000942",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|750mg|21",
+      "canonicalName": "Amoval (B) Amoxicilina 750mg 21 Comprimidos Recubiertos",
+      "laboratory": "Amoval",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Amoval (B) Amoxicilina 750mg 21 Comprimidos Recubiertos",
+          "channels": {
+            "store": 32299,
+            "online": 28423,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28423
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=amoval%7C750mg%7C21&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Famoval-b-amoxicilina-750mg-21-comprimidos-recubiertos%3Fdefault_sku%3D2970170&cfmId=CFM-000946",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/116524/small/2970170_1.jpg?1721401388",
+          "fetchedAt": "2026-08-31T03:51:03.066Z"
+        }
+      ],
+      "bestPrice": 28423,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/116524/small/2970170_1.jpg?1721401388",
+      "presentationKey": "amoval|750mg|21|bio:unknown|brand:amoval|form:solid-oral",
+      "cfmId": "CFM-000946",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ambilan|125mg|20",
+      "canonicalName": "Ambilan Bid (amoxicilina/clavulanico) 875/125mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Ambilan Bid (amoxicilina/clavulanico) 875/125mg 20 Comprimidos",
+          "channels": {
+            "store": 28890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=ambilan%7C125mg%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19191%26d_%3D1&cfmId=CFM-000934",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007744708.jpg?v=6a94fa25d42ab",
+          "fetchedAt": "2026-08-31T03:51:03.074Z"
+        }
+      ],
+      "bestPrice": 28890,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007744708.jpg?v=6a94fa25d42ab",
+      "presentationKey": "ambilan|125mg|20|bio:unknown|brand:unknown|combo:clavulanico|form:solid-oral",
+      "cfmId": "CFM-000934",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "amoval|750mg|21",
+      "canonicalName": "Amoval Amoxicilina 750 mg 21 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Amoval Amoxicilina 750 mg 21 Comprimidos",
+          "channels": {
+            "store": 30940,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 30940
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=amoval%7C750mg%7C21&url=https%3A%2F%2Fwww.cruzverde.cl%2Famoval-amoxicilina-750-mg-21-comprimidos%2F6116.html&cfmId=CFM-000946",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf305cc45/images/large/6116-amoval-amoxicilina-750-mg-21-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 30940,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf305cc45/images/large/6116-amoval-amoxicilina-750-mg-21-comprimidos.jpg",
+      "presentationKey": "amoval|750mg|21|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000946",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavinex|14",
+      "canonicalName": "Clavinex Duo CD Amoxicilina / Ácido Clavulánico 14 Comprimidos Dispersables",
+      "laboratory": "Clavinex Duo",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clavinex Duo CD Amoxicilina / Ácido Clavulánico 14 Comprimidos Dispersables",
+          "channels": {
+            "store": 35999,
+            "online": 31679,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 31679
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clavinex%7C14&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclavinex-duo-cd-amoxicilina-acido-clavulanico-14-comprimidos-dispersables%3Fdefault_sku%3D2974206&cfmId=CFM-000940",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149923/small/2974206.jpg?1751033545",
+          "fetchedAt": "2026-08-31T03:51:03.065Z"
+        }
+      ],
+      "bestPrice": 31679,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149923/small/2974206.jpg?1751033545",
+      "presentationKey": "clavinex|14|bio:unknown|brand:clavinexduo|combo:acido|form:solid-oral",
+      "cfmId": "CFM-000940",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clavinex|875mg|20",
+      "canonicalName": "Clavinex Duo CD Amoxicilina 875 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clavinex Duo CD Amoxicilina 875 mg 20 Comprimidos",
+          "channels": {
+            "store": 45790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 45790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clavinex%7C875mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclavinex-duo-cd-amoxicilina-875-mg-20-comprimidos%2F277270.html&cfmId=CFM-000931",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9942f01d/images/large/277270-clavinex-duo-cd-comprimido-dispersable-20-unidades-amoxicilina-875-mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:03.064Z"
+        }
+      ],
+      "bestPrice": 45790,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9942f01d/images/large/277270-clavinex-duo-cd-comprimido-dispersable-20-unidades-amoxicilina-875-mg.jpg",
+      "presentationKey": "clavinex|875mg|20|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000931",
+      "lexicalMatch": "exact"
+    }
+  ]
+}

@@ -1,7 +1,13 @@
 import type { MedicationResult, PharmacyPrice, PharmacySlug, ScrapedProduct } from "./types.js";
 import { combinationKey, matchKey } from "./matching.js";
 import { bioequivalenceKey, presentationKey, resolveCommercialIdentity } from "./commercialIdentity.js";
-import { commercialVariantKey, dosageFormClass, unitCountKey, type ProductIdentity } from "./productIdentity.js";
+import {
+  commercialVariantKey,
+  dosageFormClass,
+  liquidConcentration,
+  unitCountKey,
+  type ProductIdentity,
+} from "./productIdentity.js";
 
 export function effectivePrice(channels: {
   store: number;
@@ -98,6 +104,7 @@ export function toProductIdentity(product: ScrapedProduct): ProductIdentity {
     commercialVariant: commercialVariantKey(product.name),
     dosageForm: dosageFormClass(product.name),
     unitCount: unitCountKey(product.name),
+    concentration: liquidConcentration(product.name),
   };
 }
 

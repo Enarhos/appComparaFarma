@@ -1,0 +1,596 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "cidoten",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=cidoten",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:51:30.598Z",
+  "completedAt": "2026-08-31T03:51:37.132Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 16,
+  "results": [
+    {
+      "matchKey": "cidoten|5ml",
+      "canonicalName": "Cidoten Rapi-Lento 5ml (MSD)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Cidoten Rapi-Lento 5ml x1amp (Cenabast)",
+          "channels": {
+            "store": 12490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cidoten%7C5ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fcidoten-rapi-lento-5ml-x1amp-cenabast&cfmId=CFM-009752",
+          "imageUrl": "https://farmacia.araucomed.com/8512-home_default/cidoten-rapi-lento-5ml-x1amp-cenabast.jpg",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Cidoten Rapi-Lento 5ml (MSD)",
+          "channels": {
+            "store": 26980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 26980
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cidoten%7C5ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcidoten-rapi-lento-5ml-msd%2F&cfmId=CFM-009752",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/06/Cidoten.jpeg",
+          "fetchedAt": "2026-08-31T03:51:36.981Z"
+        }
+      ],
+      "bestPrice": 12490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/06/Cidoten.jpeg",
+      "presentationKey": "cidoten|5ml|bio:unknown|brand:unknown|var:rapilento",
+      "cfmId": "CFM-009752",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|1ml",
+      "canonicalName": "Cidoten 4 mg/1 mL x 1 Ampolla Solucion Inyectable",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Cidoten 4 mg/1 mL x 1 Ampolla Solucion Inyectable",
+          "channels": {
+            "store": 13684,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13684
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cidoten%7C1ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcidoten-4-mg-1-ml-x-1-ampolla-solucion-inyectable-1614.html&cfmId=CFM-009446",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw59e08480/images/products/1614/1614.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 13684,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw59e08480/images/products/1614/1614.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "cidoten|1ml|bio:unknown|brand:unknown|form:injectable",
+      "cfmId": "CFM-009446",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|4mg",
+      "canonicalName": "Cidoten Betametasona 4mg/ml Inyectable 1 Ampolla",
+      "laboratory": "Cidoten",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Cidoten Betametasona 4mg/ml Inyectable 1 Ampolla",
+          "channels": {
+            "store": 18999,
+            "online": 15199,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15199
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=cidoten%7C4mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbetametasona-4mg-ml-inyectable%3Fdefault_sku%3D3030460&cfmId=CFM-009755",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/33146/small/3030460.jpg?1641477622",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 15199,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/33146/small/3030460.jpg?1641477622",
+      "presentationKey": "cidoten|4mg|bio:unknown|brand:cidoten|var:betametasona|form:injectable",
+      "cfmId": "CFM-009755",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|1ml|4",
+      "canonicalName": "Cidoten Ampollas x 4 mg / 1 mL x 1 ampolla",
+      "laboratory": "MSD CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Cidoten Ampollas x 4 mg / 1 mL x 1 ampolla",
+          "channels": {
+            "store": 16490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=cidoten%7C1ml%7C4&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fcidoten-ampollas-x-4-mg-x-1%3F_pos%3D6%26_psq%3Dcidoten%26_psid%3D05490c594%26_ss%3De&cfmId=CFM-009756",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cidoten-ampollas-x-4-mg-x-1-msd-chile-997843.jpg?v=1692989553",
+          "fetchedAt": "2026-08-31T03:51:36.981Z"
+        }
+      ],
+      "bestPrice": 16490,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cidoten-ampollas-x-4-mg-x-1-msd-chile-997843.jpg?v=1692989553",
+      "presentationKey": "cidoten|1ml|4|bio:unknown|brand:msdchile|form:injectable",
+      "cfmId": "CFM-009756",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|30ml|30",
+      "canonicalName": "Cidoten Gotas x 30 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Cidoten gotas 0,5 mg / ml x 30 ml DESCUENTO",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cidoten%7C30ml%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcidoten-gotas-05-mg-ml-x-30-ml-descuento-2%2F&cfmId=CFM-009751",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/cidoten0comoa5mg.jpg",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Cidoten Gotas x 30 ml",
+          "channels": {
+            "store": 22990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cidoten%7C30ml%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25967-cidoten-gotas-x-30.html&cfmId=CFM-009751",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:36.981Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Cidoten 0,5 Mg/ml (betametasona) Gotas X 30 Ml",
+          "channels": {
+            "store": 24090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24090
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=cidoten%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20801%26d_%3D1&cfmId=CFM-009751",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800019010198.jpg?v=6a94fa4895364",
+          "fetchedAt": "2026-08-31T03:51:36.981Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Cidoten 0,5 mg/mL x 30 mL Solución Oral Para Gotas",
+          "channels": {
+            "store": 25717,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25717
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cidoten%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcidoten-0-5-mg-ml-x-30-ml-solucion-oral-para-gotas-1601.html&cfmId=CFM-009751",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw132886db/images/products/1601/1601.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 19990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/cidoten0comoa5mg.jpg",
+      "presentationKey": "cidoten|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-009751",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|5ml",
+      "canonicalName": "Cidoten Rapi-Lento 5 ml x 1 ampolla.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Cidoten Solución Inyectable Rapi-lento 1 Frasco 5 Ml (Cenabast) (MSD)",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cidoten%7C5ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcidoten-solucion-inyectable-rapi-lento-1-frasco-5-ml%2F&cfmId=CFM-009752",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/cidotenr-rl-rapilento-suspension-inyectable-1-frasco-ampolla-msd-chile-783537_1024x1024.webp",
+          "fetchedAt": "2026-08-31T03:51:36.981Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Cidoten Rapi-Lento 5 ml x 1 ampolla.",
+          "channels": {
+            "store": 24990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cidoten%7C5ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fcidoten-rapi-lento-5ml-x1amp&cfmId=CFM-009752",
+          "imageUrl": "https://farmacia.araucomed.com/7011-home_default/cidoten-rapi-lento-5ml-x1amp.jpg",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 19990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://farmacia.araucomed.com/7011-home_default/cidoten-rapi-lento-5ml-x1amp.jpg",
+      "presentationKey": "cidoten|5ml|bio:unknown|brand:unknown|var:rapilento|form:injectable",
+      "cfmId": "CFM-009752",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|30ml",
+      "canonicalName": "Cidoten 0,5mg/ml Solución Oral 30ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Cidoten 0,5mg/ml Solución Oral 30ml",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cidoten%7C30ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fcidoten-05mg-ml-solucion-oral-30ml&cfmId=CFM-009754",
+          "imageUrl": "https://farmacia.araucomed.com/11219-home_default/cidoten-05mg-ml-solucion-oral-30ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 19990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/11219-home_default/cidoten-05mg-ml-solucion-oral-30ml.jpg",
+      "presentationKey": "cidoten|30ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-009754",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|4mg",
+      "canonicalName": "Cidoten Betametasona 4 mg 1 Ampolla",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cidoten Betametasona 4 mg 1 Ampolla",
+          "channels": {
+            "store": 21440,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21440
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cidoten%7C4mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcidoten-betametasona-4-mg-1-ampolla%2F23013.html&cfmId=CFM-009755",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwea3fa7fe/images/large/23013-cidoten-betametasona-4-mg-1-ampolla.jpg",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 21440,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwea3fa7fe/images/large/23013-cidoten-betametasona-4-mg-1-ampolla.jpg",
+      "presentationKey": "cidoten|4mg|bio:unknown|brand:unknown|var:betametasona|form:injectable",
+      "cfmId": "CFM-009755",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|30ml|30",
+      "canonicalName": "Cidoten Solucion para Gotas orales 0,5 mg/mL x 30 mL",
+      "laboratory": "MSD",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Cidoten Solucion para Gotas orales 0,5 mg/mL x 30 mL",
+          "channels": {
+            "store": 21990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=cidoten%7C30ml%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fcidoten-0-5-mg-gts-x-30-ml-msd%3F_pos%3D8%26_psq%3Dcidoten%26_psid%3D05490c594%26_ss%3De&cfmId=CFM-009751",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cidoten-05-mg-gts-x-30-ml-msd-msd-751756.jpg?v=1692989833",
+          "fetchedAt": "2026-08-31T03:51:36.981Z"
+        }
+      ],
+      "bestPrice": 21990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cidoten-05-mg-gts-x-30-ml-msd-msd-751756.jpg?v=1692989833",
+      "presentationKey": "cidoten|30ml|30|bio:unknown|brand:msd|var:orales|form:fluid-oral",
+      "cfmId": "CFM-009751",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|30ml",
+      "canonicalName": "Cidoten Betametasona 0.5mg/ml Oral Gotas 30ml",
+      "laboratory": "Cidoten",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Cidoten Betametasona 0.5mg/ml Oral Gotas 30ml",
+          "channels": {
+            "store": 35599,
+            "online": 24919,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24919
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=cidoten%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbetametasona-0-5mg-ml-oral-gtas%3Fdefault_sku%3D2971901&cfmId=CFM-009754",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/78866/small/2971901_%28frontal%29.jpg?1661465557",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 24919,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/78866/small/2971901_%28frontal%29.jpg?1661465557",
+      "presentationKey": "cidoten|30ml|bio:unknown|brand:cidoten|var:betametasona|form:fluid-oral",
+      "cfmId": "CFM-009754",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|5ml",
+      "canonicalName": "Cidoten Rapilento Suspensión Inyectable (1 Frasco Ampolla 5 mL)",
+      "laboratory": "MSD CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Cidoten Rapilento Suspensión Inyectable (1 Frasco Ampolla 5 mL)",
+          "channels": {
+            "store": 26790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 26790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=cidoten%7C5ml&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fcidoten-rapilento-vial-betametasona%3F_pos%3D2%26_psq%3Dcidoten%26_psid%3D05490c594%26_ss%3De&cfmId=CFM-009752",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cidotenr-rl-rapilento-suspension-inyectable-1-frasco-ampolla-msd-chile-783537.jpg?v=1692989467",
+          "fetchedAt": "2026-08-31T03:51:36.981Z"
+        }
+      ],
+      "bestPrice": 26790,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cidotenr-rl-rapilento-suspension-inyectable-1-frasco-ampolla-msd-chile-783537.jpg?v=1692989467",
+      "presentationKey": "cidoten|5ml|bio:unknown|brand:msdchile|var:rapilento|form:injectable",
+      "cfmId": "CFM-009752",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten",
+      "canonicalName": "Cidoten Rapi-Lento x 1 Vial Suspension Inyectable",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Cidoten Rapi-Lento x 1 Vial Suspension Inyectable",
+          "channels": {
+            "store": 27236,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27236
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cidoten&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcidoten-rapi-lento-x-1-vial-suspension-inyectable-86924.html&cfmId=CFM-009753",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6c1c4ad3/images/products/86924/86924.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 27236,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6c1c4ad3/images/products/86924/86924.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "cidoten|bio:unknown|brand:unknown|var:rapilento|form:injectable",
+      "cfmId": "CFM-009753",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten",
+      "canonicalName": "Cidoten Rapi-Lento Betametasona Inyectable 1 Frasco-Ampolla",
+      "laboratory": "Cidoten Rapilento",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Cidoten Rapi-Lento Betametasona Inyectable 1 Frasco-Ampolla",
+          "channels": {
+            "store": 37699,
+            "online": 28274,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28274
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=cidoten&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcidoten-rapi-lento-betametasona-inyectable-1-frasco-ampolla%3Fdefault_sku%3D3030045&cfmId=CFM-009753",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/78881/small/3030045_%28frontal%29.jpg?1661465668",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 28274,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/78881/small/3030045_%28frontal%29.jpg?1661465668",
+      "presentationKey": "cidoten|bio:unknown|brand:cidotenrapilento|var:rapilento|form:injectable",
+      "cfmId": "CFM-009753",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dacam|3mg",
+      "canonicalName": "Dacam Rapi-Lento Betametasona 3mg/ml Inyectable 1 Jeringa",
+      "laboratory": "Dacam",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Dacam Rapi-Lento Betametasona 3mg/ml Inyectable 1 Jeringa",
+          "channels": {
+            "store": 33999,
+            "online": 29919,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 29919
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=dacam%7C3mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdacam-rapi-lento-betametasona-3mg-ml-inyectable-1-jeringa%3Fdefault_sku%3D434102&cfmId=CFM-009292",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/138614/small/434102.jpg?1743165578",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 29919,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/138614/small/434102.jpg?1743165578",
+      "presentationKey": "dacam|3mg|bio:unknown|brand:dacam|var:rapilento|form:injectable",
+      "cfmId": "CFM-009292",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "cidoten|30ml",
+      "canonicalName": "Cidoten Betametasona 0,5 mg / mL Gotas 30 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cidoten Betametasona 0,5 mg / mL Gotas 30 mL",
+          "channels": {
+            "store": 36190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 36190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cidoten%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcidoten-betametasona-0-5-mg-ml-gotas-30-ml%2F23012.html&cfmId=CFM-009754",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8af8e81e/images/large/23012-cidoten-gotas-30-ml-betametasona-05-mg-ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 36190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8af8e81e/images/large/23012-cidoten-gotas-30-ml-betametasona-05-mg-ml.jpg",
+      "presentationKey": "cidoten|30ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+      "cfmId": "CFM-009754",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cidoten|6mg",
+      "canonicalName": "Cidoten Rapi-Lento Betametasona 6 mg 1 Ampolla",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cidoten Rapi-Lento Betametasona 6 mg 1 Ampolla",
+          "channels": {
+            "store": 38890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 38890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cidoten%7C6mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcidoten-rapi-lento-betametasona-6-mg-1-ampolla%2F296123.html&cfmId=CFM-009290",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8255c4ab/images/large/296123-cidoten-rapi-lento-betametasona-6-mg-1-ampolla.jpg",
+          "fetchedAt": "2026-08-31T03:51:36.980Z"
+        }
+      ],
+      "bestPrice": 38890,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8255c4ab/images/large/296123-cidoten-rapi-lento-betametasona-6-mg-1-ampolla.jpg",
+      "presentationKey": "cidoten|6mg|bio:unknown|brand:unknown|var:rapilento|form:injectable",
+      "cfmId": "CFM-009290",
+      "lexicalMatch": "exact"
+    }
+  ]
+}

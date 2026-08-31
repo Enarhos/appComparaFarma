@@ -1,0 +1,480 @@
+{
+ "summary": {
+  "generatedAt": "2026-08-31T03:58:11.922Z",
+  "dist": "C:\\Belford\\wt-cf-search-003\\packages\\domain\\dist\\index.js",
+  "queries": 24,
+  "cards": 1599,
+  "offers": 1806,
+  "multiOfferGroups": 157,
+  "groupClasses": {
+   "allAbsent": 108,
+   "allExplicitEquivalent": 30,
+   "explicitIncompatible": 7,
+   "mixedExplicitAndAbsent": 12
+  },
+  "policyImpact": {
+   "A_wildcard": {
+    "falseSplits": 0,
+    "falseMergesFixed": 7
+   },
+   "B_block": {
+    "falseSplits": 12,
+    "falseMergesFixed": 7
+   }
+  },
+  "coverageByDosageForm": {
+   "solid-oral": {
+    "offers": 814,
+    "withRatio": 0,
+    "withAbsoluteMass": 0
+   },
+   "fluid-oral": {
+    "offers": 515,
+    "withRatio": 303,
+    "withAbsoluteMass": 44
+   },
+   "(sin forma declarada)": {
+    "offers": 174,
+    "withRatio": 36,
+    "withAbsoluteMass": 4
+   },
+   "injectable": {
+    "offers": 59,
+    "withRatio": 32,
+    "withAbsoluteMass": 2
+   },
+   "topical": {
+    "offers": 118,
+    "withRatio": 0,
+    "withAbsoluteMass": 0
+   },
+   "inhaled": {
+    "offers": 61,
+    "withRatio": 1,
+    "withAbsoluteMass": 0
+   },
+   "ophthalmic": {
+    "offers": 21,
+    "withRatio": 1,
+    "withAbsoluteMass": 0
+   },
+   "suppository": {
+    "offers": 44,
+    "withRatio": 0,
+    "withAbsoluteMass": 0
+   }
+  }
+ },
+ "explicitIncompatible": [
+  {
+   "query": "ambroxol",
+   "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": "30mg",
+     "price": 990,
+     "name": "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO"
+    },
+    {
+     "pharmacy": "sermecoop",
+     "concentration": "30mg/5ml",
+     "price": 2390,
+     "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+    },
+    {
+     "pharmacy": "ahumada",
+     "concentration": "30mg/5ml",
+     "price": 3374,
+     "name": "Ambroxol 30mg./5ml. Jarabe Fco. 100ml"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "15mg/5ml",
+     "price": 5490,
+     "name": "Ambroxol 15 mg/5mL Jarabe 100 mL"
+    }
+   ]
+  },
+  {
+   "query": "ambroxol",
+   "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "araucomed",
+     "concentration": "30mg/5ml",
+     "price": 3990,
+     "name": "Muxol Adulto 30mg/5ml jarabe 100ml"
+    },
+    {
+     "pharmacy": "sermecoop",
+     "concentration": "15mg/5ml",
+     "price": 4890,
+     "name": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml"
+    }
+   ]
+  },
+  {
+   "query": "betametasona",
+   "presentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": "0.25mg",
+     "price": 9980,
+     "name": "Cam Jarabe Betametasona 0,25 mg 120 Ml (Lab Chile)"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "2mg",
+     "price": 14790,
+     "name": "Cam Betametasona 2 mg Jarabe 120 mL"
+    }
+   ]
+  },
+  {
+   "query": "ibuprofeno",
+   "presentationKey": "ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": "200mg/5ml",
+     "price": 1890,
+     "name": "Ibuprofeno Suspensión Oral 200mg/5ml 100ml Ascend"
+    },
+    {
+     "pharmacy": "sermecoop",
+     "concentration": "200mg/5ml",
+     "price": 2790,
+     "name": "Ibuprofeno 200mg/5ml Jarabe 100ml"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "100mg/5ml",
+     "price": 3140,
+     "name": "Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+    },
+    {
+     "pharmacy": "salcobrand",
+     "concentration": "200mg/5ml",
+     "price": 4599,
+     "name": "Ibuprofeno 200mg/5ml Jarabe 100ml"
+    }
+   ]
+  },
+  {
+   "query": "ibuprofeno",
+   "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "sermecoop",
+     "concentration": "100mg/5ml",
+     "price": 2990,
+     "name": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml"
+    },
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": "200mg/5ml",
+     "price": 3990,
+     "name": "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "100mg/5ml",
+     "price": 8040,
+     "name": "Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+    }
+   ]
+  },
+  {
+   "query": "muxol",
+   "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": null,
+     "price": 2990,
+     "name": "Muxol jarabe adulto 100ml Saval DESCUENTO"
+    },
+    {
+     "pharmacy": "araucomed",
+     "concentration": "30mg/5ml",
+     "price": 3990,
+     "name": "Muxol Adulto 30mg/5ml jarabe 100ml"
+    },
+    {
+     "pharmacy": "sermecoop",
+     "concentration": "15mg/5ml",
+     "price": 4890,
+     "name": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml"
+    }
+   ]
+  },
+  {
+   "query": "pyriped",
+   "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "sermecoop",
+     "concentration": "100mg/5ml",
+     "price": 2990,
+     "name": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml"
+    },
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": "200mg/5ml",
+     "price": 3990,
+     "name": "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "100mg/5ml",
+     "price": 8040,
+     "name": "Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+    }
+   ]
+  }
+ ],
+ "mixed": [
+  {
+   "query": "alledryl",
+   "presentationKey": "neo|60ml|bio:unknown|brand:unknown|var:alledryl|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": "2.5mg/5ml",
+     "price": 2990,
+     "name": "Neo Alledryl 2,5 mg/5ml Jarabe 60ml (Prater) DESCUENTO"
+    },
+    {
+     "pharmacy": "easyfarma",
+     "concentration": null,
+     "price": 3990,
+     "name": "Neo Alledryl Jarabe 60 mL"
+    }
+   ]
+  },
+  {
+   "query": "alledryl",
+   "presentationKey": "alledryl|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "sermecoop",
+     "concentration": null,
+     "price": 6890,
+     "name": "Alledryl (loratadina) Jarabe 60ml"
+    },
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": "5mg/5ml",
+     "price": 7690,
+     "name": "Alledryl 5 mg/5 ml Jarabe 60 mL  (Prater)"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "5mg/5ml",
+     "price": 9990,
+     "name": "Alledryl Loratadina 5 mg / 5 mL Jarabe 60 mL"
+    }
+   ]
+  },
+  {
+   "query": "alledryl",
+   "presentationKey": "alledryld|120ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "easyfarma",
+     "concentration": null,
+     "price": 6990,
+     "name": "Alledryl-D jarabe 120 mL"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "15mg/5ml",
+     "price": 8890,
+     "name": "Alledryl-D Loratadina 15 mg/5ml Jarabe 120 mL"
+    }
+   ]
+  },
+  {
+   "query": "ambroxol",
+   "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": null,
+     "price": 2980,
+     "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "30mg/5ml",
+     "price": 3990,
+     "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL"
+    }
+   ]
+  },
+  {
+   "query": "betametasona",
+   "presentationKey": "cidoten|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "easyfarma",
+     "concentration": null,
+     "price": 22990,
+     "name": "Cidoten Gotas x 30 ml"
+    },
+    {
+     "pharmacy": "sermecoop",
+     "concentration": "0.5mg/1ml",
+     "price": 24090,
+     "name": "Cidoten 0,5 Mg/ml (betametasona) Gotas X 30 Ml"
+    },
+    {
+     "pharmacy": "ahumada",
+     "concentration": "0.5mg/1ml",
+     "price": 25717,
+     "name": "Cidoten 0,5 mg/mL x 30 mL Solución Oral Para Gotas"
+    }
+   ]
+  },
+  {
+   "query": "cidoten",
+   "presentationKey": "cidoten|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": "0.5mg/1ml",
+     "price": 19990,
+     "name": "Cidoten gotas 0,5 mg / ml x 30 ml DESCUENTO"
+    },
+    {
+     "pharmacy": "easyfarma",
+     "concentration": null,
+     "price": 22990,
+     "name": "Cidoten Gotas x 30 ml"
+    },
+    {
+     "pharmacy": "sermecoop",
+     "concentration": "0.5mg/1ml",
+     "price": 24090,
+     "name": "Cidoten 0,5 Mg/ml (betametasona) Gotas X 30 Ml"
+    },
+    {
+     "pharmacy": "ahumada",
+     "concentration": "0.5mg/1ml",
+     "price": 25717,
+     "name": "Cidoten 0,5 mg/mL x 30 mL Solución Oral Para Gotas"
+    }
+   ]
+  },
+  {
+   "query": "loratadina jarabe",
+   "presentationKey": "alledryl|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "sermecoop",
+     "concentration": null,
+     "price": 6890,
+     "name": "Alledryl (loratadina) Jarabe 60ml"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "5mg/5ml",
+     "price": 9990,
+     "name": "Alledryl Loratadina 5 mg / 5 mL Jarabe 60 mL"
+    }
+   ]
+  },
+  {
+   "query": "loratadina jarabe",
+   "presentationKey": "alledryld|120ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "easyfarma",
+     "concentration": null,
+     "price": 6990,
+     "name": "Alledryl-D jarabe 120 mL"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "15mg/5ml",
+     "price": 8890,
+     "name": "Alledryl-D Loratadina 15 mg/5ml Jarabe 120 mL"
+    }
+   ]
+  },
+  {
+   "query": "muxol",
+   "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": null,
+     "price": 3580,
+     "name": "Muxol jarabe infantil 100ml Saval DESCUENTO"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "300mg/100ml",
+     "price": 6190,
+     "name": "Muxol Jarabe Pediátrico Ambroxol 300 mg / 100 ml"
+    }
+   ]
+  },
+  {
+   "query": "paracetamol jarabe",
+   "presentationKey": "paracetamol|15ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "100mg",
+     "price": 2690,
+     "name": "Paracetamol 100 mg Gotas 15 mL"
+    },
+    {
+     "pharmacy": "salcobrand",
+     "concentration": null,
+     "price": 3783,
+     "name": "Paracetamol Gotas 15ml"
+    }
+   ]
+  },
+  {
+   "query": "paracetamol",
+   "presentationKey": "paracetamol|15ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "100mg",
+     "price": 2690,
+     "name": "Paracetamol 100 mg Gotas 15 mL"
+    },
+    {
+     "pharmacy": "salcobrand",
+     "concentration": null,
+     "price": 3783,
+     "name": "Paracetamol Gotas 15ml"
+    }
+   ]
+  },
+  {
+   "query": "tocalm",
+   "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "concentration": null,
+     "price": 2980,
+     "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)"
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "concentration": "30mg/5ml",
+     "price": 3990,
+     "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL"
+    }
+   ]
+  }
+ ]
+}
