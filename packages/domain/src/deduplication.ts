@@ -1,6 +1,14 @@
 import type { MedicationResult, PharmacyPrice, PharmacySlug } from "./types.js";
 import { combinationKey, matchKey } from "./matching.js";
-import { commercialVariantKey, dosageFormClass, isCompatibleUnitCount, unitCountKey } from "./productIdentity.js";
+import {
+  commercialVariantKey,
+  dosageFormClass,
+  isCompatibleConcentration,
+  isCompatibleUnitCount,
+  liquidConcentration,
+  unitCountKey,
+} from "./productIdentity.js";
+import type { Concentration } from "./concentration.js";
 
 /**
  * Agrupa ofertas SAME_PRODUCT. Desde FASE 1 — Product Identity (2026-08-19),
@@ -70,6 +78,7 @@ interface OfferNameIdentity {
   variant: string | null;
   form: string | null;
   unitCount: number | null;
+  concentration: Concentration | null;
 }
 
 function offerNameIdentity(price: PharmacyPrice): OfferNameIdentity {
@@ -79,6 +88,7 @@ function offerNameIdentity(price: PharmacyPrice): OfferNameIdentity {
     variant: commercialVariantKey(price.productName),
     form: dosageFormClass(price.productName),
     unitCount: unitCountKey(price.productName),
+    concentration: liquidConcentration(price.productName),
   };
 }
 
@@ -101,6 +111,16 @@ function offerNameIdentity(price: PharmacyPrice): OfferNameIdentity {
  * engañosa — 1 sobre contra una caja de 6. Dos cantidades explícitas distintas
  * ⇒ no se fusionan; la ausencia de cantidad no bloquea (justificación completa
  * en `isCompatibleUnitCount`, productIdentity.ts).
+ *
+ * La CONCENTRACIÓN farmacológica se valida acá por el mismo motivo y con la
+ * misma mecánica (CF-SEARCH-003): el segmento de dosis de `matchKey` prioriza
+ * el mililitro sobre el miligramo, así que en un líquido conserva el VOLUMEN
+ * DEL ENVASE y descarta la concentración — "Ambroxol 30 mg/5 mL Jarabe 100 mL"
+ * y "Ambroxol 15 mg/5 mL Jarabe 100 mL" comparten `ambroxol|100ml` y llegaban
+ * acá como la misma tarjeta, con el doble de potencia a mitad de precio
+ * presentado como ahorro. Dos concentraciones explícitas distintas ⇒ no se
+ * fusionan; la ausencia no bloquea (justificación medida en
+ * `isCompatibleConcentration`, productIdentity.ts).
  */
 function canMergeOffers(a: OfferNameIdentity, b: OfferNameIdentity): boolean {
   if (a.pharmacological !== b.pharmacological) return false;
@@ -108,6 +128,7 @@ function canMergeOffers(a: OfferNameIdentity, b: OfferNameIdentity): boolean {
   if (a.variant !== b.variant) return false;
   if (a.form !== null && b.form !== null && a.form !== b.form) return false;
   if (!isCompatibleUnitCount(a.unitCount, b.unitCount)) return false;
+  if (!isCompatibleConcentration(a.concentration, b.concentration)) return false;
   return true;
 }
 
@@ -206,15 +227,41 @@ export function mergeDuplicates(results: MedicationResult[]): MedicationResult[]
     // 3. Validación de compatibilidad antes de fusionar. Los ejes
     //    `pharmacological`/`combination`/`variant`/`form` ya están en
     //    `presentationKey`, así que rara vez rechazan algo: para ellos esto es
-    //    una red de seguridad. `unitCount` NO está en la clave —agregarlo
-    //    rotaría el `presentationKey` (y el slug de ficha en Web) de casi todo
-    //    el catálogo— así que es acá donde efectivamente separa una oferta de
-    //    1 unidad de una caja de N.
+    //    una red de seguridad. `unitCount` y `concentration` NO están en la
+    //    clave —agregarlos rotaría el `presentationKey` (y el slug de ficha en
+    //    Web) de casi todo el catálogo— así que es acá donde efectivamente
+    //    separan una oferta de 1 unidad de una caja de N, y un jarabe de
+    //    30 mg/5 mL de uno de 15 mg/5 mL.
+    //
+    //    La compatibilidad se exige contra TODAS las ofertas ya aceptadas, no
+    //    solo contra la canónica (CF-SEARCH-003). Los dos ejes que no viven en
+    //    la clave admiten la ausencia como compatible con cualquier valor, y
+    //    esa relación NO es transitiva: si la oferta canónica fuera la que
+    //    calla, dos ofertas mutuamente contradictorias entrarían las dos a la
+    //    misma tarjeta por ser cada una compatible con ella. Es exactamente la
+    //    situación del falso merge de Ambroxol, donde 2 de las 4 ofertas no
+    //    declaran la razón mg/mL ("Ambroxol 30mg./5ml. Jarabe Fco. 100ml",
+    //    Ahumada) y podrían haber quedado como canónicas: comparar solo contra
+    //    la canónica dejaría el defecto sin corregir según qué farmacia
+    //    responda primero. Con esta regla la tarjeta resultante es siempre
+    //    internamente consistente, independientemente del orden de llegada.
+    //
+    //    El recorrido conserva el orden original de `survivors` —la canónica se
+    //    da por aceptada de entrada, sin adelantarla en la lista— para no
+    //    alterar el desempate estable de `buildResult()` entre dos ofertas con
+    //    el mismo precio efectivo.
+    const accepted: OfferNameIdentity[] = [canonicalIdentity];
     const compatible: OfferSlot[] = [];
     const rejected: OfferSlot[] = [];
     for (const slot of survivors) {
-      if (slot === canonical || canMergeOffers(canonicalIdentity, offerNameIdentity(slot.price))) {
+      if (slot === canonical) {
         compatible.push(slot);
+        continue;
+      }
+      const identity = offerNameIdentity(slot.price);
+      if (accepted.every((other) => canMergeOffers(other, identity))) {
+        compatible.push(slot);
+        accepted.push(identity);
       } else {
         rejected.push(slot);
       }

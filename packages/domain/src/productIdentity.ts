@@ -61,6 +61,13 @@ import {
   normalizedWords,
 } from "./matching.js";
 import { KNOWN_ACTIVE_INGREDIENTS } from "./commercialIdentity.js";
+import {
+  isMassUnit,
+  isSameConcentration,
+  isVolumeUnit,
+  parseMeasurements,
+  type Concentration,
+} from "./concentration.js";
 
 /**
  * Los paréntesis y corchetes de estos catálogos contienen anotación de
@@ -609,7 +616,187 @@ export function isCompatibleUnitCount(a: number | null, b: number | null): boole
 }
 
 // ---------------------------------------------------------------------------
-// D. IDENTIDAD DE PRODUCTO Y COMPATIBILIDAD
+// D. CONCENTRACIÓN FARMACOLÓGICA EN FORMAS LÍQUIDAS
+// ---------------------------------------------------------------------------
+
+/**
+ * PROBLEMA QUE RESUELVE (CF-SEARCH-003)
+ * -------------------------------------
+ * `matchKey()` elige UNA sola dosis y prioriza el mililitro sobre el miligramo
+ * (matching.ts:108-117):
+ *
+ *     if (mlHits.length)       dose = `${Math.max(...mlHits)}ml`;
+ *     else if (mcgHits.length) ...
+ *     else if (mgHits.length)  ...
+ *
+ * En un líquido el nombre trae ambos ("Ambroxol **30 mg/5 mL** Jarabe **100
+ * mL**"), así que gana el `ml` y la clave queda `ambroxol|100ml`: **se conserva
+ * el VOLUMEN DEL ENVASE y se descarta la CONCENTRACIÓN**. Como
+ * `presentationKey()` hereda esa clave y ningún otro eje (`bio:`, `brand:`,
+ * `combo:`, `var:`, `form:`) mira la concentración, dos jarabes de potencia
+ * distinta caen en la misma tarjeta y la diferencia de precio se muestra como
+ * ahorro. Verificado sobre 2.627 ofertas reales de 29 búsquedas de producción:
+ *
+ *   ambroxol|100ml|…|form:fluid-oral   30 mg/5 mL (sermecoop $2.390)
+ *                                      15 mg/5 mL (cruz-verde $5.490)
+ *   ibuprofeno|100ml|…|form:fluid-oral 200 mg/5 mL (eco $1.890, salcobrand …)
+ *                                      100 mg/5 mL (cruz-verde $3.140)
+ *
+ * Es el eje simétrico de los que ya existen: `combo:` (S-1) separó
+ * combinaciones, `unitCountKey` (fix de cantidad) separó tamaños de envase; la
+ * concentración de líquidos es el que faltaba.
+ *
+ * SEPARACIÓN CONCEPTUAL (no negociable)
+ * -------------------------------------
+ *   CONCENTRACIÓN     — cuánto principio activo por unidad de volumen:
+ *                       `30 mg/5 mL`, `2 mg/mL`, `0,25 mg/mL`.
+ *   VOLUMEN DE ENVASE — cuánto líquido trae el frasco: `60 mL`, `100 mL`.
+ *
+ * "Ambroxol 30 mg/5 mL 100 mL" tiene concentración `30 mg/5 mL` **y** volumen
+ * `100 mL`, y el segundo NUNCA sustituye al primero. Por eso este eje ignora
+ * las magnitudes de volumen sueltas: dos frascos de 60 mL y 100 mL de la misma
+ * concentración siguen siendo compatibles (el tamaño del envase ya lo gobierna
+ * `matchKey`), y dos frascos de 100 mL con concentraciones distintas ya no.
+ *
+ * `matchKey` NO se toca: su valor está persistido en `price_history`,
+ * `medication_match_key_aliases`, `pharmacy_clicks` y `email_alerts`.
+ */
+
+/**
+ * Concentración declarada por el nombre de un producto, o `null`.
+ *
+ * NO es `parseConcentration()` (concentration.ts): esa función devuelve la
+ * PRIMERA magnitud del texto, que en un nombre de líquido suele ser el volumen
+ * del envase ("Ambroxol Jarabe **100 ml** 15 mg/5 ml") o una masa suelta. Acá
+ * se busca la concentración, que es otra cosa, en dos niveles de evidencia:
+ *
+ *   1. RAZÓN masa/volumen explícita (`{numerator, denominator}`) — la primera
+ *      del nombre, aunque no sea la primera magnitud. Es la evidencia fuerte:
+ *      `30 mg/5 mL`, `600 mg / 100 ml`, `0,5 mg/ml`, `2 gr / 5 ml`. Se comparan
+ *      por RAZÓN, así que `30 mg/5 mL` ≡ `6 mg/mL` ≡ `600 mg/100 mL` —tres
+ *      escrituras reales del mismo jarabe de Ambroxol en tres farmacias— y
+ *      `0,5 g/5 ml` ≡ `500 mg/5 ml`.
+ *
+ *   2. MASA ABSOLUTA declarada junto a un volumen (`denominator === null`) —
+ *      evidencia débil, aceptada solo cuando el nombre TAMBIÉN declara un
+ *      volumen. Esa condición no es cosmética: es exactamente el caso en que
+ *      `matchKey` descartó la masa (el `ml` ganó), o sea el único en que este
+ *      eje aporta información que la clave no tiene ya. Cubre el quinto falso
+ *      merge documentado, donde ninguna de las dos fuentes escribe la razón:
+ *        cam|120ml|…|var:betametasona
+ *          ecofarmacias "Cam Jarabe Betametasona **0,25 mg** 120 Ml"  $ 9.980
+ *          cruz-verde   "Cam Betametasona **2 mg** Jarabe 120 mL"     $14.790
+ *      Un factor 8 entre dos ofertas de la misma tarjeta.
+ *
+ * Los dos niveles se comparan ENTRE SÍ como compatibles, nunca como iguales —
+ * ver `isCompatibleConcentration()`.
+ *
+ * Lo que este eje deliberadamente NO hace: **inferir una razón a partir de la
+ * yuxtaposición de una masa y un volumen**. "Ambroxol clorhidrato 30 mg 100 ml"
+ * es en realidad 30 mg/5 mL (el 100 ml es el frasco), no 30 mg/100 mL; leerlo
+ * como razón inventaría una concentración 20 veces menor. Es justamente la
+ * confusión concentración/envase que este ticket corrige, y las 9 grafías del
+ * catálogo sin separador (`30mg5ml`, `600 mg 100 ml`) se quedan en el nivel 2.
+ *
+ * Efecto medido sobre 1.806 ofertas reales (24 búsquedas, 2026-08-31): 0 de 814
+ * `solid-oral`, 0 de 118 `topical` y 0 de 44 `suppository` derivan concentración
+ * —ningún nombre de sólido ni de crema declara una razón masa/volumen ni una
+ * masa junto a un volumen—, así que la dosis sólida ("500 mg x 20 comprimidos")
+ * no la toca este eje ni por accidente. Por eso NO se agrega un filtro adicional
+ * por `dosageFormClass`: sería un candado sin cerradura, y dejaría fuera a las
+ * 40 ofertas líquidas cuyo nombre no declara forma farmacéutica reconocible.
+ */
+export function liquidConcentration(name: string): Concentration | null {
+  const measurements = parseMeasurements(name);
+
+  for (const candidate of measurements) {
+    if (
+      candidate.denominator !== null &&
+      isMassUnit(candidate.numerator.unit) &&
+      isVolumeUnit(candidate.denominator.unit)
+    ) {
+      return candidate;
+    }
+  }
+
+  const declaresVolume = measurements.some(
+    (m) =>
+      (m.denominator === null && isVolumeUnit(m.numerator.unit)) ||
+      (m.denominator !== null && isVolumeUnit(m.denominator.unit))
+  );
+  if (!declaresVolume) return null;
+
+  return (
+    measurements.find((m) => m.denominator === null && isMassUnit(m.numerator.unit)) ?? null
+  );
+}
+
+/**
+ * POLÍTICA DE CONCENTRACIÓN — `true` si dos ofertas pueden compartir tarjeta
+ * según la concentración que declaran.
+ *
+ *   - Ambas del MISMO nivel de evidencia y con distinta potencia → `false`.
+ *     Regla dura del ticket: dos fuentes que declaran concentraciones
+ *     explícitas distintas son evidencia positiva y directa de que son
+ *     productos distintos. Se comparan por razón (o por masa, según el nivel),
+ *     no por texto: `30mg/5ml`, `30 mg / 5 mL` y `600 mg/100 ml` son la misma.
+ *   - Ambas del mismo nivel y equivalentes → `true`.
+ *   - Una AUSENTE → `true`. No bloquea la fusión.
+ *   - Una RAZÓN y la otra MASA ABSOLUTA → `true`. No es una contradicción sino
+ *     dos niveles de detalle sobre el mismo hecho: "Jarabe Ambroxol clorhidrato
+ *     **30mg**5ml 100ml" (EcoFarmacias, sin barra) y "Ambroxol **30mg/5ml**
+ *     Jarabe 100ml" (Sermecoop) son el mismo producto escrito con y sin
+ *     separador. Compararlas numéricamente exigiría decidir a qué volumen se
+ *     refiere la masa, que es precisamente la inferencia que este eje se
+ *     prohíbe.
+ *
+ * POR QUÉ LA AUSENCIA NO BLOQUEA — decidido con datos, no por analogía.
+ * Medido sobre los 157 grupos multi-oferta de 24 búsquedas de producción
+ * (1.806 ofertas, read-only, 2026-08-31; script y datos en
+ * `docs/qa/cf-search-003/`):
+ *
+ *      todas sin concentración          108
+ *      todas explícitas y equivalentes   30
+ *      explícitas INCOMPATIBLES           7   ← los falsos merges del ticket
+ *      mixtas (explícita + ausente)      12
+ *
+ * Las tres políticas evaluadas sobre esos 12 grupos mixtos:
+ *   (A) ausencia = comodín  → 0 falsos splits, y los 7 falsos merges igual se
+ *       eliminan: la contradicción está siempre entre dos ofertas EXPLÍCITAS,
+ *       nunca entre una explícita y una ausente.
+ *   (B) ausencia = bloqueo  → 12 falsos splits y ni un falso merge adicional
+ *       evitado. Los 12 son la misma presentación escrita con y sin
+ *       concentración por dos farmacias: "Alledryl (loratadina) Jarabe 60ml"
+ *       (Sermecoop) vs "Alledryl Loratadina 5 mg / 5 mL Jarabe 60 mL"
+ *       (Cruz Verde); "Cidoten Gotas x 30 ml" (EasyFarma) vs "Cidoten 0,5
+ *       Mg/ml Gotas X 30 Ml" (Sermecoop); "Paracetamol Gotas 15ml"
+ *       (Salcobrand) vs "Paracetamol 100 mg Gotas 15 mL" (Cruz Verde). En los
+ *       12, la fuente que calla es la que trunca o abrevia el nombre, no una
+ *       presentación distinta.
+ *   (C) condicionar por otras señales de identidad (forma, cantidad,
+ *       laboratorio) → descartada: en los 12 grupos esas señales ya coinciden,
+ *       así que produce exactamente el mismo resultado que (A) a cambio de una
+ *       regla más difícil de auditar. Sin un solo caso en la muestra donde
+ *       cambie la decisión, no hay evidencia que la justifique.
+ *
+ * Se elige (A): 0 falsos splits medidos, y los 7 falsos merges corregidos.
+ * Es la misma asimetría —y la misma justificación empírica— que ya rigen
+ * `dosageFormClass` (`null` compatible con cualquier clase) e
+ * `isCompatibleUnitCount`: no declarar no afirma nada; declarar distinto sí.
+ */
+export function isCompatibleConcentration(
+  a: Concentration | null,
+  b: Concentration | null
+): boolean {
+  if (a === null || b === null) return true;
+  // Niveles de evidencia distintos (razón vs masa absoluta): no comparables,
+  // y por lo tanto no contradictorios.
+  if ((a.denominator === null) !== (b.denominator === null)) return true;
+  return isSameConcentration(a, b);
+}
+
+// ---------------------------------------------------------------------------
+// E. IDENTIDAD DE PRODUCTO Y COMPATIBILIDAD
 // ---------------------------------------------------------------------------
 
 /**
@@ -642,6 +829,13 @@ export interface ProductIdentity {
    * sustantivos reales — ver `unitCountKey()`.
    */
   unitCount: number | null;
+  /**
+   * Concentración farmacológica declarada en el nombre, o `null`. Eje propio,
+   * INDEPENDIENTE del volumen del envase: `matchKey` conserva el volumen
+   * (`|100ml`) y descarta la concentración, así que sin este eje dos jarabes de
+   * potencia distinta son indistinguibles — ver `liquidConcentration()`.
+   */
+  concentration: Concentration | null;
 }
 
 /**
@@ -664,6 +858,10 @@ export interface ProductIdentity {
  *     (incluido `1` vs `N`); la ausencia es compatible con cualquiera. La
  *     justificación completa de esa asimetría está en
  *     `isCompatibleUnitCount()`.
+ *   - `concentration`: dos concentraciones EXPLÍCITAS del mismo nivel de
+ *     evidencia y distinta potencia son incompatibles; la ausencia es
+ *     compatible con cualquiera. Se compara por razón, no por texto — ver
+ *     `isCompatibleConcentration()`.
  *
  * El laboratorio NO se usa como señal de exclusión adicional acá: ya está en
  * `commercialIdentity`, y la auditoría Losartán/Laboratorio Chile mostró que
@@ -679,5 +877,6 @@ export function isSameProduct(a: ProductIdentity, b: ProductIdentity): boolean {
   if (a.commercialVariant !== b.commercialVariant) return false;
   if (a.dosageForm !== null && b.dosageForm !== null && a.dosageForm !== b.dosageForm) return false;
   if (!isCompatibleUnitCount(a.unitCount, b.unitCount)) return false;
+  if (!isCompatibleConcentration(a.concentration, b.concentration)) return false;
   return true;
 }

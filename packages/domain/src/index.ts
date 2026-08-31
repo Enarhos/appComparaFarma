@@ -16,16 +16,25 @@ export { matchKey, combinationKey, normalizedWords, brandHeadTokens } from "./ma
 export { cleanQuery } from "./normalization.js";
 export {
   parseQueryIntent,
-  parseConcentration,
   parseQuantity,
-  concentrationKey,
   queryIntentCacheKey,
-  isSameConcentration,
-  isSameMeasurement,
-  type Measurement,
-  type Concentration,
   type QueryIntent,
 } from "./queryIntent.js";
+// CF-SEARCH-003: el modelo de magnitudes y el parser de concentración se
+// movieron de `queryIntent.ts` a `concentration.ts` para que la capa de
+// identidad de producto pueda reutilizarlos sin ciclo de dependencias. La
+// superficie pública del paquete no cambia — mismos nombres, mismas firmas.
+export {
+  parseConcentration,
+  parseMeasurements,
+  concentrationKey,
+  isSameConcentration,
+  isSameMeasurement,
+  isMassUnit,
+  isVolumeUnit,
+  type Measurement,
+  type Concentration,
+} from "./concentration.js";
 export {
   evaluateResultRelevance,
   rankByRelevance,
@@ -44,6 +53,8 @@ export {
   dosageFormClass,
   unitCountKey,
   isCompatibleUnitCount,
+  liquidConcentration,
+  isCompatibleConcentration,
   isSameProduct,
   type DosageFormClass,
   type ProductIdentity,

@@ -32,13 +32,12 @@
 import type { ConcentrationMatch, LexicalMatch, MedicationResult } from "./types.js";
 import { normalizedWords } from "./matching.js";
 import { dosageFormClass, type DosageFormClass } from "./productIdentity.js";
+import { parseQuantity, type QueryIntent } from "./queryIntent.js";
 import {
   isSameConcentration,
   parseConcentration,
-  parseQuantity,
   type Concentration,
-  type QueryIntent,
-} from "./queryIntent.js";
+} from "./concentration.js";
 
 /**
  * Compatibilidad léxica/farmacológica entre la consulta y un resultado.
