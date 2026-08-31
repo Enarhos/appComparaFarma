@@ -42,6 +42,8 @@ export {
 export {
   commercialVariantKey,
   dosageFormClass,
+  unitCountKey,
+  isCompatibleUnitCount,
   isSameProduct,
   type DosageFormClass,
   type ProductIdentity,

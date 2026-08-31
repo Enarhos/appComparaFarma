@@ -1,6 +1,6 @@
 import type { MedicationResult, PharmacyPrice, PharmacySlug } from "./types.js";
 import { combinationKey, matchKey } from "./matching.js";
-import { commercialVariantKey, dosageFormClass } from "./productIdentity.js";
+import { commercialVariantKey, dosageFormClass, isCompatibleUnitCount, unitCountKey } from "./productIdentity.js";
 
 /**
  * Agrupa ofertas SAME_PRODUCT. Desde FASE 1 — Product Identity (2026-08-19),
@@ -69,6 +69,7 @@ interface OfferNameIdentity {
   combination: string | null;
   variant: string | null;
   form: string | null;
+  unitCount: number | null;
 }
 
 function offerNameIdentity(price: PharmacyPrice): OfferNameIdentity {
@@ -77,6 +78,7 @@ function offerNameIdentity(price: PharmacyPrice): OfferNameIdentity {
     combination: combinationKey(price.productName),
     variant: commercialVariantKey(price.productName),
     form: dosageFormClass(price.productName),
+    unitCount: unitCountKey(price.productName),
   };
 }
 
@@ -89,12 +91,23 @@ function offerNameIdentity(price: PharmacyPrice): OfferNameIdentity {
  * La forma farmacéutica se compara con tolerancia a `null`: una farmacia que
  * simplemente no la escribe no está afirmando que su producto sea distinto
  * (ver `dosageFormClass` en productIdentity.ts).
+ *
+ * La CANTIDAD por envase se valida como eje propio (`unitCountKey`) y no a
+ * través de `matchKey`. Es obligatorio hacerlo por separado: el segmento de
+ * cantidad de `matchKey` normaliza "1 unidad" a cantidad vacía y no reconoce
+ * varios sustantivos reales (`supositorios`, `tabs`, `caps`), así que dos
+ * presentaciones de tamaño distinto podían llegar acá con el MISMO
+ * `pharmacological` y fusionarse en una tarjeta cuya comparación de precio era
+ * engañosa — 1 sobre contra una caja de 6. Dos cantidades explícitas distintas
+ * ⇒ no se fusionan; la ausencia de cantidad no bloquea (justificación completa
+ * en `isCompatibleUnitCount`, productIdentity.ts).
  */
 function canMergeOffers(a: OfferNameIdentity, b: OfferNameIdentity): boolean {
   if (a.pharmacological !== b.pharmacological) return false;
   if (a.combination !== b.combination) return false;
   if (a.variant !== b.variant) return false;
   if (a.form !== null && b.form !== null && a.form !== b.form) return false;
+  if (!isCompatibleUnitCount(a.unitCount, b.unitCount)) return false;
   return true;
 }
 
@@ -190,10 +203,13 @@ export function mergeDuplicates(results: MedicationResult[]): MedicationResult[]
     const canonical = pickCanonicalSlot(survivors);
     const canonicalIdentity = offerNameIdentity(canonical.price);
 
-    // 3. Validación de compatibilidad antes de fusionar. En operación normal
-    //    ninguna oferta se rechaza (comparten `presentationKey`, que ya
-    //    incorpora estos ejes); es la red de seguridad que garantiza que la
-    //    tarjeta nunca mezcle dos productos distintos.
+    // 3. Validación de compatibilidad antes de fusionar. Los ejes
+    //    `pharmacological`/`combination`/`variant`/`form` ya están en
+    //    `presentationKey`, así que rara vez rechazan algo: para ellos esto es
+    //    una red de seguridad. `unitCount` NO está en la clave —agregarlo
+    //    rotaría el `presentationKey` (y el slug de ficha en Web) de casi todo
+    //    el catálogo— así que es acá donde efectivamente separa una oferta de
+    //    1 unidad de una caja de N.
     const compatible: OfferSlot[] = [];
     const rejected: OfferSlot[] = [];
     for (const slot of survivors) {
