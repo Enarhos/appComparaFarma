@@ -1,0 +1,2001 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "aspirina",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=aspirina",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:53:26.867Z",
+  "completedAt": "2026-08-31T03:53:33.602Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 52,
+  "results": [
+    {
+      "matchKey": "aspirina|500mg|20",
+      "canonicalName": "Aspirina 500mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Aspirina Adulto 500mg X 20 comprimidos (Bayer) DESCUENTO",
+          "channels": {
+            "store": 900,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 900
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=aspirina%7C500mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Faspirina-adulto-500mg-x-20-comprimidos-bayer-descuento-2%2F&cfmId=CFM-001558",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/12/aspirina-500-x-20.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Aspirina 500 mg x 20 comprimidos.",
+          "channels": {
+            "store": 1500,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1500
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=aspirina%7C500mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Faspirina-500mg-x20com&cfmId=CFM-001558",
+          "imageUrl": "https://farmacia.araucomed.com/1379-home_default/aspirina-500mg-x20com.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Aspirina 500mg 20 Comprimidos",
+          "channels": {
+            "store": 2190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=aspirina%7C500mg%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D2089%26d_%3D1&cfmId=CFM-001558",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7805750000675.jpg?v=6a94fabcdcdaf",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Aspirina 500Mg Caja 20 Comprimidos Adultos",
+          "channels": {
+            "store": 3559,
+            "online": null,
+            "cmr": 2669,
+            "sbpay": null,
+            "effective": 2669
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=aspirina%7C500mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Faspirina-500mg-caja-20-comprimidos-adultos-49490.html&cfmId=CFM-001558",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfd3f2b06/images/products/49490/49490.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Aspirina Adulto Ácido Acetilsalicílico 500 mg 20 Comprimidos",
+          "channels": {
+            "store": 3390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=aspirina%7C500mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Faspirina-adulto-acido-acetilsalicilico-500-mg-20-comprimidos%2F253352.html&cfmId=CFM-001558",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwae6ebd3e/images/large/253352-aspirina-adulto-comprimido-20-unidades-acido-acetilsalicilico-500-mg.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 900,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7805750000675.jpg?v=6a94fabcdcdaf",
+      "presentationKey": "aspirina|500mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001558",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg|40",
+      "canonicalName": "Aspirina 500mg 40 Comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Aspirina 500 mg Adulto x 40 Comprimidos DESCUENTO",
+          "channels": {
+            "store": 1000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1000
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=aspirina%7C500mg%7C40&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Faspirina-500-mg-adulto-x-40-comprimidos-descuento%2F&cfmId=CFM-001559",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/12/aspirina-500-x-40.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Aspirina 500 mg Adulto x 40 Comprimidos",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=aspirina%7C500mg%7C40&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Faspirina-500-mg-adulto-x-40-comprimidos-9933.html&cfmId=CFM-001559",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw40151adf/images/products/9933/9933.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Aspirina 500 mg x 40 comprimidos",
+          "channels": {
+            "store": 3158,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3158
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=aspirina%7C500mg%7C40&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Faspirina-500-mg-x-40-comprimidos-2%3F_pos%3D6%26_psq%3Daspirina%26_psid%3D1438e1eb9%26_ss%3De&cfmId=CFM-001559",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/aspirina-500-mg-x-40-comprimidos-farmex-banmedica-persistente-926186.jpg?v=1714728743",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Aspirina 500 mg x 40 comprimidos.",
+          "channels": {
+            "store": 3290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=aspirina%7C500mg%7C40&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Faspirina-500mg-x40com&cfmId=CFM-001559",
+          "imageUrl": "https://farmacia.araucomed.com/4191-home_default/aspirina-500mg-x40com.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Aspirina 500mg 40 Comp",
+          "channels": {
+            "store": 3390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=aspirina%7C500mg%7C40&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D2086%26d_%3D1&cfmId=CFM-001559",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640211242.jpg?v=6a94fabcdce62",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Aspirina Adulto Acido Acetilsalicilico 500 mg 40 Comprimidos",
+          "channels": {
+            "store": 4505,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4505
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=aspirina%7C500mg%7C40&url=https%3A%2F%2Fwww.cruzverde.cl%2Faspirina-adulto-acido-acetilsalicilico-500-mg-40-comprimidos%2F3111.html&cfmId=CFM-001559",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc2490d55/images/large/3111-aspirina-adulto-acido-acetilsalicilico-500-mg-40-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 1000,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640211242.jpg?v=6a94fabcdce62",
+      "presentationKey": "aspirina|500mg|40|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001559",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|650mg|10",
+      "canonicalName": "Aspirina Forte 650 Mg  x 10...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Aspirina Forte 650 Mg  x 10...",
+          "channels": {
+            "store": 1200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=aspirina%7C650mg%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102864-aspirina-forte-650-mg-x-10-comprimidos-tira.html&cfmId=CFM-001562",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 1200,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "aspirina|650mg|10|bio:unknown|brand:tira|var:forte",
+      "cfmId": "CFM-001562",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg|20",
+      "canonicalName": "Aspirina 500 mg x 20 comprimidos",
+      "laboratory": "BAYER",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Aspirina 500 mg x 20 comprimidos",
+          "channels": {
+            "store": 1895,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1895
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=aspirina%7C500mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Faspirina-500-bayer%3F_pos%3D3%26_psq%3Daspirina%26_psid%3D1438e1eb9%26_ss%3De&cfmId=CFM-001558",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/aspirinar-500-mg-x-20-comprimidos-bayer-787440.jpg?v=1692989427",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 1895,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/aspirinar-500-mg-x-20-comprimidos-bayer-787440.jpg?v=1692989427",
+      "presentationKey": "aspirina|500mg|20|bio:unknown|brand:bayer|form:solid-oral",
+      "cfmId": "CFM-001558",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg|20",
+      "canonicalName": "Aspirina Adultos 500mg x 20...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Aspirina Adultos 500mg x 20...",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=aspirina%7C500mg%7C20&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25054-aspirina-adultos-500mg-x-20.html&cfmId=CFM-001558",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "aspirina|500mg|20|bio:unknown|brand:unknown",
+      "cfmId": "CFM-001558",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|650mg|10",
+      "canonicalName": "Aspirina Forte 650 Mg. 10 Comprimidos",
+      "laboratory": "Aspirina Forte",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Aspirina Forte 650 Mg. 10 Comprimidos",
+          "channels": {
+            "store": 2499,
+            "online": 2199,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2199
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=aspirina%7C650mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Faspirina-forte-650mg-tira-de-10-comprimidos%3Fdefault_sku%3D150054&cfmId=CFM-001562",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/64968/small/150054.jpg?1641328747",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 2199,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/64968/small/150054.jpg?1641328747",
+      "presentationKey": "aspirina|650mg|10|bio:unknown|brand:aspirinaforte|var:forte|form:solid-oral",
+      "cfmId": "CFM-001562",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg|20",
+      "canonicalName": "Aspirina ácido acetilsalicílico 500 mg 20 comprimidos",
+      "laboratory": "BAYER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Aspirina ácido acetilsalicílico 500 mg 20 comprimidos",
+          "channels": {
+            "store": 2360,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2360
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=aspirina%7C500mg%7C20&url=https%3A%2F%2Fwww.drsimi.cl%2Faspirina-acido-acetilsalicilico-500-mg-20-comprimidos%2Fp&cfmId=CFM-001558",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156401/CH5787-1.jpg?v=637964773381830000",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 2360,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156401/CH5787-1.jpg?v=637964773381830000",
+      "presentationKey": "aspirina|500mg|20|bio:false|brand:bayer|form:solid-oral",
+      "cfmId": "CFM-001558",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "relatene|100mg|20",
+      "canonicalName": "Relatene 100 mg x 20 comprimidos.",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Relatene 100 mg x 20 comprimidos.",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=relatene%7C100mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Frelatene-100mg-x20com&cfmId=CFM-000785",
+          "imageUrl": "https://farmacia.araucomed.com/7663-home_default/relatene-100mg-x20com.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7663-home_default/relatene-100mg-x20com.jpg",
+      "presentationKey": "relatene|100mg|20|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-000785",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aspirina|650mg|10",
+      "canonicalName": "Aspirina Forte Ácido Acetilsalicilico 650 mg 10 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Aspirina Forte Ácido Acetilsalicilico 650 mg 10 Comprimidos",
+          "channels": {
+            "store": 2540,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2540
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=aspirina%7C650mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Faspirina-forte-acido-acetilsalicilico-650-mg-10-comprimidos%2F3143.html&cfmId=CFM-001562",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb165f39c/images/large/3143-aspirina-forte-acido-acetilsalicilico-650-mg-10-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 2540,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb165f39c/images/large/3143-aspirina-forte-acido-acetilsalicilico-650-mg-10-comprimidos.jpg",
+      "presentationKey": "aspirina|650mg|10|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+      "cfmId": "CFM-001562",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "winasorb|25ml|25",
+      "canonicalName": "Winasorb Gotas 100mg/ml x25ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Winasorb Gotas 100mg/ml x25ml",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=winasorb%7C25ml%7C25&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fwinasorb-gotas-100mg-ml-x25ml&cfmId=CFM-001602",
+          "imageUrl": "https://farmacia.araucomed.com/7594-home_default/winasorb-gotas-100mg-ml-x25ml.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7594-home_default/winasorb-gotas-100mg-ml-x25ml.jpg",
+      "presentationKey": "winasorb|25ml|25|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001602",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "relatene|100mg|10",
+      "canonicalName": "Relatene 100mg x10com",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Relatene 100mg x10com",
+          "channels": {
+            "store": 3290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=relatene%7C100mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Frelatene-100mg-x10com&cfmId=CFM-000768",
+          "imageUrl": "https://farmacia.araucomed.com/7662-home_default/relatene-100mg-x10com.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 3290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7662-home_default/relatene-100mg-x10com.jpg",
+      "presentationKey": "relatene|100mg|10|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-000768",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aspirina|42",
+      "canonicalName": "Aspirina Infantil X 42 comprimidos (Bayer)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Aspirina Infantil X 42 comprimidos (Bayer)",
+          "channels": {
+            "store": 3650,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3650
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=aspirina%7C42&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Faspirina-infantil-x-42%2F&cfmId=CFM-003338",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/ASPIRINA100mg.png",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 3650,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/ASPIRINA100mg.png",
+      "presentationKey": "aspirina|42|bio:unknown|brand:unknown|var:infantil|form:solid-oral",
+      "cfmId": "CFM-003338",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg|40",
+      "canonicalName": "Aspirina 500mg 40 Comprimidos",
+      "laboratory": "Aspirina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Aspirina 500mg 40 Comprimidos",
+          "channels": {
+            "store": 4999,
+            "online": 4249,
+            "cmr": null,
+            "sbpay": 3749,
+            "effective": 3749
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=aspirina%7C500mg%7C40&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Faspirina-500mg-40-comprimidos%3Fdefault_sku%3D150020&cfmId=CFM-001559",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/169966/small/150020.jpg?1765390680",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 3749,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/169966/small/150020.jpg?1765390680",
+      "presentationKey": "aspirina|500mg|40|bio:unknown|brand:aspirina|form:solid-oral",
+      "cfmId": "CFM-001559",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|100mg|42",
+      "canonicalName": "Aspirina 100 mg x 42 comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Aspirina 100 mg x 42 comp",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=aspirina%7C100mg%7C42&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25053-aspirina-100-x-42.html&cfmId=CFM-002282",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Aspirina 100 Mg X 42 Comprimidos",
+          "channels": {
+            "store": 4690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=aspirina%7C100mg%7C42&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D21403%26d_%3D1&cfmId=CFM-002282",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640992561.jpg?v=6a94fabcdc89a",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Aspirina 100 mg x 42 Comprimidos",
+          "channels": {
+            "store": 6069,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6069
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=aspirina%7C100mg%7C42&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Faspirina-100-mg-x-42-comprimidos-68876.html&cfmId=CFM-002282",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw3f67725f/images/products/68876/68876.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Aspirina Acido Acetilsalicilico 100 mg 42 Comprimidos",
+          "channels": {
+            "store": 6890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=aspirina%7C100mg%7C42&url=https%3A%2F%2Fwww.cruzverde.cl%2Faspirina-acido-acetilsalicilico-100-mg-42-comprimidos%2F262006.html&cfmId=CFM-002282",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dweaa3745d/images/large/262006-aspirina-para-ninos-acido-acetilsalicilico-100-mg-42-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640992561.jpg?v=6a94fabcdc89a",
+      "presentationKey": "aspirina|100mg|42|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002282",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|100mg|42",
+      "canonicalName": "Aspirina Niños 100 mg x 42 comprimidos.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Aspirina Niños 100 mg x 42 comprimidos.",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=aspirina%7C100mg%7C42&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Faspirina-ninos-100mg-x42com&cfmId=CFM-002282",
+          "imageUrl": "https://farmacia.araucomed.com/3161-home_default/aspirina-ninos-100mg-x42com.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3161-home_default/aspirina-ninos-100mg-x42com.jpg",
+      "presentationKey": "aspirina|100mg|42|bio:unknown|brand:unknown|var:infantil|form:solid-oral",
+      "cfmId": "CFM-002282",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg",
+      "canonicalName": "Aspirina Adultos 500 mg x...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Aspirina Adultos 500 mg x...",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=aspirina%7C500mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F41649-aspirina-adultos-500mg-x-40-comp.html&cfmId=CFM-003337",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "aspirina|500mg|bio:unknown|brand:unknown",
+      "cfmId": "CFM-003337",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|100mg|42",
+      "canonicalName": "Aspirina 100mg 42 Comprimidos",
+      "laboratory": "Aspirina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Aspirina 100mg 42 Comprimidos",
+          "channels": {
+            "store": 5899,
+            "online": 4719,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4719
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=aspirina%7C100mg%7C42&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Faspirina-100mg-42-comprimidos%3Fdefault_sku%3D151652&cfmId=CFM-002282",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/95074/small/42-rosada2.png?1689711082",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 4719,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/95074/small/42-rosada2.png?1689711082",
+      "presentationKey": "aspirina|100mg|42|bio:unknown|brand:aspirina|form:solid-oral",
+      "cfmId": "CFM-002282",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "winasorb|60ml|60",
+      "canonicalName": "Winasorb Jarabe 150mg/5ml x 60 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Winasorb Jarabe 150mg/5ml x 60 ml.",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=winasorb%7C60ml%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fwinasorb-jarabe-150mg-5ml-x60ml&cfmId=CFM-000052",
+          "imageUrl": "https://farmacia.araucomed.com/7593-home_default/winasorb-jarabe-150mg-5ml-x60ml.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7593-home_default/winasorb-jarabe-150mg-5ml-x60ml.jpg",
+      "presentationKey": "winasorb|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000052",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aspirina|100mg|42",
+      "canonicalName": "Aspirina 100 mg x 42 comprimidos",
+      "laboratory": "BAYER OTC",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Aspirina 100 mg x 42 comprimidos",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=aspirina%7C100mg%7C42&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Faspirina-infantil-acido-acetilsalicilico%3F_pos%3D1%26_psq%3Daspirina%26_psid%3D1438e1eb9%26_ss%3De&cfmId=CFM-002282",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/aspirina-100-mg-x-42-comprimidos-bayer-otc-526015.jpg?v=1787239974",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/aspirina-100-mg-x-42-comprimidos-bayer-otc-526015.jpg?v=1787239974",
+      "presentationKey": "aspirina|100mg|42|bio:unknown|brand:bayerotc|form:solid-oral",
+      "cfmId": "CFM-002282",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg|100",
+      "canonicalName": "Aspirina 500 Mg Caja 100comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Aspirina adultos 500 mg x 100 comprimidos DESCUENTO",
+          "channels": {
+            "store": 5480,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5480
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=aspirina%7C500mg%7C100&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Faspirina-adultos-500-mg-x-100-comprimidos-descuento%2F&cfmId=CFM-002283",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/aspirina-500-mg-x-100-comp.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Aspirina 500 mg x 100 comprimidos.",
+          "channels": {
+            "store": 6290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=aspirina%7C500mg%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Faspirina-500mg-caja-x-100&cfmId=CFM-002283",
+          "imageUrl": "https://farmacia.araucomed.com/4342-home_default/aspirina-500mg-caja-x-100.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Aspirina 500 Mg Caja 100comp",
+          "channels": {
+            "store": 10399,
+            "online": null,
+            "cmr": 7799,
+            "sbpay": null,
+            "effective": 7799
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=aspirina%7C500mg%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Faspirina-500-mg-caja-100comp-88718.html&cfmId=CFM-002283",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf38ce9e3/images/products/88718/88718.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 5480,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf38ce9e3/images/products/88718/88718.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "aspirina|500mg|100|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002283",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|100mg|98",
+      "canonicalName": "Aspirina 100 Mg X 98 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Aspirina 100Mg 98 comprimidos DESCUENTO por caja arrugada",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=aspirina%7C100mg%7C98&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Faspirina-100mg-98-comprimidos-descuento-por-caja-arrugada%2F&cfmId=CFM-002281",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/03/aspirina100mgx98bayer.png",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Aspirina 100 Mg X 98 Comprimidos",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=aspirina%7C100mg%7C98&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D21322%26d_%3D1&cfmId=CFM-002281",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640992554.jpg?v=6a94fabcdca22",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Aspirina 100 mg x 98 Comprimidos",
+          "channels": {
+            "store": 9689,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9689
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=aspirina%7C100mg%7C98&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Faspirina-100-mg-x-98-comprimidos-88719.html&cfmId=CFM-002281",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8fb6ad29/images/products/88719/88719.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640992554.jpg?v=6a94fabcdca22",
+      "presentationKey": "aspirina|100mg|98|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002281",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg|100",
+      "canonicalName": "Aspirina 500 mg x 100 comprimidos",
+      "laboratory": "BAYER",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Aspirina 500 mg x 100 comprimidos",
+          "channels": {
+            "store": 6095,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6095
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=aspirina%7C500mg%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Faspirina-500-mg-x-100-comp%3F_pos%3D4%26_psq%3Daspirina%26_psid%3D1438e1eb9%26_ss%3De&cfmId=CFM-002283",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/aspirina-500-mg-x-100-comp-bayer-785768.jpg?v=1692989494",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 6095,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/aspirina-500-mg-x-100-comp-bayer-785768.jpg?v=1692989494",
+      "presentationKey": "aspirina|500mg|100|bio:unknown|brand:bayer|form:solid-oral",
+      "cfmId": "CFM-002283",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pack",
+      "canonicalName": "Pack Nenitos (Toallitas + Cotonitos + Aspirador Nasal)",
+      "laboratory": "Nenitos",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Pack Nenitos (Toallitas + Cotonitos + Aspirador Nasal)",
+          "channels": {
+            "store": 6299,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6299
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=pack&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpack-nenitos-toallitas-cotonitos-aspirador-nasal%3Fdefault_sku%3D588982&cfmId=CFM-001846",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/127397/small/588982.jpg?1731600420",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 6299,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/127397/small/588982.jpg?1731600420",
+      "presentationKey": "pack|bio:unknown|brand:nenitos|combo:cotonitos",
+      "cfmId": "CFM-001846",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aspirina|100mg|98",
+      "canonicalName": "Aspirina Niños 100 mg x 98 comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Aspirina Niños 100 mg x 98 comprimidos",
+          "channels": {
+            "store": 6590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=aspirina%7C100mg%7C98&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Faspirina-ninos-100mg-x98com&cfmId=CFM-002281",
+          "imageUrl": "https://farmacia.araucomed.com/3160-home_default/aspirina-ninos-100mg-x98com.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 6590,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3160-home_default/aspirina-ninos-100mg-x98com.jpg",
+      "presentationKey": "aspirina|100mg|98|bio:unknown|brand:unknown|var:infantil|form:solid-oral",
+      "cfmId": "CFM-002281",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|650mg|80",
+      "canonicalName": "Aspirina Forte 650mg x80com.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Aspirina Forte 650mg x80com.",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=aspirina%7C650mg%7C80&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihipertensivos%2Faspirina-forte-650mg-x80com&cfmId=CFM-002280",
+          "imageUrl": "https://farmacia.araucomed.com/3596-home_default/aspirina-forte-650mg-x80com.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Aspirina Forte 650 mg x 80 comprimidos",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=aspirina%7C650mg%7C80&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Faspirina-forte-650-mg-x-80-comprimidos%2F&cfmId=CFM-002280",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/03/aspirina-forte.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 6990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3596-home_default/aspirina-forte-650mg-x80com.jpg",
+      "presentationKey": "aspirina|650mg|80|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+      "cfmId": "CFM-002280",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|650mg|80",
+      "canonicalName": "Aspirina Forte 650 mg x 80 comprimidos",
+      "laboratory": "BAYER",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Aspirina Forte 650 mg x 80 comprimidos",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=aspirina%7C650mg%7C80&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Faspirina-forte-650-mg-x-80-comp-bayer%3F_pos%3D5%26_psq%3Daspirina%26_psid%3D1438e1eb9%26_ss%3De&cfmId=CFM-002280",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/aspirina-forte-650-mg-x-80-comp-bayer-688710.jpg?v=1692989566",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 6990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/aspirina-forte-650-mg-x-80-comp-bayer-688710.jpg?v=1692989566",
+      "presentationKey": "aspirina|650mg|80|bio:unknown|brand:bayer|var:forte|form:solid-oral",
+      "cfmId": "CFM-002280",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|100mg|98",
+      "canonicalName": "Aspirina Infantil 100 mg x 98 comprimidos",
+      "laboratory": "BAYER OTC",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Aspirina Infantil 100 mg x 98 comprimidos",
+          "channels": {
+            "store": 7090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=aspirina%7C100mg%7C98&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Faspirina-infantil-100-mg-x-98-comp-bayer%3F_pos%3D2%26_psq%3Daspirina%26_psid%3D1438e1eb9%26_ss%3De&cfmId=CFM-002281",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/aspirina-infantil-100-mg-x-98-comp-bayer-farmex-731125.jpg?v=1722572834",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 7090,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/aspirina-infantil-100-mg-x-98-comp-bayer-farmex-731125.jpg?v=1722572834",
+      "presentationKey": "aspirina|100mg|98|bio:unknown|brand:bayerotc|var:infantil|form:solid-oral",
+      "cfmId": "CFM-002281",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirador",
+      "canonicalName": "Aspirador Nasal Infantil para Congestión Nariklin",
+      "laboratory": "Nariklin",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Aspirador Nasal Infantil para Congestión Nariklin",
+          "channels": {
+            "store": 7399,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=aspirador&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Faspirador-nasal-infantil-para-congestion-nariklin%3Fdefault_sku%3D7260020&cfmId=CFM-003344",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/103350/small/7260020.JPG?1701953865",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 7399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/103350/small/7260020.JPG?1701953865",
+      "presentationKey": "aspirador|bio:unknown|brand:nariklin|var:infantil",
+      "cfmId": "CFM-003344",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aspirina|98",
+      "canonicalName": "Aspirina 100 x 98 comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Aspirina 100 x 98 comp",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=aspirina%7C98&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F60079-aspirina-100-x-100-comp.html&cfmId=CFM-003340",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "aspirina|98|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-003340",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirina|500mg|100",
+      "canonicalName": "Aspirina 500 mg x 100...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Aspirina 500 mg x 100...",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=aspirina%7C500mg%7C100&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102863-aspirina-500-mg-x-100-comprimidos.html&cfmId=CFM-002283",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "aspirina|500mg|100|bio:unknown|brand:unknown",
+      "cfmId": "CFM-002283",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aspirador",
+      "canonicalName": "Aspirador Nasal Eléctrico Digitemp",
+      "laboratory": "Digitemp",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Aspirador Nasal Eléctrico Digitemp",
+          "channels": {
+            "store": 11999,
+            "online": 8999,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=aspirador&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Faspirador-nasal-electrico-digitemp%3Fdefault_sku%3D584638&cfmId=CFM-003344",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/95566/small/Digitemp-Aspirador_Nasal_%28frontal_inclinado%29.png?1690572607",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 8999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/95566/small/Digitemp-Aspirador_Nasal_%28frontal_inclinado%29.png?1690572607",
+      "presentationKey": "aspirador|bio:unknown|brand:digitemp|var:electrico",
+      "cfmId": "CFM-003344",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "cenabast|0.4ml|2",
+      "canonicalName": "Noxipar-40 Solución Inyectable 40mg/0.4ml x2jer. (Cenabast)",
+      "laboratory": "Biosano",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Noxipar-40 Solución Inyectable 40mg/0.4ml x2jer. (Cenabast)",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cenabast%7C0.4ml%7C2&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanticoagulantes%2Fnoxipar-40-solucion-inyectable-40mg-04ml-x2jer-cen&cfmId=CFM-003694",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": null,
+      "presentationKey": "cenabast|0.4ml|2|bio:unknown|brand:biosano|form:injectable",
+      "cfmId": "CFM-003694",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "jeringas|0.8ml|2",
+      "canonicalName": "Noxipar-80 Solución Inyectable 80mg/0.8ml x 2 jeringas",
+      "laboratory": "Biosano",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Noxipar-80 Solución Inyectable 80mg/0.8ml x 2 jeringas",
+          "channels": {
+            "store": 10490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=jeringas%7C0.8ml%7C2&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanticoagulantes%2Fnoxipar-80-solucion-inyectable-80mg-08ml-x-2-jerin&cfmId=CFM-003693",
+          "imageUrl": "https://farmacia.araucomed.com/8883-home_default/noxipar-80-solucion-inyectable-80mg-08ml-x-2-jerin.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 10490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8883-home_default/noxipar-80-solucion-inyectable-80mg-08ml-x-2-jerin.jpg",
+      "presentationKey": "jeringas|0.8ml|2|bio:unknown|brand:biosano|form:injectable",
+      "cfmId": "CFM-003693",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aspirador",
+      "canonicalName": "Aspirador Nasal de Punta Suave y Flexible Pigeon",
+      "laboratory": "Pigeon",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Aspirador Nasal de Punta Suave y Flexible Pigeon",
+          "channels": {
+            "store": 10999,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=aspirador&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Faspirador-nasal-de-punta-suave-y-flexible-pigeon%3Fdefault_sku%3D8701085&cfmId=CFM-003344",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146926/small/8701085_1.jpg?1749155747",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 10999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146926/small/8701085_1.jpg?1749155747",
+      "presentationKey": "aspirador|bio:unknown|brand:pigeon|var:punta",
+      "cfmId": "CFM-003344",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "svr|50ml",
+      "canonicalName": "SVR Desodorante Spirial Deo Roll-On 50ml",
+      "laboratory": "Svr",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "SVR Desodorante Spirial Deo Roll-On 50ml",
+          "channels": {
+            "store": 18099,
+            "online": 12669,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12669
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=svr%7C50ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsvr-desodorante-spirial-deo-roll-on-50ml%3Fdefault_sku%3D584814&cfmId=CFM-003335",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/87747/small/2744158_1.jpg?1676910836",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 12669,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/87747/small/2744158_1.jpg?1676910836",
+      "presentationKey": "svr|50ml|bio:unknown|brand:svr|var:desodorante",
+      "cfmId": "CFM-003335",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "svr|50ml",
+      "canonicalName": "Svr Spirial Deo Crema 50ml",
+      "laboratory": "Svr",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Svr Spirial Deo Crema 50ml",
+          "channels": {
+            "store": 18299,
+            "online": 12809,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12809
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=svr%7C50ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsvr-spirial-deo-crema-50ml%3Fdefault_sku%3D586386&cfmId=CFM-003335",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/104114/small/586386_1.jpg?1703770425",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 12809,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/104114/small/586386_1.jpg?1703770425",
+      "presentationKey": "svr|50ml|bio:unknown|brand:svr|var:spirial|form:topical",
+      "cfmId": "CFM-003335",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "svr|50ml",
+      "canonicalName": "Svr Spirial Roll-on Vegetal 50ml",
+      "laboratory": "Svr",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Svr Spirial Roll-on Vegetal 50ml",
+          "channels": {
+            "store": 18299,
+            "online": 12809,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12809
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=svr%7C50ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsvr-spirial-roll-on-vegetal-50ml%3Fdefault_sku%3D587666&cfmId=CFM-003335",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/119501/small/587666_1.jpg?1724794091",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 12809,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/119501/small/587666_1.jpg?1724794091",
+      "presentationKey": "svr|50ml|bio:unknown|brand:svr|var:spirial",
+      "cfmId": "CFM-003335",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "pack",
+      "canonicalName": "Pack Nariklin Aspirador y Spray Cuidado Nasal",
+      "laboratory": "Nariklin",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Pack Nariklin Aspirador y Spray Cuidado Nasal",
+          "channels": {
+            "store": 13399,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=pack&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpack-aspirador-spray-nasal%3Fdefault_sku%3D7263024&cfmId=CFM-001846",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/3384/small/7263024.jpg?1641482499",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 13399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/3384/small/7263024.jpg?1641482499",
+      "presentationKey": "pack|bio:unknown|brand:nariklin|var:nariklin",
+      "cfmId": "CFM-001846",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "zomel|40mg|30",
+      "canonicalName": "Zomel 40 mg x 30 comprimidos.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Zomel 40 mg x 30 comprimidos.",
+          "channels": {
+            "store": 13990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=zomel%7C40mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantiulcerosos%2Fzomel-40-mg-x-30-comprimidos&cfmId=CFM-001204",
+          "imageUrl": "https://farmacia.araucomed.com/12577-home_default/zomel-40-mg-x-30-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 13990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12577-home_default/zomel-40-mg-x-30-comprimidos.jpg",
+      "presentationKey": "zomel|40mg|30|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001204",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "svr|400ml",
+      "canonicalName": "SVR Spirial Deo Douche 400ml",
+      "laboratory": "SVR",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "SVR Spirial Deo Douche 400ml",
+          "channels": {
+            "store": 19999,
+            "online": 13999,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=svr%7C400ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsvr-spirial-deo-douche-400ml%3Fdefault_sku%3D593253&cfmId=CFM-003342",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/169380/small/593253_1.jpg?1765294416",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 13999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/169380/small/593253_1.jpg?1765294416",
+      "presentationKey": "svr|400ml|bio:unknown|brand:svr|var:spirial",
+      "cfmId": "CFM-003342",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "spiriva|2.5mcg",
+      "canonicalName": "Spiriva Respimat Tiotropio 2.5mcg Inhalación 30 Dosis - Cenabast",
+      "laboratory": "Spiriva",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Spiriva Respimat Tiotropio 2.5mcg Inhalación 30 Dosis - Cenabast",
+          "channels": {
+            "store": 49490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 49490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=spiriva%7C2.5mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fspiriva-respimat-tiotropio-2-5mcg-inhalacion-30-dosis%3Fdefault_sku%3D160201&cfmId=CFM-003027",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/138642/small/160201_-_Cenabast.jpg?1743175063",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 49490,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/138642/small/160201_-_Cenabast.jpg?1743175063",
+      "presentationKey": "spiriva|2.5mcg|bio:unknown|brand:spiriva|var:respimat|form:inhaled",
+      "cfmId": "CFM-003027",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "cafiaspirina|10",
+      "canonicalName": "Cafiaspirina x 10...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Cafiaspirina x 10...",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cafiaspirina%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102925-cafiaspirina-x-10-comprimidos-1-tira.html&cfmId=CFM-002277",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.305Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "cafiaspirina|10|bio:unknown|brand:tira",
+      "cfmId": "CFM-002277",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cafiaspirina|40mg|10",
+      "canonicalName": "Cafiaspirina AAS 40 mg 10 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cafiaspirina AAS 40 mg 10 Comprimidos",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cafiaspirina%7C40mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcafiaspirina-aas-40-mg-10-comprimidos%2F3119.html&cfmId=CFM-001561",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwda7865ae/images/large/3119-cafiaspirina-aas-40-mg-10-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 2690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwda7865ae/images/large/3119-cafiaspirina-aas-40-mg-10-comprimidos.jpg",
+      "presentationKey": "cafiaspirina|40mg|10|bio:unknown|brand:unknown|var:aas|form:solid-oral",
+      "cfmId": "CFM-001561",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cafiaspirina|40",
+      "canonicalName": "Cafiaspirina 40 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Cafiaspirina x 40 Comprimidos",
+          "channels": {
+            "store": 3900,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3900
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cafiaspirina%7C40&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcafiaspirina-x-40-comprimidos%2F&cfmId=CFM-002279",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/12/cafiaspirina.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Cafiaspirina 40 Comprimidos",
+          "channels": {
+            "store": 4390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=cafiaspirina%7C40&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D3442%26d_%3D1&cfmId=CFM-002279",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7805750000064.jpg?v=6a94fabcdcf3c",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 3900,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7805750000064.jpg?v=6a94fabcdcf3c",
+      "presentationKey": "cafiaspirina|40|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002279",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cardioaspirina|100mg|20",
+      "canonicalName": "Cardioaspirina 100mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Cardioaspirina 100 EC Ácido acetilsalicílico 100mg 20 comprimidos DESCUENTO",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cardioaspirina%7C100mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcardioaspirina-100-ec-acido-acetilsalicilico-100-mg-20-comprimidos%2F&cfmId=CFM-003074",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/CARDIOASPIRINA-1-scaled.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Cardioaspirina 100mg 20 Comprimidos",
+          "channels": {
+            "store": 4790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=cardioaspirina%7C100mg%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D3576%26d_%3D1&cfmId=CFM-003074",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640216377.jpg?v=6a94fabcdcc44",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cardioaspirina 100 EC Ácido Acetilsalicílico 100 mg 20 Comprimidos",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cardioaspirina%7C100mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcardioaspirina-100-ec-acido-acetilsalicilico-100-mg-20-comprimidos%2F3121.html&cfmId=CFM-003074",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw32997b3c/images/large/3121-cardioaspirina-acido-acetilsalicilico-100-mg-20-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640216377.jpg?v=6a94fabcdcc44",
+      "presentationKey": "cardioaspirina|100mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-003074",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cafiaspirina|500mg|40",
+      "canonicalName": "Cafiaspirina ácido acetilsalicílico 500 mg cafeína 40 mg 40 comprimidos",
+      "laboratory": "BAYER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Cafiaspirina ácido acetilsalicílico 500 mg cafeína 40 mg 40 comprimidos",
+          "channels": {
+            "store": 4200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=cafiaspirina%7C500mg%7C40&url=https%3A%2F%2Fwww.drsimi.cl%2Fcafiaspirina-40-comprimidos%2Fp&cfmId=CFM-002278",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156403/CH5788-1.jpg?v=637964773388700000",
+          "fetchedAt": "2026-08-31T03:53:33.303Z"
+        }
+      ],
+      "bestPrice": 4200,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156403/CH5788-1.jpg?v=637964773388700000",
+      "presentationKey": "cafiaspirina|500mg|40|bio:false|brand:bayer|form:solid-oral",
+      "cfmId": "CFM-002278",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cardioaspirina|20",
+      "canonicalName": "Cardioaspirina 100 EC x 20...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Cardioaspirina 100 EC x 20...",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cardioaspirina%7C20&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25061-cardioaspirina-100-ec-x-20.html&cfmId=CFM-003343",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.305Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "cardioaspirina|20|bio:unknown|brand:unknown",
+      "cfmId": "CFM-003343",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cardioaspirina|100mg|50",
+      "canonicalName": "Cardioaspirina 100mg 50 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Cardioaspirina 100 EC Ácido Acetilsalicílico 100 mg 50 comprimidos DESCUENTO",
+          "channels": {
+            "store": 8600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8600
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cardioaspirina%7C100mg%7C50&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcardioaspirina-100-mg-x-50-comprimidos-bayer-descuento%2F&cfmId=CFM-002624",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/cardioaspirina-100ec.jpeg",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Cardioaspirina 100mg 50 Comprimidos",
+          "channels": {
+            "store": 11290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=cardioaspirina%7C100mg%7C50&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19042%26d_%3D1&cfmId=CFM-002624",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640216391.jpg?v=6a94fabcdccfd",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cardioaspirina 100 EC Ácido Acetilsalicílico 100 mg 50 Comprimidos",
+          "channels": {
+            "store": 14490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cardioaspirina%7C100mg%7C50&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcardioaspirina-100-ec-acido-acetilsalicilico-100-mg-50-comprimidos%2F3122.html&cfmId=CFM-002624",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw877c0216/images/large/3122-cardioaspirina-100-ec-comprimido-50-unidades-acido-acetilsalicilico-100-mg.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 8600,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640216391.jpg?v=6a94fabcdccfd",
+      "presentationKey": "cardioaspirina|100mg|50|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002624",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cardioaspirina|30",
+      "canonicalName": "Cardioaspirina 325 EC x 30 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Cardioaspirina 325 EC x 30 Comprimidos",
+          "channels": {
+            "store": 9980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cardioaspirina%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcardioaspirina-325-ec-x-30-comprimidos%2F&cfmId=CFM-003339",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/08/cardioaspirina-325.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 9980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/08/cardioaspirina-325.jpg",
+      "presentationKey": "cardioaspirina|30|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-003339",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cardioaspirina|325mg|30",
+      "canonicalName": "Cardioaspirina 325mg 30comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Cardioaspirina 325mg 30comp",
+          "channels": {
+            "store": 10390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=cardioaspirina%7C325mg%7C30&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D21623%26d_%3D1&cfmId=CFM-003341",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640000174.jpg?v=6a94fabcdcad9",
+          "fetchedAt": "2026-08-31T03:53:33.304Z"
+        }
+      ],
+      "bestPrice": 10390,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7793640000174.jpg?v=6a94fabcdcad9",
+      "presentationKey": "cardioaspirina|325mg|30|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-003341",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cardioaspirina|50",
+      "canonicalName": "Cardioaspirina 100 EC x 50...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Cardioaspirina 100 EC x 50...",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cardioaspirina%7C50&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25062-cardioaspirina-100-ec-x-50.html&cfmId=CFM-003336",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:53:33.305Z"
+        }
+      ],
+      "bestPrice": 11990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "cardioaspirina|50|bio:unknown|brand:unknown",
+      "cfmId": "CFM-003336",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "cafiaspirina|40mg|40",
+      "canonicalName": "Cafiaspirina Ácido Acetilsalicilico 40 mg 40 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cafiaspirina Ácido Acetilsalicilico 40 mg 40 Comprimidos",
+          "channels": {
+            "store": 12290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cafiaspirina%7C40mg%7C40&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcafiaspirina-acido-acetilsalicilico-40-mg-40-comprimidos%2F3135.html&cfmId=CFM-001560",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw155a3896/images/large/3135-cafiaspirina-comprimido-40-unidades-aas(aspirina)-40-mg.jpg",
+          "fetchedAt": "2026-08-31T03:53:33.302Z"
+        }
+      ],
+      "bestPrice": 12290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw155a3896/images/large/3135-cafiaspirina-comprimido-40-unidades-aas(aspirina)-40-mg.jpg",
+      "presentationKey": "cafiaspirina|40mg|40|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001560",
+      "lexicalMatch": "mismatch"
+    }
+  ]
+}

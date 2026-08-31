@@ -1,0 +1,2730 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "azitromicina suspension",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=azitromicina%20suspension",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:52:23.985Z",
+  "completedAt": "2026-08-31T03:52:30.658Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 81,
+  "results": [
+    {
+      "matchKey": "abacten|30ml",
+      "canonicalName": "Abacten 200mg/5ml solucion oral 30ml",
+      "laboratory": "Andrómaco",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Abacten 200mg/5ml solucion oral 30ml",
+          "channels": {
+            "store": 2900,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2900
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=abacten%7C30ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fabacten-200mg-5ml-solucion-oral-30ml&cfmId=CFM-002379",
+          "imageUrl": "https://farmacia.araucomed.com/1176-home_default/abacten-200mg-5ml-solucion-oral-30ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        }
+      ],
+      "bestPrice": 2900,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1176-home_default/abacten-200mg-5ml-solucion-oral-30ml.jpg",
+      "presentationKey": "abacten|30ml|bio:unknown|brand:andromaco|form:fluid-oral",
+      "cfmId": "CFM-002379",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "azitromicina|15ml|15",
+      "canonicalName": "Azitromicina 200 mg Polvo para Suspensión Oral x 15 mL",
+      "laboratory": "Hospifarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Azitromicina 200 mg Polvo para Suspensión Oral x 15 mL",
+          "channels": {
+            "store": 2995,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2995
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=azitromicina%7C15ml%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fazitromicina-200-mg-polvo-para-suspension-oral-x-15-ml-4%3F_pos%3D8%26_psq%3Dazitromicina%26_psid%3D08382418e%26_ss%3De&cfmId=CFM-002395",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/azitromicina-200-mg-polvo-para-suspension-oral-x-15-ml-hospifarma-681391.jpg?v=1753551320",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 2995,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/azitromicina-200-mg-polvo-para-suspension-oral-x-15-ml-hospifarma-681391.jpg?v=1753551320",
+      "presentationKey": "azitromicina|15ml|15|bio:unknown|brand:hospifarma|form:fluid-oral",
+      "cfmId": "CFM-002395",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|30ml|30",
+      "canonicalName": "Azitromicina 200 mg/5 mL polvo para suspensión oral x 30 mL (cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Azitromicina 200 mg/5 mL polvo para suspensión oral x 30 mL (cenabast)",
+          "channels": {
+            "store": 3310,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3310
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=azitromicina%7C30ml%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fazitromicina-200-mg-5-ml-polvo-para-suspension-oral-x-30-ml-cenabast%2F&cfmId=CFM-001625",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/04/azitromicina-200-mg-5ml-x-30.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azitromicina 200mg/5 ml x 30 ml Polvo para Suspensión Oral PHARMATECH CHILE",
+          "channels": {
+            "store": 7145,
+            "online": null,
+            "cmr": 6674,
+            "sbpay": null,
+            "effective": 6674
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azitromicina%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazitromicina-200mg-5-ml-x-30-ml-polvo-para-suspension-oral-pharmatech-chile-91434.html&cfmId=CFM-001625",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa298847e/images/products/91434/91434.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 3310,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/04/azitromicina-200-mg-5ml-x-30.jpg",
+      "presentationKey": "azitromicina|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001625",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|15ml",
+      "canonicalName": "Azitromicina 200mg/5ml Suspensión Oral 15ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Azitromicina 200mg/5ml polvo para suspensión oral 15 Ml",
+          "channels": {
+            "store": 3480,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3480
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=azitromicina%7C15ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fazitromicina-200mg-5ml-polvo-para-suspension-oral-15-ml%2F&cfmId=CFM-002087",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/10/azitromicina.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Azitromicina 200mg/5ml Suspensión Oral 15ml",
+          "channels": {
+            "store": 5190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5190
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=azitromicina%7C15ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D2378%26d_%3D1&cfmId=CFM-002087",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007803733.jpg?v=6a94fa7def8c1",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azitromicina 200 mg / 5 mL Suspensión Oral 15 mL",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azitromicina%7C15ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazitromicina-200-mg-5-ml-suspension-oral-15-ml%2F199414.html&cfmId=CFM-002087",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw86d8738e/images/large/199414-azitromicina-200-gm--5-ml-suspension-oral-15-ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.373Z"
+        }
+      ],
+      "bestPrice": 3480,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007803733.jpg?v=6a94fa7def8c1",
+      "presentationKey": "azitromicina|15ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002087",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|30ml",
+      "canonicalName": "Azitromicina 200mg/5ml solucion oral 30ml. (Pharmatech)",
+      "laboratory": "Pharmatech",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitromicina 200mg/5ml solucion oral 30ml. (Pharmatech)",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitromicina-200mg-5ml-solucion-oral-30ml-pharmatech&cfmId=CFM-002089",
+          "imageUrl": "https://farmacia.araucomed.com/14182-home_default/azitromicina-200mg-5ml-solucion-oral-30ml-pharmatech.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 3490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14182-home_default/azitromicina-200mg-5ml-solucion-oral-30ml-pharmatech.jpg",
+      "presentationKey": "azitromicina|30ml|bio:unknown|brand:pharmatech|form:fluid-oral",
+      "cfmId": "CFM-002089",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|30ml",
+      "canonicalName": "Azitromicina 200mg/5ml solucion oral 30ml",
+      "laboratory": "Hospifarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitromicina 200mg/5ml solucion oral 30ml. Hospifarma (Cenabast)",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitromicina-200mg-5ml-solucion-oral-30ml-hospifarma-cenabast&cfmId=CFM-002089",
+          "imageUrl": "https://farmacia.araucomed.com/11063-home_default/azitromicina-200mg-5ml-solucion-oral-30ml-hospifarma-cenabast.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Azitromicina 200mg/5ml solucion oral 30ml",
+          "channels": {
+            "store": 3795,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3795
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fazitromicina-200mg-5ml-solucion-oral-30ml%3F_pos%3D7%26_psq%3Dazitromicina%26_psid%3D08382418e%26_ss%3De&cfmId=CFM-002089",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/azitromicina-200mg5ml-solucion-oral-30ml-hospifarma-674430.jpg?v=1780085383",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 3490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/azitromicina-200mg5ml-solucion-oral-30ml-hospifarma-674430.jpg?v=1780085383",
+      "presentationKey": "azitromicina|30ml|bio:unknown|brand:hospifarma|form:fluid-oral",
+      "cfmId": "CFM-002089",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|15ml",
+      "canonicalName": "Azitromicina 200mg/5ml solución oral 15 ml (Chile)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitromicina 200mg/5ml solución oral 15 ml (Chile)",
+          "channels": {
+            "store": 3690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitromicina%7C15ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitromicina-200mg-5ml-solucion-oral-15ml-chile&cfmId=CFM-002087",
+          "imageUrl": "https://farmacia.araucomed.com/1225-home_default/azitromicina-200mg-5ml-solucion-oral-15ml-chile.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 3690,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1225-home_default/azitromicina-200mg-5ml-solucion-oral-15ml-chile.jpg",
+      "presentationKey": "azitromicina|15ml|bio:unknown|brand:chile|form:fluid-oral",
+      "cfmId": "CFM-002087",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|30ml",
+      "canonicalName": "Azitromicina 200 mg/5 mL polvo para suspensión oral 30 mL",
+      "laboratory": "HOSPIFARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Azitromicina 200 mg/5 mL polvo para suspensión oral 30 mL",
+          "channels": {
+            "store": 4960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fazitromicina-200-mg-5ml-polvo-para-suspension-30-ml%2Fp&cfmId=CFM-002089",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157090/CH7082-1.jpg?v=638012015219870000",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 4960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157090/CH7082-1.jpg?v=638012015219870000",
+      "presentationKey": "azitromicina|30ml|bio:false|brand:hospifarma|form:fluid-oral",
+      "cfmId": "CFM-002089",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|30ml",
+      "canonicalName": "Azitromicina 200mg/5ml Suspensión Oral 30ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Azitromicina 200mg/5ml polvo para suspensión oral 30 ml (Hospifarma)",
+          "channels": {
+            "store": 4980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fazitromicina-200mg-5ml-polvo-para-suspension-oral-30-ml-hospifarma%2F&cfmId=CFM-002089",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/08/Azitromicina-200-mg_5-mL-x-30-mL-Polvo-Para-Suspension-Oral.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Azitromicina 200mg/5ml Suspensión Oral 30ml",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D2388%26d_%3D1&cfmId=CFM-002089",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804640561364.jpg?v=6a94fa7defa46",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azitromicina 200 mg/5 ml Polvo Para Suspensión Oral Fco. 30 ml HOSPIFARMA CHILE LTD",
+          "channels": {
+            "store": 7145,
+            "online": null,
+            "cmr": 6674,
+            "sbpay": null,
+            "effective": 6674
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazitromicina-200-mg-5-ml-polvo-para-suspension-oral-fco.-30-ml-hospifarma-chile-ltd-87714.html&cfmId=CFM-002089",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfd091138/images/products/87714/87714.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azitromicina Polvo Suspension Oral 200Mg/5Ml.30Ml",
+          "channels": {
+            "store": 7940,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7940
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazitromicina-polvo-suspension-oral-200mg-5ml-30ml%2F289839.html&cfmId=CFM-002089",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6f69c1ba/images/large/289839-1.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.373Z"
+        }
+      ],
+      "bestPrice": 4980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804640561364.jpg?v=6a94fa7defa46",
+      "presentationKey": "azitromicina|30ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002089",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|30ml",
+      "canonicalName": "Azitromicina 200mg/5ml Solución oral 30ml Sanitas (Cenabast)",
+      "laboratory": "Sanitas",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitromicina 200mg/5ml Solución oral 30ml Sanitas (Cenabast)",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitromicina-200mg-5ml-solucion-oral-30ml-sanitas-cenabast&cfmId=CFM-002089",
+          "imageUrl": "https://farmacia.araucomed.com/9638-home_default/azitromicina-200mg-5ml-solucion-oral-30ml-sanitas-cenabast.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9638-home_default/azitromicina-200mg-5ml-solucion-oral-30ml-sanitas-cenabast.jpg",
+      "presentationKey": "azitromicina|30ml|bio:unknown|brand:sanitas|form:fluid-oral",
+      "cfmId": "CFM-002089",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|15ml|15",
+      "canonicalName": "Azitromicina 200mg/5 ml x 15 ml Polvo para Suspensión Oral HOSPIFARMA CHILE LTD",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azitromicina 200mg/5 ml x 15 ml Polvo para Suspensión Oral HOSPIFARMA CHILE LTD",
+          "channels": {
+            "store": 5806,
+            "online": null,
+            "cmr": 5249,
+            "sbpay": null,
+            "effective": 5249
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azitromicina%7C15ml%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazitromicina-200mg-5-ml-x-15-ml-polvo-para-suspension-oral-hospifarma-chile-ltd-89515.html&cfmId=CFM-002395",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw16553406/images/products/89515/89515.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 5249,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw16553406/images/products/89515/89515.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "azitromicina|15ml|15|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002395",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|15ml",
+      "canonicalName": "Azitromicina 200mg/5ml Polvo Solución Oral 15ml",
+      "laboratory": "Azitromicina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azitromicina 200mg/5ml Polvo Solución Oral 15ml",
+          "channels": {
+            "store": 6599,
+            "online": 5807,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5807
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azitromicina%7C15ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fazitromicina-200mg-5ml-polvo-solucion-oral-15ml%3Fdefault_sku%3D577313&cfmId=CFM-002087",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/81400/small/577313.jpeg?1665764295",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 5807,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/81400/small/577313.jpeg?1665764295",
+      "presentationKey": "azitromicina|15ml|bio:unknown|brand:azitromicina|form:fluid-oral",
+      "cfmId": "CFM-002087",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|30ml",
+      "canonicalName": "Azitromicina 200mg/5ml Polvo Solución Oral 30ml",
+      "laboratory": "Azitromicina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azitromicina 200mg/5ml Polvo Solución Oral 30ml",
+          "channels": {
+            "store": 8599,
+            "online": 7567,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7567
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fazitromicina-200mg-5ml-polvo-solucion-oral-30ml%3Fdefault_sku%3D2636136&cfmId=CFM-002089",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/81436/small/2636136.jpeg?1665766644",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 7567,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/81436/small/2636136.jpeg?1665766644",
+      "presentationKey": "azitromicina|30ml|bio:unknown|brand:azitromicina|form:fluid-oral",
+      "cfmId": "CFM-002089",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|30ml",
+      "canonicalName": "Trex forte azitromicina 400mg/5ml susp Oral 30ml Cenabast DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Trex forte azitromicina 400mg/5ml susp Oral 30ml Cenabast DESCUENTO",
+          "channels": {
+            "store": 10800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10800
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=trex%7C30ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftrex-forte-azitromicina-400mg-5ml-suspension-oral-30ml-cenabast-descuento%2F&cfmId=CFM-001606",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/07/trex.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Trex Forte Azitromicina 400 mg / 5 mL Suspensión Oral con Solvente 30 mL",
+          "channels": {
+            "store": 25290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=trex%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftrex-forte-azitromicina-400-mg-5-ml-suspension-oral-con-solvente-30-ml%2F266311.html&cfmId=CFM-001606",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa40487e6/images/large/266311-trex-forte-azitromicina-suspension-400-mg5ml-30-ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 10800,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/07/trex.jpg",
+      "presentationKey": "trex|30ml|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-001606",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trexoral|30ml",
+      "canonicalName": "Trex Forte 400 mg / 5ml solución oral 30 ml. (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Trex Forte 400 mg / 5ml solución oral 30 ml. (Cenabast)",
+          "channels": {
+            "store": 10990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=trexoral%7C30ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Ftrex-forte-400-mg-5ml-solucion-oral-30-ml-cenabast&cfmId=CFM-002381",
+          "imageUrl": "https://farmacia.araucomed.com/12377-home_default/trex-forte-400-mg-5ml-solucion-oral-30-ml-cenabast.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 10990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12377-home_default/trex-forte-400-mg-5ml-solucion-oral-30-ml-cenabast.jpg",
+      "presentationKey": "trexoral|30ml|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002381",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trexoral|15ml|15",
+      "canonicalName": "Trex 200 mg/5 mL x 15 mL Polvo Para Suspensión Oral Con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Trex 200 mg/5 mL x 15 mL Polvo Para Suspensión Oral Con Solvente",
+          "channels": {
+            "store": 15189,
+            "online": null,
+            "cmr": 13402,
+            "sbpay": null,
+            "effective": 13402
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=trexoral%7C15ml%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftrex-200-mg-5-ml-x-15-ml-polvo-para-suspension-oral-con-solvente-9868.html&cfmId=CFM-002396",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0c6d143a/images/products/9868/9868.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 13402,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0c6d143a/images/products/9868/9868.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "trexoral|15ml|15|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002396",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trex|15ml",
+      "canonicalName": "Trex Azitromicina 200mg/5ml Suspensión Oral 15ml",
+      "laboratory": "Trex",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Trex Azitromicina 200mg/5ml Suspensión Oral 15ml",
+          "channels": {
+            "store": 17599,
+            "online": 15487,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15487
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=trex%7C15ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftrex-azitromicina-200mg-5ml-suspension-oral-15ml%3Fdefault_sku%3D2972102&cfmId=CFM-002390",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149877/small/2972102.jpg?1751032462",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 15487,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149877/small/2972102.jpg?1751032462",
+      "presentationKey": "trex|15ml|bio:unknown|brand:trex|var:azitromicina|form:fluid-oral",
+      "cfmId": "CFM-002390",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trexoral|30ml|30",
+      "canonicalName": "Trex 200mg/5ml suspensión oral x 30 ml.",
+      "laboratory": "Saval",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Trex 200mg/5ml suspensión oral x 30 ml.",
+          "channels": {
+            "store": 15990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=trexoral%7C30ml%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Ftrex-200mg-5ml-solucion-oral-30ml&cfmId=CFM-002387",
+          "imageUrl": "https://farmacia.araucomed.com/1185-home_default/trex-200mg-5ml-solucion-oral-30ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 15990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1185-home_default/trex-200mg-5ml-solucion-oral-30ml.jpg",
+      "presentationKey": "trexoral|30ml|30|bio:unknown|brand:saval|form:fluid-oral",
+      "cfmId": "CFM-002387",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trex|15ml",
+      "canonicalName": "Trex Azitromicina 200 mg Suspensión 15 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Trex Azitromicina 200 mg Suspensión 15 mL",
+          "channels": {
+            "store": 16990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=trex%7C15ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftrex-azitromicina-200-mg-suspension-15-ml%2F6225.html&cfmId=CFM-002390",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw256563e5/images/large/6225-trex-azitromicina-200-mg-suspension-15-ml-.jpg.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 16990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw256563e5/images/large/6225-trex-azitromicina-200-mg-suspension-15-ml-.jpg.jpg",
+      "presentationKey": "trex|15ml|bio:unknown|brand:unknown|var:azitromicina|form:fluid-oral",
+      "cfmId": "CFM-002390",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|30ml",
+      "canonicalName": "Trex Azitromicina 200 mg Suspensión 30 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Trex Azitromicina 200mg suspensión 30ml DESCUENTO",
+          "channels": {
+            "store": 17990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=trex%7C30ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftrex-azitromicina-200mg-suspension-30ml-descuento%2F&cfmId=CFM-001606",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/12/trex.png",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Trex Azitromicina 200 mg Suspensión 30 mL",
+          "channels": {
+            "store": 28290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=trex%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftrex-azitromicina-200-mg-suspension-30-ml%2F6244.html&cfmId=CFM-001606",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw85b208af/images/large/6244-trex-suspension-azitromicina-200-mg-30-ml.jpg.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 17990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw85b208af/images/large/6244-trex-suspension-azitromicina-200-mg-30-ml.jpg.jpg",
+      "presentationKey": "trex|30ml|bio:unknown|brand:unknown|var:azitromicina|form:fluid-oral",
+      "cfmId": "CFM-001606",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|30ml",
+      "canonicalName": "Trex (azitromicina) 200mg/5ml Jarabe 30ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Trex (azitromicina) 200mg/5ml Jarabe 30ml",
+          "channels": {
+            "store": 18690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=trex%7C30ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20394%26d_%3D1&cfmId=CFM-001606",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060409248.jpg?v=6a94fa7def983",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 18690,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060409248.jpg?v=6a94fa7def983",
+      "presentationKey": "trex|30ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001606",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitrom|20ml",
+      "canonicalName": "Azitrom Forte Azitromicina 400mg/5ml Solución Oral 20ml",
+      "laboratory": "Azitrom Forte",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azitrom Forte Azitromicina 400mg/5ml Solución Oral 20ml",
+          "channels": {
+            "store": 24699,
+            "online": 19265,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19265
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azitrom%7C20ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchile-azitrom-forte-azitromicina-400mg-5ml-solucion-oral-20ml%3Fdefault_sku%3D439248&cfmId=CFM-002383",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27781/small/439248.jpg?1641479712",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 19265,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27781/small/439248.jpg?1641479712",
+      "presentationKey": "azitrom|20ml|bio:unknown|brand:azitromforte|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002383",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trexoral|20ml|20",
+      "canonicalName": "Trex Forte 400 mg/5 mL x 20 mL Polvo Para Suspensión Oral Con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Trex Forte 400 mg/5 mL x 20 mL Polvo Para Suspensión Oral Con Solvente",
+          "channels": {
+            "store": 21938,
+            "online": null,
+            "cmr": 19357,
+            "sbpay": null,
+            "effective": 19357
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=trexoral%7C20ml%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftrex-forte-400-mg-5-ml-x-20-ml-polvo-para-suspension-oral-con-solvente-39193.html&cfmId=CFM-002398",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2e0c2d67/images/products/39193/39193.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 19357,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2e0c2d67/images/products/39193/39193.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "trexoral|20ml|20|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002398",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trexoral|30ml|30",
+      "canonicalName": "Trex Forte 400 mg/5 mL x 30 mL Polvo para Suspensión Oral con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Trex Forte 400 mg/5 mL x 30 mL Polvo para Suspensión Oral con Solvente",
+          "channels": {
+            "store": 22108,
+            "online": null,
+            "cmr": 19507,
+            "sbpay": null,
+            "effective": 19507
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=trexoral%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftrex-forte-400-mg-5-ml-x-30-ml-polvo-para-suspension-oral-con-solvente-72198.html&cfmId=CFM-002387",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa8ef8f75/images/products/72198/72198.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 19507,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa8ef8f75/images/products/72198/72198.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "trexoral|30ml|30|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002387",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "azitrom|30ml",
+      "canonicalName": "Azitrom Forte Azitromicina 400mg/5ml Solución Oral 30ml",
+      "laboratory": "Azitrom Forte",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azitrom Forte Azitromicina 400mg/5ml Solución Oral 30ml",
+          "channels": {
+            "store": 28899,
+            "online": 20229,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 20229
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azitrom%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchile-azitrom-forte-azitromicina-400mg-5ml-solucion-oral-30ml%3Fdefault_sku%3D434032&cfmId=CFM-002382",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27642/small/434032.jpg?1641479725",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 20229,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27642/small/434032.jpg?1641479725",
+      "presentationKey": "azitrom|30ml|bio:unknown|brand:azitromforte|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002382",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|20ml",
+      "canonicalName": "Trex Forte Azitromicina 400mg/5ml Suspensión Oral 20ml",
+      "laboratory": "Trex Forte",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Trex Forte Azitromicina 400mg/5ml Suspensión Oral 20ml",
+          "channels": {
+            "store": 25199,
+            "online": 22175,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22175
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=trex%7C20ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftrex-forte-azitromicina-400mg-5ml-suspension-oral-20ml%3Fdefault_sku%3D2971254&cfmId=CFM-001607",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149819/small/2971254.jpg?1751031364",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 22175,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149819/small/2971254.jpg?1751031364",
+      "presentationKey": "trex|20ml|bio:unknown|brand:trexforte|var:forte|form:fluid-oral",
+      "cfmId": "CFM-001607",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|30ml",
+      "canonicalName": "Trex Forte Azitromicina 400mg/5ml Suspensión Oral 30ml",
+      "laboratory": "Trex Forte",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Trex Forte Azitromicina 400mg/5ml Suspensión Oral 30ml",
+          "channels": {
+            "store": 25299,
+            "online": 22263,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22263
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=trex%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftrex-forte-azitromicina-400mg-5ml-suspension-oral-30ml%3Fdefault_sku%3D2971661&cfmId=CFM-001606",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149839/small/2971661.jpg?1751031743",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 22263,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149839/small/2971661.jpg?1751031743",
+      "presentationKey": "trex|30ml|bio:unknown|brand:trexforte|var:forte|form:fluid-oral",
+      "cfmId": "CFM-001606",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trexoral|30ml|30",
+      "canonicalName": "Trex 200 mg/5 ml x 30 ml Polvo para Suspensión Oral con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Trex 200 mg/5 ml x 30 ml Polvo para Suspensión Oral con Solvente",
+          "channels": {
+            "store": 25363,
+            "online": null,
+            "cmr": 22379,
+            "sbpay": null,
+            "effective": 22379
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=trexoral%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftrex-200-mg-5-ml-x-30-ml-polvo-para-suspension-oral-con-solvente-11479.html&cfmId=CFM-002387",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4fefa551/images/products/11479/11479.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 22379,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4fefa551/images/products/11479/11479.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "trexoral|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002387",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trex|5ml",
+      "canonicalName": "Trex Forte Jarabe 400mg/5ml...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Trex Forte Jarabe 400mg/5ml...",
+          "channels": {
+            "store": 22990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=trex%7C5ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25398-trex-forte-jarabe-x-30ml.html&cfmId=CFM-002380",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:52:30.380Z"
+        }
+      ],
+      "bestPrice": 22990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "trex|5ml|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002380",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "azitrom|30ml",
+      "canonicalName": "Azitrom Azitromicina 200mg/5ml Solución Oral 30ml",
+      "laboratory": "Azitrom",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azitrom Azitromicina 200mg/5ml Solución Oral 30ml",
+          "channels": {
+            "store": 33799,
+            "online": 23659,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23659
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azitrom%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchile-azitrom-azitromicina-200mg-5ml-solucion-oral-30ml%3Fdefault_sku%3D430345&cfmId=CFM-002382",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27546/small/430345.jpg?1641479730",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 23659,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27546/small/430345.jpg?1641479730",
+      "presentationKey": "azitrom|30ml|bio:unknown|brand:azitrom|var:azitromicina|form:fluid-oral",
+      "cfmId": "CFM-002382",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|20ml",
+      "canonicalName": "Trex Forte Azitromicina 400 mg / 5 mL Suspensión 20 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Trex Forte Azitromicina 400 mg / 5 mL Suspensión 20 mL",
+          "channels": {
+            "store": 25190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=trex%7C20ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftrex-forte-azitromicina-400-mg-5-ml-suspension-20-ml%2F6379.html&cfmId=CFM-001607",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw755a2be4/images/large/6379-trex-forte-azitromicina-400-mg-5-ml-suspension-20-ml.jpg.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 25190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw755a2be4/images/large/6379-trex-forte-azitromicina-400-mg-5-ml-suspension-20-ml.jpg.jpg",
+      "presentationKey": "trex|20ml|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-001607",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|30ml",
+      "canonicalName": "Trex Azitromicina 200mg/5ml Suspensión Oral 30ml",
+      "laboratory": "Trex",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Trex Azitromicina 200mg/5ml Suspensión Oral 30ml",
+          "channels": {
+            "store": 28999,
+            "online": 25519,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25519
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=trex%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftrex-azitromicina-200mg-5ml-suspension-oral-30ml%3Fdefault_sku%3D2972105&cfmId=CFM-001606",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149883/small/2972105.jpg?1751032603",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 25519,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149883/small/2972105.jpg?1751032603",
+      "presentationKey": "trex|30ml|bio:unknown|brand:trex|var:azitromicina|form:fluid-oral",
+      "cfmId": "CFM-001606",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitrom|20ml",
+      "canonicalName": "Azitrom Forte (azitromicina) 400mg/5ml Suspensión Oral 20ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Azitrom Forte (azitromicina) 400mg/5ml Suspensión Oral 20ml",
+          "channels": {
+            "store": 27090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27090
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=azitrom%7C20ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20766%26d_%3D1&cfmId=CFM-002383",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007692481.jpg?v=6a94fa7defaf9",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 27090,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007692481.jpg?v=6a94fa7defaf9",
+      "presentationKey": "azitrom|20ml|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002383",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitrom|5ml",
+      "canonicalName": "Azitrom Azitromicina 200 mg Suspensión 5 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azitrom Azitromicina 200 mg Suspensión 5 mL",
+          "channels": {
+            "store": 33340,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 33340
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azitrom%7C5ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazitrom-azitromicina-200-mg-suspension-5-ml%2F1302.html&cfmId=CFM-002077",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3b4e4cd4/images/large/1302-azitrom-azitromicina-200-mg-suspension-5-ml-.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 33340,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3b4e4cd4/images/large/1302-azitrom-azitromicina-200-mg-suspension-5-ml-.jpg",
+      "presentationKey": "azitrom|5ml|bio:unknown|brand:unknown|var:azitromicina|form:fluid-oral",
+      "cfmId": "CFM-002077",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|6",
+      "canonicalName": "Azitromicina 500 mg x 6...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Azitromicina 500 mg x 6...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24597-azitromicina-500-mg-x-6.html&cfmId=CFM-000808",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:52:30.380Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "azitromicina|500mg|6|bio:unknown|brand:unknown",
+      "cfmId": "CFM-000808",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|5ml",
+      "canonicalName": "Azitromicina 200 mg/5 mL...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Azitromicina 200 mg/5 mL...",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=azitromicina%7C5ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24596-azitromicina-200-mg-jarabe-x-15-ml.html&cfmId=CFM-002378",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "azitromicina|5ml|bio:unknown|brand:unknown",
+      "cfmId": "CFM-002378",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|15ml",
+      "canonicalName": "Azitromicina 200mg/5ml 15 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Azitromicina 200mg/5ml 15 ml",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=azitromicina%7C15ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102877-azitromicina-200-mg-5ml-jarabe-x-15-ml.html&cfmId=CFM-002087",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:52:30.380Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "azitromicina|15ml|bio:unknown|brand:unknown",
+      "cfmId": "CFM-002087",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|30ml",
+      "canonicalName": "Azitromicina 200 mg/ 5ml 30 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Azitromicina 200 mg/ 5ml 30 ml",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=azitromicina%7C30ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102878-azitromicina-200-mg-5ml-30-ml.html&cfmId=CFM-002089",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "azitromicina|30ml|bio:unknown|brand:unknown",
+      "cfmId": "CFM-002089",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|5ml",
+      "canonicalName": "Azitromicina 200mg/5ml 30...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Azitromicina 200mg/5ml 30...",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=azitromicina%7C5ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104558-azitromicina-200mg-5ml-30-ml-pharmatech.html&cfmId=CFM-002378",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:52:30.380Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "azitromicina|5ml|bio:unknown|brand:pharmatech",
+      "cfmId": "CFM-002378",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitrom|20ml",
+      "canonicalName": "Azitrom Azitromicina 400 mg / 5 mL 20 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azitrom Azitromicina 400 mg / 5 mL 20 mL",
+          "channels": {
+            "store": 24440,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24440
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azitrom%7C20ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazitrom-azitromicina-400-mg-5-ml-20-ml%2F254570.html&cfmId=CFM-002383",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw67c381b7/images/large/254570-azitrom-azitromicina-400-mg-5-ml-20-ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 24440,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw67c381b7/images/large/254570-azitrom-azitromicina-400-mg-5-ml-20-ml.jpg",
+      "presentationKey": "azitrom|20ml|bio:unknown|brand:unknown|var:azitromicina",
+      "cfmId": "CFM-002383",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azydrop",
+      "canonicalName": "Azydrop Azitromicina Dihidrato 0,25 gr / Unidosis 6 Unidosis",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azydrop Azitromicina Dihidrato 0,25 gr / Unidosis 6 Unidosis",
+          "channels": {
+            "store": 36090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 36090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azydrop&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazydrop-azitromicina-dihidrato-0-25-gr-unidosis-6-unidosis%2F267221.html&cfmId=CFM-002397",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5931e2bd/images/large/267221-azydrop-azitromicina-dihidrato-025-gr--unidosis-6-unidosis.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 36090,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5931e2bd/images/large/267221-azydrop-azitromicina-dihidrato-025-gr--unidosis-6-unidosis.jpg",
+      "presentationKey": "azydrop|bio:unknown|brand:unknown|combo:unidosis",
+      "cfmId": "CFM-002397",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|3",
+      "canonicalName": "Azitromicina 500 mg x 3 comprimidos",
+      "laboratory": "ASCEND",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Azitromicina 500 mg x 3 comprimidos",
+          "channels": {
+            "store": 1395,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1395
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=azitromicina%7C500mg%7C3&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fazitromicina-500-mg-x-3-comp%3F_pos%3D4%26_psq%3Dazitromicina%26_psid%3D08382418e%26_ss%3De&cfmId=CFM-000861",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/azitromicina-500-mg-x-3-comp-ascend-606622.jpg?v=1692989564",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 1395,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/azitromicina-500-mg-x-3-comp-ascend-606622.jpg?v=1692989564",
+      "presentationKey": "azitromicina|500mg|3|bio:unknown|brand:ascend|form:solid-oral",
+      "cfmId": "CFM-000861",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|3",
+      "canonicalName": "Azitromicina 500 mg 3 comprimidos recubiertos",
+      "laboratory": "ASCEND",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Azitromicina 500 mg 3 comprimidos recubiertos",
+          "channels": {
+            "store": 1400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=azitromicina%7C500mg%7C3&url=https%3A%2F%2Fwww.drsimi.cl%2Fazitromicina-500-mg-3-comprimidos-recubiertos%2Fp&cfmId=CFM-000861",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155472/595-1.jpg?v=638911264645330000",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 1400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155472/595-1.jpg?v=638911264645330000",
+      "presentationKey": "azitromicina|500mg|3|bio:true|brand:ascend|form:solid-oral",
+      "cfmId": "CFM-000861",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|6",
+      "canonicalName": "Azitromicina 500mg x6com. (Ascend)",
+      "laboratory": "Ascend",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitromicina 500mg x6com. (Ascend)",
+          "channels": {
+            "store": 1590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1590
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitromicina-500mg-x6com-ascend&cfmId=CFM-000808",
+          "imageUrl": "https://farmacia.araucomed.com/9123-home_default/azitromicina-500mg-x6com-ascend.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Azitromicina 500 mg x 6 comprimidos \"Ley Cenabast\"  (Ascend)",
+          "channels": {
+            "store": 1795,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1795
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fazitromicina-500-mg-x-6-comprimidos-ley-cenabast-ascend%3F_pos%3D1%26_psq%3Dazitromicina%26_psid%3D08382418e%26_ss%3De&cfmId=CFM-000808",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/azitromicina-500-mg-x-6-comprimidos-ley-cenabast-ascend-ascend-718653.jpg?v=1719881645",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 1590,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9123-home_default/azitromicina-500mg-x6com-ascend.jpg",
+      "presentationKey": "azitromicina|500mg|6|bio:unknown|brand:ascend|form:solid-oral",
+      "cfmId": "CFM-000808",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|6",
+      "canonicalName": "Azitromicina 500 mg x 6 comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Azitromicina 500 mg x 6 comprimidos",
+          "channels": {
+            "store": 1930,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1930
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fazitromicina-500-mg-x-6-comprimidos-2%2F&cfmId=CFM-000808",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/azitromicina-500mg-x-6.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Azitromicina 500mg 6 Comprimidos (a)",
+          "channels": {
+            "store": 3190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3190
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D2385%26d_%3D1&cfmId=CFM-000808",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800063001647.jpg?v=6a94fa7defbad",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azitromicina 500 mg caja x 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 3770,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3770
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazitromicina-500-mg-caja-x-6-comprimidos-recubiertos-96810.html&cfmId=CFM-000808",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd82dd763/images/products/96810/96810.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 1930,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/azitromicina-500mg-x-6.jpg",
+      "presentationKey": "azitromicina|500mg|6|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000808",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|6",
+      "canonicalName": "Azitromicina 500 x 6 comprimidos recubiertos (Ascend)",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Azitromicina 500 x 6 comprimidos recubiertos (Ascend)",
+          "channels": {
+            "store": 1930,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1930
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=azitromicina%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fazitromicina-500-x-6-ascend%2F&cfmId=CFM-002388",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/azitromicina-500-x-6.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 1930,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/azitromicina-500-x-6.jpg",
+      "presentationKey": "azitromicina|6|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002388",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|6",
+      "canonicalName": "Azitromicina 500 mg x 6 comprimidos. (Mintlab)",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitromicina 500 mg x 6 comprimidos. (Mintlab)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitromicina-500mg-x6com-mintlab&cfmId=CFM-000808",
+          "imageUrl": "https://farmacia.araucomed.com/3739-home_default/azitromicina-500mg-x6com-mintlab.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3739-home_default/azitromicina-500mg-x6com-mintlab.jpg",
+      "presentationKey": "azitromicina|500mg|6|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-000808",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|6",
+      "canonicalName": "Azitromicina 500mg X 6 comprimidos recubiertos",
+      "laboratory": "OPKO",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Azitromicina 500mg X 6 comprimidos recubiertos",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fazitromicina-500mg-x-6-comprimidos-recubiertos-1%3F_pos%3D3%26_psq%3Dazitromicina%26_psid%3D08382418e%26_ss%3De&cfmId=CFM-000808",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/azitromicina-500mg-x-6-comprimidos-recubiertos-opko-722532.jpg?v=1787243665",
+          "fetchedAt": "2026-08-31T03:52:30.379Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/azitromicina-500mg-x-6-comprimidos-recubiertos-opko-722532.jpg?v=1787243665",
+      "presentationKey": "azitromicina|500mg|6|bio:unknown|brand:opko|form:solid-oral",
+      "cfmId": "CFM-000808",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|3",
+      "canonicalName": "Azitromicina 500mg Caja 3 Comp. Recubiertos ASCEND",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azitromicina 500mg Caja 3 Comp. Recubiertos ASCEND",
+          "channels": {
+            "store": 2195,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2195
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azitromicina%7C500mg%7C3&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazitromicina-500mg-caja-3-comp.-recubiertos-ascend-26995.html&cfmId=CFM-000861",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0087c9b5/images/products/26995/26995.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 2195,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0087c9b5/images/products/26995/26995.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "azitromicina|500mg|3|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000861",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|6",
+      "canonicalName": "Azitromicina 500 mg x 6 comprimidos. (Chile)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitromicina 500 mg x 6 comprimidos. (Chile)",
+          "channels": {
+            "store": 2200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2200
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitromicina-500mg-x6com-chile&cfmId=CFM-000808",
+          "imageUrl": "https://farmacia.araucomed.com/1224-home_default/azitromicina-500mg-x6com-chile.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 2200,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/1224-home_default/azitromicina-500mg-x6com-chile.jpg",
+      "presentationKey": "azitromicina|500mg|6|bio:unknown|brand:chile|form:solid-oral",
+      "cfmId": "CFM-000808",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azithral|500mg|6",
+      "canonicalName": "Azithral Azitromicina 500 mg 6 comprimidos recubiertos",
+      "laboratory": "ASCEND",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Azithral Azitromicina 500 mg 6 comprimidos recubiertos",
+          "channels": {
+            "store": 2400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=azithral%7C500mg%7C6&url=https%3A%2F%2Fwww.drsimi.cl%2Fazitromicina-500-mg-6-comprimidos-recubiertos%2Fp&cfmId=CFM-000873",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160149/Azitrhal---CH7121-2.png?v=639074524423430000",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 2400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160149/Azitrhal---CH7121-2.png?v=639074524423430000",
+      "presentationKey": "azithral|500mg|6|bio:true|brand:ascend|var:azitromicina|form:solid-oral",
+      "cfmId": "CFM-000873",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|3",
+      "canonicalName": "Azitromicina 500 mg 3 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azitromicina 500 mg 3 Comprimidos Recubiertos",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azitromicina%7C500mg%7C3&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazitromicina-500-mg-3-comprimidos-recubiertos%2F274327.html&cfmId=CFM-000861",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw30977485/images/large/274327-azitromicina-500-mg-3-comprimidos-recubiertos-.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.373Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw30977485/images/large/274327-azitromicina-500-mg-3-comprimidos-recubiertos-.jpg",
+      "presentationKey": "azitromicina|500mg|3|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000861",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|6",
+      "canonicalName": "Azitromicina 500 mg 6 comprimidos recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azitromicina 500 mg 6 comprimidos recubiertos",
+          "channels": {
+            "store": 4190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazitromicina-500-mg-6-comprimidos-recubiertos%2F274326.html&cfmId=CFM-000808",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5bef5648/images/large/274326.1.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.373Z"
+        }
+      ],
+      "bestPrice": 4190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5bef5648/images/large/274326.1.jpg",
+      "presentationKey": "azitromicina|500mg|6|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000808",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|3",
+      "canonicalName": "Azitromicina (B) 500mg 3 Comprimidos Recubiertos",
+      "laboratory": "Azitromicina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azitromicina (B) 500mg 3 Comprimidos Recubiertos",
+          "channels": {
+            "store": 6499,
+            "online": 5719,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5719
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azitromicina%7C500mg%7C3&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fazitromicina-b-500mg-3-comprimidos-recubiertos%3Fdefault_sku%3D435543&cfmId=CFM-000861",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28708/small/435543.jpg?1641477867",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 5719,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28708/small/435543.jpg?1641477867",
+      "presentationKey": "azitromicina|500mg|3|bio:unknown|brand:azitromicina|form:solid-oral",
+      "cfmId": "CFM-000861",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitromicina|500mg|6",
+      "canonicalName": "Azitromicina (B) 500mg 6 Comprimidos Recubiertos",
+      "laboratory": "Azitromicina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azitromicina (B) 500mg 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 7699,
+            "online": 6775,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6775
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azitromicina%7C500mg%7C6&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchile-azitromicina-b-500mg-6-comprimidos-recubiertos%3Fdefault_sku%3D436125&cfmId=CFM-000808",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27713/small/436125.jpg?1641479717",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 6775,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27713/small/436125.jpg?1641479717",
+      "presentationKey": "azitromicina|500mg|6|bio:unknown|brand:azitromicina|form:solid-oral",
+      "cfmId": "CFM-000808",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azimit|500mg|6",
+      "canonicalName": "Azimit 500 mg x 6 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azimit 500 mg x 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 9999,
+            "online": null,
+            "cmr": 7499,
+            "sbpay": null,
+            "effective": 7499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azimit%7C500mg%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazimit-500-mg-x-6-comprimidos-recubiertos-63960.html&cfmId=CFM-002393",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2a5387de/images/products/63960/63960.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 7499,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2a5387de/images/products/63960/63960.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "azimit|500mg|6|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002393",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "azithral|500mg|6",
+      "canonicalName": "Azithral 500 mg x 6 comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azithral 500 mg x 6 comprimidos",
+          "channels": {
+            "store": 13999,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azithral%7C500mg%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazithral-500-mg-x-6-comprimidos-97349.html&cfmId=CFM-000873",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw27ae494c/images/products/97349/97349.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.377Z"
+        }
+      ],
+      "bestPrice": 13999,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw27ae494c/images/products/97349/97349.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "azithral|500mg|6|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000873",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trex|500mg|3",
+      "canonicalName": "Trex 500 mg x 3 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Trex 500 mg x 3 Comprimidos Recubiertos",
+          "channels": {
+            "store": 16183,
+            "online": null,
+            "cmr": 14279,
+            "sbpay": null,
+            "effective": 14279
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=trex%7C500mg%7C3&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftrex-500-mg-x-3-comprimidos-recubiertos-9855.html&cfmId=CFM-002394",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9fe1bde1/images/products/9855/9855.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 14279,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9fe1bde1/images/products/9855/9855.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "trex|500mg|3|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002394",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trex|500mg|3",
+      "canonicalName": "Trex (B) Azitromicina 500mg 3 Comprimidos Recubiertos",
+      "laboratory": "Trex",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Trex (B) Azitromicina 500mg 3 Comprimidos Recubiertos",
+          "channels": {
+            "store": 18599,
+            "online": 16367,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16367
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=trex%7C500mg%7C3&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftrex-b-azitromicina-500mg-3-comprimidos-recubiertos%3Fdefault_sku%3D2972100&cfmId=CFM-002394",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149869/small/2972100.jpg?1751032337",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 16367,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149869/small/2972100.jpg?1751032337",
+      "presentationKey": "trex|500mg|3|bio:unknown|brand:trex|var:azitromicina|form:solid-oral",
+      "cfmId": "CFM-002394",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azithral|500mg|6",
+      "canonicalName": "Azithral 500 Azitromicina 500 mg 6 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azithral 500 Azitromicina 500 mg 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 17089,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17089
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azithral%7C500mg%7C6&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazithral-500-azitromicina-500-mg-6-comprimidos-recubiertos%2F297222.html&cfmId=CFM-000873",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw828fa822/images/large/297222-azithral-500-azitromicina-500-mg-6-comprimidos-recubiertos.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.373Z"
+        }
+      ],
+      "bestPrice": 17089,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw828fa822/images/large/297222-azithral-500-azitromicina-500-mg-6-comprimidos-recubiertos.jpg",
+      "presentationKey": "azithral|500mg|6|bio:unknown|brand:unknown|var:azitromicina|form:solid-oral",
+      "cfmId": "CFM-000873",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|500mg|3",
+      "canonicalName": "Trex Azitromicina 500 mg 3 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Trex Azitromicina 500 mg 3 Comprimidos",
+          "channels": {
+            "store": 18090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=trex%7C500mg%7C3&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftrex-azitromicina-500-mg-3-comprimidos%2F6224.html&cfmId=CFM-002394",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7c49ed2e/images/large/6224-trex-azitromicina-500-mg-3-comprimidos-.jpg.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.373Z"
+        }
+      ],
+      "bestPrice": 18090,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7c49ed2e/images/large/6224-trex-azitromicina-500-mg-3-comprimidos-.jpg.jpg",
+      "presentationKey": "trex|500mg|3|bio:unknown|brand:unknown|var:azitromicina|form:solid-oral",
+      "cfmId": "CFM-002394",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitrom|500mg|6",
+      "canonicalName": "Azitrom (B) Azitromicina 500mg 6 Comprimidos Recubiertos",
+      "laboratory": "Azitrom",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azitrom (B) Azitromicina 500mg 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 25699,
+            "online": 20045,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 20045
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azitrom%7C500mg%7C6&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchile-azitrom-b-azitromicina-500mg-6-comprimidos-recubiertos%3Fdefault_sku%3D438500&cfmId=CFM-002385",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27765/small/438500.jpg?1641479713",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 20045,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27765/small/438500.jpg?1641479713",
+      "presentationKey": "azitrom|500mg|6|bio:unknown|brand:azitrom|var:azitromicina|form:solid-oral",
+      "cfmId": "CFM-002385",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trex|500mg|6",
+      "canonicalName": "Trex 500 mg x 6 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Trex 500 mg x 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 23000,
+            "online": null,
+            "cmr": 20294,
+            "sbpay": null,
+            "effective": 20294
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=trex%7C500mg%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftrex-500-mg-x-6-comprimidos-recubiertos-18592.html&cfmId=CFM-002384",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw887ab726/images/products/18592/18592.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 20294,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw887ab726/images/products/18592/18592.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "trex|500mg|6|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002384",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "azitrom|500mg|6",
+      "canonicalName": "Azitrom Azitromicina 500 mg 6 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azitrom Azitromicina 500 mg 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 21190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azitrom%7C500mg%7C6&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazitrom-azitromicina-500-mg-6-comprimidos-recubiertos%2F255084.html&cfmId=CFM-002385",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw085f4e4c/images/large/255084-azitrom-azitromicina-500-mg-6-comprimidos-recubiertos.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 21190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw085f4e4c/images/large/255084-azitrom-azitromicina-500-mg-6-comprimidos-recubiertos.jpg",
+      "presentationKey": "azitrom|500mg|6|bio:unknown|brand:unknown|var:azitromicina|form:solid-oral",
+      "cfmId": "CFM-002385",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "zotaban|15mg|28",
+      "canonicalName": "Zotaban 15 mg 28 comprimidos recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Zotaban 15 mg 28 comprimidos recubiertos",
+          "channels": {
+            "store": 22990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=zotaban%7C15mg%7C28&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fzotaban-15-mg-28-comprimidos-recubiertos-96846.html&cfmId=CFM-002389",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwaf23b2ee/images/products/96846/96846.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 22990,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwaf23b2ee/images/products/96846/96846.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "zotaban|15mg|28|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002389",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trex|500mg|6",
+      "canonicalName": "Trex 500 mg x 6 comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Trex 500 mg x 6 comp",
+          "channels": {
+            "store": 23990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=trex%7C500mg%7C6&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104272-trex-500-mg-x-6-comp.html&cfmId=CFM-002384",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:52:30.380Z"
+        }
+      ],
+      "bestPrice": 23990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "trex|500mg|6|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002384",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "azydrop",
+      "canonicalName": "Azydrop 1,43% Solución Oftálmica Caja 6 viales",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azydrop 1,43% Solución Oftálmica Caja 6 viales",
+          "channels": {
+            "store": 28585,
+            "online": null,
+            "cmr": 25222,
+            "sbpay": null,
+            "effective": 25222
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azydrop&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazydrop-1-43-solucion-oftalmica-caja-6-viales-88717.html&cfmId=CFM-002397",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6f6cdb90/images/products/88717/88717.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 25222,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6f6cdb90/images/products/88717/88717.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "azydrop|bio:unknown|brand:unknown|form:injectable",
+      "cfmId": "CFM-002397",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trex|500mg|6",
+      "canonicalName": "Trex (B) Azitromicina 500mg 6 Comprimidos Recubiertos",
+      "laboratory": "Trex",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Trex (B) Azitromicina 500mg 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 30199,
+            "online": 26575,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 26575
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=trex%7C500mg%7C6&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftrex-b-azitromicina-500mg-6-comprimidos-recubiertos%3Fdefault_sku%3D2971009&cfmId=CFM-002384",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/139205/small/2971009_1.jpg?1743687192",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 26575,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/139205/small/2971009_1.jpg?1743687192",
+      "presentationKey": "trex|500mg|6|bio:unknown|brand:trex|var:azitromicina|form:solid-oral",
+      "cfmId": "CFM-002384",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "erylik|30000mg",
+      "canonicalName": "Erylik Eritromicina / Tretinoina Gel 30g",
+      "laboratory": "Erylik",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Erylik Eritromicina / Tretinoina Gel 30g",
+          "channels": {
+            "store": 31899,
+            "online": 28071,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28071
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=erylik%7C30000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ferylik-eritromicina-tretinoina-gel-30g%3Fdefault_sku%3D852010&cfmId=CFM-002391",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27817/small/852010.jpg?1641479705",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 28071,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27817/small/852010.jpg?1641479705",
+      "presentationKey": "erylik|30000mg|bio:unknown|brand:erylik|combo:tretinoina|form:topical",
+      "cfmId": "CFM-002391",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trex|500mg|6",
+      "canonicalName": "Trex Comprimidos Azitromicina 500 mg 6 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Trex Comprimidos Azitromicina 500 mg 6 Comprimidos",
+          "channels": {
+            "store": 28390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=trex%7C500mg%7C6&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftrex-comprimidos-azitromicina-500-mg-6-comprimidos%2F6282.html&cfmId=CFM-002384",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf7714d73/images/large/6282-1.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 28390,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf7714d73/images/large/6282-1.jpg",
+      "presentationKey": "trex|500mg|6|bio:unknown|brand:unknown|var:azitromicina|form:solid-oral",
+      "cfmId": "CFM-002384",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azydrop",
+      "canonicalName": "Azydrop Azitromicina 1.45% Solución Oftálmica 6 Dosis",
+      "laboratory": "Azydrop",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Azydrop Azitromicina 1.45% Solución Oftálmica 6 Dosis",
+          "channels": {
+            "store": 32599,
+            "online": 28687,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28687
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=azydrop&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fazydrop%3Fdefault_sku%3D30348&cfmId=CFM-002397",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/26722/small/Azydrop.jpg?1641479776",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 28687,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/26722/small/Azydrop.jpg?1641479776",
+      "presentationKey": "azydrop|bio:unknown|brand:azydrop|var:azitromicina|form:ophthalmic",
+      "cfmId": "CFM-002397",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "azitrom|30ml",
+      "canonicalName": "Azitrom Forte Azitromicina 400 mg / 5 mL Suspensión 30 mL + Jeringa Dosificadora",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Azitrom Forte Azitromicina 400 mg / 5 mL Suspensión 30 mL + Jeringa Dosificadora",
+          "channels": {
+            "store": 28690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=azitrom%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fazitrom-forte-azitromicina-400-mg-5-ml-suspension-30-ml-jeringa-dosificadora%2F272415.html&cfmId=CFM-002382",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw89494a79/images/large/272415-azitrom-azitromicina-polvo-para-suspension-400-gr5ml-30-ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.374Z"
+        }
+      ],
+      "bestPrice": 28690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw89494a79/images/large/272415-azitrom-azitromicina-polvo-para-suspension-400-gr5ml-30-ml.jpg",
+      "presentationKey": "azitrom|30ml|bio:unknown|brand:unknown|var:forte|form:injectable",
+      "cfmId": "CFM-002382",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dermodan|30000mg",
+      "canonicalName": "Dermodan Plus Eritromicina / Tretinoina Gel Tópico 30g",
+      "laboratory": "Dermodan",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Dermodan Plus Eritromicina / Tretinoina Gel Tópico 30g",
+          "channels": {
+            "store": 38699,
+            "online": 34055,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 34055
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=dermodan%7C30000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdermodan-plus-eritromicina-tretinoina-gel-topico-30g%3Fdefault_sku%3D340019&cfmId=CFM-002392",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/80886/small/340019.1.jpg?1665677632",
+          "fetchedAt": "2026-08-31T03:52:30.375Z"
+        }
+      ],
+      "bestPrice": 34055,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/80886/small/340019.1.jpg?1665677632",
+      "presentationKey": "dermodan|30000mg|bio:unknown|brand:dermodan|combo:tretinoina|form:topical",
+      "cfmId": "CFM-002392",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "azitrom|30ml|30",
+      "canonicalName": "Azitrom Forte 400mg/5ml solucion oral x30ml (Cenabast)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitrom Forte 400mg/5ml solucion oral x30ml (Cenabast)",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitrom%7C30ml%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitrom-forte-400mg-5ml-solucion-oral-x30ml-cenaba&cfmId=CFM-002213",
+          "imageUrl": "https://farmacia.araucomed.com/8811-home_default/azitrom-forte-400mg-5ml-solucion-oral-x30ml-cenaba.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8811-home_default/azitrom-forte-400mg-5ml-solucion-oral-x30ml-cenaba.jpg",
+      "presentationKey": "azitrom|30ml|30|bio:unknown|brand:chile|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002213",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "azitrom|20ml|20",
+      "canonicalName": "Azitrom Forte 400 mg/5 mL x 20 mL Polvo para Suspensión Oral con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azitrom Forte 400 mg/5 mL x 20 mL Polvo para Suspensión Oral con Solvente",
+          "channels": {
+            "store": 20479,
+            "online": null,
+            "cmr": 19199,
+            "sbpay": null,
+            "effective": 19199
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azitrom%7C20ml%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazitrom-forte-400-mg-5-ml-x-20-ml-polvo-para-suspension-oral-con-solvente-49306.html&cfmId=CFM-002386",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe68660d6/images/products/49306/49306.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 19199,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe68660d6/images/products/49306/49306.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "azitrom|20ml|20|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002386",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "azitrom|30ml|30",
+      "canonicalName": "Azitrom Forte 400 mg/5 mL x 30 mL Polvo Para Suspensión Oral Con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azitrom Forte 400 mg/5 mL x 30 mL Polvo Para Suspensión Oral Con Solvente",
+          "channels": {
+            "store": 25329,
+            "online": null,
+            "cmr": 22349,
+            "sbpay": null,
+            "effective": 22349
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azitrom%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazitrom-forte-400-mg-5-ml-x-30-ml-polvo-para-suspension-oral-con-solvente-71290.html&cfmId=CFM-002213",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6a6b9c52/images/products/71290/71290.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 22349,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6a6b9c52/images/products/71290/71290.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "azitrom|30ml|30|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002213",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "azitrom|20ml|20",
+      "canonicalName": "Azitrom Forte 400mg/5ml solucion oral x 20 ml.",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitrom Forte 400mg/5ml solucion oral x 20 ml.",
+          "channels": {
+            "store": 23790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitrom%7C20ml%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitrom-forte-400mg-5ml-solucion-oral-x-20-ml-laboratorio-chile&cfmId=CFM-002386",
+          "imageUrl": "https://farmacia.araucomed.com/11597-home_default/azitrom-forte-400mg-5ml-solucion-oral-x-20-ml-laboratorio-chile.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        }
+      ],
+      "bestPrice": 23790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/11597-home_default/azitrom-forte-400mg-5ml-solucion-oral-x-20-ml-laboratorio-chile.jpg",
+      "presentationKey": "azitrom|20ml|20|bio:unknown|brand:chile|var:forte|form:fluid-oral",
+      "cfmId": "CFM-002386",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "azitrom|30ml|30",
+      "canonicalName": "Azitrom 200 mg/5 mL x 30 mL Polvo para Suspensión Oral con Solvente",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Azitrom 200 mg/5 mL x 30 mL Polvo para Suspensión Oral con Solvente",
+          "channels": {
+            "store": 27895,
+            "online": null,
+            "cmr": 26152,
+            "sbpay": null,
+            "effective": 26152
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=azitrom%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fazitrom-200-mg-5-ml-x-30-ml-polvo-para-suspension-oral-con-solvente-19095.html&cfmId=CFM-002213",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw3a1af7d0/images/products/19095/19095.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:52:30.376Z"
+        }
+      ],
+      "bestPrice": 26152,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw3a1af7d0/images/products/19095/19095.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "azitrom|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002213",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "azitrom|30ml",
+      "canonicalName": "Azitrom 200mg/5ml Suspensión Oral 30ml",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitrom 200mg/5ml Suspensión Oral 30ml",
+          "channels": {
+            "store": 29990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 29990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitrom%7C30ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fazitrom-200mg-5ml-suspension-oral-30ml&cfmId=CFM-002382",
+          "imageUrl": "https://farmacia.araucomed.com/9064-home_default/azitrom-200mg-5ml-suspension-oral-30ml.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        }
+      ],
+      "bestPrice": 29990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9064-home_default/azitrom-200mg-5ml-suspension-oral-30ml.jpg",
+      "presentationKey": "azitrom|30ml|bio:unknown|brand:chile|form:fluid-oral",
+      "cfmId": "CFM-002382",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "azitrom|20ml",
+      "canonicalName": "Azitrom Forte 400 mg/5ml 20 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Azitrom Forte 400 mg/5ml 20 ml",
+          "channels": {
+            "store": 21990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=azitrom%7C20ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104360-azitrom-forte-400-mg-5ml-20-ml.html&cfmId=CFM-002383",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:52:30.380Z"
+        }
+      ],
+      "bestPrice": 21990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "azitrom|20ml|bio:unknown|brand:unknown|var:forte",
+      "cfmId": "CFM-002383",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "azitrom|500mg|6",
+      "canonicalName": "Azitrom CD 500mg x6com",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Azitrom CD 500mg x6com",
+          "channels": {
+            "store": 22490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=azitrom%7C500mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Finfecciones%2Fazitrom-cd-500mg-x6com&cfmId=CFM-002385",
+          "imageUrl": "https://farmacia.araucomed.com/9607-home_default/azitrom-cd-500mg-x6com.jpg",
+          "fetchedAt": "2026-08-31T03:52:30.378Z"
+        }
+      ],
+      "bestPrice": 22490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9607-home_default/azitrom-cd-500mg-x6com.jpg",
+      "presentationKey": "azitrom|500mg|6|bio:unknown|brand:chile|var:cd|form:solid-oral",
+      "cfmId": "CFM-002385",
+      "lexicalMatch": "mismatch"
+    }
+  ]
+}

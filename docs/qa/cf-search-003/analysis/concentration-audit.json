@@ -1,0 +1,189 @@
+{
+ "summary": {
+  "generatedAt": "2026-08-31T03:57:41.752Z",
+  "baseDist": "C:/Users/Belford/AppData/Local/Temp/claude/c--Belford-appComparaFarma/8808191b-a7ba-4a54-b0f2-dac090e3f168/scratchpad/base-dist/index.js",
+  "prDist": "C:\\Belford\\wt-cf-search-003\\packages\\domain\\dist\\index.js",
+  "queries": 24,
+  "inputOffers": 1806,
+  "baseCards": 1599,
+  "prCards": 1606,
+  "delta": 7,
+  "queriesWithDelta": 5,
+  "incompatibleConcentrationsMergedBase": 7,
+  "incompatibleConcentrationsMergedPr": 0,
+  "falseMergesEliminated": 7,
+  "falseSplitCandidates": 0
+ },
+ "incompatibleInBase": [
+  {
+   "query": "ambroxol",
+   "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "name": "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO",
+     "concentration": "30mg",
+     "price": 990
+    },
+    {
+     "pharmacy": "sermecoop",
+     "name": "Ambroxol 30mg/5ml Jarabe 100ml",
+     "concentration": "30mg/5ml",
+     "price": 2390
+    },
+    {
+     "pharmacy": "ahumada",
+     "name": "Ambroxol 30mg./5ml. Jarabe Fco. 100ml",
+     "concentration": "30mg/5ml",
+     "price": 3374
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "name": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+     "concentration": "15mg/5ml",
+     "price": 5490
+    }
+   ]
+  },
+  {
+   "query": "ambroxol",
+   "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "araucomed",
+     "name": "Muxol Adulto 30mg/5ml jarabe 100ml",
+     "concentration": "30mg/5ml",
+     "price": 3990
+    },
+    {
+     "pharmacy": "sermecoop",
+     "name": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+     "concentration": "15mg/5ml",
+     "price": 4890
+    }
+   ]
+  },
+  {
+   "query": "betametasona",
+   "presentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "name": "Cam Jarabe Betametasona 0,25 mg 120 Ml (Lab Chile)",
+     "concentration": "0.25mg",
+     "price": 9980
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "name": "Cam Betametasona 2 mg Jarabe 120 mL",
+     "concentration": "2mg",
+     "price": 14790
+    }
+   ]
+  },
+  {
+   "query": "ibuprofeno",
+   "presentationKey": "ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "name": "Ibuprofeno Suspensión Oral 200mg/5ml 100ml Ascend",
+     "concentration": "200mg/5ml",
+     "price": 1890
+    },
+    {
+     "pharmacy": "sermecoop",
+     "name": "Ibuprofeno 200mg/5ml Jarabe 100ml",
+     "concentration": "200mg/5ml",
+     "price": 2790
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "name": "Ibuprofeno 100 mg/5mL Suspensión 100 mL",
+     "concentration": "100mg/5ml",
+     "price": 3140
+    },
+    {
+     "pharmacy": "salcobrand",
+     "name": "Ibuprofeno 200mg/5ml Jarabe 100ml",
+     "concentration": "200mg/5ml",
+     "price": 4599
+    }
+   ]
+  },
+  {
+   "query": "ibuprofeno",
+   "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "sermecoop",
+     "name": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+     "concentration": "100mg/5ml",
+     "price": 2990
+    },
+    {
+     "pharmacy": "ecofarmacias",
+     "name": "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml",
+     "concentration": "200mg/5ml",
+     "price": 3990
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "name": "Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL",
+     "concentration": "100mg/5ml",
+     "price": 8040
+    }
+   ]
+  },
+  {
+   "query": "muxol",
+   "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "ecofarmacias",
+     "name": "Muxol jarabe adulto 100ml Saval DESCUENTO",
+     "concentration": null,
+     "price": 2990
+    },
+    {
+     "pharmacy": "araucomed",
+     "name": "Muxol Adulto 30mg/5ml jarabe 100ml",
+     "concentration": "30mg/5ml",
+     "price": 3990
+    },
+    {
+     "pharmacy": "sermecoop",
+     "name": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+     "concentration": "15mg/5ml",
+     "price": 4890
+    }
+   ]
+  },
+  {
+   "query": "pyriped",
+   "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "offers": [
+    {
+     "pharmacy": "sermecoop",
+     "name": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+     "concentration": "100mg/5ml",
+     "price": 2990
+    },
+    {
+     "pharmacy": "ecofarmacias",
+     "name": "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml",
+     "concentration": "200mg/5ml",
+     "price": 3990
+    },
+    {
+     "pharmacy": "cruz-verde",
+     "name": "Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL",
+     "concentration": "100mg/5ml",
+     "price": 8040
+    }
+   ]
+  }
+ ],
+ "incompatibleInPr": [],
+ "falseSplitCandidates": []
+}

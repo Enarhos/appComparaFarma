@@ -1,0 +1,27 @@
+{
+ "summary": {
+  "generatedAt": "2026-08-31T03:55:07.497Z",
+  "baseDist": "C:/Users/Belford/AppData/Local/Temp/claude/c--Belford-appComparaFarma/8808191b-a7ba-4a54-b0f2-dac090e3f168/scratchpad/base-dist/index.js",
+  "prDist": "C:\\Belford\\wt-cf-search-003\\packages\\domain\\dist\\index.js",
+  "uniqueProductNames": 1555,
+  "cardsChecked": 1599,
+  "differences": {
+   "matchKey": 0,
+   "combinationKey": 0,
+   "commercialVariantKey": 0,
+   "dosageFormClass": 0,
+   "unitCountKey": 0
+  },
+  "matchKeyIdenticalToProduction": true,
+  "productionMismatchCount": 0,
+  "verdict": "MATCHKEY_CONTRACT_INTACT"
+ },
+ "diffs": {
+  "matchKey": [],
+  "combinationKey": [],
+  "commercialVariantKey": [],
+  "dosageFormClass": [],
+  "unitCountKey": []
+ },
+ "productionMismatch": []
+}

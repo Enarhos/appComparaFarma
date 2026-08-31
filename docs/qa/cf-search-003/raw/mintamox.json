@@ -1,0 +1,449 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "mintamox",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=mintamox",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:51:47.038Z",
+  "completedAt": "2026-08-31T03:51:54.094Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 14,
+  "results": [
+    {
+      "matchKey": "bentley",
+      "canonicalName": "Bentley Tropical Passion...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Bentley Tropical Passion...",
+          "channels": {
+            "store": 2093,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2093
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=bentley&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102889-bentley-tropical-passion-gel-lubricante-intimo-50-gr.html&cfmId=CFM-005000",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 2093,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "bentley|bio:unknown|brand:unknown|var:tropical",
+      "cfmId": "CFM-005000",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "mintamox|100ml",
+      "canonicalName": "Mintamox Adulto 30mg/5ml jarabe 100ml",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Mintamox Adulto 30mg/5ml jarabe 100ml",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=mintamox%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fmintamox-adulto-30mg-5ml-jarabe-100ml&cfmId=CFM-001436",
+          "imageUrl": "https://farmacia.araucomed.com/9362-home_default/mintamox-adulto-30mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9362-home_default/mintamox-adulto-30mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:mintlab|form:fluid-oral",
+      "cfmId": "CFM-001436",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mintamox|100ml",
+      "canonicalName": "Mintamox Infantil 15mg/5ml jarabe 100ml",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Mintamox Infantil 15mg/5ml jarabe 100ml",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=mintamox%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fmintamox-infantil-15mg-5ml-jarabe-100ml&cfmId=CFM-001436",
+          "imageUrl": "https://farmacia.araucomed.com/9480-home_default/mintamox-infantil-15mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9480-home_default/mintamox-infantil-15mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:mintlab|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001436",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mintamox|100ml|100",
+      "canonicalName": "Mintamox 15 mg / 5 mL x 100 mL",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Mintamox 15 mg / 5 mL x 100 mL",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=mintamox%7C100ml%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmintamox-15-mg-5-ml-x-100-ml%3F_pos%3D2%26_psq%3Dmintamox%26_psid%3D2c466c4f7%26_ss%3De&cfmId=CFM-014930",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/mintamox-15-mg-5-ml-x-100-ml-mintlab-552339.webp?v=1692989646",
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 2690,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/mintamox-15-mg-5-ml-x-100-ml-mintlab-552339.webp?v=1692989646",
+      "presentationKey": "mintamox|100ml|100|bio:unknown|brand:mintlab",
+      "cfmId": "CFM-014930",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "bentley",
+      "canonicalName": "Bentley Classic Gel...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Bentley Classic Gel...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=bentley&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F33800-gel-lubricante-bentley-classic-50-grs.html&cfmId=CFM-005000",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "bentley|bio:unknown|brand:grs|var:classic|form:topical",
+      "cfmId": "CFM-005000",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "bentley",
+      "canonicalName": "Bentley Blueberry Gel...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Bentley Blueberry Gel...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=bentley&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104599-bentley-blueberry-gel-lubricante-intimo-50-gr.html&cfmId=CFM-005000",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "bentley|bio:unknown|brand:unknown|var:blueberry|form:topical",
+      "cfmId": "CFM-005000",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "bentley",
+      "canonicalName": "Bentley Frutilla Gel...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Bentley Frutilla Gel...",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=bentley&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102890-bentley-frutilla-gel-lubricante-intimo-50-gr.html&cfmId=CFM-005000",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 3490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "bentley|bio:unknown|brand:unknown|var:frutilla|form:topical",
+      "cfmId": "CFM-005000",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "mintamox|100ml",
+      "canonicalName": "Mintamox Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Mintamox Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "channels": {
+            "store": 3690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=mintamox%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmintamox-pediatrico-ambroxol-15-mg-5ml-jarabe-100-ml%2F193055.html&cfmId=CFM-001436",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwafa00551/images/large/193055-mintamox-pediatrico-ambroxol-15-mg5ml-jarabe-100-ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:52.884Z"
+        }
+      ],
+      "bestPrice": 3690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwafa00551/images/large/193055-mintamox-pediatrico-ambroxol-15-mg5ml-jarabe-100-ml.jpg",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001436",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mintamox|100ml",
+      "canonicalName": "Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL",
+          "channels": {
+            "store": 3790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=mintamox%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmintamox-adulto-ambroxol-30-mg-5-ml-jarabe-100-ml%2F193049.html&cfmId=CFM-001436",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe72d6544/images/large/193049-mintamox-adulto-jarabe-100-ml-ambroxol-30-mg-5ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:52.884Z"
+        }
+      ],
+      "bestPrice": 3790,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe72d6544/images/large/193049-mintamox-adulto-jarabe-100-ml-ambroxol-30-mg-5ml.jpg",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001436",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "bentley",
+      "canonicalName": "Bentley Control Gel...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Bentley Control Gel...",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=bentley&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105159-bentley-control-gel-lubricante-intimo-50-gr.html&cfmId=CFM-005000",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "bentley|bio:unknown|brand:unknown|var:control|form:topical",
+      "cfmId": "CFM-005000",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "bentley",
+      "canonicalName": "Bentley Hot  Gel Lubricante...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Bentley Hot  Gel Lubricante...",
+          "channels": {
+            "store": 4242,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4242
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=bentley&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104487-bentley-hot-gel-lubricante-intimo-50-gr.html&cfmId=CFM-005000",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 4242,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "bentley|bio:unknown|brand:unknown|var:hot|form:topical",
+      "cfmId": "CFM-005000",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "prudence",
+      "canonicalName": "Prudence Gel Lubricante...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Prudence Gel Lubricante...",
+          "channels": {
+            "store": 4242,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4242
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=prudence&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105698-prudence-gel-lubricante-intimo-frutilla-100-g-vence-10-2026-stock-1.html&cfmId=CFM-009153",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 4242,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "prudence|bio:unknown|brand:unknown|var:lubricante|form:topical",
+      "cfmId": "CFM-009153",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "bentley",
+      "canonicalName": "Bentley Classic Gel...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Bentley Classic Gel...",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=bentley&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104598-bentley-classic-gel-lubricante-intimo-120-gr.html&cfmId=CFM-005000",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "bentley|bio:unknown|brand:unknown|var:classic|form:topical",
+      "cfmId": "CFM-005000",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "protex",
+      "canonicalName": "Protex Cuidado Intimo...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Protex Cuidado Intimo...",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=protex&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105115-protex-cuidado-intimo-delicate-care-200-ml.html&cfmId=CFM-008709",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:52.885Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "protex|bio:unknown|brand:unknown|var:cuidado",
+      "cfmId": "CFM-008709",
+      "lexicalMatch": "compatible"
+    }
+  ]
+}

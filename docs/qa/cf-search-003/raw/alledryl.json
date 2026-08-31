@@ -1,0 +1,1177 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "alledryl",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=alledryl",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:51:22.305Z",
+  "completedAt": "2026-08-31T03:51:29.383Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 32,
+  "results": [
+    {
+      "matchKey": "neo|5mg|30",
+      "canonicalName": "Neo Alledryl 5 mg x 30 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Neo Alledryl desloratadina 5mg por  30 comp.DESCUENTO",
+          "channels": {
+            "store": 1100,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1100
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=neo%7C5mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fneo-alledryl-desloratadina-5mg-por-30-comp-descuento%2F&cfmId=CFM-001378",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-30.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Neo Alledryl 5 mg x 30 Comprimidos Recubiertos",
+          "channels": {
+            "store": 11149,
+            "online": null,
+            "cmr": 8362,
+            "sbpay": null,
+            "effective": 8362
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=neo%7C5mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fneo-alledryl-5-mg-x-30-comprimidos-recubiertos-62463.html&cfmId=CFM-001378",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9ab274c0/images/products/62463/62463.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 1100,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9ab274c0/images/products/62463/62463.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "neo|5mg|30|bio:true|brand:unknown|var:alledryl|form:solid-oral",
+      "cfmId": "CFM-001378",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "neo|60ml",
+      "canonicalName": "Neo Alledryl Jarabe 60 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Neo Alledryl 2,5 mg/5ml Jarabe 60ml (Prater) DESCUENTO",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=neo%7C60ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fneo-alledryl-25-mg-5ml-jarabe-60ml-prater-descuento%2F&cfmId=CFM-002771",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-jarabe.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Neo Alledryl Jarabe 60 mL",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=neo%7C60ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26284-neo-alledryl-jarabe-x-60ml.html&cfmId=CFM-002771",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:28.716Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-jarabe.jpg",
+      "presentationKey": "neo|60ml|bio:unknown|brand:unknown|var:alledryl|form:fluid-oral",
+      "cfmId": "CFM-002771",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryl|60ml",
+      "canonicalName": "Alledryl loratadina 5 mg/5 mL jarabe 60 mL",
+      "laboratory": "PRATER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Alledryl loratadina 5 mg/5 mL jarabe 60 mL",
+          "channels": {
+            "store": 3000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=alledryl%7C60ml&url=https%3A%2F%2Fwww.drsimi.cl%2Falledryl-loratadina-5-mg-5ml-jarabe-60-ml%2Fp&cfmId=CFM-012582",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155470/450-1.jpg?v=638950316385370000",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 3000,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155470/450-1.jpg?v=638950316385370000",
+      "presentationKey": "alledryl|60ml|bio:false|brand:prater|form:fluid-oral",
+      "cfmId": "CFM-012582",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "neo|60ml",
+      "canonicalName": "Neo Alledryl desloratadina 2,5 mg/5 mL jarabe 60 mL",
+      "laboratory": "PRATER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Neo Alledryl desloratadina 2,5 mg/5 mL jarabe 60 mL",
+          "channels": {
+            "store": 3000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=neo%7C60ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fneoalledryl-desloratadina-2-5-mg-5ml-solucion-60-ml%2Fp&cfmId=CFM-002771",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156787/CH7362-1.jpg?v=637964774752870000",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 3000,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156787/CH7362-1.jpg?v=637964774752870000",
+      "presentationKey": "neo|60ml|bio:false|brand:prater|var:alledryl|form:fluid-oral",
+      "cfmId": "CFM-002771",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "neo",
+      "canonicalName": "Neo Alledryl comprimidos 5...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Neo Alledryl comprimidos 5...",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=neo&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26287-neo-alledryl-5-mg-x-30.html&cfmId=CFM-003913",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:28.716Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "neo|bio:unknown|brand:unknown|var:alledryl|form:solid-oral",
+      "cfmId": "CFM-003913",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120ml",
+      "canonicalName": "Alledryl-D loratadina 15mg/5ml jarabe infantil 120ml DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Alledryl-D loratadina 15mg/5ml jarabe infantil 120ml DESCUENTO",
+          "channels": {
+            "store": 4980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Falledryl-d-loratadina-15mg-5ml-jarabe-infantil-120ml-descuento%2F&cfmId=CFM-012588",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/07/Captura-de-pantalla-2023-12-22-141313.png",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 4980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/07/Captura-de-pantalla-2023-12-22-141313.png",
+      "presentationKey": "alledryld|120ml|bio:true|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012588",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryl|60ml|60",
+      "canonicalName": "Alledryl 5 mg / 5 mL x 60 mL",
+      "laboratory": "PRATER",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Alledryl 5 mg / 5 mL x 60 mL",
+          "channels": {
+            "store": 5295,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5295
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=alledryl%7C60ml%7C60&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Falledryl-5-mg-5-ml-x-60-ml%3F_pos%3D10%26_psq%3Dalledryl%26_psid%3D8fb17548c%26_ss%3De&cfmId=CFM-012585",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/alledryl-5-mg-5-ml-x-60-ml-prater-128628.jpg?v=1692989775",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 5295,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/alledryl-5-mg-5-ml-x-60-ml-prater-128628.jpg?v=1692989775",
+      "presentationKey": "alledryl|60ml|60|bio:unknown|brand:prater",
+      "cfmId": "CFM-012585",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "neo|60ml|60",
+      "canonicalName": "Neo Alledryl 2,5 mg/5 mL x 60 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Neo Alledryl 2,5 mg/5 mL x 60 mL Jarabe",
+          "channels": {
+            "store": 6026,
+            "online": null,
+            "cmr": 5317,
+            "sbpay": null,
+            "effective": 5317
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=neo%7C60ml%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fneo-alledryl-2-5-mg-5-ml-x-60-ml-jarabe-49451.html&cfmId=CFM-003912",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwff6e96ac/images/products/49451/49451.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 5317,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwff6e96ac/images/products/49451/49451.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "neo|60ml|60|bio:unknown|brand:unknown|var:alledryl|form:fluid-oral",
+      "cfmId": "CFM-003912",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120ml|120",
+      "canonicalName": "Alledryl-D Jarabe x120ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Alledryl-D Jarabe x120ml",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=alledryld%7C120ml%7C120&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Falledryl-d-jarabe-x120ml&cfmId=CFM-012584",
+          "imageUrl": "https://farmacia.araucomed.com/5664-home_default/alledryl-d-jarabe-x120ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5664-home_default/alledryl-d-jarabe-x120ml.jpg",
+      "presentationKey": "alledryld|120ml|120|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012584",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryld|120ml",
+      "canonicalName": "Alledryl-d (loratadina 2,5mg/pseudoefedrina 15mg) Jarabe 120ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Alledryl-d (loratadina 2,5mg/pseudoefedrina 15mg) Jarabe 120ml",
+          "channels": {
+            "store": 6790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19435%26d_%3D1&cfmId=CFM-012588",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918410325.jpg?v=6a94fa404cd31",
+          "fetchedAt": "2026-08-31T03:51:28.716Z"
+        }
+      ],
+      "bestPrice": 6790,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918410325.jpg?v=6a94fa404cd31",
+      "presentationKey": "alledryld|120ml|bio:unknown|brand:unknown|combo:pseudoefedrina|form:fluid-oral",
+      "cfmId": "CFM-012588",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryl|60ml",
+      "canonicalName": "Alledryl (loratadina) Jarabe 60ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Alledryl (loratadina) Jarabe 60ml",
+          "channels": {
+            "store": 6890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=alledryl%7C60ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19619%26d_%3D1&cfmId=CFM-012582",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918401149.jpg?v=6a94fa404ce96",
+          "fetchedAt": "2026-08-31T03:51:28.716Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Alledryl 5 mg/5 ml Jarabe 60 mL  (Prater)",
+          "channels": {
+            "store": 7690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=alledryl%7C60ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Falledryl-5-mg-5-ml-jarabe-60-ml%2F&cfmId=CFM-012582",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/111022-alledryl-loratadina-5-mg-jarabe-60-ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Alledryl Loratadina 5 mg / 5 mL Jarabe 60 mL",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=alledryl%7C60ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Falledryl-loratadina-5-mg-5-ml-jarabe-60-ml%2F111022.html&cfmId=CFM-012582",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7e26dcd1/images/large/111022.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 6890,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918401149.jpg?v=6a94fa404ce96",
+      "presentationKey": "alledryl|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012582",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120ml",
+      "canonicalName": "Alledryl-D jarabe 120 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Alledryl-D jarabe 120 mL",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26282-alledryl-d-jarabe-x-120ml.html&cfmId=CFM-012588",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:28.716Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Alledryl-D Loratadina 15 mg/5ml Jarabe 120 mL",
+          "channels": {
+            "store": 8890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Falledryl-d-loratadina-15-mg-5ml-jarabe-120-ml%2F111160.html&cfmId=CFM-012588",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd8a964ee/images/large/111160.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 6990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd8a964ee/images/large/111160.jpg",
+      "presentationKey": "alledryld|120ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012588",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryld|120ml",
+      "canonicalName": "Alledryl-D loratadina 2,5 mg pseudoefedrina 15 mg jarabe 120 mL",
+      "laboratory": "PRATER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Alledryl-D loratadina 2,5 mg pseudoefedrina 15 mg jarabe 120 mL",
+          "channels": {
+            "store": 7560,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7560
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fwww.drsimi.cl%2Falledryl-d-jarabe-120-ml%2Fp&cfmId=CFM-012588",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156840/CH7468-1.jpg?v=637964774937170000",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 7560,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156840/CH7468-1.jpg?v=637964774937170000",
+      "presentationKey": "alledryld|120ml|bio:false|brand:prater|form:fluid-oral",
+      "cfmId": "CFM-012588",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryld|20",
+      "canonicalName": "Alledryl-D x 20 cápsulas.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Alledryl-D x 20 cápsulas.",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=alledryld%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Falledryl-d-x20cap&cfmId=CFM-012571",
+          "imageUrl": "https://farmacia.araucomed.com/5666-home_default/alledryl-d-x20cap.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Alledryl-D x 20 cápsulas.",
+          "channels": {
+            "store": 8091,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8091
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=alledryld%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Falledryl-d-x-20-capsulas-6%3F_pos%3D1%26_psq%3Dalledryl%26_psid%3D8fb17548c%26_ss%3De&cfmId=CFM-012571",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/alledryl-d-x-20-capsulas-prater-220064_d005f6d8-dd4c-4897-9909-22f72c30f0c5.jpg?v=1788106186",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Alledryl-D comprimidos x 20",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=alledryld%7C20&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26281-alledryl-d-x-20.html&cfmId=CFM-012571",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:28.716Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5666-home_default/alledryl-d-x20cap.jpg",
+      "presentationKey": "alledryld|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-012571",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryl|120ml|120",
+      "canonicalName": "Alledryl D  x 120 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Alledryl D  x 120 mL Jarabe",
+          "channels": {
+            "store": 9086,
+            "online": null,
+            "cmr": 8017,
+            "sbpay": null,
+            "effective": 8017
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=alledryl%7C120ml%7C120&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Falledryl-d--x-120-ml-jarabe-43934.html&cfmId=CFM-012587",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw84b09737/images/products/43934/43934.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 8017,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw84b09737/images/products/43934/43934.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "alledryl|120ml|120|bio:unknown|brand:unknown|var:d|form:fluid-oral",
+      "cfmId": "CFM-012587",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|20",
+      "canonicalName": "Alledryl-D x 20 cápsulas",
+      "laboratory": "PRATER",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Alledryl-D x 20 cápsulas",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=alledryld%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Falledryl-d-x-20-capsulas%3F_pos%3D6%26_psq%3Dalledryl%26_psid%3D8fb17548c%26_ss%3De&cfmId=CFM-012571",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/alledryl-d-x-20-capsulas-prater-220064.jpg?v=1692989530",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/alledryl-d-x-20-capsulas-prater-220064.jpg?v=1692989530",
+      "presentationKey": "alledryld|20|bio:unknown|brand:prater|form:solid-oral",
+      "cfmId": "CFM-012571",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryld|5mg",
+      "canonicalName": "Alledryl-d (loratadina 5mg/pseudoefedrina 20mg) 20 Caps",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Alledryl-d (loratadina 5mg/pseudoefedrina 20mg) 20 Caps",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=alledryld%7C5mg&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19434%26d_%3D1&cfmId=CFM-014666",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918410356.jpg?v=6a94fa404cde6",
+          "fetchedAt": "2026-08-31T03:51:28.716Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918410356.jpg?v=6a94fa404cde6",
+      "presentationKey": "alledryld|5mg|bio:unknown|brand:unknown|combo:pseudoefedrina|form:solid-oral",
+      "cfmId": "CFM-014666",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryl|120ml",
+      "canonicalName": "Alledryl D Loratadina / Pseudoefedrina Jarabe 120ml",
+      "laboratory": "Alledryl D",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Alledryl D Loratadina / Pseudoefedrina Jarabe 120ml",
+          "channels": {
+            "store": 10399,
+            "online": 9151,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9151
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=alledryl%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Falledryl-d-loratadina-pseudoefedrina-jarabe-120ml%3Fdefault_sku%3D901032&cfmId=CFM-012586",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146547/small/901032.jpg?1748897867",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 9151,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146547/small/901032.jpg?1748897867",
+      "presentationKey": "alledryl|120ml|bio:unknown|brand:alledryld|combo:pseudoefedrina|form:fluid-oral",
+      "cfmId": "CFM-012586",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryl|60ml|60",
+      "canonicalName": "Alledryl 5 mg/ 5 mL x 60 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Alledryl 5 mg/ 5 mL x 60 mL Jarabe",
+          "channels": {
+            "store": 13219,
+            "online": null,
+            "cmr": 9914,
+            "sbpay": null,
+            "effective": 9914
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=alledryl%7C60ml%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Falledryl-5-mg--5-ml-x-60-ml-jarabe-3715.html&cfmId=CFM-012585",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw481c4f13/images/products/3715/3715.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 9914,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw481c4f13/images/products/3715/3715.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "alledryl|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012585",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120mg|20",
+      "canonicalName": "Alledryl-D Pseudoefedrina 120 mg 20 Cápsulas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Alledryl-D 5/120 mg x 20 Cápsulas con Gránulos de Liberación Prolongada",
+          "channels": {
+            "store": 18209,
+            "online": null,
+            "cmr": 13657,
+            "sbpay": null,
+            "effective": 13657
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=alledryld%7C120mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Falledryl-d-5-120-mg-x-20-capsulas-con-granulos-de-liberacion-prolongada-44771.html&cfmId=CFM-012583",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6c1d51b1/images/products/44771/44771.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Alledryl-D Pseudoefedrina 120 mg 20 Cápsulas",
+          "channels": {
+            "store": 15390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=alledryld%7C120mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Falledryl-d-pseudoefedrina-120-mg-20-capsulas%2F250887.html&cfmId=CFM-012583",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw80cacf82/images/large/250887.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 13657,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw80cacf82/images/large/250887.jpg",
+      "presentationKey": "alledryld|120mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-012583",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "neo|25mg|30",
+      "canonicalName": "Neo Alledryl D Desloratadina 25 mg 30 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Neo Alledryl D Desloratadina 25 mg 30 Comprimidos",
+          "channels": {
+            "store": 14890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=neo%7C25mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fneo-alledryl-d-desloratadina-25-mg-30-comprimidos%2F290311.html&cfmId=CFM-002769",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw65db8ef4/images/large/290311-neo-alledryl-d-desloratadina-25-mg-30-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 14890,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw65db8ef4/images/large/290311-neo-alledryl-d-desloratadina-25-mg-30-comprimidos.jpg",
+      "presentationKey": "neo|25mg|30|bio:unknown|brand:unknown|var:alledryl|form:solid-oral",
+      "cfmId": "CFM-002769",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|5mg|20",
+      "canonicalName": "Alledryl-D Loratadina / Pseudoefedrina 5mg/120mg 20 Cápsulas Prolongadas",
+      "laboratory": "Alledryl D",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Alledryl-D Loratadina / Pseudoefedrina 5mg/120mg 20 Cápsulas Prolongadas",
+          "channels": {
+            "store": 18099,
+            "online": 15927,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15927
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=alledryld%7C5mg%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Falledryl-d-loratadina-pseudoefedrina-5mg-120mg-20-capsulas-prolongadas%3Fdefault_sku%3D901035&cfmId=CFM-012590",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146549/small/901035.jpg?1748897903",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 15927,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146549/small/901035.jpg?1748897903",
+      "presentationKey": "alledryld|5mg|20|bio:unknown|brand:alledryld|combo:pseudoefedrina|form:solid-oral",
+      "cfmId": "CFM-012590",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "neoalledryl|5mg|30",
+      "canonicalName": "Neo-Alledryl Desloratadina 5 mg x 30 Comprimidos (Prater)",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Neo-Alledryl Desloratadina 5 mg x 30 Comprimidos (Prater)",
+          "channels": {
+            "store": 2140,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2140
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=neoalledryl%7C5mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fneo-alledryl-desloratadina-5-mg-x-30-comprimidos-prater%2F&cfmId=CFM-002726",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-30.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 2140,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-30.jpg",
+      "presentationKey": "neoalledryl|5mg|30|bio:true|brand:unknown|var:desloratadina|form:solid-oral",
+      "cfmId": "CFM-002726",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|5mg|30",
+      "canonicalName": "NeoAlledryl desloratadina 5 mg 30 comprimidos recubiertos",
+      "laboratory": "PRATER",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "NeoAlledryl desloratadina 5 mg 30 comprimidos recubiertos",
+          "channels": {
+            "store": 2880,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2880
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=neoalledryl%7C5mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fdesloratadina-5-mg-30-comprimidos-recubiertos%2Fp&cfmId=CFM-002726",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160431/BE0019-1-antigua.webp?v=639062387100170000",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 2880,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160431/BE0019-1-antigua.webp?v=639062387100170000",
+      "presentationKey": "neoalledryl|5mg|30|bio:true|brand:prater|var:desloratadina|form:solid-oral",
+      "cfmId": "CFM-002726",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|60ml",
+      "canonicalName": "Neo-Alledryl 2,5 mg/5 ml Jarabe 60 mL (Prater)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Neo-Alledryl 2,5 mg/5 ml Jarabe 60 mL (Prater)",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=neoalledryl%7C60ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fneo-alledryl-jarabe%2F&cfmId=CFM-003909",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-jarabe.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Neoalledryl Jarabe (desloratadina) 2,5mg/5ml 60ml",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=neoalledryl%7C60ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20736%26d_%3D1&cfmId=CFM-003909",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918450406.jpg?v=6a94fa404cc5c",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-jarabe.jpg",
+      "presentationKey": "neoalledryl|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-003909",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|5mg|30",
+      "canonicalName": "Neo-Alledryl (B) Desloratadina 5mg 30 Comprimidos Recubiertos",
+      "laboratory": "Neo-Alledryl",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Neo-Alledryl (B) Desloratadina 5mg 30 Comprimidos Recubiertos",
+          "channels": {
+            "store": 10699,
+            "online": 6954,
+            "cmr": null,
+            "sbpay": 5884,
+            "effective": 5884
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=neoalledryl%7C5mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fneo-alledryl-b-desloratadina-5mg-30-comprimidos-recubiertos%3Fdefault_sku%3D900014&cfmId=CFM-002726",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146502/small/900014.jpg?1748893949",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 5884,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146502/small/900014.jpg?1748893949",
+      "presentationKey": "neoalledryl|5mg|30|bio:unknown|brand:neoalledryl|var:desloratadina|form:solid-oral",
+      "cfmId": "CFM-002726",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|60ml",
+      "canonicalName": "Neo-Alledryl Desloratadina 2.5mg/5ml Jarabe 60ml",
+      "laboratory": "Neo-Alledryl",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Neo-Alledryl Desloratadina 2.5mg/5ml Jarabe 60ml",
+          "channels": {
+            "store": 6899,
+            "online": 6071,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6071
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=neoalledryl%7C60ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fneo-alledryl-desloratadina-2-5mg-5ml-jarabe-60ml%3Fdefault_sku%3D905040&cfmId=CFM-003909",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146561/small/905040.jpg?1748898556",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 6071,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146561/small/905040.jpg?1748898556",
+      "presentationKey": "neoalledryl|60ml|bio:unknown|brand:neoalledryl|var:desloratadina|form:fluid-oral",
+      "cfmId": "CFM-003909",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|5mg|60",
+      "canonicalName": "Neo-Alledryl 5 mg x 60 comprimidos (Prater)",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Neo-Alledryl 5 mg x 60 comprimidos (Prater)",
+          "channels": {
+            "store": 7800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7800
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=neoalledryl%7C5mg%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fneo-alledryl-5-x-60%2F&cfmId=CFM-012589",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-60.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 7800,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-60.jpg",
+      "presentationKey": "neoalledryl|5mg|60|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-012589",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryld|2.5mg|30",
+      "canonicalName": "NeoAlledryl-D desloratadina 2,5 mg pseudoefedrina 120 mg 30 comprimidos de liberación prolongada",
+      "laboratory": "PRATER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "NeoAlledryl-D desloratadina 2,5 mg pseudoefedrina 120 mg 30 comprimidos de liberación prolongada",
+          "channels": {
+            "store": 8120,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8120
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=neoalledryld%7C2.5mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fneo-alledryl-d-30-comprimidos-de-liberacion-prolongada%2Fp&cfmId=CFM-002770",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156414/CH5799-1.jpg?v=637964773424830000",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 8120,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156414/CH5799-1.jpg?v=637964773424830000",
+      "presentationKey": "neoalledryld|2.5mg|30|bio:false|brand:prater|var:desloratadina|form:solid-oral",
+      "cfmId": "CFM-002770",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|30",
+      "canonicalName": "Neo-Alledryl D x 30 Comprimidos de Liberación Prolongada",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Neo-Alledryl D 30 Comprimidos de Liberación Prolongada (Prater)",
+          "channels": {
+            "store": 8600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8600
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=neoalledryl%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fneo-alledryl-d-30-comprimidos-de-liberacion-prolongada%2F&cfmId=CFM-003910",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/290311-neo-alledryl-d-desloratadina-25-mg-30-comprimidos_1_700x700.jpg",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Neo-Alledryl D x 30 Comprimidos de Liberación Prolongada",
+          "channels": {
+            "store": 17599,
+            "online": null,
+            "cmr": 13199,
+            "sbpay": null,
+            "effective": 13199
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=neoalledryl%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fneo-alledryl-d-x-30-comprimidos-de-liberacion-prolongada-84763.html&cfmId=CFM-003910",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe5fc9c10/images/products/84763/84763.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:28.715Z"
+        }
+      ],
+      "bestPrice": 8600,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe5fc9c10/images/products/84763/84763.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "neoalledryl|30|bio:unknown|brand:unknown|var:d|form:solid-oral",
+      "cfmId": "CFM-003910",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryld|30",
+      "canonicalName": "NeoAlledryl-D comprimidos x 30",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "NeoAlledryl-D comprimidos x 30",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=neoalledryld%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F29954-neo-alledryl-d-x-30.html&cfmId=CFM-003911",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:28.716Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "neoalledryld|30|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-003911",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryld|2.5mg|30",
+      "canonicalName": "Neo-Alledryl-D Desloratadina / Pseudoefedrina 2.5mg/120mg 30 Comprimidos Prolongados",
+      "laboratory": "Neo-Alledryl",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Neo-Alledryl-D Desloratadina / Pseudoefedrina 2.5mg/120mg 30 Comprimidos Prolongados",
+          "channels": {
+            "store": 18199,
+            "online": 12921,
+            "cmr": null,
+            "sbpay": 11101,
+            "effective": 11101
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=neoalledryld%7C2.5mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdesloratadina-2-5mg-pseudoefedrina-120mg-oral-solido-1e0ea16f-364d-4103-90ed-b8f2058089cd%3Fdefault_sku%3D904131&cfmId=CFM-002770",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146557/small/904131.jpg?1748898404",
+          "fetchedAt": "2026-08-31T03:51:28.714Z"
+        }
+      ],
+      "bestPrice": 11101,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146557/small/904131.jpg?1748898404",
+      "presentationKey": "neoalledryld|2.5mg|30|bio:unknown|brand:neoalledryl|combo:pseudoefedrina|form:solid-oral",
+      "cfmId": "CFM-002770",
+      "lexicalMatch": "mismatch"
+    }
+  ]
+}

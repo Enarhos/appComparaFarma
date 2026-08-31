@@ -1,0 +1,483 @@
+{
+  "campaign": "CF-SEARCH-003",
+  "query": "tocalm",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=tocalm",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T03:51:38.337Z",
+  "completedAt": "2026-08-31T03:51:45.816Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 14,
+  "results": [
+    {
+      "matchKey": "tocalm|100ml",
+      "canonicalName": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+          "channels": {
+            "store": 790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tocalm%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Ftocalm-infantil-15mg-5ml-jarabe-100ml&cfmId=CFM-001430",
+          "imageUrl": "https://farmacia.araucomed.com/9940-home_default/tocalm-infantil-15mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tocalm%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftocalm-pediatrico-ambroxol-15-mg-5ml-jarabe-100-ml%2F111094.html&cfmId=CFM-001430",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd0bd4792/images/large/111094-tocalm-pediatrico-ambroxol-15-mg5ml-jarabe-100-ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:44.794Z"
+        }
+      ],
+      "bestPrice": 790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9940-home_default/tocalm-infantil-15mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001430",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "colgate",
+      "canonicalName": "Colgate Total 12 Cleant...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Colgate Total 12 Cleant...",
+          "channels": {
+            "store": 2590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=colgate&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103011-colgate-total-12-cleant-mint-75-ml.html&cfmId=CFM-007936",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 2590,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "colgate|bio:unknown|brand:unknown|var:total",
+      "cfmId": "CFM-007936",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "tocalm|100ml",
+      "canonicalName": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)",
+          "channels": {
+            "store": 2980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tocalm%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftocalm-ambroxol-jarabe-adulto-100-ml-prater%2F&cfmId=CFM-001430",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/06/tocalm.jpg",
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tocalm%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftocalm-adulto-ambroxol-30-mg-5ml-jarabe-100-ml%2F111093.html&cfmId=CFM-001430",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6502b7d3/images/large/111093-tocalm-adulto-ambroxol-30-mg5ml-jarabe-100-ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:44.794Z"
+        }
+      ],
+      "bestPrice": 2980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/06/tocalm.jpg",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001430",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "tocalm|100ml",
+      "canonicalName": "Tocalm Adulto 30mg/5ml jarabe 100 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Tocalm Adulto 30mg/5ml jarabe 100 ml.",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tocalm%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Ftocalm-adulto-30mg-5ml-jarabe-100ml&cfmId=CFM-001430",
+          "imageUrl": "https://farmacia.araucomed.com/9511-home_default/tocalm-adulto-30mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9511-home_default/tocalm-adulto-30mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001430",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "tocalm|100ml|100",
+      "canonicalName": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+          "channels": {
+            "store": 3729,
+            "online": null,
+            "cmr": 3292,
+            "sbpay": null,
+            "effective": 3292
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tocalm%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftocalm-adulto-30-mg-5-ml-x-100-ml-jarabe-47395.html&cfmId=CFM-001435",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdf5c64fe/images/products/47395/47395.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 3292,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdf5c64fe/images/products/47395/47395.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "tocalm|100ml|100|bio:true|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001435",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "tocalm|100ml",
+      "canonicalName": "Tocalm ambroxol 30 mg/5 mL jarabe adulto 100 mL",
+      "laboratory": "PRATER",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Tocalm ambroxol 30 mg/5 mL jarabe adulto 100 mL",
+          "channels": {
+            "store": 3400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tocalm%7C100ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fambroxol-30-mg-5ml-jarabe-adulto-100-ml%2Fp&cfmId=CFM-001430",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157477/CH0007-2.jpg?v=638664189143130000",
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 3400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157477/CH0007-2.jpg?v=638664189143130000",
+      "presentationKey": "tocalm|100ml|bio:true|brand:prater|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001430",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dovemen",
+      "canonicalName": "Dove Men Antitranspirante...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Dove Men Antitranspirante...",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=dovemen&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105452-dove-men-antitranspirante-spray-72-hrs-proteccion-total-150-ml.html&cfmId=CFM-011210",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 3490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "dovemen|bio:unknown|brand:unknown|var:antitranspirante",
+      "cfmId": "CFM-011210",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "tocalm|100ml|100",
+      "canonicalName": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": 3787,
+            "sbpay": null,
+            "effective": 3787
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tocalm%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftocalm-pediatrico-15-mg-5-ml-x-100-ml-jarabe-47393.html&cfmId=CFM-001435",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw72aa6528/images/products/47393/47393.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 3787,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw72aa6528/images/products/47393/47393.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "tocalm|100ml|100|bio:true|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001435",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "phb",
+      "canonicalName": "PHB Pasta Dentrífica Total...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "PHB Pasta Dentrífica Total...",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=phb&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105499-phb-pasta-dentrifica-total-care-75-ml.html&cfmId=CFM-002753",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "phb|bio:unknown|brand:unknown|var:pasta",
+      "cfmId": "CFM-002753",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "loreal",
+      "canonicalName": "Loreal Hidra Total 5 Crema...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Loreal Hidra Total 5 Crema...",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=loreal&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104773-loreal-hidra-total-5-crema-de-dia-50-ml.html&cfmId=CFM-004052",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "loreal|bio:unknown|brand:unknown|var:hidra|form:topical",
+      "cfmId": "CFM-004052",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "shot|30",
+      "canonicalName": "Shot B Total 30 Capsulas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Shot B Total 30 Capsulas",
+          "channels": {
+            "store": 9490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=shot%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F30664-shot-b-alimento-para-deportistas.html&cfmId=CFM-004892",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 9490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "shot|30|bio:unknown|brand:deportistas|var:b|form:solid-oral",
+      "cfmId": "CFM-004892",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "tol|100ml",
+      "canonicalName": "Tol Total Jarabe 100 Ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Tol Total Jarabe 100 Ml",
+          "channels": {
+            "store": 13990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=tol%7C100ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104502-tol-total-jarabe-100-ml-vence-07-2026-stock-1.html&cfmId=CFM-004672",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 13990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "tol|100ml|bio:unknown|brand:unknown|var:total|form:fluid-oral",
+      "cfmId": "CFM-004672",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "sintocalmy|20",
+      "canonicalName": "Sintocalmy x 20 comprimidos DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Sintocalmy x 20 comprimidos DESCUENTO",
+          "channels": {
+            "store": 6690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=sintocalmy%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsintocalmy-x-20-comprimidos-descuento%2F&cfmId=CFM-014929",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/06/sintocalmy.jpg",
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 6690,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/06/sintocalmy.jpg",
+      "presentationKey": "sintocalmy|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-014929",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "sintocalmy|600mg|30",
+      "canonicalName": "Sintocalmy 600 mg Passiflora Incarnata x 30 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Sintocalmy 600 mg Passiflora Incarnata x 30 Comprimidos Recubiertos",
+          "channels": {
+            "store": 21990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=sintocalmy%7C600mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsintocalmy-600-mg-passiflora-incarnata-x-30-comprimidos-recubiertos%2F&cfmId=CFM-014604",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/sintocalmy-600-x-30.jpg",
+          "fetchedAt": "2026-08-31T03:51:44.795Z"
+        }
+      ],
+      "bestPrice": 21990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/sintocalmy-600-x-30.jpg",
+      "presentationKey": "sintocalmy|600mg|30|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-014604",
+      "lexicalMatch": "mismatch"
+    }
+  ]
+}

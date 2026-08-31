@@ -1,0 +1,392 @@
+{
+ "summary": {
+  "generatedAt": "2026-08-31T03:57:41.752Z",
+  "baseDist": "C:/Users/Belford/AppData/Local/Temp/claude/c--Belford-appComparaFarma/8808191b-a7ba-4a54-b0f2-dac090e3f168/scratchpad/base-dist/index.js",
+  "prDist": "C:\\Belford\\wt-cf-search-003\\packages\\domain\\dist\\index.js",
+  "queries": 24,
+  "inputOffers": 1806,
+  "baseCards": 1599,
+  "prCards": 1606,
+  "delta": 7,
+  "queriesWithDelta": 5,
+  "incompatibleConcentrationsMergedBase": 7,
+  "incompatibleConcentrationsMergedPr": 0,
+  "falseMergesEliminated": 7,
+  "falseSplitCandidates": 0
+ },
+ "ab": [
+  {
+   "query": "alledryl",
+   "inputOffers": 42,
+   "baseCards": 32,
+   "prCards": 32,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "ambroxol",
+   "inputOffers": 60,
+   "baseCards": 54,
+   "prCards": 56,
+   "delta": 2,
+   "onlyInBase": [
+    {
+     "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO|990|30mg",
+      "sermecoop|Ambroxol 30mg/5ml Jarabe 100ml|2390|30mg/5ml",
+      "ahumada|Ambroxol 30mg./5ml. Jarabe Fco. 100ml|3374|30mg/5ml",
+      "cruz-verde|Ambroxol 15 mg/5mL Jarabe 100 mL|5490|15mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "araucomed|Muxol Adulto 30mg/5ml jarabe 100ml|3990|30mg/5ml",
+      "sermecoop|Muxol (ambroxol) 15mg/5ml Jarabe 100ml|4890|15mg/5ml"
+     ]
+    }
+   ],
+   "onlyInPr": [
+    {
+     "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO|990|30mg",
+      "sermecoop|Ambroxol 30mg/5ml Jarabe 100ml|2390|30mg/5ml",
+      "ahumada|Ambroxol 30mg./5ml. Jarabe Fco. 100ml|3374|30mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "cruz-verde|Ambroxol 15 mg/5mL Jarabe 100 mL|5490|15mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "araucomed|Muxol Adulto 30mg/5ml jarabe 100ml|3990|30mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "sermecoop|Muxol (ambroxol) 15mg/5ml Jarabe 100ml|4890|15mg/5ml"
+     ]
+    }
+   ]
+  },
+  {
+   "query": "amoxicilina suspension",
+   "inputOffers": 144,
+   "baseCards": 123,
+   "prCards": 123,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "aspirina",
+   "inputOffers": 74,
+   "baseCards": 52,
+   "prCards": 52,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "azitromicina suspension",
+   "inputOffers": 93,
+   "baseCards": 81,
+   "prCards": 81,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "betametasona",
+   "inputOffers": 124,
+   "baseCards": 114,
+   "prCards": 115,
+   "delta": 1,
+   "onlyInBase": [
+    {
+     "presentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Cam Jarabe Betametasona 0,25 mg 120 Ml (Lab Chile)|9980|0.25mg",
+      "cruz-verde|Cam Betametasona 2 mg Jarabe 120 mL|14790|2mg"
+     ]
+    }
+   ],
+   "onlyInPr": [
+    {
+     "presentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+     "offers": [
+      "cruz-verde|Cam Betametasona 2 mg Jarabe 120 mL|14790|2mg"
+     ]
+    },
+    {
+     "presentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Cam Jarabe Betametasona 0,25 mg 120 Ml (Lab Chile)|9980|0.25mg"
+     ]
+    }
+   ]
+  },
+  {
+   "query": "cefadroxilo suspension",
+   "inputOffers": 33,
+   "baseCards": 25,
+   "prCards": 25,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "cidoten",
+   "inputOffers": 21,
+   "baseCards": 16,
+   "prCards": 16,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "clorfenamina jarabe",
+   "inputOffers": 102,
+   "baseCards": 97,
+   "prCards": 97,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "diclofenaco",
+   "inputOffers": 141,
+   "baseCards": 126,
+   "prCards": 126,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "dipirona",
+   "inputOffers": 28,
+   "baseCards": 26,
+   "prCards": 26,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "ibuprofeno",
+   "inputOffers": 134,
+   "baseCards": 109,
+   "prCards": 111,
+   "delta": 2,
+   "onlyInBase": [
+    {
+     "presentationKey": "ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Ibuprofeno Suspensión Oral 200mg/5ml 100ml Ascend|1890|200mg/5ml",
+      "sermecoop|Ibuprofeno 200mg/5ml Jarabe 100ml|2790|200mg/5ml",
+      "cruz-verde|Ibuprofeno 100 mg/5mL Suspensión 100 mL|3140|100mg/5ml",
+      "salcobrand|Ibuprofeno 200mg/5ml Jarabe 100ml|4599|200mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "sermecoop|Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml|2990|100mg/5ml",
+      "ecofarmacias|Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml|3990|200mg/5ml",
+      "cruz-verde|Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL|8040|100mg/5ml"
+     ]
+    }
+   ],
+   "onlyInPr": [
+    {
+     "presentationKey": "ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Ibuprofeno Suspensión Oral 200mg/5ml 100ml Ascend|1890|200mg/5ml",
+      "sermecoop|Ibuprofeno 200mg/5ml Jarabe 100ml|2790|200mg/5ml",
+      "salcobrand|Ibuprofeno 200mg/5ml Jarabe 100ml|4599|200mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "cruz-verde|Ibuprofeno 100 mg/5mL Suspensión 100 mL|3140|100mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "sermecoop|Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml|2990|100mg/5ml",
+      "cruz-verde|Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL|8040|100mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml|3990|200mg/5ml"
+     ]
+    }
+   ]
+  },
+  {
+   "query": "ketoprofeno",
+   "inputOffers": 73,
+   "baseCards": 62,
+   "prCards": 62,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "loratadina jarabe",
+   "inputOffers": 74,
+   "baseCards": 68,
+   "prCards": 68,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "mintamox",
+   "inputOffers": 14,
+   "baseCards": 14,
+   "prCards": 14,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "muxol",
+   "inputOffers": 21,
+   "baseCards": 18,
+   "prCards": 19,
+   "delta": 1,
+   "onlyInBase": [
+    {
+     "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Muxol jarabe adulto 100ml Saval DESCUENTO|2990|null",
+      "araucomed|Muxol Adulto 30mg/5ml jarabe 100ml|3990|30mg/5ml",
+      "sermecoop|Muxol (ambroxol) 15mg/5ml Jarabe 100ml|4890|15mg/5ml"
+     ]
+    }
+   ],
+   "onlyInPr": [
+    {
+     "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Muxol jarabe adulto 100ml Saval DESCUENTO|2990|null",
+      "araucomed|Muxol Adulto 30mg/5ml jarabe 100ml|3990|30mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "sermecoop|Muxol (ambroxol) 15mg/5ml Jarabe 100ml|4890|15mg/5ml"
+     ]
+    }
+   ]
+  },
+  {
+   "query": "nistatina",
+   "inputOffers": 36,
+   "baseCards": 31,
+   "prCards": 31,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "omeprazol",
+   "inputOffers": 50,
+   "baseCards": 36,
+   "prCards": 36,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "paracetamol jarabe",
+   "inputOffers": 148,
+   "baseCards": 140,
+   "prCards": 140,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "paracetamol",
+   "inputOffers": 148,
+   "baseCards": 140,
+   "prCards": 140,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "pyriped",
+   "inputOffers": 12,
+   "baseCards": 10,
+   "prCards": 11,
+   "delta": 1,
+   "onlyInBase": [
+    {
+     "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "sermecoop|Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml|2990|100mg/5ml",
+      "ecofarmacias|Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml|3990|200mg/5ml",
+      "cruz-verde|Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL|8040|100mg/5ml"
+     ]
+    }
+   ],
+   "onlyInPr": [
+    {
+     "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "sermecoop|Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml|2990|100mg/5ml",
+      "cruz-verde|Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL|8040|100mg/5ml"
+     ]
+    },
+    {
+     "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+     "offers": [
+      "ecofarmacias|Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml|3990|200mg/5ml"
+     ]
+    }
+   ]
+  },
+  {
+   "query": "salbutamol",
+   "inputOffers": 79,
+   "baseCards": 74,
+   "prCards": 74,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "tocalm",
+   "inputOffers": 16,
+   "baseCards": 14,
+   "prCards": 14,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  },
+  {
+   "query": "vitamina d gotas",
+   "inputOffers": 139,
+   "baseCards": 137,
+   "prCards": 137,
+   "delta": 0,
+   "onlyInBase": [],
+   "onlyInPr": []
+  }
+ ]
+}
