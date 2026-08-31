@@ -1,0 +1,1061 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "nistatina",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=nistatina",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:25:32.231Z",
+  "completedAt": "2026-08-31T01:25:38.080Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 31,
+  "results": [
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina 100.000 Ui comprimidos",
+      "laboratory": "DR. SIMI",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Nistatina 100.000 Ui comprimidos",
+          "channels": {
+            "store": 1290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=nistatina&url=https%3A%2F%2Fwww.drsimi.cl%2Fnistatina-100-000-ui-12com%2Fp&cfmId=CFM-002407",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157102/CH7155ND.jpg?v=638012015257830000",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 1290,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157102/CH7155ND.jpg?v=638012015257830000",
+      "presentationKey": "nistatina|bio:false|brand:drsimi|form:solid-oral",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|15",
+      "canonicalName": "Nistatina 100.000 U.I. ungüento x 15 gramos. (Hospifarma)",
+      "laboratory": "Hospifarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nistatina 100.000 U.I. ungüento x 15 gramos. (Hospifarma)",
+          "channels": {
+            "store": 1290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nistatina%7C15&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fnistatina-100000ui-ungx15g-hospifarma&cfmId=CFM-002405",
+          "imageUrl": "https://farmacia.araucomed.com/8144-home_default/nistatina-100000ui-ungx15g-hospifarma.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 1290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8144-home_default/nistatina-100000ui-ungx15g-hospifarma.jpg",
+      "presentationKey": "nistatina|15|bio:unknown|brand:hospifarma|form:topical",
+      "cfmId": "CFM-002405",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|15000mg|15",
+      "canonicalName": "Nistatina Unguento 100.000 UI x 15 g",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Nistatina Unguento 100.000 UI x 15 g",
+          "channels": {
+            "store": 1390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=nistatina%7C15000mg%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fnistatina-unguento-100-000-ui-x-15-g%3F_pos%3D10%26_psq%3Dnistatina%26_psid%3D705b90e57%26_ss%3De&cfmId=CFM-002400",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/nistatina-unguento-100000-ui-x-15-g-mintlab-269708.jpg?v=1692989705",
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        }
+      ],
+      "bestPrice": 1390,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/nistatina-unguento-100000-ui-x-15-g-mintlab-269708.jpg?v=1692989705",
+      "presentationKey": "nistatina|15000mg|15|bio:unknown|brand:mintlab|form:topical",
+      "cfmId": "CFM-002400",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina  100.000 U.I. 12...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Nistatina  100.000 U.I. 12...",
+          "channels": {
+            "store": 1745,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1745
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nistatina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24707-nistatina-metronidazol.html&cfmId=CFM-002407",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        }
+      ],
+      "bestPrice": 1745,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "nistatina|bio:unknown|brand:metronidazol",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|15000mg",
+      "canonicalName": "Nistatina 100000Ui ungüento 15g (BPH)",
+      "laboratory": "BPH",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nistatina 100000Ui ungüento 15g (BPH)",
+          "channels": {
+            "store": 1790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nistatina%7C15000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fnistatina-100000ui-unguento-15g-bph&cfmId=CFM-002408",
+          "imageUrl": "https://farmacia.araucomed.com/7672-home_default/nistatina-100000ui-unguento-15g-bph.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 1790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7672-home_default/nistatina-100000ui-unguento-15g-bph.jpg",
+      "presentationKey": "nistatina|15000mg|bio:unknown|brand:bph|form:topical",
+      "cfmId": "CFM-002408",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|15000mg",
+      "canonicalName": "Nistatina 100.000Ui ungüento 15g (Mintlab)",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nistatina 100.000Ui ungüento 15g (Mintlab)",
+          "channels": {
+            "store": 1790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nistatina%7C15000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fnistatina-100000ui-unguento-15g-mintlab&cfmId=CFM-002408",
+          "imageUrl": "https://farmacia.araucomed.com/7014-home_default/nistatina-100000ui-unguento-15g-mintlab.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 1790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7014-home_default/nistatina-100000ui-unguento-15g-mintlab.jpg",
+      "presentationKey": "nistatina|15000mg|bio:unknown|brand:mintlab|form:topical",
+      "cfmId": "CFM-002408",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|15",
+      "canonicalName": "Nistatina 100.000 U.I. ungüento x 15 gramos. (Chile)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nistatina 100.000 U.I. ungüento x 15 gramos. (Chile)",
+          "channels": {
+            "store": 2290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nistatina%7C15&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fnistatina-100000ui-unguento-x15g-chile&cfmId=CFM-002405",
+          "imageUrl": "https://farmacia.araucomed.com/3128-home_default/nistatina-100000ui-unguento-x15g-chile.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 2290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3128-home_default/nistatina-100000ui-unguento-x15g-chile.jpg",
+      "presentationKey": "nistatina|15|bio:unknown|brand:chile|form:topical",
+      "cfmId": "CFM-002405",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina 100000 UI Unguento 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Nistatina 100000 UI Unguento 15 gr",
+          "channels": {
+            "store": 2390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nistatina&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnistatina-100000-ui-unguento-15-gr%2F&cfmId=CFM-002407",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/NISTATINA100000LCH.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Nistatina 100000 UI Unguento 15 gr",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=nistatina&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnistatina-100000-ui-unguento-15-gr%2F199203.html&cfmId=CFM-002407",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1a937b52/images/large/199203-1.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 2390,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/NISTATINA100000LCH.jpg",
+      "presentationKey": "nistatina|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|15",
+      "canonicalName": "Nistatina Unguento Tópico 100.000 Ui/G x 15 gr (Hospifarma)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Nistatina Unguento Tópico 100.000 Ui/G x 15 gr (Hospifarma)",
+          "channels": {
+            "store": 2390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nistatina%7C15&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhospifarma-nistatina-unguento-topico-100-000-ui-g-x-15-gr%2F&cfmId=CFM-002405",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/7804640560572.png",
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        }
+      ],
+      "bestPrice": 2390,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/7804640560572.png",
+      "presentationKey": "nistatina|15|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-002405",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina 100000UI/g 15 gr...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Nistatina 100000UI/g 15 gr...",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nistatina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24706-nistatina-crema-dermica.html&cfmId=CFM-002407",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "nistatina|bio:unknown|brand:dermica",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|12",
+      "canonicalName": "Nistatina 100.000 UI x 12 Óvulos",
+      "laboratory": "CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Nistatina 100.000 UI x 12 Óvulos",
+          "channels": {
+            "store": 2890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=nistatina%7C12&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fnistatina-ovulos%3F_pos%3D1%26_psq%3Dnistatina%26_psid%3D705b90e57%26_ss%3De&cfmId=CFM-002401",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/nistatina-100000-ui-x-12-ovulos-chile-633331.jpg?v=1692989509",
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nistatina 100.000 U.I. x 12 óvulos vaginales. (Chile)",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nistatina%7C12&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fnistatina-100000ui-x12ovulos-chile&cfmId=CFM-002401",
+          "imageUrl": "https://farmacia.araucomed.com/5852-home_default/nistatina-100000ui-x12ovulos-chile.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 2890,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/nistatina-100000-ui-x-12-ovulos-chile-633331.jpg?v=1692989509",
+      "presentationKey": "nistatina|12|bio:unknown|brand:chile|form:suppository",
+      "cfmId": "CFM-002401",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina 100.000 UI 12 Óvulos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Nistatina 100.000 U.I 12 Óvulos Vaginales (Laboratorio Chile)",
+          "channels": {
+            "store": 2920,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2920
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nistatina&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnistatina-100-000-u-i-12-ovulos-vaginales-laboratorio-chile%2F&cfmId=CFM-002407",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/07/434257.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Nistatina 100.000 UI 12 Óvulos",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=nistatina&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnistatina-100-000-ui-12-ovulos%2F199420.html&cfmId=CFM-002407",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7e96686e/images/large/199420-1.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.867Z"
+        }
+      ],
+      "bestPrice": 2920,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7e96686e/images/large/199420-1.jpg",
+      "presentationKey": "nistatina|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|15000mg",
+      "canonicalName": "Nistatina  100000 UI/g ungüento tópico 15 g",
+      "laboratory": "HOSPIFARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Nistatina  100000 UI/g ungüento tópico 15 g",
+          "channels": {
+            "store": 3960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=nistatina%7C15000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fnistatina-100-000-ui-g-unguento-topico-15-gr%2Fp&cfmId=CFM-002408",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157018/CH5015-1.jpg?v=638012014968470000",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 3960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157018/CH5015-1.jpg?v=638012014968470000",
+      "presentationKey": "nistatina|15000mg|bio:false|brand:hospifarma|form:topical",
+      "cfmId": "CFM-002408",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina 100000 UI 12 óvulos vaginales",
+      "laboratory": "TEVA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Nistatina 100000 UI 12 óvulos vaginales",
+          "channels": {
+            "store": 4400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=nistatina&url=https%3A%2F%2Fwww.drsimi.cl%2Fnistatina-100-000-ui-12-ovulos-vaginales%2Fp&cfmId=CFM-002407",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156708/CH7154-1.jpg?v=637964774471000000",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 4400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156708/CH7154-1.jpg?v=637964774471000000",
+      "presentationKey": "nistatina|bio:false|brand:teva|form:suppository",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|12",
+      "canonicalName": "Nistatina 100000 UI x 12 Ovulos Vaginales",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Nistatina 100000 UI x 12 Ovulos Vaginales",
+          "channels": {
+            "store": 5390,
+            "online": null,
+            "cmr": 4499,
+            "sbpay": null,
+            "effective": 4499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=nistatina%7C12&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnistatina-100000-ui-x-12-ovulos-vaginales-1054.html&cfmId=CFM-002401",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd59fbc0a/images/products/1054/1054.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 4499,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd59fbc0a/images/products/1054/1054.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "nistatina|12|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-002401",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|15000mg",
+      "canonicalName": "Nistatina 100.000UI Ungüento Dérmico 15g",
+      "laboratory": "Nistatina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Nistatina 100.000UI Ungüento Dérmico 15g",
+          "channels": {
+            "store": 6699,
+            "online": 5895,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5895
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nistatina%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnistatina-100-000ui-unguento-dermico-15g%3Fdefault_sku%3D434451&cfmId=CFM-002408",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28704/small/434451.jpg?1641477868",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 5895,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28704/small/434451.jpg?1641477868",
+      "presentationKey": "nistatina|15000mg|bio:unknown|brand:nistatina|form:topical",
+      "cfmId": "CFM-002408",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina 100.000UI 12 Óvulos",
+      "laboratory": "Nistatina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Nistatina 100.000UI 12 Óvulos",
+          "channels": {
+            "store": 9299,
+            "online": 8183,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8183
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nistatina&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchile-nistatina-100-000ui-12-ovulos%3Fdefault_sku%3D434257&cfmId=CFM-002407",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27655/small/434257.jpg?1641479721",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 8183,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27655/small/434257.jpg?1641479721",
+      "presentationKey": "nistatina|bio:unknown|brand:nistatina|form:suppository",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina Metronidazol 100.000 UI 10 Óvulos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Nistatina &#8211; metronidazol 10 Óvulos (Laboratorio Chile)",
+          "channels": {
+            "store": 8490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nistatina&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnistatina-metronidazol-10-ovulos-laboratorio-chile%2F&cfmId=CFM-002407",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/7800007142573.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Nistatina Metronidazol 100.000 UI 10 Óvulos",
+          "channels": {
+            "store": 15690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=nistatina&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnistatina-metronidazol-100-000-ui-10-ovulos%2F2253.html&cfmId=CFM-002407",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dweec477ae/images/large/2253-1.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 8490,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dweec477ae/images/large/2253-1.jpg",
+      "presentationKey": "nistatina|bio:unknown|brand:unknown|var:metronidazol|form:suppository",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|10",
+      "canonicalName": "Nistatina Metronidazol x 10 Óvulos",
+      "laboratory": "LABORATORIO CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Nistatina Metronidazol x 10 Óvulos",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=nistatina%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fnistatina-metronidazol-ovulos%3F_pos%3D2%26_psq%3Dnistatina%26_psid%3D705b90e57%26_ss%3De&cfmId=CFM-002403",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/nistatina-metronidazol-x-10-ovulos-laboratorio-chile-551372.jpg?v=1692989527",
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nistatina Metronidazol óvulos x 10 unidades. (Chile)",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nistatina%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fnistatina-metronidazol-ovulos-x-10-unidades-chile&cfmId=CFM-002403",
+          "imageUrl": "https://farmacia.araucomed.com/14710-home_default/nistatina-metronidazol-ovulos-x-10-unidades-chile.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/nistatina-metronidazol-x-10-ovulos-laboratorio-chile-551372.jpg?v=1692989527",
+      "presentationKey": "nistatina|10|bio:unknown|brand:chile|var:metronidazol|form:suppository",
+      "cfmId": "CFM-002403",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistaglos",
+      "canonicalName": "Nistaglós Nistatina NF 10000000 UI Unguento Topico 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Nistaglós Nistatina NF 10000000 UI Unguento Topico 15 gr",
+          "channels": {
+            "store": 9980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9980
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nistaglos&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnistaglos-nistatina-nf-10000000-ui-unguento-topico-15-gr%2F&cfmId=CFM-002402",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/08/Sin-titulo-800-x-800-px-9.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 9980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/08/Sin-titulo-800-x-800-px-9.jpg",
+      "presentationKey": "nistaglos|bio:unknown|brand:unknown|var:nistatina|form:topical",
+      "cfmId": "CFM-002402",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina Metronidazol 10...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Nistatina Metronidazol 10...",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nistatina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105562-nistatina-metronidazol-10-ovulos-100000-ui-500mg-lab-chile.html&cfmId=CFM-002407",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "nistatina|bio:unknown|brand:unknown|var:metronidazol",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistaglos|15000mg|15",
+      "canonicalName": "Nistaglos NF Crema x 15 g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Nistaglos NF Crema x 15 g",
+          "channels": {
+            "store": 12990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nistaglos%7C15000mg%7C15&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24812-nistaglos-grema-x-15mg.html&cfmId=CFM-002399",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        }
+      ],
+      "bestPrice": 12990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "nistaglos|15000mg|15|bio:unknown|brand:unknown|var:nf|form:topical",
+      "cfmId": "CFM-002399",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nistaglos|30000mg",
+      "canonicalName": "Nistaglos Crema 30g",
+      "laboratory": "Andrómaco",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nistaglos Crema 30g",
+          "channels": {
+            "store": 13490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nistaglos%7C30000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fnistaglos-crema-30g&cfmId=CFM-002406",
+          "imageUrl": "https://farmacia.araucomed.com/7630-home_default/nistaglos-crema-30g.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 13490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7630-home_default/nistaglos-crema-30g.jpg",
+      "presentationKey": "nistaglos|30000mg|bio:unknown|brand:andromaco|form:topical",
+      "cfmId": "CFM-002406",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina / Metronidazol 10 Óvulos",
+      "laboratory": "Nistatina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Nistatina / Metronidazol 10 Óvulos",
+          "channels": {
+            "store": 15699,
+            "online": 13815,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13815
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nistatina&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnistatina-metronidazol-10-ovulos%3Fdefault_sku%3D434249&cfmId=CFM-002407",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27654/small/434249.jpg?1641479721",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 13815,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27654/small/434249.jpg?1641479721",
+      "presentationKey": "nistatina|bio:unknown|brand:nistatina|combo:metronidazol|form:suppository",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistaglos",
+      "canonicalName": "Nistaglos NF Uguento 30 Gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Nistaglos NF Uguento 30 Gr",
+          "channels": {
+            "store": 16990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nistaglos&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104486-nistaglos-nf-uguento-30-gr.html&cfmId=CFM-002402",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        }
+      ],
+      "bestPrice": 16990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "nistaglos|bio:unknown|brand:unknown|var:nf",
+      "cfmId": "CFM-002402",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nistatina|24ml",
+      "canonicalName": "Nistatina 100.000 UI suspensión oral 24 ml. (Lafedar)",
+      "laboratory": "BPH",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nistatina 100.000 UI suspensión oral 24 ml. (Lafedar)",
+          "channels": {
+            "store": 18490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nistatina%7C24ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fnistatina-100000ui-solucion-oral-24ml-bph&cfmId=CFM-002088",
+          "imageUrl": "https://farmacia.araucomed.com/13646-home_default/nistatina-100000ui-solucion-oral-24ml-bph.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 18490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13646-home_default/nistatina-100000ui-solucion-oral-24ml-bph.jpg",
+      "presentationKey": "nistatina|24ml|bio:unknown|brand:bph|form:fluid-oral",
+      "cfmId": "CFM-002088",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina",
+      "canonicalName": "Nistatina 100.000 UI Gotas...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Nistatina 100.000 UI Gotas...",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nistatina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25772-nistatina-100000ui-gotas-x-24ml.html&cfmId=CFM-002407",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:37.869Z"
+        }
+      ],
+      "bestPrice": 19990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "nistatina|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002407",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|20ml",
+      "canonicalName": "Nistatina 100000 UI/mL suspensión oral 20 mL",
+      "laboratory": "BPH",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Nistatina 100000 UI/mL suspensión oral 20 mL",
+          "channels": {
+            "store": 22920,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22920
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=nistatina%7C20ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fnistatina-100-000-ui-ml-suspension-oral-gotas-20-ml%2Fp&cfmId=CFM-002409",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157012/CH0273-1.jpg?v=638012014947670000",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 22920,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157012/CH0273-1.jpg?v=638012014947670000",
+      "presentationKey": "nistatina|20ml|bio:false|brand:bph|form:fluid-oral",
+      "cfmId": "CFM-002409",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|24ml|24",
+      "canonicalName": "Nistatina 100.000 UI/mL x 24 mL Suspension Oral",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Nistatina 100.000 UI/mL x 24 mL Suspension Oral",
+          "channels": {
+            "store": 23300,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23300
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=nistatina%7C24ml%7C24&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnistatina-100.000-ui-ml-x-24-ml-suspension-oral--86573.html&cfmId=CFM-002404",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd184cbc3/images/products/86573/86573.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 23300,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd184cbc3/images/products/86573/86573.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "nistatina|24ml|24|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002404",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|24ml",
+      "canonicalName": "Nistatina 100000 UI Suspensión Oral 24 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Nistatina 100000 UI Suspensión Oral 24 mL",
+          "channels": {
+            "store": 25890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=nistatina%7C24ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnistatina-100000-ui-suspension-oral-24-ml%2F268912.html&cfmId=CFM-002088",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7fbf8a0e/images/large/268912-1.jpg",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 25890,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7fbf8a0e/images/large/268912-1.jpg",
+      "presentationKey": "nistatina|24ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-002088",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nistatina|24ml",
+      "canonicalName": "Nistatina 100.000UI Oral Gotas 24ml",
+      "laboratory": "Nistatina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Nistatina 100.000UI Oral Gotas 24ml",
+          "channels": {
+            "store": 37899,
+            "online": 33351,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 33351
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nistatina%7C24ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnistatina-100-000ui-oral-gotas-24ml%3Fdefault_sku%3D468940&cfmId=CFM-002088",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/135655/small/468940.jpg?1740579713",
+          "fetchedAt": "2026-08-31T01:25:37.868Z"
+        }
+      ],
+      "bestPrice": 33351,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/135655/small/468940.jpg?1740579713",
+      "presentationKey": "nistatina|24ml|bio:unknown|brand:nistatina|form:fluid-oral",
+      "cfmId": "CFM-002088",
+      "lexicalMatch": "exact"
+    }
+  ]
+}

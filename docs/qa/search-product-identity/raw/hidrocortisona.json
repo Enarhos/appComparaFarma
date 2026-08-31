@@ -1,0 +1,2318 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "hidrocortisona",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=hidrocortisona",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:24:42.513Z",
+  "completedAt": "2026-08-31T01:24:49.770Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 71,
+  "results": [
+    {
+      "matchKey": "hidrocortisona|100mg",
+      "canonicalName": "Hidrocortisona Liofilizado Inyectable 100mg (Biosano)",
+      "laboratory": "Biosano",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona Liofilizado Inyectable 100mg (Biosano)",
+          "channels": {
+            "store": 650,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 650
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona%7C100mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-liofilizado-inyectable-100mg-biosan&cfmId=CFM-009125",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 650,
+      "bestPharmacy": "araucomed",
+      "imageUrl": null,
+      "presentationKey": "hidrocortisona|100mg|bio:unknown|brand:biosano|var:liofilizado|form:injectable",
+      "cfmId": "CFM-009125",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|100mg",
+      "canonicalName": "Hidrocortisona I.M./I.V. 100 mg x 1 frasco ampolla. (Difem)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona I.M./I.V. 100 mg x 1 frasco ampolla. (Difem)",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona%7C100mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-im-iv-100-mg-x-1-frasco-ampolla-difem&cfmId=CFM-009125",
+          "imageUrl": "https://farmacia.araucomed.com/14693-home_default/hidrocortisona-im-iv-100-mg-x-1-frasco-ampolla-difem.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14693-home_default/hidrocortisona-im-iv-100-mg-x-1-frasco-ampolla-difem.jpg",
+      "presentationKey": "hidrocortisona|100mg|bio:unknown|brand:unknown|var:m|form:injectable",
+      "cfmId": "CFM-009125",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|15",
+      "canonicalName": "Hidrocortisona 1% crema x 15 gramos. (ASCEND)",
+      "laboratory": "Ascend",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona 1% crema x 15 gramos. (ASCEND)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona%7C15&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-1-crema-x-15-gramos-ascend&cfmId=CFM-000804",
+          "imageUrl": "https://farmacia.araucomed.com/14205-home_default/hidrocortisona-1-crema-x-15-gramos-ascend.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14205-home_default/hidrocortisona-1-crema-x-15-gramos-ascend.jpg",
+      "presentationKey": "hidrocortisona|15|bio:unknown|brand:ascend|form:topical",
+      "cfmId": "CFM-000804",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|15000mg",
+      "canonicalName": "Hidrocortisona 1% crema 15g BPH (Cenabast)",
+      "laboratory": "BPH",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona 1% crema 15g BPH (Cenabast)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona%7C15000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-1-crema-15g-bph-cenabast&cfmId=CFM-009404",
+          "imageUrl": "https://farmacia.araucomed.com/7278-home_default/hidrocortisona-1-crema-15g-bph-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7278-home_default/hidrocortisona-1-crema-15g-bph-cenabast.jpg",
+      "presentationKey": "hidrocortisona|15000mg|bio:unknown|brand:bph|form:topical",
+      "cfmId": "CFM-009404",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona",
+      "canonicalName": "Hidrocortisona 1% Crema 15 gramos (Ethon)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona 1% Crema 15 gramos (Ethon)",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-1-crema-15-gramos-ethon&cfmId=CFM-009396",
+          "imageUrl": "https://farmacia.araucomed.com/10446-home_default/hidrocortisona-1-crema-15-gramos-ethon.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10446-home_default/hidrocortisona-1-crema-15-gramos-ethon.jpg",
+      "presentationKey": "hidrocortisona|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009396",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|15000mg|15",
+      "canonicalName": "Hidrocortisona 1% Crema x 15g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Hidrocortisona 1% Crema x 15g",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=hidrocortisona%7C15000mg%7C15&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhidrocortisona-1-crema-x-15g%2F&cfmId=CFM-009845",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/02/hidrocortisona-15-g.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Hidrocortisona 1 % x 15 g Crema BPH S.A.",
+          "channels": {
+            "store": 4486,
+            "online": null,
+            "cmr": 4274,
+            "sbpay": null,
+            "effective": 4274
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hidrocortisona%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhidrocortisona-1-x-15-g-crema-bph-s.a.-90359.html&cfmId=CFM-009845",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw47fcb730/images/products/90359/90359.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 2690,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/02/hidrocortisona-15-g.jpg",
+      "presentationKey": "hidrocortisona|15000mg|15|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009845",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona",
+      "canonicalName": "Hidrocortisona 1% crema 15 gramos (Global Pharma)",
+      "laboratory": "Global Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona 1% crema 15 gramos (Global Pharma)",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-1-crema-15g-global-pharma&cfmId=CFM-009396",
+          "imageUrl": "https://farmacia.araucomed.com/6505-home_default/hidrocortisona-1-crema-15g-global-pharma.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/6505-home_default/hidrocortisona-1-crema-15g-global-pharma.jpg",
+      "presentationKey": "hidrocortisona|bio:unknown|brand:globalpharma|form:topical",
+      "cfmId": "CFM-009396",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona",
+      "canonicalName": "Hidrocortisona 1% crema 15 gramos. (Hospifarma)",
+      "laboratory": "Hospifarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona 1% crema 15 gramos. (Hospifarma)",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-1-crema-15g-hospifarma&cfmId=CFM-009396",
+          "imageUrl": "https://farmacia.araucomed.com/12136-home_default/hidrocortisona-1-crema-15g-hospifarma.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12136-home_default/hidrocortisona-1-crema-15g-hospifarma.jpg",
+      "presentationKey": "hidrocortisona|bio:unknown|brand:hospifarma|form:topical",
+      "cfmId": "CFM-009396",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|15000mg",
+      "canonicalName": "Hidrocortisona 1% Crema 15g",
+      "laboratory": "Hidrocortisona",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Hidrocortisona 1% Crema 15g",
+          "channels": {
+            "store": 5099,
+            "online": 4487,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4487
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hidrocortisona%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhidrocortisona-1-crema-15g%3Fdefault_sku%3D591012&cfmId=CFM-009404",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/144272/small/591012.jpg?1747238441",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 4487,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/144272/small/591012.jpg?1747238441",
+      "presentationKey": "hidrocortisona|15000mg|bio:unknown|brand:hidrocortisona|form:topical",
+      "cfmId": "CFM-009404",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|15000mg",
+      "canonicalName": "Hidrocortisona 1% crema 15g (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Hidrocortisona 1% crema 15g (Cenabast)",
+          "channels": {
+            "store": 4650,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4650
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=hidrocortisona%7C15000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhidrocortisona-1-crema-15g-cenabast%2F&cfmId=CFM-009404",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/05/hidrocortisona-1-crema-15g-bph-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 4650,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/05/hidrocortisona-1-crema-15g-bph-cenabast.jpg",
+      "presentationKey": "hidrocortisona|15000mg|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009404",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|20mg|20",
+      "canonicalName": "Hidrocortisona 20 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Hidrocortisona 20 mg x 20 Comprimidos",
+          "channels": {
+            "store": 5190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=hidrocortisona%7C20mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhidrocortisona-20-mg-x-20-comprimidos%2F&cfmId=CFM-008378",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/hidrocortisona-20-x-20.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Hidrocortisona 20 mg x 20 Comprimidos CHILE",
+          "channels": {
+            "store": 7742,
+            "online": null,
+            "cmr": 6824,
+            "sbpay": null,
+            "effective": 6824
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hidrocortisona%7C20mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhidrocortisona-20-mg-x-20-comprimidos-chile-547.html&cfmId=CFM-008378",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw189d9b77/images/products/547/547.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Hidrocortisona 20 mg 20 Comprimidos",
+          "channels": {
+            "store": 9090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=hidrocortisona%7C20mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fhidrocortisona-20-mg-20-comprimidos%2F2047.html&cfmId=CFM-008378",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd0888ad1/images/large/2047-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 5190,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd0888ad1/images/large/2047-1.jpg",
+      "presentationKey": "hidrocortisona|20mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-008378",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|20000mg|20",
+      "canonicalName": "Hidrocortisona 20g x 20 comprimidos (Laboratorio Chile)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Hidrocortisona 20g x 20 comprimidos (Laboratorio Chile)",
+          "channels": {
+            "store": 5190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5190
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=hidrocortisona%7C20000mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhidrocortisona-20g-laboratorio-chile-20-comprimidos%2F&cfmId=CFM-010735",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/03/hidrocortisona.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 5190,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/03/hidrocortisona.jpg",
+      "presentationKey": "hidrocortisona|20000mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-010735",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|20mg|20",
+      "canonicalName": "Hidrocortisona 20 mg x 20 comprimidos",
+      "laboratory": "LABORATORIO CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona 20 mg x 20 comprimidos. (Chile)",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona%7C20mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-20mg-x20com-chile&cfmId=CFM-008378",
+          "imageUrl": "https://farmacia.araucomed.com/3912-home_default/hidrocortisona-20mg-x20com-chile.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Hidrocortisona 20 mg x 20 comprimidos",
+          "channels": {
+            "store": 6690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=hidrocortisona%7C20mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fhidrocortisona-20-mg-x-20-comprimidos%3F_pos%3D2%26_psq%3Dhidrocortisona%26_psid%3D956104984%26_ss%3De&cfmId=CFM-008378",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/hidrocortisona-20-mg-x-20-comprimidos-laboratorio-chile-985468.jpg?v=1692989483",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/hidrocortisona-20-mg-x-20-comprimidos-laboratorio-chile-985468.jpg?v=1692989483",
+      "presentationKey": "hidrocortisona|20mg|20|bio:unknown|brand:chile|form:solid-oral",
+      "cfmId": "CFM-008378",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|15000mg|15",
+      "canonicalName": "Hidrocortisona Crema 1% x 15 g",
+      "laboratory": "BDH INDUSTRIES",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Hidrocortisona Crema 1% x 15 g",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=hidrocortisona%7C15000mg%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fhidrocortisona-crema-0-1-x-15-g%3F_pos%3D3%26_psq%3Dhidrocortisona%26_psid%3D956104984%26_ss%3De&cfmId=CFM-009845",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/hidrocortisona-crema-01-x-15-g-bdh-industries-995948.jpg?v=1692989495",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/hidrocortisona-crema-01-x-15-g-bdh-industries-995948.jpg?v=1692989495",
+      "presentationKey": "hidrocortisona|15000mg|15|bio:unknown|brand:bdhindustries|form:topical",
+      "cfmId": "CFM-009845",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|15000mg|15",
+      "canonicalName": "Hidrocortisona Crema 0,1% x 15 g",
+      "laboratory": "hospifarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Hidrocortisona Crema 0,1% x 15 g",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=hidrocortisona%7C15000mg%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fhidrocortisona-crema-0-1-x-15-gr%3F_pos%3D6%26_psq%3Dhidrocortisona%26_psid%3D956104984%26_ss%3De&cfmId=CFM-009845",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/hidrocortisona-crema-01-x-15-gr-hospifarma-867624.jpg?v=1692989714",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/hidrocortisona-crema-01-x-15-gr-hospifarma-867624.jpg?v=1692989714",
+      "presentationKey": "hidrocortisona|15000mg|15|bio:unknown|brand:hospifarma|form:topical",
+      "cfmId": "CFM-009845",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hipoge|10000mg",
+      "canonicalName": "Hipoge hidrocortisona 1 % ungüento dérmico 10 g",
+      "laboratory": "SMB PHARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Hipoge hidrocortisona 1 % ungüento dérmico 10 g",
+          "channels": {
+            "store": 6400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=hipoge%7C10000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fhipoge-hidrocortisona-acetato-1-unguento-dermico-10-gr%2Fp&cfmId=CFM-010331",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155439/CH5180-1.jpg?v=639074524458970000",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 6400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155439/CH5180-1.jpg?v=639074524458970000",
+      "presentationKey": "hipoge|10000mg|bio:false|brand:smbpharma|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-010331",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hipoge",
+      "canonicalName": "Hipoge 1% ungüento 10 gramos",
+      "laboratory": "Smb Farma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hipoge 1% ungüento 10 gramos",
+          "channels": {
+            "store": 6490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hipoge&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhipoge-1-unguento-x10g&cfmId=CFM-009402",
+          "imageUrl": "https://farmacia.araucomed.com/8201-home_default/hipoge-1-unguento-x10g.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 6490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8201-home_default/hipoge-1-unguento-x10g.jpg",
+      "presentationKey": "hipoge|bio:unknown|brand:smbfarma|form:topical",
+      "cfmId": "CFM-009402",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hidrocortisona|15000mg",
+      "canonicalName": "Hidrocortisona 1 % crema tópica 15 g",
+      "laboratory": "ASCEND",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Hidrocortisona 1 % crema tópica 15 g",
+          "channels": {
+            "store": 6800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6800
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=hidrocortisona%7C15000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fhidrocortisona-1-crema-topica-tubo-15-gr%2Fp&cfmId=CFM-009404",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160780/CH5915-01-ASCEND.jpg?v=639160218980970000",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 6800,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160780/CH5915-01-ASCEND.jpg?v=639160218980970000",
+      "presentationKey": "hidrocortisona|15000mg|bio:false|brand:ascend|form:topical",
+      "cfmId": "CFM-009404",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hipoge",
+      "canonicalName": "Hipoge Hidrocortisona Acetato 10 Gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Hipoge Hidrocortisona Acetato 10 Gr",
+          "channels": {
+            "store": 6980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=hipoge&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhipoge-hidrocortisona-acetato-10-gr%2F&cfmId=CFM-009402",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/3070230.webp",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 6980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/3070230.webp",
+      "presentationKey": "hipoge|bio:unknown|brand:unknown|var:hidrocortisona",
+      "cfmId": "CFM-009402",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|20mg|20",
+      "canonicalName": "Hidrocortisona 20 mg 20 comprimidos",
+      "laboratory": "TEVA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Hidrocortisona 20 mg 20 comprimidos",
+          "channels": {
+            "store": 7400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=hidrocortisona%7C20mg%7C20&url=https%3A%2F%2Fwww.drsimi.cl%2Fhidrocortisona-20mg-20comp-ch6109-1%2Fp&cfmId=CFM-008378",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157637/CH6109.jpg?v=638293553754570000",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 7400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157637/CH6109.jpg?v=638293553754570000",
+      "presentationKey": "hidrocortisona|20mg|20|bio:false|brand:teva|form:solid-oral",
+      "cfmId": "CFM-008378",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|20mg|20",
+      "canonicalName": "Hidrocortisona 20mg 20 Comprimidos",
+      "laboratory": "Hidrocortisona",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Hidrocortisona 20mg 20 Comprimidos",
+          "channels": {
+            "store": 8799,
+            "online": 7743,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7743
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hidrocortisona%7C20mg%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhidrocortisona-20mg-20-comprimidos%3Fdefault_sku%3D431746&cfmId=CFM-008378",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/66827/small/431746.jpg?1642784146",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 7743,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/66827/small/431746.jpg?1642784146",
+      "presentationKey": "hidrocortisona|20mg|20|bio:unknown|brand:hidrocortisona|form:solid-oral",
+      "cfmId": "CFM-008378",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|20mg",
+      "canonicalName": "Hidrocortisona 20 mg 20...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Hidrocortisona 20 mg 20...",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=hidrocortisona%7C20mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24651-hidrocortisona-20-mg-x-20.html&cfmId=CFM-014772",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "hidrocortisona|20mg|bio:unknown|brand:unknown",
+      "cfmId": "CFM-014772",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona",
+      "canonicalName": "Hidrocortisona Acetato 1%...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Hidrocortisona Acetato 1%...",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=hidrocortisona&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102962-hidrocortisona-acetato-1-15-gramos.html&cfmId=CFM-009396",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "hidrocortisona|bio:unknown|brand:gramos",
+      "cfmId": "CFM-009396",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|100mg|10",
+      "canonicalName": "Hidrocortisona I.M/I.V 100 mg x 10 frascos ampollas",
+      "laboratory": "Mediven",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Hidrocortisona I.M/I.V 100 mg x 10 frascos ampollas",
+          "channels": {
+            "store": 8890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=hidrocortisona%7C100mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fhidrocortisona-i-m-i-v-100-mg-x-10-frascos-ampollas%3F_pos%3D1%26_psq%3Dhidrocortisona%26_psid%3D956104984%26_ss%3De&cfmId=CFM-009145",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/hidrocortisona-imiv-100-mg-x-10-frascos-ampollas-mediven-355113.webp?v=1779474177",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 8890,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/hidrocortisona-imiv-100-mg-x-10-frascos-ampollas-mediven-355113.webp?v=1779474177",
+      "presentationKey": "hidrocortisona|100mg|10|bio:unknown|brand:mediven|var:m|form:injectable",
+      "cfmId": "CFM-009145",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hipogeu|15000mg|15",
+      "canonicalName": "Hipoge-U 1 % x 15 g Crema Dérmica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Hipoge-U 1 % x 15 g Crema Dérmica",
+          "channels": {
+            "store": 10573,
+            "online": null,
+            "cmr": 9329,
+            "sbpay": null,
+            "effective": 9329
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipogeu%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoge-u-1-x-15-g-crema-dermica-1123.html&cfmId=CFM-009843",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwaefdb410/images/products/1123/1123.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 9329,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwaefdb410/images/products/1123/1123.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "hipogeu|15000mg|15|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009843",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hipogeu|15000mg",
+      "canonicalName": "Hipoge-U Hidrocortisona 1% crema 15g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Hipoge-U Hidrocortisona 1% crema 15g",
+          "channels": {
+            "store": 9980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=hipogeu%7C15000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhipoge-u-hidrocortisona-1-crema-15g%2F&cfmId=CFM-010736",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/10/7800016008709.png",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 9980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/10/7800016008709.png",
+      "presentationKey": "hipogeu|15000mg|bio:unknown|brand:unknown|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-010736",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "otexhc|5ml|5",
+      "canonicalName": "Otex Hc solución ótica x 5 ml.",
+      "laboratory": "D&M Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Otex Hc solución ótica x 5 ml.",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=otexhc%7C5ml%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Foido-y-vertigo%2Fotex-hc-solucion-otica-5ml&cfmId=CFM-009849",
+          "imageUrl": "https://farmacia.araucomed.com/3970-home_default/otex-hc-solucion-otica-5ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3970-home_default/otex-hc-solucion-otica-5ml.jpg",
+      "presentationKey": "otexhc|5ml|5|bio:unknown|brand:dmpharma|form:ophthalmic",
+      "cfmId": "CFM-009849",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hidrocortisona|100mg|10",
+      "canonicalName": "Hidrocortisona I.M./I.V. 100 mg x 10 frasco ampolla. (Vitalis)",
+      "laboratory": "Vitalis",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona I.M./I.V. 100 mg x 10 frasco ampolla. (Vitalis)",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona%7C100mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-im-iv-100mg-x10-vitalis&cfmId=CFM-009145",
+          "imageUrl": "https://farmacia.araucomed.com/8916-home_default/hidrocortisona-im-iv-100mg-x10-vitalis.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8916-home_default/hidrocortisona-im-iv-100mg-x10-vitalis.jpg",
+      "presentationKey": "hidrocortisona|100mg|10|bio:unknown|brand:vitalis|var:m|form:injectable",
+      "cfmId": "CFM-009145",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hialub|100mg|10",
+      "canonicalName": "Hialub Inyectable I.M./I.V. 100mg x 10 frasco ampollas",
+      "laboratory": "Opko",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hialub Inyectable I.M./I.V. 100mg x 10 frasco ampollas",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hialub%7C100mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhialub-im-iv-100mg-x-10-ampollas&cfmId=CFM-010737",
+          "imageUrl": "https://farmacia.araucomed.com/10226-home_default/hialub-im-iv-100mg-x-10-ampollas.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10226-home_default/hialub-im-iv-100mg-x-10-ampollas.jpg",
+      "presentationKey": "hialub|100mg|10|bio:unknown|brand:opko|var:m|form:injectable",
+      "cfmId": "CFM-010737",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hipoge|10000mg|10",
+      "canonicalName": "Hipoge 1 % x 10 g Unguento Dermico",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Hipoge 1 % x 10 g Unguento Dermico",
+          "channels": {
+            "store": 13749,
+            "online": null,
+            "cmr": 10312,
+            "sbpay": null,
+            "effective": 10312
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipoge%7C10000mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoge-1-x-10-g-unguento-dermico-720.html&cfmId=CFM-009844",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc711f553/images/products/720/720.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 10312,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc711f553/images/products/720/720.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "hipoge|10000mg|10|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009844",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hipogeu|15000mg",
+      "canonicalName": "Hipoge-U Hidrocortisona 1% Crema Tópica 15g",
+      "laboratory": "Hipoge-U",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Hipoge-U Hidrocortisona 1% Crema Tópica 15g",
+          "channels": {
+            "store": 12099,
+            "online": 10647,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10647
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hipogeu%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhipoge-u-hidrocortisona-1-crema-topica-15g%3Fdefault_sku%3D3070235&cfmId=CFM-010736",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28497/small/3070235.jpg?1641477903",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 10647,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28497/small/3070235.jpg?1641477903",
+      "presentationKey": "hipogeu|15000mg|bio:unknown|brand:hipogeu|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-010736",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "otexhc|5ml|5",
+      "canonicalName": "Otex Hc x 5 mL Suspensión Otica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Otex Hc x 5 mL Suspensión Otica",
+          "channels": {
+            "store": 12095,
+            "online": null,
+            "cmr": 10672,
+            "sbpay": null,
+            "effective": 10672
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=otexhc%7C5ml%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fotex-hc-x-5-ml-suspension-otica-45092.html&cfmId=CFM-009849",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4a59ff80/images/products/45092/45092.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 10672,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4a59ff80/images/products/45092/45092.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "otexhc|5ml|5|bio:unknown|brand:unknown|form:ophthalmic",
+      "cfmId": "CFM-009849",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "calmurid|15000mg",
+      "canonicalName": "Calmurid 1% crema 15g",
+      "laboratory": "Royal Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Calmurid 1% crema 15g",
+          "channels": {
+            "store": 11490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=calmurid%7C15000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fcalmurid-1-crema-15g&cfmId=CFM-009403",
+          "imageUrl": "https://farmacia.araucomed.com/5705-home_default/calmurid-1-crema-15g.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 11490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5705-home_default/calmurid-1-crema-15g.jpg",
+      "presentationKey": "calmurid|15000mg|bio:unknown|brand:royalpharma|form:topical",
+      "cfmId": "CFM-009403",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hipoge|10000mg",
+      "canonicalName": "Hipoge Hidrocortisona 1% Ungüento Dérmico 10g",
+      "laboratory": "Hipoge",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Hipoge Hidrocortisona 1% Ungüento Dérmico 10g",
+          "channels": {
+            "store": 13199,
+            "online": 11615,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11615
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hipoge%7C10000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhipoge-hidrocortisona-1-unguento-dermico-10g%3Fdefault_sku%3D3070230&cfmId=CFM-010331",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28496/small/3070230.jpg?1641477903",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 11615,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28496/small/3070230.jpg?1641477903",
+      "presentationKey": "hipoge|10000mg|bio:unknown|brand:hipoge|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-010331",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "proctoran|30000mg",
+      "canonicalName": "Proctoran 1% Pomada 30g",
+      "laboratory": "Faes Farma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Proctoran 1% Pomada 30g",
+          "channels": {
+            "store": 11690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=proctoran%7C30000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fproctoran-1-pomada-30g&cfmId=CFM-010684",
+          "imageUrl": "https://farmacia.araucomed.com/10303-home_default/proctoran-1-pomada-30g.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 11690,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10303-home_default/proctoran-1-pomada-30g.jpg",
+      "presentationKey": "proctoran|30000mg|bio:unknown|brand:faesfarma|form:topical",
+      "cfmId": "CFM-010684",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hidrocortisona|100mg|10",
+      "canonicalName": "Hidrocortisona 100 Mg X 10...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Hidrocortisona 100 Mg X 10...",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=hidrocortisona%7C100mg%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104896-hidrocortisona-100-mg-x-10-frascos-vitalis.html&cfmId=CFM-009145",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 11990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "hidrocortisona|100mg|10|bio:unknown|brand:vitalis",
+      "cfmId": "CFM-009145",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "otexhc|5ml",
+      "canonicalName": "Otex HC Ciprofloxacino / Hidrocortisona Solución Ótica 5ml",
+      "laboratory": "Otex",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Otex HC Ciprofloxacino / Hidrocortisona Solución Ótica 5ml",
+          "channels": {
+            "store": 13799,
+            "online": 12143,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12143
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=otexhc%7C5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fotex-hc-ciprofloxacino-hidrocortisona-solucion-otica-5ml%3Fdefault_sku%3D851136&cfmId=CFM-010738",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27810/small/851136.jpg?1641479712",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 12143,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27810/small/851136.jpg?1641479712",
+      "presentationKey": "otexhc|5ml|bio:unknown|brand:otex|combo:hidrocortisona|form:ophthalmic",
+      "cfmId": "CFM-010738",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hipogeu",
+      "canonicalName": "Hipoge-U Hidrocortisona 1% Crema Dérmica 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Hipoge-U Hidrocortisona 1% Crema Dérmica 15 gr",
+          "channels": {
+            "store": 12190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=hipogeu&url=https%3A%2F%2Fwww.cruzverde.cl%2Fhipoge-u-hidrocortisona-1-crema-dermica-15-gr%2F53040.html&cfmId=CFM-008376",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw98eadf13/images/large/53040-hipoge-u-hidrocortisona-1-crema-dermica-15-gr.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 12190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw98eadf13/images/large/53040-hipoge-u-hidrocortisona-1-crema-dermica-15-gr.jpg",
+      "presentationKey": "hipogeu|bio:unknown|brand:unknown|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-008376",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "proctoran",
+      "canonicalName": "Proctoran Pomada 30 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Proctoran Pomada 1,116% 30 Gr",
+          "channels": {
+            "store": 12990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=proctoran&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102966-proctoran-pomada-1116-30-gr.html&cfmId=CFM-008379",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.432Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Proctoran Pomada 30 gr",
+          "channels": {
+            "store": 22990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=proctoran&url=https%3A%2F%2Fwww.cruzverde.cl%2Fproctoran-pomada-30-gr%2F269999.html&cfmId=CFM-008379",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6cb8bae7/images/large/269999-proctoran-pomada-30-gr.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 12990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6cb8bae7/images/large/269999-proctoran-pomada-30-gr.jpg",
+      "presentationKey": "proctoran|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-008379",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "otexhc|5ml|5",
+      "canonicalName": "Otex HC Gotas Oticas x 5ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Otex HC Gotas Oticas x 5ml",
+          "channels": {
+            "store": 12990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=otexhc%7C5ml%7C5&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25195-otex-hc-gotas-oticas-x-5ml.html&cfmId=CFM-009849",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.432Z"
+        }
+      ],
+      "bestPrice": 12990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "otexhc|5ml|5|bio:unknown|brand:unknown|var:oticas|form:fluid-oral",
+      "cfmId": "CFM-009849",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "dermadril|100000mg",
+      "canonicalName": "Dermadril Hidrocortisona 1% Emulsión Fluida 100g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Dermadril Hidrocortisona 1% Emulsión Fluida 100g",
+          "channels": {
+            "store": 13450,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13450
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=dermadril%7C100000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdermadril-hidrocortisona-1-emulsion-fluida-100g%2F&cfmId=CFM-009674",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/05/dermadril-100g.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 13450,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/05/dermadril-100g.jpg",
+      "presentationKey": "dermadril|100000mg|bio:unknown|brand:unknown|var:hidrocortisona|form:fluid-oral",
+      "cfmId": "CFM-009674",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dermadril|100000mg|100",
+      "canonicalName": "Dermadril 1 % x 100 g Emulsion Fluida",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Dermadril 1 % x 100 g Emulsion Fluida",
+          "channels": {
+            "store": 17995,
+            "online": null,
+            "cmr": 13496,
+            "sbpay": null,
+            "effective": 13496
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=dermadril%7C100000mg%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdermadril-1-x-100-g-emulsion-fluida-93251.html&cfmId=CFM-008568",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd1ae1d54/images/products/93251/93251.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 13496,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd1ae1d54/images/products/93251/93251.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "dermadril|100000mg|100|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-008568",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "microcort|30000mg",
+      "canonicalName": "Microcort Crema Topica 1% 30g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Microcort Crema Topica 1% 30g",
+          "channels": {
+            "store": 18899,
+            "online": null,
+            "cmr": 14174,
+            "sbpay": null,
+            "effective": 14174
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=microcort%7C30000mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmicrocort-crema-topica-1-30g-93077.html&cfmId=CFM-009847",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw81ebad6a/images/products/93077/93077.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 14174,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw81ebad6a/images/products/93077/93077.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "microcort|30000mg|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009847",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "calmurid|100ml",
+      "canonicalName": "Calmurid Locion 1% 100ml",
+      "laboratory": "Royal Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Calmurid Locion 1% 100ml",
+          "channels": {
+            "store": 14990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=calmurid%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fcalmurid-locion-1-100ml&cfmId=CFM-009405",
+          "imageUrl": "https://farmacia.araucomed.com/5704-home_default/calmurid-locion-1-100ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 14990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5704-home_default/calmurid-locion-1-100ml.jpg",
+      "presentationKey": "calmurid|100ml|bio:unknown|brand:royalpharma|form:topical",
+      "cfmId": "CFM-009405",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "dermadril",
+      "canonicalName": "Dermadril Emulsion 1% 100 Gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Dermadril Emulsion 1% 100 Gr",
+          "channels": {
+            "store": 14990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=dermadril&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103917-dermadril-emulsion-1-100-gr.html&cfmId=CFM-006782",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 14990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "dermadril|bio:unknown|brand:unknown|var:emulsion|form:fluid-oral",
+      "cfmId": "CFM-006782",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "dermadril|100000mg",
+      "canonicalName": "Dermadril Hidrocortisona 1% Emulsión Fluida 100g",
+      "laboratory": "Dermadril",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Dermadril Hidrocortisona 1% Emulsión Fluida 100g",
+          "channels": {
+            "store": 18499,
+            "online": 16279,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16279
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=dermadril%7C100000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdermadril-hidrocortisona-1-emulsion-fluida-100g%3Fdefault_sku%3D585180&cfmId=CFM-009674",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/96834/small/585180-1.jpg?1691609775",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 16279,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/96834/small/585180-1.jpg?1691609775",
+      "presentationKey": "dermadril|100000mg|bio:unknown|brand:dermadril|var:hidrocortisona|form:fluid-oral",
+      "cfmId": "CFM-009674",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrosoft|30000mg|30",
+      "canonicalName": "Hidrosoft Crema 0.5 % x 30 g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Hidrosoft 0.5 % x 30 g Crema Tópica",
+          "channels": {
+            "store": 21779,
+            "online": null,
+            "cmr": 16334,
+            "sbpay": null,
+            "effective": 16334
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hidrosoft%7C30000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhidrosoft-0.5-x-30-g-crema-topica-89409.html&cfmId=CFM-009406",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwda18cbdd/images/products/89409/89409.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Hidrosoft Crema 0.5 % x 30 g",
+          "channels": {
+            "store": 17990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=hidrosoft%7C30000mg%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102812-hidrosoft-crema-05-x-30-g.html&cfmId=CFM-009406",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 16334,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwda18cbdd/images/products/89409/89409.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "hidrosoft|30000mg|30|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009406",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "proctoran|30000mg|30",
+      "canonicalName": "Proctoran 1 % x 30 g Pomada",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Proctoran 1 % x 30 g Pomada",
+          "channels": {
+            "store": 18555,
+            "online": null,
+            "cmr": 16372,
+            "sbpay": null,
+            "effective": 16372
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=proctoran%7C30000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fproctoran-1-x-30-g-pomada-77174.html&cfmId=CFM-009848",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw79627142/images/products/77174/77174.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 16372,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw79627142/images/products/77174/77174.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "proctoran|30000mg|30|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009848",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "microcort|30000mg",
+      "canonicalName": "Microcort Hidrocortisona 1% Crema 30g",
+      "laboratory": "Microcort",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Microcort Hidrocortisona 1% Crema 30g",
+          "channels": {
+            "store": 20199,
+            "online": 17775,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17775
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=microcort%7C30000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmicrocort-hidrocortisona-1-crema-30g%3Fdefault_sku%3D589174&cfmId=CFM-009847",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/124588/small/589174.jpg?1729711104",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 17775,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/124588/small/589174.jpg?1729711104",
+      "presentationKey": "microcort|30000mg|bio:unknown|brand:microcort|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-009847",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pandel|15",
+      "canonicalName": "Pandel Crema 0,1% x 15 gramos.",
+      "laboratory": "Andrómaco",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Pandel Crema 0,1% x 15 gramos.",
+          "channels": {
+            "store": 17990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=pandel%7C15&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fpandel-crema-15g&cfmId=CFM-009397",
+          "imageUrl": "https://farmacia.araucomed.com/8194-home_default/pandel-crema-15g.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 17990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8194-home_default/pandel-crema-15g.jpg",
+      "presentationKey": "pandel|15|bio:unknown|brand:andromaco|form:topical",
+      "cfmId": "CFM-009397",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "microcort|100ml",
+      "canonicalName": "Microcort Hidrocortisona 1% Loción Tópica 100ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Microcort Hidrocortisona 1% Loción Tópica 100ml",
+          "channels": {
+            "store": 17990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=microcort%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmicrocort-hidrocortisona-1-locion-topica-100ml%2F&cfmId=CFM-008536",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/microcort-100-g.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 17990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/microcort-100-g.jpg",
+      "presentationKey": "microcort|100ml|bio:unknown|brand:unknown|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-008536",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrosoft|30000mg",
+      "canonicalName": "Hidrosoft Hidrocortisona 0.5% Crema Tópica 30g",
+      "laboratory": "Hidrosoft",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Hidrosoft Hidrocortisona 0.5% Crema Tópica 30g",
+          "channels": {
+            "store": 20899,
+            "online": 18391,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18391
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hidrosoft%7C30000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhidrosoft-hidrocortisona-0-5-crema-topica-30g%3Fdefault_sku%3D579613&cfmId=CFM-009084",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/63966/small/579613.jpg?1641328798",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 18391,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/63966/small/579613.jpg?1641328798",
+      "presentationKey": "hidrosoft|30000mg|bio:unknown|brand:hidrosoft|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-009084",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "microcort|100000mg|100",
+      "canonicalName": "Microcort 1 % x 100 g Loción Tópica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Microcort 1 % x 100 g Loción Tópica",
+          "channels": {
+            "store": 24759,
+            "online": null,
+            "cmr": 18569,
+            "sbpay": null,
+            "effective": 18569
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=microcort%7C100000mg%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmicrocort-1-x-100-g-locion-topica-84778.html&cfmId=CFM-009850",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb6352ef5/images/products/84778/84778.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 18569,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb6352ef5/images/products/84778/84778.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "microcort|100000mg|100|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009850",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "proctoran|30000mg",
+      "canonicalName": "Proctoran Hidrocortisona 1.116% Crema 30g",
+      "laboratory": "Hidrocortisona",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Proctoran Hidrocortisona 1.116% Crema 30g",
+          "channels": {
+            "store": 21199,
+            "online": 18655,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18655
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=proctoran%7C30000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhidrocortisona-1-topico-semisolido%3Fdefault_sku%3D3341027&cfmId=CFM-010684",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/26455/small/3341027_Proctoran.jpg?1641479780",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 18655,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/26455/small/3341027_Proctoran.jpg?1641479780",
+      "presentationKey": "proctoran|30000mg|bio:unknown|brand:hidrocortisona|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-010684",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "efficort|30",
+      "canonicalName": "Efficort crema lipofílica 0,127% x 30 gramos.",
+      "laboratory": "D&M Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Efficort crema lipofílica 0,127% x 30 gramos.",
+          "channels": {
+            "store": 18990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=efficort%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fefficort-crema-lipofilica-0127-x-30-gramos&cfmId=CFM-009400",
+          "imageUrl": "https://farmacia.araucomed.com/12772-home_default/efficort-crema-lipofilica-0127-x-30-gramos.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 18990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12772-home_default/efficort-crema-lipofilica-0127-x-30-gramos.jpg",
+      "presentationKey": "efficort|30|bio:unknown|brand:dmpharma|var:lipofilica|form:topical",
+      "cfmId": "CFM-009400",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "microcort",
+      "canonicalName": "Microcort loción tópica 1%...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Microcort loción tópica 1%...",
+          "channels": {
+            "store": 18990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=microcort&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102516-microcort-locion-topica-1-100-g.html&cfmId=CFM-010578",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 18990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "microcort|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-010578",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "microcort|100ml",
+      "canonicalName": "Microcort Hidrocortisona 1% Loción Tópica 100ml",
+      "laboratory": "Microcort",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Microcort Hidrocortisona 1% Loción Tópica 100ml",
+          "channels": {
+            "store": 23699,
+            "online": 20855,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 20855
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=microcort%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmicrocort-hidrocortisona-1-locion-topica-100ml%3Fdefault_sku%3D851112&cfmId=CFM-008536",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27809/small/851112.jpg?1641479706",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 20855,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27809/small/851112.jpg?1641479706",
+      "presentationKey": "microcort|100ml|bio:unknown|brand:microcort|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-008536",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "efficort|30000mg|30",
+      "canonicalName": "Efficort x 30 g Crema Lipofílica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Efficort x 30 g Crema Lipofílica",
+          "channels": {
+            "store": 29799,
+            "online": null,
+            "cmr": 22349,
+            "sbpay": null,
+            "effective": 22349
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=efficort%7C30000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fefficort-x-30-g-crema-lipofilica-87878.html&cfmId=CFM-008377",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw31d17c25/images/products/87878/87878.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 22349,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw31d17c25/images/products/87878/87878.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "efficort|30000mg|30|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-008377",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "pandel",
+      "canonicalName": "Pandel crema 0,1% 15 gramos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Pandel crema 0,1% 15 gramos",
+          "channels": {
+            "store": 22990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=pandel&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26637-pandel-crema-01-x-15gr.html&cfmId=CFM-008381",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:49.432Z"
+        }
+      ],
+      "bestPrice": 22990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "pandel|bio:unknown|brand:15gr|form:topical",
+      "cfmId": "CFM-008381",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "calmurid|100000mg",
+      "canonicalName": "Calmurid 1% Hidrocortisona Loción Tópica 100g",
+      "laboratory": "Calmurid",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Calmurid 1% Hidrocortisona Loción Tópica 100g",
+          "channels": {
+            "store": 26199,
+            "online": 23055,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23055
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=calmurid%7C100000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcalmurid-1-hidrocortisona-locion-topica-100g%3Fdefault_sku%3D591622&cfmId=CFM-009837",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146736/small/591622.jpg?1749050107",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 23055,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146736/small/591622.jpg?1749050107",
+      "presentationKey": "calmurid|100000mg|bio:unknown|brand:calmurid|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-009837",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidrocortisona|500mg|10",
+      "canonicalName": "Hidrocortisona I.M./I.V. 500mg x10 (Vitalis)",
+      "laboratory": "Vitalis",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hidrocortisona I.M./I.V. 500mg x10 (Vitalis)",
+          "channels": {
+            "store": 24990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hidrocortisona%7C500mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fhidrocortisona-im-iv-500mg-x10-vitalis&cfmId=CFM-010739",
+          "imageUrl": "https://farmacia.araucomed.com/8736-home_default/hidrocortisona-im-iv-500mg-x10-vitalis.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 24990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8736-home_default/hidrocortisona-im-iv-500mg-x10-vitalis.jpg",
+      "presentationKey": "hidrocortisona|500mg|10|bio:unknown|brand:vitalis|var:m",
+      "cfmId": "CFM-010739",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "efficort|30000mg",
+      "canonicalName": "Efficort Hidrocortisona 0.127% Crema Lipofí­lica 30g",
+      "laboratory": "Efficort",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Efficort Hidrocortisona 0.127% Crema Lipofí­lica 30g",
+          "channels": {
+            "store": 28599,
+            "online": 25167,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25167
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=efficort%7C30000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fprincipio-activo-hidrocortisona-aceponato%3Fdefault_sku%3D574275&cfmId=CFM-005919",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/61164/small/Id-574275-Efficort.jpg?1641328932",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 25167,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/61164/small/Id-574275-Efficort.jpg?1641328932",
+      "presentationKey": "efficort|30000mg|bio:unknown|brand:efficort|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-005919",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pandel|15000mg|15",
+      "canonicalName": "Pandel 0,1 % x 15 g Crema Tópica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Pandel 0,1 % x 15 g Crema Tópica",
+          "channels": {
+            "store": 31398,
+            "online": null,
+            "cmr": 27704,
+            "sbpay": null,
+            "effective": 27704
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=pandel%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fpandel-0-1-x-15-g-crema-topica-9636.html&cfmId=CFM-009718",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw05218162/images/products/9636/9636.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 27704,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw05218162/images/products/9636/9636.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "pandel|15000mg|15|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009718",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nutracort|120ml|120",
+      "canonicalName": "Nutracort Locion 1% x 120 ml.",
+      "laboratory": "Galderma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Nutracort Locion 1% x 120 ml.",
+          "channels": {
+            "store": 27990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=nutracort%7C120ml%7C120&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fnutracort-locion-1-x-120-ml&cfmId=CFM-009398",
+          "imageUrl": "https://farmacia.araucomed.com/11946-home_default/nutracort-locion-1-x-120-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.431Z"
+        }
+      ],
+      "bestPrice": 27990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/11946-home_default/nutracort-locion-1-x-120-ml.jpg",
+      "presentationKey": "nutracort|120ml|120|bio:unknown|brand:galderma|form:topical",
+      "cfmId": "CFM-009398",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "fucidinh|15000mg|15",
+      "canonicalName": "Fucidin-H x 15 g Crema Tópica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Fucidin-H x 15 g Crema Tópica",
+          "channels": {
+            "store": 32894,
+            "online": null,
+            "cmr": 29024,
+            "sbpay": null,
+            "effective": 29024
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=fucidinh%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ffucidin-h-x-15-g-crema-topica-42890.html&cfmId=CFM-009846",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw26964278/images/products/42890/42890.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 29024,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw26964278/images/products/42890/42890.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "fucidinh|15000mg|15|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009846",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nutracort|120ml|120",
+      "canonicalName": "Nutracort 1 % x 120 mL Locion",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Nutracort 1 % x 120 mL Locion",
+          "channels": {
+            "store": 34390,
+            "online": null,
+            "cmr": 30344,
+            "sbpay": null,
+            "effective": 30344
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=nutracort%7C120ml%7C120&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnutracort-1-x-120-ml-locion-46110.html&cfmId=CFM-009398",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdc8231c5/images/products/46110/46110.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 30344,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdc8231c5/images/products/46110/46110.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "nutracort|120ml|120|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009398",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "pandel|15000mg",
+      "canonicalName": "Pandel 0,1% Hidrocortisona Crema Tópica 15g",
+      "laboratory": "Pandel",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Pandel 0,1% Hidrocortisona Crema Tópica 15g",
+          "channels": {
+            "store": 35799,
+            "online": 31503,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 31503
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=pandel%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpandel-0-1-hidrocortisona-crema-topica-15g%3Fdefault_sku%3D31483&cfmId=CFM-009717",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27412/small/31483.jpg?1641479743",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 31503,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27412/small/31483.jpg?1641479743",
+      "presentationKey": "pandel|15000mg|bio:unknown|brand:pandel|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-009717",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "fucidin|15000mg",
+      "canonicalName": "Fucidin H Ácido Fusí­dico / Hidrocortisona Crema 15g",
+      "laboratory": "Fucidin H",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Fucidin H Ácido Fusí­dico / Hidrocortisona Crema 15g",
+          "channels": {
+            "store": 37499,
+            "online": 32999,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 32999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=fucidin%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ffucidin-h-acido-fusi-dico-hidrocortisona-crema-15g%3Fdefault_sku%3D30546&cfmId=CFM-010740",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/33354/small/30546.jpg?1641477603",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 32999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/33354/small/30546.jpg?1641477603",
+      "presentationKey": "fucidin|15000mg|bio:unknown|brand:fucidinh|combo:hidrocortisona|form:topical",
+      "cfmId": "CFM-010740",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nutracort|120ml",
+      "canonicalName": "Nutracort Hidrocortisona 1% Loción 120ml",
+      "laboratory": "Nutracort",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Nutracort Hidrocortisona 1% Loción 120ml",
+          "channels": {
+            "store": 39199,
+            "online": 34495,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 34495
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nutracort%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhidrocortisona-1-topico-liquido-a3ca97c1-c7b1-4aab-a2b7-b0229133db3e%3Fdefault_sku%3D70135&cfmId=CFM-008380",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/34193/small/70135.jpg?1641477543",
+          "fetchedAt": "2026-08-31T01:24:49.430Z"
+        }
+      ],
+      "bestPrice": 34495,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/34193/small/70135.jpg?1641477543",
+      "presentationKey": "nutracort|120ml|bio:unknown|brand:nutracort|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-008380",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pandel",
+      "canonicalName": "Pandel Hidrocortisona 0,1% Crema Tópica 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Pandel Hidrocortisona 0,1% Crema Tópica 15 gr",
+          "channels": {
+            "store": 35540,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 35540
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=pandel&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpandel-hidrocortisona-0-1-crema-topica-15-gr%2F67305.html&cfmId=CFM-008381",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa5398bdf/images/large/67305-pandel-crema-topica-15-gr-hidrocortisona-01.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 35540,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa5398bdf/images/large/67305-pandel-crema-topica-15-gr-hidrocortisona-01.jpg",
+      "presentationKey": "pandel|bio:unknown|brand:unknown|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-008381",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nutracort|120ml",
+      "canonicalName": "Nutracort Hidrocortisona 1% Loción 120 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Nutracort Hidrocortisona 1% Loción 120 mL",
+          "channels": {
+            "store": 39190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 39190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=nutracort%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnutracort-hidrocortisona-1-locion-120-ml%2F252274.html&cfmId=CFM-008380",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw96ebb956/images/large/252274-nutracort-hidrocortisona-1-locion-120-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:49.429Z"
+        }
+      ],
+      "bestPrice": 39190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw96ebb956/images/large/252274-nutracort-hidrocortisona-1-locion-120-ml.jpg",
+      "presentationKey": "nutracort|120ml|bio:unknown|brand:unknown|var:hidrocortisona|form:topical",
+      "cfmId": "CFM-008380",
+      "lexicalMatch": "exact"
+    }
+  ]
+}

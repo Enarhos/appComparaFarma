@@ -1,0 +1,2124 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "ketoprofeno",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=ketoprofeno",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:25:11.653Z",
+  "completedAt": "2026-08-31T01:25:19.623Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 62,
+  "results": [
+    {
+      "matchKey": "ketoprofeno|2ml",
+      "canonicalName": "Ketoprofeno solución inyectable 100mg/2ml x 1 ampolla (Biosano)",
+      "laboratory": "Biosano",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ketoprofeno solución inyectable 100mg/2ml x 1 ampolla (Biosano)",
+          "channels": {
+            "store": 550,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 550
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ketoprofeno%7C2ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fketoprofeno-iny100mg-2ml-biosano&cfmId=CFM-003971",
+          "imageUrl": "https://farmacia.araucomed.com/8178-home_default/ketoprofeno-iny100mg-2ml-biosano.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 550,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8178-home_default/ketoprofeno-iny100mg-2ml-biosano.jpg",
+      "presentationKey": "ketoprofeno|2ml|bio:unknown|brand:biosano|form:injectable",
+      "cfmId": "CFM-003971",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg|20",
+      "canonicalName": "Ketoprofeno 50 mg x 20 (LCH) DESCUENTO caja arrugada",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ketoprofeno 50 mg x 20 (LCH) DESCUENTO caja arrugada",
+          "channels": {
+            "store": 600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 600
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fketoprofeno-50-mg-x-20-lch-descuento-caja-arrugada%2F&cfmId=CFM-002959",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/02/Ketoprofeno50mg.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 600,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/02/Ketoprofeno50mg.jpg",
+      "presentationKey": "ketoprofeno|50mg|20|bio:true|brand:unknown",
+      "cfmId": "CFM-002959",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|100mg",
+      "canonicalName": "Ketoprofeno Liofilizado para Inyectable 100mg Frasco Ampolla (Eurofarma)",
+      "laboratory": "Eurofarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ketoprofeno Liofilizado para Inyectable 100mg Frasco Ampolla (Eurofarma)",
+          "channels": {
+            "store": 800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 800
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ketoprofeno%7C100mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fketoprofeno-liofilizado-para-inyectable-100mg-frasco-ampolla-eurofarma&cfmId=CFM-003972",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 800,
+      "bestPharmacy": "araucomed",
+      "imageUrl": null,
+      "presentationKey": "ketoprofeno|100mg|bio:unknown|brand:eurofarma|var:liofilizado|form:injectable",
+      "cfmId": "CFM-003972",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|2ml",
+      "canonicalName": "Ketoprofeno Intravenoso 100mg/2ml Ampolla Vidrio (Fresenius)",
+      "laboratory": "Fresenius Kabi",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ketoprofeno Intravenoso 100mg/2ml Ampolla Vidrio (Fresenius)",
+          "channels": {
+            "store": 800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 800
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ketoprofeno%7C2ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fbioequivalentes%2Fketoprofeno-100mg-2ml-flex-fresenius&cfmId=CFM-003971",
+          "imageUrl": "https://farmacia.araucomed.com/11858-home_default/ketoprofeno-100mg-2ml-flex-fresenius.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 800,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/11858-home_default/ketoprofeno-100mg-2ml-flex-fresenius.jpg",
+      "presentationKey": "ketoprofeno|2ml|bio:unknown|brand:freseniuskabi|var:intravenoso|form:injectable",
+      "cfmId": "CFM-003971",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg|20",
+      "canonicalName": "Ketoprofeno 50mg 20  Cápsulas",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ketoprofeno 50 mg x 20 cápsulas",
+          "channels": {
+            "store": 1240,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1240
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fketoprofeno-50-mg-x-20-capsulas%2F&cfmId=CFM-002959",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/02/ketoprofeno-50mg-x-20-cap.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Ketoprofeno 50mg 20  Cápsulas",
+          "channels": {
+            "store": 1690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D14545%26d_%3D1&cfmId=CFM-002959",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800063120263.jpg?v=6a94d7fe26bdc",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Ketoprofeno 50 mg x 20 Cápsulas MINTLAB CO SA",
+          "channels": {
+            "store": 2834,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2834
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fketoprofeno-50-mg-x-20-capsulas-mintlab-co-sa-86456.html&cfmId=CFM-002959",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8ed65af0/images/products/86456/86456.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 1240,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800063120263.jpg?v=6a94d7fe26bdc",
+      "presentationKey": "ketoprofeno|50mg|20|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002959",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|200mg|10",
+      "canonicalName": "Ketoprofeno 200 mg x 10 comprimidos.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Ketoprofeno 200 mg x 10 comprimidos.",
+          "channels": {
+            "store": 1251,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1251
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=ketoprofeno%7C200mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fketoprofeno-200-mg-x-10-comprimidos%3F_pos%3D8%26_psq%3Dketoprofeno%26_psid%3Df182ed720%26_ss%3De&cfmId=CFM-001540",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/ketoprofeno-200-mg-x-10-comprimidos-mintlab-811457_538d6af6-9fd5-4e41-b7ad-352190357a31.webp?v=1787937448",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Ketoprofeno 200 mg 10 Comprimidos de Liberación Proolongada",
+          "channels": {
+            "store": 4190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=ketoprofeno%7C200mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fketoprofeno-200-mg-10-comprimidos-de-liberacion-proolongada%2F199354.html&cfmId=CFM-001540",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb54bdfb5/images/large/199354.1.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 1251,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/ketoprofeno-200-mg-x-10-comprimidos-mintlab-811457_538d6af6-9fd5-4e41-b7ad-352190357a31.webp?v=1787937448",
+      "presentationKey": "ketoprofeno|200mg|10|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001540",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg|20",
+      "canonicalName": "Ketoprofeno 50 mg x 20 cápsulas. (Mintlab)",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ketoprofeno 50 mg x 20 cápsulas. (Mintlab)",
+          "channels": {
+            "store": 1290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fketoprofeno-50mg-x20cap-mintlab&cfmId=CFM-002959",
+          "imageUrl": "https://farmacia.araucomed.com/3460-home_default/ketoprofeno-50mg-x20cap-mintlab.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 1290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3460-home_default/ketoprofeno-50mg-x20cap-mintlab.jpg",
+      "presentationKey": "ketoprofeno|50mg|20|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-002959",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg|20",
+      "canonicalName": "Ketoprofeno 50 mg x 20 cápsulas",
+      "laboratory": "Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Ketoprofeno 50 mg x 20 cápsulas",
+          "channels": {
+            "store": 1390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fketoprofeno-50-mg-x-20-capsulas%3F_pos%3D3%26_psq%3Dketoprofeno%26_psid%3Df182ed720%26_ss%3De&cfmId=CFM-002959",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/ketoprofeno-50-mg-x-20-capsulas-be-genericos-584460.jpg?v=1692989418",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ketoprofeno 50mg x20cap Chile (Cenabast)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fketoprofeno-50mg-x20cap-chile-cenabast&cfmId=CFM-002959",
+          "imageUrl": "https://farmacia.araucomed.com/10452-home_default/ketoprofeno-50mg-x20cap-chile-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 1390,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/ketoprofeno-50-mg-x-20-capsulas-be-genericos-584460.jpg?v=1692989418",
+      "presentationKey": "ketoprofeno|50mg|20|bio:unknown|brand:chile|form:solid-oral",
+      "cfmId": "CFM-002959",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|200mg|10",
+      "canonicalName": "Ketoprofeno 200 mg x 10 comprimidos",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Ketoprofeno 200 mg x 10 comprimidos",
+          "channels": {
+            "store": 1390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=ketoprofeno%7C200mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fketoprofeno-tabletas-ketoprofeno%3F_pos%3D2%26_psq%3Dketoprofeno%26_psid%3Df182ed720%26_ss%3De&cfmId=CFM-001540",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/ketoprofeno-200-mg-x-10-comprimidos-mintlab-811457.webp?v=1692989410",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 1390,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/ketoprofeno-200-mg-x-10-comprimidos-mintlab-811457.webp?v=1692989410",
+      "presentationKey": "ketoprofeno|200mg|10|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-001540",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|200mg|10",
+      "canonicalName": "Ketoprofeno T.U. 200 mg x 10 comprimidos. (Mintlab)",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ketoprofeno T.U. 200 mg x 10 comprimidos. (Mintlab)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ketoprofeno%7C200mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fketoprofeno-200mg-x10com-mintlab&cfmId=CFM-001540",
+          "imageUrl": "https://farmacia.araucomed.com/928-home_default/ketoprofeno-200mg-x10com-mintlab.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/928-home_default/ketoprofeno-200mg-x10com-mintlab.jpg",
+      "presentationKey": "ketoprofeno|200mg|10|bio:unknown|brand:mintlab|var:t|form:solid-oral",
+      "cfmId": "CFM-001540",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|2ml|5",
+      "canonicalName": "Ketoprofeno 100 mg / 2 mL x 5 ampollas",
+      "laboratory": "BIOSANO",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ketoprofeno Iny.100mg/2ml x5amp. Biosano (Cenabast)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ketoprofeno%7C2ml%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fketoprofeno-iny100mg-2ml-x5amp-biosano-cenabast&cfmId=CFM-003973",
+          "imageUrl": "https://farmacia.araucomed.com/9131-home_default/ketoprofeno-iny100mg-2ml-x5amp-biosano-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Ketoprofeno 100 mg / 2 mL x 5 ampollas",
+          "channels": {
+            "store": 6490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=ketoprofeno%7C2ml%7C5&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fketoprofeno-amp-ketoprofeno%3F_pos%3D4%26_psq%3Dketoprofeno%26_psid%3Df182ed720%26_ss%3De&cfmId=CFM-003973",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/ketoprofeno-100-mg2-ml-x-5-ampollas-biosano-481907.jpg?v=1692989519",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/ketoprofeno-100-mg2-ml-x-5-ampollas-biosano-481907.jpg?v=1692989519",
+      "presentationKey": "ketoprofeno|2ml|5|bio:unknown|brand:biosano|form:injectable",
+      "cfmId": "CFM-003973",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|200mg|10",
+      "canonicalName": "Ketoprofeno TU 200 mg x 10 Comprimidos de liberación prolongada (Mintlab)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ketoprofeno TU 200 mg x 10 Comprimidos de liberación prolongada (Mintlab)",
+          "channels": {
+            "store": 1680,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1680
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ketoprofeno%7C200mg%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fketoprofeno-200mg-x-10%2F&cfmId=CFM-001540",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/ketoprofeno-tu-200x10-1.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 1680,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/ketoprofeno-tu-200x10-1.jpg",
+      "presentationKey": "ketoprofeno|200mg|10|bio:unknown|brand:unknown|var:tu|form:solid-oral",
+      "cfmId": "CFM-001540",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg|20",
+      "canonicalName": "Ketoprofeno 50 mg 20 cápsulas",
+      "laboratory": "MILAB",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Ketoprofeno 50 mg 20 cápsulas",
+          "channels": {
+            "store": 1800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1800
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Fwww.drsimi.cl%2Fketoprofeno-50-mg-20-capsulas%2Fp&cfmId=CFM-002959",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157156/BE0007_1.jpg?v=638016063137130000",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 1800,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157156/BE0007_1.jpg?v=638016063137130000",
+      "presentationKey": "ketoprofeno|50mg|20|bio:true|brand:milab|form:solid-oral",
+      "cfmId": "CFM-002959",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|200mg",
+      "canonicalName": "Ketoprofeno T.U. 200 mg. 10...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Ketoprofeno T.U. 200 mg. 10...",
+          "channels": {
+            "store": 1890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=ketoprofeno%7C200mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26049-ketoprofeno-t-u-200mg-x-10.html&cfmId=CFM-003986",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 1890,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "ketoprofeno|200mg|bio:unknown|brand:unknown|var:t",
+      "cfmId": "CFM-003986",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg|20",
+      "canonicalName": "Ketoprofeno 50 mg x 20 capulas",
+      "laboratory": "MINTLAB",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Ketoprofeno 50 mg x 20 capulas",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fketoprofeno-50-mg-x-20-cap-mintlab%3F_pos%3D1%26_psq%3Dketoprofeno%26_psid%3Df182ed720%26_ss%3De&cfmId=CFM-002959",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/ketoprofeno-50-mg-x-20-capulas-mintlab-375939.webp?v=1692989441",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/ketoprofeno-50-mg-x-20-capulas-mintlab-375939.webp?v=1692989441",
+      "presentationKey": "ketoprofeno|50mg|20|bio:unknown|brand:mintlab",
+      "cfmId": "CFM-002959",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg",
+      "canonicalName": "Ketoprofeno 50 mg 20 caps",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Ketoprofeno 50 mg 20 caps",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=ketoprofeno%7C50mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102223-ketoprofeno-50-mg-20-caps.html&cfmId=CFM-003977",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "ketoprofeno|50mg|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-003977",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|60",
+      "canonicalName": "Ketoprofeno Gel 2,5% x 60 gramos. (Hospifarma)",
+      "laboratory": "Ascend",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ketoprofeno Gel 2,5% x 60 gramos. (Hospifarma)",
+          "channels": {
+            "store": 2200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2200
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ketoprofeno%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fketoprofeno-gel-25-x60g-hospifarma&cfmId=CFM-003974",
+          "imageUrl": "https://farmacia.araucomed.com/9508-home_default/ketoprofeno-gel-25-x60g-hospifarma.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 2200,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9508-home_default/ketoprofeno-gel-25-x60g-hospifarma.jpg",
+      "presentationKey": "ketoprofeno|60|bio:unknown|brand:ascend|form:topical",
+      "cfmId": "CFM-003974",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dolostat|100mg|20",
+      "canonicalName": "Dolostat 100mg x20com.",
+      "laboratory": "Eurofarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Dolostat 100mg x20com.",
+          "channels": {
+            "store": 2290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=dolostat%7C100mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fdolostat-100mg-x20com&cfmId=CFM-010831",
+          "imageUrl": "https://farmacia.araucomed.com/3593-home_default/dolostat-100mg-x20com.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 2290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3593-home_default/dolostat-100mg-x20com.jpg",
+      "presentationKey": "dolostat|100mg|20|bio:unknown|brand:eurofarma|form:solid-oral",
+      "cfmId": "CFM-010831",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ketoprofeno|200mg|10",
+      "canonicalName": "Ketoprofeno T.U. 200 mg 10 comprimidos con recubrimiento entérico de liberación prolongada",
+      "laboratory": "MILAB",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Ketoprofeno T.U. 200 mg 10 comprimidos con recubrimiento entérico de liberación prolongada",
+          "channels": {
+            "store": 2400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=ketoprofeno%7C200mg%7C10&url=https%3A%2F%2Fwww.drsimi.cl%2Fketoprofeno-t-u-200-mg-10-comprimidos-con-recubrimiento-enterico-de-liberacion-prolongada%2Fp&cfmId=CFM-001540",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160374/CH7221-01.jpg?v=639041050266030000",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 2400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160374/CH7221-01.jpg?v=639041050266030000",
+      "presentationKey": "ketoprofeno|200mg|10|bio:true|brand:milab|var:t|form:solid-oral",
+      "cfmId": "CFM-001540",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "relatene|100mg|20",
+      "canonicalName": "Relatene 100 mg x 20 comprimidos.",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Relatene 100 mg x 20 comprimidos.",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=relatene%7C100mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Frelatene-100mg-x20com&cfmId=CFM-000785",
+          "imageUrl": "https://farmacia.araucomed.com/7663-home_default/relatene-100mg-x20com.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7663-home_default/relatene-100mg-x20com.jpg",
+      "presentationKey": "relatene|100mg|20|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-000785",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ketoprofeno|60000mg",
+      "canonicalName": "Ketoprofeno Gel Topico 2,5% 60g (Ascend)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ketoprofeno Gel Topico 2,5% 60g (Ascend)",
+          "channels": {
+            "store": 2590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2590
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ketoprofeno%7C60000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fketoprofeno-gel-topico-25-60g%2F&cfmId=CFM-003975",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/08/7804650883845.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 2590,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/08/7804650883845.jpg",
+      "presentationKey": "ketoprofeno|60000mg|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-003975",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg|20",
+      "canonicalName": "Ketoprofeno 50 mg 20 Cápsulas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Ketoprofeno 50 mg 20 Cápsulas",
+          "channels": {
+            "store": 3140,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3140
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fketoprofeno-50-mg-20-capsulas%2F268664.html&cfmId=CFM-002959",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw64787ef8/images/large/268664-1.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 3140,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw64787ef8/images/large/268664-1.jpg",
+      "presentationKey": "ketoprofeno|50mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002959",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "relatene|100mg|10",
+      "canonicalName": "Relatene 100mg x10com",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Relatene 100mg x10com",
+          "channels": {
+            "store": 3290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=relatene%7C100mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Frelatene-100mg-x10com&cfmId=CFM-000768",
+          "imageUrl": "https://farmacia.araucomed.com/7662-home_default/relatene-100mg-x10com.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 3290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7662-home_default/relatene-100mg-x10com.jpg",
+      "presentationKey": "relatene|100mg|10|bio:unknown|brand:mintlab|form:solid-oral",
+      "cfmId": "CFM-000768",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ketoprofeno|60000mg",
+      "canonicalName": "Ketoprofeno 2,5 % gel tópico 60 g",
+      "laboratory": "ASCEND",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Ketoprofeno 2,5 % gel tópico 60 g",
+          "channels": {
+            "store": 3600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3600
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=ketoprofeno%7C60000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fketoprofeno-ca0268%2Fp&cfmId=CFM-003975",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159788/CA0268--1---ASCEND.jpg?v=638943632522130000",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 3600,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159788/CA0268--1---ASCEND.jpg?v=638943632522130000",
+      "presentationKey": "ketoprofeno|60000mg|bio:false|brand:ascend|form:topical",
+      "cfmId": "CFM-003975",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|200mg|10",
+      "canonicalName": "Ketoprofeno 200 mg x 10 Comprimidos con Recubrimiento Entérico de Liberación Prolongada MINTLAB CO SA",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Ketoprofeno 200 mg x 10 Comprimidos con Recubrimiento Entérico de Liberación Prolongada MINTLAB CO SA",
+          "channels": {
+            "store": 3770,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3770
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=ketoprofeno%7C200mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fketoprofeno-200-mg-x-10-comprimidos-con-recubrimiento-enterico-de-liberacion-prolongada-mintlab-co-sa-86628.html&cfmId=CFM-001540",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwebdbe9ab/images/products/86628/86628.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 3770,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwebdbe9ab/images/products/86628/86628.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "ketoprofeno|200mg|10|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001540",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "relatene|50mg|20",
+      "canonicalName": "Relatene 50 mg x 20 cápsulas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Relatene 50 mg x 20 cápsulas",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=relatene%7C50mg%7C20&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102773-relatene-50-mg-x-20-capsulas.html&cfmId=CFM-002883",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Relatene Ketoprofeno 50 mg 20 Cápsulas",
+          "channels": {
+            "store": 8140,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8140
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=relatene%7C50mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Frelatene-ketoprofeno-50-mg-20-capsulas%2F193028.html&cfmId=CFM-002883",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa4a52feb/images/large/193028-relatene-ketoprofeno-50-mg-20-capsulas.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa4a52feb/images/large/193028-relatene-ketoprofeno-50-mg-20-capsulas.jpg",
+      "presentationKey": "relatene|50mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002883",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "relatene|100mg|20",
+      "canonicalName": "Relatene 100 mg 20 comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Relatene 100 mg 20 comp",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=relatene%7C100mg%7C20&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F101977-relatene-100-mg-20-comp.html&cfmId=CFM-000785",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Relatene Ketoprofeno 100 mg 20 Comprimidos Recubiertos",
+          "channels": {
+            "store": 9390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=relatene%7C100mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Frelatene-ketoprofeno-100-mg-20-comprimidos-recubiertos%2F254475.html&cfmId=CFM-000785",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw51ed0fa7/images/large/254475.1.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw51ed0fa7/images/large/254475.1.jpg",
+      "presentationKey": "relatene|100mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000785",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno",
+      "canonicalName": "Ketoprofeno Gel 2.5% 60 Gr...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Ketoprofeno Gel 2.5% 60 Gr...",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=ketoprofeno&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104155-ketoprofeno-gel-25-60-gr-ascend.html&cfmId=CFM-003984",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "ketoprofeno|bio:unknown|brand:ascend|form:topical",
+      "cfmId": "CFM-003984",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "relatene|100mg|20",
+      "canonicalName": "Relatene Ketoprofeno 100 mg x 20 Com. Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Relatene Ketoprofeno 100 mg x 20 Com. Recubiertos",
+          "channels": {
+            "store": 4980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4980
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=relatene%7C100mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Frelatene-ketoprofeno-100-mg-x-20-com-recubiertos%2F&cfmId=CFM-000785",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/08/relatene-100-mg-x-20.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 4980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/08/relatene-100-mg-x-20.jpg",
+      "presentationKey": "relatene|100mg|20|bio:true|brand:unknown",
+      "cfmId": "CFM-000785",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "winasorb|60ml|60",
+      "canonicalName": "Winasorb Jarabe 150mg/5ml x 60 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Winasorb Jarabe 150mg/5ml x 60 ml.",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=winasorb%7C60ml%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fwinasorb-jarabe-150mg-5ml-x60ml&cfmId=CFM-000052",
+          "imageUrl": "https://farmacia.araucomed.com/7593-home_default/winasorb-jarabe-150mg-5ml-x60ml.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7593-home_default/winasorb-jarabe-150mg-5ml-x60ml.jpg",
+      "presentationKey": "winasorb|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000052",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "relatene|100mg|10",
+      "canonicalName": "Relatene Ketoprofeno 100 mg 10 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Relatene Ketoprofeno 100 mg 10 Comprimidos Recubiertos",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=relatene%7C100mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Frelatene-ketoprofeno-100-mg-10-comprimidos-recubiertos%2F254476.html&cfmId=CFM-000768",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw909e425b/images/large/254476-relatene-comprimido-recubierto-10-unidades-ketoprofeno-100-mg.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw909e425b/images/large/254476-relatene-comprimido-recubierto-10-unidades-ketoprofeno-100-mg.jpg",
+      "presentationKey": "relatene|100mg|10|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000768",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|50mg|20",
+      "canonicalName": "Ketoprofeno (B) 50mg 20 Cápsulas",
+      "laboratory": "Ketoprofeno",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ketoprofeno (B) 50mg 20 Cápsulas",
+          "channels": {
+            "store": 6399,
+            "online": 5631,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5631
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ketoprofeno%7C50mg%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fketoprofeno-b-50mg-20-capsulas%3Fdefault_sku%3D437795&cfmId=CFM-002959",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27746/small/437795.jpg?1641479715",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 5631,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27746/small/437795.jpg?1641479715",
+      "presentationKey": "ketoprofeno|50mg|20|bio:unknown|brand:ketoprofeno|form:solid-oral",
+      "cfmId": "CFM-002959",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|2ml|5",
+      "canonicalName": "Ketoprofeno 100 mg/2Ml 5 Ampollas (Biosano)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ketoprofeno 100 mg/2Ml 5 Ampollas (Biosano)",
+          "channels": {
+            "store": 5980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ketoprofeno%7C2ml%7C5&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fketoprofeno-100-mg-2ml-5-ampollas-biosano%2F&cfmId=CFM-003973",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/08/0e03bb5be2edf9c2ba5315995bd3701fdffdd20bc5d224bec3011acb279f6a5e.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Ketoprofeno 100 mg/2 ml x 5 Ampollas Solución Inyectable IV BIOSANO",
+          "channels": {
+            "store": 10430,
+            "online": null,
+            "cmr": 8999,
+            "sbpay": null,
+            "effective": 8999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=ketoprofeno%7C2ml%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fketoprofeno-100-mg-2-ml-x-5-ampollas-solucion-inyectable-iv-biosano-74656.html&cfmId=CFM-003973",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7a798d80/images/products/74656/74656.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 5980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/08/0e03bb5be2edf9c2ba5315995bd3701fdffdd20bc5d224bec3011acb279f6a5e.jpg",
+      "presentationKey": "ketoprofeno|2ml|5|bio:unknown|brand:unknown|form:injectable",
+      "cfmId": "CFM-003973",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|60000mg",
+      "canonicalName": "Ketoprofeno Gel 60g",
+      "laboratory": "Ketoprofeno",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ketoprofeno Gel 60g",
+          "channels": {
+            "store": 7399,
+            "online": 6511,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6511
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ketoprofeno%7C60000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fascend-ketoprofeno-gel-60g%3Fdefault_sku%3D577213&cfmId=CFM-003975",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/58759/small/577213.jpg?1641329093",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 6511,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/58759/small/577213.jpg?1641329093",
+      "presentationKey": "ketoprofeno|60000mg|bio:unknown|brand:ketoprofeno|form:topical",
+      "cfmId": "CFM-003975",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|200mg|10",
+      "canonicalName": "Ketoprofeno 200mg 10 Comprimidos Prolongados",
+      "laboratory": "Ketoprofeno",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ketoprofeno 200mg 10 Comprimidos Prolongados",
+          "channels": {
+            "store": 7799,
+            "online": 6863,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6863
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ketoprofeno%7C200mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fketoprofeno-200mg-10-comprimidos-prolongados%3Fdefault_sku%3D2631144&cfmId=CFM-001540",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/43897/small/7800063111445_1.jpg?1641476941",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 6863,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/43897/small/7800063111445_1.jpg?1641476941",
+      "presentationKey": "ketoprofeno|200mg|10|bio:unknown|brand:ketoprofeno|form:solid-oral",
+      "cfmId": "CFM-001540",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "naxpet|10mg|10",
+      "canonicalName": "Naxpet Perro y gato 10 mg x 10 comprimidos.",
+      "laboratory": "Drag Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Naxpet Perro y gato 10 mg x 10 comprimidos.",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=naxpet%7C10mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fveterinarios%2Fnaxpet-perro-y-gato-10mg-x10com&cfmId=CFM-003991",
+          "imageUrl": "https://farmacia.araucomed.com/8258-home_default/naxpet-perro-y-gato-10mg-x10com.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 6990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8258-home_default/naxpet-perro-y-gato-10mg-x10com.jpg",
+      "presentationKey": "naxpet|10mg|10|bio:unknown|brand:dragpharma|var:perro|form:solid-oral",
+      "cfmId": "CFM-003991",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "naxpet|20ml|20",
+      "canonicalName": "Naxpet Perro y gato suspension oral 0,4% x20ml",
+      "laboratory": "Drag Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Naxpet Perro y gato suspension oral 0,4% x20ml",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=naxpet%7C20ml%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fveterinarios%2Fnaxpet-perro-y-gato-suspension-oral-04-x20ml&cfmId=CFM-003989",
+          "imageUrl": "https://farmacia.araucomed.com/8248-home_default/naxpet-perro-y-gato-suspension-oral-04-x20ml.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 6990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8248-home_default/naxpet-perro-y-gato-suspension-oral-04-x20ml.jpg",
+      "presentationKey": "naxpet|20ml|20|bio:unknown|brand:dragpharma|var:perro|form:fluid-oral",
+      "cfmId": "CFM-003989",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "naxpet|10mg",
+      "canonicalName": "Naxpet Ketoprofeno Perros y Gatos 10mg Comprimidos",
+      "laboratory": "Naxpet",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Naxpet Ketoprofeno Perros y Gatos 10mg Comprimidos",
+          "channels": {
+            "store": 10899,
+            "online": 8719,
+            "cmr": null,
+            "sbpay": 7629,
+            "effective": 7629
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=naxpet%7C10mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnaxpet-analgesico-en-comprimidos-10mg-para-perros-y-gatos%3Fdefault_sku%3D8450241&cfmId=CFM-003979",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/15342/small/8450241.jpg?1641480348",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 7629,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/15342/small/8450241.jpg?1641480348",
+      "presentationKey": "naxpet|10mg|bio:unknown|brand:naxpet|var:perros|form:solid-oral",
+      "cfmId": "CFM-003979",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "naxpet|20ml",
+      "canonicalName": "Naxpet Ketoprofeno Perros y Gatos 0.4mg/ml Solución Oral 20ml",
+      "laboratory": "Naxpet",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Naxpet Ketoprofeno Perros y Gatos 0.4mg/ml Solución Oral 20ml",
+          "channels": {
+            "store": 8999,
+            "online": 7919,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7919
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=naxpet%7C20ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnaxpet-analgesico-al-0-4-para-perros-y-gatos%3Fdefault_sku%3D8450159&cfmId=CFM-003978",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/15341/small/8450159.jpg?1641480348",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 7919,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/15341/small/8450159.jpg?1641480348",
+      "presentationKey": "naxpet|20ml|bio:unknown|brand:naxpet|var:perros|form:fluid-oral",
+      "cfmId": "CFM-003978",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|2ml",
+      "canonicalName": "Ketoprofeno 100 mg/2mL 5...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Ketoprofeno 100 mg/2mL 5...",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=ketoprofeno%7C2ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102807-ketoprofeno-100-mg-2ml-5-ampollas.html&cfmId=CFM-003971",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "ketoprofeno|2ml|bio:unknown|brand:unknown",
+      "cfmId": "CFM-003971",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "vet|20ml|20",
+      "canonicalName": "Vet. Naxpet 0.4 % x 20 ml Suspensión Oral para Perros y Gatos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Vet. Naxpet 0.4 % x 20 ml Suspensión Oral para Perros y Gatos",
+          "channels": {
+            "store": 8329,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8329
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=vet%7C20ml%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fvet.-naxpet-0.4-x-20-ml-suspension-oral-para-perros-y-gatos-84911.html&cfmId=CFM-002375",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc9a08add/images/products/84911/84911.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 8329,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc9a08add/images/products/84911/84911.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "vet|20ml|20|bio:unknown|brand:unknown|var:naxpet|form:fluid-oral",
+      "cfmId": "CFM-002375",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "naxpet|20ml",
+      "canonicalName": "Naxpet Ketoprofeno 0,4% Suspensión Oral 20 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Naxpet Ketoprofeno 0,4% Suspensión Oral 20 mL",
+          "channels": {
+            "store": 8490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=naxpet%7C20ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnaxpet-ketoprofeno-0-4-suspension-oral-20-ml%2F152360.html&cfmId=CFM-003978",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7ebced06/images/large/152360-naxpet-perrogato-incluye-dosificador-ketoprofeno-400-mg-ampolla-20-ml.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 8490,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7ebced06/images/large/152360-naxpet-perrogato-incluye-dosificador-ketoprofeno-400-mg-ampolla-20-ml.jpg",
+      "presentationKey": "naxpet|20ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-003978",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|2ml|5",
+      "canonicalName": "Ketoprofeno 100 mg/2 mL 5 ampollas solución inyectable",
+      "laboratory": "BIOSANO",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Ketoprofeno 100 mg/2 mL 5 ampollas solución inyectable",
+          "channels": {
+            "store": 8600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8600
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=ketoprofeno%7C2ml%7C5&url=https%3A%2F%2Fwww.drsimi.cl%2Fketoprofeno-100-mg-2ml-i-v-inyectale-5-ampolla%2Fp&cfmId=CFM-003973",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156775/CH7279-1.jpg?v=637964774704930000",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 8600,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156775/CH7279-1.jpg?v=637964774704930000",
+      "presentationKey": "ketoprofeno|2ml|5|bio:false|brand:biosano|form:injectable",
+      "cfmId": "CFM-003973",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "talflex|150mg|14",
+      "canonicalName": "Talflex BI 150mg x 14 comprimidos de liberación sostenida",
+      "laboratory": "Bagó",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Talflex BI 150mg x 14 comprimidos de liberación sostenida",
+          "channels": {
+            "store": 9490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=talflex%7C150mg%7C14&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftalflex-bi-15mg-x-14-comprimidos-de-liberacion-sos&cfmId=CFM-003981",
+          "imageUrl": "https://farmacia.araucomed.com/5649-home_default/talflex-bi-15mg-x-14-comprimidos-de-liberacion-sos.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 9490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5649-home_default/talflex-bi-15mg-x-14-comprimidos-de-liberacion-sos.jpg",
+      "presentationKey": "talflex|150mg|14|bio:unknown|brand:bago|var:bi|form:solid-oral",
+      "cfmId": "CFM-003981",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "naxpet|10mg|10",
+      "canonicalName": "Naxpet 10 mg x 10 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Naxpet 10 mg x 10 Comprimidos",
+          "channels": {
+            "store": 9699,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9699
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=naxpet%7C10mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnaxpet-10-mg-x-10-comprimidos-20043.html&cfmId=CFM-003991",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw17cfd9b2/images/products/20043/20043.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Naxpet Ketoprofeno 10 mg 10 Comprimidos",
+          "channels": {
+            "store": 9890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=naxpet%7C10mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnaxpet-ketoprofeno-10-mg-10-comprimidos%2F152172.html&cfmId=CFM-003991",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw65d198f8/images/large/152172-naxpet-ketoprofeno-10-mg-10-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 9699,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw17cfd9b2/images/products/20043/20043.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "naxpet|10mg|10|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-003991",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "naxpet|30mg|10",
+      "canonicalName": "Naxpet Raza grande 30 mg x 10 comprimidos.",
+      "laboratory": "Naxpet",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Naxpet Raza grande 30 mg x 10 comprimidos.",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=naxpet%7C30mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fveterinarios%2Fnaxpet-raza-grande-30mg-x10com&cfmId=CFM-003987",
+          "imageUrl": "https://farmacia.araucomed.com/8259-home_default/naxpet-raza-grande-30mg-x10com.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8259-home_default/naxpet-raza-grande-30mg-x10com.jpg",
+      "presentationKey": "naxpet|30mg|10|bio:unknown|brand:naxpet|var:raza|form:solid-oral",
+      "cfmId": "CFM-003987",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "dolostat|150mg",
+      "canonicalName": "Dolostat Bi 150 mg 10...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Dolostat Bi 150 mg 10...",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=dolostat%7C150mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F101750-dolostat-bi-150-mg-10-comprimidos.html&cfmId=CFM-003992",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "dolostat|150mg|bio:unknown|brand:unknown|var:bi",
+      "cfmId": "CFM-003992",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "profenidbi|150mg|10",
+      "canonicalName": "Profenid-bi 150 mg x 10 comprimidos.",
+      "laboratory": "Sanofi",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Profenid-bi 150 mg x 10 comprimidos.",
+          "channels": {
+            "store": 10490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=profenidbi%7C150mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fprofenid-bi-150mg-x10comlp&cfmId=CFM-003976",
+          "imageUrl": "https://farmacia.araucomed.com/5255-home_default/profenid-bi-150mg-x10comlp.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        }
+      ],
+      "bestPrice": 10490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5255-home_default/profenid-bi-150mg-x10comlp.jpg",
+      "presentationKey": "profenidbi|150mg|10|bio:unknown|brand:sanofi|form:solid-oral",
+      "cfmId": "CFM-003976",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "dolostat|150mg|10",
+      "canonicalName": "Dolostat BI ketoprofeno 150 mg 10 comprimidos de liberación prolongada",
+      "laboratory": "EUROFARMA",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Dolostat BI ketoprofeno 150 mg 10 comprimidos de liberación prolongada",
+          "channels": {
+            "store": 10960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=dolostat%7C150mg%7C10&url=https%3A%2F%2Fwww.drsimi.cl%2Fketoprofeno-150mg-10comp-lp-be0256-1%2Fp&cfmId=CFM-003982",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157372/BE0256-1.jpg?v=638189469878130000",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 10960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157372/BE0256-1.jpg?v=638189469878130000",
+      "presentationKey": "dolostat|150mg|10|bio:true|brand:eurofarma|var:bi|form:solid-oral",
+      "cfmId": "CFM-003982",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "talflex|150mg|14",
+      "canonicalName": "Talflex Bi 150 mg 14 comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Talflex Bi 150 mg 14 comp",
+          "channels": {
+            "store": 10990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=talflex%7C150mg%7C14&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F29326-talflex-bi-150mg-14-comp.html&cfmId=CFM-003981",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:18.640Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Talflex BI 150 mg x 14 Comprimidos de Liberación Sostenida",
+          "channels": {
+            "store": 14942,
+            "online": null,
+            "cmr": 13184,
+            "sbpay": null,
+            "effective": 13184
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=talflex%7C150mg%7C14&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftalflex-bi-150-mg-x-14-comprimidos-de-liberacion-sostenida-85417.html&cfmId=CFM-003981",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw61bb400b/images/products/85417/85417.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Talflex Bi Ketoprofeno 150 mg 14 Comprimidos de Liberación Sostenida",
+          "channels": {
+            "store": 17090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=talflex%7C150mg%7C14&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftalflex-bi-ketoprofeno-150-mg-14-comprimidos-de-liberacion-sostenida%2F276297.html&cfmId=CFM-003981",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0de38261/images/large/276297-talflex-bi-comprimido-liberacion-sostenida-10-unidades-ketoprofeno-150-mg.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 10990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw61bb400b/images/products/85417/85417.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "talflex|150mg|14|bio:unknown|brand:unknown|var:bi|form:solid-oral",
+      "cfmId": "CFM-003981",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|100mg|5",
+      "canonicalName": "Ketoprofeno 100 mg 5 Ampollas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Ketoprofeno 100 mg 5 Ampollas",
+          "channels": {
+            "store": 11590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=ketoprofeno%7C100mg%7C5&url=https%3A%2F%2Fwww.cruzverde.cl%2Fketoprofeno-100-mg-5-ampollas%2F287506.html&cfmId=CFM-003985",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa65df00f/images/large/287506-ketoprofeno-100-mg-5-ampollas.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 11590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa65df00f/images/large/287506-ketoprofeno-100-mg-5-ampollas.jpg",
+      "presentationKey": "ketoprofeno|100mg|5|bio:unknown|brand:unknown|form:injectable",
+      "cfmId": "CFM-003985",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "naxpet|30mg",
+      "canonicalName": "Naxpet Ketoprofeno Perros y Gatos 30mg Comprimidos",
+      "laboratory": "Drag Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Naxpet Ketoprofeno Perros y Gatos 30mg Comprimidos",
+          "channels": {
+            "store": 14299,
+            "online": 12583,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12583
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=naxpet%7C30mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnaxpet-30mg-10-comprimidos%3Fdefault_sku%3D8450337&cfmId=CFM-003988",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/59547/small/8450337.jpg?1641329028",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 12583,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/59547/small/8450337.jpg?1641329028",
+      "presentationKey": "naxpet|30mg|bio:unknown|brand:dragpharma|var:perros|form:solid-oral",
+      "cfmId": "CFM-003988",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ketoprofeno|2ml|5",
+      "canonicalName": "Ketoprofeno 100mg/2ml Inyectable 5 Ampollas",
+      "laboratory": "Ketoprofeno",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ketoprofeno 100mg/2ml Inyectable 5 Ampollas",
+          "channels": {
+            "store": 14699,
+            "online": 12935,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12935
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ketoprofeno%7C2ml%7C5&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fketoprofeno-100mg-2ml-inyectable-5-ampollas%3Fdefault_sku%3D300115&cfmId=CFM-003973",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/182161/small/300115.jpg?1775653442",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 12935,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/182161/small/300115.jpg?1775653442",
+      "presentationKey": "ketoprofeno|2ml|5|bio:unknown|brand:ketoprofeno|form:injectable",
+      "cfmId": "CFM-003973",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "vet|30mg|10",
+      "canonicalName": "Vet. Naxpet 30 mg Raza Grande Perros 10 Comp.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Vet. Naxpet 30 mg Raza Grande Perros 10 Comp.",
+          "channels": {
+            "store": 12939,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12939
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=vet%7C30mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fvet.-naxpet-30-mg-raza-grande-perros-10-comp.-38379.html&cfmId=CFM-003990",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw3e7bc624/images/products/38379/38379.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 12939,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw3e7bc624/images/products/38379/38379.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "vet|30mg|10|bio:unknown|brand:unknown|var:naxpet|form:solid-oral",
+      "cfmId": "CFM-003990",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "dolostat|150mg|10",
+      "canonicalName": "Dolostat BI 150 mg x 10 Comprimidos Liberación Prolongada",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Dolostat BI 150 mg x 10 Comprimidos Liberación Prolongada",
+          "channels": {
+            "store": 17429,
+            "online": null,
+            "cmr": 13072,
+            "sbpay": null,
+            "effective": 13072
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=dolostat%7C150mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdolostat-bi-150-mg-x-10-comprimidos-liberacion-prolongada-88627.html&cfmId=CFM-003982",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbeefac93/images/products/88627/88627.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 13072,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbeefac93/images/products/88627/88627.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "dolostat|150mg|10|bio:true|brand:unknown|var:bi|form:solid-oral",
+      "cfmId": "CFM-003982",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "naxpet|30mg|10",
+      "canonicalName": "Naxpet Perros Raza Grande Mas De 30kg Ketoprofeno 30 mg 10 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Naxpet Perros Raza Grande Mas De 30kg Ketoprofeno 30 mg 10 Comprimidos",
+          "channels": {
+            "store": 13190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=naxpet%7C30mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnaxpet-perros-raza-grande-mas-de-30kg-ketoprofeno-30-mg-10-comprimidos%2F152229.html&cfmId=CFM-003987",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwaab662c4/images/large/152229-naxpet-perros-raza-grande-mas-de-30kg-ketoprofeno-30-mg-10-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 13190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwaab662c4/images/large/152229-naxpet-perros-raza-grande-mas-de-30kg-ketoprofeno-30-mg-10-comprimidos.jpg",
+      "presentationKey": "naxpet|30mg|10|bio:unknown|brand:unknown|var:perros|form:solid-oral",
+      "cfmId": "CFM-003987",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dolostat|150mg|10",
+      "canonicalName": "Dolostat BI Ketoprofeno 150 mg 10 Comprimidos de Liberacion Prolongada",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Dolostat BI Ketoprofeno 150 mg 10 Comprimidos de Liberacion Prolongada",
+          "channels": {
+            "store": 13991,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13991
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=dolostat%7C150mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fdolostat-bi-ketoprofeno-150-mg-10-comprimidos-de-liberacion-prolongada%2F384053.html&cfmId=CFM-003982",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw846dde3b/images/large/384053-dolostat-bi-ketoprofeno-150-mg-10-comprimidos-de-liberacion-prolongada.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.637Z"
+        }
+      ],
+      "bestPrice": 13991,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw846dde3b/images/large/384053-dolostat-bi-ketoprofeno-150-mg-10-comprimidos-de-liberacion-prolongada.jpg",
+      "presentationKey": "dolostat|150mg|10|bio:unknown|brand:unknown|var:bi|form:solid-oral",
+      "cfmId": "CFM-003982",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dolostat|150mg|10",
+      "canonicalName": "Dolostat BI Ketoprofeno 150mg 10 Comprimidos Prolongadados",
+      "laboratory": "Dolostat",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Dolostat BI Ketoprofeno 150mg 10 Comprimidos Prolongadados",
+          "channels": {
+            "store": 16599,
+            "online": 14607,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14607
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=dolostat%7C150mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdolostat-bi-150-mg-x10-comprimidos-liberacion-prolongada%3Fdefault_sku%3D576748&cfmId=CFM-003982",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/80039/small/576748.jpg?1663209551",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 14607,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/80039/small/576748.jpg?1663209551",
+      "presentationKey": "dolostat|150mg|10|bio:unknown|brand:dolostat|var:bi|form:solid-oral",
+      "cfmId": "CFM-003982",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "talflex|150mg|14",
+      "canonicalName": "Talflex Bi Ketoprofeno 150mg 14 Comprimidos",
+      "laboratory": "Talflex",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Talflex Bi Ketoprofeno 150mg 14 Comprimidos",
+          "channels": {
+            "store": 17099,
+            "online": 15047,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15047
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=talflex%7C150mg%7C14&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fketoprofeno-150mg-oral-solido%3Fdefault_sku%3D2590359&cfmId=CFM-003981",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/40390/small/2590359-1.jpg?1641477139",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 15047,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/40390/small/2590359-1.jpg?1641477139",
+      "presentationKey": "talflex|150mg|14|bio:unknown|brand:talflex|var:bi|form:solid-oral",
+      "cfmId": "CFM-003981",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "profenid|150mg|10",
+      "canonicalName": "Profenid Bi 150 mg x 10 Comprimidos de Liberación Prolongada",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Profenid Bi 150 mg x 10 Comprimidos de Liberación Prolongada",
+          "channels": {
+            "store": 21739,
+            "online": null,
+            "cmr": 16304,
+            "sbpay": null,
+            "effective": 16304
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=profenid%7C150mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fprofenid-bi-150-mg-x-10-comprimidos-de-liberacion-prolongada-49681.html&cfmId=CFM-003983",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd43e03ec/images/products/49681/49681.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:18.639Z"
+        }
+      ],
+      "bestPrice": 16304,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd43e03ec/images/products/49681/49681.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "profenid|150mg|10|bio:unknown|brand:unknown|var:bi|form:solid-oral",
+      "cfmId": "CFM-003983",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "profenid|150mg|10",
+      "canonicalName": "Profenid Bi Ketoprofeno 150mg 10 Comprimidos Prolongados",
+      "laboratory": "Profenid Bi",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Profenid Bi Ketoprofeno 150mg 10 Comprimidos Prolongados",
+          "channels": {
+            "store": 21999,
+            "online": 19359,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19359
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=profenid%7C150mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fprofenid-bi-ketoprofeno-150mg-10-comprimidos-prolongados%3Fdefault_sku%3D3261223&cfmId=CFM-003983",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/45078/small/7891058001223_1.jpg?1641476874",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 19359,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/45078/small/7891058001223_1.jpg?1641476874",
+      "presentationKey": "profenid|150mg|10|bio:unknown|brand:profenidbi|var:bi|form:solid-oral",
+      "cfmId": "CFM-003983",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "profenidbi|150mg|10",
+      "canonicalName": "Profenid-Bi Ketoprofeno 150 mg 10 Comprimidos Liberacion Prolongada",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Profenid-Bi Ketoprofeno 150 mg 10 Comprimidos Liberacion Prolongada",
+          "channels": {
+            "store": 21740,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21740
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=profenidbi%7C150mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fprofenid-bi-ketoprofeno-150-mg-10-comprimidos-liberacion-prolongada%2F254531.html&cfmId=CFM-003976",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw088682d3/images/large/254531-profenid-bi-comprimido-liberacion-prolongada-10-unidades-ketoprofeno-150-mg.jpg",
+          "fetchedAt": "2026-08-31T01:25:18.638Z"
+        }
+      ],
+      "bestPrice": 21740,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw088682d3/images/large/254531-profenid-bi-comprimido-liberacion-prolongada-10-unidades-ketoprofeno-150-mg.jpg",
+      "presentationKey": "profenidbi|150mg|10|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-003976",
+      "lexicalMatch": "exact"
+    }
+  ]
+}

@@ -1,0 +1,1479 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "kitadol",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=kitadol",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:23:47.586Z",
+  "completedAt": "2026-08-31T01:23:53.055Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 39,
+  "results": [
+    {
+      "matchKey": "kitadol|500mg|24",
+      "canonicalName": "Kitadol 500 mg x 24 comprimidos.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol, paracetamol, 500Mg X 24 comp.(LCh) DESCUENTO caja arrugada",
+          "channels": {
+            "store": 650,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 650
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C500mg%7C24&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-500mg-x-24-comprimidos-lch-descuento-caja-arrugada%2F&cfmId=CFM-000013",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/kitaodol-500-mg-x-24.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Kitadol 500 mg x 24 comprimidos.",
+          "channels": {
+            "store": 922,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 922
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=kitadol%7C500mg%7C24&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fkitadol-500-mg-x-24-comprimidos-13%3F_pos%3D10%26_psq%3Dkitadol%26_psid%3D3f394487e%26_ss%3De&cfmId=CFM-000013",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/kitadol-500-mg-x-24-comprimidos-farmex-banmedica-persistente-203576_10900228-0b7a-4ca4-aaa9-0acf4aaa44ff.webp?v=1788132216",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 650,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/kitadol-500-mg-x-24-comprimidos-farmex-banmedica-persistente-203576_10900228-0b7a-4ca4-aaa9-0acf4aaa44ff.webp?v=1788132216",
+      "presentationKey": "kitadol|500mg|24|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000013",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|500mg|24",
+      "canonicalName": "Kitadol 500 mg x 24 comprimidos",
+      "laboratory": "LABORATORIO CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol 500 mg x 24 comprimidos.",
+          "channels": {
+            "store": 750,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 750
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C500mg%7C24&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-500mg-x24com&cfmId=CFM-000013",
+          "imageUrl": "https://farmacia.araucomed.com/919-home_default/kitadol-500mg-x24com.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Kitadol 500 mg x 24 comprimidos",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=kitadol%7C500mg%7C24&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fkitadol-comprimidos-bioequivalente-paracetamol%3F_pos%3D1%26_psq%3Dkitadol%26_psid%3D3f394487e%26_ss%3De&cfmId=CFM-000013",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/kitadol-500-mg-x-24-comprimidos-farmex-banmedica-persistente-203576.webp?v=1779475000",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 750,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/kitadol-500-mg-x-24-comprimidos-farmex-banmedica-persistente-203576.webp?v=1779475000",
+      "presentationKey": "kitadol|500mg|24|bio:unknown|brand:chile|form:solid-oral",
+      "cfmId": "CFM-000013",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|500mg|24",
+      "canonicalName": "Kitadol (B) Paracetamol 500mg 24 Comprimidos",
+      "laboratory": "Kitadol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol (B) Paracetamol 500mg 24 Comprimidos",
+          "channels": {
+            "store": 1499,
+            "online": 1004,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1004
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C500mg%7C24&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-b-paracetamol-500mg-24-comprimidos%3Fdefault_sku%3D430924&cfmId=CFM-000013",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/169994/small/430924.jpg?1765392896",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 1004,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/169994/small/430924.jpg?1765392896",
+      "presentationKey": "kitadol|500mg|24|bio:unknown|brand:kitadol|form:solid-oral",
+      "cfmId": "CFM-000013",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|500mg|24",
+      "canonicalName": "Kitadol 500 mg x 24 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol 500 mg x 24 Comprimidos",
+          "channels": {
+            "store": 1190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7C500mg%7C24&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-500-mg-x-24-comprimidos-15414.html&cfmId=CFM-000013",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw850274b1/images/products/15414/15414.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 1190,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw850274b1/images/products/15414/15414.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "kitadol|500mg|24|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000013",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|500mg|24",
+      "canonicalName": "Kitadol 500 mg x 24",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Kitadol 500 mg x 24",
+          "channels": {
+            "store": 1390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=kitadol%7C500mg%7C24&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24662-kitadol-500-mg-x-24.html&cfmId=CFM-000013",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:52.854Z"
+        }
+      ],
+      "bestPrice": 1390,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "kitadol|500mg|24|bio:unknown|brand:unknown",
+      "cfmId": "CFM-000013",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|n|18",
+      "canonicalName": "Kitadol Antigripal día y noche x 18 comprimidos",
+      "laboratory": "CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol Antigripal Dia y Noche x 18 comprimidos.",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7Cn%7C18&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fgripe-y-resfrio%2Fkitadol-antigripal-dia-y-noche-x18com&cfmId=CFM-000022",
+          "imageUrl": "https://farmacia.araucomed.com/10348-home_default/kitadol-antigripal-dia-y-noche-x18com.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Kitadol Antigripal día y noche x 18 comprimidos",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=kitadol%7Cn%7C18&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fkitadol-antigripal-dia-y-noche-x-18-comprimidos%3F_pos%3D3%26_psq%3Dkitadol%26_psid%3D3f394487e%26_ss%3De&cfmId=CFM-000022",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/kitadol-antigripal-dia-y-noche-x-18-comprimidos-chile-764962.jpg?v=1763923048",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/kitadol-antigripal-dia-y-noche-x-18-comprimidos-chile-764962.jpg?v=1763923048",
+      "presentationKey": "kitadol|n|18|bio:unknown|brand:chile|var:antigripal|form:solid-oral",
+      "cfmId": "CFM-000022",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|15ml",
+      "canonicalName": "Kitadol 100 mg/ml gotas 15 ml LCh DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol 100 mg/ml gotas 15 ml LCh DESCUENTO",
+          "channels": {
+            "store": 2200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2200
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C15ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-100-mg-ml-gotas-15-ml-lch-descuento%2F&cfmId=CFM-000043",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/KITADOL-INFANTIL.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 2200,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/KITADOL-INFANTIL.jpg",
+      "presentationKey": "kitadol|15ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000043",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|160mg|16",
+      "canonicalName": "Kitadol Paracetamol 160 mg 16 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol 160 mg x 16 Comprimidos Masticables",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": 2347,
+            "sbpay": null,
+            "effective": 2347
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7C160mg%7C16&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-160-mg-x-16-comprimidos-masticables-61992.html&cfmId=CFM-000016",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw79496d25/images/products/61992/61992.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Kitadol Paracetamol 160 mg 16 Comprimidos",
+          "channels": {
+            "store": 3090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=kitadol%7C160mg%7C16&url=https%3A%2F%2Fwww.cruzverde.cl%2Fkitadol-paracetamol-160-mg-16-comprimidos%2F252676.html&cfmId=CFM-000016",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwdfa480d6/images/large/252676-kitadol-paracetamol-160-mg-15-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 2347,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwdfa480d6/images/large/252676-kitadol-paracetamol-160-mg-15-comprimidos.jpg",
+      "presentationKey": "kitadol|160mg|16|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000016",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|160mg|16",
+      "canonicalName": "Kitadol Infantil 160Mg X 16 comprimidos (LCh)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol Infantil 160Mg X 16 comprimidos (LCh)",
+          "channels": {
+            "store": 2380,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2380
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C160mg%7C16&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-160mg-x-16-infantil%2F&cfmId=CFM-000016",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/07/KITADOL-160-X-16-INF.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 2380,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/07/KITADOL-160-X-16-INF.jpg",
+      "presentationKey": "kitadol|160mg|16|bio:unknown|brand:unknown|var:infantil|form:solid-oral",
+      "cfmId": "CFM-000016",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|160mg|16",
+      "canonicalName": "Kitadol Infantil 160 mg x 16 comprimidos masticables",
+      "laboratory": "LABORATORIO CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol Infantil 160 mg x 16 comprimidos masticables.",
+          "channels": {
+            "store": 2390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C160mg%7C16&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-ninos-160mg-x16com&cfmId=CFM-000016",
+          "imageUrl": "https://farmacia.araucomed.com/917-home_default/kitadol-ninos-160mg-x16com.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Kitadol Infantil 160 mg x 16 comprimidos masticables",
+          "channels": {
+            "store": 2590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=kitadol%7C160mg%7C16&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fkitadol-infantil-160-mg-x-16-comprimidos-masticables%3F_pos%3D5%26_psq%3Dkitadol%26_psid%3D3f394487e%26_ss%3De&cfmId=CFM-000016",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/kitadol-infantil-160-mg-x-16-comprimidos-masticables-laboratorio-chile-123986.jpg?v=1692989447",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 2390,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/kitadol-infantil-160-mg-x-16-comprimidos-masticables-laboratorio-chile-123986.jpg?v=1692989447",
+      "presentationKey": "kitadol|160mg|16|bio:unknown|brand:chile|var:infantil|form:solid-oral",
+      "cfmId": "CFM-000016",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|15ml",
+      "canonicalName": "Kitadol inf. gts. 15 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol Paracetamol Infantil gotas 100mg 15ml DESCUENTO",
+          "channels": {
+            "store": 2400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2400
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C15ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-paracetamol-infantil-gotas-100mg-15ml-descuento%2F&cfmId=CFM-000043",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/kitadol-infantil-100ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Kitadol inf. gts. 15 mL",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=kitadol%7C15ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24664-kitadol-inf-gotas-x-15-ml.html&cfmId=CFM-000043",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:52.854Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Kitadol Infantil Paracetamol 100 mg Gotas 15 mL",
+          "channels": {
+            "store": 4790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=kitadol%7C15ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fkitadol-infantil-paracetamol-100-mg-gotas-15-ml%2F1355.html&cfmId=CFM-000043",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw21c52e77/images/large/1355-kitadol-infantil-paracetamol-100-mg-gotas-15-ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 2400,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/kitadol-infantil-100ml.jpg",
+      "presentationKey": "kitadol|15ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000043",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|10",
+      "canonicalName": "Kitadol Forte x 10 comp.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Kitadol Forte x 10 comp.",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=kitadol%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24663-kitadol-forte-x-10.html&cfmId=CFM-000040",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:52.854Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol Forte x 10 Comprimidos Recubiertos",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": 3584,
+            "sbpay": null,
+            "effective": 3584
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-forte-x-10-comprimidos-recubiertos-83630.html&cfmId=CFM-000040",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw715cd972/images/products/83630/83630.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw715cd972/images/products/83630/83630.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "kitadol|10|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+      "cfmId": "CFM-000040",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|10",
+      "canonicalName": "Kitadol Duo x 10 comprimidos",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol Duo x 10 comprimidos",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-duo-x10com&cfmId=CFM-000040",
+          "imageUrl": "https://farmacia.araucomed.com/9536-home_default/kitadol-duo-x10com.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9536-home_default/kitadol-duo-x10com.jpg",
+      "presentationKey": "kitadol|10|bio:unknown|brand:chile|var:duo|form:solid-oral",
+      "cfmId": "CFM-000040",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|15ml|15",
+      "canonicalName": "Kitadol Pediatrico 100 mg / mL Gotas x 15 mL",
+      "laboratory": "LABORATORIO CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Kitadol Pediatrico 100 mg / mL Gotas x 15 mL",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=kitadol%7C15ml%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fkitadol-pediatrico-100mg-ml-gotas-x-15-ml%3F_pos%3D4%26_psq%3Dkitadol%26_psid%3D3f394487e%26_ss%3De&cfmId=CFM-000055",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/kitadol-pediatrico-100mgml-gotas-x-15-ml-laboratorio-chile-360535.jpg?v=1692989510",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 2690,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/kitadol-pediatrico-100mgml-gotas-x-15-ml-laboratorio-chile-360535.jpg?v=1692989510",
+      "presentationKey": "kitadol|15ml|15|bio:unknown|brand:chile|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000055",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|16",
+      "canonicalName": "Kitadol Parcetamol Infantil 16 Comprimidos Masticables",
+      "laboratory": "Kitadol Infantil",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol Parcetamol Infantil 16 Comprimidos Masticables",
+          "channels": {
+            "store": 3499,
+            "online": 2799,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2799
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C16&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-parcetamol-infantil-16-comprimidos-masticables%3Fdefault_sku%3D438063&cfmId=CFM-000032",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/169998/small/438063.jpg?1765392984",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 2799,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/169998/small/438063.jpg?1765392984",
+      "presentationKey": "kitadol|16|bio:unknown|brand:kitadolinfantil|var:parcetamol|form:solid-oral",
+      "cfmId": "CFM-000032",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|500mg|10",
+      "canonicalName": "Kitadol Forte 500 mg/50 mg (paracetamol/cafeína) X 10 comprimidos (LCh)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol Forte 500 mg/50 mg (paracetamol/cafeína) X 10 comprimidos (LCh)",
+          "channels": {
+            "store": 2980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2980
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C500mg%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-forte-500mg-x-10%2F&cfmId=CFM-000879",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/KITADOL-FORTE-X-10.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 2980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/KITADOL-FORTE-X-10.jpg",
+      "presentationKey": "kitadol|500mg|10|bio:unknown|brand:unknown|combo:cafeina|form:solid-oral",
+      "cfmId": "CFM-000879",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|10",
+      "canonicalName": "Kitadol Duo X 10 Comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Kitadol Duo 10 Comp....",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=kitadol%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102073-kitadol-duo-10-comp-recubiertos.html&cfmId=CFM-000040",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:52.854Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol Duo (Ibuprofeno &#8211; Paracetamol) x 10 Comprimidos Recubiertos",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-duo-ibuprofeno-paracetamol-x-10-comprimidos-recubiertos%2F&cfmId=CFM-000040",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/Untitled-3-1.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol Duo X 10 Comp",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": 3742,
+            "sbpay": null,
+            "effective": 3742
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-duo-x-10-comp-89714.html&cfmId=CFM-000040",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9561dba2/images/products/89714/89714.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9561dba2/images/products/89714/89714.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "kitadol|10|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+      "cfmId": "CFM-000040",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|15ml",
+      "canonicalName": "Kitadol Infantil 100mg/ml gotas 15ml.",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol Infantil 100mg/ml gotas 15ml.",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C15ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-pediatrico-100mg-ml-gotas-x15ml&cfmId=CFM-000043",
+          "imageUrl": "https://farmacia.araucomed.com/918-home_default/kitadol-pediatrico-100mg-ml-gotas-x15ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/918-home_default/kitadol-pediatrico-100mg-ml-gotas-x15ml.jpg",
+      "presentationKey": "kitadol|15ml|bio:unknown|brand:chile|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000043",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|n|18",
+      "canonicalName": "Kitadol Antigripal Dia/Noche 18 Comprimidos recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol Antigripal Dia/Noche 18 Comprimidos recubiertos",
+          "channels": {
+            "store": 3390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7Cn%7C18&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-antigripal-dia-noche-12-comprimidos-recubiertos%2F&cfmId=CFM-000022",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/03/584095.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol Antigripal Día y Noche 18 Comprimidos Recubiertos",
+          "channels": {
+            "store": 3890,
+            "online": null,
+            "cmr": 3854,
+            "sbpay": null,
+            "effective": 3854
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7Cn%7C18&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-antigripal-dia-y-noche-18-comprimidos-recubiertos-91638.html&cfmId=CFM-000022",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf902c3cb/images/products/91638/91638.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Kitadol Antigripal 18 Comprimidos Recubiertos Día/Noche (12 Día y 6 Noche)",
+          "channels": {
+            "store": 4890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=kitadol%7Cn%7C18&url=https%3A%2F%2Fwww.cruzverde.cl%2Fkitadol-antigripal-18-comprimidos-recubiertos-dia-noche-12-dia-y-6-noche%2F544205.html&cfmId=CFM-000022",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw73f814a0/images/large/544205-kitadol-antigripal-18-comprimidos-recubiertos-dianoche-12-dia-y-6-noche.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 3390,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/03/584095.jpg",
+      "presentationKey": "kitadol|n|18|bio:unknown|brand:unknown|var:antigripal|form:solid-oral",
+      "cfmId": "CFM-000022",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|15ml|15",
+      "canonicalName": "Kitadol 100 mg/mL x 15 mL Solución Oral Para Gotas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol 100 mg/mL x 15 mL Solución Oral Para Gotas",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": 3487,
+            "sbpay": null,
+            "effective": 3487
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7C15ml%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-100-mg-ml-x-15-ml-solucion-oral-para-gotas-15375.html&cfmId=CFM-000055",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6230a2fe/images/products/15375/15375.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 3487,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6230a2fe/images/products/15375/15375.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "kitadol|15ml|15|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000055",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|160mg",
+      "canonicalName": "Kitadol Infantil 160 Mg 16...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Kitadol Infantil 160 Mg 16...",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=kitadol%7C160mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24666-kitadol-inf-x-16.html&cfmId=CFM-001064",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:52.854Z"
+        }
+      ],
+      "bestPrice": 3490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "kitadol|160mg|bio:unknown|brand:unknown|var:infantil",
+      "cfmId": "CFM-001064",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|60ml",
+      "canonicalName": "Kitadol Paracetamol 120 mg/5ml Jarabe 60 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol 120 mg/5 ml Jarabe 60 ml (LCh) (Cenabast) DESCUENTO",
+          "channels": {
+            "store": 3500,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3500
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C60ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-120-mg-5-ml-jarabe-60-ml-lch-cenabast-descuento%2F&cfmId=CFM-000080",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/01/kitadol-1.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Kitadol Paracetamol 120 mg/5ml Jarabe 60 mL",
+          "channels": {
+            "store": 9070,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9070
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=kitadol%7C60ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fkitadol-paracetamol-120-mg-5ml-jarabe-60-ml%2F1390.html&cfmId=CFM-000080",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwccdb43fc/images/large/1390-kitadol-jarabe-60-ml-paracetamol-120-mg-5ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 3500,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwccdb43fc/images/large/1390-kitadol-jarabe-60-ml-paracetamol-120-mg-5ml.jpg",
+      "presentationKey": "kitadol|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000080",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|10",
+      "canonicalName": "Kitadol Duo Ibuprofeno / Paracetamol 10 Comprimidos Recubiertos",
+      "laboratory": "Kitadol Duo",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol Duo Ibuprofeno / Paracetamol 10 Comprimidos Recubiertos",
+          "channels": {
+            "store": 4899,
+            "online": 4262,
+            "cmr": null,
+            "sbpay": 3674,
+            "effective": 3674
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-duo-ibuprofeno-paracetamol-10-comprimidos-recubiertos%3Fdefault_sku%3D579036&cfmId=CFM-000040",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/66136/small/579036.jpg?1641491818",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 3674,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/66136/small/579036.jpg?1641491818",
+      "presentationKey": "kitadol|10|bio:unknown|brand:kitadolduo|combo:paracetamol|form:solid-oral",
+      "cfmId": "CFM-000040",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|15ml",
+      "canonicalName": "Kitadol Parcetamol Infantil Gotas 15ml",
+      "laboratory": "Kitadol Infantil",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol Parcetamol Infantil Gotas 15ml",
+          "channels": {
+            "store": 4899,
+            "online": 4017,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4017
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C15ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-parcetamol-infantil-gotas-15ml%3Fdefault_sku%3D430991&cfmId=CFM-000043",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/193492/small/430991.jpg?1782222654",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 4017,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/193492/small/430991.jpg?1782222654",
+      "presentationKey": "kitadol|15ml|bio:unknown|brand:kitadolinfantil|var:parcetamol|form:fluid-oral",
+      "cfmId": "CFM-000043",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|10",
+      "canonicalName": "Kitadol Forte Paracetamol / Cafeína 10 Comprimidos Recubiertos",
+      "laboratory": "Kitadol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol Forte Paracetamol / Cafeína 10 Comprimidos Recubiertos",
+          "channels": {
+            "store": 4699,
+            "online": 4135,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4135
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-forte-paracetamol-cafeina-10-comprimidos-recubiertos%3Fdefault_sku%3D430514&cfmId=CFM-000040",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/67214/small/430514.png?1643821436",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 4135,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/67214/small/430514.png?1643821436",
+      "presentationKey": "kitadol|10|bio:unknown|brand:kitadol|combo:cafeina|form:solid-oral",
+      "cfmId": "CFM-000040",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|18",
+      "canonicalName": "Kitadol Antigripal Paracetamol 12 Dí­as + 6 Noches 18 Comprimidos Recubiertos",
+      "laboratory": "Kitadol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol Antigripal Paracetamol 12 Dí­as + 6 Noches 18 Comprimidos Recubiertos",
+          "channels": {
+            "store": 4999,
+            "online": 4399,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C18&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-antigripal-paracetamol-12-di-as-6-noches-18-comprimidos-recubiertos%3Fdefault_sku%3D584095&cfmId=CFM-000054",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/89679/small/584095.jpg?1678900539",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 4399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/89679/small/584095.jpg?1678900539",
+      "presentationKey": "kitadol|18|bio:unknown|brand:kitadol|var:antigripal|form:solid-oral",
+      "cfmId": "CFM-000054",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|60ml",
+      "canonicalName": "Kitadol Infantil 120mg/5ml jarabe 60 ml. (Cenabast)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol Infantil 120mg/5ml jarabe 60 ml. (Cenabast)",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C60ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-infantil-120mg-5ml-jarabe-60ml-cenabast&cfmId=CFM-000080",
+          "imageUrl": "https://farmacia.araucomed.com/7666-home_default/kitadol-infantil-120mg-5ml-jarabe-60ml-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 4490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7666-home_default/kitadol-infantil-120mg-5ml-jarabe-60ml-cenabast.jpg",
+      "presentationKey": "kitadol|60ml|bio:unknown|brand:chile|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000080",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|1000mg|18",
+      "canonicalName": "Kitadol 1 g x 18 comprimidos",
+      "laboratory": "LABORATORIO CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol 1 g x 18 comprimidos.",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C1000mg%7C18&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-1g-x18com&cfmId=CFM-000072",
+          "imageUrl": "https://farmacia.araucomed.com/920-home_default/kitadol-1g-x18com.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Kitadol 1 g x 18 comprimidos",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=kitadol%7C1000mg%7C18&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fkitadol-1-g-x-18-comprimidos-be%3F_pos%3D2%26_psq%3Dkitadol%26_psid%3D3f394487e%26_ss%3De&cfmId=CFM-000072",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/kitadol-1-g-x-18-comprimidos-laboratorio-chile-406086.webp?v=1774291280",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/kitadol-1-g-x-18-comprimidos-laboratorio-chile-406086.webp?v=1774291280",
+      "presentationKey": "kitadol|1000mg|18|bio:unknown|brand:chile|form:solid-oral",
+      "cfmId": "CFM-000072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|1000mg|18",
+      "canonicalName": "Kitadol (B) Paracetamol 1g 18 Comprimidos",
+      "laboratory": "Kitadol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol (B) Paracetamol 1g 18 Comprimidos",
+          "channels": {
+            "store": 10899,
+            "online": 6975,
+            "cmr": null,
+            "sbpay": 5885,
+            "effective": 5885
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C1000mg%7C18&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-b-paracetamol-1g-18-comprimidos%3Fdefault_sku%3D435361&cfmId=CFM-000072",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/168124/small/435361_-_Resoluci%C3%B3n.jpg?1764100547",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 5885,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/168124/small/435361_-_Resoluci%C3%B3n.jpg?1764100547",
+      "presentationKey": "kitadol|1000mg|18|bio:unknown|brand:kitadol|form:solid-oral",
+      "cfmId": "CFM-000072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|100ml",
+      "canonicalName": "Kitadol paracetamol 120 mg/5 mL jarabe infantil 100 mL",
+      "laboratory": "TEVA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Kitadol paracetamol 120 mg/5 mL jarabe infantil 100 mL",
+          "channels": {
+            "store": 5960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=kitadol%7C100ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fkitadol-paracetamol-120-mg-5-ml-infantil-jarabe-100-ml%2Fp&cfmId=CFM-000078",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159325/Paracetamol-BE0249-1.jpg?v=639074524470830000",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 5960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159325/Paracetamol-BE0249-1.jpg?v=639074524470830000",
+      "presentationKey": "kitadol|100ml|bio:false|brand:teva|form:fluid-oral",
+      "cfmId": "CFM-000078",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|100ml|100",
+      "canonicalName": "Kitadol Infantil 120mg/5ml jarabe x 100 ml.",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol Infantil 120mg/5ml jarabe x 100 ml.",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-pediatrico-120mg-ml-jarabe-x-100-ml&cfmId=CFM-000015",
+          "imageUrl": "https://farmacia.araucomed.com/13270-home_default/kitadol-pediatrico-120mg-ml-jarabe-x-100-ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13270-home_default/kitadol-pediatrico-120mg-ml-jarabe-x-100-ml.jpg",
+      "presentationKey": "kitadol|100ml|100|bio:unknown|brand:chile|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000015",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|1000mg|18",
+      "canonicalName": "Kitadol 1 g 18 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol 1000Mg X 18 comprimidos (LCh)",
+          "channels": {
+            "store": 6450,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6450
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C1000mg%7C18&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-1000mg-x-18%2F&cfmId=CFM-000072",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/08/435361-2.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol 1 g 18 Comprimidos",
+          "channels": {
+            "store": 7490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7C1000mg%7C18&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-1-g-18-comprimidos-66871.html&cfmId=CFM-000072",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4bb48e08/images/products/66871/66871.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 6450,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4bb48e08/images/products/66871/66871.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "kitadol|1000mg|18|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-000072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|60ml|60",
+      "canonicalName": "Kitadol 120 mg/5 mL x 60 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol 120 mg/5 mL x 60 mL Jarabe",
+          "channels": {
+            "store": 8032,
+            "online": null,
+            "cmr": 7087,
+            "sbpay": null,
+            "effective": 7087
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7C60ml%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-120-mg-5-ml-x-60-ml-jarabe-9209.html&cfmId=CFM-000184",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw19dd9532/images/products/9209/9209.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 7087,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw19dd9532/images/products/9209/9209.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "kitadol|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000184",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|100ml",
+      "canonicalName": "Kitadol Paracetamol Infantil Jarabe 100ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Kitadol Paracetamol Infantil Jarabe 100ml",
+          "channels": {
+            "store": 7950,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7950
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=kitadol%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fkitadol-paracetamol-infantil-jarabe-100ml%2F&cfmId=CFM-000078",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/kitadol-infantil-100ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:52.853Z"
+        }
+      ],
+      "bestPrice": 7950,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/kitadol-infantil-100ml.jpg",
+      "presentationKey": "kitadol|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000078",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|1000mg|18",
+      "canonicalName": "Kitadol 1000 Mg x 18...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Kitadol 1000 Mg x 18...",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=kitadol%7C1000mg%7C18&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24661-kitadol-1000-x-18.html&cfmId=CFM-000072",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:52.854Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "kitadol|1000mg|18|bio:unknown|brand:unknown",
+      "cfmId": "CFM-000072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|100ml|100",
+      "canonicalName": "Kitadol Infantil 120 mg/5 mL x 100 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Kitadol Infantil 120 mg/5 mL x 100 mL Jarabe",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": 8804,
+            "sbpay": null,
+            "effective": 8804
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=kitadol%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fkitadol-infantil-120-mg-5-ml-x-100-ml-jarabe-92659.html&cfmId=CFM-000015",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfb2ae9ff/images/products/92659/92659.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 8804,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfb2ae9ff/images/products/92659/92659.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "kitadol|100ml|100|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000015",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol",
+      "canonicalName": "Kitadol Jarabe infantil 120...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Kitadol Jarabe infantil 120...",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=kitadol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24665-kitadol-inf-jarabe-x-60-ml.html&cfmId=CFM-001065",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:52.854Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "kitadol|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001065",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|100ml",
+      "canonicalName": "Kitadol Paracetamol Infantil Jarabe 100ml",
+      "laboratory": "Kitadol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol Paracetamol Infantil Jarabe 100ml",
+          "channels": {
+            "store": 11599,
+            "online": 9047,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9047
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-paracetamol-infantil-jarabe-100ml%3Fdefault_sku%3D586509&cfmId=CFM-000078",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/108635/small/586509.jpg?1712587705",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 9047,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/108635/small/586509.jpg?1712587705",
+      "presentationKey": "kitadol|100ml|bio:unknown|brand:kitadol|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000078",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "kitadol|60ml",
+      "canonicalName": "Kitadol Paracetamol Infantil Jarabe 60ml",
+      "laboratory": "Kitadol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Kitadol Paracetamol Infantil Jarabe 60ml",
+          "channels": {
+            "store": 11199,
+            "online": 9855,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9855
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=kitadol%7C60ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fkitadol-paracetamol-infantil-jarabe-60ml%3Fdefault_sku%3D430983&cfmId=CFM-000080",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/47495/small/430983-2.jpg?1641476750",
+          "fetchedAt": "2026-08-31T01:23:52.852Z"
+        }
+      ],
+      "bestPrice": 9855,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/47495/small/430983-2.jpg?1641476750",
+      "presentationKey": "kitadol|60ml|bio:unknown|brand:kitadol|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000080",
+      "lexicalMatch": "exact"
+    }
+  ]
+}

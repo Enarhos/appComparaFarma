@@ -1,0 +1,1230 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "next",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=next",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:25:39.286Z",
+  "completedAt": "2026-08-31T01:25:46.176Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 37,
+  "results": [
+    {
+      "matchKey": "nextgl|6",
+      "canonicalName": "Next GL Plus x 6 comp",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Next Gl Plus x 6 Comprimidos",
+          "channels": {
+            "store": 3390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nextgl%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnext-gl-plus-x-6-comprimidos%2F&cfmId=CFM-001478",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/05/next-plus-gl.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Next Gl Plus 6 Comprimidos",
+          "channels": {
+            "store": 4190,
+            "online": null,
+            "cmr": 3982,
+            "sbpay": null,
+            "effective": 3982
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=nextgl%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnext-gl-plus-6-comprimidos-92246.html&cfmId=CFM-001478",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4a7ea462/images/products/92246/92246.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Next GL Plus x 6 comp",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nextgl%7C6&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104318-next-gl-plus-x-6-comp.html&cfmId=CFM-001478",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:45.020Z"
+        }
+      ],
+      "bestPrice": 3390,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/05/next-plus-gl.jpg",
+      "presentationKey": "nextgl|6|bio:unknown|brand:unknown|var:plus|form:solid-oral",
+      "cfmId": "CFM-001478",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nextgl|6",
+      "canonicalName": "Next GL Plus 6 Comprimidos Recubiertos",
+      "laboratory": "Next",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Next GL Plus 6 Comprimidos Recubiertos",
+          "channels": {
+            "store": 5199,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5199
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nextgl%7C6&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnext-gl-plus-6-comprimidos-recubiertos%3Fdefault_sku%3D587156&cfmId=CFM-001478",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/116786/small/587156_0.jpg?1721408894",
+          "fetchedAt": "2026-08-31T01:25:45.018Z"
+        }
+      ],
+      "bestPrice": 5199,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/116786/small/587156_0.jpg?1721408894",
+      "presentationKey": "nextgl|6|bio:unknown|brand:next|var:plus|form:solid-oral",
+      "cfmId": "CFM-001478",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nextgl|12",
+      "canonicalName": "Next GL Gripe x 12 comp.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Next GL Gripe x 12 comp.",
+          "channels": {
+            "store": 5320,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5320
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nextgl%7C12&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnext-gl-gripe-x-12-comp%2F&cfmId=CFM-005092",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/05/next-gl-gripe-x-12.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.020Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Next GL Gripe X 12 Comp....",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nextgl%7C12&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105142-next-gl-gripe-x-12-comp-recubiertos-vence-02-2026-stock-1.html&cfmId=CFM-005092",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:45.020Z"
+        }
+      ],
+      "bestPrice": 5320,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/05/next-gl-gripe-x-12.jpg",
+      "presentationKey": "nextgl|12|bio:unknown|brand:unknown|var:gripe|form:solid-oral",
+      "cfmId": "CFM-005092",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nextgl|12",
+      "canonicalName": "Next GL Plus 12 Comprimidos Recubiertos",
+      "laboratory": "Next",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Next GL Plus 12 Comprimidos Recubiertos",
+          "channels": {
+            "store": 9799,
+            "online": 6957,
+            "cmr": null,
+            "sbpay": 5977,
+            "effective": 5977
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nextgl%7C12&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnext-gl-plus-12-comprimidos-recubiertos%3Fdefault_sku%3D591037&cfmId=CFM-005092",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/141825/small/591037.jpg?1746041559",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 5977,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/141825/small/591037.jpg?1746041559",
+      "presentationKey": "nextgl|12|bio:unknown|brand:next|var:plus|form:solid-oral",
+      "cfmId": "CFM-005092",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nextgl|12",
+      "canonicalName": "Next Gl 12 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Next Gl 12 Comprimidos",
+          "channels": {
+            "store": 6490,
+            "online": null,
+            "cmr": 6239,
+            "sbpay": null,
+            "effective": 6239
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=nextgl%7C12&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnext-gl-12-comprimidos-92245.html&cfmId=CFM-005092",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw385b3ed9/images/products/92245/92245.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 6239,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw385b3ed9/images/products/92245/92245.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "nextgl|12|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-005092",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nextgl|12",
+      "canonicalName": "Next GL Plus 12 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Next GL Plus 12 Comprimidos Recubiertos",
+          "channels": {
+            "store": 6780,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6780
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nextgl%7C12&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnext-gl-plus-12-comprimidos-recubiertos%2F&cfmId=CFM-005092",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/next-gl-plus-x-12.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Next GL Plus Gripe y Tos 12 Comprimidos Recubiertos",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=nextgl%7C12&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnext-gl-plus-gripe-y-tos-12-comprimidos-recubiertos-95315.html&cfmId=CFM-005092",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw31261a69/images/products/95315/95315.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 6780,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/next-gl-plus-x-12.jpg",
+      "presentationKey": "nextgl|12|bio:unknown|brand:unknown|var:plus|form:solid-oral",
+      "cfmId": "CFM-005092",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "corrector|7ml",
+      "canonicalName": "Corrector Facial Maybelline Instant Age Eraser Neutralizer 7ml",
+      "laboratory": "Maybelline",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Corrector Facial Maybelline Instant Age Eraser Neutralizer 7ml",
+          "channels": {
+            "store": 8699,
+            "online": 6959,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6959
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=corrector%7C7ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcorrector-facial-maybelline-instant-age-eraser-neutralizer-7ml%3Fdefault_sku%3D5990589&cfmId=CFM-011379",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/83828/small/5990589-1.jpg?1668194686",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 6959,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/83828/small/5990589-1.jpg?1668194686",
+      "presentationKey": "corrector|7ml|bio:unknown|brand:maybelline|var:facial",
+      "cfmId": "CFM-011379",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nextgl",
+      "canonicalName": "Next Gl Plus Gripe Y Tos 12...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Next Gl Plus Gripe Y Tos 12...",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=nextgl&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105652-next-gl-plus-gripe-y-tos-12-comp-recuebiertos.html&cfmId=CFM-005306",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:45.020Z"
+        }
+      ],
+      "bestPrice": 6990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "nextgl|bio:unknown|brand:recuebiertos|var:plus",
+      "cfmId": "CFM-005306",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nextgl|12",
+      "canonicalName": "Next GL 12 Comprimidos Recubiertos",
+      "laboratory": "Next",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Next GL 12 Comprimidos Recubiertos",
+          "channels": {
+            "store": 8099,
+            "online": 7127,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7127
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nextgl%7C12&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnext-gl-12-comprimidos-recubiertos%3Fdefault_sku%3D587157&cfmId=CFM-005092",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/116798/small/587157_0.jpg?1721409038",
+          "fetchedAt": "2026-08-31T01:25:45.018Z"
+        }
+      ],
+      "bestPrice": 7127,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/116798/small/587157_0.jpg?1721409038",
+      "presentationKey": "nextgl|12|bio:unknown|brand:next|form:solid-oral",
+      "cfmId": "CFM-005092",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "agua",
+      "canonicalName": "Agua Micelar Hydro Boost ",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Agua Micelar Hydro Boost ",
+          "channels": {
+            "store": 8299,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8299
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=agua&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhydro-boost-agua-micelar-neutrogena-400ml%3Fdefault_sku%3D577856&cfmId=CFM-001859",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/96598/small/577856-1.jpeg?1690901880",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 8299,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/96598/small/577856-1.jpeg?1690901880",
+      "presentationKey": "agua|bio:unknown|brand:neutrogena|var:micelar",
+      "cfmId": "CFM-001859",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "neutrogena",
+      "canonicalName": "Neutrogena Face Care Intensive Hidratante Mate 3 En 1",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Neutrogena Face Care Intensive Hidratante Mate 3 En 1",
+          "channels": {
+            "store": 9899,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9899
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=neutrogena&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fneutrogena-face-care-intensive-hidratante-mate-3-en-1%3Fdefault_sku%3D582072&cfmId=CFM-008240",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/155144/small/582072.jpg?1755022995",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 9899,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/155144/small/582072.jpg?1755022995",
+      "presentationKey": "neutrogena|bio:unknown|brand:neutrogena|var:face",
+      "cfmId": "CFM-008240",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "facial|100000mg",
+      "canonicalName": "Crema facial Neutrogena Face Care Intensive Antiedad FPS22 100g",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Crema facial Neutrogena Face Care Intensive Antiedad FPS22 100g",
+          "channels": {
+            "store": 9899,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9899
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=facial%7C100000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcrema-facial-neutrogena-face-care-intensive-antiedad-fps22-100g%3Fdefault_sku%3D582071&cfmId=CFM-008323",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/155300/small/582071_1.png?1755027673",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 9899,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/155300/small/582071_1.png?1755027673",
+      "presentationKey": "facial|100000mg|bio:unknown|brand:neutrogena|var:neutrogena|form:topical",
+      "cfmId": "CFM-008323",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "neutrogena|162ml",
+      "canonicalName": "NEUTROGENA® Desmaquillante de Ojos Bifásico 162ml",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "NEUTROGENA® Desmaquillante de Ojos Bifásico 162ml",
+          "channels": {
+            "store": 10399,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=neutrogena%7C162ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fneutrogena-desmaquillante-de-ojos-bifasico-162ml%3Fdefault_sku%3D4815065&cfmId=CFM-008241",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/154921/small/4815065.jpg?1755013922",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 10399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/154921/small/4815065.jpg?1755013922",
+      "presentationKey": "neutrogena|162ml|bio:unknown|brand:neutrogena|var:desmaquillante",
+      "cfmId": "CFM-008241",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "oreal|15ml",
+      "canonicalName": "L'Oréal Paris Infailible Skin Ink Tono 15 Neutral 15ml",
+      "laboratory": "L'Oréal",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "L'Oréal Paris Infailible Skin Ink Tono 15 Neutral 15ml",
+          "channels": {
+            "store": 13999,
+            "online": 10499,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=oreal%7C15ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fl-oreal-paris-infailible-skin-ink-tono-15-neutral-15ml%3Fdefault_sku%3D592293&cfmId=CFM-009321",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/155983/small/592293_0MAIN.jpg?1755189336",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 10499,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/155983/small/592293_0MAIN.jpg?1755189336",
+      "presentationKey": "oreal|15ml|bio:unknown|brand:loreal|var:paris",
+      "cfmId": "CFM-009321",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "protector|40ml",
+      "canonicalName": "Protector Solar Neutrogena Hydro Boost Sin Color FPS50 40ml",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Protector Solar Neutrogena Hydro Boost Sin Color FPS50 40ml",
+          "channels": {
+            "store": 14699,
+            "online": 10877,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10877
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=protector%7C40ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fprotector-solar-neutrogena-hydro-boost-sin-color-fps50-40ml%3Fdefault_sku%3D588524&cfmId=CFM-002661",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/159030/small/588524_2.jpeg?1757446495",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 10877,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/159030/small/588524_2.jpeg?1757446495",
+      "presentationKey": "protector|40ml|bio:unknown|brand:neutrogena|var:solar",
+      "cfmId": "CFM-002661",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "neutrogena|50000mg",
+      "canonicalName": "Neutrogena Hydro Boost Crema Facial Refill 50g",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Neutrogena Hydro Boost Crema Facial Refill 50g",
+          "channels": {
+            "store": 11399,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=neutrogena%7C50000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcrema-facial-refill-neutrogena-hydro-boost-50g%3Fdefault_sku%3D585191&cfmId=CFM-007308",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/198672/small/585191_1.jpg?1787335988",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 11399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/198672/small/585191_1.jpg?1787335988",
+      "presentationKey": "neutrogena|50000mg|bio:unknown|brand:neutrogena|var:hydro|form:topical",
+      "cfmId": "CFM-007308",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hidratante|400ml",
+      "canonicalName": "Hidratante Corporal Neutrogena Hydro Boost Water Gel 400ml",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Hidratante Corporal Neutrogena Hydro Boost Water Gel 400ml",
+          "channels": {
+            "store": 11599,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11599
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hidratante%7C400ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhidratante-corporal-neutrogena-hydro-boost-water-gel-400ml%3Fdefault_sku%3D571255&cfmId=CFM-008321",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/158984/small/571255_2.jpeg?1757445800",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 11599,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/158984/small/571255_2.jpeg?1757445800",
+      "presentationKey": "hidratante|400ml|bio:unknown|brand:neutrogena|var:corporal|form:topical",
+      "cfmId": "CFM-008321",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ariana|236ml",
+      "canonicalName": "Ariana Grande Thank u next Body Spray 236ml",
+      "laboratory": "Ariana Grande",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ariana Grande Thank u next Body Spray 236ml",
+          "channels": {
+            "store": 14999,
+            "online": 13499,
+            "cmr": null,
+            "sbpay": 11999,
+            "effective": 11999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ariana%7C236ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fariana-grande-thank-u-next-body-spray-236ml%3Fdefault_sku%3D585168&cfmId=CFM-005090",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/152340/small/585168.jpg?1753802832",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 11999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/152340/small/585168.jpg?1753802832",
+      "presentationKey": "ariana|236ml|bio:unknown|brand:arianagrande|var:grande",
+      "cfmId": "CFM-005090",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "limpieza|354ml",
+      "canonicalName": "Gel de Limpieza Facial Neutrógena Ultra Gentle 354 ml",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Gel de Limpieza Facial Neutrógena Ultra Gentle 354 ml",
+          "channels": {
+            "store": 12499,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=limpieza%7C354ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fgel-de-limpieza-facial-neutrogena-ultra-gentle-354-ml%3Fdefault_sku%3D7650001&cfmId=CFM-004419",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/179643/small/7650001_1.jpg?1773158521",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 12499,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/179643/small/7650001_1.jpg?1773158521",
+      "presentationKey": "limpieza|354ml|bio:unknown|brand:neutrogena|var:facial|form:topical",
+      "cfmId": "CFM-004419",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "spray|355ml",
+      "canonicalName": "Spray Comeback Curl Next Day Revitalizador de Rizos 355ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Spray Comeback Curl Next Day Revitalizador de Rizos 355ml",
+          "channels": {
+            "store": 12990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=spray%7C355ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fspray-comeback-curl-next-day-revitalizador-de-rizos-355ml%2F572388.html&cfmId=CFM-005091",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1d34c56e/images/large/572388-spray-comeback-curl-next-day-revitalizador-de-rizos-355ml.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.018Z"
+        }
+      ],
+      "bestPrice": 12990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1d34c56e/images/large/572388-spray-comeback-curl-next-day-revitalizador-de-rizos-355ml.jpg",
+      "presentationKey": "spray|355ml|bio:unknown|brand:unknown|var:comeback",
+      "cfmId": "CFM-005091",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "regenesis|30",
+      "canonicalName": "Regenesis Next x30cap",
+      "laboratory": "Exeltis",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Regenesis Next x30cap",
+          "channels": {
+            "store": 13990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=regenesis%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fvitaminas-y-minerales%2Fregenesis-next-x30cap&cfmId=CFM-000218",
+          "imageUrl": "https://farmacia.araucomed.com/6822-home_default/regenesis-next-x30cap.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 13990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/6822-home_default/regenesis-next-x30cap.jpg",
+      "presentationKey": "regenesis|30|bio:unknown|brand:exeltis|var:next|form:solid-oral",
+      "cfmId": "CFM-000218",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hidratante|50000mg",
+      "canonicalName": "Hidratante Facial Gel Hydro Boost Neutrogena 50g",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Hidratante Facial Gel Hydro Boost Neutrogena 50g",
+          "channels": {
+            "store": 14599,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14599
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hidratante%7C50000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhidratante-facial-gel-neutrogena-hydro-boost-50g%3Fdefault_sku%3D7650030&cfmId=CFM-005374",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/198650/small/7650030_1.jpg?1787335670",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 14599,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/198650/small/7650030_1.jpg?1787335670",
+      "presentationKey": "hidratante|50000mg|bio:unknown|brand:neutrogena|var:facial|form:topical",
+      "cfmId": "CFM-005374",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "svr|400ml",
+      "canonicalName": "Svr Desmaquillante Sensifine Dermo Nettoyant 400ml",
+      "laboratory": "Svr",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Svr Desmaquillante Sensifine Dermo Nettoyant 400ml",
+          "channels": {
+            "store": 21299,
+            "online": 14909,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14909
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=svr%7C400ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsvr-desmaquillante-sensifine-dermo-nettoyant-400ml%3Fdefault_sku%3D579651&cfmId=CFM-003342",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/88770/small/579651_1.jpg?1677788277",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 14909,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/88770/small/579651_1.jpg?1677788277",
+      "presentationKey": "svr|400ml|bio:unknown|brand:svr|var:desmaquillante",
+      "cfmId": "CFM-003342",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ariana|236ml",
+      "canonicalName": "Ariana Grande Thank U Next Body Spay 236ml (M)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Ariana Grande Thank U Next Body Spay 236ml (M)",
+          "channels": {
+            "store": 14990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=ariana%7C236ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fariana-grande-thank-u-next-body-spay-236ml-m%2F560589.html&cfmId=CFM-005090",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa6473531/images/large/560589-ariana-grande-thank-u-next-body-spay.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.018Z"
+        }
+      ],
+      "bestPrice": 14990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa6473531/images/large/560589-ariana-grande-thank-u-next-body-spay.jpg",
+      "presentationKey": "ariana|236ml|bio:unknown|brand:unknown|var:grande",
+      "cfmId": "CFM-005090",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "serum|30ml",
+      "canonicalName": "Sérum Hidratante Neutrogena Hydro Boost 30ml",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Sérum Hidratante Neutrogena Hydro Boost 30ml",
+          "channels": {
+            "store": 15699,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15699
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=serum%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fserum-hidratante-neutrogena-hydro-boost-30ml%3Fdefault_sku%3D584271&cfmId=CFM-000683",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/155153/small/584271.jpg?1755023207",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 15699,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/155153/small/584271.jpg?1755023207",
+      "presentationKey": "serum|30ml|bio:unknown|brand:neutrogena|var:hidratante",
+      "cfmId": "CFM-000683",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "serum|30ml",
+      "canonicalName": "Serum Antimanchas Neutrogena® Hydro Boost 30ml",
+      "laboratory": "Neutrogena",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Serum Antimanchas Neutrogena® Hydro Boost 30ml",
+          "channels": {
+            "store": 16199,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16199
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=serum%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fserum-antimanchas-neutrogena-hydro-boost-30ml%3Fdefault_sku%3D590782&cfmId=CFM-000683",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/136769/small/590782_1.jpg?1741195072",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 16199,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/136769/small/590782_1.jpg?1741195072",
+      "presentationKey": "serum|30ml|bio:unknown|brand:neutrogena|var:antimanchas",
+      "cfmId": "CFM-000683",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nextfwd",
+      "canonicalName": "Next Fwd 24 Tabs /50",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Next Fwd 24 Tabs /50",
+          "channels": {
+            "store": 21900,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21900
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=nextfwd&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnext-fwd-24-tabs-50%2F65020.html&cfmId=CFM-002873",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_YzaMexico/default/dwb4a7407f/images/large/650240065293_1.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.018Z"
+        }
+      ],
+      "bestPrice": 21900,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_YzaMexico/default/dwb4a7407f/images/large/650240065293_1.jpg",
+      "presentationKey": "nextfwd|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-002873",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glowyour|473ml",
+      "canonicalName": "Glow Your Own Way Next Level Self Tan Gel 473 Ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Glow Your Own Way Next Level Self Tan Gel 473 Ml",
+          "channels": {
+            "store": 24990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glowyour%7C473ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglow-your-own-way-next-level-self-tan-gel-473-ml%2F586101.html&cfmId=CFM-005089",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4451715b/images/large/586101-1.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.018Z"
+        }
+      ],
+      "bestPrice": 24990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4451715b/images/large/586101-1.jpg",
+      "presentationKey": "glowyour|473ml|bio:unknown|brand:unknown|var:own|form:topical",
+      "cfmId": "CFM-005089",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "neotone|30ml",
+      "canonicalName": "Neotone Sérum 30ml",
+      "laboratory": "Isispharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Neotone Sérum 30ml",
+          "channels": {
+            "store": 40799,
+            "online": 28559,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28559
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=neotone%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fneotone-serum-30ml%3Fdefault_sku%3D529095&cfmId=CFM-004988",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/186551/small/529095_1.jpg?1778619364",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 28559,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/186551/small/529095_1.jpg?1778619364",
+      "presentationKey": "neotone|30ml|bio:unknown|brand:isispharma|var:serum",
+      "cfmId": "CFM-004988",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nexium|20mg|28",
+      "canonicalName": "Nexium (R) 20mg 28 Comprimidos Recubiertos",
+      "laboratory": "Nexium",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Nexium (R) 20mg 28 Comprimidos Recubiertos",
+          "channels": {
+            "store": 33099,
+            "online": 29127,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 29127
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nexium%7C20mg%7C28&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fesomeprazol-20mg-oral-solido-aa953d2d-a55a-450a-85b3-cbc6c5be7ec0%3Fdefault_sku%3D2052188&cfmId=CFM-001520",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27962/small/2052188.jpg?1641479692",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 29127,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27962/small/2052188.jpg?1641479692",
+      "presentationKey": "nexium|20mg|28|bio:unknown|brand:nexium|form:solid-oral",
+      "cfmId": "CFM-001520",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nutren|740000mg",
+      "canonicalName": "Nutren Senior Neutro 740g",
+      "laboratory": "Nestlé",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Nutren Senior Neutro 740g",
+          "channels": {
+            "store": 29999,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 29999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nutren%7C740000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnutren-senior-neutro-740g%3Fdefault_sku%3D591983&cfmId=CFM-014927",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/153490/small/591983-3.jpg?1754600177",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 29999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/153490/small/591983-3.jpg?1754600177",
+      "presentationKey": "nutren|740000mg|bio:unknown|brand:nestle|var:senior",
+      "cfmId": "CFM-014927",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ariana|30ml",
+      "canonicalName": "Ariana Grande Thank U, Next 30ml",
+      "laboratory": "Ariana Grande",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ariana Grande Thank U, Next 30ml",
+          "channels": {
+            "store": 39999,
+            "online": 35999,
+            "cmr": null,
+            "sbpay": 31999,
+            "effective": 31999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ariana%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fariana-grande-thank-u-next-30ml%3Fdefault_sku%3D585167&cfmId=CFM-005093",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/152348/small/585167.jpg?1753803895",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 31999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/152348/small/585167.jpg?1753803895",
+      "presentationKey": "ariana|30ml|bio:unknown|brand:arianagrande|var:grande",
+      "cfmId": "CFM-005093",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ariana|30ml",
+      "canonicalName": "Ariana Grande Thank U Next EDP 30ml (M)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Ariana Grande Thank U Next EDP 30ml (M)",
+          "channels": {
+            "store": 39990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 39990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=ariana%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fariana-grande-thank-u-next-edp-30ml-m%2F560591.html&cfmId=CFM-005093",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw075d2cdc/images/large/560591-2-ariana-grande-thank-u-next-edp.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.018Z"
+        }
+      ],
+      "bestPrice": 39990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw075d2cdc/images/large/560591-2-ariana-grande-thank-u-next-edp.jpg",
+      "presentationKey": "ariana|30ml|bio:unknown|brand:unknown|var:grande",
+      "cfmId": "CFM-005093",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "tranexton|650mg|30",
+      "canonicalName": "Tranexton 650 mg x 30 comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Tranexton 650 mg x 30 comprimidos",
+          "channels": {
+            "store": 48890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 48890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tranexton%7C650mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftranexton-650mg-x-30-comprimidos%2F&cfmId=CFM-014925",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/01/Tranexton-650mg-x-30.jpg",
+          "fetchedAt": "2026-08-31T01:25:45.020Z"
+        }
+      ],
+      "bestPrice": 48890,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/01/Tranexton-650mg-x-30.jpg",
+      "presentationKey": "tranexton|650mg|30|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-014925",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "tranexton|650mg",
+      "canonicalName": "Tranexton 650 mg 30...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Tranexton 650 mg 30...",
+          "channels": {
+            "store": 48990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 48990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=tranexton%7C650mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24769-tranexton-650-mg-x-30.html&cfmId=CFM-014928",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:45.020Z"
+        }
+      ],
+      "bestPrice": 48990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "tranexton|650mg|bio:unknown|brand:unknown",
+      "cfmId": "CFM-014928",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nexium|40mg|28",
+      "canonicalName": "Nexium Esomeprazol 40mg 28 Comprimidos Recubiertos",
+      "laboratory": "Nexium",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Nexium Esomeprazol 40mg 28 Comprimidos Recubiertos",
+          "channels": {
+            "store": 60399,
+            "online": 53151,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 53151
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=nexium%7C40mg%7C28&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnexium-esomeprazol-40mg-28-comprimidos-recubiertos%3Fdefault_sku%3D2052193&cfmId=CFM-001526",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/180683/small/2052193_-_Fonasa.jpg?1774014292",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 53151,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/180683/small/2052193_-_Fonasa.jpg?1774014292",
+      "presentationKey": "nexium|40mg|28|bio:unknown|brand:nexium|form:solid-oral",
+      "cfmId": "CFM-001526",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "implanon",
+      "canonicalName": "Implanon Next Etonogestrel Implante 1 Aplicación",
+      "laboratory": "Implanon",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Implanon Next Etonogestrel Implante 1 Aplicación",
+          "channels": {
+            "store": 255899,
+            "online": 127949,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 127949
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=implanon&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fimplanon-next-etonogestrel-implante-1-aplicacion%3Fdefault_sku%3D1160015&cfmId=CFM-014926",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/78919/small/1160015_%28frontal%29.jpg?1661466414",
+          "fetchedAt": "2026-08-31T01:25:45.019Z"
+        }
+      ],
+      "bestPrice": 127949,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/78919/small/1160015_%28frontal%29.jpg?1661466414",
+      "presentationKey": "implanon|bio:unknown|brand:implanon|var:next",
+      "cfmId": "CFM-014926",
+      "lexicalMatch": "exact"
+    }
+  ]
+}

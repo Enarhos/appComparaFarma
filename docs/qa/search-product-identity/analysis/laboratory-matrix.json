@@ -1,0 +1,266 @@
+{
+ "labMatrix": {
+  "araucomed": {
+   "offers": 355,
+   "labNull": 58,
+   "labEqualsIngredient": 6,
+   "samples": [
+    {
+     "laboratory": "Ascend",
+     "name": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)"
+    },
+    {
+     "laboratory": "Andrómaco",
+     "name": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)"
+    },
+    {
+     "laboratory": "Eurofarma",
+     "name": "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)"
+    },
+    {
+     "laboratory": "Seven Pharma",
+     "name": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)"
+    },
+    {
+     "laboratory": "Ascend",
+     "name": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)"
+    },
+    {
+     "laboratory": "Hospifarma",
+     "name": "Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)"
+    },
+    {
+     "laboratory": "Mintlab",
+     "name": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Mintlab)"
+    },
+    {
+     "laboratory": "Mintlab",
+     "name": "Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)"
+    },
+    {
+     "laboratory": "Opko",
+     "name": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)"
+    },
+    {
+     "laboratory": "Mintlab",
+     "name": "Mintamox Adulto 30mg/5ml jarabe 100ml"
+    },
+    {
+     "laboratory": "Mintlab",
+     "name": "Mintamox Infantil 15mg/5ml jarabe 100ml"
+    },
+    {
+     "laboratory": "Seven Pharma",
+     "name": "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml (Seven Pharma)"
+    }
+   ],
+   "pctNull": 16.3
+  },
+  "ecofarmacias": {
+   "offers": 200,
+   "labNull": 200,
+   "labEqualsIngredient": 0,
+   "samples": [],
+   "pctNull": 100
+  },
+  "farmex": {
+   "offers": 107,
+   "labNull": 6,
+   "labEqualsIngredient": 0,
+   "samples": [
+    {
+     "laboratory": "ANDROMACO",
+     "name": "Ambroxol Jarabe Infantil 15 mg / 5 mL x 100 mL"
+    },
+    {
+     "laboratory": "ANDROMACO",
+     "name": "Ambroxol Jarabe Adultos 30 mg / 5 mL x 100 mL"
+    },
+    {
+     "laboratory": "EUROLAB",
+     "name": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL"
+    },
+    {
+     "laboratory": "OPKO",
+     "name": "Amoxicilina 500 mg / 5 mL x 60 mL \"Ley Cenabast\""
+    },
+    {
+     "laboratory": "MINTLAB",
+     "name": "Amoxicilina 750 mg x 10 comprimidos"
+    },
+    {
+     "laboratory": "OPKO",
+     "name": "Amoxicilina 500 mg x 21 cápsulas"
+    },
+    {
+     "laboratory": "ASCEND",
+     "name": "Amoxicilina + Ácido Clavulánico 500 mg / 125 mg x 20 comprimidos"
+    },
+    {
+     "laboratory": "opko",
+     "name": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 14 comprimidos"
+    },
+    {
+     "laboratory": "CuraeSpring",
+     "name": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 20 comprimidos"
+    },
+    {
+     "laboratory": "MINTLAB",
+     "name": "Amoxicilina 750 mg x 10 comprimidos"
+    },
+    {
+     "laboratory": "OPKO",
+     "name": "Amoxicilina 500 mg / 5 mL x 60 mL \"Ley Cenabast\""
+    },
+    {
+     "laboratory": "OPKO",
+     "name": "Amoxicilina 500 mg x 21 cápsulas"
+    }
+   ],
+   "pctNull": 5.6
+  },
+  "easyfarma": {
+   "offers": 208,
+   "labNull": 208,
+   "labEqualsIngredient": 0,
+   "samples": [],
+   "pctNull": 100
+  },
+  "salcobrand": {
+   "offers": 399,
+   "labNull": 0,
+   "labEqualsIngredient": 276,
+   "samples": [
+    {
+     "laboratory": "Ambroxol",
+     "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+    },
+    {
+     "laboratory": "Muxol",
+     "name": "Muxol Adulto Ambroxol Jarabe 100ml"
+    },
+    {
+     "laboratory": "Muxol Pediatrico",
+     "name": "Muxol Pediátrico Ambroxol Jarabe 100ml"
+    },
+    {
+     "laboratory": "Broncot",
+     "name": "Broncot Ambroxol 30mg/5ml 120ml"
+    },
+    {
+     "laboratory": "Muxol",
+     "name": "Muxol Ambroxol 20 Comprimidos"
+    },
+    {
+     "laboratory": "Broncot",
+     "name": "Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml"
+    },
+    {
+     "laboratory": "Ambilan Bid",
+     "name": "Ambilan Bid Forte Amoxicilina / Ácido Clavulánico Suspensión Oral 70ml"
+    },
+    {
+     "laboratory": "Ambilan Bid",
+     "name": "Ambilan Bid Forte Amoxicilina / Ácido Clavulánico Suspensión Oral 90ml"
+    },
+    {
+     "laboratory": "Amoxicilina / Ácido Clavulánico",
+     "name": "Amoxicilina / Ácido Clavulánico (B) 875/125 14 Comprimidos Recubiertos"
+    },
+    {
+     "laboratory": "Amoxicilina+Clavulanico",
+     "name": "Amoxicilina / Acido Clavulánico (B) 500/125 20 Comprimidos Recubiertos"
+    },
+    {
+     "laboratory": "Maximox",
+     "name": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 14 Comprimidos Recubiertos"
+    },
+    {
+     "laboratory": "Novamox",
+     "name": "Novamox (B) Amoxicilina 1g 14 Comprimidos"
+    }
+   ],
+   "pctNull": 0
+  },
+  "ahumada": {
+   "offers": 307,
+   "labNull": 307,
+   "labEqualsIngredient": 0,
+   "samples": [],
+   "pctNull": 100
+  },
+  "dr-simi": {
+   "offers": 194,
+   "labNull": 0,
+   "labEqualsIngredient": 0,
+   "samples": [
+    {
+     "laboratory": "PRATER",
+     "name": "Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL"
+    },
+    {
+     "laboratory": "HOSPIFARMA",
+     "name": "Amoxicilina 250 mg/5 mL polvo para suspensión oral 60 mL"
+    },
+    {
+     "laboratory": "OPKO",
+     "name": "Amoxicilina 500 mg/5 mL polvo para suspensión oral 60 mL"
+    },
+    {
+     "laboratory": "SEVEN PHARMA",
+     "name": "Amoxicilina 400 mg ácido clavulánico 57 mg polvo para suspensión oral 70 mL"
+    },
+    {
+     "laboratory": "EUROFARMA",
+     "name": "Clavam Duo amoxicilina 400 mg ácido clavulánico 57 mg polvo para suspensión oral 70 mL"
+    },
+    {
+     "laboratory": "OPKO",
+     "name": "Amoxicilina 500 mg 21 cápsulas"
+    },
+    {
+     "laboratory": "MILAB",
+     "name": "Amoxicilina 750 mg 10 comprimidos"
+    },
+    {
+     "laboratory": "ASCEND",
+     "name": "Amoxicilina 500 mg ácido clavulánico 125 mg 20 comprimidos recubiertos"
+    },
+    {
+     "laboratory": "OPKO",
+     "name": "Amoxicilina 875 mg ácido clavulánico 125 mg 14 comprimidos recubiertos"
+    },
+    {
+     "laboratory": "PASTEUR",
+     "name": "Novamox amoxicilina 1 g 14 comprimidos dispersables"
+    },
+    {
+     "laboratory": "MEGALABS",
+     "name": "Optamox amoxicilina 875 mg 21 comprimidos recubiertos"
+    },
+    {
+     "laboratory": "DR. SIMI",
+     "name": "Amoxicilina 250 mg 500 cápsulas"
+    }
+   ],
+   "pctNull": 0
+  },
+  "cruz-verde": {
+   "offers": 308,
+   "labNull": 308,
+   "labEqualsIngredient": 0,
+   "samples": [],
+   "pctNull": 100
+  },
+  "sermecoop": {
+   "offers": 47,
+   "labNull": 47,
+   "labEqualsIngredient": 0,
+   "samples": [],
+   "pctNull": 100
+  }
+ },
+ "truncByPharmacy": {
+  "easyfarma": 167
+ }
+}

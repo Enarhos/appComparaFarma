@@ -1,0 +1,6084 @@
+{
+ "summary": {
+  "generatedAt": "2026-08-31T01:54:00.643Z",
+  "queries": 28,
+  "cards": 2347,
+  "offers": 2627,
+  "pharmacies": [
+   "ahumada",
+   "araucomed",
+   "cruz-verde",
+   "dr-simi",
+   "easyfarma",
+   "ecofarmacias",
+   "farmex",
+   "salcobrand",
+   "sermecoop"
+  ],
+  "counts": {
+   "quantityMismatch": 0,
+   "quantityNullVsExplicit": 2,
+   "doseMismatch": 12,
+   "formMismatch": 0,
+   "variantMismatch": 0,
+   "offerIntegrity": 155,
+   "truncation": 167,
+   "priceOutlier": 16,
+   "stockAnomaly": 0,
+   "falseSplit": 28,
+   "labEqualsIngredient": 325,
+   "unitCountMisread": 2
+  },
+  "abTotals": {
+   "baseCards": 2347,
+   "prCards": 2347,
+   "queriesWithDelta": 0
+  }
+ },
+ "findings": {
+  "quantityMismatch": [],
+  "quantityNullVsExplicit": [
+   {
+    "cardId": "ketoprofeno#10",
+    "presentationKey": "ketoprofeno|2ml|5|bio:unknown|brand:biosano|form:injectable",
+    "counts": [
+     {
+      "pharmacy": "araucomed",
+      "name": "Ketoprofeno Iny.100mg/2ml x5amp. Biosano (Cenabast)",
+      "unitCount": null,
+      "price": 1490
+     },
+     {
+      "pharmacy": "farmex",
+      "name": "Ketoprofeno 100 mg / 2 mL x 5 ampollas",
+      "unitCount": 5,
+      "price": 6490
+     }
+    ]
+   },
+   {
+    "cardId": "salbutamol#9",
+    "presentationKey": "salbutamol|100mcg|200|bio:unknown|brand:unknown",
+    "counts": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Salbutamol 100 mcg/dosis x 200 dosis -Cenabast",
+      "unitCount": null,
+      "price": 1990
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Salbutamol 100 Mcg/ds X 200 Ds",
+      "unitCount": 200,
+      "price": 2690
+     }
+    ]
+   }
+  ],
+  "doseMismatch": [
+   {
+    "cardId": "ambroxol#4",
+    "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+    "doses": [
+     "100ml",
+     "30mg",
+     "15mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO",
+      "strength": "100ml",
+      "price": 990
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Ambroxol 30mg/5ml Jarabe 100ml",
+      "strength": "30mg",
+      "price": 2390
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Ambroxol 30mg./5ml. Jarabe Fco. 100ml",
+      "strength": "30mg",
+      "price": 3374
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+      "strength": "15mg",
+      "price": 5490
+     }
+    ]
+   },
+   {
+    "cardId": "ambroxol#17",
+    "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+    "doses": [
+     "100ml",
+     "30mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)",
+      "strength": "100ml",
+      "price": 2980
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL",
+      "strength": "30mg",
+      "price": 3990
+     }
+    ]
+   },
+   {
+    "cardId": "ambroxol#30",
+    "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+    "doses": [
+     "30mg",
+     "15mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "araucomed",
+      "name": "Muxol Adulto 30mg/5ml jarabe 100ml",
+      "strength": "30mg",
+      "price": 3990
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+      "strength": "15mg",
+      "price": 4890
+     }
+    ]
+   },
+   {
+    "cardId": "betametasona#57",
+    "presentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+    "doses": [
+     "0.25mg",
+     "2mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Cam Jarabe Betametasona 0,25 mg 120 Ml (Lab Chile)",
+      "strength": "0.25mg",
+      "price": 9980
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Cam Betametasona 2 mg Jarabe 120 mL",
+      "strength": "2mg",
+      "price": 14790
+     }
+    ]
+   },
+   {
+    "cardId": "betametasona#118",
+    "presentationKey": "cidoten|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+    "doses": [
+     "30ml",
+     "0.5mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "easyfarma",
+      "name": "Cidoten Gotas x 30 ml",
+      "strength": "30ml",
+      "price": 22990
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Cidoten 0,5 Mg/ml (betametasona) Gotas X 30 Ml",
+      "strength": "0.5mg",
+      "price": 24090
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Cidoten 0,5 mg/mL x 30 mL Solución Oral Para Gotas",
+      "strength": "0.5mg",
+      "price": 25717
+     }
+    ]
+   },
+   {
+    "cardId": "ibuprofeno#19",
+    "presentationKey": "ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+    "doses": [
+     "200mg",
+     "100mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Ibuprofeno Suspensión Oral 200mg/5ml 100ml Ascend",
+      "strength": "200mg",
+      "price": 1890
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Ibuprofeno 200mg/5ml Jarabe 100ml",
+      "strength": "200mg",
+      "price": 2790
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Ibuprofeno 100 mg/5mL Suspensión 100 mL",
+      "strength": "100mg",
+      "price": 3140
+     },
+     {
+      "pharmacy": "salcobrand",
+      "name": "Ibuprofeno 200mg/5ml Jarabe 100ml",
+      "strength": "200mg",
+      "price": 4599
+     }
+    ]
+   },
+   {
+    "cardId": "ibuprofeno#36",
+    "presentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+    "doses": [
+     "100mg",
+     "200mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "sermecoop",
+      "name": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+      "strength": "100mg",
+      "price": 2990
+     },
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml",
+      "strength": "200mg",
+      "price": 3990
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL",
+      "strength": "100mg",
+      "price": 8040
+     }
+    ]
+   },
+   {
+    "cardId": "kitadol#10",
+    "presentationKey": "kitadol|15ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+    "doses": [
+     "100mg",
+     "15ml"
+    ],
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Kitadol Paracetamol Infantil gotas 100mg 15ml DESCUENTO",
+      "strength": "100mg",
+      "price": 2400
+     },
+     {
+      "pharmacy": "easyfarma",
+      "name": "Kitadol inf. gts. 15 mL",
+      "strength": "15ml",
+      "price": 3990
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Kitadol Infantil Paracetamol 100 mg Gotas 15 mL",
+      "strength": "100mg",
+      "price": 4790
+     }
+    ]
+   },
+   {
+    "cardId": "loratadina#26",
+    "presentationKey": "alledryl|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+    "doses": [
+     "60ml",
+     "5mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "sermecoop",
+      "name": "Alledryl (loratadina) Jarabe 60ml",
+      "strength": "60ml",
+      "price": 6890
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Alledryl Loratadina 5 mg / 5 mL Jarabe 60 mL",
+      "strength": "5mg",
+      "price": 9990
+     }
+    ]
+   },
+   {
+    "cardId": "loratadina#27",
+    "presentationKey": "alledryld|120ml|bio:unknown|brand:unknown|form:fluid-oral",
+    "doses": [
+     "120ml",
+     "15mg"
+    ],
+    "offers": [
+     {
+      "pharmacy": "easyfarma",
+      "name": "Alledryl-D jarabe 120 mL",
+      "strength": "120ml",
+      "price": 6990
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Alledryl-D Loratadina 15 mg/5ml Jarabe 120 mL",
+      "strength": "15mg",
+      "price": 8890
+     }
+    ]
+   },
+   {
+    "cardId": "paracetamol#51",
+    "presentationKey": "paracetamol|15ml|bio:unknown|brand:unknown|form:fluid-oral",
+    "doses": [
+     "100mg",
+     "15ml"
+    ],
+    "offers": [
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Paracetamol 100 mg Gotas 15 mL",
+      "strength": "100mg",
+      "price": 2690
+     },
+     {
+      "pharmacy": "salcobrand",
+      "name": "Paracetamol Gotas 15ml",
+      "strength": "15ml",
+      "price": 3783
+     }
+    ]
+   },
+   {
+    "cardId": "tapsin#133",
+    "presentationKey": "tapsin|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+    "doses": [
+     "120mg",
+     "100ml"
+    ],
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Tapsin infantil paracetamol 120mg/5ml jarabe 100ml",
+      "strength": "120mg",
+      "price": 7890
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Tapsin  Infantil Suspensión  100Ml",
+      "strength": "100ml",
+      "price": 8990
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Tapsin Infantil 120 mg/ 5 mL Suspensión Oral Sabor Frambuesa 100 mL",
+      "strength": "120mg",
+      "price": 12179
+     }
+    ]
+   }
+  ],
+  "formMismatch": [],
+  "variantMismatch": [],
+  "offerIntegrity": [
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ambroxol Jarabe Infantil 15 mg / 5 mL x 100 mL",
+    "cardId": "ambroxol#7"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ambroxol Jarabe Adultos 30 mg / 5 mL x 100 mL",
+    "cardId": "ambroxol#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+    "cardId": "ambroxol#34"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina 500 mg / 5 mL x 60 mL \"Ley Cenabast\"",
+    "cardId": "amoxicilina suspension#32"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina 750 mg x 10 comprimidos.",
+    "cardId": "amoxicilina suspension#46"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina 750 mg x 10 comprimidos",
+    "cardId": "amoxicilina suspension#48"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina 500 mg x 21 cápsulas",
+    "cardId": "amoxicilina suspension#51"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina + Ácido Clavulánico 500 mg / 125 mg x 20 comprimidos",
+    "cardId": "amoxicilina suspension#59"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 14 comprimidos",
+    "cardId": "amoxicilina suspension#61"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 20 comprimidos",
+    "cardId": "amoxicilina suspension#62"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina 750 mg x 10 comprimidos.",
+    "cardId": "amoxicilina#1"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina 750 mg x 10 comprimidos",
+    "cardId": "amoxicilina#4"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina 500 mg / 5 mL x 60 mL \"Ley Cenabast\"",
+    "cardId": "amoxicilina#5"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina 500 mg x 21 cápsulas",
+    "cardId": "amoxicilina#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina + Ácido Clavulánico 500 mg / 125 mg x 20 comprimidos",
+    "cardId": "amoxicilina#24"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 14 comprimidos",
+    "cardId": "amoxicilina#27"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 20 comprimidos",
+    "cardId": "amoxicilina#30"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Aspirina 500 mg x 40 comprimidos",
+    "cardId": "aspirina#1"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Aspirina 500 mg x 20 comprimidos",
+    "cardId": "aspirina#3"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Aspirina 100 mg x 42 comprimidos",
+    "cardId": "aspirina#18"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Aspirina 500 mg x 100 comprimidos",
+    "cardId": "aspirina#21"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Aspirina Forte 650 mg x 80 comprimidos",
+    "cardId": "aspirina#25"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Aspirina Infantil 100 mg x 98 comprimidos",
+    "cardId": "aspirina#26"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clotrimazol + Betametasona Crema Dérmica x 15 g",
+    "cardId": "betametasona#2"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Betametasona Dipropionato Crema 0,05 % x 15 g",
+    "cardId": "betametasona#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Betametasona Crema 0.05 % x 15 g",
+    "cardId": "betametasona#11"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Betametasona Crema 0.05% x 15 g",
+    "cardId": "betametasona#12"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clotrimazol + Betametasona 1 / 0,05 % x 15 g (opko)",
+    "cardId": "betametasona#20"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Betametasona crema tópica 0,05% x 15 g",
+    "cardId": "betametasona#26"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Betametasona + Neomicina Ungüento x 10 g",
+    "cardId": "betametasona#29"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Cetirizina Diclorhidrato 10 mg x 30 comprimidos",
+    "cardId": "cetirizina#5"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Cetirex Cetirizina 10 Mg 30 Comprimidos Recubiertos",
+    "cardId": "cetirizina#16"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clorfenamina 4 mg x 20 comprimidos ( BE ) susc-1 de 2 meses",
+    "cardId": "clorfenamina#3"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clorfenamina 4 mg x 20 comprimidos",
+    "cardId": "clorfenamina#4"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clorfenamina 4 mg x 20 comprimidos ( BE )",
+    "cardId": "clorfenamina#5"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clotrimazol Crema Topica 1 % x 20 g",
+    "cardId": "clotrimazol#8"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clotrimazol 1 % Crema 20 gr (SCL)",
+    "cardId": "clotrimazol#9"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clotrimazol 100 mg x 6 óvulos",
+    "cardId": "clotrimazol#17"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clotrimazol + Betametasona 1 / 0,05 % x 15 g (opko)",
+    "cardId": "clotrimazol#24"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Clotrimazol 500 mg x 1 óvulo",
+    "cardId": "clotrimazol#34"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco sódico 50 mg x 10 comprimidos",
+    "cardId": "diclofenaco#0"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Sódico 12,5 mg x 5 Supositorios",
+    "cardId": "diclofenaco#6"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Sodico Adultos 50 mg x 5 supositorios",
+    "cardId": "diclofenaco#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Sódico 50 mg x 5 Supositorios",
+    "cardId": "diclofenaco#13"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Dietilamina gel tópico 1,16% x 30 gramos",
+    "cardId": "diclofenaco#16"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Dietilamina 1,16 % Gel Tópico x 30 g",
+    "cardId": "diclofenaco#17"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Sódico 100 mg x 8 cápsulas Liberación Prolongada",
+    "cardId": "diclofenaco#25"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclotaren (Diclofenaco) gel tópico 1,16% x 30 g",
+    "cardId": "diclofenaco#26"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Sódico Gel Tópico 1% x 30 g",
+    "cardId": "diclofenaco#33"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Metamizol Sódico Dipirona 500 mg x 5 supositorios",
+    "cardId": "dipirona#12"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Metamizol Sodico Dipirona 300 mg x 300 comp.",
+    "cardId": "dipirona#18"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Metamizol Sodico Dipirona 300 mg x 300 comp",
+    "cardId": "dipirona#20"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Jabón de Glicerina x 90 g",
+    "cardId": "glicerina#3"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Supositorio Glicerina Adulto 3 g x 10 supositorios",
+    "cardId": "glicerina#21"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Supositorios de Glicerina 3,5 g Adulto x 10 unidades",
+    "cardId": "glicerina#32"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Supositorios de Glicerina Infantil 1 g x 20 supositorios",
+    "cardId": "glicerina#33"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Hidrocortisona 20 mg x 20 comprimidos",
+    "cardId": "hidrocortisona#12"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Hidrocortisona Crema 1% x 15 g",
+    "cardId": "hidrocortisona#13"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Hidrocortisona Crema 0,1% x 15 g",
+    "cardId": "hidrocortisona#14"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Hidrocortisona I.M/I.V 100 mg x 10 frascos ampollas",
+    "cardId": "hidrocortisona#23"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ibuprofeno 400 mg x 20 comprimidos",
+    "cardId": "ibuprofeno#0"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ibuprofeno 600 mg 20 Comprimidos Laboratorio Chile",
+    "cardId": "ibuprofeno#8"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ibuprofeno 600 mg Lab chile - 20 Comprimidos",
+    "cardId": "ibuprofeno#9"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ibuprofeno Jarabe 100 mg / 5 mL x 100 mL",
+    "cardId": "ibuprofeno#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ibuprofeno 200 mg x 20 comprimidos",
+    "cardId": "ibuprofeno#11"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ketoprofeno 200 mg x 10 comprimidos.",
+    "cardId": "ketoprofeno#5"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ketoprofeno 50 mg x 20 cápsulas",
+    "cardId": "ketoprofeno#7"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ketoprofeno 200 mg x 10 comprimidos",
+    "cardId": "ketoprofeno#8"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ketoprofeno 100 mg / 2 mL x 5 ampollas",
+    "cardId": "ketoprofeno#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Ketoprofeno 50 mg x 20 capulas",
+    "cardId": "ketoprofeno#14"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Kitadol 500 mg x 24 comprimidos.",
+    "cardId": "kitadol#0"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Kitadol 500 mg x 24 comprimidos",
+    "cardId": "kitadol#1"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Kitadol Antigripal día y noche x 18 comprimidos",
+    "cardId": "kitadol#5"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Kitadol Infantil 160 mg x 16 comprimidos masticables",
+    "cardId": "kitadol#9"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Kitadol Pediatrico 100 mg / mL Gotas x 15 mL",
+    "cardId": "kitadol#13"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Kitadol 1 g x 18 comprimidos",
+    "cardId": "kitadol#27"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Loratadina 10 mg x 30 comprimidos",
+    "cardId": "loratadina#1"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Loratadina 10 mg x 30 comprimidos \"Ley Cenabast\"",
+    "cardId": "loratadina#3"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Losartan Potásico 50 mg x 30 Comprimidos \"Ley Cenabast\"",
+    "cardId": "losartan#2"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Losartan Potásico 50 mg x 30 comprimidos",
+    "cardId": "losartan#5"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Losartán Potásico 50 mg x 30 comprimidos",
+    "cardId": "losartan#8"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Losartan Potásico 50 mg x 30 Comprimidos susc-1 de 6 meses",
+    "cardId": "losartan#9"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Losartán Potásico 100 mg x 30 Comprimidos \"LEY CENABAST\"",
+    "cardId": "losartan#13"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Losartan Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos",
+    "cardId": "losartan#17"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Losartán Potásico 100 mg x 30 comprimidos recubiertos \"Ley Cenabast\"",
+    "cardId": "losartan#19"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Losartán Potásico / Hidroclorotiazida 50 mg / 12,5 mg x 30 comprimidos",
+    "cardId": "losartan#20"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Metformina 850 mg x 60 comprimidos.",
+    "cardId": "metformina#6"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Metformina Lp 500 mg x 30 comprimidos",
+    "cardId": "metformina#20"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Metformina Lp 1000 mg x 30 comprimidos",
+    "cardId": "metformina#32"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Metformina Lp 750 mg x 30 comprimidos",
+    "cardId": "metformina#46"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Glafornil XR Metformina 500 mg x 30 comprimidos",
+    "cardId": "metformina#48"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Glifortex XR Metformina 1000 mg x 30 comprimidos de Liberación Prolongada",
+    "cardId": "metformina#56"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Hipoglucin LP Metformina 1000 mg x 30 comprimidos",
+    "cardId": "metformina#65"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vildagliptina/Metformina Clorhidrato 50/850 Mg X 60 comprimidos recubiertos \"Ley Cenabast\"",
+    "cardId": "metformina#69"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Hipoglucin Metformina 1 g x 30 comprimidos",
+    "cardId": "metformina#71"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Hipoglucin LP Metformina 1000 mg x 60 Comprimidos de Liberación Prolongada",
+    "cardId": "metformina#100"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Naproxeno 550 mg x 10 comprimidos.",
+    "cardId": "naproxeno#4"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Naproxeno 550 mg x 10 comprimidos",
+    "cardId": "naproxeno#5"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Nistatina Unguento 100.000 UI x 15 g",
+    "cardId": "nistatina#2"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Nistatina 100.000 UI x 12 Óvulos",
+    "cardId": "nistatina#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Nistatina Metronidazol x 10 Óvulos",
+    "cardId": "nistatina#18"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Omeprazol 20 mg x 30 cápsulas con gránulos con recubrimiento entérico",
+    "cardId": "omeprazol#1"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Omeprazol 20 mg x 30 cápsulas \"Ley Cenabast\"",
+    "cardId": "omeprazol#2"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Omeprazol 20 mg x 30 capsulas",
+    "cardId": "omeprazol#4"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Omeprazol 20 mg x 30 cápsulas",
+    "cardId": "omeprazol#8"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Omeprazol 20 mg x 60 cápsulas",
+    "cardId": "omeprazol#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Omeprazol 20 mg x 60 capsulas",
+    "cardId": "omeprazol#11"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Omeprazol 20mg x 60 Capsulas",
+    "cardId": "omeprazol#12"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Paracetamol 500 mg x 16 comprimidos",
+    "cardId": "paracetamol#0"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Paracetamol infantil 80 mg x 20 comprimidos",
+    "cardId": "paracetamol#14"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Paracetamol Infantil 100 mg / mL x 15 mL",
+    "cardId": "paracetamol#18"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Alividol Paracetamol 500 mg x 20 comprimidos",
+    "cardId": "paracetamol#26"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Paracetamol Infantil 160 mg x 16 comprimidos Masticables",
+    "cardId": "paracetamol#32"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Geniol Gotas \"Paracetamol Infantil\" x 15 mL",
+    "cardId": "paracetamol#40"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Paracetamol Infantil 80 mg x 100 comprimidos",
+    "cardId": "paracetamol#69"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Paracetamol Tramadol 325 / 37,5 x 30 comprimidos",
+    "cardId": "paracetamol#75"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Salbutamol Jarabe 2 mg / 5 mL x 100 mL",
+    "cardId": "salbutamol#3"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Salbutamol 100 mcg / dosis x 200 dosis",
+    "cardId": "salbutamol#8"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Salbutamol 100 mg / dosis x 200 dosis",
+    "cardId": "salbutamol#15"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Salbutamol 100 mg / dosis x 200 dosis.",
+    "cardId": "salbutamol#16"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Salbutamol + Beclometasona 100 / 50 x 200 dosis",
+    "cardId": "salbutamol#23"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Salbutamol Solución para Nebulizador 5 mg / mL x 20 mL",
+    "cardId": "salbutamol#36"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Sódico 12,5 mg x 5 Supositorios",
+    "cardId": "supositorios#1"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Diclofenaco Sodico Adultos 50 mg x 5 supositorios",
+    "cardId": "supositorios#3"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Metamizol Sódico 250 mg x 5 supositorios",
+    "cardId": "supositorios#9"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Supositorio Glicerina Adulto 3 g x 10 supositorios",
+    "cardId": "supositorios#26"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Supositorios de Glicerina Infantil 1 g x 20 supositorios",
+    "cardId": "supositorios#29"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Supositorios de Glicerina 3,5 g Adulto x 10 unidades",
+    "cardId": "supositorios#30"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Letyn CD x 10 Supositorios \"Ley Cenabast\"",
+    "cardId": "supositorios#43"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vatanal x 10 supositorios",
+    "cardId": "supositorios#56"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Contralmor   6 Supositorios",
+    "cardId": "supositorios#65"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Caliente Noche - Sabor Limón - Sobre de 5 g ( 1 sobre ).",
+    "cardId": "tapsin sobre#0"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Caliente Noche - Sabor Limón - Sobre de 5 g ( 1 sobre )",
+    "cardId": "tapsin sobre#4"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Caliente Día - Sabor Limón - Sobre de 5 g x ( 1 sobre )",
+    "cardId": "tapsin sobre#11"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Día Polvo - Sabor Limón, Miel y Jengibre - Sobre de 5 g x (1 sobre)",
+    "cardId": "tapsin sobre#13"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Efervecente 1 g x 20 sobres",
+    "cardId": "tapsin sobre#29"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Caliente Noche - Sabor Limón - Sobre de 5 g ( 1 sobre )",
+    "cardId": "tapsin#10"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Insta Flu Polvo Noche",
+    "cardId": "tapsin#21"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Caliente Día - Sabor Limón - Sobre de 5 g x ( 1 sobre )",
+    "cardId": "tapsin#22"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Periodo x 12 comprimidos",
+    "cardId": "tapsin#47"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Forte x 20 comprimidos",
+    "cardId": "tapsin#59"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Infantil Gotas 100 mg / mL x 15 mL",
+    "cardId": "tapsin#72"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin InstaFlu Dia y Noche x 18 comprimidos",
+    "cardId": "tapsin#83"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin 1000 SC 1 g x 20 comprimidos",
+    "cardId": "tapsin#109"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Migraña x 30 comprimidos",
+    "cardId": "tapsin#112"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Tapsin Efervecente 1 g x 20 sobres",
+    "cardId": "tapsin#117"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vitamina C 500 mg + Zinc 20 mg x 60 cáps",
+    "cardId": "vitamina d gotas#52"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vitamina C 1000 mg x 20 Tabletas efervescentes sabor Berries",
+    "cardId": "vitamina d gotas#53"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vitamina C 1000 mg x 30 comprimidos",
+    "cardId": "vitamina d gotas#54"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vitamina C 1000 mg x 30 cápsulas",
+    "cardId": "vitamina d gotas#59"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vitamina D3 800 UI x 30 cápsulas",
+    "cardId": "vitamina d gotas#66"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vitamina D 800 U.I. x 60 cápsulas",
+    "cardId": "vitamina d gotas#67"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vitamina E x 60 comprimidos",
+    "cardId": "vitamina d gotas#77"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vitamina C 1000 mg x 30 caps",
+    "cardId": "vitamina d gotas#83"
+   },
+   {
+    "type": "IMAGE_HOST_FOREIGN",
+    "pharmacy": "farmex",
+    "imageHost": "cdn.shopify.com",
+    "name": "Vidyn 50.000UI Vitamina D3 4 Cápsulas Blandas",
+    "cardId": "vitamina d gotas#110"
+   }
+  ],
+  "truncation": [
+   {
+    "pharmacy": "easyfarma",
+    "name": "Ambroxol Pediatrico 15mg/5...",
+    "cardId": "ambroxol#20",
+    "query": "ambroxol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Muxol Adulto Jarabe...",
+    "cardId": "ambroxol#35",
+    "query": "ambroxol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Muxol Pediatrico Jarabe x...",
+    "cardId": "ambroxol#36",
+    "query": "ambroxol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Broncot Gotas 7,5 mg/ml x...",
+    "cardId": "ambroxol#43",
+    "query": "ambroxol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Broncot Pediatrico GFT...",
+    "cardId": "ambroxol#46",
+    "query": "ambroxol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 250 mg/5ml 60...",
+    "cardId": "amoxicilina suspension#33",
+    "query": "amoxicilina suspension"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 500 mg/5mL...",
+    "cardId": "amoxicilina suspension#36",
+    "query": "amoxicilina suspension"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 500mg/5ml 60 Ml...",
+    "cardId": "amoxicilina suspension#37",
+    "query": "amoxicilina suspension"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina/Acido...",
+    "cardId": "amoxicilina suspension#38",
+    "query": "amoxicilina suspension"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina + Acido...",
+    "cardId": "amoxicilina suspension#39",
+    "query": "amoxicilina suspension"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina + Ac...",
+    "cardId": "amoxicilina suspension#40",
+    "query": "amoxicilina suspension"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 750 Mg 10 Comp...",
+    "cardId": "amoxicilina suspension#50",
+    "query": "amoxicilina suspension"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 500 mg 21 Caps....",
+    "cardId": "amoxicilina suspension#54",
+    "query": "amoxicilina suspension"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 250 mg/5ml 60...",
+    "cardId": "amoxicilina#7",
+    "query": "amoxicilina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 750 Mg 10 Comp...",
+    "cardId": "amoxicilina#9",
+    "query": "amoxicilina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 500 mg 21 Caps....",
+    "cardId": "amoxicilina#17",
+    "query": "amoxicilina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 500 mg/5mL...",
+    "cardId": "amoxicilina#18",
+    "query": "amoxicilina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina 500mg/5ml 60 Ml...",
+    "cardId": "amoxicilina#19",
+    "query": "amoxicilina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina/Acido...",
+    "cardId": "amoxicilina#33",
+    "query": "amoxicilina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina + Acido...",
+    "cardId": "amoxicilina#38",
+    "query": "amoxicilina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Amoxicilina + Ac...",
+    "cardId": "amoxicilina#47",
+    "query": "amoxicilina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Aspirina Forte 650 Mg  x 10...",
+    "cardId": "aspirina#2",
+    "query": "aspirina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Aspirina Adultos 500mg x 20...",
+    "cardId": "aspirina#4",
+    "query": "aspirina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Aspirina Adultos 500 mg x...",
+    "cardId": "aspirina#15",
+    "query": "aspirina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Aspirina 500 mg x 100...",
+    "cardId": "aspirina#29",
+    "query": "aspirina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cafiaspirina x 10...",
+    "cardId": "aspirina#41",
+    "query": "aspirina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cardioaspirina 100 EC x 20...",
+    "cardId": "aspirina#46",
+    "query": "aspirina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cardioaspirina 100 EC x 50...",
+    "cardId": "aspirina#50",
+    "query": "aspirina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Betametasona Crema Tópica...",
+    "cardId": "betametasona#9",
+    "query": "betametasona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clotrimazol / Betametasona...",
+    "cardId": "betametasona#22",
+    "query": "betametasona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clotrimazol / Betametasona...",
+    "cardId": "betametasona#23",
+    "query": "betametasona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Betametasona 0.05% 15 Gr...",
+    "cardId": "betametasona#27",
+    "query": "betametasona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Betametasona  Con Neomicina...",
+    "cardId": "betametasona#35",
+    "query": "betametasona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Betavol 5 + 2 mg/mL x 1...",
+    "cardId": "betametasona#82",
+    "query": "betametasona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cetirizina Clorhidrato 10...",
+    "cardId": "cetirizina#13",
+    "query": "cetirizina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cetirizina Diclorhidrato 10...",
+    "cardId": "cetirizina#14",
+    "query": "cetirizina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cetirizina 5 mg/5ml 60 ml...",
+    "cardId": "cetirizina#24",
+    "query": "cetirizina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cetirizina Jarabe 5mg/5ml...",
+    "cardId": "cetirizina#25",
+    "query": "cetirizina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Levocetirizina 5 Mg 30...",
+    "cardId": "cetirizina#83",
+    "query": "cetirizina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Levocetirizina 5 Mg 30...",
+    "cardId": "cetirizina#87",
+    "query": "cetirizina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Levocetirizina 5 Mg 30...",
+    "cardId": "cetirizina#88",
+    "query": "cetirizina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Levocetirizina comprimidos...",
+    "cardId": "cetirizina#89",
+    "query": "cetirizina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clorfenamina Inyectable 10...",
+    "cardId": "clorfenamina#1",
+    "query": "clorfenamina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cortigrip Dia y Noche 15...",
+    "cardId": "clorfenamina#21",
+    "query": "clorfenamina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Esamisol Compuesto Jarabe...",
+    "cardId": "clorfenamina#30",
+    "query": "clorfenamina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clotrimazol Crema 1% 20 g...",
+    "cardId": "clotrimazol#16",
+    "query": "clotrimazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clotrimazol / Betametasona...",
+    "cardId": "clotrimazol#26",
+    "query": "clotrimazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clotrimazol / Betametasona...",
+    "cardId": "clotrimazol#27",
+    "query": "clotrimazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clotrimazol Crema 1% 20 gr...",
+    "cardId": "clotrimazol#28",
+    "query": "clotrimazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clotrimazol 100 mg x 6...",
+    "cardId": "clotrimazol#42",
+    "query": "clotrimazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Clotrimazol 500 mg x 1 comp...",
+    "cardId": "clotrimazol#49",
+    "query": "clotrimazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Canesten Crema Tópica 1% x...",
+    "cardId": "clotrimazol#50",
+    "query": "clotrimazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco 50 mg x 10...",
+    "cardId": "diclofenaco#1",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco infantil...",
+    "cardId": "diclofenaco#18",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco Sodico 100 Mg 8...",
+    "cardId": "diclofenaco#19",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco Sodico 100 Mg 8...",
+    "cardId": "diclofenaco#20",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco Sódico 100 mg x...",
+    "cardId": "diclofenaco#21",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco 100 mg x 8...",
+    "cardId": "diclofenaco#27",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco Dietilamina Gel...",
+    "cardId": "diclofenaco#34",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco Dietilamina Gel...",
+    "cardId": "diclofenaco#36",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco Gel Tópico...",
+    "cardId": "diclofenaco#37",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco adulto...",
+    "cardId": "diclofenaco#42",
+    "query": "diclofenaco"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Metamizol Sodico ( Dipirona...",
+    "cardId": "dipirona#3",
+    "query": "dipirona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Jabon De Glicerina Coco 340...",
+    "cardId": "glicerina#5",
+    "query": "glicerina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Q-Nat Jabon Glicerina sin...",
+    "cardId": "glicerina#8",
+    "query": "glicerina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Jabon De Glicerina Celeste...",
+    "cardId": "glicerina#22",
+    "query": "glicerina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Supositorios Infantiles de...",
+    "cardId": "glicerina#29",
+    "query": "glicerina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Supositorios Adulto de...",
+    "cardId": "glicerina#34",
+    "query": "glicerina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Otisec Spray Para el Oido...",
+    "cardId": "glicerina#73",
+    "query": "glicerina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Hidrocortisona 20 mg 20...",
+    "cardId": "hidrocortisona#21",
+    "query": "hidrocortisona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Hidrocortisona Acetato 1%...",
+    "cardId": "hidrocortisona#22",
+    "query": "hidrocortisona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Hidrocortisona 100 Mg X 10...",
+    "cardId": "hidrocortisona#35",
+    "query": "hidrocortisona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Microcort loción tópica 1%...",
+    "cardId": "hidrocortisona#55",
+    "query": "hidrocortisona"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Ibuprofeno 600 Mg 20 Comp....",
+    "cardId": "ibuprofeno#5",
+    "query": "ibuprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Ibuprofeno Jarabe 200 mg /...",
+    "cardId": "ibuprofeno#40",
+    "query": "ibuprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Actron RA 200 mg. 10...",
+    "cardId": "ibuprofeno#41",
+    "query": "ibuprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Actron 400 mg x 10 cápsulas...",
+    "cardId": "ibuprofeno#43",
+    "query": "ibuprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Dolorub 5% Crema Topica Con...",
+    "cardId": "ibuprofeno#70",
+    "query": "ibuprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "DorAliv 600 mg x 10...",
+    "cardId": "ibuprofeno#72",
+    "query": "ibuprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "DorAliv 600 Mg 20 Caps....",
+    "cardId": "ibuprofeno#86",
+    "query": "ibuprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Ketoprofeno T.U. 200 mg. 10...",
+    "cardId": "ketoprofeno#13",
+    "query": "ketoprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Ketoprofeno Gel 2.5% 60 Gr...",
+    "cardId": "ketoprofeno#27",
+    "query": "ketoprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Ketoprofeno 100 mg/2mL 5...",
+    "cardId": "ketoprofeno#39",
+    "query": "ketoprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Dolostat Bi 150 mg 10...",
+    "cardId": "ketoprofeno#46",
+    "query": "ketoprofeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Kitadol Duo 10 Comp....",
+    "cardId": "kitadol#16",
+    "query": "kitadol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Kitadol Infantil 160 Mg 16...",
+    "cardId": "kitadol#20",
+    "query": "kitadol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Kitadol 1000 Mg x 18...",
+    "cardId": "kitadol#34",
+    "query": "kitadol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Kitadol Jarabe infantil 120...",
+    "cardId": "kitadol#36",
+    "query": "kitadol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Loratadina 10 mg x 30 comp....",
+    "cardId": "loratadina#6",
+    "query": "loratadina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Loratadina Jarabe 5mg/5mL...",
+    "cardId": "loratadina#15",
+    "query": "loratadina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Aerius Jarabe 2.5mg/5ml x...",
+    "cardId": "loratadina#45",
+    "query": "loratadina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Desloratadina 5 Mg 30 Comp....",
+    "cardId": "loratadina#60",
+    "query": "loratadina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Desloratadina 5 Mg 30...",
+    "cardId": "loratadina#61",
+    "query": "loratadina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Desloratadina 5 Mg 30...",
+    "cardId": "loratadina#62",
+    "query": "loratadina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Desloratadina jarabe 2,5...",
+    "cardId": "loratadina#63",
+    "query": "loratadina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Losartan 50 mg 30...",
+    "cardId": "losartan#10",
+    "query": "losartan"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Losartan 100 mg. 30 comp....",
+    "cardId": "losartan#16",
+    "query": "losartan"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Losartan +...",
+    "cardId": "losartan#24",
+    "query": "losartan"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Losartan 100 Mg X 30 Comp...",
+    "cardId": "losartan#25",
+    "query": "losartan"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Losartan Potasico 100 Mg 30...",
+    "cardId": "losartan#26",
+    "query": "losartan"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Losartan +...",
+    "cardId": "losartan#30",
+    "query": "losartan"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Hyzaar Forte 100/25 mg 30...",
+    "cardId": "losartan#38",
+    "query": "losartan"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Simperten-D 100/25 mg. 30...",
+    "cardId": "losartan#58",
+    "query": "losartan"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Metformina 850 Mg 30 Comp....",
+    "cardId": "metformina#4",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Metformina Clorhidrato 850...",
+    "cardId": "metformina#8",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Metformina Clorhidrato 850...",
+    "cardId": "metformina#15",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diametina XR 1000 MG X 30...",
+    "cardId": "metformina#43",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Glafornil 500 30 Comp Lab...",
+    "cardId": "metformina#51",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Glafornil XR 500 mg 30...",
+    "cardId": "metformina#52",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Glafornil 850 mg 30 comp....",
+    "cardId": "metformina#57",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Glafornil XR 1000 mg 30...",
+    "cardId": "metformina#99",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Enclyna Duo 12.5/850 Mg 60...",
+    "cardId": "metformina#117",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Enclyna Duo 12.5/1000 60...",
+    "cardId": "metformina#118",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Galvus Met 50/500 mg 56...",
+    "cardId": "metformina#120",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Galvus Met 50/1000 mg 56...",
+    "cardId": "metformina#122",
+    "query": "metformina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Naproxeno Sodico 550 Mg 10...",
+    "cardId": "naproxeno#7",
+    "query": "naproxeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Naproxeno Sódico 550 mg. 10...",
+    "cardId": "naproxeno#8",
+    "query": "naproxeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Eurogesic Adulto 275 mg x...",
+    "cardId": "naproxeno#15",
+    "query": "naproxeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Eurogesic Infantil 50 mg x...",
+    "cardId": "naproxeno#22",
+    "query": "naproxeno"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Next GL Gripe X 12 Comp....",
+    "cardId": "next#2",
+    "query": "next"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Next Gl Plus Gripe Y Tos 12...",
+    "cardId": "next#7",
+    "query": "next"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Tranexton 650 mg 30...",
+    "cardId": "next#34",
+    "query": "next"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Nistatina  100.000 U.I. 12...",
+    "cardId": "nistatina#3",
+    "query": "nistatina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Nistatina 100000UI/g 15 gr...",
+    "cardId": "nistatina#9",
+    "query": "nistatina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Nistatina Metronidazol 10...",
+    "cardId": "nistatina#20",
+    "query": "nistatina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Nistatina 100.000 UI Gotas...",
+    "cardId": "nistatina#26",
+    "query": "nistatina"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Omeprazol 20 mg x 30 caps...",
+    "cardId": "omeprazol#1",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Omeprazol 20 mg x 30 cap...",
+    "cardId": "omeprazol#4",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Omeprazol 20 Mg x 30 Caps....",
+    "cardId": "omeprazol#8",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Omeprazol 20 mg x 30...",
+    "cardId": "omeprazol#9",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Omeprazol 20 mg. x 60 cap....",
+    "cardId": "omeprazol#15",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Omeprazol 20 mg x 60...",
+    "cardId": "omeprazol#16",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Omeprazol 20 mg x 60...",
+    "cardId": "omeprazol#17",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Esomeprazol 20 mg 30...",
+    "cardId": "omeprazol#27",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Esomeprazol  20 mg x 30...",
+    "cardId": "omeprazol#31",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Esomeprazol 20 Mg 30...",
+    "cardId": "omeprazol#32",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Esomeprazol 20 mg x 30 caps...",
+    "cardId": "omeprazol#33",
+    "query": "omeprazol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Paracetamol Infantil Gotas...",
+    "cardId": "paracetamol#27",
+    "query": "paracetamol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Paracetamol Gotas 100 mg/mL...",
+    "cardId": "paracetamol#30",
+    "query": "paracetamol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Paracetamol Infantil 100...",
+    "cardId": "paracetamol#31",
+    "query": "paracetamol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cortigrip Dia y Noche 15...",
+    "cardId": "paracetamol#64",
+    "query": "paracetamol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Alividol 1000 mg 20...",
+    "cardId": "paracetamol#72",
+    "query": "paracetamol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Paracetamol/Tramadol...",
+    "cardId": "paracetamol#82",
+    "query": "paracetamol"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Supositorios Infantiles de...",
+    "cardId": "supositorios#27",
+    "query": "supositorios"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Supositorios Adulto de...",
+    "cardId": "supositorios#31",
+    "query": "supositorios"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco infantil...",
+    "cardId": "supositorios#85",
+    "query": "supositorios"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Diclofenaco adulto...",
+    "cardId": "supositorios#86",
+    "query": "supositorios"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Eurogesic Infantil 50 mg x...",
+    "cardId": "supositorios#87",
+    "query": "supositorios"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Mesalazina 1 Gr 10...",
+    "cardId": "supositorios#88",
+    "query": "supositorios"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Paracetamol Infantil Gotas...",
+    "cardId": "tapsin#46",
+    "query": "tapsin"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Paracetamol Gotas 100 mg/mL...",
+    "cardId": "tapsin#49",
+    "query": "tapsin"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Paracetamol Infantil 100...",
+    "cardId": "tapsin#50",
+    "query": "tapsin"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Cortigrip Dia y Noche 15...",
+    "cardId": "tapsin#89",
+    "query": "tapsin"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Alividol 1000 mg 20...",
+    "cardId": "tapsin#99",
+    "query": "tapsin"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Paracetamol/Tramadol...",
+    "cardId": "tapsin#113",
+    "query": "tapsin"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina B12 90 porciones...",
+    "cardId": "vitamina d gotas#12",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina A 3300 UI 90...",
+    "cardId": "vitamina d gotas#13",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina C + Zinc...",
+    "cardId": "vitamina d gotas#14",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina C 1000 mg  20...",
+    "cardId": "vitamina d gotas#15",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina B6 50 mg 90...",
+    "cardId": "vitamina d gotas#19",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina C + Rosa Mosqueta...",
+    "cardId": "vitamina d gotas#20",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina B12 12 mcg  x 100...",
+    "cardId": "vitamina d gotas#22",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina C 100 Mg 100 Comp...",
+    "cardId": "vitamina d gotas#49",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina B12 30 capsulas 12...",
+    "cardId": "vitamina d gotas#66",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina C + Zinc 20 Tab....",
+    "cardId": "vitamina d gotas#84",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina C 1000 Mg 20 Tab....",
+    "cardId": "vitamina d gotas#85",
+    "query": "vitamina d gotas"
+   },
+   {
+    "pharmacy": "easyfarma",
+    "name": "Vitamina A 60 Cap. Blandas...",
+    "cardId": "vitamina d gotas#89",
+    "query": "vitamina d gotas"
+   }
+  ],
+  "priceOutlier": [
+   {
+    "cardId": "ambroxol#0",
+    "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+    "ratio": 5.43,
+    "offers": [
+     {
+      "pharmacy": "araucomed",
+      "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+      "price": 790,
+      "unitCount": null,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+      "price": 4290,
+      "unitCount": null,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "ambroxol#4",
+    "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+    "ratio": 5.55,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO",
+      "price": 990,
+      "unitCount": null,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Ambroxol 30mg/5ml Jarabe 100ml",
+      "price": 2390,
+      "unitCount": null,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Ambroxol 30mg./5ml. Jarabe Fco. 100ml",
+      "price": 3374,
+      "unitCount": null,
+      "stock": true,
+      "channel": "cmr"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+      "price": 5490,
+      "unitCount": null,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "amoxicilina suspension#46",
+    "presentationKey": "amoxicilina|750mg|10|bio:unknown|brand:unknown|form:solid-oral",
+    "ratio": 4.48,
+    "offers": [
+     {
+      "pharmacy": "farmex",
+      "name": "Amoxicilina 750 mg x 10 comprimidos.",
+      "price": 1572,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Amoxicilina 750mg 10 Comprimidos",
+      "price": 3290,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Amoxicilina 750 mg 10 Comprimidos",
+      "price": 4990,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "salcobrand",
+      "name": "Amoxicilina 750mg 10 Comprimidos",
+      "price": 7039,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "online"
+     }
+    ]
+   },
+   {
+    "cardId": "amoxicilina#1",
+    "presentationKey": "amoxicilina|750mg|10|bio:unknown|brand:unknown|form:solid-oral",
+    "ratio": 4.48,
+    "offers": [
+     {
+      "pharmacy": "farmex",
+      "name": "Amoxicilina 750 mg x 10 comprimidos.",
+      "price": 1572,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Amoxicilina 750mg 10 Comprimidos",
+      "price": 3290,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Amoxicilina 750 mg 10 Comprimidos",
+      "price": 4990,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "salcobrand",
+      "name": "Amoxicilina 750mg 10 Comprimidos",
+      "price": 7039,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "online"
+     }
+    ]
+   },
+   {
+    "cardId": "aspirina#0",
+    "presentationKey": "aspirina|500mg|20|bio:unknown|brand:unknown|form:solid-oral",
+    "ratio": 3.77,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Aspirina Adulto 500mg X 20 comprimidos (Bayer) DESCUENTO",
+      "price": 900,
+      "unitCount": 20,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "araucomed",
+      "name": "Aspirina 500 mg x 20 comprimidos.",
+      "price": 1500,
+      "unitCount": 20,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Aspirina 500mg 20 Comprimidos",
+      "price": 2190,
+      "unitCount": 20,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Aspirina 500Mg Caja 20 Comprimidos Adultos",
+      "price": 2669,
+      "unitCount": 20,
+      "stock": true,
+      "channel": "cmr"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Aspirina Adulto Ácido Acetilsalicílico 500 mg 20 Comprimidos",
+      "price": 3390,
+      "unitCount": 20,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "aspirina#1",
+    "presentationKey": "aspirina|500mg|40|bio:unknown|brand:unknown|form:solid-oral",
+    "ratio": 4.5,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Aspirina 500 mg Adulto x 40 Comprimidos DESCUENTO",
+      "price": 1000,
+      "unitCount": 40,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Aspirina 500 mg Adulto x 40 Comprimidos",
+      "price": 2990,
+      "unitCount": 40,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "farmex",
+      "name": "Aspirina 500 mg x 40 comprimidos",
+      "price": 3158,
+      "unitCount": 40,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "araucomed",
+      "name": "Aspirina 500 mg x 40 comprimidos.",
+      "price": 3290,
+      "unitCount": 40,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "sermecoop",
+      "name": "Aspirina 500mg 40 Comp",
+      "price": 3390,
+      "unitCount": 40,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Aspirina Adulto Acido Acetilsalicilico 500 mg 40 Comprimidos",
+      "price": 4505,
+      "unitCount": 40,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "clotrimazol#7",
+    "presentationKey": "clotrimazol|15000mg|bio:unknown|brand:unknown|combo:betametasona|form:topical",
+    "ratio": 3.88,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Clotrimazol + Betametasona crema 15g",
+      "price": 680,
+      "unitCount": null,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "salcobrand",
+      "name": "Clotrimazol / Betametasona Dipropionato Crema Tópica 15g",
+      "price": 2639,
+      "unitCount": null,
+      "stock": true,
+      "channel": "online"
+     }
+    ]
+   },
+   {
+    "cardId": "diclofenaco#0",
+    "presentationKey": "diclofenaco|50mg|10|bio:unknown|brand:unknown|form:solid-oral",
+    "ratio": 4.65,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Diclofenaco Sódico 50 mg x 10 Comprimidos (Baden)",
+      "price": 290,
+      "unitCount": 10,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "farmex",
+      "name": "Diclofenaco sódico 50 mg x 10 comprimidos",
+      "price": 456,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Diclofenaco Sodico 50 mg x 10 Comprimidos con Recubrimiento Entérico ANDROMACO S.A.",
+      "price": 1349,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "cmr"
+     }
+    ]
+   },
+   {
+    "cardId": "diclofenaco#4",
+    "presentationKey": "diclofenaco|100mg|8|bio:unknown|brand:unknown|form:solid-oral",
+    "ratio": 3.48,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Diclofenaco Sódico 100mg x 8 Comprimidos (Curaespring)",
+      "price": 690,
+      "unitCount": 8,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Diclofenaco Sodico 100 mg 8 Cápsulas de Liberación Prolongada",
+      "price": 2400,
+      "unitCount": 8,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "diclofenaco#14",
+    "presentationKey": "diclofenaco|30000mg|bio:unknown|brand:unknown|var:dietilamina|form:topical",
+    "ratio": 3.02,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Diclofenaco Dietilamina 1,16%  30g Gel Tópico (CuraSpring) DESCUENTO",
+      "price": 990,
+      "unitCount": null,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "salcobrand",
+      "name": "Diclofenaco Dietilamina 1.16% Gel 30g",
+      "price": 2991,
+      "unitCount": null,
+      "stock": true,
+      "channel": "online"
+     }
+    ]
+   },
+   {
+    "cardId": "ketoprofeno#5",
+    "presentationKey": "ketoprofeno|200mg|10|bio:unknown|brand:unknown|form:solid-oral",
+    "ratio": 3.35,
+    "offers": [
+     {
+      "pharmacy": "farmex",
+      "name": "Ketoprofeno 200 mg x 10 comprimidos.",
+      "price": 1251,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Ketoprofeno 200 mg 10 Comprimidos de Liberación Proolongada",
+      "price": 4190,
+      "unitCount": 10,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "ketoprofeno#10",
+    "presentationKey": "ketoprofeno|2ml|5|bio:unknown|brand:biosano|form:injectable",
+    "ratio": 4.36,
+    "offers": [
+     {
+      "pharmacy": "araucomed",
+      "name": "Ketoprofeno Iny.100mg/2ml x5amp. Biosano (Cenabast)",
+      "price": 1490,
+      "unitCount": null,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "farmex",
+      "name": "Ketoprofeno 100 mg / 2 mL x 5 ampollas",
+      "price": 6490,
+      "unitCount": 5,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "losartan#0",
+    "presentationKey": "losartan|50mg|30|bio:true|brand:unknown|form:solid-oral",
+    "ratio": 3.12,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Losartan 50 mg x 30 comprimidos (LCH) DESCUENTO",
+      "price": 490,
+      "unitCount": 30,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Losartan Potasico 50 mg x 30 Comprimidos Recubiertos",
+      "price": 1528,
+      "unitCount": 30,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "metformina#1",
+    "presentationKey": "metformina|850mg|60|bio:true|brand:unknown|form:solid-oral",
+    "ratio": 3.26,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "Metformina 850 mg x 60 comprimidos (Cenabast)",
+      "price": 1930,
+      "unitCount": 60,
+      "stock": false,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "Metformina Clorhidrato 850 mg x 60 Comprimidos",
+      "price": 6290,
+      "unitCount": 60,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "metformina#6",
+    "presentationKey": "metformina|850mg|60|bio:unknown|brand:unknown|form:solid-oral",
+    "ratio": 3.02,
+    "offers": [
+     {
+      "pharmacy": "farmex",
+      "name": "Metformina 850 mg x 60 comprimidos.",
+      "price": 2318,
+      "unitCount": 60,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "cruz-verde",
+      "name": "Metformina 850 mg 60 Comprimidos",
+      "price": 6990,
+      "unitCount": 60,
+      "stock": true,
+      "channel": "store"
+     }
+    ]
+   },
+   {
+    "cardId": "supositorios#37",
+    "presentationKey": "sae|6|bio:unknown|brand:unknown|form:suppository",
+    "ratio": 3.72,
+    "offers": [
+     {
+      "pharmacy": "ecofarmacias",
+      "name": "SAE x 6 supositorios adulto (Lab Pasteur) (Cenabast)",
+      "price": 3950,
+      "unitCount": 6,
+      "stock": true,
+      "channel": "store"
+     },
+     {
+      "pharmacy": "ahumada",
+      "name": "SAE x 6 Supositorios Adulto PASTEUR",
+      "price": 14677,
+      "unitCount": 6,
+      "stock": true,
+      "channel": "cmr"
+     }
+    ]
+   }
+  ],
+  "stockAnomaly": [],
+  "falseSplit": [
+   {
+    "signature": "amoxicilina suspension|amoxicilina||||||",
+    "cards": [
+     {
+      "cardId": "amoxicilina suspension#38",
+      "presentationKey": "amoxicilina|bio:unknown|brand:unknown|combo:acido",
+      "canonicalName": "Amoxicilina/Acido...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       7490
+      ]
+     },
+     {
+      "cardId": "amoxicilina suspension#39",
+      "presentationKey": "amoxicilina|bio:unknown|brand:ascend|combo:acido",
+      "canonicalName": "Amoxicilina + Acido...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       7990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "amoxicilina|amoxicilina||||||",
+    "cards": [
+     {
+      "cardId": "amoxicilina#33",
+      "presentationKey": "amoxicilina|bio:unknown|brand:unknown|combo:acido",
+      "canonicalName": "Amoxicilina/Acido...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       7490
+      ]
+     },
+     {
+      "cardId": "amoxicilina#38",
+      "presentationKey": "amoxicilina|bio:unknown|brand:ascend|combo:acido",
+      "canonicalName": "Amoxicilina + Acido...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       7990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "betametasona|clotrimazol||||||",
+    "cards": [
+     {
+      "cardId": "betametasona#22",
+      "presentationKey": "clotrimazol|bio:unknown|brand:curaespring|combo:betametasona",
+      "canonicalName": "Clotrimazol / Betametasona...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1490
+      ]
+     },
+     {
+      "cardId": "betametasona#23",
+      "presentationKey": "clotrimazol|bio:unknown|brand:15gr|combo:betametasona",
+      "canonicalName": "Clotrimazol / Betametasona...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1490
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "cetirizina|levocetirizina|5mg|5mg|||||",
+    "cards": [
+     {
+      "cardId": "cetirizina#83",
+      "presentationKey": "levocetirizina|5mg|bio:unknown|brand:curaespring",
+      "canonicalName": "Levocetirizina 5 Mg 30...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3490
+      ]
+     },
+     {
+      "cardId": "cetirizina#87",
+      "presentationKey": "levocetirizina|5mg|bio:unknown|brand:ascend",
+      "canonicalName": "Levocetirizina 5 Mg 30...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     },
+     {
+      "cardId": "cetirizina#88",
+      "presentationKey": "levocetirizina|5mg|bio:unknown|brand:unknown",
+      "canonicalName": "Levocetirizina 5 Mg 30...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "clotrimazol|clotrimazol|20000mg|20000mg|topical||||",
+    "cards": [
+     {
+      "cardId": "clotrimazol#1",
+      "presentationKey": "clotrimazol|20000mg|bio:unknown|brand:unknown|form:topical",
+      "canonicalName": "Clotrimazol Crema Tópica 1% 20g Ethon (Cenabast)",
+      "pharmacies": [
+       "ecofarmacias"
+      ],
+      "prices": [
+       490
+      ]
+     },
+     {
+      "cardId": "clotrimazol#16",
+      "presentationKey": "clotrimazol|20000mg|bio:unknown|brand:ascend|form:topical",
+      "canonicalName": "Clotrimazol Crema 1% 20 g...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "clotrimazol|clotrimazol||||||",
+    "cards": [
+     {
+      "cardId": "clotrimazol#26",
+      "presentationKey": "clotrimazol|bio:unknown|brand:curaespring|combo:betametasona",
+      "canonicalName": "Clotrimazol / Betametasona...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1490
+      ]
+     },
+     {
+      "cardId": "clotrimazol#27",
+      "presentationKey": "clotrimazol|bio:unknown|brand:15gr|combo:betametasona",
+      "canonicalName": "Clotrimazol / Betametasona...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1490
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "clotrimazol|clotrimazol||topical||||",
+    "cards": [
+     {
+      "cardId": "clotrimazol#28",
+      "presentationKey": "clotrimazol|bio:unknown|brand:opko|form:topical",
+      "canonicalName": "Clotrimazol Crema 1% 20 gr...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1490
+      ]
+     },
+     {
+      "cardId": "clotrimazol#32",
+      "presentationKey": "clotrimazol|bio:unknown|brand:unknown|form:topical",
+      "canonicalName": "Clotrimazol 1 gr Betametasona 0,05 gr Crema Tópica 15 gr",
+      "pharmacies": [
+       "cruz-verde"
+      ],
+      "prices": [
+       1590
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "clotrimazol|canesten||topical||||",
+    "cards": [
+     {
+      "cardId": "clotrimazol#50",
+      "presentationKey": "canesten|bio:unknown|brand:20gr|form:topical",
+      "canonicalName": "Canesten Crema Tópica 1% x...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     },
+     {
+      "cardId": "clotrimazol#54",
+      "presentationKey": "canesten|bio:unknown|brand:unknown|form:topical",
+      "canonicalName": "Canesten (clotrimazol) 1% Crema 20grs",
+      "pharmacies": [
+       "sermecoop"
+      ],
+      "prices": [
+       4590
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "diclofenaco|diclofenaco|100mg|100mg|||||",
+    "cards": [
+     {
+      "cardId": "diclofenaco#19",
+      "presentationKey": "diclofenaco|100mg|bio:unknown|brand:andromaco",
+      "canonicalName": "Diclofenaco Sodico 100 Mg 8...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       990
+      ]
+     },
+     {
+      "cardId": "diclofenaco#20",
+      "presentationKey": "diclofenaco|100mg|bio:unknown|brand:curaespring",
+      "canonicalName": "Diclofenaco Sodico 100 Mg 8...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       990
+      ]
+     },
+     {
+      "cardId": "diclofenaco#21",
+      "presentationKey": "diclofenaco|100mg|bio:unknown|brand:unknown",
+      "canonicalName": "Diclofenaco Sódico 100 mg x...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "diclofenaco|diclofenaco||topical|dietilamina|||",
+    "cards": [
+     {
+      "cardId": "diclofenaco#34",
+      "presentationKey": "diclofenaco|bio:unknown|brand:curaespring|var:dietilamina|form:topical",
+      "canonicalName": "Diclofenaco Dietilamina Gel...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1490
+      ]
+     },
+     {
+      "cardId": "diclofenaco#36",
+      "presentationKey": "diclofenaco|bio:unknown|brand:unknown|var:dietilamina|form:topical",
+      "canonicalName": "Diclofenaco Dietilamina Gel...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1690
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "glicerina|jabon|||glicerina|||",
+    "cards": [
+     {
+      "cardId": "glicerina#5",
+      "presentationKey": "jabon|bio:unknown|brand:elite|var:glicerina",
+      "canonicalName": "Jabon De Glicerina Coco 340...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1490
+      ]
+     },
+     {
+      "cardId": "glicerina#22",
+      "presentationKey": "jabon|bio:unknown|brand:simonds|var:glicerina",
+      "canonicalName": "Jabon De Glicerina Celeste...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       2490
+      ]
+     },
+     {
+      "cardId": "glicerina#25",
+      "presentationKey": "jabon|bio:unknown|brand:unknown|var:glicerina",
+      "canonicalName": "Jabón de Glicerina Sanisep (Piel Mixta)",
+      "pharmacies": [
+       "ecofarmacias",
+       "cruz-verde"
+      ],
+      "prices": [
+       2690,
+       2890
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "loratadina|desloratadina|5mg|5mg|||||",
+    "cards": [
+     {
+      "cardId": "loratadina#61",
+      "presentationKey": "desloratadina|5mg|bio:unknown|brand:ascend",
+      "canonicalName": "Desloratadina 5 Mg 30...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       2990
+      ]
+     },
+     {
+      "cardId": "loratadina#62",
+      "presentationKey": "desloratadina|5mg|bio:unknown|brand:unknown",
+      "canonicalName": "Desloratadina 5 Mg 30...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       2990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "losartan|losartan|50mg|30|50mg|solid-oral||30||true",
+    "cards": [
+     {
+      "cardId": "losartan#0",
+      "presentationKey": "losartan|50mg|30|bio:true|brand:unknown|form:solid-oral",
+      "canonicalName": "Losartan 50 mg x 30 comprimidos (LCH) DESCUENTO",
+      "pharmacies": [
+       "ecofarmacias",
+       "ahumada"
+      ],
+      "prices": [
+       490,
+       1528
+      ]
+     },
+     {
+      "cardId": "losartan#23",
+      "presentationKey": "losartan|50mg|30|bio:true|brand:unknown|combo:hidroclorotiazida|form:solid-oral",
+      "canonicalName": "Losartan 50 mg / Hidroclorotiazida 12.5 mg x 30 Comp.",
+      "pharmacies": [
+       "ecofarmacias"
+      ],
+      "prices": [
+       2980
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "losartan|losartan||||||",
+    "cards": [
+     {
+      "cardId": "losartan#24",
+      "presentationKey": "losartan|bio:unknown|brand:opko",
+      "canonicalName": "Losartan +...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       2990
+      ]
+     },
+     {
+      "cardId": "losartan#30",
+      "presentationKey": "losartan|bio:unknown|brand:ascend",
+      "canonicalName": "Losartan +...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3490
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "losartan|hyzaar|50mg|30|50mg|solid-oral||30||",
+    "cards": [
+     {
+      "cardId": "losartan#43",
+      "presentationKey": "hyzaar|50mg|30|bio:unknown|brand:unknown|form:solid-oral",
+      "canonicalName": "Hyzaar 50 mg/12.5 mg x 30 Comprimidos Recubiertos",
+      "pharmacies": [
+       "ahumada"
+      ],
+      "prices": [
+       21319
+      ]
+     },
+     {
+      "cardId": "losartan#56",
+      "presentationKey": "hyzaar|50mg|30|bio:unknown|brand:unknown|combo:hidroclorotiazida|form:solid-oral",
+      "canonicalName": "Hyzaar Losartan / Hidroclorotiazida 50 mg / 12,5 mg 30 Comprimidos",
+      "pharmacies": [
+       "cruz-verde"
+      ],
+      "prices": [
+       26640
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "losartan|hyzaar|30||solid-oral||30|Hyzaar|",
+    "cards": [
+     {
+      "cardId": "losartan#65",
+      "presentationKey": "hyzaar|30|bio:unknown|brand:hyzaar|combo:hidroclorotiazida|form:solid-oral",
+      "canonicalName": "Hyzaar Losartán Potásico / Hidroclorotiazida 30 Comprimidos Recubiertos",
+      "pharmacies": [
+       "salcobrand"
+      ],
+      "prices": [
+       29567
+      ]
+     },
+     {
+      "cardId": "losartan#66",
+      "presentationKey": "hyzaar|30|bio:unknown|brand:hyzaar|combo:losartan|form:solid-oral",
+      "canonicalName": "Hyzaar Forte Hidroclorotiazida / Losartán 30 Comprimidos Recubiertos",
+      "pharmacies": [
+       "salcobrand"
+      ],
+      "prices": [
+       30359
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "metformina|metformina|850mg|30|850mg|solid-oral||30||",
+    "cards": [
+     {
+      "cardId": "metformina#4",
+      "presentationKey": "metformina|850mg|30|bio:unknown|brand:opko|form:solid-oral",
+      "canonicalName": "Metformina 850 Mg 30 Comp....",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1990
+      ]
+     },
+     {
+      "cardId": "metformina#12",
+      "presentationKey": "metformina|850mg|30|bio:unknown|brand:unknown|form:solid-oral",
+      "canonicalName": "Metformina 850 mg 30 Comprimidos",
+      "pharmacies": [
+       "cruz-verde"
+      ],
+      "prices": [
+       3390
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "metformina|metformina||||||",
+    "cards": [
+     {
+      "cardId": "metformina#8",
+      "presentationKey": "metformina|bio:unknown|brand:unknown",
+      "canonicalName": "Metformina Clorhidrato 850...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       2490
+      ]
+     },
+     {
+      "cardId": "metformina#15",
+      "presentationKey": "metformina|bio:unknown|brand:andromaco",
+      "canonicalName": "Metformina Clorhidrato 850...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "naproxeno|naproxeno|550mg|550mg|||||",
+    "cards": [
+     {
+      "cardId": "naproxeno#7",
+      "presentationKey": "naproxeno|550mg|bio:unknown|brand:unknown",
+      "canonicalName": "Naproxeno Sodico 550 Mg 10...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1990
+      ]
+     },
+     {
+      "cardId": "naproxeno#8",
+      "presentationKey": "naproxeno|550mg|bio:unknown|brand:andromaco",
+      "canonicalName": "Naproxeno Sódico 550 mg. 10...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "nistatina|nistatina||||||",
+    "cards": [
+     {
+      "cardId": "nistatina#3",
+      "presentationKey": "nistatina|bio:unknown|brand:metronidazol",
+      "canonicalName": "Nistatina  100.000 U.I. 12...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       1745
+      ]
+     },
+     {
+      "cardId": "nistatina#9",
+      "presentationKey": "nistatina|bio:unknown|brand:dermica",
+      "canonicalName": "Nistatina 100000UI/g 15 gr...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       2490
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "omeprazol|omeprazol|20mg|60|20mg|||60||",
+    "cards": [
+     {
+      "cardId": "omeprazol#16",
+      "presentationKey": "omeprazol|20mg|60|bio:unknown|brand:curaespring",
+      "canonicalName": "Omeprazol 20 mg x 60...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       2990
+      ]
+     },
+     {
+      "cardId": "omeprazol#17",
+      "presentationKey": "omeprazol|20mg|60|bio:unknown|brand:unknown",
+      "canonicalName": "Omeprazol 20 mg x 60...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       2990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "omeprazol|esomeprazol|20mg|20mg|||||",
+    "cards": [
+     {
+      "cardId": "omeprazol#27",
+      "presentationKey": "esomeprazol|20mg|bio:unknown|brand:opko",
+      "canonicalName": "Esomeprazol 20 mg 30...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     },
+     {
+      "cardId": "omeprazol#32",
+      "presentationKey": "esomeprazol|20mg|bio:unknown|brand:hetero",
+      "canonicalName": "Esomeprazol 20 Mg 30...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       5990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "salbutamol|salbutamol|100mcg|200|0.1mg|inhaled||||",
+    "cards": [
+     {
+      "cardId": "salbutamol#10",
+      "presentationKey": "salbutamol|100mcg|200|bio:unknown|brand:unknown|form:inhaled",
+      "canonicalName": "Salbutamol 100 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral FAES FARMA CHILE",
+      "pharmacies": [
+       "ahumada"
+      ],
+      "prices": [
+       2022
+      ]
+     },
+     {
+      "cardId": "salbutamol#26",
+      "presentationKey": "salbutamol|100mcg|200|bio:unknown|brand:unknown|combo:beclometasona|form:inhaled",
+      "canonicalName": "Salbutamol + Beclometasona 100 mcg/50 mcg/Dosis x 200 Dosis Aerosol para Inhalación Oral CHEMOPHARMA",
+      "pharmacies": [
+       "ahumada"
+      ],
+      "prices": [
+       5249
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "tapsin|tapsin|12||solid-oral||12|Tapsin|",
+    "cards": [
+     {
+      "cardId": "tapsin#64",
+      "presentationKey": "tapsin|12|bio:unknown|brand:tapsin|combo:cafeina|form:solid-oral",
+      "canonicalName": "Tapsin (B) Paracetamol / Cafeína 12 Comprimidos",
+      "pharmacies": [
+       "salcobrand"
+      ],
+      "prices": [
+       2375
+      ]
+     },
+     {
+      "cardId": "tapsin#73",
+      "presentationKey": "tapsin|12|bio:unknown|brand:tapsin|combo:ibuprofeno|form:solid-oral",
+      "canonicalName": "Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos Recubiertos",
+      "pharmacies": [
+       "salcobrand"
+      ],
+      "prices": [
+       2612
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "vitamina d gotas|vitamina||||||",
+    "cards": [
+     {
+      "cardId": "vitamina d gotas#13",
+      "presentationKey": "vitamina|bio:unknown|brand:unknown",
+      "canonicalName": "Vitamina A 3300 UI 90...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     },
+     {
+      "cardId": "vitamina d gotas#14",
+      "presentationKey": "vitamina|bio:unknown|brand:pranalab|combo:zinc",
+      "canonicalName": "Vitamina C + Zinc...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     },
+     {
+      "cardId": "vitamina d gotas#20",
+      "presentationKey": "vitamina|bio:unknown|brand:avanti|combo:rosa",
+      "canonicalName": "Vitamina C + Rosa Mosqueta...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       5490
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "vitamina d gotas|vitamina|1000mg|20|1000mg|solid-oral|c|20||",
+    "cards": [
+     {
+      "cardId": "vitamina d gotas#68",
+      "presentationKey": "vitamina|1000mg|20|bio:unknown|brand:unknown|var:c|form:solid-oral",
+      "canonicalName": "Vitamina C 1000mg x 20 tabletas efervecentes",
+      "pharmacies": [
+       "ecofarmacias"
+      ],
+      "prices": [
+       3000
+      ]
+     },
+     {
+      "cardId": "vitamina d gotas#85",
+      "presentationKey": "vitamina|1000mg|20|bio:unknown|brand:energy|var:c|form:solid-oral",
+      "canonicalName": "Vitamina C 1000 Mg 20 Tab....",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "vitamina d gotas|vitamina|20||solid-oral||20||",
+    "cards": [
+     {
+      "cardId": "vitamina d gotas#82",
+      "presentationKey": "vitamina|20|bio:unknown|brand:unknown|combo:zinc|form:solid-oral",
+      "canonicalName": "Vitamina C + D + Zinc x 20 tableta efervescentes",
+      "pharmacies": [
+       "ecofarmacias"
+      ],
+      "prices": [
+       3990
+      ]
+     },
+     {
+      "cardId": "vitamina d gotas#84",
+      "presentationKey": "vitamina|20|bio:unknown|brand:energy|combo:zinc|form:solid-oral",
+      "canonicalName": "Vitamina C + Zinc 20 Tab....",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       3990
+      ]
+     }
+    ]
+   },
+   {
+    "signature": "vitamina d gotas|vitamina|60||solid-oral||60||",
+    "cards": [
+     {
+      "cardId": "vitamina d gotas#89",
+      "presentationKey": "vitamina|60|bio:unknown|brand:farm|form:solid-oral",
+      "canonicalName": "Vitamina A 60 Cap. Blandas...",
+      "pharmacies": [
+       "easyfarma"
+      ],
+      "prices": [
+       4490
+      ]
+     },
+     {
+      "cardId": "vitamina d gotas#94",
+      "presentationKey": "vitamina|60|bio:unknown|brand:unknown|combo:zinc|form:solid-oral",
+      "canonicalName": "Vitamina C + Zinc x 60 cápsulas",
+      "pharmacies": [
+       "ecofarmacias"
+      ],
+      "prices": [
+       5980
+      ]
+     },
+     {
+      "cardId": "vitamina d gotas#100",
+      "presentationKey": "vitamina|60|bio:unknown|brand:unknown|form:solid-oral",
+      "canonicalName": "Vitamina D3 x 60 cápsulas",
+      "pharmacies": [
+       "ecofarmacias"
+      ],
+      "prices": [
+       6990
+      ]
+     }
+    ]
+   }
+  ],
+  "labEqualsIngredient": [
+   {
+    "cardId": "ambroxol#22",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ambroxol",
+    "activeIngredient": "ambroxol",
+    "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+   },
+   {
+    "cardId": "ambroxol#29",
+    "pharmacy": "salcobrand",
+    "laboratory": "Muxol",
+    "activeIngredient": "muxol",
+    "name": "Muxol Adulto Ambroxol Jarabe 100ml"
+   },
+   {
+    "cardId": "ambroxol#44",
+    "pharmacy": "salcobrand",
+    "laboratory": "Broncot",
+    "activeIngredient": "broncot",
+    "name": "Broncot Ambroxol 30mg/5ml 120ml"
+   },
+   {
+    "cardId": "ambroxol#48",
+    "pharmacy": "salcobrand",
+    "laboratory": "Muxol",
+    "activeIngredient": "muxol",
+    "name": "Muxol Ambroxol 20 Comprimidos"
+   },
+   {
+    "cardId": "ambroxol#52",
+    "pharmacy": "salcobrand",
+    "laboratory": "Broncot",
+    "activeIngredient": "broncot",
+    "name": "Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml"
+   },
+   {
+    "cardId": "amoxicilina suspension#1",
+    "pharmacy": "sermecoop",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 250mg/5ml Suspensión Oral 60ml"
+   },
+   {
+    "cardId": "amoxicilina suspension#1",
+    "pharmacy": "ahumada",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 250 mg/5 mL susp. Frasco 60 mL"
+   },
+   {
+    "cardId": "amoxicilina suspension#1",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 250mg/5ml Jarabe 60ml"
+   },
+   {
+    "cardId": "amoxicilina suspension#1",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 250 mg/5mL Jarabe 60 mL"
+   },
+   {
+    "cardId": "amoxicilina suspension#46",
+    "pharmacy": "farmex",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 750 mg x 10 comprimidos."
+   },
+   {
+    "cardId": "amoxicilina suspension#46",
+    "pharmacy": "sermecoop",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 750mg 10 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina suspension#46",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 750 mg 10 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina suspension#46",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 750mg 10 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina suspension#56",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 500 mg 21 Cápsulas"
+   },
+   {
+    "cardId": "amoxicilina suspension#56",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina (B) 500mg 21 Cápsulas"
+   },
+   {
+    "cardId": "amoxicilina suspension#77",
+    "pharmacy": "salcobrand",
+    "laboratory": "Maximox",
+    "activeIngredient": "maximox",
+    "name": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 14 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "amoxicilina suspension#79",
+    "pharmacy": "salcobrand",
+    "laboratory": "Novamox",
+    "activeIngredient": "novamox",
+    "name": "Novamox (B) Amoxicilina 1g 14 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina suspension#85",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoval",
+    "activeIngredient": "amoval",
+    "name": "Amoval Amoxicilina 1g 14 Comprimidos Dispersables"
+   },
+   {
+    "cardId": "amoxicilina suspension#90",
+    "pharmacy": "salcobrand",
+    "laboratory": "Moxivulan",
+    "activeIngredient": "moxivulan",
+    "name": "Moxivulan Ácido Clavulánico 125mg Amoxicilina 875mg 14 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "amoxicilina suspension#91",
+    "pharmacy": "salcobrand",
+    "laboratory": "Maximox",
+    "activeIngredient": "maximox",
+    "name": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 20 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "amoxicilina suspension#99",
+    "pharmacy": "salcobrand",
+    "laboratory": "Novamox",
+    "activeIngredient": "novamox",
+    "name": "Novamox (B) Amoxicilina 1g 20 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina suspension#118",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoval",
+    "activeIngredient": "amoval",
+    "name": "Amoval (B) Amoxicilina 750mg 21 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "amoxicilina#1",
+    "pharmacy": "farmex",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 750 mg x 10 comprimidos."
+   },
+   {
+    "cardId": "amoxicilina#1",
+    "pharmacy": "sermecoop",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 750mg 10 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina#1",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 750 mg 10 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina#1",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 750mg 10 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina#2",
+    "pharmacy": "sermecoop",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 250mg/5ml Suspensión Oral 60ml"
+   },
+   {
+    "cardId": "amoxicilina#2",
+    "pharmacy": "ahumada",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 250 mg/5 mL susp. Frasco 60 mL"
+   },
+   {
+    "cardId": "amoxicilina#2",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 250mg/5ml Jarabe 60ml"
+   },
+   {
+    "cardId": "amoxicilina#2",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 250 mg/5mL Jarabe 60 mL"
+   },
+   {
+    "cardId": "amoxicilina#21",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina 500 mg 21 Cápsulas"
+   },
+   {
+    "cardId": "amoxicilina#21",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoxicilina",
+    "activeIngredient": "amoxicilina",
+    "name": "Amoxicilina (B) 500mg 21 Cápsulas"
+   },
+   {
+    "cardId": "amoxicilina#53",
+    "pharmacy": "salcobrand",
+    "laboratory": "Maximox",
+    "activeIngredient": "maximox",
+    "name": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 14 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "amoxicilina#55",
+    "pharmacy": "salcobrand",
+    "laboratory": "Novamox",
+    "activeIngredient": "novamox",
+    "name": "Novamox (B) Amoxicilina 1g 14 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina#66",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoval",
+    "activeIngredient": "amoval",
+    "name": "Amoval Amoxicilina 1g 14 Comprimidos Dispersables"
+   },
+   {
+    "cardId": "amoxicilina#71",
+    "pharmacy": "salcobrand",
+    "laboratory": "Moxivulan",
+    "activeIngredient": "moxivulan",
+    "name": "Moxivulan Ácido Clavulánico 125mg Amoxicilina 875mg 14 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "amoxicilina#72",
+    "pharmacy": "salcobrand",
+    "laboratory": "Maximox",
+    "activeIngredient": "maximox",
+    "name": "Maximox (B) 875/125 Amoxicilina / ícido Clavulánico 20 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "amoxicilina#81",
+    "pharmacy": "salcobrand",
+    "laboratory": "Novamox",
+    "activeIngredient": "novamox",
+    "name": "Novamox (B) Amoxicilina 1g 20 Comprimidos"
+   },
+   {
+    "cardId": "amoxicilina#117",
+    "pharmacy": "salcobrand",
+    "laboratory": "Amoval",
+    "activeIngredient": "amoval",
+    "name": "Amoval (B) Amoxicilina 750mg 21 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "aspirina#12",
+    "pharmacy": "salcobrand",
+    "laboratory": "Aspirina",
+    "activeIngredient": "aspirina",
+    "name": "Aspirina 500mg 40 Comprimidos"
+   },
+   {
+    "cardId": "aspirina#16",
+    "pharmacy": "salcobrand",
+    "laboratory": "Aspirina",
+    "activeIngredient": "aspirina",
+    "name": "Aspirina 100mg 42 Comprimidos"
+   },
+   {
+    "cardId": "aspirina#34",
+    "pharmacy": "salcobrand",
+    "laboratory": "Svr",
+    "activeIngredient": "svr",
+    "name": "SVR Desodorante Spirial Deo Roll-On 50ml"
+   },
+   {
+    "cardId": "aspirina#35",
+    "pharmacy": "salcobrand",
+    "laboratory": "Svr",
+    "activeIngredient": "svr",
+    "name": "Svr Spirial Deo Crema 50ml"
+   },
+   {
+    "cardId": "aspirina#36",
+    "pharmacy": "salcobrand",
+    "laboratory": "Svr",
+    "activeIngredient": "svr",
+    "name": "Svr Spirial Roll-on Vegetal 50ml"
+   },
+   {
+    "cardId": "aspirina#39",
+    "pharmacy": "salcobrand",
+    "laboratory": "SVR",
+    "activeIngredient": "svr",
+    "name": "SVR Spirial Deo Douche 400ml"
+   },
+   {
+    "cardId": "aspirina#40",
+    "pharmacy": "salcobrand",
+    "laboratory": "Spiriva",
+    "activeIngredient": "spiriva",
+    "name": "Spiriva Respimat Tiotropio 2.5mcg Inhalación 30 Dosis - Cenabast"
+   },
+   {
+    "cardId": "betametasona#17",
+    "pharmacy": "salcobrand",
+    "laboratory": "Betametasona",
+    "activeIngredient": "betametasona",
+    "name": "Betametasona 0.05% Crema 15g"
+   },
+   {
+    "cardId": "betametasona#31",
+    "pharmacy": "salcobrand",
+    "laboratory": "Prodel B",
+    "activeIngredient": "prodelb",
+    "name": "Prodel-B Betametasona / Clorfenamina 10 Comprimidos"
+   },
+   {
+    "cardId": "betametasona#32",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clotrimazol",
+    "activeIngredient": "clotrimazol",
+    "name": "Clotrimazol Betametasona 1%/0.05% Crema Dérmica 15g"
+   },
+   {
+    "cardId": "betametasona#38",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clofexan",
+    "activeIngredient": "clofexan",
+    "name": "Clofexan Betametasona / Dexclorfenamina 30 Comprimidos"
+   },
+   {
+    "cardId": "betametasona#54",
+    "pharmacy": "salcobrand",
+    "laboratory": "Prodel-B",
+    "activeIngredient": "prodelb",
+    "name": "Prodel-B Betametasona / Clorfenamina 30 Comprimidos"
+   },
+   {
+    "cardId": "betametasona#59",
+    "pharmacy": "salcobrand",
+    "laboratory": "Betametasona",
+    "activeIngredient": "betametasona",
+    "name": "Betametasona + Neomicina Ungüento Tópico 10g"
+   },
+   {
+    "cardId": "betametasona#60",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cobefen",
+    "activeIngredient": "cobefen",
+    "name": "Cobefen Betametasona / Dexclorfenamina Jarabe 120ml"
+   },
+   {
+    "cardId": "betametasona#63",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cobefen",
+    "activeIngredient": "cobefen",
+    "name": "Cobefen Betametasona / Dexclorfenamina 30 Comprimidos"
+   },
+   {
+    "cardId": "betametasona#68",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clofexan",
+    "activeIngredient": "clofexan",
+    "name": "Clofexan (B) Betametasona / Dexclorfenamina Jarabe 120ml"
+   },
+   {
+    "cardId": "betametasona#71",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clotrimin B",
+    "activeIngredient": "clotriminb",
+    "name": "Clotrimin-B Clotrimazol / Betametasona Crema Tópica 15g"
+   },
+   {
+    "cardId": "betametasona#79",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cam",
+    "activeIngredient": "cam",
+    "name": "Cam Betametasona / Dexclorfenamina 30 Comprimidos"
+   },
+   {
+    "cardId": "betametasona#87",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cam",
+    "activeIngredient": "cam",
+    "name": "Cam Betametasona / Dexclorfenamina Jarabe 120ml"
+   },
+   {
+    "cardId": "betametasona#96",
+    "pharmacy": "salcobrand",
+    "laboratory": "Betametasona",
+    "activeIngredient": "betametasona",
+    "name": "Betametasona 4mg/ml Inyectable 5 Ampollas"
+   },
+   {
+    "cardId": "betametasona#103",
+    "pharmacy": "salcobrand",
+    "laboratory": "Oftasona-P",
+    "activeIngredient": "oftasonap",
+    "name": "Oftasona-P Betametasona 0.1% Solución Oftálmica 10ml"
+   },
+   {
+    "cardId": "betametasona#106",
+    "pharmacy": "salcobrand",
+    "laboratory": "Betavol",
+    "activeIngredient": "betavol",
+    "name": "Betavol 5 Betametasona Inyectable 1 Ampolla"
+   },
+   {
+    "cardId": "betametasona#109",
+    "pharmacy": "salcobrand",
+    "laboratory": "Oftagen",
+    "activeIngredient": "oftagen",
+    "name": "Oftagen Compuesto Gentamicina / Betametasona Solución Oftálmica 5ml"
+   },
+   {
+    "cardId": "betametasona#113",
+    "pharmacy": "salcobrand",
+    "laboratory": "Donomix",
+    "activeIngredient": "donomix",
+    "name": "Donomix Betametasona / Clotrimazol Crema Dérmica 15g"
+   },
+   {
+    "cardId": "betametasona#124",
+    "pharmacy": "salcobrand",
+    "laboratory": "Mixgen",
+    "activeIngredient": "mixgen",
+    "name": "Mixgen Betametasona / Gentamicina Crema Dérmica 15g"
+   },
+   {
+    "cardId": "betametasona#127",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dacam",
+    "activeIngredient": "dacam",
+    "name": "Dacam Rapi-Lento Betametasona 3mg/ml Inyectable 1 Jeringa"
+   },
+   {
+    "cardId": "betametasona#128",
+    "pharmacy": "salcobrand",
+    "laboratory": "Coritex",
+    "activeIngredient": "coritex",
+    "name": "Coritex Forte Betametasona 1mg/ml Oral Gotas 30ml"
+   },
+   {
+    "cardId": "cetirizina#21",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cetirizina",
+    "activeIngredient": "cetirizina",
+    "name": "Cetirizina (B) 10mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "cetirizina#23",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cetirizina",
+    "activeIngredient": "cetirizina",
+    "name": "Cetirizina 5mg/5ml Jarabe 60ml"
+   },
+   {
+    "cardId": "cetirizina#27",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cetirex",
+    "activeIngredient": "cetirex",
+    "name": "Cetirex (B) Cetirizina 10mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "cetirizina#41",
+    "pharmacy": "salcobrand",
+    "laboratory": "Rigotax",
+    "activeIngredient": "rigotax",
+    "name": "Rigotax (B) Cetirizina 10mg 10 Comprimidos"
+   },
+   {
+    "cardId": "cetirizina#43",
+    "pharmacy": "salcobrand",
+    "laboratory": "Findaler",
+    "activeIngredient": "findaler",
+    "name": "Findaler (B) Cetirizina 10mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "cetirizina#53",
+    "pharmacy": "salcobrand",
+    "laboratory": "Rigotax",
+    "activeIngredient": "rigotax",
+    "name": "Rigotax (B) Cetirizina 10mg 30 Comprimidos"
+   },
+   {
+    "cardId": "cetirizina#59",
+    "pharmacy": "salcobrand",
+    "laboratory": "Rigotax",
+    "activeIngredient": "rigotax",
+    "name": "Rigotax Cetirizina 5mg/5ml Jarabe 60ml"
+   },
+   {
+    "cardId": "cetirizina#60",
+    "pharmacy": "salcobrand",
+    "laboratory": "Rigotax",
+    "activeIngredient": "rigotax",
+    "name": "Rigotax 10mg/ml Cetirizina Oral Gotas 15ml"
+   },
+   {
+    "cardId": "cetirizina#62",
+    "pharmacy": "salcobrand",
+    "laboratory": "Remitex",
+    "activeIngredient": "remitex",
+    "name": "Remitex (B) Cetirizina 10mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "cetirizina#68",
+    "pharmacy": "salcobrand",
+    "laboratory": "Remitex",
+    "activeIngredient": "remitex",
+    "name": "Remitex (B) Cetirizina 5mg/5ml Jarabe 100ml"
+   },
+   {
+    "cardId": "cetirizina#74",
+    "pharmacy": "salcobrand",
+    "laboratory": "Remitex",
+    "activeIngredient": "remitex",
+    "name": "Remitex (B) Cetirizina 10mg/ml Oral Gotas 15ml"
+   },
+   {
+    "cardId": "cetirizina#76",
+    "pharmacy": "salcobrand",
+    "laboratory": "Zyrtec",
+    "activeIngredient": "zyrtec",
+    "name": "Zyrtec Cetirizina 1mg/ml Jarabe 60ml"
+   },
+   {
+    "cardId": "cetirizina#80",
+    "pharmacy": "salcobrand",
+    "laboratory": "Zyrtec",
+    "activeIngredient": "zyrtec",
+    "name": "Zyrtec (R) Cetirizina 10mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "clorfenamina#10",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clorfenamina",
+    "activeIngredient": "clorfenamina",
+    "name": "Clorfenamina (B) 4mg 20 Comprimidos"
+   },
+   {
+    "cardId": "clorfenamina#12",
+    "pharmacy": "salcobrand",
+    "laboratory": "Prodel",
+    "activeIngredient": "prodel",
+    "name": "Prodel (B) Clorfenamina 4mg 20 Comprimidos"
+   },
+   {
+    "cardId": "clorfenamina#26",
+    "pharmacy": "salcobrand",
+    "laboratory": "Prodel B",
+    "activeIngredient": "prodelb",
+    "name": "Prodel-B Betametasona / Clorfenamina 10 Comprimidos"
+   },
+   {
+    "cardId": "clorfenamina#38",
+    "pharmacy": "salcobrand",
+    "laboratory": "Prodel",
+    "activeIngredient": "prodel",
+    "name": "Prodel Clorfenamina 2mg/5ml Jarabe 120ml"
+   },
+   {
+    "cardId": "clorfenamina#41",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nastul",
+    "activeIngredient": "nastul",
+    "name": "Nastul (B) Clorfenamina / Pseudoefedrina Oral Gotas 15ml"
+   },
+   {
+    "cardId": "clorfenamina#45",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nastizol",
+    "activeIngredient": "nastizol",
+    "name": "Nastizol Clorfenamina / Pseudoefedrina 14 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "clorfenamina#49",
+    "pharmacy": "salcobrand",
+    "laboratory": "Prodel-B",
+    "activeIngredient": "prodelb",
+    "name": "Prodel-B Betametasona / Clorfenamina 30 Comprimidos"
+   },
+   {
+    "cardId": "clorfenamina#59",
+    "pharmacy": "salcobrand",
+    "laboratory": "Extosen",
+    "activeIngredient": "extosen",
+    "name": "Extosen (B) Clorfenamina / Codeina / Pseudoefedrina Jarabe 100ml"
+   },
+   {
+    "cardId": "clorfenamina#60",
+    "pharmacy": "salcobrand",
+    "laboratory": "Duo Val",
+    "activeIngredient": "duoval",
+    "name": "Duo Val Clorfenamina / Pseudoefedrina Oral Gotas 15ml"
+   },
+   {
+    "cardId": "clorfenamina#63",
+    "pharmacy": "salcobrand",
+    "laboratory": "Duoval",
+    "activeIngredient": "duoval",
+    "name": "Duo Val Clorfenamina / Pseudoefedrina Jarabe 120ml"
+   },
+   {
+    "cardId": "clorfenamina#64",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nastizol",
+    "activeIngredient": "nastizol",
+    "name": "Nastizol Clorfenamina / Pseudoefedrina 28 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "clorfenamina#69",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nastizol",
+    "activeIngredient": "nastizol",
+    "name": "Nastizol (B) Clorfenamina / Pseudoefedrina Jarabe 120ml"
+   },
+   {
+    "cardId": "clorfenamina#72",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nastizol",
+    "activeIngredient": "nastizol",
+    "name": "Nastizol (B) Clorfenamina / Pseudoefedrina Oral Gotas 15ml"
+   },
+   {
+    "cardId": "clorfenamina#75",
+    "pharmacy": "salcobrand",
+    "laboratory": "Bequium",
+    "activeIngredient": "bequium",
+    "name": "Bequium Pseudoefedrina / Codeí­na / Clorfenamina Jarabe 120ml"
+   },
+   {
+    "cardId": "clotrimazol#39",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clotrimazol",
+    "activeIngredient": "clotrimazol",
+    "name": "Clotrimazol 100mg 6 Comprimidos Vaginales"
+   },
+   {
+    "cardId": "clotrimazol#43",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clotrimazol",
+    "activeIngredient": "clotrimazol",
+    "name": "Clotrimazol 500mg 1 Óvulo"
+   },
+   {
+    "cardId": "clotrimazol#47",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clotrimazol",
+    "activeIngredient": "clotrimazol",
+    "name": "Clotrimazol 500mg 1 Comprimidos Vaginales"
+   },
+   {
+    "cardId": "clotrimazol#51",
+    "pharmacy": "salcobrand",
+    "laboratory": "Canesten",
+    "activeIngredient": "canesten",
+    "name": "Canesten Clotrimazol 1% Crema Tópica 20g"
+   },
+   {
+    "cardId": "clotrimazol#53",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clotrimazol",
+    "activeIngredient": "clotrimazol",
+    "name": "Clotrimazol Betametasona 1%/0.05% Crema Dérmica 15g"
+   },
+   {
+    "cardId": "clotrimazol#60",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clotrimazol",
+    "activeIngredient": "clotrimazol",
+    "name": "Clotrimazol 100mg 6 Óvulos"
+   },
+   {
+    "cardId": "clotrimazol#64",
+    "pharmacy": "salcobrand",
+    "laboratory": "Fungos",
+    "activeIngredient": "fungos",
+    "name": "Fungos Clotrimazol 500mg 1 í“vulo"
+   },
+   {
+    "cardId": "clotrimazol#68",
+    "pharmacy": "salcobrand",
+    "laboratory": "Clotrimin B",
+    "activeIngredient": "clotriminb",
+    "name": "Clotrimin-B Clotrimazol / Betametasona Crema Tópica 15g"
+   },
+   {
+    "cardId": "clotrimazol#74",
+    "pharmacy": "salcobrand",
+    "laboratory": "Fungos",
+    "activeIngredient": "fungos",
+    "name": "Fungos Clotrimazol 100mg 6 í“vulos"
+   },
+   {
+    "cardId": "clotrimazol#81",
+    "pharmacy": "salcobrand",
+    "laboratory": "Micosepdeo",
+    "activeIngredient": "micosepdeo",
+    "name": "Micosepdeo Clotrimazol Aerosol Tópico 200ml"
+   },
+   {
+    "cardId": "clotrimazol#84",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tribesona",
+    "activeIngredient": "tribesona",
+    "name": "Tribesona Clotrimazol / Dexametasona Acetato Crema Tópica 20g"
+   },
+   {
+    "cardId": "clotrimazol#85",
+    "pharmacy": "salcobrand",
+    "laboratory": "Donomix",
+    "activeIngredient": "donomix",
+    "name": "Donomix Betametasona / Clotrimazol Crema Dérmica 15g"
+   },
+   {
+    "cardId": "clotrimazol#92",
+    "pharmacy": "salcobrand",
+    "laboratory": "Baycuten",
+    "activeIngredient": "baycuten",
+    "name": "Baycutén Clotrimazol / Dexametasona Crema 15g"
+   },
+   {
+    "cardId": "diclofenaco#28",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diclofenaco",
+    "activeIngredient": "diclofenaco",
+    "name": "Diclofenaco 50mg 10 Comprimidos"
+   },
+   {
+    "cardId": "diclofenaco#38",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diclofenaco",
+    "activeIngredient": "diclofenaco",
+    "name": "Diclofenaco (B) 100mg 8 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "diclofenaco#39",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diclofenaco",
+    "activeIngredient": "diclofenaco",
+    "name": "Diclofenaco Infantil 12.5mg 5 Supositorios"
+   },
+   {
+    "cardId": "diclofenaco#49",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diclofenaco",
+    "activeIngredient": "diclofenaco",
+    "name": "Diclofenaco Gel 30g"
+   },
+   {
+    "cardId": "diclofenaco#53",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diclofenaco",
+    "activeIngredient": "diclofenaco",
+    "name": "Diclofenaco Adulto 50mg 5 Supositorios"
+   },
+   {
+    "cardId": "diclofenaco#65",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diclofenaco",
+    "activeIngredient": "diclofenaco",
+    "name": "Diclofenaco Sódico 1.5% Oral Gotas 20ml"
+   },
+   {
+    "cardId": "diclofenaco#66",
+    "pharmacy": "salcobrand",
+    "laboratory": "Promerpal",
+    "activeIngredient": "promerpal",
+    "name": "Promerpal Diclofenaco 140mg 10 Cápsulas Prolongadas"
+   },
+   {
+    "cardId": "diclofenaco#77",
+    "pharmacy": "salcobrand",
+    "laboratory": "Merpal",
+    "activeIngredient": "merpal",
+    "name": "Merpal Diclofenaco Spray 110ml"
+   },
+   {
+    "cardId": "diclofenaco#88",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dolodrin",
+    "activeIngredient": "dolodrin",
+    "name": "Dolodrin Diclofenaco 25mg / Tramadol 25mg 10 Comprimidos"
+   },
+   {
+    "cardId": "diclofenaco#90",
+    "pharmacy": "salcobrand",
+    "laboratory": "Merpal",
+    "activeIngredient": "merpal",
+    "name": "Merpal Diclofenaco Resinato 15mg/5ml Oral Gotas 20ml"
+   },
+   {
+    "cardId": "diclofenaco#91",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dolo-Neurobionta",
+    "activeIngredient": "doloneurobionta",
+    "name": "Dolo-Neurobionta Diclofenaco 10 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "diclofenaco#92",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dicasen",
+    "activeIngredient": "dicasen",
+    "name": "Dicasen 25/25 Diclofenaco / Tramadol 10 Comprimidos"
+   },
+   {
+    "cardId": "diclofenaco#93",
+    "pharmacy": "salcobrand",
+    "laboratory": "Pro-Lertus",
+    "activeIngredient": "prolertus",
+    "name": "Pro-Lertus Diclofenaco Colestiramina 140mg 10 Cápsulas Prolongadas"
+   },
+   {
+    "cardId": "diclofenaco#94",
+    "pharmacy": "salcobrand",
+    "laboratory": "Adorlan",
+    "activeIngredient": "adorlan",
+    "name": "Adorlan 25/25 Diclofenaco / Tramadol 10 Comprimidos"
+   },
+   {
+    "cardId": "diclofenaco#106",
+    "pharmacy": "salcobrand",
+    "laboratory": "Lertus ",
+    "activeIngredient": "lertus",
+    "name": "Lertus Diclofenaco Sódico 15mg/ml Oral Gotas 25ml"
+   },
+   {
+    "cardId": "diclofenaco#119",
+    "pharmacy": "salcobrand",
+    "laboratory": "Lertus",
+    "activeIngredient": "lertus",
+    "name": "Lertus (B) Diclofenaco Sódico 75mg Inyectable 5 Ampollas"
+   },
+   {
+    "cardId": "diclofenaco#121",
+    "pharmacy": "salcobrand",
+    "laboratory": "Pro-Lertus",
+    "activeIngredient": "prolertus",
+    "name": "Pro-Lertus Diclofenaco Colestiramina 140mg 20 Cápsulas Prolongadas"
+   },
+   {
+    "cardId": "dipirona#5",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dipirona",
+    "activeIngredient": "dipirona",
+    "name": "Dipirona Metamizol Sódico 5 Supositorios"
+   },
+   {
+    "cardId": "dipirona#14",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dipirona",
+    "activeIngredient": "dipirona",
+    "name": "Dipirona Metamizol Sódico 300mg 20 Comprimidos"
+   },
+   {
+    "cardId": "dipirona#21",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diprotan",
+    "activeIngredient": "diprotan",
+    "name": "Diprotan (B) Duloxetina 30mg 30 Cápsulas"
+   },
+   {
+    "cardId": "dipirona#22",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diprotan",
+    "activeIngredient": "diprotan",
+    "name": "Diprotan (B) Duloxetina 60mg 30 Cápsulas"
+   },
+   {
+    "cardId": "dipirona#23",
+    "pharmacy": "salcobrand",
+    "laboratory": "Pironal",
+    "activeIngredient": "pironal",
+    "name": "Pironal Flu Forte Ibuprofeno / Pseudoefedrina 12 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "dipirona#25",
+    "pharmacy": "salcobrand",
+    "laboratory": "Pironal",
+    "activeIngredient": "pironal",
+    "name": "Pironal Flu Forte Ibuprofeno / Pseudoefedrina Jarabe 100ml"
+   },
+   {
+    "cardId": "glicerina#0",
+    "pharmacy": "araucomed",
+    "laboratory": "Palmolive",
+    "activeIngredient": "palmolive",
+    "name": "Palmolive jabón en barra humectante Oliva y Aloe Vera 85 g."
+   },
+   {
+    "cardId": "glicerina#11",
+    "pharmacy": "salcobrand",
+    "laboratory": "Trianon",
+    "activeIngredient": "trianon",
+    "name": "Trianon Jabón Barra de Glicerina 100g"
+   },
+   {
+    "cardId": "glicerina#28",
+    "pharmacy": "araucomed",
+    "laboratory": "Pielarmina",
+    "activeIngredient": "pielarmina",
+    "name": "Pielarmina Clinical Diabederm crema para manos, codos y pies, piel frágil y agrietada con urea 10% 70 g."
+   },
+   {
+    "cardId": "glicerina#40",
+    "pharmacy": "salcobrand",
+    "laboratory": "Biocure",
+    "activeIngredient": "biocure",
+    "name": "Biocure Colonia de Fricción Aloe Vera Glicerina 400ml"
+   },
+   {
+    "cardId": "glicerina#48",
+    "pharmacy": "araucomed",
+    "laboratory": "Trianon",
+    "activeIngredient": "trianon",
+    "name": "Trianon Jabon Glicerina Aloe 100g (Pack x 3)"
+   },
+   {
+    "cardId": "glicerina#64",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glicerina",
+    "activeIngredient": "glicerina",
+    "name": "Supositorio Glicerina Mediano 3g 10 Unidades"
+   },
+   {
+    "cardId": "glicerina#66",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glicerina",
+    "activeIngredient": "glicerina",
+    "name": "Supositorio Glicerina Adulto 10 Unidades"
+   },
+   {
+    "cardId": "glicerina#80",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cheltin",
+    "activeIngredient": "cheltin",
+    "name": "Cheltin Glicinato Ferroso 6mg/ml Oral Gotas 30ml"
+   },
+   {
+    "cardId": "glicerina#93",
+    "pharmacy": "araucomed",
+    "laboratory": "Eucerin",
+    "activeIngredient": "eucerin",
+    "name": "Eucerin Hyaluron-Filler 3X effect Hydrating booster gel facial 30 ml."
+   },
+   {
+    "cardId": "glicerina#95",
+    "pharmacy": "araucomed",
+    "laboratory": "Eucerin",
+    "activeIngredient": "eucerin",
+    "name": "Eucerin Hyaluron-Filler 3X effect ultra light hydrating + repair gel facial día 50 ml."
+   },
+   {
+    "cardId": "glicerina#97",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glucerna",
+    "activeIngredient": "glucerna",
+    "name": "Glucerna Vainilla 850g"
+   },
+   {
+    "cardId": "hidrocortisona#8",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hidrocortisona",
+    "activeIngredient": "hidrocortisona",
+    "name": "Hidrocortisona 1% Crema 15g"
+   },
+   {
+    "cardId": "hidrocortisona#20",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hidrocortisona",
+    "activeIngredient": "hidrocortisona",
+    "name": "Hidrocortisona 20mg 20 Comprimidos"
+   },
+   {
+    "cardId": "hidrocortisona#30",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hipoge-U",
+    "activeIngredient": "hipogeu",
+    "name": "Hipoge-U Hidrocortisona 1% Crema Tópica 15g"
+   },
+   {
+    "cardId": "hidrocortisona#33",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hipoge",
+    "activeIngredient": "hipoge",
+    "name": "Hipoge Hidrocortisona 1% Ungüento Dérmico 10g"
+   },
+   {
+    "cardId": "hidrocortisona#45",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dermadril",
+    "activeIngredient": "dermadril",
+    "name": "Dermadril Hidrocortisona 1% Emulsión Fluida 100g"
+   },
+   {
+    "cardId": "hidrocortisona#48",
+    "pharmacy": "salcobrand",
+    "laboratory": "Microcort",
+    "activeIngredient": "microcort",
+    "name": "Microcort Hidrocortisona 1% Crema 30g"
+   },
+   {
+    "cardId": "hidrocortisona#51",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hidrosoft",
+    "activeIngredient": "hidrosoft",
+    "name": "Hidrosoft Hidrocortisona 0.5% Crema Tópica 30g"
+   },
+   {
+    "cardId": "hidrocortisona#56",
+    "pharmacy": "salcobrand",
+    "laboratory": "Microcort",
+    "activeIngredient": "microcort",
+    "name": "Microcort Hidrocortisona 1% Loción Tópica 100ml"
+   },
+   {
+    "cardId": "hidrocortisona#59",
+    "pharmacy": "salcobrand",
+    "laboratory": "Calmurid",
+    "activeIngredient": "calmurid",
+    "name": "Calmurid 1% Hidrocortisona Loción Tópica 100g"
+   },
+   {
+    "cardId": "hidrocortisona#61",
+    "pharmacy": "salcobrand",
+    "laboratory": "Efficort",
+    "activeIngredient": "efficort",
+    "name": "Efficort Hidrocortisona 0.127% Crema Lipofí­lica 30g"
+   },
+   {
+    "cardId": "hidrocortisona#66",
+    "pharmacy": "salcobrand",
+    "laboratory": "Pandel",
+    "activeIngredient": "pandel",
+    "name": "Pandel 0,1% Hidrocortisona Crema Tópica 15g"
+   },
+   {
+    "cardId": "hidrocortisona#68",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nutracort",
+    "activeIngredient": "nutracort",
+    "name": "Nutracort Hidrocortisona 1% Loción 120ml"
+   },
+   {
+    "cardId": "ibuprofeno#1",
+    "pharmacy": "easyfarma",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno 400 mg x 20 comp"
+   },
+   {
+    "cardId": "ibuprofeno#1",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno 400 mg 20 Comprimidos"
+   },
+   {
+    "cardId": "ibuprofeno#1",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno (B) 400mg 20 Comprimidos"
+   },
+   {
+    "cardId": "ibuprofeno#19",
+    "pharmacy": "ecofarmacias",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno Suspensión Oral 200mg/5ml 100ml Ascend"
+   },
+   {
+    "cardId": "ibuprofeno#19",
+    "pharmacy": "sermecoop",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno 200mg/5ml Jarabe 100ml"
+   },
+   {
+    "cardId": "ibuprofeno#19",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+   },
+   {
+    "cardId": "ibuprofeno#19",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno 200mg/5ml Jarabe 100ml"
+   },
+   {
+    "cardId": "ibuprofeno#23",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno 600 mg 20 Comprimidos"
+   },
+   {
+    "cardId": "ibuprofeno#23",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno (B) 600mg 20 Comprimidos"
+   },
+   {
+    "cardId": "ibuprofeno#24",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno 200 mg 20 Comprimidos"
+   },
+   {
+    "cardId": "ibuprofeno#24",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno (B) 200mg 20 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "ibuprofeno#33",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "ibuprofeno#35",
+    "pharmacy": "salcobrand",
+    "laboratory": "Actron",
+    "activeIngredient": "actron",
+    "name": "Actron (R) Ibuprofeno 400mg 10 Cápsulas Blandas"
+   },
+   {
+    "cardId": "ibuprofeno#67",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ibupirac",
+    "activeIngredient": "ibupirac",
+    "name": "Ibupirac LC (B) Ibuprofeno 400mg 20 Cápsulas Blandas"
+   },
+   {
+    "cardId": "ibuprofeno#77",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ibuprofeno",
+    "activeIngredient": "ibuprofeno",
+    "name": "Ibuprofeno 200mg Jarabe 120ml"
+   },
+   {
+    "cardId": "ibuprofeno#80",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ipson",
+    "activeIngredient": "ipson",
+    "name": "Ipson Infantil Ibuprofeno 120ml"
+   },
+   {
+    "cardId": "ibuprofeno#84",
+    "pharmacy": "salcobrand",
+    "laboratory": "Deucodol",
+    "activeIngredient": "deucodol",
+    "name": "Deucodol Forte Ibuprofeno 200mg/5ml Jarabe 120ml"
+   },
+   {
+    "cardId": "ibuprofeno#87",
+    "pharmacy": "salcobrand",
+    "laboratory": "Actron",
+    "activeIngredient": "actron",
+    "name": "Actron Ibuprofeno 600mg 10 Cápsulas Blandas"
+   },
+   {
+    "cardId": "ibuprofeno#92",
+    "pharmacy": "salcobrand",
+    "laboratory": "Actron",
+    "activeIngredient": "actron",
+    "name": "Actron (R) Ibuprofeno 400mg 20 Cápsulas Blandas"
+   },
+   {
+    "cardId": "ibuprofeno#100",
+    "pharmacy": "salcobrand",
+    "laboratory": "Actron 600",
+    "activeIngredient": "actron",
+    "name": "Actron (R) Ibuprofeno 600mg 20 Cápsulas Blandas"
+   },
+   {
+    "cardId": "ketoprofeno#31",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ketoprofeno",
+    "activeIngredient": "ketoprofeno",
+    "name": "Ketoprofeno (B) 50mg 20 Cápsulas"
+   },
+   {
+    "cardId": "ketoprofeno#33",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ketoprofeno",
+    "activeIngredient": "ketoprofeno",
+    "name": "Ketoprofeno Gel 60g"
+   },
+   {
+    "cardId": "ketoprofeno#34",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ketoprofeno",
+    "activeIngredient": "ketoprofeno",
+    "name": "Ketoprofeno 200mg 10 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "ketoprofeno#37",
+    "pharmacy": "salcobrand",
+    "laboratory": "Naxpet",
+    "activeIngredient": "naxpet",
+    "name": "Naxpet Ketoprofeno Perros y Gatos 10mg Comprimidos"
+   },
+   {
+    "cardId": "ketoprofeno#38",
+    "pharmacy": "salcobrand",
+    "laboratory": "Naxpet",
+    "activeIngredient": "naxpet",
+    "name": "Naxpet Ketoprofeno Perros y Gatos 0.4mg/ml Solución Oral 20ml"
+   },
+   {
+    "cardId": "ketoprofeno#45",
+    "pharmacy": "araucomed",
+    "laboratory": "Naxpet",
+    "activeIngredient": "naxpet",
+    "name": "Naxpet Raza grande 30 mg x 10 comprimidos."
+   },
+   {
+    "cardId": "ketoprofeno#52",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ketoprofeno",
+    "activeIngredient": "ketoprofeno",
+    "name": "Ketoprofeno 100mg/2ml Inyectable 5 Ampollas"
+   },
+   {
+    "cardId": "ketoprofeno#57",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dolostat",
+    "activeIngredient": "dolostat",
+    "name": "Dolostat BI Ketoprofeno 150mg 10 Comprimidos Prolongadados"
+   },
+   {
+    "cardId": "ketoprofeno#58",
+    "pharmacy": "salcobrand",
+    "laboratory": "Talflex",
+    "activeIngredient": "talflex",
+    "name": "Talflex Bi Ketoprofeno 150mg 14 Comprimidos"
+   },
+   {
+    "cardId": "kitadol#2",
+    "pharmacy": "salcobrand",
+    "laboratory": "Kitadol",
+    "activeIngredient": "kitadol",
+    "name": "Kitadol (B) Paracetamol 500mg 24 Comprimidos"
+   },
+   {
+    "cardId": "kitadol#24",
+    "pharmacy": "salcobrand",
+    "laboratory": "Kitadol",
+    "activeIngredient": "kitadol",
+    "name": "Kitadol Forte Paracetamol / Cafeína 10 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "kitadol#25",
+    "pharmacy": "salcobrand",
+    "laboratory": "Kitadol",
+    "activeIngredient": "kitadol",
+    "name": "Kitadol Antigripal Paracetamol 12 Dí­as + 6 Noches 18 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "kitadol#28",
+    "pharmacy": "salcobrand",
+    "laboratory": "Kitadol",
+    "activeIngredient": "kitadol",
+    "name": "Kitadol (B) Paracetamol 1g 18 Comprimidos"
+   },
+   {
+    "cardId": "kitadol#37",
+    "pharmacy": "salcobrand",
+    "laboratory": "Kitadol",
+    "activeIngredient": "kitadol",
+    "name": "Kitadol Paracetamol Infantil Jarabe 100ml"
+   },
+   {
+    "cardId": "kitadol#38",
+    "pharmacy": "salcobrand",
+    "laboratory": "Kitadol",
+    "activeIngredient": "kitadol",
+    "name": "Kitadol Paracetamol Infantil Jarabe 60ml"
+   },
+   {
+    "cardId": "loratadina#11",
+    "pharmacy": "salcobrand",
+    "laboratory": "Loratadina",
+    "activeIngredient": "loratadina",
+    "name": "Loratadina (B) 10mg 30 Comprimidos"
+   },
+   {
+    "cardId": "loratadina#17",
+    "pharmacy": "salcobrand",
+    "laboratory": "Loratadina",
+    "activeIngredient": "loratadina",
+    "name": "Loratadina 5mg/5ml Jarabe 90ml"
+   },
+   {
+    "cardId": "loratadina#24",
+    "pharmacy": "salcobrand",
+    "laboratory": "Loratadina",
+    "activeIngredient": "loratadina",
+    "name": "Loratadina 5mg/5ml Jarabe 60 ml"
+   },
+   {
+    "cardId": "loratadina#41",
+    "pharmacy": "salcobrand",
+    "laboratory": "Frenaler-D",
+    "activeIngredient": "frenalerd",
+    "name": "Frenaler-D Loratadina / Pseudoefedrina Jarabe Infantil 100ml"
+   },
+   {
+    "cardId": "loratadina#42",
+    "pharmacy": "salcobrand",
+    "laboratory": "Olokem",
+    "activeIngredient": "olokem",
+    "name": "Olokem (B) Olopatadina 0.2% Solucion Oftálmica 2.5ml"
+   },
+   {
+    "cardId": "loratadina#43",
+    "pharmacy": "salcobrand",
+    "laboratory": "Alledryl D",
+    "activeIngredient": "alledryld",
+    "name": "Alledryl-D Loratadina / Pseudoefedrina 5mg/120mg 20 Cápsulas Prolongadas"
+   },
+   {
+    "cardId": "loratadina#47",
+    "pharmacy": "salcobrand",
+    "laboratory": "Zepiken",
+    "activeIngredient": "zepiken",
+    "name": "Zepiken (B) Olopatadina 0.2% Solución Oftálmica 5ml"
+   },
+   {
+    "cardId": "loratadina#49",
+    "pharmacy": "salcobrand",
+    "laboratory": "Olof",
+    "activeIngredient": "olof",
+    "name": "Olof Olopatadina 0.2% Solución Oftálmica 5ml"
+   },
+   {
+    "cardId": "loratadina#50",
+    "pharmacy": "salcobrand",
+    "laboratory": "Ryaltris",
+    "activeIngredient": "ryaltris",
+    "name": "Ryaltris Olopatadina 600mcg Mometasona 25mcg Suspensión Nasal Nebulizacion 240 Dosis"
+   },
+   {
+    "cardId": "loratadina#52",
+    "pharmacy": "salcobrand",
+    "laboratory": "Olodina",
+    "activeIngredient": "olodina",
+    "name": "Olodina (B) PF Olopatadina 0.2% Solución Oftálmica 5ml"
+   },
+   {
+    "cardId": "loratadina#53",
+    "pharmacy": "salcobrand",
+    "laboratory": "Patanol",
+    "activeIngredient": "patanol",
+    "name": "Patanol Olopatadina 0.1% Solución Oftálmica 5ml"
+   },
+   {
+    "cardId": "losartan#9",
+    "pharmacy": "farmex",
+    "laboratory": "Losartan",
+    "activeIngredient": "losartan",
+    "name": "Losartan Potásico 50 mg x 30 Comprimidos susc-1 de 6 meses"
+   },
+   {
+    "cardId": "losartan#9",
+    "pharmacy": "salcobrand",
+    "laboratory": "Losartan",
+    "activeIngredient": "losartan",
+    "name": "Losartan (B) 50mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#9",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Losartan",
+    "activeIngredient": "losartan",
+    "name": "Losartan Potasico 50 mg 30 Comprimidos"
+   },
+   {
+    "cardId": "losartan#44",
+    "pharmacy": "salcobrand",
+    "laboratory": "Corodin",
+    "activeIngredient": "corodin",
+    "name": "Corodin (B) Losartán Potásico 100mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#46",
+    "pharmacy": "salcobrand",
+    "laboratory": "Losapres",
+    "activeIngredient": "losapres",
+    "name": "Losapres (B) Losartán 100mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#51",
+    "pharmacy": "salcobrand",
+    "laboratory": "Corodin",
+    "activeIngredient": "corodin",
+    "name": "Corodin (B) Losartán Potásico 50mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#55",
+    "pharmacy": "salcobrand",
+    "laboratory": "Simperten-D",
+    "activeIngredient": "simpertend",
+    "name": "Simperten-D 50/12.5 Hidroclorotiazida / Losartan 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#60",
+    "pharmacy": "salcobrand",
+    "laboratory": "Losapres ",
+    "activeIngredient": "losapres",
+    "name": "Losapres (B) Losartán 50mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#64",
+    "pharmacy": "salcobrand",
+    "laboratory": "Losapres",
+    "activeIngredient": "losapres",
+    "name": "Losapres D 100/25 Losartán / Hidroclorotiazida 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#65",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hyzaar",
+    "activeIngredient": "hyzaar",
+    "name": "Hyzaar Losartán Potásico / Hidroclorotiazida 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#66",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hyzaar",
+    "activeIngredient": "hyzaar",
+    "name": "Hyzaar Forte Hidroclorotiazida / Losartán 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#68",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cozaar",
+    "activeIngredient": "cozaar",
+    "name": "Cozaar (R) Losartán 50mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "losartan#70",
+    "pharmacy": "salcobrand",
+    "laboratory": "Cozaar",
+    "activeIngredient": "cozaar",
+    "name": "Cozaar (R) Losartán 100mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "metformina#13",
+    "pharmacy": "salcobrand",
+    "laboratory": "Metformina",
+    "activeIngredient": "metformina",
+    "name": "Metformina (B) 850mg 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "metformina#21",
+    "pharmacy": "salcobrand",
+    "laboratory": "Metformina",
+    "activeIngredient": "metformina",
+    "name": "Metformina (B) 850mg 60 Comprimidos"
+   },
+   {
+    "cardId": "metformina#45",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glaupax",
+    "activeIngredient": "glaupax",
+    "name": "Glaupax XR (B) Metformina 500mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#54",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hipoglucin",
+    "activeIngredient": "hipoglucin",
+    "name": "Hipoglucin 500 LP (B) Metformina 500mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#63",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glicenex",
+    "activeIngredient": "glicenex",
+    "name": "Glicenex SR (B) Metformina 1000mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#66",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hipoglucin",
+    "activeIngredient": "hipoglucin",
+    "name": "Hipoglucin LP (B) Metformina 750mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#68",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hipoglucin",
+    "activeIngredient": "hipoglucin",
+    "name": "Hipoglucin LP (B) Metformina 500mg 60 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#72",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glaupax",
+    "activeIngredient": "glaupax",
+    "name": "Glaupax XR Metformina 750mg 30 Comprimidos "
+   },
+   {
+    "cardId": "metformina#73",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glaupax",
+    "activeIngredient": "glaupax",
+    "name": "Glaupax XR (B) Metformina 1000mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#75",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glifortex",
+    "activeIngredient": "glifortex",
+    "name": "Glifortex XR (B) Metformina 750mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#76",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glafornil",
+    "activeIngredient": "glafornil",
+    "name": "Glafornil XR (R) Metformina 500mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#79",
+    "pharmacy": "salcobrand",
+    "laboratory": "Hipoglucin",
+    "activeIngredient": "hipoglucin",
+    "name": "Hipoglucin LP (B) Metformina 1000mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#86",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glifortex",
+    "activeIngredient": "glifortex",
+    "name": "Glifortex XR (B) Metformina 1000mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#102",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glafornil",
+    "activeIngredient": "glafornil",
+    "name": "Glafornil XR (R) Metformina 750mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#106",
+    "pharmacy": "salcobrand",
+    "laboratory": "Jovius",
+    "activeIngredient": "jovius",
+    "name": "Jovius Met (B) 1000/50 Metformina / Vildagliptina 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "metformina#108",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glafornil",
+    "activeIngredient": "glafornil",
+    "name": "Glafornil XR Metformina 850mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#112",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glafornil",
+    "activeIngredient": "glafornil",
+    "name": "Glafornil XR (R) Metformina 1000mg 30 Comprimidos Prolongados"
+   },
+   {
+    "cardId": "metformina#116",
+    "pharmacy": "salcobrand",
+    "laboratory": "Jovius",
+    "activeIngredient": "jovius",
+    "name": "Jovius Met (B) 850/50 Metformina / Vildagliptina 60 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "naproxeno#16",
+    "pharmacy": "salcobrand",
+    "laboratory": "Naproxeno",
+    "activeIngredient": "naproxeno",
+    "name": "Naproxeno (B) 550mg 10 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "naproxeno#18",
+    "pharmacy": "salcobrand",
+    "laboratory": "Eurogesic",
+    "activeIngredient": "eurogesic",
+    "name": "Eurogesic Adulto Naproxeno Sódico 10 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "naproxeno#27",
+    "pharmacy": "salcobrand",
+    "laboratory": "Triox",
+    "activeIngredient": "triox",
+    "name": "Triox N.F. Forte Naproxeno Sódico 550mg 10 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "naproxeno#34",
+    "pharmacy": "salcobrand",
+    "laboratory": "Eurogesic",
+    "activeIngredient": "eurogesic",
+    "name": "Eurogesic Infantil Naproxeno Sódico 60ml"
+   },
+   {
+    "cardId": "naproxeno#38",
+    "pharmacy": "salcobrand",
+    "laboratory": "Flectane",
+    "activeIngredient": "flectane",
+    "name": "Flectane Esomeprazol / Naproxeno 20/500 10 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "naproxeno#41",
+    "pharmacy": "salcobrand",
+    "laboratory": "Flectane",
+    "activeIngredient": "flectane",
+    "name": "Flectane Esomeprazol / Naproxeno 20/500 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "next#10",
+    "pharmacy": "salcobrand",
+    "laboratory": "Neutrogena",
+    "activeIngredient": "neutrogena",
+    "name": "Neutrogena Face Care Intensive Hidratante Mate 3 En 1"
+   },
+   {
+    "cardId": "next#12",
+    "pharmacy": "salcobrand",
+    "laboratory": "Neutrogena",
+    "activeIngredient": "neutrogena",
+    "name": "NEUTROGENA® Desmaquillante de Ojos Bifásico 162ml"
+   },
+   {
+    "cardId": "next#15",
+    "pharmacy": "salcobrand",
+    "laboratory": "Neutrogena",
+    "activeIngredient": "neutrogena",
+    "name": "Neutrogena Hydro Boost Crema Facial Refill 50g"
+   },
+   {
+    "cardId": "next#22",
+    "pharmacy": "salcobrand",
+    "laboratory": "Svr",
+    "activeIngredient": "svr",
+    "name": "Svr Desmaquillante Sensifine Dermo Nettoyant 400ml"
+   },
+   {
+    "cardId": "next#29",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nexium",
+    "activeIngredient": "nexium",
+    "name": "Nexium (R) 20mg 28 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "next#35",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nexium",
+    "activeIngredient": "nexium",
+    "name": "Nexium Esomeprazol 40mg 28 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "next#36",
+    "pharmacy": "salcobrand",
+    "laboratory": "Implanon",
+    "activeIngredient": "implanon",
+    "name": "Implanon Next Etonogestrel Implante 1 Aplicación"
+   },
+   {
+    "cardId": "nistatina#15",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nistatina",
+    "activeIngredient": "nistatina",
+    "name": "Nistatina 100.000UI Ungüento Dérmico 15g"
+   },
+   {
+    "cardId": "nistatina#16",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nistatina",
+    "activeIngredient": "nistatina",
+    "name": "Nistatina 100.000UI 12 Óvulos"
+   },
+   {
+    "cardId": "nistatina#23",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nistatina",
+    "activeIngredient": "nistatina",
+    "name": "Nistatina / Metronidazol 10 Óvulos"
+   },
+   {
+    "cardId": "nistatina#30",
+    "pharmacy": "salcobrand",
+    "laboratory": "Nistatina",
+    "activeIngredient": "nistatina",
+    "name": "Nistatina 100.000UI Oral Gotas 24ml"
+   },
+   {
+    "cardId": "omeprazol#8",
+    "pharmacy": "farmex",
+    "laboratory": "Omeprazol",
+    "activeIngredient": "omeprazol",
+    "name": "Omeprazol 20 mg x 30 cápsulas"
+   },
+   {
+    "cardId": "omeprazol#8",
+    "pharmacy": "easyfarma",
+    "laboratory": "Omeprazol",
+    "activeIngredient": "omeprazol",
+    "name": "Omeprazol 20 Mg x 30 Caps...."
+   },
+   {
+    "cardId": "omeprazol#8",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Omeprazol",
+    "activeIngredient": "omeprazol",
+    "name": "Omeprazol 20 mg 30 Cápsulas con Gránulos"
+   },
+   {
+    "cardId": "omeprazol#8",
+    "pharmacy": "salcobrand",
+    "laboratory": "Omeprazol",
+    "activeIngredient": "omeprazol",
+    "name": "Omeprazol (B) 20mg 30 Cápsulas"
+   },
+   {
+    "cardId": "omeprazol#15",
+    "pharmacy": "easyfarma",
+    "laboratory": "Omeprazol",
+    "activeIngredient": "omeprazol",
+    "name": "Omeprazol 20 mg. x 60 cap...."
+   },
+   {
+    "cardId": "omeprazol#15",
+    "pharmacy": "salcobrand",
+    "laboratory": "Omeprazol",
+    "activeIngredient": "omeprazol",
+    "name": "Omeprazol (B) 20mg 60 Cápsulas"
+   },
+   {
+    "cardId": "omeprazol#15",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Omeprazol",
+    "activeIngredient": "omeprazol",
+    "name": "Omeprazol 20 mg 60 Cápsulas con Gránulos"
+   },
+   {
+    "cardId": "omeprazol#18",
+    "pharmacy": "salcobrand",
+    "laboratory": "Lomex",
+    "activeIngredient": "lomex",
+    "name": "Lomex (B) Omeprazol 20mg 28 Capsulas Prolongadas"
+   },
+   {
+    "cardId": "paracetamol#8",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsín Limonada Noche (B) Paracetamol 5g"
+   },
+   {
+    "cardId": "paracetamol#9",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Limonada (B) Paracetamol Día 5g"
+   },
+   {
+    "cardId": "paracetamol#16",
+    "pharmacy": "salcobrand",
+    "laboratory": "Kitadol",
+    "activeIngredient": "kitadol",
+    "name": "Kitadol (B) Paracetamol 500mg 24 Comprimidos"
+   },
+   {
+    "cardId": "paracetamol#23",
+    "pharmacy": "salcobrand",
+    "laboratory": "Paracetamol",
+    "activeIngredient": "paracetamol",
+    "name": "Paracetamol (B) 16 Comprimidos"
+   },
+   {
+    "cardId": "paracetamol#51",
+    "pharmacy": "cruz-verde",
+    "laboratory": "Paracetamol",
+    "activeIngredient": "paracetamol",
+    "name": "Paracetamol 100 mg Gotas 15 mL"
+   },
+   {
+    "cardId": "paracetamol#51",
+    "pharmacy": "salcobrand",
+    "laboratory": "Paracetamol",
+    "activeIngredient": "paracetamol",
+    "name": "Paracetamol Gotas 15ml"
+   },
+   {
+    "cardId": "paracetamol#65",
+    "pharmacy": "salcobrand",
+    "laboratory": "Gesidol",
+    "activeIngredient": "gesidol",
+    "name": "Gesidol Infantil (B) Paracetamol Gotas 15ml"
+   },
+   {
+    "cardId": "paracetamol#74",
+    "pharmacy": "salcobrand",
+    "laboratory": "Panadol",
+    "activeIngredient": "panadol",
+    "name": "Panadol Niños Paracetamol Gotas 15ml"
+   },
+   {
+    "cardId": "paracetamol#76",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Infantil Gotas (B) Paracetamol 15ml"
+   },
+   {
+    "cardId": "paracetamol#83",
+    "pharmacy": "salcobrand",
+    "laboratory": "Xumadol",
+    "activeIngredient": "xumadol",
+    "name": "Xumadol Paracetamol 1g 20 Sobres Efervescentes"
+   },
+   {
+    "cardId": "paracetamol#87",
+    "pharmacy": "salcobrand",
+    "laboratory": "Kitadol",
+    "activeIngredient": "kitadol",
+    "name": "Kitadol (B) Paracetamol 1g 18 Comprimidos"
+   },
+   {
+    "cardId": "paracetamol#94",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin (B) Paracetamol 1g 20 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "paracetamol#96",
+    "pharmacy": "salcobrand",
+    "laboratory": "Xumadol",
+    "activeIngredient": "xumadol",
+    "name": "Xumadol (B) Paracetamol 1g 20 Comprimidos"
+   },
+   {
+    "cardId": "paracetamol#106",
+    "pharmacy": "salcobrand",
+    "laboratory": "Gesidol",
+    "activeIngredient": "gesidol",
+    "name": "Gesidol (B) Paracetamol 1g 20 Comprimidos"
+   },
+   {
+    "cardId": "paracetamol#119",
+    "pharmacy": "salcobrand",
+    "laboratory": "Panadol",
+    "activeIngredient": "panadol",
+    "name": "Panadol Niños Paracetamol Jarabe 90ml"
+   },
+   {
+    "cardId": "paracetamol#126",
+    "pharmacy": "salcobrand",
+    "laboratory": "Supracalm",
+    "activeIngredient": "supracalm",
+    "name": "Supracalm (B) Paracetamol 20 Comprimidos"
+   },
+   {
+    "cardId": "salbutamol#11",
+    "pharmacy": "salcobrand",
+    "laboratory": "Salbutamol",
+    "activeIngredient": "salbutamol",
+    "name": "Salbutamol 100mcg Inhalador 200 Dosis"
+   },
+   {
+    "cardId": "salbutamol#18",
+    "pharmacy": "salcobrand",
+    "laboratory": "Salbutamol",
+    "activeIngredient": "salbutamol",
+    "name": "Salbutamol 2mg/5ml Jarabe 120ml"
+   },
+   {
+    "cardId": "salbutamol#25",
+    "pharmacy": "salcobrand",
+    "laboratory": "Butotal",
+    "activeIngredient": "butotal",
+    "name": "Butotal Salbutamol 100mcg Inhalador 250 Dosis"
+   },
+   {
+    "cardId": "salbutamol#29",
+    "pharmacy": "salcobrand",
+    "laboratory": "Aerohaler",
+    "activeIngredient": "aerohaler",
+    "name": "Aerohaler Salbutamol 100mcg/dosis Aerosol para Inhalación 200 Dosis"
+   },
+   {
+    "cardId": "salbutamol#42",
+    "pharmacy": "salcobrand",
+    "laboratory": "Salbutamol",
+    "activeIngredient": "salbutamol",
+    "name": "Salbutamol 0.5% Nebulizador 20ml"
+   },
+   {
+    "cardId": "salbutamol#46",
+    "pharmacy": "salcobrand",
+    "laboratory": "Sinasmal",
+    "activeIngredient": "sinasmal",
+    "name": "Sinasmal SF Salbutamol 100mcg Inhalador 200 Dosis"
+   },
+   {
+    "cardId": "salbutamol#52",
+    "pharmacy": "salcobrand",
+    "laboratory": "Butocort",
+    "activeIngredient": "butocort",
+    "name": "Butocort HFA Salbutamol / Beclometasona Inhalación 250 Dosis"
+   },
+   {
+    "cardId": "salbutamol#58",
+    "pharmacy": "salcobrand",
+    "laboratory": "Salbutamol",
+    "activeIngredient": "salbutamol",
+    "name": "Salbutamol (B) 5mg/ml Solución Nebulizadora 20ml"
+   },
+   {
+    "cardId": "salbutamol#63",
+    "pharmacy": "salcobrand",
+    "laboratory": "Aerolin",
+    "activeIngredient": "aerolin",
+    "name": "Aerolin LF Salbutamol 100mcg Inhalación 200 Dosis"
+   },
+   {
+    "cardId": "salbutamol#68",
+    "pharmacy": "salcobrand",
+    "laboratory": "Herolan",
+    "activeIngredient": "herolan",
+    "name": "Herolan SF Salbutamol / Beclometasona Inhalación 200 Dosis"
+   },
+   {
+    "cardId": "supositorios#16",
+    "pharmacy": "salcobrand",
+    "laboratory": "Dipirona",
+    "activeIngredient": "dipirona",
+    "name": "Dipirona Metamizol Sódico 5 Supositorios"
+   },
+   {
+    "cardId": "supositorios#20",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diclofenaco",
+    "activeIngredient": "diclofenaco",
+    "name": "Diclofenaco Infantil 12.5mg 5 Supositorios"
+   },
+   {
+    "cardId": "supositorios#33",
+    "pharmacy": "salcobrand",
+    "laboratory": "Diclofenaco",
+    "activeIngredient": "diclofenaco",
+    "name": "Diclofenaco Adulto 50mg 5 Supositorios"
+   },
+   {
+    "cardId": "supositorios#34",
+    "pharmacy": "salcobrand",
+    "laboratory": "Paracetamol",
+    "activeIngredient": "paracetamol",
+    "name": "Paracetamol Infantil 6 Supositorios"
+   },
+   {
+    "cardId": "supositorios#52",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glicerina",
+    "activeIngredient": "glicerina",
+    "name": "Supositorio Glicerina Mediano 3g 10 Unidades"
+   },
+   {
+    "cardId": "supositorios#53",
+    "pharmacy": "salcobrand",
+    "laboratory": "Glicerina",
+    "activeIngredient": "glicerina",
+    "name": "Supositorio Glicerina Adulto 10 Unidades"
+   },
+   {
+    "cardId": "supositorios#60",
+    "pharmacy": "salcobrand",
+    "laboratory": "Xaluron",
+    "activeIngredient": "xaluron",
+    "name": "Xaluron Procto 10 Supositorios"
+   },
+   {
+    "cardId": "supositorios#63",
+    "pharmacy": "salcobrand",
+    "laboratory": "Sae",
+    "activeIngredient": "sae",
+    "name": "Sae Adulto Adifenina / Propifenazona 6 Supositorios"
+   },
+   {
+    "cardId": "supositorios#64",
+    "pharmacy": "salcobrand",
+    "laboratory": "Contralmor",
+    "activeIngredient": "contralmor",
+    "name": "Contralmor 6 Supositorios"
+   },
+   {
+    "cardId": "supositorios#68",
+    "pharmacy": "salcobrand",
+    "laboratory": "Vatanal",
+    "activeIngredient": "vatanal",
+    "name": "Vatanal Supositorios 10 Unidades"
+   },
+   {
+    "cardId": "supositorios#75",
+    "pharmacy": "salcobrand",
+    "laboratory": "Mecolzine",
+    "activeIngredient": "mecolzine",
+    "name": "Mecolzine Mesalazina 500mg 30 Supositorios"
+   },
+   {
+    "cardId": "supositorios#79",
+    "pharmacy": "salcobrand",
+    "laboratory": "Salofalk",
+    "activeIngredient": "salofalk",
+    "name": "Salofalk Mesalazina 500mg 30 Supositorios"
+   },
+   {
+    "cardId": "supositorios#82",
+    "pharmacy": "salcobrand",
+    "laboratory": "Pentasa",
+    "activeIngredient": "pentasa",
+    "name": "Pentasa Mesalazina 1g 28 Supositorios"
+   },
+   {
+    "cardId": "tapsin sobre#12",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Instaflu (B) Paracetamol Polvo Noche 1 Sobre"
+   },
+   {
+    "cardId": "tapsin sobre#17",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Instaflu (B) Paracetamol  Polvo Día 1 Sobre"
+   },
+   {
+    "cardId": "tapsin sobre#26",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin ",
+    "activeIngredient": "tapsin",
+    "name": "Tapsín Limonada (B) Paracetamol Día 6 Sobres"
+   },
+   {
+    "cardId": "tapsin sobre#30",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin SC Efervescente (B) Paracetamol 20 Sobres"
+   },
+   {
+    "cardId": "tapsin#23",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Limonada (B) Paracetamol Día 5g"
+   },
+   {
+    "cardId": "tapsin#24",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsín Limonada Noche (B) Paracetamol 5g"
+   },
+   {
+    "cardId": "tapsin#25",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Instaflu (B) Paracetamol Polvo Noche 1 Sobre"
+   },
+   {
+    "cardId": "tapsin#30",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Instaflu (B) Paracetamol  Polvo Día 1 Sobre"
+   },
+   {
+    "cardId": "tapsin#61",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsín Nocturno (B) Paracetamol 12 Comprimidos"
+   },
+   {
+    "cardId": "tapsin#64",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin (B) Paracetamol / Cafeína 12 Comprimidos"
+   },
+   {
+    "cardId": "tapsin#65",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Periodo 12 Comprimidos"
+   },
+   {
+    "cardId": "tapsin#73",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "tapsin#84",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Instaflu D/N (B) Paracetamol  6 Comprimidos"
+   },
+   {
+    "cardId": "tapsin#96",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsín DN Plus (B) Paracetamol 18 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "tapsin#103",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Infantil Gotas (B) Paracetamol 15ml"
+   },
+   {
+    "cardId": "tapsin#104",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin ",
+    "activeIngredient": "tapsin",
+    "name": "Tapsín Limonada (B) Paracetamol Día 6 Sobres"
+   },
+   {
+    "cardId": "tapsin#118",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin SC Efervescente (B) Paracetamol 20 Sobres"
+   },
+   {
+    "cardId": "tapsin#122",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Instaflu Compuesto Plus 12 Comprimidos"
+   },
+   {
+    "cardId": "tapsin#126",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin (B) Paracetamol 1g 20 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "tapsin#127",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Duo (B) Paracetamol / Ibuprofeno 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "tapsin#128",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsín M 30 Comprimidos Recubiertos"
+   },
+   {
+    "cardId": "tapsin#130",
+    "pharmacy": "salcobrand",
+    "laboratory": "Tapsin",
+    "activeIngredient": "tapsin",
+    "name": "Tapsin Infantil Paracetamol 120mg/5ml Jarabe 100ml"
+   },
+   {
+    "cardId": "vitamina d gotas#30",
+    "pharmacy": "salcobrand",
+    "laboratory": "VitaminLife",
+    "activeIngredient": "vitaminlife",
+    "name": "VitaminLife Biotin Plus 60 Gummies"
+   },
+   {
+    "cardId": "vitamina d gotas#36",
+    "pharmacy": "salcobrand",
+    "laboratory": "VitaminLife",
+    "activeIngredient": "vitaminlife",
+    "name": "VitaminLife Vitamina D3 800UI 90 Softgels"
+   },
+   {
+    "cardId": "vitamina d gotas#44",
+    "pharmacy": "salcobrand",
+    "laboratory": "SVR",
+    "activeIngredient": "svr",
+    "name": "SVR Sérum Antioxidante Ampoule Vitamina C 30ml"
+   },
+   {
+    "cardId": "vitamina d gotas#87",
+    "pharmacy": "salcobrand",
+    "laboratory": "VitaminLife",
+    "activeIngredient": "vitaminlife",
+    "name": "VitaminLife Vitamina C 1000mg 20 Tabletas Efervescentes"
+   },
+   {
+    "cardId": "vitamina d gotas#117",
+    "pharmacy": "salcobrand",
+    "laboratory": "Centrum",
+    "activeIngredient": "centrum",
+    "name": "Centrum Mujer Multivitamínico con Vitaminas y Minerales 30 Comprimidos"
+   },
+   {
+    "cardId": "vitamina d gotas#118",
+    "pharmacy": "salcobrand",
+    "laboratory": "VitaminLife",
+    "activeIngredient": "vitaminlife",
+    "name": "VitaminLife Citrato de Magnesio 800mg - 60 Cápsulas"
+   },
+   {
+    "cardId": "vitamina d gotas#119",
+    "pharmacy": "salcobrand",
+    "laboratory": "VitaminLife",
+    "activeIngredient": "vitaminlife",
+    "name": "VitaminLife Multivitamínico Students Daily One 60 Cápsulas"
+   },
+   {
+    "cardId": "vitamina d gotas#124",
+    "pharmacy": "salcobrand",
+    "laboratory": "VitaminLife",
+    "activeIngredient": "vitaminlife",
+    "name": "VitaminLife Vitamina B12 Masticable 90 Tabletas"
+   },
+   {
+    "cardId": "vitamina d gotas#129",
+    "pharmacy": "salcobrand",
+    "laboratory": "VitaminLife",
+    "activeIngredient": "vitaminlife",
+    "name": "VitaminLife Multivitamínico Women's Daily One 90 Cápsulas"
+   },
+   {
+    "cardId": "vitamina d gotas#130",
+    "pharmacy": "salcobrand",
+    "laboratory": "VitaminLife",
+    "activeIngredient": "vitaminlife",
+    "name": "VitaminLife Multivitamínico Men's Daily One 100 Tabletas"
+   }
+  ],
+  "unitCountMisread": [
+   {
+    "pharmacy": "cruz-verde",
+    "query": "diclofenaco",
+    "cardId": "diclofenaco#87",
+    "name": "Diclofenaco Sodico/Tramadol Clorhidrato 25-25 Comprimidos",
+    "matchKeyQty": 25,
+    "unitCountKey": 2525,
+    "presentationKey": "diclofenaco|25|bio:unknown|brand:unknown|combo:tramadol|form:solid-oral"
+   },
+   {
+    "pharmacy": "ecofarmacias",
+    "query": "glicerina",
+    "cardId": "glicerina#12",
+    "name": "Supositorio Glicerina 3.5g Adulto x 10unidades Valma DESCUENTO",
+    "matchKeyQty": 10,
+    "unitCountKey": 1,
+    "presentationKey": "glicerina|3500mg|10|bio:unknown|brand:unknown|form:suppository"
+   }
+  ]
+ }
+}

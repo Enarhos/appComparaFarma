@@ -1,0 +1,444 @@
+[
+ {
+  "query": "diclofenaco",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/diclofenaco-sodico-50-mg-x-10-comprimidos-26o63xhhny3xf",
+  "fetchedAt": "2026-08-31T01:36:14.631Z",
+  "httpStatus": 200,
+  "h1": "Diclofenaco sódico 50 mg x 10 comprimidos",
+  "jsonLdName": "Diclofenaco sódico 50 mg x 10 comprimidos",
+  "titleMatchesH1": true,
+  "detailOfferCount": 3,
+  "detailOffers": [
+   {
+    "seller": "EcoFarmacias",
+    "price": 290,
+    "slug": "ecofarmacias",
+    "matchKey": "diclofenaco|50mg|10"
+   },
+   {
+    "seller": "Farmex",
+    "price": 456,
+    "slug": "farmex",
+    "matchKey": "diclofenaco|50mg|10"
+   },
+   {
+    "seller": "Farmacias Ahumada",
+    "price": 1349,
+    "slug": "ahumada",
+    "matchKey": "diclofenaco|50mg|10"
+   }
+  ],
+  "detailMatchKeys": [
+   "diclofenaco|50mg|10"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "diclofenaco|50mg|10",
+  "apiCardPresentationKey": "diclofenaco|50mg|10|bio:unknown|brand:unknown|form:solid-oral",
+  "apiCardOffers": [
+   {
+    "pharmacy": "ecofarmacias",
+    "price": 290,
+    "name": "Diclofenaco Sódico 50 mg x 10 Comprimidos (Baden)"
+   },
+   {
+    "pharmacy": "farmex",
+    "price": 456,
+    "name": "Diclofenaco sódico 50 mg x 10 comprimidos"
+   },
+   {
+    "pharmacy": "ahumada",
+    "price": 1349,
+    "name": "Diclofenaco Sodico 50 mg x 10 Comprimidos con Recubrimiento Entérico ANDROMACO S.A."
+   }
+  ]
+ },
+ {
+  "query": "diclofenaco",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/diclofenaco-50-mg-x-10-3jqa27a0x1ofh",
+  "fetchedAt": "2026-08-31T01:36:25.383Z",
+  "httpStatus": 200,
+  "h1": "Diclofenaco 50 mg x 10...",
+  "jsonLdName": "Diclofenaco 50 mg x 10...",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "EasyFarma",
+    "price": 390,
+    "slug": "easyfarma",
+    "matchKey": "diclofenaco|50mg|10"
+   }
+  ],
+  "detailMatchKeys": [
+   "diclofenaco|50mg|10"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "diclofenaco|50mg|10",
+  "apiCardPresentationKey": "diclofenaco|50mg|10|bio:unknown|brand:unknown",
+  "apiCardOffers": [
+   {
+    "pharmacy": "easyfarma",
+    "price": 390,
+    "name": "Diclofenaco 50 mg x 10..."
+   }
+  ]
+ },
+ {
+  "query": "diclofenaco",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/diclofenaco-sodico-50-mg-x-10-comprimidos-andromaco-35ykcwx006i17",
+  "fetchedAt": "2026-08-31T01:36:26.579Z",
+  "httpStatus": 200,
+  "h1": "Diclofenaco sodico 50 mg x 10 comprimidos",
+  "jsonLdName": "Diclofenaco sodico 50 mg x 10 comprimidos",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "Farmex",
+    "price": 790,
+    "slug": "farmex",
+    "matchKey": "diclofenaco|50mg|10"
+   }
+  ],
+  "detailMatchKeys": [
+   "diclofenaco|50mg|10"
+  ],
+  "apiCardFound": false,
+  "apiCardMatchKey": null,
+  "apiCardPresentationKey": null,
+  "apiCardOffers": null
+ },
+ {
+  "query": "diclofenaco",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/diclofenaco-50-mg-10-comprimidos-con-recubrimiento-enterico-2vpq54n83amlm",
+  "fetchedAt": "2026-08-31T01:36:36.043Z",
+  "httpStatus": 200,
+  "h1": "Diclofenaco 50 mg 10 comprimidos con recubrimiento entérico",
+  "jsonLdName": "Diclofenaco 50 mg 10 comprimidos con recubrimiento entérico",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "Dr. Simi",
+    "price": 440,
+    "slug": "dr-simi",
+    "matchKey": "diclofenaco|50mg|10"
+   }
+  ],
+  "detailMatchKeys": [
+   "diclofenaco|50mg|10"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "diclofenaco|50mg|10",
+  "apiCardPresentationKey": "diclofenaco|50mg|10|bio:false|brand:andromaco|form:solid-oral",
+  "apiCardOffers": [
+   {
+    "pharmacy": "dr-simi",
+    "price": 440,
+    "name": "Diclofenaco 50 mg 10 comprimidos con recubrimiento entérico"
+   }
+  ]
+ },
+ {
+  "query": "tapsin",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/tapsin-limonada-noche-x5g-7kaozqfpqe42",
+  "fetchedAt": "2026-08-31T01:36:52.451Z",
+  "httpStatus": 200,
+  "h1": "Tapsin Limonada noche x5g",
+  "jsonLdName": "Tapsin Limonada noche x5g",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "AraucoMed",
+    "price": 450,
+    "slug": "araucomed",
+    "matchKey": "tapsin|5000mg|n|5"
+   }
+  ],
+  "detailMatchKeys": [
+   "tapsin|5000mg|n|5"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "tapsin|5000mg|n|5",
+  "apiCardPresentationKey": "tapsin|5000mg|n|5|bio:unknown|brand:maver|var:limonada",
+  "apiCardOffers": [
+   {
+    "pharmacy": "araucomed",
+    "price": 450,
+    "name": "Tapsin Limonada noche x5g"
+   }
+  ]
+ },
+ {
+  "query": "tapsin",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/tapsin-x-6-comprimidos-noche-maver-3a14ey6g56zgt",
+  "fetchedAt": "2026-08-31T01:37:00.231Z",
+  "httpStatus": 200,
+  "h1": null,
+  "jsonLdName": null,
+  "titleMatchesH1": null,
+  "detailOfferCount": 0,
+  "detailOffers": [],
+  "detailMatchKeys": [],
+  "apiCardFound": false,
+  "apiCardMatchKey": null,
+  "apiCardPresentationKey": null,
+  "apiCardOffers": null
+ },
+ {
+  "query": "tapsin",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/tapsin-x-6-comprimidos-maver-jfz5p0p85x6n",
+  "fetchedAt": "2026-08-31T01:37:06.463Z",
+  "httpStatus": 200,
+  "h1": null,
+  "jsonLdName": null,
+  "titleMatchesH1": null,
+  "detailOfferCount": 0,
+  "detailOffers": [],
+  "detailMatchKeys": [],
+  "apiCardFound": false,
+  "apiCardMatchKey": null,
+  "apiCardPresentationKey": null,
+  "apiCardOffers": null
+ },
+ {
+  "query": "tapsin",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/tapsin-forte-x-6-comprimidos-recubiertos-2tz36rk5hze2s",
+  "fetchedAt": "2026-08-31T01:37:13.655Z",
+  "httpStatus": 200,
+  "h1": null,
+  "jsonLdName": null,
+  "titleMatchesH1": null,
+  "detailOfferCount": 0,
+  "detailOffers": [],
+  "detailMatchKeys": [],
+  "apiCardFound": false,
+  "apiCardMatchKey": null,
+  "apiCardPresentationKey": null,
+  "apiCardOffers": null
+ },
+ {
+  "query": "ambroxol",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/tocalm-infantil-15mg-5ml-jarabe-100-ml-2i7n8kpu9ov4x",
+  "fetchedAt": "2026-08-31T01:37:28.493Z",
+  "httpStatus": 200,
+  "h1": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+  "jsonLdName": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+  "titleMatchesH1": true,
+  "detailOfferCount": 2,
+  "detailOffers": [
+   {
+    "seller": "AraucoMed",
+    "price": 790,
+    "slug": "araucomed",
+    "matchKey": "tocalm|100ml"
+   },
+   {
+    "seller": "Cruz Verde",
+    "price": 4290,
+    "slug": "cruz-verde",
+    "matchKey": "tocalm|100ml"
+   }
+  ],
+  "detailMatchKeys": [
+   "tocalm|100ml"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "tocalm|100ml",
+  "apiCardPresentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+  "apiCardOffers": [
+   {
+    "pharmacy": "araucomed",
+    "price": 790,
+    "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml."
+   },
+   {
+    "pharmacy": "cruz-verde",
+    "price": 4290,
+    "name": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL"
+   }
+  ]
+ },
+ {
+  "query": "ambroxol",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/ambroxol-30mg-5ml-jarabe-adulto-100-ml-ascend-3mqgnluijnzbx",
+  "fetchedAt": "2026-08-31T01:37:35.274Z",
+  "httpStatus": 200,
+  "h1": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)",
+  "jsonLdName": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "AraucoMed",
+    "price": 790,
+    "slug": "araucomed",
+    "matchKey": "ambroxol|100ml"
+   }
+  ],
+  "detailMatchKeys": [
+   "ambroxol|100ml"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "ambroxol|100ml",
+  "apiCardPresentationKey": "ambroxol|100ml|bio:unknown|brand:ascend|form:fluid-oral",
+  "apiCardOffers": [
+   {
+    "pharmacy": "araucomed",
+    "price": 790,
+    "name": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)"
+   }
+  ]
+ },
+ {
+  "query": "ambroxol",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/ambroxol-30mg-5ml-jarabe-adulto-100ml-andromaco-2hv956i1zu4np",
+  "fetchedAt": "2026-08-31T01:37:41.629Z",
+  "httpStatus": 200,
+  "h1": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)",
+  "jsonLdName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "AraucoMed",
+    "price": 800,
+    "slug": "araucomed",
+    "matchKey": "ambroxol|100ml"
+   }
+  ],
+  "detailMatchKeys": [
+   "ambroxol|100ml"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "ambroxol|100ml",
+  "apiCardPresentationKey": "ambroxol|100ml|bio:unknown|brand:andromaco|form:fluid-oral",
+  "apiCardOffers": [
+   {
+    "pharmacy": "araucomed",
+    "price": 800,
+    "name": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)"
+   }
+  ]
+ },
+ {
+  "query": "ambroxol",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/ambroxol-15mg-5ml-jarabe-100ml-eurofarma-2jl2o7cp50jkf",
+  "fetchedAt": "2026-08-31T01:37:47.902Z",
+  "httpStatus": 200,
+  "h1": "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)",
+  "jsonLdName": "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "AraucoMed",
+    "price": 900,
+    "slug": "araucomed",
+    "matchKey": "ambroxol|100ml"
+   }
+  ],
+  "detailMatchKeys": [
+   "ambroxol|100ml"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "ambroxol|100ml",
+  "apiCardPresentationKey": "ambroxol|100ml|bio:unknown|brand:eurofarma|form:fluid-oral",
+  "apiCardOffers": [
+   {
+    "pharmacy": "araucomed",
+    "price": 900,
+    "name": "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)"
+   }
+  ]
+ },
+ {
+  "query": "clotrimazol",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/clotrimazol-crema-topica-al-1-x-20-g-surfarma-23poitc26mv6o",
+  "fetchedAt": "2026-08-31T01:38:03.395Z",
+  "httpStatus": 200,
+  "h1": null,
+  "jsonLdName": null,
+  "titleMatchesH1": null,
+  "detailOfferCount": 0,
+  "detailOffers": [],
+  "detailMatchKeys": [],
+  "apiCardFound": false,
+  "apiCardMatchKey": null,
+  "apiCardPresentationKey": null,
+  "apiCardOffers": null
+ },
+ {
+  "query": "clotrimazol",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/clotrimazol-crema-topica-1-20g-ethon-cenabast-11k1hgfzyyees",
+  "fetchedAt": "2026-08-31T01:38:09.512Z",
+  "httpStatus": 200,
+  "h1": null,
+  "jsonLdName": null,
+  "titleMatchesH1": null,
+  "detailOfferCount": 0,
+  "detailOffers": [],
+  "detailMatchKeys": [],
+  "apiCardFound": false,
+  "apiCardMatchKey": null,
+  "apiCardPresentationKey": null,
+  "apiCardOffers": null
+ },
+ {
+  "query": "clotrimazol",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/ethonazol-clotrimazol-1-crema-20-gramos-1kbukjxz238ut",
+  "fetchedAt": "2026-08-31T01:38:15.929Z",
+  "httpStatus": 200,
+  "h1": "Ethonazol Clotrimazol 1% crema 20 gramos",
+  "jsonLdName": "Ethonazol Clotrimazol 1% crema 20 gramos",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "AraucoMed",
+    "price": 500,
+    "slug": "araucomed",
+    "matchKey": "ethonazol"
+   }
+  ],
+  "detailMatchKeys": [
+   "ethonazol"
+  ],
+  "apiCardFound": true,
+  "apiCardMatchKey": "ethonazol",
+  "apiCardPresentationKey": "ethonazol|bio:unknown|brand:unknown|var:clotrimazol|form:topical",
+  "apiCardOffers": [
+   {
+    "pharmacy": "araucomed",
+    "price": 500,
+    "name": "Ethonazol Clotrimazol 1% crema 20 gramos"
+   }
+  ]
+ },
+ {
+  "query": "clotrimazol",
+  "detailUrl": "https://www.preciosfarma.cl/medicamento/clotrimazol-crema-topica-1-x-20-g-3fi8p6b5z9fiw",
+  "fetchedAt": "2026-08-31T01:38:22.382Z",
+  "httpStatus": 200,
+  "h1": "Clotrimazol Crema Topica 1 % x 20 g.",
+  "jsonLdName": "Clotrimazol Crema Topica 1 % x 20 g.",
+  "titleMatchesH1": true,
+  "detailOfferCount": 1,
+  "detailOffers": [
+   {
+    "seller": "Farmex",
+    "price": 711,
+    "slug": "farmex",
+    "matchKey": "clotrimazol|20000mg|20"
+   }
+  ],
+  "detailMatchKeys": [
+   "clotrimazol|20000mg|20"
+  ],
+  "apiCardFound": false,
+  "apiCardMatchKey": null,
+  "apiCardPresentationKey": null,
+  "apiCardOffers": null
+ }
+]

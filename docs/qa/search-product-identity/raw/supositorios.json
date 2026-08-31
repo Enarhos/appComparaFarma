@@ -1,0 +1,3012 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "supositorios",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=supositorios",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:23:54.263Z",
+  "completedAt": "2026-08-31T01:24:03.184Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 89,
+  "results": [
+    {
+      "matchKey": "paracetamol|6",
+      "canonicalName": "Paracetamol Infantil x 6 supositorios LCh DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Paracetamol Infantil x 6 supositorios LCh DESCUENTO",
+          "channels": {
+            "store": 780,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 780
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=paracetamol%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fparacetamol-infantil-x-6-supositorios-lch-descuento%2F&cfmId=CFM-000017",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/199334-paracetamol-125-mg-6-supositorios.webp",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 780,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/199334-paracetamol-125-mg-6-supositorios.webp",
+      "presentationKey": "paracetamol|6|bio:unknown|brand:unknown|var:infantil|form:suppository",
+      "cfmId": "CFM-000017",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|12.5mg|5",
+      "canonicalName": "Diclofenaco Sódico 12,5 mg x 5 Supositorios",
+      "laboratory": "LAB. CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Diclofenaco Sódico 12,5 mg x 5 Supositorios",
+          "channels": {
+            "store": 790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=diclofenaco%7C12.5mg%7C5&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fdiclofenaco-inf-x-supositorios-diclofenaco-sodico%3F_pos%3D6%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-001984",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/diclofenaco-sodico-125-mg-x-5-supositorios-lab-chile-164136.jpg?v=1692989515",
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Diclofenaco Sódico supositorios 12,5 mg x 5 unidades. (Chile)",
+          "channels": {
+            "store": 900,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 900
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=diclofenaco%7C12.5mg%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fdiclofenaco-sodico-supositorios-125-mg-x5-chile&cfmId=CFM-001984",
+          "imageUrl": "https://farmacia.araucomed.com/958-home_default/diclofenaco-sodico-supositorios-125-mg-x5-chile.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 790,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/diclofenaco-sodico-125-mg-x-5-supositorios-lab-chile-164136.jpg?v=1692989515",
+      "presentationKey": "diclofenaco|12.5mg|5|bio:unknown|brand:chile|form:suppository",
+      "cfmId": "CFM-001984",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|5",
+      "canonicalName": "Diclofenaco 12.5 x 5 Supositorios (LCh)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Diclofenaco 12.5 x 5 Supositorios (LCh)",
+          "channels": {
+            "store": 840,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 840
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=diclofenaco%7C5&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdiclofenaco-12-5-supositorios%2F&cfmId=CFM-014909",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/07/diclofenaco-125.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 840,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/07/diclofenaco-125.jpg",
+      "presentationKey": "diclofenaco|5|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-014909",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|50mg|5",
+      "canonicalName": "Diclofenaco Sodico Adultos 50 mg x 5 supositorios",
+      "laboratory": "LAB. CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Diclofenaco Sodico Adultos 50 mg x 5 supositorios",
+          "channels": {
+            "store": 890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=diclofenaco%7C50mg%7C5&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fdiclofenaco-sodico-adultos-50-mg-x-5-supositorios%3F_pos%3D8%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-002819",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/diclofenaco-sodico-adultos-50-mg-x-5-supositorios-lab-chile-215226.jpg?v=1692989618",
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Diclofenaco Supositorios 50 mg x 5 supositorios. (Chile)",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=diclofenaco%7C50mg%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fdiclofenaco-supositorios-50-mg-x5-chile&cfmId=CFM-002819",
+          "imageUrl": "https://farmacia.araucomed.com/3456-home_default/diclofenaco-supositorios-50-mg-x5-chile.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 890,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/diclofenaco-sodico-adultos-50-mg-x-5-supositorios-lab-chile-215226.jpg?v=1692989618",
+      "presentationKey": "diclofenaco|50mg|5|bio:unknown|brand:chile|form:suppository",
+      "cfmId": "CFM-002819",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|12.5mg|5",
+      "canonicalName": "Diclofenaco Sódico supositorios 12,5 mg x5 (Pasteur)",
+      "laboratory": "Pasteur",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Diclofenaco Sódico supositorios 12,5 mg x5 (Pasteur)",
+          "channels": {
+            "store": 890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=diclofenaco%7C12.5mg%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fdiclofenaco-sodico-supositorios-125-mg-x5-pasteur&cfmId=CFM-001984",
+          "imageUrl": "https://farmacia.araucomed.com/3459-home_default/diclofenaco-sodico-supositorios-125-mg-x5-pasteur.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 890,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3459-home_default/diclofenaco-sodico-supositorios-125-mg-x5-pasteur.jpg",
+      "presentationKey": "diclofenaco|12.5mg|5|bio:unknown|brand:pasteur|form:suppository",
+      "cfmId": "CFM-001984",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "metamizol|250mg",
+      "canonicalName": "Metamizol 250 mg 5 supositorios",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Metamizol 250 mg 5 supositorios",
+          "channels": {
+            "store": 960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=metamizol%7C250mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fmetamizol-sodico-250-mg-5-supositorios%2Fp&cfmId=CFM-013625",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155954/CH0115-1.jpg?v=637964771780970000",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155954/CH0115-1.jpg?v=637964771780970000",
+      "presentationKey": "metamizol|250mg|bio:false|brand:pasteur|form:suppository",
+      "cfmId": "CFM-013625",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|50mg|5",
+      "canonicalName": "Diclofenaco 50 mg X 5 Supositorios (LCh)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Diclofenaco 50 mg X 5 Supositorios (LCh)",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=diclofenaco%7C50mg%7C5&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdiclofenaco-50mg-x-5-supositorios%2F&cfmId=CFM-002819",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/diclofenaco-50x5-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Diclofenaco 50 mg x 5 Supositorios Adulto PASTEUR",
+          "channels": {
+            "store": 2204,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2204
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=diclofenaco%7C50mg%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdiclofenaco-50-mg-x-5-supositorios-adulto-pasteur-86349.html&cfmId=CFM-002819",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw05e75074/images/products/86349/86349.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/diclofenaco-50x5-1.jpg",
+      "presentationKey": "diclofenaco|50mg|5|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-002819",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "paracetamol|125mg|6",
+      "canonicalName": "Paracetamol Infantil 125mg x 6 supositorios. (Chile)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Paracetamol Infantil 125mg x 6 supositorios. (Chile)",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=paracetamol%7C125mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fparacetamol-pediatrico-125mg-x6sup-chile&cfmId=CFM-000011",
+          "imageUrl": "https://farmacia.araucomed.com/960-home_default/paracetamol-pediatrico-125mg-x6sup-chile.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/960-home_default/paracetamol-pediatrico-125mg-x6sup-chile.jpg",
+      "presentationKey": "paracetamol|125mg|6|bio:unknown|brand:chile|var:infantil|form:suppository",
+      "cfmId": "CFM-000011",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "paracetamol|125mg|6",
+      "canonicalName": "Paracetamol Infantil 125mg x 6 supositorios. (SevenPharma)",
+      "laboratory": "Seven Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Paracetamol Infantil 125mg x 6 supositorios. (SevenPharma)",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=paracetamol%7C125mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fparacetamol-infantil-125mg-x-6-supositorios-sevenpharma&cfmId=CFM-000011",
+          "imageUrl": "https://farmacia.araucomed.com/13315-home_default/paracetamol-infantil-125mg-x-6-supositorios-sevenpharma.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13315-home_default/paracetamol-infantil-125mg-x-6-supositorios-sevenpharma.jpg",
+      "presentationKey": "paracetamol|125mg|6|bio:unknown|brand:sevenpharma|var:infantil|form:suppository",
+      "cfmId": "CFM-000011",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "metamizol|250mg|5",
+      "canonicalName": "Metamizol Sódico 250 mg x 5 supositorios",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Metamizol Sódico 250 mg x 5 supositorios",
+          "channels": {
+            "store": 1090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=metamizol%7C250mg%7C5&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmetamizol-sodico-250-mg-x-5-supositorios%3F_pos%3D7%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-013638",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metamizol-sodico-250-mg-x-5-supositorios-pasteur-363437.jpg?v=1692989610",
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Metamizol Supositorios 250 mg x 5 unidades. (Pasteur)",
+          "channels": {
+            "store": 1200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=metamizol%7C250mg%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fmetamizol-supositorios-250mg-x5-pasteur&cfmId=CFM-013638",
+          "imageUrl": "https://farmacia.araucomed.com/945-home_default/metamizol-supositorios-250mg-x5-pasteur.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 1090,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metamizol-sodico-250-mg-x-5-supositorios-pasteur-363437.jpg?v=1692989610",
+      "presentationKey": "metamizol|250mg|5|bio:unknown|brand:pasteur|form:suppository",
+      "cfmId": "CFM-013638",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|12.5mg",
+      "canonicalName": "Diclofenaco 12,5 mg 5 supositorios infantiles",
+      "laboratory": "TEVA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Diclofenaco 12,5 mg 5 supositorios infantiles",
+          "channels": {
+            "store": 1120,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1120
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=diclofenaco%7C12.5mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fdiclofenaco-sodico-12-5-mg-5-supositorios-infantil%2Fp&cfmId=CFM-001545",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159792/CH0039-1---LAB-CHILE.jpg?v=638991770765630000",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 1120,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159792/CH0039-1---LAB-CHILE.jpg?v=638991770765630000",
+      "presentationKey": "diclofenaco|12.5mg|bio:false|brand:teva|form:suppository",
+      "cfmId": "CFM-001545",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "tietilperazina|6.5mg",
+      "canonicalName": "Tietilperazina 6.5 mg supositorios",
+      "laboratory": "DR. SIMI",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Tietilperazina 6.5 mg supositorios",
+          "channels": {
+            "store": 1290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tietilperazina%7C6.5mg&url=https%3A%2F%2Fwww.drsimi.cl%2Ftietilperazina-6-5-mg-6-supositorios%2Fp&cfmId=CFM-014911",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157103/CH7164ND.jpg?v=638012015260600000",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 1290,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157103/CH7164ND.jpg?v=638012015260600000",
+      "presentationKey": "tietilperazina|6.5mg|bio:false|brand:drsimi|form:suppository",
+      "cfmId": "CFM-014911",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|50mg",
+      "canonicalName": "Diclofenaco 50 mg 5 supositorios",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Diclofenaco 50 mg 5 supositorios",
+          "channels": {
+            "store": 1400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=diclofenaco%7C50mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fdiclofenaco-sodico-50-mg-5-supositorios-adulto%2Fp&cfmId=CFM-001985",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155928/CH0041-1.jpg?v=637964771686630000",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 1400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155928/CH0041-1.jpg?v=637964771686630000",
+      "presentationKey": "diclofenaco|50mg|bio:false|brand:pasteur|form:suppository",
+      "cfmId": "CFM-001985",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "paracetamol|125mg",
+      "canonicalName": "Paracetamol 125 mg 6 supositorios infantiles",
+      "laboratory": "TEVA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Paracetamol 125 mg 6 supositorios infantiles",
+          "channels": {
+            "store": 1400,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1400
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=paracetamol%7C125mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fparacetamol-125-mg-6-supositorios-infantil%2Fp&cfmId=CFM-000023",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155980/CH0225-1.jpg?v=637964771872000000",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 1400,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155980/CH0225-1.jpg?v=637964771872000000",
+      "presentationKey": "paracetamol|125mg|bio:false|brand:teva|form:suppository",
+      "cfmId": "CFM-000023",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|50mg|5",
+      "canonicalName": "Diclofenaco Supositorios 50 mg x 5 unidades. (Pasteur)",
+      "laboratory": "Pasteur",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Diclofenaco Supositorios 50 mg x 5 unidades. (Pasteur)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=diclofenaco%7C50mg%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fdiclofenaco-supositorios-50-mg-x5-pasteur&cfmId=CFM-002819",
+          "imageUrl": "https://farmacia.araucomed.com/6383-home_default/diclofenaco-supositorios-50-mg-x5-pasteur.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/6383-home_default/diclofenaco-supositorios-50-mg-x5-pasteur.jpg",
+      "presentationKey": "diclofenaco|50mg|5|bio:unknown|brand:pasteur|form:suppository",
+      "cfmId": "CFM-002819",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dipirona|250mg|5",
+      "canonicalName": "Dipirona 250 mg x 5 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Dipirona 250 mg x 5 Supositorios",
+          "channels": {
+            "store": 1520,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1520
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=dipirona%7C250mg%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdipirona-250-mg-x-5-supositorios-586.html&cfmId=CFM-010445",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw56310c40/images/products/586/586.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Dipirona 250Mg X 5 Supositorios (Lab Pasteur)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=dipirona%7C250mg%7C5&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdipirona-250mg-x-5-supositorios%2F&cfmId=CFM-010445",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/08/dipirona-5-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 1520,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw56310c40/images/products/586/586.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "dipirona|250mg|5|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-010445",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dipirona",
+      "canonicalName": "Dipirona Metamizol Sódico 5 Supositorios",
+      "laboratory": "Dipirona",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Dipirona Metamizol Sódico 5 Supositorios",
+          "channels": {
+            "store": 1799,
+            "online": 1583,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1583
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=dipirona&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdipirona-metamizol-sodico-5-supositorios%3Fdefault_sku%3D2503190&cfmId=CFM-013639",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/52019/small/2503190-min.jpg?1641329641",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 1583,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/52019/small/2503190-min.jpg?1641329641",
+      "presentationKey": "dipirona|bio:unknown|brand:dipirona|var:metamizol|form:suppository",
+      "cfmId": "CFM-013639",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "metamizol|250mg",
+      "canonicalName": "Metamizol 250 mg 5 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Metamizol 250 mg 5 Supositorios",
+          "channels": {
+            "store": 1680,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1680
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=metamizol%7C250mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmetamizol-250-mg-5-supositorios%2F199232.html&cfmId=CFM-013625",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw57981c66/images/large/199232-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.373Z"
+        }
+      ],
+      "bestPrice": 1680,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw57981c66/images/large/199232-1.jpg",
+      "presentationKey": "metamizol|250mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013625",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|12.5mg|5",
+      "canonicalName": "Diclofenaco 12.5 mg x 5 Supositorios Infantil PASTEUR",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Diclofenaco 12.5 mg x 5 Supositorios Infantil PASTEUR",
+          "channels": {
+            "store": 1763,
+            "online": null,
+            "cmr": 1724,
+            "sbpay": null,
+            "effective": 1724
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=diclofenaco%7C12.5mg%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdiclofenaco-12.5-mg-x-5-supositorios-infantil-pasteur-86348.html&cfmId=CFM-001984",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwccdc77cb/images/products/86348/86348.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 1724,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwccdc77cb/images/products/86348/86348.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "diclofenaco|12.5mg|5|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-001984",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "paracetamol|125mg|6",
+      "canonicalName": "Paracetamol Infantil 125 mg x 6 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Paracetamol Infantil 125 mg x 6 Supositorios",
+          "channels": {
+            "store": 1835,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1835
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=paracetamol%7C125mg%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fparacetamol-infantil-125-mg-x-6-supositorios-2796.html&cfmId=CFM-000011",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw12311ed8/images/products/2796/2796.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 1835,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw12311ed8/images/products/2796/2796.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "paracetamol|125mg|6|bio:unknown|brand:unknown|var:infantil|form:suppository",
+      "cfmId": "CFM-000011",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|12.5mg",
+      "canonicalName": "Diclofenaco Infantil 12.5mg 5 Supositorios",
+      "laboratory": "Diclofenaco",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Diclofenaco Infantil 12.5mg 5 Supositorios",
+          "channels": {
+            "store": 2199,
+            "online": 1935,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1935
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=diclofenaco%7C12.5mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdiclofenaco-infantil-12-5mg-5-supositorios%3Fdefault_sku%3D437142&cfmId=CFM-001545",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28717/small/437142.jpg?1641477866",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 1935,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28717/small/437142.jpg?1641477866",
+      "presentationKey": "diclofenaco|12.5mg|bio:unknown|brand:diclofenaco|var:infantil|form:suppository",
+      "cfmId": "CFM-001545",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|12.5mg",
+      "canonicalName": "Diclofenaco Diclofenaco Sodico 12,5 mg 5 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Diclofenaco Diclofenaco Sodico 12,5 mg 5 Supositorios",
+          "channels": {
+            "store": 1960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=diclofenaco%7C12.5mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fdiclofenaco-diclofenaco-sodico-12-5-mg-5-supositorios%2F199191.html&cfmId=CFM-001545",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbfd0a924/images/large/199191-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 1960,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbfd0a924/images/large/199191-1.jpg",
+      "presentationKey": "diclofenaco|12.5mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-001545",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|10",
+      "canonicalName": "Glicerina Supositorio adulto 3,5 gramos. x 10 unidades.",
+      "laboratory": "Valma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Glicerina Supositorio adulto 3,5 gramos. x 10 unidades.",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=glicerina%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Flaxantes%2Fglicerina-supositorio-adulto-35g-x10sup&cfmId=CFM-012138",
+          "imageUrl": "https://farmacia.araucomed.com/5786-home_default/glicerina-supositorio-adulto-35g-x10sup.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5786-home_default/glicerina-supositorio-adulto-35g-x10sup.jpg",
+      "presentationKey": "glicerina|10|bio:unknown|brand:valma|form:suppository",
+      "cfmId": "CFM-012138",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "glicerina|20",
+      "canonicalName": "Glicerina Supositorio infantil (1/4) 1 gramo  x 20 unidades.",
+      "laboratory": "Valma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Glicerina Supositorio infantil (1/4) 1 gramo  x 20 unidades.",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=glicerina%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Flaxantes%2Fglicerina-supositorio-infantil-1-4-1-gramo-x-20-unidades&cfmId=CFM-012139",
+          "imageUrl": "https://farmacia.araucomed.com/14164-home_default/glicerina-supositorio-infantil-1-4-1-gramo-x-20-unidades.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14164-home_default/glicerina-supositorio-infantil-1-4-1-gramo-x-20-unidades.jpg",
+      "presentationKey": "glicerina|20|bio:unknown|brand:valma|var:infantil|form:suppository",
+      "cfmId": "CFM-012139",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "paracetamol|125mg",
+      "canonicalName": "Paracetamol 125 mg 6 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Paracetamol 125 mg 6 Supositorios",
+          "channels": {
+            "store": 2040,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2040
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=paracetamol%7C125mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fparacetamol-125-mg-6-supositorios%2F199334.html&cfmId=CFM-000023",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1666dee2/images/large/199334-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 2040,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1666dee2/images/large/199334-1.jpg",
+      "presentationKey": "paracetamol|125mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-000023",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|50mg",
+      "canonicalName": "Diclofenaco Sódico Adulto 50 mg 5 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Diclofenaco Sódico Adulto 50 mg 5 Supositorios",
+          "channels": {
+            "store": 2390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=diclofenaco%7C50mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fdiclofenaco-sodico-adulto-50-mg-5-supositorios%2F199190.html&cfmId=CFM-001985",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw48151d0a/images/large/199190-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 2390,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw48151d0a/images/large/199190-1.jpg",
+      "presentationKey": "diclofenaco|50mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-001985",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|3000mg|10",
+      "canonicalName": "Supositorio Glicerina Adulto 3 g x 10 supositorios",
+      "laboratory": "VALMA",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Supositorio Glicerina Adulto 3 g x 10 supositorios",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=glicerina%7C3000mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsupositorio-glicerina-adulto-x-10%3F_pos%3D2%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-010751",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorio-glicerina-adulto-3-g-x-10-supositorios-valma-604372.jpg?v=1692989428",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorio-glicerina-adulto-3-g-x-10-supositorios-valma-604372.jpg?v=1692989428",
+      "presentationKey": "glicerina|3000mg|10|bio:unknown|brand:valma|form:suppository",
+      "cfmId": "CFM-010751",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios",
+      "canonicalName": "Supositorios Infantiles de...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Supositorios Infantiles de...",
+          "channels": {
+            "store": 2790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=supositorios&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26774-supositorios-infantiles-de-glicerina-2.html&cfmId=CFM-012140",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 2790,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "supositorios|bio:unknown|brand:unknown|var:infantiles|form:suppository",
+      "cfmId": "CFM-012140",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sae|6",
+      "canonicalName": "SAE Adulto x 6 supositorios. (Cenabast)",
+      "laboratory": "Pasteur",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "SAE Adulto x 6 supositorios. (Cenabast)",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=sae%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantiespasmodicos%2Fsae-adulto-x6sup-cenabast&cfmId=CFM-013636",
+          "imageUrl": "https://farmacia.araucomed.com/7293-home_default/sae-adulto-x6sup-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7293-home_default/sae-adulto-x6sup-cenabast.jpg",
+      "presentationKey": "sae|6|bio:unknown|brand:pasteur|form:suppository",
+      "cfmId": "CFM-013636",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios|1000mg|20",
+      "canonicalName": "Supositorios de Glicerina Infantil 1 g x 20 supositorios",
+      "laboratory": "VALMA",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Supositorios de Glicerina Infantil 1 g x 20 supositorios",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=supositorios%7C1000mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsupositorio-glicerina-infantil-1-g-x-20%3F_pos%3D1%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-012136",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorio-glicerina-infantil-1-g-x-20-valma-633381.jpg?v=1692989504",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorio-glicerina-infantil-1-g-x-20-valma-633381.jpg?v=1692989504",
+      "presentationKey": "supositorios|1000mg|20|bio:unknown|brand:valma|var:glicerina|form:suppository",
+      "cfmId": "CFM-012136",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios|3500mg|10",
+      "canonicalName": "Supositorios de Glicerina 3,5 g Adulto x 10 unidades",
+      "laboratory": "VALMA",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Supositorios de Glicerina 3,5 g Adulto x 10 unidades",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=supositorios%7C3500mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsupositorios-de-glicerina-3-5-g-adulto-x-10-unid-valma%3F_pos%3D5%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-010746",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorios-de-glicerina-35-g-adulto-x-10-unid-valma-valma-290849.jpg?v=1692989452",
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorios-de-glicerina-35-g-adulto-x-10-unid-valma-valma-290849.jpg?v=1692989452",
+      "presentationKey": "supositorios|3500mg|10|bio:unknown|brand:valma|var:glicerina|form:suppository",
+      "cfmId": "CFM-010746",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios",
+      "canonicalName": "Supositorios Adulto de...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Supositorios Adulto de...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=supositorios&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26781-supositorios-infantiles-de-glicerina.html&cfmId=CFM-012140",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "supositorios|bio:unknown|brand:glicerina|form:suppository",
+      "cfmId": "CFM-012140",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|12.5mg",
+      "canonicalName": "Diclofenaco Sódico Infantil 12.5mg 5 Supositorios",
+      "laboratory": "Diclofenaco Sódico",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Diclofenaco Sódico Infantil 12.5mg 5 Supositorios",
+          "channels": {
+            "store": 3099,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3099
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=diclofenaco%7C12.5mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdiclofenaco-sodico-infantil-12-5mg-5-supositorios%3Fdefault_sku%3D587347&cfmId=CFM-001545",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/120011/small/587347.jpg?1725036621",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 3099,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/120011/small/587347.jpg?1725036621",
+      "presentationKey": "diclofenaco|12.5mg|bio:unknown|brand:diclofenacosodico|var:infantil|form:suppository",
+      "cfmId": "CFM-001545",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco|50mg",
+      "canonicalName": "Diclofenaco Adulto 50mg 5 Supositorios",
+      "laboratory": "Diclofenaco",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Diclofenaco Adulto 50mg 5 Supositorios",
+          "channels": {
+            "store": 3799,
+            "online": 3343,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3343
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=diclofenaco%7C50mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdiclofenaco-sodico-50mg-supositorio%3Fdefault_sku%3D431421&cfmId=CFM-001985",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27581/small/431421.jpg?1641479727",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 3343,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27581/small/431421.jpg?1641479727",
+      "presentationKey": "diclofenaco|50mg|bio:unknown|brand:diclofenaco|form:suppository",
+      "cfmId": "CFM-001985",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "paracetamol",
+      "canonicalName": "Paracetamol Infantil 6 Supositorios",
+      "laboratory": "Paracetamol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Paracetamol Infantil 6 Supositorios",
+          "channels": {
+            "store": 4099,
+            "online": 3607,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3607
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=paracetamol&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fparacetamol-infantil-6-supositorios%3Fdefault_sku%3D431426&cfmId=CFM-000591",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28686/small/431426.jpg?1641477871",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 3607,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28686/small/431426.jpg?1641477871",
+      "presentationKey": "paracetamol|bio:unknown|brand:unknown|var:infantil|form:suppository",
+      "cfmId": "CFM-000591",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|1000mg",
+      "canonicalName": "Glicerina 1 g 20 supositorios",
+      "laboratory": "VALMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Glicerina 1 g 20 supositorios",
+          "channels": {
+            "store": 3720,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3720
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=glicerina%7C1000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fglicerina-1-gr-supositorios-infantil%2Fp&cfmId=CFM-013215",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156072/CH5165-1.jpg?v=637964772202270000",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 3720,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156072/CH5165-1.jpg?v=637964772202270000",
+      "presentationKey": "glicerina|1000mg|bio:false|brand:valma|form:suppository",
+      "cfmId": "CFM-013215",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios|3000mg|10",
+      "canonicalName": "Supositorios De Glicerina 3 g x 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Supositorios De Glicerina 3 g x 10 Supositorios",
+          "channels": {
+            "store": 4130,
+            "online": null,
+            "cmr": 3749,
+            "sbpay": null,
+            "effective": 3749
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=supositorios%7C3000mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsupositorios-de-glicerina-3-g-x-10-supositorios-3156.html&cfmId=CFM-012137",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0d1b6e6a/images/products/3156/3156.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 3749,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0d1b6e6a/images/products/3156/3156.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "supositorios|3000mg|10|bio:unknown|brand:unknown|var:glicerina|form:suppository",
+      "cfmId": "CFM-012137",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sae|6",
+      "canonicalName": "SAE x 6 Supositorios Adulto PASTEUR",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "SAE x 6 supositorios adulto (Lab Pasteur) (Cenabast)",
+          "channels": {
+            "store": 3950,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3950
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=sae%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsae-x-6-supositorios%2F&cfmId=CFM-013636",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/05/sae-propifenazona-6-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "SAE x 6 Supositorios Adulto PASTEUR",
+          "channels": {
+            "store": 16634,
+            "online": null,
+            "cmr": 14677,
+            "sbpay": null,
+            "effective": 14677
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=sae%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsae-x-6-supositorios-adulto-pasteur-2401.html&cfmId=CFM-013636",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfb13091f/images/products/2401/2401.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 3950,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfb13091f/images/products/2401/2401.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "sae|6|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013636",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "metamizol|500mg|5",
+      "canonicalName": "Metamizol Sódico (Dipirona) 500mg x 5 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Metamizol Sódico (Dipirona) 500mg x 5 Supositorios",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=metamizol%7C500mg%7C5&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmetamizol-sodico-dipirona-500mg-x-5-supositorios%2F&cfmId=CFM-013640",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/08/NRG_380715_SKU_7800068013409.jpeg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/08/NRG_380715_SKU_7800068013409.jpeg",
+      "presentationKey": "metamizol|500mg|5|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013640",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios|1000mg|20",
+      "canonicalName": "Supositorios De Glicerina 1 g x 20 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Supositorios De Glicerina 1 g x 20 Supositorios",
+          "channels": {
+            "store": 5390,
+            "online": null,
+            "cmr": 4499,
+            "sbpay": null,
+            "effective": 4499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=supositorios%7C1000mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsupositorios-de-glicerina-1-g-x-20-supositorios-3143.html&cfmId=CFM-012136",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw54592e99/images/products/3143/3143.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 4499,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw54592e99/images/products/3143/3143.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "supositorios|1000mg|20|bio:unknown|brand:unknown|var:glicerina|form:suppository",
+      "cfmId": "CFM-012136",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "eurogesic|50mg|6",
+      "canonicalName": "Eurogesic Infantil 50 mg x 6 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Eurogesic Infantil 50 mg x 6 Supositorios",
+          "channels": {
+            "store": 4570,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4570
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=eurogesic%7C50mg%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Feurogesic-infantil-50-mg-x-6-supositorios-19200.html&cfmId=CFM-003943",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbb391a3a/images/products/19200/19200.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 4570,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbb391a3a/images/products/19200/19200.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "eurogesic|50mg|6|bio:unknown|brand:unknown|var:infantil|form:suppository",
+      "cfmId": "CFM-003943",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina",
+      "canonicalName": "Glicerina 3 gr 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Glicerina 3 gr 10 Supositorios",
+          "channels": {
+            "store": 5190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glicerina&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglicerina-3-gr-10-supositorios%2F199278.html&cfmId=CFM-007216",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3c8afc1/images/large/199278-glicerina-adulto-glicerina-182-gr-10-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.373Z"
+        }
+      ],
+      "bestPrice": 5190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3c8afc1/images/large/199278-glicerina-adulto-glicerina-182-gr-10-supositorios.jpg",
+      "presentationKey": "glicerina|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-007216",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "eurogesic",
+      "canonicalName": "Eurogesic Infantil Naproxeno Sódico 6 Supositorios",
+      "laboratory": "Eurogesic Pediatrico",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Eurogesic Infantil Naproxeno Sódico 6 Supositorios",
+          "channels": {
+            "store": 6299,
+            "online": 5543,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5543
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=eurogesic&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Feurogesic-pediatrico-50mg%3Fdefault_sku%3D2970428&cfmId=CFM-007021",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/22280/small/2970428.jpg?1641479989",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 5543,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/22280/small/2970428.jpg?1641479989",
+      "presentationKey": "eurogesic|bio:unknown|brand:eurogesicpediatrico|var:infantil|form:suppository",
+      "cfmId": "CFM-007021",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "letyn|10",
+      "canonicalName": "Letyn CD x 10 Supositorios \"Ley Cenabast\"",
+      "laboratory": "ETHON",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Letyn CD x 10 Supositorios \"Ley Cenabast\"",
+          "channels": {
+            "store": 6290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=letyn%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fletyn-cd-x-10-supositorios-ley-cenabast%3F_pos%3D4%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-014912",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/letyn-cd-x-10-supositorios-ley-cenabast-ethon-669116.jpg?v=1719881816",
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 6290,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/letyn-cd-x-10-supositorios-ley-cenabast-ethon-669116.jpg?v=1719881816",
+      "presentationKey": "letyn|10|bio:unknown|brand:ethon|var:cd|form:suppository",
+      "cfmId": "CFM-014912",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "letyn|500mg|10",
+      "canonicalName": "Letyn CD 500 mg x 10 Supositorios (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Letyn CD 500 mg x 10 Supositorios (Cenabast)",
+          "channels": {
+            "store": 6300,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6300
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=letyn%7C500mg%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fletyn-cd-500-mg-x-10-supositorios-cenabast%2F&cfmId=CFM-013648",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/12/letyn-cd-mesalazina-500-mg.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        },
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Letyn CD Supositorios 500 mg x 10 unidades (Cenabast).",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=letyn%7C500mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcolon%2Fletyn-cd-supositorios-500-mg-x-10-unidades&cfmId=CFM-013648",
+          "imageUrl": "https://farmacia.araucomed.com/11813-home_default/letyn-cd-supositorios-500-mg-x-10-unidades.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 6300,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/12/letyn-cd-mesalazina-500-mg.jpg",
+      "presentationKey": "letyn|500mg|10|bio:unknown|brand:unknown|var:cd|form:suppository",
+      "cfmId": "CFM-013648",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "eurogesic|50mg",
+      "canonicalName": "Eurogesic Pediatrico Naproxeno 50 mg 6 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Eurogesic Pediatrico Naproxeno 50 mg 6 Supositorios",
+          "channels": {
+            "store": 6340,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6340
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=eurogesic%7C50mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Feurogesic-pediatrico-naproxeno-50-mg-6-supositorios%2F6280.html&cfmId=CFM-001702",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw06dbd4ec/images/large/6280-eurogesic-pediatrico-naproxeno-50-mg-6-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 6340,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw06dbd4ec/images/large/6280-eurogesic-pediatrico-naproxeno-50-mg-6-supositorios.jpg",
+      "presentationKey": "eurogesic|50mg|bio:unknown|brand:unknown|var:infantil|form:suppository",
+      "cfmId": "CFM-001702",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hamamelis|10",
+      "canonicalName": "Hamamelis x 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Hamamelis x 10 Supositorios",
+          "channels": {
+            "store": 6490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=hamamelis%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25756-hamamelis-supositorios-x-10.html&cfmId=CFM-011734",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Hamamelis Supositorios x 10",
+          "channels": {
+            "store": 7260,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7260
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=hamamelis%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhamamelis-supositorios-x-10%2F&cfmId=CFM-011734",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/12/7803504004900.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 6490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/12/7803504004900.jpg",
+      "presentationKey": "hamamelis|10|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-011734",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|20",
+      "canonicalName": "Supositorio Glicerina Pediátrico 20 Unidades",
+      "laboratory": "Supositorio Glicerina Pediatrico",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Supositorio Glicerina Pediátrico 20 Unidades",
+          "channels": {
+            "store": 7799,
+            "online": 6863,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6863
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glicerina%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsupositorio-glicerina-pediatrico-20-unidades%3Fdefault_sku%3D3350004&cfmId=CFM-012139",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28603/small/3350004.jpg?1641477882",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 6863,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28603/small/3350004.jpg?1641477882",
+      "presentationKey": "glicerina|20|bio:unknown|brand:unknown|var:infantil|form:suppository",
+      "cfmId": "CFM-012139",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hamamelis",
+      "canonicalName": "Hamamelis 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Hamamelis 10 Supositorios",
+          "channels": {
+            "store": 7349,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7349
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hamamelis&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhamamelis-10-supositorios-96277.html&cfmId=CFM-009705",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw85b3f5fc/images/products/96277/96277.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 7349,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw85b3f5fc/images/products/96277/96277.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "hamamelis|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-009705",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sae|440mg",
+      "canonicalName": "SAE propifenazona 440 mg adifenina 50 mg 6 supositorios",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "SAE propifenazona 440 mg adifenina 50 mg 6 supositorios",
+          "channels": {
+            "store": 7600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7600
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=sae%7C440mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fsae-adultos-6-supositorios%2Fp&cfmId=CFM-013635",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156118/CH5256-1.jpg?v=637964772374530000",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 7600,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156118/CH5256-1.jpg?v=637964772374530000",
+      "presentationKey": "sae|440mg|bio:false|brand:pasteur|var:propifenazona|form:suppository",
+      "cfmId": "CFM-013635",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios",
+      "canonicalName": "Supositorios de Glicerina 3",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Supositorios de Glicerina 3",
+          "channels": {
+            "store": 8710,
+            "online": null,
+            "cmr": 7612,
+            "sbpay": null,
+            "effective": 7612
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=supositorios&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsupositorios-de-glicerina-3-3195.html&cfmId=CFM-012140",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9dab552d/images/products/3195/3195.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 7612,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9dab552d/images/products/3195/3195.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "supositorios|bio:unknown|brand:unknown|var:glicerina|form:suppository",
+      "cfmId": "CFM-012140",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sae",
+      "canonicalName": "SAE Adulto 6 supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "SAE Adulto 6 supositorios",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=sae&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F64862-sae-adulto-6-supositorios.html&cfmId=CFM-013637",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "sae|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013637",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|3000mg|10",
+      "canonicalName": "Supositorio Glicerina Mediano 3g 10 Unidades",
+      "laboratory": "Glicerina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Supositorio Glicerina Mediano 3g 10 Unidades",
+          "channels": {
+            "store": 9199,
+            "online": 8095,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8095
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glicerina%7C3000mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsupositorio-glicerina-mediano-3g-10-unidades%3Fdefault_sku%3D3350000&cfmId=CFM-010751",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/114312/small/3350000.jpg?1718289354",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 8095,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/114312/small/3350000.jpg?1718289354",
+      "presentationKey": "glicerina|3000mg|10|bio:unknown|brand:glicerina|var:mediano|form:suppository",
+      "cfmId": "CFM-010751",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "glicerina|10",
+      "canonicalName": "Supositorio Glicerina Adulto 10 Unidades",
+      "laboratory": "Glicerina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Supositorio Glicerina Adulto 10 Unidades",
+          "channels": {
+            "store": 9899,
+            "online": 8711,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8711
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glicerina%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsupositorio-glicerina-adulto-10-unidades%3Fdefault_sku%3D3350072&cfmId=CFM-012138",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28604/small/3350072.jpg?1641477882",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 8711,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28604/small/3350072.jpg?1641477882",
+      "presentationKey": "glicerina|10|bio:unknown|brand:glicerina|form:suppository",
+      "cfmId": "CFM-012138",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "knop",
+      "canonicalName": "Knop Hamamelis 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Knop Hamamelis 10 Supositorios",
+          "channels": {
+            "store": 9490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=knop&url=https%3A%2F%2Fwww.cruzverde.cl%2Fknop-hamamelis-10-supositorios%2F158016.html&cfmId=CFM-011735",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0aa03fd7/images/large/158016-knop-hamamelis-supositorios-x10.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 9490,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0aa03fd7/images/large/158016-knop-hamamelis-supositorios-x10.jpg",
+      "presentationKey": "knop|bio:unknown|brand:unknown|var:hamamelis|form:suppository",
+      "cfmId": "CFM-011735",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "vatanal|10",
+      "canonicalName": "Vatanal x 10 supositorios.",
+      "laboratory": "Farmoquimica",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Vatanal x 10 supositorios.",
+          "channels": {
+            "store": 10990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=vatanal%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihemorroidales%2Fvatanal-x10-supositorios&cfmId=CFM-000268",
+          "imageUrl": "https://farmacia.araucomed.com/3113-home_default/vatanal-x10-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 10990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3113-home_default/vatanal-x10-supositorios.jpg",
+      "presentationKey": "vatanal|10|bio:unknown|brand:farmoquimica|form:suppository",
+      "cfmId": "CFM-000268",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "vatanal|10",
+      "canonicalName": "Vatanal x 10 supositorios",
+      "laboratory": "Farmoquímica del Pacífico",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Vatanal x 10 supositorios",
+          "channels": {
+            "store": 11090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=vatanal%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fvatanal-10-supositorios%3F_pos%3D3%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-000268",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/vatanalr-x-10-supositorios-farmoquimica-del-pacifico-354842.jpg?v=1692989438",
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Vatanal x 10 Supositorios",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=vatanal%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25458-vatanal-supositorios-x-10.html&cfmId=CFM-000268",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Vatanal x 10 Supositorios (Farmoquímica del Pacifico)",
+          "channels": {
+            "store": 13800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13800
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=vatanal%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fvatanal-supositorio-x-10%2F&cfmId=CFM-000268",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/08/vatanal-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Vatanal x 10 Supositorios",
+          "channels": {
+            "store": 22337,
+            "online": null,
+            "cmr": 19709,
+            "sbpay": null,
+            "effective": 19709
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=vatanal%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fvatanal-x-10-supositorios-5230.html&cfmId=CFM-000268",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw20711be3/images/products/5230/5230.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 11090,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/vatanalr-x-10-supositorios-farmoquimica-del-pacifico-354842.jpg?v=1692989438",
+      "presentationKey": "vatanal|10|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-000268",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "contralmor|6",
+      "canonicalName": "Contralmor x 6 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Contralmor x 6 supositorios Laboratorio Chile DESCUENTO",
+          "channels": {
+            "store": 12990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=contralmor%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcontralmor-x-6-supositorios-laboratorio-chile-descuento%2F&cfmId=CFM-004588",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/06/contralmor-sup.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Contralmor x 6 Supositorios",
+          "channels": {
+            "store": 15563,
+            "online": null,
+            "cmr": 13732,
+            "sbpay": null,
+            "effective": 13732
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=contralmor%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcontralmor-x-6-supositorios-9836.html&cfmId=CFM-004588",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa6437f90/images/products/9836/9836.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Contralmor x 6 supositorios",
+          "channels": {
+            "store": 14990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=contralmor%7C6&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24613-contralmor-suposit-x-6.html&cfmId=CFM-004588",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 12990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa6437f90/images/products/9836/9836.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "contralmor|6|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-004588",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "idon|60mg|5",
+      "canonicalName": "Idon Adulto supositorios 60 mg x5",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Idon Adulto supositorios 60 mg x5",
+          "channels": {
+            "store": 13490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=idon%7C60mg%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fnausea-y-vomitos%2Fidon-adulto-supositorios-60-mg-x5&cfmId=CFM-002364",
+          "imageUrl": "https://farmacia.araucomed.com/8169-home_default/idon-adulto-supositorios-60-mg-x5.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 13490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8169-home_default/idon-adulto-supositorios-60-mg-x5.jpg",
+      "presentationKey": "idon|60mg|5|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-002364",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "vatanal|220mg",
+      "canonicalName": "Vatanal higado bacalao 0,22 g clorocarvacrol 0,0007 g 10 supositorios",
+      "laboratory": "FQP",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Vatanal higado bacalao 0,22 g clorocarvacrol 0,0007 g 10 supositorios",
+          "channels": {
+            "store": 14000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=vatanal%7C220mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fvatanal-10-supositorios%2Fp&cfmId=CFM-007339",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156729/CH7213-1.jpg?v=637964774543670000",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 14000,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156729/CH7213-1.jpg?v=637964774543670000",
+      "presentationKey": "vatanal|220mg|bio:false|brand:fqp|var:higado|form:suppository",
+      "cfmId": "CFM-007339",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "xaluron",
+      "canonicalName": "Xaluron Procto 10 Supositorios",
+      "laboratory": "Xaluron",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Xaluron Procto 10 Supositorios",
+          "channels": {
+            "store": 17699,
+            "online": 14513,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14513
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=xaluron&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsupositorios-de-acido-hialuronico%3Fdefault_sku%3D3309087&cfmId=CFM-014910",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/87066/small/Xaluron_Procto_%281%29.jpg?1675695732",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 14513,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/87066/small/Xaluron_Procto_%281%29.jpg?1675695732",
+      "presentationKey": "xaluron|bio:unknown|brand:xaluron|var:procto|form:suppository",
+      "cfmId": "CFM-014910",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mesalazina|1000mg|10",
+      "canonicalName": "Mesalazina 1 g. x 10 supositorios. Difem (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Mesalazina 1 g. x 10 supositorios. Difem (Cenabast)",
+          "channels": {
+            "store": 14990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=mesalazina%7C1000mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcolon%2Fmesalazina-1-g-x-10-supositorios-difem-cenabast&cfmId=CFM-013650",
+          "imageUrl": "https://farmacia.araucomed.com/14254-home_default/mesalazina-1-g-x-10-supositorios-difem-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Mesalazina Supositorios 1g x 10 supositorios (cenabast)",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=mesalazina%7C1000mg%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmesalazina-supositorios-1g-x-10-supositorios-cenabast%2F&cfmId=CFM-013650",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/09/mesalazina-1-g.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 14990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14254-home_default/mesalazina-1-g-x-10-supositorios-difem-cenabast.jpg",
+      "presentationKey": "mesalazina|1000mg|10|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013650",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mesalazina|1000mg|10",
+      "canonicalName": "Mesalazina 1 g. x 10 supositorios. Opes Healthcare (Cenabast)",
+      "laboratory": "Opes Healthcare",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Mesalazina 1 g. x 10 supositorios. Opes Healthcare (Cenabast)",
+          "channels": {
+            "store": 14990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=mesalazina%7C1000mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcolon%2Fmesalazina-1-g-x-10-supositorios-opes-healthcare-cenabast&cfmId=CFM-013650",
+          "imageUrl": "https://farmacia.araucomed.com/13743-home_default/mesalazina-1-g-x-10-supositorios-opes-healthcare-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 14990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13743-home_default/mesalazina-1-g-x-10-supositorios-opes-healthcare-cenabast.jpg",
+      "presentationKey": "mesalazina|1000mg|10|bio:unknown|brand:opeshealthcare|form:suppository",
+      "cfmId": "CFM-013650",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "sae",
+      "canonicalName": "Sae Adulto Adifenina / Propifenazona 6 Supositorios",
+      "laboratory": "Sae",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Sae Adulto Adifenina / Propifenazona 6 Supositorios",
+          "channels": {
+            "store": 17499,
+            "online": 15399,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=sae&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsae-ad-6-supositorios%3Fdefault_sku%3D2501583&cfmId=CFM-013637",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/66353/small/2501583.jpg?1642013976",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 15399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/66353/small/2501583.jpg?1642013976",
+      "presentationKey": "sae|bio:unknown|brand:sae|combo:propifenazona|form:suppository",
+      "cfmId": "CFM-013637",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "contralmor",
+      "canonicalName": "Contralmor 6 Supositorios",
+      "laboratory": "Contralmor",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Contralmor 6 Supositorios",
+          "channels": {
+            "store": 17799,
+            "online": 15663,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15663
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=contralmor&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcontralmor%3Fdefault_sku%3D434206&cfmId=CFM-012839",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27650/small/434206.jpg?1641479725",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 15663,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27650/small/434206.jpg?1641479725",
+      "presentationKey": "contralmor|bio:unknown|brand:contralmor|form:suppository",
+      "cfmId": "CFM-012839",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "contralmor",
+      "canonicalName": "Contralmor   6 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Contralmor   6 Supositorios",
+          "channels": {
+            "store": 16424,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16424
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=contralmor&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fcontralmor-6-supositorios-3%3F_pos%3D10%26_psq%3Dsupositorios%26_psid%3Dffee9b6d3%26_ss%3De&cfmId=CFM-012839",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/contralmor-6-supositorios-farmex-banmedica-persistente-947137.jpg?v=1714713630",
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 16424,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/contralmor-6-supositorios-farmex-banmedica-persistente-947137.jpg?v=1714713630",
+      "presentationKey": "contralmor|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-012839",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "contralmor|6",
+      "canonicalName": "Contralmor  x 6 supositorios.",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Contralmor  x 6 supositorios.",
+          "channels": {
+            "store": 16990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=contralmor%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihemorroidales%2Fcontralmor-supositorios-x6sup&cfmId=CFM-004588",
+          "imageUrl": "https://farmacia.araucomed.com/7100-home_default/contralmor-supositorios-x6sup.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 16990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7100-home_default/contralmor-supositorios-x6sup.jpg",
+      "presentationKey": "contralmor|6|bio:unknown|brand:chile|form:suppository",
+      "cfmId": "CFM-004588",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "contralmor|250mg",
+      "canonicalName": "Contralmor Betametsona 250 mg 6 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Contralmor Betametsona 250 mg 6 Supositorios",
+          "channels": {
+            "store": 17790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=contralmor%7C250mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcontralmor-betametsona-250-mg-6-supositorios%2F1052.html&cfmId=CFM-012838",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd5d93c3e/images/large/1052-contralmor-supositorio-6-unidades-betametsona-250-mg.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 17790,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd5d93c3e/images/large/1052-contralmor-supositorio-6-unidades-betametsona-250-mg.jpg",
+      "presentationKey": "contralmor|250mg|bio:unknown|brand:unknown|var:betametsona|form:suppository",
+      "cfmId": "CFM-012838",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "vatanal|10",
+      "canonicalName": "Vatanal Supositorios 10 Unidades",
+      "laboratory": "Vatanal",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Vatanal Supositorios 10 Unidades",
+          "channels": {
+            "store": 25499,
+            "online": 17849,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17849
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=vatanal%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fvatanal-x10sup%3Fdefault_sku%3D870520&cfmId=CFM-000268",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/36342/small/870520.jpg?1641477360",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 17849,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/36342/small/870520.jpg?1641477360",
+      "presentationKey": "vatanal|10|bio:unknown|brand:vatanal|form:suppository",
+      "cfmId": "CFM-000268",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "vatanal|20mg",
+      "canonicalName": "Vatanal Higado Bacalao 20 mg 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Vatanal Higado Bacalao 20 mg 10 Supositorios",
+          "channels": {
+            "store": 18517,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18517
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=vatanal%7C20mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fvatanal-higado-bacalao-20-mg-10-supositorios%2F59200.html&cfmId=CFM-006373",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw974359cf/images/large/59200-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 18517,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw974359cf/images/large/59200-1.jpg",
+      "presentationKey": "vatanal|20mg|bio:unknown|brand:unknown|var:higado|form:suppository",
+      "cfmId": "CFM-006373",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "propifenazona",
+      "canonicalName": "S A E Propifenazona 6 Supositorios Adulto",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "S A E Propifenazona 6 Supositorios Adulto",
+          "channels": {
+            "store": 18590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=propifenazona&url=https%3A%2F%2Fwww.cruzverde.cl%2Fs-a-e-propifenazona-6-supositorios-adulto%2F199436.html&cfmId=CFM-013622",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw625c27b6/images/large/199436-s-a-e-propifenazona-6-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 18590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw625c27b6/images/large/199436-s-a-e-propifenazona-6-supositorios.jpg",
+      "presentationKey": "propifenazona|bio:unknown|brand:unknown|var:s|form:suppository",
+      "cfmId": "CFM-013622",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salofalk|1000mg",
+      "canonicalName": "Salofalk ODD Mesalazina 1g 10 Supositorios",
+      "laboratory": "Salofalk Odd",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Salofalk ODD Mesalazina 1g 10 Supositorios",
+          "channels": {
+            "store": 63399,
+            "online": 55791,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 55791
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=salofalk%7C1000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalofalk-odd-mesalazina-1g-10-supositorios%3Fdefault_sku%3D600056&cfmId=CFM-013624",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/191662/small/600056_-_Huincha.jpg?1780504906",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 55791,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/191662/small/600056_-_Huincha.jpg?1780504906",
+      "presentationKey": "salofalk|1000mg|bio:unknown|brand:salofalkodd|var:odd|form:suppository",
+      "cfmId": "CFM-013624",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mesalazina|500mg|60",
+      "canonicalName": "Mesalazina Supositorios 500mg x60sup Pharmamerica (Cenabast)",
+      "laboratory": "Pharmamerica",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Mesalazina Supositorios 500mg x60sup Pharmamerica (Cenabast)",
+          "channels": {
+            "store": 55990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 55990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=mesalazina%7C500mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcolon%2Fmesalazina-supositorios-500mg-x60sup-pharmamerica-&cfmId=CFM-013649",
+          "imageUrl": "https://farmacia.araucomed.com/4584-home_default/mesalazina-supositorios-500mg-x60sup-pharmamerica-.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 55990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/4584-home_default/mesalazina-supositorios-500mg-x60sup-pharmamerica-.jpg",
+      "presentationKey": "mesalazina|500mg|60|bio:unknown|brand:pharmamerica|form:suppository",
+      "cfmId": "CFM-013649",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mesalazina|500mg|60",
+      "canonicalName": "Mesalazina Supositorios 500mg x 60 Supositorios (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Mesalazina Supositorios 500mg x 60 Supositorios (Cenabast)",
+          "channels": {
+            "store": 57900,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 57900
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=mesalazina%7C500mg%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmesalazina-supositorios-500mg-x-60-supositorios-cenabast%2F&cfmId=CFM-013649",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/11/mesalazina-supositorio-500mg-x60-pharmamerica.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 57900,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/11/mesalazina-supositorio-500mg-x60-pharmamerica.jpg",
+      "presentationKey": "mesalazina|500mg|60|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013649",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pentasa|1000mg|28",
+      "canonicalName": "Pentasa 1000 mg x 28 supositorios (Cenabast)",
+      "laboratory": "Ferring",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Pentasa 1000 mg x 28 supositorios (Cenabast)",
+          "channels": {
+            "store": 87490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 87490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=pentasa%7C1000mg%7C28&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcolon%2Fpentasa-1000mg-x-28-supositorios-cenabast&cfmId=CFM-011772",
+          "imageUrl": "https://farmacia.araucomed.com/4844-home_default/pentasa-1000mg-x-28-supositorios-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.376Z"
+        }
+      ],
+      "bestPrice": 87490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/4844-home_default/pentasa-1000mg-x-28-supositorios-cenabast.jpg",
+      "presentationKey": "pentasa|1000mg|28|bio:unknown|brand:ferring|form:suppository",
+      "cfmId": "CFM-011772",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mecolzine|500mg",
+      "canonicalName": "Mecolzine Mesalazina 500mg 30 Supositorios",
+      "laboratory": "Mecolzine",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Mecolzine Mesalazina 500mg 30 Supositorios",
+          "channels": {
+            "store": 114499,
+            "online": 100759,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 100759
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=mecolzine%7C500mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmecolzine-mesalazina-500mg-30-supositorios%3Fdefault_sku%3D572662&cfmId=CFM-013623",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/34679/small/Mecolzine_30Sup-1500X1500.jpg?1641477493",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 100759,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/34679/small/Mecolzine_30Sup-1500X1500.jpg?1641477493",
+      "presentationKey": "mecolzine|500mg|bio:unknown|brand:mecolzine|var:mesalazina|form:suppository",
+      "cfmId": "CFM-013623",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mecolzine|500mg",
+      "canonicalName": "Mecolzine Mesalazina 500 mg 30 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Mecolzine Mesalazina 500 mg 30 Supositorios",
+          "channels": {
+            "store": 111090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 111090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=mecolzine%7C500mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmecolzine-mesalazina-500-mg-30-supositorios%2F299198.html&cfmId=CFM-013623",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9c8414ee/images/large/299198-mecolzine-mesalazina-500-mg-30-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 111090,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9c8414ee/images/large/299198-mecolzine-mesalazina-500-mg-30-supositorios.jpg",
+      "presentationKey": "mecolzine|500mg|bio:unknown|brand:unknown|var:mesalazina|form:suppository",
+      "cfmId": "CFM-013623",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "mecolzine|500mg|30",
+      "canonicalName": "Mecolzine 500 mg x 30 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Mecolzine 500 mg x 30 Supositorios",
+          "channels": {
+            "store": 112419,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 112419
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=mecolzine%7C500mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmecolzine-500-mg-x-30-supositorios-87303.html&cfmId=CFM-013634",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2a19f203/images/products/87303/87303.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 112419,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2a19f203/images/products/87303/87303.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "mecolzine|500mg|30|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013634",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salofalk|1000mg",
+      "canonicalName": "Salofalk ODD Mesalazina 1000 mg 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Salofalk ODD Mesalazina 1000 mg 10 Supositorios",
+          "channels": {
+            "store": 123590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 123590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=salofalk%7C1000mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsalofalk-odd-mesalazina-1000-mg-10-supositorios%2F268462.html&cfmId=CFM-013624",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4202a57d/images/large/268462-salofalk-odd-mesalazina-1-gr-10-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 123590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4202a57d/images/large/268462-salofalk-odd-mesalazina-1-gr-10-supositorios.jpg",
+      "presentationKey": "salofalk|1000mg|bio:unknown|brand:unknown|var:odd|form:suppository",
+      "cfmId": "CFM-013624",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salofalk|500mg",
+      "canonicalName": "Salofalk Mesalazina 500mg 30 Supositorios",
+      "laboratory": "Salofalk",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Salofalk Mesalazina 500mg 30 Supositorios",
+          "channels": {
+            "store": 146799,
+            "online": 129183,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 129183
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=salofalk%7C500mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsalofalk-mesalazina-500mg-30-supositorios%3Fdefault_sku%3D600165&cfmId=CFM-013626",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/191658/small/600165_-_Huincha.jpg?1780502321",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 129183,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/191658/small/600165_-_Huincha.jpg?1780502321",
+      "presentationKey": "salofalk|500mg|bio:unknown|brand:salofalk|var:mesalazina|form:suppository",
+      "cfmId": "CFM-013626",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salofalk|500mg",
+      "canonicalName": "Salofalk  Mesalazina 500 mg 30 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Salofalk  Mesalazina 500 mg 30 Supositorios",
+          "channels": {
+            "store": 144290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 144290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=salofalk%7C500mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsalofalk-mesalazina-500-mg-30-supositorios%2F86021.html&cfmId=CFM-013626",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf0dd4927/images/large/86021-salofalk--mesalazina-500-mg-30-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 144290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf0dd4927/images/large/86021-salofalk--mesalazina-500-mg-30-supositorios.jpg",
+      "presentationKey": "salofalk|500mg|bio:unknown|brand:unknown|var:mesalazina|form:suppository",
+      "cfmId": "CFM-013626",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "salofalk|500mg|30",
+      "canonicalName": "Salofalk 500 mg x 30 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Salofalk 500 mg x 30 Supositorios",
+          "channels": {
+            "store": 146019,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 146019
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=salofalk%7C500mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsalofalk-500-mg-x-30-supositorios-2177.html&cfmId=CFM-013647",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb3fdee2d/images/products/2177/2177.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 146019,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb3fdee2d/images/products/2177/2177.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "salofalk|500mg|30|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013647",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pentasa|1000mg",
+      "canonicalName": "Pentasa Mesalazina 1g 28 Supositorios",
+      "laboratory": "Pentasa",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Pentasa Mesalazina 1g 28 Supositorios",
+          "channels": {
+            "store": 176899,
+            "online": 155671,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 155671
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=pentasa%7C1000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmesalazina-1000mg-supositorio%3Fdefault_sku%3D5302083&cfmId=CFM-013641",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/191446/small/5302083_-_Huincha.jpg?1780414098",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 155671,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/191446/small/5302083_-_Huincha.jpg?1780414098",
+      "presentationKey": "pentasa|1000mg|bio:unknown|brand:pentasa|var:mesalazina|form:suppository",
+      "cfmId": "CFM-013641",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pentasa|1000mg",
+      "canonicalName": "Pentasa 1 g Caja 28 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Pentasa 1 g Caja 28 Supositorios",
+          "channels": {
+            "store": 166799,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 166799
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=pentasa%7C1000mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fpentasa-1-g-caja-28-supositorios-15116.html&cfmId=CFM-013641",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb9c545fd/images/products/15116/15116.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:01.375Z"
+        }
+      ],
+      "bestPrice": 166799,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb9c545fd/images/products/15116/15116.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "pentasa|1000mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013641",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pentasa",
+      "canonicalName": "Pentasa 1 gr 28 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Pentasa 1 gr 28 Supositorios",
+          "channels": {
+            "store": 176890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 176890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=pentasa&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpentasa-1-gr-28-supositorios%2F276476.html&cfmId=CFM-013621",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd7e3ae6f/images/large/276476.1.jpg",
+          "fetchedAt": "2026-08-31T01:24:01.374Z"
+        }
+      ],
+      "bestPrice": 176890,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd7e3ae6f/images/large/276476.1.jpg",
+      "presentationKey": "pentasa|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013621",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diclofenaco",
+      "canonicalName": "Diclofenaco infantil...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Diclofenaco infantil...",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=diclofenaco&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24622-diclofenaco-inf-125-mg-suposit-x-5.html&cfmId=CFM-002125",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "diclofenaco|bio:unknown|brand:unknown|var:infantil",
+      "cfmId": "CFM-002125",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "diclofenaco",
+      "canonicalName": "Diclofenaco adulto...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Diclofenaco adulto...",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=diclofenaco&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24621-diclofenaco-adul-50-mg-suposit-x-5.html&cfmId=CFM-002125",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "diclofenaco|bio:unknown|brand:unknown",
+      "cfmId": "CFM-002125",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "eurogesic|50mg",
+      "canonicalName": "Eurogesic Infantil 50 mg x...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Eurogesic Infantil 50 mg x...",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=eurogesic%7C50mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25417-eurogesic-infantil-supositorio-x-6.html&cfmId=CFM-001702",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 4490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "eurogesic|50mg|bio:unknown|brand:unknown|var:infantil",
+      "cfmId": "CFM-001702",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "mesalazina",
+      "canonicalName": "Mesalazina 1 Gr 10...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Mesalazina 1 Gr 10...",
+          "channels": {
+            "store": 29990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 29990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=mesalazina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105274-mesalazina-1-gr-10-supositorios-lab-dfm-pharma.html&cfmId=CFM-014913",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:01.377Z"
+        }
+      ],
+      "bestPrice": 29990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "mesalazina|bio:unknown|brand:pharma",
+      "cfmId": "CFM-014913",
+      "lexicalMatch": "compatible"
+    }
+  ]
+}

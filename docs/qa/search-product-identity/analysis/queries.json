@@ -1,0 +1,36 @@
+{
+  "note": "Dataset CF-QA-001. Bloque A = minimo obligatorio del ticket. Bloque B = estres de formas farmaceuticas contra catalogo real.",
+  "blockA": [
+    "tapsin",
+    "diclofenaco",
+    "amoxicilina",
+    "paracetamol",
+    "ibuprofeno",
+    "losartan",
+    "omeprazol",
+    "aspirina",
+    "metformina",
+    "clorfenamina",
+    "cetirizina",
+    "naproxeno",
+    "loratadina"
+  ],
+  "blockB": [
+    "tapsin sobre",
+    "kitadol",
+    "supositorios",
+    "glicerina",
+    "clotrimazol",
+    "salbutamol",
+    "ambroxol",
+    "hidrocortisona",
+    "betametasona",
+    "dipirona",
+    "ketoprofeno",
+    "vitamina d gotas",
+    "amoxicilina suspension",
+    "nistatina",
+    "next",
+    "aerosol"
+  ]
+}
