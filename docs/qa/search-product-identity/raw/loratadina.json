@@ -1,0 +1,2225 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "loratadina",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=loratadina",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:23:31.495Z",
+  "completedAt": "2026-08-31T01:23:38.635Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 68,
+  "results": [
+    {
+      "matchKey": "loratadina|10mg|30",
+      "canonicalName": "Loratadina 10 mg por 30 comprimidos DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Loratadina 10 mg por 30 comprimidos DESCUENTO",
+          "channels": {
+            "store": 499,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 499
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Floratadina-10-mg-por-30-comprimidos-descuento%2F&cfmId=CFM-001105",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/01/loratadina-sfdds.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 499,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/01/loratadina-sfdds.jpg",
+      "presentationKey": "loratadina|10mg|30|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001105",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|10mg|30",
+      "canonicalName": "Loratadina 10 mg x 30 comprimidos",
+      "laboratory": "CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Loratadina 10 mg x 30 comprimidos. (Chile)",
+          "channels": {
+            "store": 600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 600
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Floratadina-10mg-x30com-chile&cfmId=CFM-001105",
+          "imageUrl": "https://farmacia.araucomed.com/5817-home_default/loratadina-10mg-x30com-chile.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Loratadina 10 mg x 30 comprimidos",
+          "channels": {
+            "store": 690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Floratadina-x-comploratadina%3F_pos%3D1%26_psq%3Dloratadina%26_psid%3D5b9326a2b%26_ss%3De&cfmId=CFM-001105",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/loratadina-10-mg-x-30-comprimidos-chile-763668.jpg?v=1692989414",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 600,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/loratadina-10-mg-x-30-comprimidos-chile-763668.jpg?v=1692989414",
+      "presentationKey": "loratadina|10mg|30|bio:unknown|brand:chile|form:solid-oral",
+      "cfmId": "CFM-001105",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|10mg|30",
+      "canonicalName": "Loratadina 10mg x30com. (Opko)",
+      "laboratory": "Opko",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Loratadina 10mg x30com. (Opko)",
+          "channels": {
+            "store": 600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 600
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Floratadina-10mg-x30com-opko&cfmId=CFM-001105",
+          "imageUrl": "https://farmacia.araucomed.com/3350-home_default/loratadina-10mg-x30com-opko.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 600,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3350-home_default/loratadina-10mg-x30com-opko.jpg",
+      "presentationKey": "loratadina|10mg|30|bio:unknown|brand:opko|form:solid-oral",
+      "cfmId": "CFM-001105",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|10mg|30",
+      "canonicalName": "Loratadina 10 mg x 30 comprimidos \"Ley Cenabast\"",
+      "laboratory": "ascend",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Loratadina 10 mg x 30 comprimidos \"Ley Cenabast\"",
+          "channels": {
+            "store": 690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Floratadina-10-mg-x-30-comprimidos-ley-cenabast-1%3F_pos%3D2%26_psq%3Dloratadina%26_psid%3D5b9326a2b%26_ss%3De&cfmId=CFM-001105",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/loratadina-10-mg-x-30-comprimidos-ley-cenabast-ascend-309755.jpg?v=1748626038",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 690,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/loratadina-10-mg-x-30-comprimidos-ley-cenabast-ascend-309755.jpg?v=1748626038",
+      "presentationKey": "loratadina|10mg|30|bio:unknown|brand:ascend|form:solid-oral",
+      "cfmId": "CFM-001105",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|10mg|30",
+      "canonicalName": "Loratadina 10 mg x 30 comprimiidos. Ascend (Cenabast)",
+      "laboratory": "Ascend",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Loratadina 10 mg x 30 comprimiidos. Ascend (Cenabast)",
+          "channels": {
+            "store": 790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Floratadina-10-mg-x-30-comprimiidos-ascend-cenabast&cfmId=CFM-001105",
+          "imageUrl": "https://farmacia.araucomed.com/11815-home_default/loratadina-10-mg-x-30-comprimiidos-ascend-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/11815-home_default/loratadina-10-mg-x-30-comprimiidos-ascend-cenabast.jpg",
+      "presentationKey": "loratadina|10mg|30|bio:unknown|brand:ascend",
+      "cfmId": "CFM-001105",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|10mg|30",
+      "canonicalName": "Loratadina 10 mg 30 comprimidos",
+      "laboratory": "TEVA",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Loratadina 10 mg 30 comprimidos",
+          "channels": {
+            "store": 800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 800
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Floratadina-10-mg-30-comprimidos%2Fp&cfmId=CFM-001105",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159753/CA0075-1V1.jpg?v=638943247643330000",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 800,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159753/CA0075-1V1.jpg?v=638943247643330000",
+      "presentationKey": "loratadina|10mg|30|bio:true|brand:teva|form:solid-oral",
+      "cfmId": "CFM-001105",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|10mg|30",
+      "canonicalName": "Loratadina 10 mg x 30 comp....",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Loratadina 10 mg x 30 comp....",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F46211-loratadina-10mg-x-30-lab-chile.html&cfmId=CFM-001105",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Loratadina 10 mg 30 Comprimidos",
+          "channels": {
+            "store": 1390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Floratadina-10-mg-30-comprimidos%2F273015.html&cfmId=CFM-001105",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe085f136/images/large/273015-loratadina-bioequivalente-comprimido-30-unidades-loratadina-10-mg.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe085f136/images/large/273015-loratadina-bioequivalente-comprimido-30-unidades-loratadina-10-mg.jpg",
+      "presentationKey": "loratadina|10mg|30|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001105",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loptame|60ml|60",
+      "canonicalName": "Loptame Jarabe 5mg/5ml x60ml",
+      "laboratory": "Eurofarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Loptame Jarabe 5mg/5ml x60ml",
+          "channels": {
+            "store": 1200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1200
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=loptame%7C60ml%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Floptame-jarabe-5mg-5ml-x60ml&cfmId=CFM-014904",
+          "imageUrl": "https://farmacia.araucomed.com/5815-home_default/loptame-jarabe-5mg-5ml-x60ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 1200,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5815-home_default/loptame-jarabe-5mg-5ml-x60ml.jpg",
+      "presentationKey": "loptame|60ml|60|bio:unknown|brand:eurofarma|form:fluid-oral",
+      "cfmId": "CFM-014904",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "loratadina|60ml|60",
+      "canonicalName": "Loratadina 5 mg/5 ml jarabe x 60 ml (Chile)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Loratadina 5 mg/5 ml jarabe x 60 ml (Chile)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=loratadina%7C60ml%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Floratadina-5-mg-5-ml-jarabe-x-60-ml-chile&cfmId=CFM-014905",
+          "imageUrl": "https://farmacia.araucomed.com/13096-home_default/loratadina-5-mg-5-ml-jarabe-x-60-ml-chile.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13096-home_default/loratadina-5-mg-5-ml-jarabe-x-60-ml-chile.jpg",
+      "presentationKey": "loratadina|60ml|60|bio:unknown|brand:chile|form:fluid-oral",
+      "cfmId": "CFM-014905",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|60ml",
+      "canonicalName": "Loratadina 5 mg/5 ml jarabe 60ml (Mintlab)",
+      "laboratory": "Mintlab",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Loratadina 5 mg/5 ml jarabe 60ml (Mintlab)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=loratadina%7C60ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Floratadina-5-mg-5-ml-jarabe-60ml-mintlab&cfmId=CFM-014898",
+          "imageUrl": "https://farmacia.araucomed.com/8570-home_default/loratadina-5-mg-5-ml-jarabe-60ml-mintlab.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8570-home_default/loratadina-5-mg-5-ml-jarabe-60ml-mintlab.jpg",
+      "presentationKey": "loratadina|60ml|bio:unknown|brand:mintlab|form:fluid-oral",
+      "cfmId": "CFM-014898",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|90ml|90",
+      "canonicalName": "Loratadina Jarabe 5 mg/5 ml x 90 ml (Mintlab)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Loratadina Jarabe 5 mg/5 ml x 90 ml (Mintlab)",
+          "channels": {
+            "store": 2190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2190
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=loratadina%7C90ml%7C90&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Floratadina-jarabe-5-mg-5-ml-x-90-ml-mintlab%2F&cfmId=CFM-014897",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/7800063130699.png",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 2190,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/7800063130699.png",
+      "presentationKey": "loratadina|90ml|90|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-014897",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|10mg|30",
+      "canonicalName": "Loratadina (B) 10mg 30 Comprimidos",
+      "laboratory": "Loratadina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Loratadina (B) 10mg 30 Comprimidos",
+          "channels": {
+            "store": 2599,
+            "online": 2287,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2287
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=loratadina%7C10mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchileloratadina-b-10mg-30-comprimidos%3Fdefault_sku%3D434912&cfmId=CFM-001105",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28705/small/434912.jpg?1641477868",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 2287,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28705/small/434912.jpg?1641477868",
+      "presentationKey": "loratadina|10mg|30|bio:unknown|brand:loratadina|form:solid-oral",
+      "cfmId": "CFM-001105",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|60ml",
+      "canonicalName": "Loratadina 5mg/5ml Jarabe 60 ml (LCh)",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Loratadina 5mg/5ml Jarabe 60 ml (LCh)",
+          "channels": {
+            "store": 2640,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2640
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=loratadina%7C60ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Floratadina-5mg-5ml-jarabe-60-ml-lch%2F&cfmId=CFM-014898",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/02/LORATADINA5MG5MGLLCH60MLJARABE.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 2640,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/02/LORATADINA5MG5MGLLCH60MLJARABE.jpg",
+      "presentationKey": "loratadina|60ml|bio:true|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-014898",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|90ml",
+      "canonicalName": "Loratadina 5 mg/5 mL jarabe 90 mL",
+      "laboratory": "MILAB",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Loratadina 5 mg/5 mL jarabe 90 mL",
+          "channels": {
+            "store": 2960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=loratadina%7C90ml&url=https%3A%2F%2Fwww.drsimi.cl%2Floratadina-5-mg-5ml-jarabe-90ml%2Fp&cfmId=CFM-012827",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160496/CH5894-01.jpg?v=639093505353730000",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 2960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160496/CH5894-01.jpg?v=639093505353730000",
+      "presentationKey": "loratadina|90ml|bio:true|brand:milab|form:fluid-oral",
+      "cfmId": "CFM-012827",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "frenaler|60ml",
+      "canonicalName": "Frenaler 5mg/5ml jarabe 60 ml",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Frenaler 5mg/5ml jarabe 60 ml",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=frenaler%7C60ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Ffrenaler-5mg-5ml-jarabe-60ml-vence-12-2021&cfmId=CFM-013419",
+          "imageUrl": "https://farmacia.araucomed.com/7568-home_default/frenaler-5mg-5ml-jarabe-60ml-vence-12-2021.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7568-home_default/frenaler-5mg-5ml-jarabe-60ml-vence-12-2021.jpg",
+      "presentationKey": "frenaler|60ml|bio:unknown|brand:chile|form:fluid-oral",
+      "cfmId": "CFM-013419",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "loratadina|5ml",
+      "canonicalName": "Loratadina Jarabe 5mg/5mL...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Loratadina Jarabe 5mg/5mL...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=loratadina%7C5ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105314-loratadina-jarabe-5mg-5ml-60-ml-lch.html&cfmId=CFM-014899",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "loratadina|5ml|bio:unknown|brand:lch|form:fluid-oral",
+      "cfmId": "CFM-014899",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryl|60ml",
+      "canonicalName": "Alledryl loratadina 5 mg/5 mL jarabe 60 mL",
+      "laboratory": "PRATER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Alledryl loratadina 5 mg/5 mL jarabe 60 mL",
+          "channels": {
+            "store": 3000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=alledryl%7C60ml&url=https%3A%2F%2Fwww.drsimi.cl%2Falledryl-loratadina-5-mg-5ml-jarabe-60-ml%2Fp&cfmId=CFM-012582",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155470/450-1.jpg?v=638950316385370000",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 3000,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155470/450-1.jpg?v=638950316385370000",
+      "presentationKey": "alledryl|60ml|bio:false|brand:prater|form:fluid-oral",
+      "cfmId": "CFM-012582",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|90ml",
+      "canonicalName": "Loratadina 5mg/5ml Jarabe 90ml",
+      "laboratory": "Loratadina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Loratadina 5mg/5ml Jarabe 90ml",
+          "channels": {
+            "store": 3499,
+            "online": 3079,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3079
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=loratadina%7C90ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Floratadina-5mg-5ml-jarabe-90ml%3Fdefault_sku%3D577491&cfmId=CFM-012827",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/72403/small/577491.jpg?1652282535",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 3079,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/72403/small/577491.jpg?1652282535",
+      "presentationKey": "loratadina|90ml|bio:unknown|brand:loratadina|form:fluid-oral",
+      "cfmId": "CFM-012827",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|90ml",
+      "canonicalName": "Loratadina 5 mg/5ml Solución Oral 90 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Loratadina 5 mg/5ml Solución Oral 90 mL",
+          "channels": {
+            "store": 3690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=loratadina%7C90ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Floratadina-5-mg-5ml-solucion-oral-90-ml%2F270021.html&cfmId=CFM-012827",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw476ca132/images/large/270021.1.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 3690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw476ca132/images/large/270021.1.jpg",
+      "presentationKey": "loratadina|90ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012827",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "histaplus|60ml",
+      "canonicalName": "D Histaplus Jarabe 60 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "D Histaplus Jarabe 60 mL",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=histaplus%7C60ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103152-d-histaplus-jarabe-60-ml.html&cfmId=CFM-009036",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 4490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "histaplus|60ml|bio:unknown|brand:unknown|var:d|form:fluid-oral",
+      "cfmId": "CFM-009036",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryld|120ml",
+      "canonicalName": "Alledryl-D loratadina 15mg/5ml jarabe infantil 120ml DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Alledryl-D loratadina 15mg/5ml jarabe infantil 120ml DESCUENTO",
+          "channels": {
+            "store": 4980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Falledryl-d-loratadina-15mg-5ml-jarabe-infantil-120ml-descuento%2F&cfmId=CFM-012588",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/07/Captura-de-pantalla-2023-12-22-141313.png",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 4980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/07/Captura-de-pantalla-2023-12-22-141313.png",
+      "presentationKey": "alledryld|120ml|bio:true|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012588",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120ml|120",
+      "canonicalName": "Alledryl-D Jarabe x120ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Alledryl-D Jarabe x120ml",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=alledryld%7C120ml%7C120&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Falledryl-d-jarabe-x120ml&cfmId=CFM-012584",
+          "imageUrl": "https://farmacia.araucomed.com/5664-home_default/alledryl-d-jarabe-x120ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5664-home_default/alledryl-d-jarabe-x120ml.jpg",
+      "presentationKey": "alledryld|120ml|120|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012584",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "histaplus|100ml",
+      "canonicalName": "D Histaplus Jarabe 100 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "D Histaplus Jarabe 100 mL",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=histaplus%7C100ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103151-d-histaplus-jarabe-100-ml.html&cfmId=CFM-009037",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "histaplus|100ml|bio:unknown|brand:unknown|var:d|form:fluid-oral",
+      "cfmId": "CFM-009037",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "loratadina|60ml",
+      "canonicalName": "Loratadina Inf 5Mg5Ml 60Ml 1Jb",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Loratadina Inf 5Mg5Ml 60Ml 1Jb",
+          "channels": {
+            "store": 6158,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6158
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=loratadina%7C60ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Floratadina-inf-5mg5ml-60ml-1jb-92796.html&cfmId=CFM-014898",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw603d227b/images/products/92796/92796.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 6158,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw603d227b/images/products/92796/92796.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "loratadina|60ml|bio:unknown|brand:unknown|var:infantil",
+      "cfmId": "CFM-014898",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "loratadina|60ml",
+      "canonicalName": "Loratadina 5mg/5ml Jarabe 60 ml",
+      "laboratory": "Loratadina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Loratadina 5mg/5ml Jarabe 60 ml",
+          "channels": {
+            "store": 6999,
+            "online": 6159,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6159
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=loratadina%7C60ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Floratadina-5mg-5ml-jarabe-60-ml%3Fdefault_sku%3D583364&cfmId=CFM-014898",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/89410/small/583364.jpg?1678472753",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 6159,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/89410/small/583364.jpg?1678472753",
+      "presentationKey": "loratadina|60ml|bio:unknown|brand:loratadina|form:fluid-oral",
+      "cfmId": "CFM-014898",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120ml",
+      "canonicalName": "Alledryl-d (loratadina 2,5mg/pseudoefedrina 15mg) Jarabe 120ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Alledryl-d (loratadina 2,5mg/pseudoefedrina 15mg) Jarabe 120ml",
+          "channels": {
+            "store": 6790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19435%26d_%3D1&cfmId=CFM-012588",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918410325.jpg?v=6a94d79991396",
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 6790,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918410325.jpg?v=6a94d79991396",
+      "presentationKey": "alledryld|120ml|bio:unknown|brand:unknown|combo:pseudoefedrina|form:fluid-oral",
+      "cfmId": "CFM-012588",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryl|60ml",
+      "canonicalName": "Alledryl (loratadina) Jarabe 60ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Alledryl (loratadina) Jarabe 60ml",
+          "channels": {
+            "store": 6890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=alledryl%7C60ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19619%26d_%3D1&cfmId=CFM-012582",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918401149.jpg?v=6a94d7999157c",
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Alledryl Loratadina 5 mg / 5 mL Jarabe 60 mL",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=alledryl%7C60ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Falledryl-loratadina-5-mg-5-ml-jarabe-60-ml%2F111022.html&cfmId=CFM-012582",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7e26dcd1/images/large/111022.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 6890,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918401149.jpg?v=6a94d7999157c",
+      "presentationKey": "alledryl|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012582",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120ml",
+      "canonicalName": "Alledryl-D jarabe 120 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Alledryl-D jarabe 120 mL",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26282-alledryl-d-jarabe-x-120ml.html&cfmId=CFM-012588",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Alledryl-D Loratadina 15 mg/5ml Jarabe 120 mL",
+          "channels": {
+            "store": 8890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Falledryl-d-loratadina-15-mg-5ml-jarabe-120-ml%2F111160.html&cfmId=CFM-012588",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd8a964ee/images/large/111160.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 6990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd8a964ee/images/large/111160.jpg",
+      "presentationKey": "alledryld|120ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012588",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120ml",
+      "canonicalName": "Alledryl-D loratadina 2,5 mg pseudoefedrina 15 mg jarabe 120 mL",
+      "laboratory": "PRATER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Alledryl-D loratadina 2,5 mg pseudoefedrina 15 mg jarabe 120 mL",
+          "channels": {
+            "store": 7560,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7560
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=alledryld%7C120ml&url=https%3A%2F%2Fwww.drsimi.cl%2Falledryl-d-jarabe-120-ml%2Fp&cfmId=CFM-012588",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156840/CH7468-1.jpg?v=637964774937170000",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 7560,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156840/CH7468-1.jpg?v=637964774937170000",
+      "presentationKey": "alledryld|120ml|bio:false|brand:prater|form:fluid-oral",
+      "cfmId": "CFM-012588",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|20",
+      "canonicalName": "Alledryl-D x 20 cápsulas.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Alledryl-D x 20 cápsulas.",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=alledryld%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Falledryl-d-x20cap&cfmId=CFM-012571",
+          "imageUrl": "https://farmacia.araucomed.com/5666-home_default/alledryl-d-x20cap.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Alledryl-D comprimidos x 20",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=alledryld%7C20&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26281-alledryl-d-x-20.html&cfmId=CFM-012571",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5666-home_default/alledryl-d-x20cap.jpg",
+      "presentationKey": "alledryld|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-012571",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryl|120ml|120",
+      "canonicalName": "Alledryl D  x 120 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Alledryl D  x 120 mL Jarabe",
+          "channels": {
+            "store": 9086,
+            "online": null,
+            "cmr": 8017,
+            "sbpay": null,
+            "effective": 8017
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=alledryl%7C120ml%7C120&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Falledryl-d--x-120-ml-jarabe-43934.html&cfmId=CFM-012587",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw84b09737/images/products/43934/43934.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 8017,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw84b09737/images/products/43934/43934.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "alledryl|120ml|120|bio:unknown|brand:unknown|var:d|form:fluid-oral",
+      "cfmId": "CFM-012587",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hysticlar|100ml",
+      "canonicalName": "Hysticlar Loratadina 5 mg Jarabe 100 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Hysticlar Loratadina 5 mg Jarabe 100 mL",
+          "channels": {
+            "store": 8590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=hysticlar%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fhysticlar-loratadina-5-mg-jarabe-100-ml%2F268733.html&cfmId=CFM-014895",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa17d5b3f/images/large/268733.1.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 8590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa17d5b3f/images/large/268733.1.jpg",
+      "presentationKey": "hysticlar|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-014895",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|5mg",
+      "canonicalName": "Alledryl-d (loratadina 5mg/pseudoefedrina 20mg) 20 Caps",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Alledryl-d (loratadina 5mg/pseudoefedrina 20mg) 20 Caps",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=alledryld%7C5mg&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D19434%26d_%3D1&cfmId=CFM-014666",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918410356.jpg?v=6a94d7999146d",
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918410356.jpg?v=6a94d7999146d",
+      "presentationKey": "alledryld|5mg|bio:unknown|brand:unknown|combo:pseudoefedrina|form:solid-oral",
+      "cfmId": "CFM-014666",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryl|120ml",
+      "canonicalName": "Alledryl D Loratadina / Pseudoefedrina Jarabe 120ml",
+      "laboratory": "Alledryl D",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Alledryl D Loratadina / Pseudoefedrina Jarabe 120ml",
+          "channels": {
+            "store": 10399,
+            "online": 9151,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9151
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=alledryl%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Falledryl-d-loratadina-pseudoefedrina-jarabe-120ml%3Fdefault_sku%3D901032&cfmId=CFM-012586",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146547/small/901032.jpg?1748897867",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 9151,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146547/small/901032.jpg?1748897867",
+      "presentationKey": "alledryl|120ml|bio:unknown|brand:alledryld|combo:pseudoefedrina|form:fluid-oral",
+      "cfmId": "CFM-012586",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "rinomex|100ml",
+      "canonicalName": "Rinomex Jarabe 100ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Rinomex Jarabe 100ml",
+          "channels": {
+            "store": 9290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=rinomex%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fgripe-y-resfrio%2Frinomex-jarabe-100ml&cfmId=CFM-008184",
+          "imageUrl": "https://farmacia.araucomed.com/8999-home_default/rinomex-jarabe-100ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 9290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8999-home_default/rinomex-jarabe-100ml.jpg",
+      "presentationKey": "rinomex|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-008184",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryl|60ml|60",
+      "canonicalName": "Alledryl 5 mg/ 5 mL x 60 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Alledryl 5 mg/ 5 mL x 60 mL Jarabe",
+          "channels": {
+            "store": 13219,
+            "online": null,
+            "cmr": 9914,
+            "sbpay": null,
+            "effective": 9914
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=alledryl%7C60ml%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Falledryl-5-mg--5-ml-x-60-ml-jarabe-3715.html&cfmId=CFM-012585",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw481c4f13/images/products/3715/3715.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 9914,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw481c4f13/images/products/3715/3715.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "alledryl|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-012585",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "frenaler|100ml|100",
+      "canonicalName": "Frenaler D Infantil x 100 mL Jarabe",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Frenaler D Infantil x 100 mL Jarabe",
+          "channels": {
+            "store": 11956,
+            "online": null,
+            "cmr": 11209,
+            "sbpay": null,
+            "effective": 11209
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=frenaler%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ffrenaler-d-infantil-x-100-ml-jarabe-18929.html&cfmId=CFM-010054",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6389ab2e/images/products/18929/18929.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 11209,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6389ab2e/images/products/18929/18929.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "frenaler|100ml|100|bio:unknown|brand:unknown|var:d|form:fluid-oral",
+      "cfmId": "CFM-010054",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "frenaler|100ml|100",
+      "canonicalName": "Frenaler D jarabe x 100 ml.",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Frenaler D jarabe x 100 ml.",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=frenaler%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Ffrenaler-d-jarabe-x100ml&cfmId=CFM-010054",
+          "imageUrl": "https://farmacia.araucomed.com/5779-home_default/frenaler-d-jarabe-x100ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 11990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5779-home_default/frenaler-d-jarabe-x100ml.jpg",
+      "presentationKey": "frenaler|100ml|100|bio:unknown|brand:chile|var:d|form:fluid-oral",
+      "cfmId": "CFM-010054",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "frenaler|10",
+      "canonicalName": "Frenaler D x10cap",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Frenaler D x10cap",
+          "channels": {
+            "store": 11990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=frenaler%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Ffrenaler-d-x10com&cfmId=CFM-013420",
+          "imageUrl": "https://farmacia.araucomed.com/9439-home_default/frenaler-d-x10com.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 11990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9439-home_default/frenaler-d-x10com.jpg",
+      "presentationKey": "frenaler|10|bio:unknown|brand:chile|var:d|form:solid-oral",
+      "cfmId": "CFM-013420",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "frenalerd|100ml",
+      "canonicalName": "Frenaler-D Loratadina 15 mg/5ml Jarabe 100 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Frenaler-D Loratadina 15 mg/5ml Jarabe 100 mL",
+          "channels": {
+            "store": 13390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=frenalerd%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ffrenaler-d-loratadina-15-mg-5ml-jarabe-100-ml%2F1367.html&cfmId=CFM-010572",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb6a4756c/images/large/1367-frenaler-d-jarabe-100-ml-loratadina-15-mg-5ml.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 13390,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb6a4756c/images/large/1367-frenaler-d-jarabe-100-ml-loratadina-15-mg-5ml.jpg",
+      "presentationKey": "frenalerd|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-010572",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alledryld|120mg|20",
+      "canonicalName": "Alledryl-D Pseudoefedrina 120 mg 20 Cápsulas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Alledryl-D 5/120 mg x 20 Cápsulas con Gránulos de Liberación Prolongada",
+          "channels": {
+            "store": 18209,
+            "online": null,
+            "cmr": 13657,
+            "sbpay": null,
+            "effective": 13657
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=alledryld%7C120mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Falledryl-d-5-120-mg-x-20-capsulas-con-granulos-de-liberacion-prolongada-44771.html&cfmId=CFM-012583",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6c1d51b1/images/products/44771/44771.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Alledryl-D Pseudoefedrina 120 mg 20 Cápsulas",
+          "channels": {
+            "store": 15390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=alledryld%7C120mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Falledryl-d-pseudoefedrina-120-mg-20-capsulas%2F250887.html&cfmId=CFM-012583",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw80cacf82/images/large/250887.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 13657,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw80cacf82/images/large/250887.jpg",
+      "presentationKey": "alledryld|120mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-012583",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "frenalerd|100ml",
+      "canonicalName": "Frenaler-D Loratadina / Pseudoefedrina Jarabe Infantil 100ml",
+      "laboratory": "Frenaler-D",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Frenaler-D Loratadina / Pseudoefedrina Jarabe Infantil 100ml",
+          "channels": {
+            "store": 17599,
+            "online": 14079,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14079
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=frenalerd%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ffrenaler-d-loratadina-pseudoefedrina-jarabe-infantil-100ml%3Fdefault_sku%3D430363&cfmId=CFM-010572",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/193488/small/430363.jpg?1782222329",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 14079,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/193488/small/430363.jpg?1782222329",
+      "presentationKey": "frenalerd|100ml|bio:unknown|brand:frenalerd|combo:pseudoefedrina|form:fluid-oral",
+      "cfmId": "CFM-010572",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "olokem|2.5ml",
+      "canonicalName": "Olokem (B) Olopatadina 0.2% Solucion Oftálmica 2.5ml",
+      "laboratory": "Olokem",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Olokem (B) Olopatadina 0.2% Solucion Oftálmica 2.5ml",
+          "channels": {
+            "store": 15999,
+            "online": 14079,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14079
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=olokem%7C2.5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Folokem-b-olopatadina-0-2-solucion-oftalmica-2-5ml%3Fdefault_sku%3D590872&cfmId=CFM-004348",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/138749/small/590872.jpg?1743440681",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 14079,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/138749/small/590872.jpg?1743440681",
+      "presentationKey": "olokem|2.5ml|bio:unknown|brand:olokem|var:olopatadina|form:ophthalmic",
+      "cfmId": "CFM-004348",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alledryld|5mg|20",
+      "canonicalName": "Alledryl-D Loratadina / Pseudoefedrina 5mg/120mg 20 Cápsulas Prolongadas",
+      "laboratory": "Alledryl D",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Alledryl-D Loratadina / Pseudoefedrina 5mg/120mg 20 Cápsulas Prolongadas",
+          "channels": {
+            "store": 18099,
+            "online": 15927,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15927
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=alledryld%7C5mg%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Falledryl-d-loratadina-pseudoefedrina-5mg-120mg-20-capsulas-prolongadas%3Fdefault_sku%3D901035&cfmId=CFM-012590",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/146549/small/901035.jpg?1748897903",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 15927,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/146549/small/901035.jpg?1748897903",
+      "presentationKey": "alledryld|5mg|20|bio:unknown|brand:alledryld|combo:pseudoefedrina|form:solid-oral",
+      "cfmId": "CFM-012590",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "frenaler|20",
+      "canonicalName": "Frenaler D x20com",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Frenaler D x20com",
+          "channels": {
+            "store": 15990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=frenaler%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Ffrenaler-d-x20com&cfmId=CFM-013417",
+          "imageUrl": "https://farmacia.araucomed.com/5778-home_default/frenaler-d-x20com.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 15990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5778-home_default/frenaler-d-x20com.jpg",
+      "presentationKey": "frenaler|20|bio:unknown|brand:chile|var:d|form:solid-oral",
+      "cfmId": "CFM-013417",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aerius|5ml",
+      "canonicalName": "Aerius Jarabe 2.5mg/5ml x...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Aerius Jarabe 2.5mg/5ml x...",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=aerius%7C5ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25934-aerius-jarabe.html&cfmId=CFM-014880",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 19990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "aerius|5ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-014880",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "patanol|2.5ml",
+      "canonicalName": "Patanol S Olopatadina 0.2% Solución Oftálmica 2.5ml",
+      "laboratory": "Patanol S",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Patanol S Olopatadina 0.2% Solución Oftálmica 2.5ml",
+          "channels": {
+            "store": 49799,
+            "online": 22410,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22410
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=patanol%7C2.5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpatanol-s-olopatadina-0-2-solucion-oftalmica-2-5ml%3Fdefault_sku%3D29733&cfmId=CFM-006486",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/68085/small/29733.jpg?1645203314",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 22410,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/68085/small/29733.jpg?1645203314",
+      "presentationKey": "patanol|2.5ml|bio:unknown|brand:patanols|var:s|form:ophthalmic",
+      "cfmId": "CFM-006486",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "zepiken|5ml",
+      "canonicalName": "Zepiken (B) Olopatadina 0.2% Solución Oftálmica 5ml",
+      "laboratory": "Zepiken",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Zepiken (B) Olopatadina 0.2% Solución Oftálmica 5ml",
+          "channels": {
+            "store": 27599,
+            "online": 24287,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24287
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=zepiken%7C5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fprincipio-activo-olopatadina%3Fdefault_sku%3D571308&cfmId=CFM-004345",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/64558/small/571308.jpg?1641328765",
+          "fetchedAt": "2026-08-31T01:23:38.261Z"
+        }
+      ],
+      "bestPrice": 24287,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/64558/small/571308.jpg?1641328765",
+      "presentationKey": "zepiken|5ml|bio:unknown|brand:zepiken|var:olopatadina|form:ophthalmic",
+      "cfmId": "CFM-004345",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aerius|5mg|30",
+      "canonicalName": "Aerius 5 mg 30 comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Aerius 5 mg 30 comprimidos",
+          "channels": {
+            "store": 24990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=aerius%7C5mg%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105617-aerius-5-mg-30-comprimidos-stock-2-venc-11-07-2026.html&cfmId=CFM-001375",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 24990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "aerius|5mg|30|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001375",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "olof|5ml",
+      "canonicalName": "Olof Olopatadina 0.2% Solución Oftálmica 5ml",
+      "laboratory": "Olof",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Olof Olopatadina 0.2% Solución Oftálmica 5ml",
+          "channels": {
+            "store": 28699,
+            "online": 25255,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 25255
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=olof%7C5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Folof-olopatadina-0-2-solucion-oftalmica-5ml%3Fdefault_sku%3D2974022&cfmId=CFM-004770",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/132101/small/2974022_1.jpg?1736195662",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 25255,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/132101/small/2974022_1.jpg?1736195662",
+      "presentationKey": "olof|5ml|bio:unknown|brand:olof|var:olopatadina|form:ophthalmic",
+      "cfmId": "CFM-004770",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "ryaltris|600mcg",
+      "canonicalName": "Ryaltris Olopatadina 600mcg Mometasona 25mcg Suspensión Nasal Nebulizacion 240 Dosis",
+      "laboratory": "Ryaltris",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ryaltris Olopatadina 600mcg Mometasona 25mcg Suspensión Nasal Nebulizacion 240 Dosis",
+          "channels": {
+            "store": 31899,
+            "online": 28071,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28071
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": false,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ryaltris%7C600mcg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fryaltris-olopatadina-600mcg-mometasona-25mcg-suspension-nasal-nebulizacion-240-dosis%3Fdefault_sku%3D591179&cfmId=CFM-014166",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/149309/small/591179_1.jpg?1750774715",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 28071,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/149309/small/591179_1.jpg?1750774715",
+      "presentationKey": "ryaltris|600mcg|bio:unknown|brand:ryaltris|var:olopatadina|form:inhaled",
+      "cfmId": "CFM-014166",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alergiol|5ml",
+      "canonicalName": "Alergiol Forte Olopatadina 0.2% Solución Oftálmica 5ml",
+      "laboratory": "Alergiol Forte",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Alergiol Forte Olopatadina 0.2% Solución Oftálmica 5ml",
+          "channels": {
+            "store": 31999,
+            "online": 28159,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28159
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=alergiol%7C5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Falergiol-forte-olopatadina-0-2-solucion-oftalmica-5ml%3Fdefault_sku%3D3070029&cfmId=CFM-001344",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/66182/small/3070029.jpg?1641916625",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 28159,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/66182/small/3070029.jpg?1641916625",
+      "presentationKey": "alergiol|5ml|bio:unknown|brand:alergiolforte|var:forte|form:ophthalmic",
+      "cfmId": "CFM-001344",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "olodina|5ml",
+      "canonicalName": "Olodina (B) PF Olopatadina 0.2% Solución Oftálmica 5ml",
+      "laboratory": "Olodina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Olodina (B) PF Olopatadina 0.2% Solución Oftálmica 5ml",
+          "channels": {
+            "store": 32599,
+            "online": 28687,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28687
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=olodina%7C5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Folodina-b-pf-olopatadina-0-2-solucion-oftalmica-5ml%3Fdefault_sku%3D589953&cfmId=CFM-011646",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/133713/small/589953.jpg?1737131089",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 28687,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/133713/small/589953.jpg?1737131089",
+      "presentationKey": "olodina|5ml|bio:unknown|brand:olodina|var:pf|form:ophthalmic",
+      "cfmId": "CFM-011646",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "patanol|5ml",
+      "canonicalName": "Patanol Olopatadina 0.1% Solución Oftálmica 5ml",
+      "laboratory": "Patanol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Patanol Olopatadina 0.1% Solución Oftálmica 5ml",
+          "channels": {
+            "store": 47999,
+            "online": 28799,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 28799
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=patanol%7C5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpatanol-olopatadina-0-1-solucion-oftalmica-5ml%3Fdefault_sku%3D24005&cfmId=CFM-006483",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/68083/small/24005.jpg?1645188648",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 28799,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/68083/small/24005.jpg?1645188648",
+      "presentationKey": "patanol|5ml|bio:unknown|brand:patanol|var:olopatadina|form:ophthalmic",
+      "cfmId": "CFM-006483",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "neo|5mg|30",
+      "canonicalName": "Neo Alledryl desloratadina 5mg por  30 comp.DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Neo Alledryl desloratadina 5mg por  30 comp.DESCUENTO",
+          "channels": {
+            "store": 1100,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1100
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=neo%7C5mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fneo-alledryl-desloratadina-5mg-por-30-comp-descuento%2F&cfmId=CFM-001378",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-30.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 1100,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-30.jpg",
+      "presentationKey": "neo|5mg|30|bio:true|brand:unknown|var:alledryl|form:solid-oral",
+      "cfmId": "CFM-001378",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "desloratadina|5mg|30",
+      "canonicalName": "Desloratadina 5mg x 30 comprimidos recubiertos (CuraeSpring)",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Desloratadina 5mg x 30 comprimidos recubiertos (CuraeSpring)",
+          "channels": {
+            "store": 1380,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1380
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=desloratadina%7C5mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdesloratadina-5mg-x-30-comprimidos-recubiertos-curaespring%2F&cfmId=CFM-004159",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/01/Desloratadina5mg30comp-1.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 1380,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/01/Desloratadina5mg30comp-1.jpg",
+      "presentationKey": "desloratadina|5mg|30|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-004159",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "desloratadina|60ml",
+      "canonicalName": "Desloratadina 2,5mg jarabe 60ml DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Desloratadina 2,5mg jarabe 60ml DESCUENTO",
+          "channels": {
+            "store": 2090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2090
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=desloratadina%7C60ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdesloratadina-25mg-jarabe-60ml-descuento%2F&cfmId=CFM-014372",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/08/7804614931216.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 2090,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/08/7804614931216.jpg",
+      "presentationKey": "desloratadina|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-014372",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|5mg|30",
+      "canonicalName": "Neo-Alledryl Desloratadina 5 mg x 30 Comprimidos (Prater)",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Neo-Alledryl Desloratadina 5 mg x 30 Comprimidos (Prater)",
+          "channels": {
+            "store": 2140,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2140
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=neoalledryl%7C5mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fneo-alledryl-desloratadina-5-mg-x-30-comprimidos-prater%2F&cfmId=CFM-002726",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-30.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 2140,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/neoalledryl-5-x-30.jpg",
+      "presentationKey": "neoalledryl|5mg|30|bio:true|brand:unknown|var:desloratadina|form:solid-oral",
+      "cfmId": "CFM-002726",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "lotadin|120ml",
+      "canonicalName": "Lotadin Desloratadina 2.5mg Jarabe 120 Ml (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Lotadin Desloratadina 2.5mg Jarabe 120 Ml (Cenabast)",
+          "channels": {
+            "store": 2210,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2210
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=lotadin%7C120ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Flotadin-desloratadina-2-5mg-jarabe-120-ml-cenabast%2F&cfmId=CFM-014374",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/01/lotadin-1.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 2210,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/01/lotadin-1.jpg",
+      "presentationKey": "lotadin|120ml|bio:unknown|brand:unknown|var:desloratadina|form:fluid-oral",
+      "cfmId": "CFM-014374",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|5mg|30",
+      "canonicalName": "NeoAlledryl desloratadina 5 mg 30 comprimidos recubiertos",
+      "laboratory": "PRATER",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "NeoAlledryl desloratadina 5 mg 30 comprimidos recubiertos",
+          "channels": {
+            "store": 2880,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2880
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=neoalledryl%7C5mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fdesloratadina-5-mg-30-comprimidos-recubiertos%2Fp&cfmId=CFM-002726",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160431/BE0019-1-antigua.webp?v=639062387100170000",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 2880,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160431/BE0019-1-antigua.webp?v=639062387100170000",
+      "presentationKey": "neoalledryl|5mg|30|bio:true|brand:prater|var:desloratadina|form:solid-oral",
+      "cfmId": "CFM-002726",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "desloratadina|5mg|30",
+      "canonicalName": "Desloratadina 5 Mg 30 Comp....",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Desloratadina 5 Mg 30 Comp....",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=desloratadina%7C5mg%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105313-desloratadina-5-mg-30-comp-recubiertos-curaespring.html&cfmId=CFM-004159",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "desloratadina|5mg|30|bio:unknown|brand:curaespring|form:solid-oral",
+      "cfmId": "CFM-004159",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "desloratadina|5mg",
+      "canonicalName": "Desloratadina 5 Mg 30...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Desloratadina 5 Mg 30...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=desloratadina%7C5mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105119-desloratadina-5-mg-30-comprimidos-ascend.html&cfmId=CFM-014896",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "desloratadina|5mg|bio:unknown|brand:ascend",
+      "cfmId": "CFM-014896",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "desloratadina|5mg",
+      "canonicalName": "Desloratadina 5 Mg 30...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Desloratadina 5 Mg 30...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=desloratadina%7C5mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26288-desloratadina-5mg-x-30.html&cfmId=CFM-014896",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "desloratadina|5mg|bio:unknown|brand:unknown",
+      "cfmId": "CFM-014896",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "desloratadina",
+      "canonicalName": "Desloratadina jarabe 2,5...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Desloratadina jarabe 2,5...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=desloratadina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25688-desloratadina-25mg-jarabe-x-60ml.html&cfmId=CFM-005002",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:23:38.264Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "desloratadina|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-005002",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neo|60ml",
+      "canonicalName": "Neo Alledryl desloratadina 2,5 mg/5 mL jarabe 60 mL",
+      "laboratory": "PRATER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Neo Alledryl desloratadina 2,5 mg/5 mL jarabe 60 mL",
+          "channels": {
+            "store": 3000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=neo%7C60ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fneoalledryl-desloratadina-2-5-mg-5ml-solucion-60-ml%2Fp&cfmId=CFM-002771",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156787/CH7362-1.jpg?v=637964774752870000",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 3000,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156787/CH7362-1.jpg?v=637964774752870000",
+      "presentationKey": "neo|60ml|bio:false|brand:prater|var:alledryl|form:fluid-oral",
+      "cfmId": "CFM-002771",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryl|60ml",
+      "canonicalName": "Neoalledryl Jarabe (desloratadina) 2,5mg/5ml 60ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Neoalledryl Jarabe (desloratadina) 2,5mg/5ml 60ml",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=neoalledryl%7C60ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20736%26d_%3D1&cfmId=CFM-003909",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918450406.jpg?v=6a94d799912a6",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 4490,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804918450406.jpg?v=6a94d799912a6",
+      "presentationKey": "neoalledryl|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-003909",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "despeval|100ml",
+      "canonicalName": "Despeval Desloratadina 2,5 mg/5 ml Jarabe 100 Ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Despeval Desloratadina 2,5 mg/5 ml Jarabe 100 Ml",
+          "channels": {
+            "store": 6980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=despeval%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdespeval-desloratadina-25-mg-5-ml-jarabe-100-ml%2F&cfmId=CFM-005665",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/08/2971861.jpg",
+          "fetchedAt": "2026-08-31T01:23:38.263Z"
+        }
+      ],
+      "bestPrice": 6980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/08/2971861.jpg",
+      "presentationKey": "despeval|100ml|bio:unknown|brand:unknown|var:desloratadina|form:fluid-oral",
+      "cfmId": "CFM-005665",
+      "lexicalMatch": "mismatch"
+    },
+    {
+      "matchKey": "neoalledryld|2.5mg|30",
+      "canonicalName": "NeoAlledryl-D desloratadina 2,5 mg pseudoefedrina 120 mg 30 comprimidos de liberación prolongada",
+      "laboratory": "PRATER",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "NeoAlledryl-D desloratadina 2,5 mg pseudoefedrina 120 mg 30 comprimidos de liberación prolongada",
+          "channels": {
+            "store": 8120,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8120
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=neoalledryld%7C2.5mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fneo-alledryl-d-30-comprimidos-de-liberacion-prolongada%2Fp&cfmId=CFM-002770",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156414/CH5799-1.jpg?v=637964773424830000",
+          "fetchedAt": "2026-08-31T01:23:38.262Z"
+        }
+      ],
+      "bestPrice": 8120,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156414/CH5799-1.jpg?v=637964773424830000",
+      "presentationKey": "neoalledryld|2.5mg|30|bio:false|brand:prater|var:desloratadina|form:solid-oral",
+      "cfmId": "CFM-002770",
+      "lexicalMatch": "mismatch"
+    }
+  ]
+}

@@ -1,0 +1,855 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "dipirona",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=dipirona",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:25:00.482Z",
+  "completedAt": "2026-08-31T01:25:10.440Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 26,
+  "results": [
+    {
+      "matchKey": "metamizol|300mg|20",
+      "canonicalName": "Metamizol (dipirona) 300mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Metamizol Sódico (Dipirona) 300 mg x 20 Comprimidos",
+          "channels": {
+            "store": 980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 980
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=metamizol%7C300mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmetamizol-sodico-dipirona-300-mg-x-20-comprimidos%2F&cfmId=CFM-010447",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/03/Metamizol-300-mg.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Metamizol (dipirona) 300mg 20 Comprimidos",
+          "channels": {
+            "store": 1290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=metamizol%7C300mg%7C20&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D16487%26d_%3D1&cfmId=CFM-010447",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800044001444.jpg?v=6a94d7f588378",
+          "fetchedAt": "2026-08-31T01:25:09.940Z"
+        }
+      ],
+      "bestPrice": 980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800044001444.jpg?v=6a94d7f588378",
+      "presentationKey": "metamizol|300mg|20|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-010447",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dipirona|20",
+      "canonicalName": "Dipirona Metamizol Sódico x 20 comprimidos Valma",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Dipirona Metamizol Sódico x 20 comprimidos Valma",
+          "channels": {
+            "store": 980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 980
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=dipirona%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdipirona-metamizol-sodico-x-20-comprimidos-valma%2F&cfmId=CFM-014127",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/metamizol-sodico-x-20.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/metamizol-sodico-x-20.jpg",
+      "presentationKey": "dipirona|20|bio:unknown|brand:unknown|var:metamizol|form:solid-oral",
+      "cfmId": "CFM-014127",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "piretanyl|322mg|100",
+      "canonicalName": "Piretanyl Metamizol 322 mg 100 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Piretanyl Metamizol 322 mg 100 Comprimidos",
+          "channels": {
+            "store": 1040,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1040
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=piretanyl%7C322mg%7C100&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpiretanyl-metamizol-322-mg-100-comprimidos%2F41028.html&cfmId=CFM-002879",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw688621a8/images/large/41028-piretanyl-metamizol-322-mg-100-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 1040,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw688621a8/images/large/41028-piretanyl-metamizol-322-mg-100-comprimidos.jpg",
+      "presentationKey": "piretanyl|322mg|100|bio:unknown|brand:unknown|var:metamizol|form:solid-oral",
+      "cfmId": "CFM-002879",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "metamizol",
+      "canonicalName": "Metamizol Sodico ( Dipirona...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Metamizol Sodico ( Dipirona...",
+          "channels": {
+            "store": 1190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=metamizol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26776-dipirona-300mg-x-10.html&cfmId=CFM-014125",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:25:09.940Z"
+        }
+      ],
+      "bestPrice": 1190,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "metamizol|bio:unknown|brand:unknown",
+      "cfmId": "CFM-014125",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dipirona|250mg|5",
+      "canonicalName": "Dipirona 250 mg x 5 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Dipirona 250 mg x 5 Supositorios",
+          "channels": {
+            "store": 1520,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1520
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=dipirona%7C250mg%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdipirona-250-mg-x-5-supositorios-586.html&cfmId=CFM-010445",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw56310c40/images/products/586/586.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        },
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Dipirona 250Mg X 5 Supositorios (Lab Pasteur)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=dipirona%7C250mg%7C5&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdipirona-250mg-x-5-supositorios%2F&cfmId=CFM-010445",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/08/dipirona-5-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 1520,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw56310c40/images/products/586/586.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "dipirona|250mg|5|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-010445",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "dipirona",
+      "canonicalName": "Dipirona Metamizol Sódico 5 Supositorios",
+      "laboratory": "Dipirona",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Dipirona Metamizol Sódico 5 Supositorios",
+          "channels": {
+            "store": 1799,
+            "online": 1583,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1583
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=dipirona&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdipirona-metamizol-sodico-5-supositorios%3Fdefault_sku%3D2503190&cfmId=CFM-013639",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/52019/small/2503190-min.jpg?1641329641",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 1583,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/52019/small/2503190-min.jpg?1641329641",
+      "presentationKey": "dipirona|bio:unknown|brand:dipirona|var:metamizol|form:suppository",
+      "cfmId": "CFM-013639",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "metamizol|250mg",
+      "canonicalName": "Metamizol 250 mg 5 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Metamizol 250 mg 5 Supositorios",
+          "channels": {
+            "store": 1680,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1680
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=metamizol%7C250mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmetamizol-250-mg-5-supositorios%2F199232.html&cfmId=CFM-013625",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw57981c66/images/large/199232-1.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 1680,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw57981c66/images/large/199232-1.jpg",
+      "presentationKey": "metamizol|250mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013625",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "metamizol|2ml|5",
+      "canonicalName": "Metamizol Sódico 1 gr / 2 mL 5 Ampollas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Metamizol Sódico 1 gr / 2 mL 5 Ampollas",
+          "channels": {
+            "store": 2100,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2100
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=metamizol%7C2ml%7C5&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmetamizol-sodico-1-gr-2-ml-5-ampollas%2F199390.html&cfmId=CFM-009729",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwacbd7685/images/large/199390-metamizol-1-gr-5-ampollas.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 2100,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwacbd7685/images/large/199390-metamizol-1-gr-5-ampollas.jpg",
+      "presentationKey": "metamizol|2ml|5|bio:unknown|brand:unknown|form:injectable",
+      "cfmId": "CFM-009729",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "piretanyl|322mg|20",
+      "canonicalName": "Piretanyl Metamizol Sódico 322 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Piretanyl Metamizol Sódico 322 mg 20 Comprimidos",
+          "channels": {
+            "store": 2190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=piretanyl%7C322mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpiretanyl-metamizol-sodico-322-mg-20-comprimidos%2F41026.html&cfmId=CFM-002880",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw561fab51/images/large/41026-piretanyl-clorfen-322-mg-20-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 2190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw561fab51/images/large/41026-piretanyl-clorfen-322-mg-20-comprimidos.jpg",
+      "presentationKey": "piretanyl|322mg|20|bio:unknown|brand:unknown|var:metamizol|form:solid-oral",
+      "cfmId": "CFM-002880",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "dipirona|300mg|20",
+      "canonicalName": "Dipirona 300 mg x 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Dipirona 300 mg x 20 Comprimidos",
+          "channels": {
+            "store": 2330,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2330
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=dipirona%7C300mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdipirona-300-mg-x-20-comprimidos-599.html&cfmId=CFM-010446",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw20aed8fd/images/products/599/599.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 2330,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw20aed8fd/images/products/599/599.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "dipirona|300mg|20|bio:true|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-010446",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "metamizol|300mg|20",
+      "canonicalName": "Metamizol 300 mg 20 Comprimidos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Metamizol 300 mg 20 Comprimidos",
+          "channels": {
+            "store": 2380,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2380
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=metamizol%7C300mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmetamizol-300-mg-20-comprimidos%2F291922.html&cfmId=CFM-010447",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw684772fd/images/large/291922.1.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 2380,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw684772fd/images/large/291922.1.jpg",
+      "presentationKey": "metamizol|300mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-010447",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "migranol|300mg|10",
+      "canonicalName": "Migranol Metamizol 300 mg 10 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Migranol Metamizol 300 mg 10 Comprimidos Recubiertos",
+          "channels": {
+            "store": 2790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=migranol%7C300mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmigranol-metamizol-300-mg-10-comprimidos-recubiertos%2F9070.html&cfmId=CFM-005552",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6d84e37e/images/large/9070-migranol-comprimido-recubierto-10-unidades-ergotamina-300-mg.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 2790,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6d84e37e/images/large/9070-migranol-comprimido-recubierto-10-unidades-ergotamina-300-mg.jpg",
+      "presentationKey": "migranol|300mg|10|bio:unknown|brand:unknown|var:metamizol|form:solid-oral",
+      "cfmId": "CFM-005552",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "metamizol|500mg|5",
+      "canonicalName": "Metamizol Sódico Dipirona 500 mg x 5 supositorios",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Metamizol Sódico Dipirona 500 mg x 5 supositorios",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=metamizol%7C500mg%7C5&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmetamizol-sodico-500-mg-x-5-supositorios%3F_pos%3D9%26_psq%3Ddipirona%26_psid%3D140a7be15%26_ss%3De&cfmId=CFM-013640",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metamizol-sodico-500-mg-x-5-supositorios-pasteur-675444.jpg?v=1692989638",
+          "fetchedAt": "2026-08-31T01:25:09.940Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metamizol-sodico-500-mg-x-5-supositorios-pasteur-675444.jpg?v=1692989638",
+      "presentationKey": "metamizol|500mg|5|bio:unknown|brand:pasteur|var:dipirona|form:suppository",
+      "cfmId": "CFM-013640",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ultrimin|300mg|10",
+      "canonicalName": "Ultrimin Metamizol 300mg + Cafeína 100mg + Ergotamina 1mg + Clorfenamina maletato 10 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Ultrimin Metamizol 300mg + Cafeína 100mg + Ergotamina 1mg + Clorfenamina maletato 10 Comprimidos Recubiertos",
+          "channels": {
+            "store": 3590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=ultrimin%7C300mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fultrimin-metamizol-300mg-cafeina-100mg-ergotamina-1mg-clorfenamina-maletato-10-comprimidos-recubiertos%2F193032.html&cfmId=CFM-010017",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7c25b09a/images/large/193032-ultrimin-10-comprimidos.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 3590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7c25b09a/images/large/193032-ultrimin-10-comprimidos.jpg",
+      "presentationKey": "ultrimin|300mg|10|bio:unknown|brand:unknown|combo:cafeina|form:solid-oral",
+      "cfmId": "CFM-010017",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "dipirona|300mg|20",
+      "canonicalName": "Dipirona Metamizol Sódico 300mg 20 Comprimidos",
+      "laboratory": "Dipirona",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Dipirona Metamizol Sódico 300mg 20 Comprimidos",
+          "channels": {
+            "store": 4199,
+            "online": 3695,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3695
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=dipirona%7C300mg%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdipirona-metamizol-sodico-300mg-20-comprimidos%3Fdefault_sku%3D3350144&cfmId=CFM-010446",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/64977/small/3350144.jpg?1641328746",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 3695,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/64977/small/3350144.jpg?1641328746",
+      "presentationKey": "dipirona|300mg|20|bio:unknown|brand:dipirona|var:metamizol|form:solid-oral",
+      "cfmId": "CFM-010446",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "metamizol|500mg|5",
+      "canonicalName": "Metamizol Sódico (Dipirona) 500mg x 5 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Metamizol Sódico (Dipirona) 500mg x 5 Supositorios",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=metamizol%7C500mg%7C5&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmetamizol-sodico-dipirona-500mg-x-5-supositorios%2F&cfmId=CFM-013640",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/08/NRG_380715_SKU_7800068013409.jpeg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/08/NRG_380715_SKU_7800068013409.jpeg",
+      "presentationKey": "metamizol|500mg|5|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-013640",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cefalmin|300mg|10",
+      "canonicalName": "Cefalmin Metamizol 300 mg 10 Comprimidos Recubiertos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cefalmin Metamizol 300 mg 10 Comprimidos Recubiertos",
+          "channels": {
+            "store": 4240,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4240
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cefalmin%7C300mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcefalmin-metamizol-300-mg-10-comprimidos-recubiertos%2F12096.html&cfmId=CFM-002740",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfe3c500c/images/large/12096-cefalmin-comprimido-recubierto-10-unidades-ergotamina-300-mg.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 4240,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfe3c500c/images/large/12096-cefalmin-comprimido-recubierto-10-unidades-ergotamina-300-mg.jpg",
+      "presentationKey": "cefalmin|300mg|10|bio:unknown|brand:unknown|var:metamizol|form:solid-oral",
+      "cfmId": "CFM-002740",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "kitadol|60ml",
+      "canonicalName": "Kitadol Infantil 120mg/5ml jarabe 60 ml. (Cenabast)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Kitadol Infantil 120mg/5ml jarabe 60 ml. (Cenabast)",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C60ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-infantil-120mg-5ml-jarabe-60ml-cenabast&cfmId=CFM-000080",
+          "imageUrl": "https://farmacia.araucomed.com/7666-home_default/kitadol-infantil-120mg-5ml-jarabe-60ml-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 4490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7666-home_default/kitadol-infantil-120mg-5ml-jarabe-60ml-cenabast.jpg",
+      "presentationKey": "kitadol|60ml|bio:unknown|brand:chile|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000080",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "metamizol|300mg|300",
+      "canonicalName": "Metamizol Sodico Dipirona 300 mg x 300 comp.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Metamizol Sodico Dipirona 300 mg x 300 comp.",
+          "channels": {
+            "store": 8490,
+            "online": null,
+            "cmr": 6694,
+            "sbpay": null,
+            "effective": 6694
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=metamizol%7C300mg%7C300&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmetamizol-sodico-dipirona-300-mg-x-300-comp-1%3F_pos%3D2%26_psq%3Ddipirona%26_psid%3D140a7be15%26_ss%3De&cfmId=CFM-014126",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/metamizol-sodico-dipirona-300-mg-x-300-comp-valma-823572_0470dda6-275f-4005-98d1-4fa3f7545a99.jpg?v=1788136825",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 6694,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/metamizol-sodico-dipirona-300-mg-x-300-comp-valma-823572_0470dda6-275f-4005-98d1-4fa3f7545a99.jpg?v=1788136825",
+      "presentationKey": "metamizol|300mg|300|bio:unknown|brand:unknown|var:dipirona|form:solid-oral",
+      "cfmId": "CFM-014126",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "bevitex|30ml",
+      "canonicalName": "Bevitex Compuesto Metamizol 300 mg / mL Gotas Orales 30 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Bevitex Compuesto Metamizol 300 mg / mL Gotas Orales 30 mL",
+          "channels": {
+            "store": 7290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=bevitex%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbevitex-compuesto-metamizol-300-mg-ml-gotas-orales-30-ml%2F288121.html&cfmId=CFM-000350",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0e3e2e95/images/large/288121-bevitex-compuesto-gotas-orales-30-ml-propinoxato-6-mg-ml.jpg",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 7290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0e3e2e95/images/large/288121-bevitex-compuesto-gotas-orales-30-ml-propinoxato-6-mg-ml.jpg",
+      "presentationKey": "bevitex|30ml|bio:unknown|brand:unknown|var:compuesto|form:fluid-oral",
+      "cfmId": "CFM-000350",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "metamizol|300mg|300",
+      "canonicalName": "Metamizol Sodico Dipirona 300 mg x 300 comp",
+      "laboratory": "VALMA",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Metamizol Sodico Dipirona 300 mg x 300 comp",
+          "channels": {
+            "store": 8490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=metamizol%7C300mg%7C300&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmetamizol-sodico-dipirona-300-mg-x-300-comp%3F_pos%3D1%26_psq%3Ddipirona%26_psid%3D140a7be15%26_ss%3De&cfmId=CFM-014126",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metamizol-sodico-dipirona-300-mg-x-300-comp-valma-823572.jpg?v=1692989556",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 8490,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metamizol-sodico-dipirona-300-mg-x-300-comp-valma-823572.jpg?v=1692989556",
+      "presentationKey": "metamizol|300mg|300|bio:unknown|brand:valma|var:dipirona|form:solid-oral",
+      "cfmId": "CFM-014126",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "diprotan|30mg|30",
+      "canonicalName": "Diprotan (B) Duloxetina 30mg 30 Cápsulas",
+      "laboratory": "Diprotan",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Diprotan (B) Duloxetina 30mg 30 Cápsulas",
+          "channels": {
+            "store": 23099,
+            "online": 11549,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11549
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=diprotan%7C30mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdiprotan-b-duloxetina-30mg-30-capsulas%3Fdefault_sku%3D586387&cfmId=CFM-003484",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/174926/small/586387.jpg?1769455634",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 11549,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/174926/small/586387.jpg?1769455634",
+      "presentationKey": "diprotan|30mg|30|bio:unknown|brand:diprotan|var:duloxetina|form:solid-oral",
+      "cfmId": "CFM-003484",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "diprotan|60mg|30",
+      "canonicalName": "Diprotan (B) Duloxetina 60mg 30 Cápsulas",
+      "laboratory": "Diprotan",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Diprotan (B) Duloxetina 60mg 30 Cápsulas",
+          "channels": {
+            "store": 24499,
+            "online": 12249,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12249
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=diprotan%7C60mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdiprotan-b-duloxetina-60mg-30-capsulas%3Fdefault_sku%3D585942&cfmId=CFM-003480",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/138346/small/585942.jpg?1742568258",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 12249,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/138346/small/585942.jpg?1742568258",
+      "presentationKey": "diprotan|60mg|30|bio:unknown|brand:diprotan|var:duloxetina|form:solid-oral",
+      "cfmId": "CFM-003480",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "pironal|12",
+      "canonicalName": "Pironal Flu Forte Ibuprofeno / Pseudoefedrina 12 Comprimidos Recubiertos",
+      "laboratory": "Pironal",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Pironal Flu Forte Ibuprofeno / Pseudoefedrina 12 Comprimidos Recubiertos",
+          "channels": {
+            "store": 15299,
+            "online": 13463,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13463
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=pironal%7C12&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpironal-flu-forte-ibuprofeno-pseudoefedrina-12-comprimidos-recubiertos%3Fdefault_sku%3D2591620&cfmId=CFM-000117",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28114/small/2591620.jpg?1641479678",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 13463,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28114/small/2591620.jpg?1641479678",
+      "presentationKey": "pironal|12|bio:unknown|brand:pironal|combo:pseudoefedrina|form:solid-oral",
+      "cfmId": "CFM-000117",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "pironal|100ml",
+      "canonicalName": "Pironal Forte Ibuprofeno Jarabe 100ml",
+      "laboratory": "Pironal Forte",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Pironal Forte Ibuprofeno Jarabe 100ml",
+          "channels": {
+            "store": 16299,
+            "online": 14343,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14343
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=pironal%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpironal-fte-200mg-5ml-suspension-oral%3Fdefault_sku%3D2590008&cfmId=CFM-000105",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/50846/small/pironal.jpg?1641329747",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 14343,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/50846/small/pironal.jpg?1641329747",
+      "presentationKey": "pironal|100ml|bio:unknown|brand:pironalforte|var:forte|form:fluid-oral",
+      "cfmId": "CFM-000105",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "pironal|100ml",
+      "canonicalName": "Pironal Flu Forte Ibuprofeno / Pseudoefedrina Jarabe 100ml",
+      "laboratory": "Pironal",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Pironal Flu Forte Ibuprofeno / Pseudoefedrina Jarabe 100ml",
+          "channels": {
+            "store": 17399,
+            "online": 15311,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15311
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=pironal%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpironal-flu-forte-ibuprofeno-pseudoefedrina-jarabe-100ml%3Fdefault_sku%3D2591569&cfmId=CFM-000105",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28112/small/2591569.jpg?1641479678",
+          "fetchedAt": "2026-08-31T01:25:09.939Z"
+        }
+      ],
+      "bestPrice": 15311,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28112/small/2591569.jpg?1641479678",
+      "presentationKey": "pironal|100ml|bio:unknown|brand:pironal|combo:pseudoefedrina|form:fluid-oral",
+      "cfmId": "CFM-000105",
+      "lexicalMatch": "compatible"
+    }
+  ]
+}

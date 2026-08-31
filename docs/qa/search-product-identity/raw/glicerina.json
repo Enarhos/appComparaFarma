@@ -1,0 +1,3183 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "glicerina",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=glicerina",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:24:04.394Z",
+  "completedAt": "2026-08-31T01:24:12.186Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 100,
+  "results": [
+    {
+      "matchKey": "palmolive|85000mg",
+      "canonicalName": "Palmolive jabón en barra humectante Oliva y Aloe Vera 85 g.",
+      "laboratory": "Palmolive",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Palmolive jabón en barra humectante Oliva y Aloe Vera 85 g.",
+          "channels": {
+            "store": 650,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 650
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=palmolive%7C85000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fjabones%2Fpalmolive-jabon-oliva-y-aloe-vera-85-g&cfmId=CFM-004233",
+          "imageUrl": "https://farmacia.araucomed.com/13512-home_default/palmolive-jabon-oliva-y-aloe-vera-85-g.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 650,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13512-home_default/palmolive-jabon-oliva-y-aloe-vera-85-g.jpg",
+      "presentationKey": "palmolive|85000mg|bio:unknown|brand:palmolive|var:jabon",
+      "cfmId": "CFM-004233",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "sanyfarm",
+      "canonicalName": "SANY FARM ALCO.GEL70° 60M",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "SANY FARM ALCO.GEL70° 60M",
+          "channels": {
+            "store": 1000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=sanyfarm&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsany-farm-alco-gel70-60m%2F574585.html&cfmId=CFM-005972",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/es_CL/v1788105266698/images/large/",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 1000,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/es_CL/v1788105266698/images/large/",
+      "presentationKey": "sanyfarm|bio:unknown|brand:unknown|var:alco",
+      "cfmId": "CFM-005972",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "jabon|70000mg",
+      "canonicalName": "Jabón Glicerina Idem 70g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Jabón Glicerina Idem 70g",
+          "channels": {
+            "store": 1290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=jabon%7C70000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fjabon-glicerina-idem-70g%2F&cfmId=CFM-012706",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/jabon-glicerina.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1290,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/jabon-glicerina.jpg",
+      "presentationKey": "jabon|70000mg|bio:unknown|brand:unknown|var:glicerina",
+      "cfmId": "CFM-012706",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon|90000mg|90",
+      "canonicalName": "Jabón de Glicerina x 90 g",
+      "laboratory": "Q-NAT",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Jabón de Glicerina x 90 g",
+          "channels": {
+            "store": 1290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=jabon%7C90000mg%7C90&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fjabon-de-glicerina-x-90-gr%3F_pos%3D5%26_psq%3Dglicerina%26_psid%3D94264f646%26_ss%3De&cfmId=CFM-005633",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/jabon-de-glicerina-x-90-gr-q-nat-850679.jpg?v=1692989579",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1290,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/jabon-de-glicerina-x-90-gr-q-nat-850679.jpg?v=1692989579",
+      "presentationKey": "jabon|90000mg|90|bio:unknown|brand:qnat|var:glicerina",
+      "cfmId": "CFM-005633",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ballerina|750ml",
+      "canonicalName": "Ballerina Jabon de Glicerina 750 ML",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ballerina Jabon de Glicerina 750 ML",
+          "channels": {
+            "store": 1480,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1480
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ballerina%7C750ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fballerina-jabon-de-glicerina-750-ml%2F&cfmId=CFM-004450",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/Sin_t_tulo-1-1.png",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1480,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/Sin_t_tulo-1-1.png",
+      "presentationKey": "ballerina|750ml|bio:unknown|brand:unknown|var:jabon",
+      "cfmId": "CFM-004450",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon",
+      "canonicalName": "Jabon De Glicerina Coco 340...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Jabon De Glicerina Coco 340...",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=jabon&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104311-jabon-de-glicerina-coco-340-ml-elite.html&cfmId=CFM-002264",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:10.601Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "jabon|bio:unknown|brand:elite|var:glicerina",
+      "cfmId": "CFM-002264",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cranberry",
+      "canonicalName": "Cranberry Hidrogel pomo 15 gramos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Cranberry Hidrogel pomo 15 gramos",
+          "channels": {
+            "store": 1690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cranberry&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fapositos%2Fcranberry-hidrogel-pomo-15-gramos&cfmId=CFM-004906",
+          "imageUrl": "https://farmacia.araucomed.com/12017-home_default/cranberry-hidrogel-pomo-15-gramos.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 1690,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12017-home_default/cranberry-hidrogel-pomo-15-gramos.jpg",
+      "presentationKey": "cranberry|bio:unknown|brand:unknown|var:hidrogel",
+      "cfmId": "CFM-004906",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "babyland|750ml",
+      "canonicalName": "Babyland Jabon de Glicerina Ph Neutro 750 ML",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Babyland Jabon de Glicerina Ph Neutro 750 ML",
+          "channels": {
+            "store": 1690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=babyland%7C750ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fbabyland-jabon-de-glicerina-ph-neutro-750-ml%2F&cfmId=CFM-014914",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/11/Principal-600.png",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1690,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/11/Principal-600.png",
+      "presentationKey": "babyland|750ml|bio:unknown|brand:unknown|var:jabon",
+      "cfmId": "CFM-014914",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "qnat",
+      "canonicalName": "Q-Nat Jabon Glicerina sin...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Q-Nat Jabon Glicerina sin...",
+          "channels": {
+            "store": 1690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=qnat&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26321-q-nat-jabon-glicerina-sin-sal-x-90gr.html&cfmId=CFM-009214",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1690,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "qnat|bio:unknown|brand:90gr|var:jabon",
+      "cfmId": "CFM-009214",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "reutter|60",
+      "canonicalName": "Reutter Glicerina x 60 ml2",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Reutter Glicerina x 60 ml2",
+          "channels": {
+            "store": 1790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=reutter%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Freutter-glicerina-x-60-ml%2F&cfmId=CFM-014922",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/04/GLICERINA-REUTTER.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1790,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/04/GLICERINA-REUTTER.jpg",
+      "presentationKey": "reutter|60|bio:unknown|brand:unknown|var:glicerina",
+      "cfmId": "CFM-014922",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "prepie",
+      "canonicalName": "La Prepie Parche Gel Frio 4Un",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "La Prepie Parche Gel Frio 4Un",
+          "channels": {
+            "store": 1869,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1869
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=prepie&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fla-prepie-parche-gel-frio-4un-85191.html&cfmId=CFM-010185",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdde632d8/images/products/85191/85191.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 1869,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdde632d8/images/products/85191/85191.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "prepie|bio:unknown|brand:unknown|var:frio|form:patch",
+      "cfmId": "CFM-010185",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "trianon|100000mg",
+      "canonicalName": "Trianon Jabón Barra de Glicerina 100g",
+      "laboratory": "Trianon",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Trianon Jabón Barra de Glicerina 100g",
+          "channels": {
+            "store": 1899,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1899
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=trianon%7C100000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftrianon-jabon-barra-de-glicerina-100g%3Fdefault_sku%3D5740100&cfmId=CFM-012707",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/10924/small/5740100.jpg?1641480509",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 1899,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/10924/small/5740100.jpg?1641480509",
+      "presentationKey": "trianon|100000mg|bio:unknown|brand:trianon|var:jabon",
+      "cfmId": "CFM-012707",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|3500mg|10",
+      "canonicalName": "Supositorio Glicerina 3.5g Adulto x 10unidades Valma DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Supositorio Glicerina 3.5g Adulto x 10unidades Valma DESCUENTO",
+          "channels": {
+            "store": 1980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glicerina%7C3500mg%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsupositorio-glicerina-3-5g-adulto-x-10-unidades-valma-descuento%2F&cfmId=CFM-014923",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/06/supositorios-glicerina.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/06/supositorios-glicerina.jpg",
+      "presentationKey": "glicerina|3500mg|10|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-014923",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|60000mg",
+      "canonicalName": "Glicerina Pura 60 g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Glicerina Pura 60 g",
+          "channels": {
+            "store": 1980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glicerina%7C60000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fglicerina-pura-60-g%2F&cfmId=CFM-014917",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/11/glicerina.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/11/glicerina.jpg",
+      "presentationKey": "glicerina|60000mg|bio:unknown|brand:unknown|var:pura",
+      "cfmId": "CFM-014917",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|10",
+      "canonicalName": "Glicerina Supositorio adulto 3,5 gramos. x 10 unidades.",
+      "laboratory": "Valma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Glicerina Supositorio adulto 3,5 gramos. x 10 unidades.",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=glicerina%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Flaxantes%2Fglicerina-supositorio-adulto-35g-x10sup&cfmId=CFM-012138",
+          "imageUrl": "https://farmacia.araucomed.com/5786-home_default/glicerina-supositorio-adulto-35g-x10sup.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5786-home_default/glicerina-supositorio-adulto-35g-x10sup.jpg",
+      "presentationKey": "glicerina|10|bio:unknown|brand:valma|form:suppository",
+      "cfmId": "CFM-012138",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|20",
+      "canonicalName": "Glicerina Supositorio infantil (1/4) 1 gramo  x 20 unidades.",
+      "laboratory": "Valma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Glicerina Supositorio infantil (1/4) 1 gramo  x 20 unidades.",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=glicerina%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Flaxantes%2Fglicerina-supositorio-infantil-1-4-1-gramo-x-20-unidades&cfmId=CFM-012139",
+          "imageUrl": "https://farmacia.araucomed.com/14164-home_default/glicerina-supositorio-infantil-1-4-1-gramo-x-20-unidades.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14164-home_default/glicerina-supositorio-infantil-1-4-1-gramo-x-20-unidades.jpg",
+      "presentationKey": "glicerina|20|bio:unknown|brand:valma|var:infantil|form:suppository",
+      "cfmId": "CFM-012139",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon|100",
+      "canonicalName": "Jabon Glicerina afrecho pack 3 x 100 gramos. (Family Set)",
+      "laboratory": "Family Set",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Jabon Glicerina afrecho pack 3 x 100 gramos. (Family Set)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=jabon%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fjabones%2Fjabon-glicerina-afrecho-pack-3-x-100g-family-set&cfmId=CFM-004241",
+          "imageUrl": "https://farmacia.araucomed.com/7309-home_default/jabon-glicerina-afrecho-pack-3-x-100g-family-set.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7309-home_default/jabon-glicerina-afrecho-pack-3-x-100g-family-set.jpg",
+      "presentationKey": "jabon|100|bio:unknown|brand:familyset|var:glicerina",
+      "cfmId": "CFM-004241",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "nivea|90000mg|3",
+      "canonicalName": "Nivea Jabón glicerina bolsa 3unidades x 90g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Nivea Jabón glicerina bolsa 3unidades x 90g",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=nivea%7C90000mg%7C3&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnivea-jabon-glicerina-bolsa-3unidades-x-90g%2F&cfmId=CFM-009009",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/03/nivea-glicerina.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/03/nivea-glicerina.jpg",
+      "presentationKey": "nivea|90000mg|3|bio:unknown|brand:unknown|var:jabon",
+      "cfmId": "CFM-009009",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina",
+      "canonicalName": "Glicerina Pura Líquida 60 gr.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Glicerina Pura Líquida 60 gr.",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=glicerina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104133-glicerina-pura-liquida-60-gr.html&cfmId=CFM-007216",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "glicerina|bio:unknown|brand:unknown|var:pura",
+      "cfmId": "CFM-007216",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon|340ml",
+      "canonicalName": "Jabón Glicerina Simond&#8217;s Baby Care 340ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Jabón Glicerina Simond&#8217;s Baby Care 340ml",
+          "channels": {
+            "store": 2100,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2100
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=jabon%7C340ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fjabon-de-glicerina-simonds-baby-care-340ml%2F&cfmId=CFM-004323",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/02/jabon-simonds.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 2100,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/02/jabon-simonds.jpg",
+      "presentationKey": "jabon|340ml|bio:unknown|brand:unknown|var:glicerina",
+      "cfmId": "CFM-004323",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon|500ml",
+      "canonicalName": "Jabón liquido de glicerina pH neutro flor de lavanda 500 mL",
+      "laboratory": "COLORBEL",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Jabón liquido de glicerina pH neutro flor de lavanda 500 mL",
+          "channels": {
+            "store": 2200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=jabon%7C500ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fflor-de-lavanda-jabon-de-glicerina-ph-neutro-500-ml%2Fp&cfmId=CFM-004526",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156854/CH7478-1.jpg?v=637964774985030000",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 2200,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156854/CH7478-1.jpg?v=637964774985030000",
+      "presentationKey": "jabon|500ml|bio:unknown|brand:colorbel|var:glicerina",
+      "cfmId": "CFM-004526",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|3000mg|10",
+      "canonicalName": "Supositorio Glicerina Adulto 3 g x 10 supositorios",
+      "laboratory": "VALMA",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Supositorio Glicerina Adulto 3 g x 10 supositorios",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=glicerina%7C3000mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsupositorio-glicerina-adulto-x-10%3F_pos%3D1%26_psq%3Dglicerina%26_psid%3D94264f646%26_ss%3De&cfmId=CFM-010751",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorio-glicerina-adulto-3-g-x-10-supositorios-valma-604372.jpg?v=1692989428",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorio-glicerina-adulto-3-g-x-10-supositorios-valma-604372.jpg?v=1692989428",
+      "presentationKey": "glicerina|3000mg|10|bio:unknown|brand:valma|form:suppository",
+      "cfmId": "CFM-010751",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon",
+      "canonicalName": "Jabon De Glicerina Celeste...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Jabon De Glicerina Celeste...",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=jabon&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103625-jabon-de-glicerina-celeste-340-ml-simonds.html&cfmId=CFM-002264",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "jabon|bio:unknown|brand:simonds|var:glicerina",
+      "cfmId": "CFM-002264",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon|750ml",
+      "canonicalName": "Jabón Líquido Glicerina 750 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Jabón Líquido Glicerina 750 mL",
+          "channels": {
+            "store": 2590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=jabon%7C750ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fjabon-liquido-glicerina-750-ml%2F268376.html&cfmId=CFM-006151",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw13756f3a/images/large/268376-jabon-liquido-glicerina-750-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.596Z"
+        }
+      ],
+      "bestPrice": 2590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw13756f3a/images/large/268376-jabon-liquido-glicerina-750-ml.jpg",
+      "presentationKey": "jabon|750ml|bio:unknown|brand:unknown|var:glicerina",
+      "cfmId": "CFM-006151",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|750ml",
+      "canonicalName": "Glicerina Jabón Líquido de 750 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Glicerina Jabón Líquido de 750 mL",
+          "channels": {
+            "store": 2590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glicerina%7C750ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglicerina-jabon-liquido-de-750-ml%2F262733.html&cfmId=CFM-006329",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw34018119/images/large/262733-glicerina-jabon-liquido-de--750-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 2590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw34018119/images/large/262733-glicerina-jabon-liquido-de--750-ml.jpg",
+      "presentationKey": "glicerina|750ml|bio:unknown|brand:unknown|var:jabon",
+      "cfmId": "CFM-006329",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon",
+      "canonicalName": "Jabón de Glicerina Sanisep (Piel Mixta)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Jabón de Glicerina Sanisep (Piel Mixta)",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2690
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=jabon&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsanisep-jabon-facial-barra-glicerina-100-g%2F&cfmId=CFM-002264",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/10/sanisep-glicerina.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Jabón de Glicerina Liquido Avena 1.5 Lt",
+          "channels": {
+            "store": 2890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=jabon&url=https%3A%2F%2Fwww.cruzverde.cl%2Fjabon-de-glicerina-liquido-avena-1-5-lt%2F300228.html&cfmId=CFM-002264",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9dcddb0d/images/large/300228-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 2690,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/10/sanisep-glicerina.jpg",
+      "presentationKey": "jabon|bio:unknown|brand:unknown|var:glicerina",
+      "cfmId": "CFM-002264",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|20",
+      "canonicalName": "Supositorio Glicerina Pediátrico 20 Unidades",
+      "laboratory": "Supositorio Glicerina Pediatrico",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Supositorio Glicerina Pediátrico x 20 Unidades (Valma)",
+          "channels": {
+            "store": 2780,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2780
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glicerina%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fparacetamol-infantil-x-20-supositorios-valma%2F&cfmId=CFM-012139",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/supositorio-1-g.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        },
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Supositorio Glicerina Pediátrico 20 Unidades",
+          "channels": {
+            "store": 7799,
+            "online": 6863,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6863
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glicerina%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsupositorio-glicerina-pediatrico-20-unidades%3Fdefault_sku%3D3350004&cfmId=CFM-012139",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28603/small/3350004.jpg?1641477882",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 2780,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28603/small/3350004.jpg?1641477882",
+      "presentationKey": "glicerina|20|bio:unknown|brand:unknown|var:infantil|form:suppository",
+      "cfmId": "CFM-012139",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|1000mg|20",
+      "canonicalName": "Supositorio Glicerina 1 g Infantil x 20 unidades",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Supositorio Glicerina 1 g Infantil x 20 unidades",
+          "channels": {
+            "store": 2780,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2780
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glicerina%7C1000mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsupositorio-glicerina-1-g-infantil-x-20-unidades%2F&cfmId=CFM-014918",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-09-at-9.36.49-AM.jpeg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 2780,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-09-at-9.36.49-AM.jpeg",
+      "presentationKey": "glicerina|1000mg|20|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-014918",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "pielarmina|70000mg",
+      "canonicalName": "Pielarmina Clinical Diabederm crema para manos, codos y pies, piel frágil y agrietada con urea 10% 70 g.",
+      "laboratory": "Pielarmina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Pielarmina Clinical Diabederm crema para manos, codos y pies, piel frágil y agrietada con urea 10% 70 g.",
+          "channels": {
+            "store": 2790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=pielarmina%7C70000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcremas-de-manos%2Fpielarmina-clinical-diabederm-crema-para-manos-codos-y-pies-piel-fragil-y-agrietada-con-urea-10-70-g&cfmId=CFM-006894",
+          "imageUrl": "https://farmacia.araucomed.com/13532-home_default/pielarmina-clinical-diabederm-crema-para-manos-codos-y-pies-piel-fragil-y-agrietada-con-urea-10-70-g.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 2790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13532-home_default/pielarmina-clinical-diabederm-crema-para-manos-codos-y-pies-piel-fragil-y-agrietada-con-urea-10-70-g.jpg",
+      "presentationKey": "pielarmina|70000mg|bio:unknown|brand:pielarmina|var:clinical|form:topical",
+      "cfmId": "CFM-006894",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "supositorios",
+      "canonicalName": "Supositorios Infantiles de...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Supositorios Infantiles de...",
+          "channels": {
+            "store": 2790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=supositorios&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26774-supositorios-infantiles-de-glicerina-2.html&cfmId=CFM-012140",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:10.601Z"
+        }
+      ],
+      "bestPrice": 2790,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "supositorios|bio:unknown|brand:unknown|var:infantiles|form:suppository",
+      "cfmId": "CFM-012140",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "glicerina",
+      "canonicalName": "Glicerina 200 cc",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Glicerina 200 cc",
+          "channels": {
+            "store": 2799,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2799
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glicerina&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglicerina-200-cc-87930.html&cfmId=CFM-007216",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8bca7b78/images/products/87930/87930.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 2799,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8bca7b78/images/products/87930/87930.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "glicerina|bio:unknown|brand:unknown|var:cc",
+      "cfmId": "CFM-007216",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "simond|1000ml",
+      "canonicalName": "Simond&#8217;s Jabon de Glicerina Hygienic 1000 ML",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Simond&#8217;s Jabon de Glicerina Hygienic 1000 ML",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=simond%7C1000ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fsimonds-jabon-de-glicerina-hygienic-1000-ml%2F&cfmId=CFM-014919",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/11/Diseno-sin-titulo-86.png",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/11/Diseno-sin-titulo-86.png",
+      "presentationKey": "simond|1000ml|bio:unknown|brand:unknown|var:s",
+      "cfmId": "CFM-014919",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios|3500mg|10",
+      "canonicalName": "Supositorios de Glicerina 3,5 g Adulto x 10 unidades",
+      "laboratory": "VALMA",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Supositorios de Glicerina 3,5 g Adulto x 10 unidades",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=supositorios%7C3500mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsupositorios-de-glicerina-3-5-g-adulto-x-10-unid-valma%3F_pos%3D2%26_psq%3Dglicerina%26_psid%3D94264f646%26_ss%3De&cfmId=CFM-010746",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorios-de-glicerina-35-g-adulto-x-10-unid-valma-valma-290849.jpg?v=1692989452",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorios-de-glicerina-35-g-adulto-x-10-unid-valma-valma-290849.jpg?v=1692989452",
+      "presentationKey": "supositorios|3500mg|10|bio:unknown|brand:valma|var:glicerina|form:suppository",
+      "cfmId": "CFM-010746",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios|1000mg|20",
+      "canonicalName": "Supositorios de Glicerina Infantil 1 g x 20 supositorios",
+      "laboratory": "VALMA",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Supositorios de Glicerina Infantil 1 g x 20 supositorios",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=supositorios%7C1000mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fsupositorio-glicerina-infantil-1-g-x-20%3F_pos%3D3%26_psq%3Dglicerina%26_psid%3D94264f646%26_ss%3De&cfmId=CFM-012136",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorio-glicerina-infantil-1-g-x-20-valma-633381.jpg?v=1692989504",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/supositorio-glicerina-infantil-1-g-x-20-valma-633381.jpg?v=1692989504",
+      "presentationKey": "supositorios|1000mg|20|bio:unknown|brand:valma|var:glicerina|form:suppository",
+      "cfmId": "CFM-012136",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios",
+      "canonicalName": "Supositorios Adulto de...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Supositorios Adulto de...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=supositorios&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26781-supositorios-infantiles-de-glicerina.html&cfmId=CFM-012140",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "supositorios|bio:unknown|brand:glicerina|form:suppository",
+      "cfmId": "CFM-012140",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "jabon|750ml",
+      "canonicalName": "Jabón Líquido Cremoso Original 750ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Jabón Líquido Cremoso Original 750ml",
+          "channels": {
+            "store": 3000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=jabon%7C750ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fjabon-liquido-cremoso-original-750ml%2F560460.html&cfmId=CFM-006151",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw023f25b1/images/large/560460-jabon-liquido-cremoso-original-750ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 3000,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw023f25b1/images/large/560460-jabon-liquido-cremoso-original-750ml.jpg",
+      "presentationKey": "jabon|750ml|bio:unknown|brand:unknown|var:cremoso",
+      "cfmId": "CFM-006151",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "glicerina|200ml",
+      "canonicalName": "Glicerina Líquida 200ml",
+      "laboratory": "Recetario",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Glicerina Líquida 200ml",
+          "channels": {
+            "store": 3099,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3099
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glicerina%7C200ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglicerina-liquida-200ml%3Fdefault_sku%3D595386&cfmId=CFM-014920",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/193754/small/595386.jpg?1782483079",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 3099,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/193754/small/595386.jpg?1782483079",
+      "presentationKey": "glicerina|200ml|bio:unknown|brand:recetario",
+      "cfmId": "CFM-014920",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon|340ml",
+      "canonicalName": "Jabón de Glicerina Simond's Baby Care 340ml",
+      "laboratory": "Simond's",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Jabón de Glicerina Simond's Baby Care 340ml",
+          "channels": {
+            "store": 3599,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3599
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=jabon%7C340ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fjabon-de-glicerina-baby-care%3Fdefault_sku%3D4410140&cfmId=CFM-004323",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/9340/small/4410140.jpg?1641480643",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 3599,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/9340/small/4410140.jpg?1641480643",
+      "presentationKey": "jabon|340ml|bio:unknown|brand:simonds|var:glicerina",
+      "cfmId": "CFM-004323",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina|1000mg",
+      "canonicalName": "Glicerina 1 g 20 supositorios",
+      "laboratory": "VALMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Glicerina 1 g 20 supositorios",
+          "channels": {
+            "store": 3720,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3720
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=glicerina%7C1000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fglicerina-1-gr-supositorios-infantil%2Fp&cfmId=CFM-013215",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156072/CH5165-1.jpg?v=637964772202270000",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 3720,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156072/CH5165-1.jpg?v=637964772202270000",
+      "presentationKey": "glicerina|1000mg|bio:false|brand:valma|form:suppository",
+      "cfmId": "CFM-013215",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios|3000mg|10",
+      "canonicalName": "Supositorios De Glicerina 3 g x 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Supositorios De Glicerina 3 g x 10 Supositorios",
+          "channels": {
+            "store": 4130,
+            "online": null,
+            "cmr": 3749,
+            "sbpay": null,
+            "effective": 3749
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=supositorios%7C3000mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsupositorios-de-glicerina-3-g-x-10-supositorios-3156.html&cfmId=CFM-012137",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0d1b6e6a/images/products/3156/3156.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 3749,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0d1b6e6a/images/products/3156/3156.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "supositorios|3000mg|10|bio:unknown|brand:unknown|var:glicerina|form:suppository",
+      "cfmId": "CFM-012137",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "biocure|400ml",
+      "canonicalName": "Biocure Colonia de Fricción Aloe Vera Glicerina 400ml",
+      "laboratory": "Biocure",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Biocure Colonia de Fricción Aloe Vera Glicerina 400ml",
+          "channels": {
+            "store": 3999,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=biocure%7C400ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbiocure-colonia-de-friccion-aloe-vera-glicerina-400ml%3Fdefault_sku%3D4102083&cfmId=CFM-004269",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/5726/small/4102083.jpg?1641482388",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 3999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/5726/small/4102083.jpg?1641482388",
+      "presentationKey": "biocure|400ml|bio:unknown|brand:biocure|var:colonia",
+      "cfmId": "CFM-004269",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "shake|237ml",
+      "canonicalName": "Shake Vainilla 237 ml",
+      "laboratory": "Glucerna",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Shake Vainilla 237 ml",
+          "channels": {
+            "store": 3999,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=shake%7C237ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Falimento-para-proposito-medico-ideal-para-personas-con-diabetes-o-pre-diabetes%3Fdefault_sku%3D11376&cfmId=CFM-009441",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/111788/small/11376-1.jpg?1715609817",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 3999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/111788/small/11376-1.jpg?1715609817",
+      "presentationKey": "shake|237ml|bio:unknown|brand:glucerna|var:vainilla",
+      "cfmId": "CFM-009441",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "jabon|1000ml",
+      "canonicalName": "Jabón Líquido Infantil Celeste Glicerina 1000 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Jabón Líquido Infantil Celeste Glicerina 1000 mL",
+          "channels": {
+            "store": 4190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=jabon%7C1000ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fjabon-liquido-infantil-celeste-glicerina-1000-ml%2F277857.html&cfmId=CFM-006152",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2454f3a4/images/large/277857-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 4190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2454f3a4/images/large/277857-1.jpg",
+      "presentationKey": "jabon|1000ml|bio:unknown|brand:unknown|var:infantil",
+      "cfmId": "CFM-006152",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon|3",
+      "canonicalName": "Jabon Glicerina Aloe Vera 100 gr Pack 3 Unidades",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Jabon Glicerina Aloe Vera 100 gr Pack 3 Unidades",
+          "channels": {
+            "store": 4190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=jabon%7C3&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fjabon-glicerina-aloe-vera-100-gr-pack-3-unidades%2F&cfmId=CFM-004266",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/03/jabon-glicerina-aloe-vera.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Jabon Glicerina Aloe Vera 100 gr Pack 3 Unidades",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=jabon%7C3&url=https%3A%2F%2Fwww.cruzverde.cl%2Fjabon-glicerina-aloe-vera-100-gr-pack-3-unidades%2F270724.html&cfmId=CFM-004266",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw98a391d2/images/large/270724-trianon-jabon-en-barra-3-unidades.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 4190,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/03/jabon-glicerina-aloe-vera.jpg",
+      "presentationKey": "jabon|3|bio:unknown|brand:unknown|var:glicerina",
+      "cfmId": "CFM-004266",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "packcell|100000mg",
+      "canonicalName": "Pack Cell Skin Jabón Barra Glicerina & Afrecho 3x100g",
+      "laboratory": "Cell Skin",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Pack Cell Skin Jabón Barra Glicerina & Afrecho 3x100g",
+          "channels": {
+            "store": 4199,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4199
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=packcell%7C100000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fpack-cell-skin-jabon-barra-glicerina-afrecho-3x100g%3Fdefault_sku%3D587934&cfmId=CFM-012708",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/117937/small/587934.jpg?1723131825",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 4199,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/117937/small/587934.jpg?1723131825",
+      "presentationKey": "packcell|100000mg|bio:unknown|brand:cellskin|var:skin",
+      "cfmId": "CFM-012708",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "shampoo|400ml|400",
+      "canonicalName": "Shampoo para bebé Johnson's&reg; PH Balanceado x 400 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Shampoo para bebé Johnson's&reg; PH Balanceado x 400 ml.",
+          "channels": {
+            "store": 4258,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4258
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=shampoo%7C400ml%7C400&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fshampoo-para-bebe-johnsons-ph-balanceado-x-400-ml.-86588001.html&cfmId=CFM-002148",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc1716f01/images/products/86588001/86588001.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 4258,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc1716f01/images/products/86588001/86588001.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "shampoo|400ml|400|bio:unknown|brand:unknown|var:bebe|form:topical",
+      "cfmId": "CFM-002148",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "shampoo|400ml|400",
+      "canonicalName": "Shampoo para niños Johnson's&reg; Fuerza y Vitamina x 400 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Shampoo para niños Johnson's&reg; Fuerza y Vitamina x 400 ml.",
+          "channels": {
+            "store": 4258,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4258
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=shampoo%7C400ml%7C400&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fshampoo-para-ninos-johnsons-fuerza-y-vitamina-x-400-ml.-86588005.html&cfmId=CFM-002148",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw32132d12/images/products/86588005/86588005.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 4258,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw32132d12/images/products/86588005/86588005.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "shampoo|400ml|400|bio:unknown|brand:unknown|var:infantil|form:topical",
+      "cfmId": "CFM-002148",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "johnson|400ml",
+      "canonicalName": "Johnson's Baby baño liquido con glicerina 400ml",
+      "laboratory": "Johnson'S",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Johnson's Baby baño liquido con glicerina 400ml",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=johnson%7C400ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fshampoo-y-balsamo-infantiles%2Fjohnson-s-baby-bano-liquido-con-glicerina-400ml&cfmId=CFM-002128",
+          "imageUrl": "https://farmacia.araucomed.com/8583-home_default/johnson-s-baby-bano-liquido-con-glicerina-400ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 4290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8583-home_default/johnson-s-baby-bano-liquido-con-glicerina-400ml.jpg",
+      "presentationKey": "johnson|400ml|bio:unknown|brand:johnsons|var:s",
+      "cfmId": "CFM-002128",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trianon|100000mg|3",
+      "canonicalName": "Trianon Jabon Glicerina Aloe 100g (Pack x 3)",
+      "laboratory": "Trianon",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Trianon Jabon Glicerina Aloe 100g (Pack x 3)",
+          "channels": {
+            "store": 4490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=trianon%7C100000mg%7C3&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fjabones%2Ftrianon-jabon-glicerina-aloe-100g-pack-x-3&cfmId=CFM-008711",
+          "imageUrl": "https://farmacia.araucomed.com/8972-home_default/trianon-jabon-glicerina-aloe-100g-pack-x-3.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 4490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8972-home_default/trianon-jabon-glicerina-aloe-100g-pack-x-3.jpg",
+      "presentationKey": "trianon|100000mg|3|bio:unknown|brand:trianon|var:jabon",
+      "cfmId": "CFM-008711",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "supositorios|1000mg|20",
+      "canonicalName": "Supositorios De Glicerina 1 g x 20 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Supositorios De Glicerina 1 g x 20 Supositorios",
+          "channels": {
+            "store": 5390,
+            "online": null,
+            "cmr": 4499,
+            "sbpay": null,
+            "effective": 4499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=supositorios%7C1000mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsupositorios-de-glicerina-1-g-x-20-supositorios-3143.html&cfmId=CFM-012136",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw54592e99/images/products/3143/3143.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 4499,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw54592e99/images/products/3143/3143.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "supositorios|1000mg|20|bio:unknown|brand:unknown|var:glicerina|form:suppository",
+      "cfmId": "CFM-012136",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "trianon|3",
+      "canonicalName": "Trianon Pack Jabon De Glicerina Afrecho 3 Unidades X 1 Pack",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Trianon Pack Jabon De Glicerina Afrecho 3 Unidades X 1 Pack",
+          "channels": {
+            "store": 4650,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4650
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=trianon%7C3&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftrianon-pack-jabon-de-glicerina-afrecho-3-unidades-x-1-pack%2F&cfmId=CFM-014915",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/04/29006.webp",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 4650,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/04/29006.webp",
+      "presentationKey": "trianon|3|bio:unknown|brand:unknown|var:pack",
+      "cfmId": "CFM-014915",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "hydra|50ml|n",
+      "canonicalName": "Crema Noche Hydra Therapy 50 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Crema Noche Hydra Therapy 50 mL",
+          "channels": {
+            "store": 4690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=hydra%7C50ml%7Cn&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcrema-noche-hydra-therapy-50-ml%2F297992.html&cfmId=CFM-012089",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw79604a96/images/large/297992-crema-noche-hydra-therapy-50-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 4690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw79604a96/images/large/297992-crema-noche-hydra-therapy-50-ml.jpg",
+      "presentationKey": "hydra|50ml|n|bio:unknown|brand:unknown|var:therapy|form:topical",
+      "cfmId": "CFM-012089",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "jabon",
+      "canonicalName": "Jabón de Glicerina Afrecho Trianon Barra",
+      "laboratory": "Trianon",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Jabón de Glicerina Afrecho Trianon Barra",
+          "channels": {
+            "store": 4899,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4899
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=jabon&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fjabon-de-glicerina-afrecho-trianon-barra%3Fdefault_sku%3D5740001&cfmId=CFM-002264",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/105870/small/5740001.jpg?1707226524",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 4899,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/105870/small/5740001.jpg?1707226524",
+      "presentationKey": "jabon|bio:unknown|brand:trianon|var:glicerina",
+      "cfmId": "CFM-002264",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "jabon|340ml",
+      "canonicalName": "Jabón Antibacterial con glicerina 340 ml (Difem Care)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Jabón Antibacterial con glicerina 340 ml (Difem Care)",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=jabon%7C340ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fjabones%2Fjabon-antibacterial-con-glicerina-340-ml-difem-care&cfmId=CFM-004323",
+          "imageUrl": "https://farmacia.araucomed.com/12110-home_default/jabon-antibacterial-con-glicerina-340-ml-difem-care.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12110-home_default/jabon-antibacterial-con-glicerina-340-ml-difem-care.jpg",
+      "presentationKey": "jabon|340ml|bio:unknown|brand:unknown|var:antibacterial",
+      "cfmId": "CFM-004323",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "glicerina",
+      "canonicalName": "Glicerina 3 gr 10 Supositorios",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Glicerina 3 gr 10 Supositorios",
+          "channels": {
+            "store": 5190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glicerina&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglicerina-3-gr-10-supositorios%2F199278.html&cfmId=CFM-007216",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3c8afc1/images/large/199278-glicerina-adulto-glicerina-182-gr-10-supositorios.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.596Z"
+        }
+      ],
+      "bestPrice": 5190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3c8afc1/images/large/199278-glicerina-adulto-glicerina-182-gr-10-supositorios.jpg",
+      "presentationKey": "glicerina|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-007216",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "alcohol|340ml",
+      "canonicalName": "Alcohol gel antiséptico tópico 70% 340 ml. (Difem Pharma)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Alcohol gel antiséptico tópico 70% 340 ml. (Difem Pharma)",
+          "channels": {
+            "store": 5290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=alcohol%7C340ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Falcohol%2Falcohol-gel-70-340cc-difem&cfmId=CFM-005964",
+          "imageUrl": "https://farmacia.araucomed.com/12103-home_default/alcohol-gel-70-340cc-difem.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 5290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12103-home_default/alcohol-gel-70-340cc-difem.jpg",
+      "presentationKey": "alcohol|340ml|bio:unknown|brand:unknown|var:antiseptico|form:topical",
+      "cfmId": "CFM-005964",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "bentley|50000mg",
+      "canonicalName": "Bentley Gel Classic 50g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Bentley Gel Classic 50g",
+          "channels": {
+            "store": 5507,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5507
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=bentley%7C50000mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbentley-gel-classic-50g-39706.html&cfmId=CFM-000250",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4d86cf6f/images/products/39706/39706.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 5507,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4d86cf6f/images/products/39706/39706.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "bentley|50000mg|bio:unknown|brand:unknown|var:classic|form:topical",
+      "cfmId": "CFM-000250",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clinical|350ml",
+      "canonicalName": "Clinical Body Crema Piel Diabética C/Urea Karité y Glicerina 350mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clinical Body Crema Piel Diabética C/Urea Karité y Glicerina 350mL",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clinical%7C350ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclinical-body-crema-piel-diabetica-c-urea-karite-y-glicerina-350ml%2F531558.html&cfmId=CFM-008923",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw772462ef/images/large/531558-pielarmina-clinical-body-crema-piel-diabetica-c-urea-karite-y-glicerina-350ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw772462ef/images/large/531558-pielarmina-clinical-body-crema-piel-diabetica-c-urea-karite-y-glicerina-350ml.jpg",
+      "presentationKey": "clinical|350ml|bio:unknown|brand:unknown|combo:urea|form:topical",
+      "cfmId": "CFM-008923",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "serum|200ml",
+      "canonicalName": "Serum Corporal Niacinamida 200ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Serum Corporal Niacinamida 200ml",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=serum%7C200ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fserum-corporal-niacinamida-200ml%2F570598.html&cfmId=CFM-006333",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0d31c52d/images/large/570598-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0d31c52d/images/large/570598-1.jpg",
+      "presentationKey": "serum|200ml|bio:unknown|brand:unknown|var:corporal",
+      "cfmId": "CFM-006333",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "lubricante|120000mg",
+      "canonicalName": "Gel Lubricante Íntimo Bentley Classic 120 g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Gel Lubricante Íntimo Bentley Classic 120 g",
+          "channels": {
+            "store": 6390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=lubricante%7C120000mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fgel-lubricante-intimo-bentley-classic-120-g-73942.html&cfmId=CFM-009594",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7477ec85/images/products/73942/73942.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 6390,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7477ec85/images/products/73942/73942.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "lubricante|120000mg|bio:unknown|brand:unknown|var:intimo|form:topical",
+      "cfmId": "CFM-009594",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "primer",
+      "canonicalName": "Primer Etienne Galssing Milk Hydra Hidratante",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Primer Etienne Galssing Milk Hydra Hidratante",
+          "channels": {
+            "store": 6399,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=primer&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fprimer-etienne-galssing-milk-hydra-hidratante-97399.html&cfmId=CFM-003185",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1b2b5655/images/products/97399/97399.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 6399,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1b2b5655/images/products/97399/97399.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "primer|bio:unknown|brand:unknown|var:etienne",
+      "cfmId": "CFM-003185",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "bruma",
+      "canonicalName": "Bruma Refrescante Fijadora Petrizzio",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Bruma Refrescante Fijadora Petrizzio",
+          "channels": {
+            "store": 6999,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=bruma&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbruma-refrescante-fijadora-petrizzio-97651.html&cfmId=CFM-002940",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw31914414/images/products/97651/97651.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 6999,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw31914414/images/products/97651/97651.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "bruma|bio:unknown|brand:unknown|var:refrescante",
+      "cfmId": "CFM-002940",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "supositorios",
+      "canonicalName": "Supositorios de Glicerina 3",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Supositorios de Glicerina 3",
+          "channels": {
+            "store": 8710,
+            "online": null,
+            "cmr": 7612,
+            "sbpay": null,
+            "effective": 7612
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=supositorios&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsupositorios-de-glicerina-3-3195.html&cfmId=CFM-012140",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9dab552d/images/products/3195/3195.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 7612,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9dab552d/images/products/3195/3195.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "supositorios|bio:unknown|brand:unknown|var:glicerina|form:suppository",
+      "cfmId": "CFM-012140",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "aquaphor|10ml",
+      "canonicalName": "Aquaphor Eucerin Duo 10 mL 2 un",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Aquaphor Eucerin Duo 10 mL 2 un",
+          "channels": {
+            "store": 8090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=aquaphor%7C10ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Faquaphor-eucerin-duo-10-ml-2-un-85940.html&cfmId=CFM-006614",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw90340a7d/images/products/85940/85940.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 8090,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw90340a7d/images/products/85940/85940.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "aquaphor|10ml|bio:unknown|brand:unknown|var:eucerin",
+      "cfmId": "CFM-006614",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "glicerina|3000mg|10",
+      "canonicalName": "Supositorio Glicerina Mediano 3g 10 Unidades",
+      "laboratory": "Glicerina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Supositorio Glicerina Mediano 3g 10 Unidades",
+          "channels": {
+            "store": 9199,
+            "online": 8095,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8095
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glicerina%7C3000mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsupositorio-glicerina-mediano-3g-10-unidades%3Fdefault_sku%3D3350000&cfmId=CFM-010751",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/114312/small/3350000.jpg?1718289354",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 8095,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/114312/small/3350000.jpg?1718289354",
+      "presentationKey": "glicerina|3000mg|10|bio:unknown|brand:glicerina|var:mediano|form:suppository",
+      "cfmId": "CFM-010751",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "corporal|400ml",
+      "canonicalName": "Crema Corporal Regeneración Intensiva 400ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Crema Corporal Regeneración Intensiva 400ml",
+          "channels": {
+            "store": 8113,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8113
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=corporal%7C400ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcrema-corporal-regeneracion-intensiva-400ml%2F565173.html&cfmId=CFM-000257",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0bcb504a/images/large/565173-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.596Z"
+        }
+      ],
+      "bestPrice": 8113,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0bcb504a/images/large/565173-1.jpg",
+      "presentationKey": "corporal|400ml|bio:unknown|brand:unknown|var:regeneracion|form:topical",
+      "cfmId": "CFM-000257",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "glicerina|10",
+      "canonicalName": "Supositorio Glicerina Adulto 10 Unidades",
+      "laboratory": "Glicerina",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Supositorio Glicerina Adulto 10 Unidades",
+          "channels": {
+            "store": 9899,
+            "online": 8711,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8711
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glicerina%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fsupositorio-glicerina-adulto-10-unidades%3Fdefault_sku%3D3350072&cfmId=CFM-012138",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28604/small/3350072.jpg?1641477882",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 8711,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28604/small/3350072.jpg?1641477882",
+      "presentationKey": "glicerina|10|bio:unknown|brand:glicerina|form:suppository",
+      "cfmId": "CFM-012138",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "serum|400ml",
+      "canonicalName": "Serum Corporal Pantenol 400ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Serum Corporal con Pantenol Dove 400ml",
+          "channels": {
+            "store": 9294,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9294
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=serum%7C400ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fserum-corporal-con-pantenol-dove-400ml-96644.html&cfmId=CFM-005197",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw021548ee/images/products/96644/96644.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Serum Corporal Pantenol 400ml",
+          "channels": {
+            "store": 13190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13190
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=serum%7C400ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fserum-corporal-pantenol-400ml%2F570589.html&cfmId=CFM-005197",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7491b183/images/large/570589-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 9294,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7491b183/images/large/570589-1.jpg",
+      "presentationKey": "serum|400ml|bio:unknown|brand:unknown|var:corporal",
+      "cfmId": "CFM-005197",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "eucerin|55ml",
+      "canonicalName": "Crema Eucerin Aquaphor Pomo 55 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Crema Eucerin Aquaphor Pomo 55 mL",
+          "channels": {
+            "store": 9790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=eucerin%7C55ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcrema-eucerin-aquaphor-pomo-55-ml-68121.html&cfmId=CFM-002063",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5384c347/images/products/68121/68121.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 9790,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5384c347/images/products/68121/68121.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "eucerin|55ml|bio:unknown|brand:unknown|var:aquaphor|form:topical",
+      "cfmId": "CFM-002063",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "alcohol|800ml",
+      "canonicalName": "Alcohol gel antiséptico tópico 70% 800 ml. (Difem Pharma)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Alcohol gel antiséptico tópico 70% 800 ml. (Difem Pharma)",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=alcohol%7C800ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Falcohol%2Falcohol-gel-70-800cc-difem&cfmId=CFM-008686",
+          "imageUrl": "https://farmacia.araucomed.com/12104-home_default/alcohol-gel-70-800cc-difem.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12104-home_default/alcohol-gel-70-800cc-difem.jpg",
+      "presentationKey": "alcohol|800ml|bio:unknown|brand:unknown|var:antiseptico|form:topical",
+      "cfmId": "CFM-008686",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hialovis|600ml|600",
+      "canonicalName": "Hialovis Aqua Colágeno hidrolizado 10,000 mg Sabor Fresa x 600 ml.",
+      "laboratory": "Arama",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Hialovis Aqua Colágeno hidrolizado 10,000 mg Sabor Fresa x 600 ml.",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hialovis%7C600ml%7C600&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fsuplementos-de-colageno%2Fhialovis-aqua-colageno-hidrolizado-10000-mg-sabor-fresa-x-600-ml&cfmId=CFM-006299",
+          "imageUrl": "https://farmacia.araucomed.com/13900-home_default/hialovis-aqua-colageno-hidrolizado-10000-mg-sabor-fresa-x-600-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13900-home_default/hialovis-aqua-colageno-hidrolizado-10000-mg-sabor-fresa-x-600-ml.jpg",
+      "presentationKey": "hialovis|600ml|600|bio:unknown|brand:arama|var:aqua",
+      "cfmId": "CFM-006299",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "jabon|1000ml",
+      "canonicalName": "Jabón Antibacterial con glicerina 1000 ml (Difem Care)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Jabón Antibacterial con glicerina 1000 ml (Difem Care)",
+          "channels": {
+            "store": 10790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=jabon%7C1000ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fjabones%2Fjabon-antibacterial-con-glicerina-1000-ml-difem-care&cfmId=CFM-006152",
+          "imageUrl": "https://farmacia.araucomed.com/12112-home_default/jabon-antibacterial-con-glicerina-1000-ml-difem-care.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 10790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12112-home_default/jabon-antibacterial-con-glicerina-1000-ml-difem-care.jpg",
+      "presentationKey": "jabon|1000ml|bio:unknown|brand:unknown|var:antibacterial",
+      "cfmId": "CFM-006152",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "serum|50ml",
+      "canonicalName": "Sérum Hidratante Daily Light 50 ml Etienne",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Sérum Hidratante Daily Light 50 ml Etienne",
+          "channels": {
+            "store": 10799,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10799
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=serum%7C50ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fserum-hidratante-daily-light-50-ml-etienne-97362.html&cfmId=CFM-002275",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw003438b0/images/products/97362/97362.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 10799,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw003438b0/images/products/97362/97362.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "serum|50ml|bio:unknown|brand:unknown|var:hidratante",
+      "cfmId": "CFM-002275",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "otisec",
+      "canonicalName": "Otisec Spray Para el Oido...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Otisec Spray Para el Oido...",
+          "channels": {
+            "store": 11193,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11193
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=otisec&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105472-otisec-30-ml.html&cfmId=CFM-014916",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:10.601Z"
+        }
+      ],
+      "bestPrice": 11193,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "otisec|bio:unknown|brand:unknown|var:oido",
+      "cfmId": "CFM-014916",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "lancetas|24",
+      "canonicalName": "Lancetas Fastclix Para La Medición De Glicemia 24 Unidades",
+      "laboratory": "Accu-Chek",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Lancetas Fastclix Para La Medición De Glicemia 24 Unidades",
+          "channels": {
+            "store": 12499,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=lancetas%7C24&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flancetas-fastclix-para-la-medicion-de-glicemia-24-unidades%3Fdefault_sku%3D205851&cfmId=CFM-013611",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/6717/small/205851.jpg?1641480832",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 12499,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/6717/small/205851.jpg?1641480832",
+      "presentationKey": "lancetas|24|bio:unknown|brand:accuchek|var:fastclix",
+      "cfmId": "CFM-013611",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "unguento|55ml",
+      "canonicalName": "Ungüento Reparador Aquaphor 55ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Ungüento Reparador Aquaphor 55ml",
+          "channels": {
+            "store": 14290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=unguento%7C55ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Funguento-reparador-aquaphor-55ml%2F261808.html&cfmId=CFM-007774",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1b5d5c53/images/large/261808-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 14290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1b5d5c53/images/large/261808-1.jpg",
+      "presentationKey": "unguento|55ml|bio:unknown|brand:unknown|var:reparador|form:topical",
+      "cfmId": "CFM-007774",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "pack",
+      "canonicalName": "4 Pack Ahorro Glucerna Líquida Sabor Vainilla",
+      "laboratory": "Glucerna",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "4 Pack Ahorro Glucerna Líquida Sabor Vainilla",
+          "channels": {
+            "store": 14699,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14699
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=pack&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2F4-pack-ahorro-glucerna-liquida-sabor-vainilla%3Fdefault_sku%3D1020066&cfmId=CFM-001846",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/111878/small/1020066-1.jpg?1715609974",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 14699,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/111878/small/1020066-1.jpg?1715609974",
+      "presentationKey": "pack|bio:unknown|brand:glucerna|var:ahorro",
+      "cfmId": "CFM-001846",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "cerave|50ml",
+      "canonicalName": "Cerave protector solar facial fuido Hidratante FPS 50+ 50 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Cerave protector solar facial fuido Hidratante FPS 50+ 50 ml.",
+          "channels": {
+            "store": 15490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cerave%7C50ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fprotector-solar-de-rostro%2Fcerave-protector-solar-facial-fuido-hidratante-fps-50-50-ml&cfmId=CFM-005751",
+          "imageUrl": "https://farmacia.araucomed.com/14654-home_default/cerave-protector-solar-facial-fuido-hidratante-fps-50-50-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 15490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14654-home_default/cerave-protector-solar-facial-fuido-hidratante-fps-50-50-ml.jpg",
+      "presentationKey": "cerave|50ml|bio:unknown|brand:unknown|var:protector",
+      "cfmId": "CFM-005751",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "vichy|200ml|200",
+      "canonicalName": "Vichy Purete Thermal 3 en 1 Loción Desmaquillante x 200 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Vichy Purete Thermal 3 en 1 Loción Desmaquillante x 200 mL",
+          "channels": {
+            "store": 16239,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16239
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=vichy%7C200ml%7C200&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fvichy-purete-thermal-3-en-1-locion-desmaquillante-x-200-ml-12461.html&cfmId=CFM-003216",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2224c311/images/products/12461/12461.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 16239,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw2224c311/images/products/12461/12461.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "vichy|200ml|200|bio:unknown|brand:unknown|var:purete|form:topical",
+      "cfmId": "CFM-003216",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "diabet",
+      "canonicalName": "Diabet Tx Pack Crema 400Mlx2",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Diabet Tx Pack Crema 400Mlx2",
+          "channels": {
+            "store": 16499,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=diabet&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdiabet-tx-pack-crema-400mlx2-89727.html&cfmId=CFM-007477",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc6d50000/images/products/89727/89727.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 16499,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc6d50000/images/products/89727/89727.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "diabet|bio:unknown|brand:unknown|var:tx|form:topical",
+      "cfmId": "CFM-007477",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "cheltin|30ml",
+      "canonicalName": "Cheltin Glicinato Ferroso 6mg/ml Oral Gotas 30ml",
+      "laboratory": "Cheltin",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Cheltin Glicinato Ferroso 6mg/ml Oral Gotas 30ml",
+          "channels": {
+            "store": 19099,
+            "online": 16807,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16807
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=cheltin%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglicinato-ferroso-30mg-ml-oral-gtas%3Fdefault_sku%3D2570350&cfmId=CFM-007433",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/88699/small/2570350.jpg?1677704576",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 16807,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/88699/small/2570350.jpg?1677704576",
+      "presentationKey": "cheltin|30ml|bio:unknown|brand:cheltin|var:glicinato|form:fluid-oral",
+      "cfmId": "CFM-007433",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "barra",
+      "canonicalName": "Barra Limpiadora Cetaphil 127grs",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Barra Limpiadora Cetaphil 127grs",
+          "channels": {
+            "store": 16990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=barra&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbarra-limpiadora-cetaphil-127grs-45013.html&cfmId=CFM-004402",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8e624ccf/images/products/45013/45013.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 16990,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8e624ccf/images/products/45013/45013.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "barra|bio:unknown|brand:unknown|var:limpiadora",
+      "cfmId": "CFM-004402",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "naticare|30",
+      "canonicalName": "Naticare Supra 30 Cápsulas",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Naticare Supra 30 Cápsulas",
+          "channels": {
+            "store": 17185,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17185
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=naticare%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnaticare-supra-30-capsulas-85092.html&cfmId=CFM-003849",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1debc15d/images/products/85092/85092.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 17185,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1debc15d/images/products/85092/85092.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "naticare|30|bio:unknown|brand:unknown|var:supra|form:solid-oral",
+      "cfmId": "CFM-003849",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "babe|500ml",
+      "canonicalName": "Babé Fluido Hidra-Calm 500 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Babé Fluido Hidra-Calm 500 ml.",
+          "channels": {
+            "store": 17190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=babe%7C500ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Ftratamiento-calmante-facial%2Fbabe-fluido-hidra-calm-500ml&cfmId=CFM-005639",
+          "imageUrl": "https://farmacia.araucomed.com/10991-home_default/babe-fluido-hidra-calm-500ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 17190,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10991-home_default/babe-fluido-hidra-calm-500ml.jpg",
+      "presentationKey": "babe|500ml|bio:unknown|brand:unknown|var:fluido",
+      "cfmId": "CFM-005639",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "gelclair|15ml|3",
+      "canonicalName": "Gelclair Gel Oral 15 ml Caja con 3 Sobres",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Gelclair Gel Oral 15 ml Caja con 3 Sobres",
+          "channels": {
+            "store": 23799,
+            "online": null,
+            "cmr": 17849,
+            "sbpay": null,
+            "effective": 17849
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=gelclair%7C15ml%7C3&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fgelclair-gel-oral-15-ml-caja-con-3-sobres-63860.html&cfmId=CFM-007951",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwed45e8c6/images/products/63860/63860.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 17849,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwed45e8c6/images/products/63860/63860.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "gelclair|15ml|3|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-007951",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "babeurea|500ml",
+      "canonicalName": "Babé Urea 10% loción reparadora 500 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Babé Urea 10% loción reparadora 500 ml",
+          "channels": {
+            "store": 18090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=babeurea%7C500ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhidratacion-y-nutricion-para-pieles-sensibles%2Fbabe-urea-10-locion-reparadora-500ml&cfmId=CFM-008528",
+          "imageUrl": "https://farmacia.araucomed.com/7969-home_default/babe-urea-10-locion-reparadora-500ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.600Z"
+        }
+      ],
+      "bestPrice": 18090,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7969-home_default/babe-urea-10-locion-reparadora-500ml.jpg",
+      "presentationKey": "babeurea|500ml|bio:unknown|brand:unknown|var:reparadora|form:topical",
+      "cfmId": "CFM-008528",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "locion|400ml",
+      "canonicalName": "Loción Corporal pH5 Hidratante 400ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Loción Corporal pH5 Hidratante 400ml",
+          "channels": {
+            "store": 18990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=locion%7C400ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Flocion-corporal-ph5-hidratante-400ml%2F259865.html&cfmId=CFM-003306",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw28922d7e/images/large/259865-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 18990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw28922d7e/images/large/259865-1.jpg",
+      "presentationKey": "locion|400ml|bio:unknown|brand:unknown|var:corporal|form:topical",
+      "cfmId": "CFM-003306",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "purete|200ml",
+      "canonicalName": "Pureté Thermale Gel Limpiador Fresco 200ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Pureté Thermale Gel Limpiador Fresco 200ml",
+          "channels": {
+            "store": 18990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=purete%7C200ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpurete-thermale-gel-limpiador-fresco-200ml%2F555830.html&cfmId=CFM-009114",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9ff6255f/images/large/555830-purete-thermale-gel-limpiador-fresco-200ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 18990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9ff6255f/images/large/555830-purete-thermale-gel-limpiador-fresco-200ml.jpg",
+      "presentationKey": "purete|200ml|bio:unknown|brand:unknown|var:thermale|form:topical",
+      "cfmId": "CFM-009114",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "glucometro",
+      "canonicalName": "Glucómetro Para Examen de Glicemia",
+      "laboratory": "One Touch",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Glucómetro Para Examen de Glicemia",
+          "channels": {
+            "store": 19499,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19499
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glucometro&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglucometro-para-examen-de-glicemia%3Fdefault_sku%3D580830&cfmId=CFM-002477",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/74394/small/580830-1.jpg?1654205012",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 19499,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/74394/small/580830-1.jpg?1654205012",
+      "presentationKey": "glucometro|bio:unknown|brand:onetouch|var:examen",
+      "cfmId": "CFM-002477",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "hydro|30ml",
+      "canonicalName": "Hydro Boost Water Gel 50g + Hydro Boost Sérum Hidratante 30ML",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Hydro Boost Water Gel 50g + Hydro Boost Sérum Hidratante 30ML",
+          "channels": {
+            "store": 19990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 19990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=hydro%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fhydro-boost-water-gel-50g-hydro-boost-serum-hidratante-30ml%2F578758.html&cfmId=CFM-008498",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb2bbd975/images/large/578758-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 19990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb2bbd975/images/large/578758-1.jpg",
+      "presentationKey": "hydro|30ml|bio:unknown|brand:unknown|var:boost|form:topical",
+      "cfmId": "CFM-008498",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "aquaphor|220ml",
+      "canonicalName": "Aquaphor Eucerin Pomada Reparadora 220 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Aquaphor Eucerin Pomada Reparadora 220 mL",
+          "channels": {
+            "store": 22290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=aquaphor%7C220ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Faquaphor-eucerin-pomada-reparadora-220-ml-92999.html&cfmId=CFM-007780",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5cea185f/images/products/92999/92999.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 22290,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5cea185f/images/products/92999/92999.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "aquaphor|220ml|bio:unknown|brand:unknown|var:eucerin|form:topical",
+      "cfmId": "CFM-007780",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "preshampoo|150ml",
+      "canonicalName": "Pre-shampoo Dercos Collagen 17 Filler tratamiento ultra reparador 150ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Pre-shampoo Dercos Collagen 17 Filler tratamiento ultra reparador 150ml",
+          "channels": {
+            "store": 22399,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=preshampoo%7C150ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fpre-shampoo-dercos-collagen-17-filler-tratamiento-ultra-reparador-150ml-96937.html&cfmId=CFM-005646",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw66f5db3e/images/products/96937/96937.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 22399,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw66f5db3e/images/products/96937/96937.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "preshampoo|150ml|bio:unknown|brand:unknown|var:dercos",
+      "cfmId": "CFM-005646",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "eucerin|40ml",
+      "canonicalName": "Eucerin DermoPure Hydra Crema Calmante 40ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Eucerin DermoPure Hydra Crema Calmante 40ml",
+          "channels": {
+            "store": 23249,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23249
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=eucerin%7C40ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Feucerin-dermopure-hydra-crema-calmante-40ml-96674.html&cfmId=CFM-007547",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe990fa12/images/products/96674/96674.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 23249,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe990fa12/images/products/96674/96674.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "eucerin|40ml|bio:unknown|brand:unknown|var:dermopure|form:topical",
+      "cfmId": "CFM-007547",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "eucerin|30ml",
+      "canonicalName": "Eucerin Hyaluron-Filler 3X effect Hydrating booster gel facial 30 ml.",
+      "laboratory": "Eucerin",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Eucerin Hyaluron-Filler 3X effect Hydrating booster gel facial 30 ml.",
+          "channels": {
+            "store": 23990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=eucerin%7C30ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Ftratamiento-anti-edad%2Feucerin-hyaluron-filler-3x-effect-hydrating-booster-gel-facial-30-ml&cfmId=CFM-002437",
+          "imageUrl": "https://farmacia.araucomed.com/14575-home_default/eucerin-hyaluron-filler-3x-effect-hydrating-booster-gel-facial-30-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 23990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14575-home_default/eucerin-hyaluron-filler-3x-effect-hydrating-booster-gel-facial-30-ml.jpg",
+      "presentationKey": "eucerin|30ml|bio:unknown|brand:eucerin|var:hyaluronfiller|form:topical",
+      "cfmId": "CFM-002437",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "purete|400ml",
+      "canonicalName": "Pureté Thermale Gel Limpiador Fresco 400ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Pureté Thermale Gel Limpiador Fresco 400ml",
+          "channels": {
+            "store": 24390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=purete%7C400ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fpurete-thermale-gel-limpiador-fresco-400ml%2F556451.html&cfmId=CFM-009115",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw37de3a01/images/large/556451-purete-thermale-gel-limpiador-fresco-400ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.597Z"
+        }
+      ],
+      "bestPrice": 24390,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw37de3a01/images/large/556451-purete-thermale-gel-limpiador-fresco-400ml.jpg",
+      "presentationKey": "purete|400ml|bio:unknown|brand:unknown|var:thermale|form:topical",
+      "cfmId": "CFM-009115",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "eucerin|50ml|d",
+      "canonicalName": "Eucerin Hyaluron-Filler 3X effect ultra light hydrating + repair gel facial día 50 ml.",
+      "laboratory": "Eucerin",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Eucerin Hyaluron-Filler 3X effect ultra light hydrating + repair gel facial día 50 ml.",
+          "channels": {
+            "store": 27990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 27990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=eucerin%7C50ml%7Cd&url=https%3A%2F%2Ffarmacia.araucomed.com%2Ftratamiento-anti-edad%2Feucerin-hyaluron-filler-3x-effect-ultra-light-hydrating-repair-gel-facial-dia-50-ml&cfmId=CFM-005619",
+          "imageUrl": "https://farmacia.araucomed.com/14577-home_default/eucerin-hyaluron-filler-3x-effect-ultra-light-hydrating-repair-gel-facial-dia-50-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 27990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14577-home_default/eucerin-hyaluron-filler-3x-effect-ultra-light-hydrating-repair-gel-facial-dia-50-ml.jpg",
+      "presentationKey": "eucerin|50ml|d|bio:unknown|brand:eucerin|combo:repair|form:topical",
+      "cfmId": "CFM-005619",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "serum|32000mg",
+      "canonicalName": "Serum Biolube Íntimo Hidratante V Queen 32 g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Serum Biolube Íntimo Hidratante V Queen 32 g",
+          "channels": {
+            "store": 39995,
+            "online": null,
+            "cmr": 29996,
+            "sbpay": null,
+            "effective": 29996
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=serum%7C32000mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fserum-biolube-intimo-hidratante-v-queen-32-g-93802.html&cfmId=CFM-000256",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6db5ec99/images/products/93802/93802.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 29996,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6db5ec99/images/products/93802/93802.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "serum|32000mg|bio:unknown|brand:unknown|var:biolube",
+      "cfmId": "CFM-000256",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "glucerna|850000mg",
+      "canonicalName": "Glucerna Vainilla 850g",
+      "laboratory": "Glucerna",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Glucerna Vainilla 850g",
+          "channels": {
+            "store": 33899,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 33899
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glucerna%7C850000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglucerna-vainilla-850g%3Fdefault_sku%3D1020070&cfmId=CFM-002518",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/111890/small/1020070-1.jpg?1715609994",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 33899,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/111890/small/1020070-1.jpg?1715609994",
+      "presentationKey": "glucerna|850000mg|bio:unknown|brand:glucerna|var:vainilla",
+      "cfmId": "CFM-002518",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "lancetas|102",
+      "canonicalName": "Lancetas Fastclix Para La Medición De Glicemia 102 Unidades",
+      "laboratory": "Accu-Chek",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Lancetas Fastclix Para La Medición De Glicemia 102 Unidades",
+          "channels": {
+            "store": 42599,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 42599
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=lancetas%7C102&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flancetas-fastclix-para-la-medicion-de-glicemia-102-unidades%3Fdefault_sku%3D205850&cfmId=CFM-013609",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/10275/small/205850.jpg?1641480569",
+          "fetchedAt": "2026-08-31T01:24:10.598Z"
+        }
+      ],
+      "bestPrice": 42599,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/10275/small/205850.jpg?1641480569",
+      "presentationKey": "lancetas|102|bio:unknown|brand:accuchek|var:fastclix",
+      "cfmId": "CFM-013609",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "nitroglicerina|0.6mg|30",
+      "canonicalName": "Nitroglicerina 0.6 mg 30 comprimidos",
+      "laboratory": "DR. SIMI",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Nitroglicerina 0.6 mg 30 comprimidos",
+          "channels": {
+            "store": 6200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6200
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=nitroglicerina%7C0.6mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fnitroglicerina-0-6-mg-30-comprimidos%2Fp&cfmId=CFM-014921",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156999/CH0165.jpg?v=638012014900200000",
+          "fetchedAt": "2026-08-31T01:24:10.599Z"
+        }
+      ],
+      "bestPrice": 6200,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156999/CH0165.jpg?v=638012014900200000",
+      "presentationKey": "nitroglicerina|0.6mg|30|bio:false|brand:drsimi|form:solid-oral",
+      "cfmId": "CFM-014921",
+      "lexicalMatch": "mismatch"
+    }
+  ]
+}

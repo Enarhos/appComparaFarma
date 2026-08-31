@@ -1,0 +1,254 @@
+[
+ {
+  "query": "ambroxol",
+  "inputOffers": 60,
+  "baseCards": 54,
+  "prCards": 54,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "amoxicilina suspension",
+  "inputOffers": 144,
+  "baseCards": 123,
+  "prCards": 123,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "amoxicilina",
+  "inputOffers": 144,
+  "baseCards": 123,
+  "prCards": 123,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "aspirina",
+  "inputOffers": 74,
+  "baseCards": 52,
+  "prCards": 52,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "betametasona",
+  "inputOffers": 144,
+  "baseCards": 133,
+  "prCards": 133,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "cetirizina",
+  "inputOffers": 110,
+  "baseCards": 101,
+  "prCards": 101,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "clorfenamina",
+  "inputOffers": 82,
+  "baseCards": 78,
+  "prCards": 78,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "clotrimazol",
+  "inputOffers": 100,
+  "baseCards": 94,
+  "prCards": 94,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "diclofenaco",
+  "inputOffers": 141,
+  "baseCards": 126,
+  "prCards": 126,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "dipirona",
+  "inputOffers": 28,
+  "baseCards": 26,
+  "prCards": 26,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "glicerina",
+  "inputOffers": 104,
+  "baseCards": 100,
+  "prCards": 100,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "hidrocortisona",
+  "inputOffers": 77,
+  "baseCards": 71,
+  "prCards": 71,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "ibuprofeno",
+  "inputOffers": 134,
+  "baseCards": 110,
+  "prCards": 110,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "ketoprofeno",
+  "inputOffers": 73,
+  "baseCards": 62,
+  "prCards": 62,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "kitadol",
+  "inputOffers": 54,
+  "baseCards": 39,
+  "prCards": 39,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "loratadina",
+  "inputOffers": 74,
+  "baseCards": 68,
+  "prCards": 68,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "losartan",
+  "inputOffers": 88,
+  "baseCards": 71,
+  "prCards": 71,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "metformina",
+  "inputOffers": 135,
+  "baseCards": 123,
+  "prCards": 123,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "naproxeno",
+  "inputOffers": 47,
+  "baseCards": 43,
+  "prCards": 43,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "next",
+  "inputOffers": 41,
+  "baseCards": 37,
+  "prCards": 37,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "nistatina",
+  "inputOffers": 36,
+  "baseCards": 31,
+  "prCards": 31,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "omeprazol",
+  "inputOffers": 49,
+  "baseCards": 36,
+  "prCards": 36,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "paracetamol",
+  "inputOffers": 148,
+  "baseCards": 138,
+  "prCards": 138,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "salbutamol",
+  "inputOffers": 79,
+  "baseCards": 74,
+  "prCards": 74,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "supositorios",
+  "inputOffers": 103,
+  "baseCards": 89,
+  "prCards": 89,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "tapsin sobre",
+  "inputOffers": 60,
+  "baseCards": 60,
+  "prCards": 60,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "tapsin",
+  "inputOffers": 146,
+  "baseCards": 136,
+  "prCards": 136,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ },
+ {
+  "query": "vitamina d gotas",
+  "inputOffers": 152,
+  "baseCards": 149,
+  "prCards": 149,
+  "delta": 0,
+  "onlyInBase": [],
+  "onlyInPr": []
+ }
+]

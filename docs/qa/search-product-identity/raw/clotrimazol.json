@@ -1,0 +1,3031 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "clotrimazol",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=clotrimazol",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:24:13.394Z",
+  "completedAt": "2026-08-31T01:24:21.985Z",
+  "httpStatus": 200,
+  "error": null,
+  "resultCount": 94,
+  "results": [
+    {
+      "matchKey": "clotrimazol|20000mg|20",
+      "canonicalName": "Clotrimazol Crema topica al 1% x 20 g  Surfarma",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clotrimazol Crema topica al 1% x 20 g  Surfarma",
+          "channels": {
+            "store": 480,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 480
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C20000mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-crema-topica-al-1-x-20-g-surfarma%2F&cfmId=CFM-003626",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/41254-scaled-1-scaled.jpeg",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 480,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/41254-scaled-1-scaled.jpeg",
+      "presentationKey": "clotrimazol|20000mg|20|bio:unknown|brand:unknown|var:al|form:topical",
+      "cfmId": "CFM-003626",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20000mg",
+      "canonicalName": "Clotrimazol Crema Tópica 1% 20g Ethon (Cenabast)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clotrimazol Crema Tópica 1% 20g Ethon (Cenabast)",
+          "channels": {
+            "store": 490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C20000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-crema-topica-1-20g-ethon-cenabast%2F&cfmId=CFM-009042",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/01/clotrimazol-1-crema-20g-ethon.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 490,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/01/clotrimazol-1-crema-20g-ethon.jpg",
+      "presentationKey": "clotrimazol|20000mg|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009042",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ethonazol",
+      "canonicalName": "Ethonazol Clotrimazol 1% crema 20 gramos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ethonazol Clotrimazol 1% crema 20 gramos",
+          "channels": {
+            "store": 500,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 500
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ethonazol&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fethonazol-clotrimazol-1-crema-20-gramos&cfmId=CFM-009452",
+          "imageUrl": "https://farmacia.araucomed.com/10840-home_default/ethonazol-clotrimazol-1-crema-20-gramos.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 500,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/10840-home_default/ethonazol-clotrimazol-1-crema-20-gramos.jpg",
+      "presentationKey": "ethonazol|bio:unknown|brand:unknown|var:clotrimazol|form:topical",
+      "cfmId": "CFM-009452",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20000mg|20",
+      "canonicalName": "Clotrimazol Crema Tópica 1% x 20 g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clotrimazol Crema Tópica 1% x 20 g",
+          "channels": {
+            "store": 590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C20000mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-crema-topica-1-x-20-g%2F&cfmId=CFM-003626",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/01/clotrimazol-20-g.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 590,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/01/clotrimazol-20-g.jpg",
+      "presentationKey": "clotrimazol|20000mg|20|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-003626",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20",
+      "canonicalName": "Clotrimazol 1% crema x 20 gramos (CuraeSpring)",
+      "laboratory": "CuraeSpring",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 1% crema x 20 gramos (CuraeSpring)",
+          "channels": {
+            "store": 600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 600
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-1-crema-x-20-gramos-curaespring&cfmId=CFM-009465",
+          "imageUrl": "https://farmacia.araucomed.com/12970-home_default/clotrimazol-1-crema-x-20-gramos-curaespring.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 600,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/12970-home_default/clotrimazol-1-crema-x-20-gramos-curaespring.jpg",
+      "presentationKey": "clotrimazol|20|bio:unknown|brand:curaespring|form:topical",
+      "cfmId": "CFM-009465",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20",
+      "canonicalName": "Clotrimazol 1% crema x 20 gramos. (Ethon)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 1% crema x 20 gramos. (Ethon)",
+          "channels": {
+            "store": 600,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 600
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-1-crema-20g-ethon&cfmId=CFM-009465",
+          "imageUrl": "https://farmacia.araucomed.com/3512-home_default/clotrimazol-1-crema-20g-ethon.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 600,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/3512-home_default/clotrimazol-1-crema-20g-ethon.jpg",
+      "presentationKey": "clotrimazol|20|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009465",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20000mg",
+      "canonicalName": "Clotrimazol 1 % crema 20 g",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Clotrimazol 1 % crema 20 g",
+          "channels": {
+            "store": 640,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 640
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=clotrimazol%7C20000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fclotrimazol-1-crema-topica-20-gr%2Fp&cfmId=CFM-009042",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160689/Ascend---AR2141-01.jpg?v=639159244377800000",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 640,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160689/Ascend---AR2141-01.jpg?v=639159244377800000",
+      "presentationKey": "clotrimazol|20000mg|bio:false|brand:pasteur|form:topical",
+      "cfmId": "CFM-009042",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|15000mg",
+      "canonicalName": "Clotrimazol / Betametasona Dipropionato Crema Tópica 15g",
+      "laboratory": "Clotrimazol- Betametasona",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clotrimazol + Betametasona crema 15g",
+          "channels": {
+            "store": 680,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 680
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-betametasona-crema-15g%2F&cfmId=CFM-003643",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/03/clotrimazol-crema-15g.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        },
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimazol / Betametasona Dipropionato Crema Tópica 15g",
+          "channels": {
+            "store": 2999,
+            "online": 2639,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2639
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-betametasona-dipropionato-crema-topica-15g%3Fdefault_sku%3D1763277&cfmId=CFM-003643",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/80029/small/1763277.jpg?1663207711",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 680,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/80029/small/1763277.jpg?1663207711",
+      "presentationKey": "clotrimazol|15000mg|bio:unknown|brand:unknown|combo:betametasona|form:topical",
+      "cfmId": "CFM-003643",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20000mg|20",
+      "canonicalName": "Clotrimazol Crema Topica 1 % x 20 g",
+      "laboratory": "curespring",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Clotrimazol Crema Topica 1 % x 20 g",
+          "channels": {
+            "store": 790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=clotrimazol%7C20000mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fclotrimazol-crema-topica-1-x-20-g-9%3F_pos%3D2%26_psq%3Dclotrimazol%26_psid%3D35e1dcaa0%26_ss%3De&cfmId=CFM-003626",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/clotrimazol-crema-topica-1-x-20-g-curespring-116909.jpg?v=1735309274",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 790,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/clotrimazol-crema-topica-1-x-20-g-curespring-116909.jpg?v=1735309274",
+      "presentationKey": "clotrimazol|20000mg|20|bio:unknown|brand:curespring|form:topical",
+      "cfmId": "CFM-003626",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol",
+      "canonicalName": "Clotrimazol 1 % Crema 20 gr (SCL)",
+      "laboratory": "Laboratorio SCL",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Clotrimazol 1 % Crema 20 gr (SCL)",
+          "channels": {
+            "store": 795,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 795
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=clotrimazol&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fclotrimazol-cr-20-g-scl%3F_pos%3D1%26_psq%3Dclotrimazol%26_psid%3D35e1dcaa0%26_ss%3De&cfmId=CFM-006072",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/clotrimazol-cr-20-g-scl-laboratorio-scl-761642.jpg?v=1751648663",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 795,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/clotrimazol-cr-20-g-scl-laboratorio-scl-761642.jpg?v=1751648663",
+      "presentationKey": "clotrimazol|bio:unknown|brand:scl|form:topical",
+      "cfmId": "CFM-006072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20",
+      "canonicalName": "Clotrimazol 1% crema x 20 gramos (Opko)",
+      "laboratory": "Andrómaco",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 1% crema x 20 gramos (Opko)",
+          "channels": {
+            "store": 890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-1-crema-x-20-gramos-opko&cfmId=CFM-009465",
+          "imageUrl": "https://farmacia.araucomed.com/11758-home_default/clotrimazol-1-crema-x-20-gramos-opko.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 890,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/11758-home_default/clotrimazol-1-crema-x-20-gramos-opko.jpg",
+      "presentationKey": "clotrimazol|20|bio:unknown|brand:andromaco|form:topical",
+      "cfmId": "CFM-009465",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|15000mg",
+      "canonicalName": "Clotrimazol  1 g betametasona 0,05 g crema tópica 15 g",
+      "laboratory": "OPKO",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Clotrimazol  1 g betametasona 0,05 g crema tópica 15 g",
+          "channels": {
+            "store": 920,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 920
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fbetametasona-clotrimazol-0-05-1-crema-15-gr%2Fp&cfmId=CFM-003643",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155914/CH0013-1.jpg?v=637964771637470000",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 920,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155914/CH0013-1.jpg?v=637964771637470000",
+      "presentationKey": "clotrimazol|15000mg|bio:false|brand:opko|form:topical",
+      "cfmId": "CFM-003643",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "ethonazol|20000mg|20",
+      "canonicalName": "Ethonazol Clotrimazol  Crema topica al 1% x 20 g  Ethon",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ethonazol Clotrimazol  Crema topica al 1% x 20 g  Ethon",
+          "channels": {
+            "store": 980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ethonazol%7C20000mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-crema-topica-al-1-x-20-g-ethon%2F&cfmId=CFM-003642",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/07/ethonazol.png",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/07/ethonazol.png",
+      "presentationKey": "ethonazol|20000mg|20|bio:unknown|brand:unknown|var:clotrimazol|form:topical",
+      "cfmId": "CFM-003642",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|15000mg",
+      "canonicalName": "Clotrimazol Betametasona crema 15g (Opko)",
+      "laboratory": "Opko",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol Betametasona crema 15g (Opko)",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fclotrimazol-betametasona-crema-15g-opko&cfmId=CFM-003643",
+          "imageUrl": "https://farmacia.araucomed.com/7562-home_default/clotrimazol-betametasona-crema-15g-opko.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7562-home_default/clotrimazol-betametasona-crema-15g-opko.jpg",
+      "presentationKey": "clotrimazol|15000mg|bio:unknown|brand:opko|var:betametasona|form:topical",
+      "cfmId": "CFM-003643",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20000mg",
+      "canonicalName": "Clotrimazol 1% crema 20g (Pasteur)",
+      "laboratory": "Pasteur",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 1% crema 20g (Pasteur)",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C20000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-1-crema-20g-pasteur&cfmId=CFM-009042",
+          "imageUrl": "https://farmacia.araucomed.com/8192-home_default/clotrimazol-1-crema-20g-pasteur.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8192-home_default/clotrimazol-1-crema-20g-pasteur.jpg",
+      "presentationKey": "clotrimazol|20000mg|bio:unknown|brand:pasteur|form:topical",
+      "cfmId": "CFM-009042",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20",
+      "canonicalName": "Clotrimazol 1% crema x 20 gramos. (Ascend)",
+      "laboratory": "Ascend",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 1% crema x 20 gramos. (Ascend)",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-1-crema-x20g-ascend&cfmId=CFM-009465",
+          "imageUrl": "https://farmacia.araucomed.com/8146-home_default/clotrimazol-1-crema-x20g-ascend.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8146-home_default/clotrimazol-1-crema-x20g-ascend.jpg",
+      "presentationKey": "clotrimazol|20|bio:unknown|brand:ascend|form:topical",
+      "cfmId": "CFM-009465",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20000mg",
+      "canonicalName": "Clotrimazol Crema 1% 20 g...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Clotrimazol Crema 1% 20 g...",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotrimazol%7C20000mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102047-clotrimazol-crema-1-20-g-lab-ascend.html&cfmId=CFM-009042",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "clotrimazol|20000mg|bio:unknown|brand:ascend|form:topical",
+      "cfmId": "CFM-009042",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|100mg|6",
+      "canonicalName": "Clotrimazol 100 mg x 6 óvulos",
+      "laboratory": "CHILE",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 100 mg x 6 ovulos (Chile) (vence 31.10.2026)",
+          "channels": {
+            "store": 995,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 995
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C100mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-100mg-x6-ovulos-chile&cfmId=CFM-003638",
+          "imageUrl": "https://farmacia.araucomed.com/4730-home_default/clotrimazol-100mg-x6-ovulos-chile.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        },
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Clotrimazol 100 mg x 6 óvulos",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=clotrimazol%7C100mg%7C6&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fclotrimazol-100-mg-x-6-ovulos-chile%3F_pos%3D5%26_psq%3Dclotrimazol%26_psid%3D35e1dcaa0%26_ss%3De&cfmId=CFM-003638",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/clotrimazol-100-mg-x-6-ovulos-chile-chile-385666.jpg?v=1692989430",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 995,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/clotrimazol-100-mg-x-6-ovulos-chile-chile-385666.jpg?v=1692989430",
+      "presentationKey": "clotrimazol|100mg|6|bio:unknown|brand:chile|form:suppository",
+      "cfmId": "CFM-003638",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|500mg|2",
+      "canonicalName": "Clotrimazol 500 mg x 2 comprimidos vaginales. Lab.Bioval (Cenabast)",
+      "laboratory": "Lab.Bioval",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 500 mg x 2 comprimidos vaginales. Lab.Bioval (Cenabast)",
+          "channels": {
+            "store": 1000,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1000
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C500mg%7C2&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-500-mg-x-2-comprimidos-vaginales-labbioval-cenabast&cfmId=CFM-009455",
+          "imageUrl": "https://farmacia.araucomed.com/13736-home_default/clotrimazol-500-mg-x-2-comprimidos-vaginales-labbioval-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 1000,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13736-home_default/clotrimazol-500-mg-x-2-comprimidos-vaginales-labbioval-cenabast.jpg",
+      "presentationKey": "clotrimazol|500mg|2|bio:unknown|brand:bioval|form:solid-oral",
+      "cfmId": "CFM-009455",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20ml|20",
+      "canonicalName": "Clotrimazol 1 % Solución Tópica x 20 ml DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clotrimazol 1 % Solución Tópica x 20 ml DESCUENTO",
+          "channels": {
+            "store": 1050,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1050
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C20ml%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-1-solucion-topica-x-20-ml-descuento%2F&cfmId=CFM-003654",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/02/clotrimazol-1-x-20-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 1050,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/02/clotrimazol-1-x-20-ml.jpg",
+      "presentationKey": "clotrimazol|20ml|20|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-003654",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20ml",
+      "canonicalName": "Clotrimazol 1% Solución 20 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clotrimazol 1% Solución 20 mL",
+          "channels": {
+            "store": 1090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clotrimazol%7C20ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclotrimazol-1-solucion-20-ml%2F199387.html&cfmId=CFM-005764",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4512bebb/images/large/199387-clotrimazol-1-solucion-20-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.139Z"
+        }
+      ],
+      "bestPrice": 1090,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4512bebb/images/large/199387-clotrimazol-1-solucion-20-ml.jpg",
+      "presentationKey": "clotrimazol|20ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-005764",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20",
+      "canonicalName": "Clotrimazol 1% crema x 20 gramos. (Chile)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 1% crema x 20 gramos. (Chile)",
+          "channels": {
+            "store": 1200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-1-crema-x20g-chile&cfmId=CFM-009465",
+          "imageUrl": "https://farmacia.araucomed.com/5459-home_default/clotrimazol-1-crema-x20g-chile.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 1200,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5459-home_default/clotrimazol-1-crema-x20g-chile.jpg",
+      "presentationKey": "clotrimazol|20|bio:unknown|brand:chile|form:topical",
+      "cfmId": "CFM-009465",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|100mg|6",
+      "canonicalName": "Clotrimazol 100 mg x 6 ovulos. Seven Pharma (Cenabast)",
+      "laboratory": "Seven Pharma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 100 mg x 6 ovulos. Seven Pharma (Cenabast)",
+          "channels": {
+            "store": 1200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C100mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-100-mg-x-6-ovulos-seven-pharma-cenabast&cfmId=CFM-003638",
+          "imageUrl": "https://farmacia.araucomed.com/13234-home_default/clotrimazol-100-mg-x-6-ovulos-seven-pharma-cenabast.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 1200,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13234-home_default/clotrimazol-100-mg-x-6-ovulos-seven-pharma-cenabast.jpg",
+      "presentationKey": "clotrimazol|100mg|6|bio:unknown|brand:sevenpharma|form:suppository",
+      "cfmId": "CFM-003638",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|15000mg",
+      "canonicalName": "Clotrimazol Betametasona crema 15g (Chile)",
+      "laboratory": "Laboratorio Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol Betametasona crema 15g (Chile)",
+          "channels": {
+            "store": 1200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fclotrimazol-betametasona-crema-15g-chile&cfmId=CFM-003643",
+          "imageUrl": "https://farmacia.araucomed.com/8148-home_default/clotrimazol-betametasona-crema-15g-chile.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 1200,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/8148-home_default/clotrimazol-betametasona-crema-15g-chile.jpg",
+      "presentationKey": "clotrimazol|15000mg|bio:unknown|brand:chile|var:betametasona|form:topical",
+      "cfmId": "CFM-003643",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|15000mg|15",
+      "canonicalName": "Clotrimazol + Betametasona 1 / 0,05 % x 15 g (opko)",
+      "laboratory": "OPKO",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Clotrimazol + Betametasona 1 / 0,05 % x 15 g (opko)",
+          "channels": {
+            "store": 1390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1390
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=clotrimazol%7C15000mg%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fclotrimazol-betametazon-1-0-05-x-15-g%3F_pos%3D3%26_psq%3Dclotrimazol%26_psid%3D35e1dcaa0%26_ss%3De&cfmId=CFM-001097",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/clotrimazolbetametazon-1005-x-15-g-opko-opko-376870.jpg?v=1692989446",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 1390,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/clotrimazolbetametazon-1005-x-15-g-opko-opko-376870.jpg?v=1692989446",
+      "presentationKey": "clotrimazol|15000mg|15|bio:unknown|brand:opko|combo:betametasona",
+      "cfmId": "CFM-001097",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|15000mg|15",
+      "canonicalName": "Clotrimazol + Betametasona x 15 g Crema Tópica HOSPIFARMA CHILE LTD",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Clotrimazol + Betametasona x 15 g Crema Tópica HOSPIFARMA CHILE LTD",
+          "channels": {
+            "store": 1430,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1430
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clotrimazol%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclotrimazol-betametasona-x-15-g-crema-topica-hospifarma-chile-ltd-84022.html&cfmId=CFM-001097",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1db3fdee/images/products/84022/84022.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 1430,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1db3fdee/images/products/84022/84022.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "clotrimazol|15000mg|15|bio:unknown|brand:unknown|combo:betametasona|form:topical",
+      "cfmId": "CFM-001097",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol",
+      "canonicalName": "Clotrimazol / Betametasona...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Clotrimazol / Betametasona...",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotrimazol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104289-clotrimazol-betametasona-15-gr-curaespring.html&cfmId=CFM-006072",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "clotrimazol|bio:unknown|brand:curaespring|combo:betametasona",
+      "cfmId": "CFM-006072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol",
+      "canonicalName": "Clotrimazol / Betametasona...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Clotrimazol / Betametasona...",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotrimazol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26095-clotrimazol-betametasona-dipropionato-crema-x-15gr.html&cfmId=CFM-006072",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "clotrimazol|bio:unknown|brand:15gr|combo:betametasona",
+      "cfmId": "CFM-006072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol",
+      "canonicalName": "Clotrimazol Crema 1% 20 gr...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Clotrimazol Crema 1% 20 gr...",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotrimazol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102999-clotrimazol-crema-1-20-gr-opko.html&cfmId=CFM-006072",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "clotrimazol|bio:unknown|brand:opko|form:topical",
+      "cfmId": "CFM-006072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|500mg",
+      "canonicalName": "Clotrimazol 500mg x1 Ovulo (Hospifarma)",
+      "laboratory": "Hospifarma",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 500mg x1 Ovulo (Hospifarma)",
+          "channels": {
+            "store": 1500,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1500
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C500mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-500mg-x1-ovulo-hospifarma&cfmId=CFM-009463",
+          "imageUrl": "https://farmacia.araucomed.com/9783-home_default/clotrimazol-500mg-x1-ovulo-hospifarma.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 1500,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9783-home_default/clotrimazol-500mg-x1-ovulo-hospifarma.jpg",
+      "presentationKey": "clotrimazol|500mg|bio:unknown|brand:hospifarma|form:suppository",
+      "cfmId": "CFM-009463",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|100mg|6",
+      "canonicalName": "Clotrimazol 100 mg x 6 Óvulos Vaginales PASTEUR",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clotrimazol 100 mg x 6 óvulos vaginales (cenabast)",
+          "channels": {
+            "store": 1510,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1510
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C100mg%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-100-mg-x-6-ovulos-vaginales-cenabast%2F&cfmId=CFM-003638",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/04/clotrimazol-100-x-6.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Clotrimazol 100 mg x 6 Óvulos Vaginales PASTEUR",
+          "channels": {
+            "store": 2726,
+            "online": null,
+            "cmr": 2249,
+            "sbpay": null,
+            "effective": 2249
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clotrimazol%7C100mg%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclotrimazol-100-mg-x-6-ovulos-vaginales-pasteur-86721.html&cfmId=CFM-003638",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw56b54bce/images/products/86721/86721.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 1510,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw56b54bce/images/products/86721/86721.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "clotrimazol|100mg|6|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-003638",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|100mg",
+      "canonicalName": "Clotrimazol 100 mg 6 óvulos",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Clotrimazol 100 mg 6 óvulos",
+          "channels": {
+            "store": 1520,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1520
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=clotrimazol%7C100mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fclotrimazol-100-mg-6-ovulos-vaginales%2Fp&cfmId=CFM-009456",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160794/306-01-Pasteur.jpg?v=639160229100070000",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 1520,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160794/306-01-Pasteur.jpg?v=639160229100070000",
+      "presentationKey": "clotrimazol|100mg|bio:false|brand:pasteur|form:suppository",
+      "cfmId": "CFM-009456",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol",
+      "canonicalName": "Clotrimazol 1 gr Betametasona 0,05 gr Crema Tópica 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clotrimazol 1 gr Betametasona 0,05 gr Crema Tópica 15 gr",
+          "channels": {
+            "store": 1590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clotrimazol&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclotrimazol-1-gr-betametasona-0-05-gr-crema-topica-15-gr%2F2384.html&cfmId=CFM-006072",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1871412b/images/large/2384-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 1590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1871412b/images/large/2384-1.jpg",
+      "presentationKey": "clotrimazol|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-006072",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|30",
+      "canonicalName": "Clotrimazol en Polvo 1% x 30 Gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Clotrimazol en Polvo 1% x 30 Gr",
+          "channels": {
+            "store": 1890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-en-polvo-1-x-30-gr%2F&cfmId=CFM-009458",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/11/7800068030628_1024x1024.webp",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 1890,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/11/7800068030628_1024x1024.webp",
+      "presentationKey": "clotrimazol|30|bio:unknown|brand:unknown|var:en|form:fluid-oral",
+      "cfmId": "CFM-009458",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|500mg",
+      "canonicalName": "Clotrimazol 500 mg x 1 óvulo",
+      "laboratory": "PASTEUR",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Clotrimazol 500 mg x 1 óvulo",
+          "channels": {
+            "store": 1890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=clotrimazol%7C500mg&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fclotrimazol-500-mg-x-1-ovulo-pasteur%3F_pos%3D6%26_psq%3Dclotrimazol%26_psid%3D35e1dcaa0%26_ss%3De&cfmId=CFM-009463",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/clotrimazol-500-mg-x-1-ovulo-pasteur-622590.jpg?v=1692989461",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 1890,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/clotrimazol-500-mg-x-1-ovulo-pasteur-622590.jpg?v=1692989461",
+      "presentationKey": "clotrimazol|500mg|bio:unknown|brand:pasteur|form:suppository",
+      "cfmId": "CFM-009463",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|500mg",
+      "canonicalName": "Clotrimazol 500 mg 1 óvulo vaginal",
+      "laboratory": "HOSPIFARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Clotrimazol 500 mg 1 óvulo vaginal",
+          "channels": {
+            "store": 2200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2200
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=clotrimazol%7C500mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fclotrimazol-500-mg-1-ovulo-vaginal%2Fp&cfmId=CFM-009463",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160791/CL0048-01-HOSPIFARMA.jpg?v=639160222004600000",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 2200,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160791/CL0048-01-HOSPIFARMA.jpg?v=639160222004600000",
+      "presentationKey": "clotrimazol|500mg|bio:false|brand:hospifarma|form:suppository",
+      "cfmId": "CFM-009463",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|500mg",
+      "canonicalName": "Clotrimazol 500 mg 1 Ovulo",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Clotrimazol 500 mg x 1 Óvulo Vaginal PASTEUR",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": 2249,
+            "sbpay": null,
+            "effective": 2249
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clotrimazol%7C500mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclotrimazol-500-mg-x-1-ovulo-vaginal-pasteur-89238.html&cfmId=CFM-009463",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd24af797/images/products/89238/89238.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clotrimazol 500 mg 1 Ovulo",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clotrimazol%7C500mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclotrimazol-500-mg-1-ovulo%2F199261.html&cfmId=CFM-009463",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4fb16510/images/large/199261-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 2249,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4fb16510/images/large/199261-1.jpg",
+      "presentationKey": "clotrimazol|500mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-009463",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|100mg|6",
+      "canonicalName": "Clotrimazol 100 mg x 6 óvulos (Pasteur)",
+      "laboratory": "Pasteur",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Clotrimazol 100 mg x 6 óvulos (Pasteur)",
+          "channels": {
+            "store": 2290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C100mg%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fclotrimazol-100mg-x6ovulos-pasteur&cfmId=CFM-003638",
+          "imageUrl": "https://farmacia.araucomed.com/6518-home_default/clotrimazol-100mg-x6ovulos-pasteur.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 2290,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/6518-home_default/clotrimazol-100mg-x6ovulos-pasteur.jpg",
+      "presentationKey": "clotrimazol|100mg|6|bio:unknown|brand:pasteur|form:suppository",
+      "cfmId": "CFM-003638",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "creminem",
+      "canonicalName": "Creminem Clotrimazol 1% Crema 20 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Creminem Clotrimazol 1% Crema 20 gr",
+          "channels": {
+            "store": 2590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=creminem&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcreminem-clotrimazol-1-crema-20-gr%2F193078.html&cfmId=CFM-009469",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe6ddf6a2/images/large/193078.1.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 2590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe6ddf6a2/images/large/193078.1.jpg",
+      "presentationKey": "creminem|bio:unknown|brand:unknown|var:clotrimazol|form:topical",
+      "cfmId": "CFM-009469",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|100mg|6",
+      "canonicalName": "Clotrimazol 100mg 6 Comprimidos Vaginales",
+      "laboratory": "Clotrimazol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimazol 100mg 6 Comprimidos Vaginales",
+          "channels": {
+            "store": 3099,
+            "online": 2727,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2727
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C100mg%7C6&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-100mg-6-comprimidos-vaginales%3Fdefault_sku%3D581362&cfmId=CFM-003638",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/160408/small/581362.jpg?1759259330",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 2727,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/160408/small/581362.jpg?1759259330",
+      "presentationKey": "clotrimazol|100mg|6|bio:unknown|brand:clotrimazol|form:solid-oral",
+      "cfmId": "CFM-003638",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "piesan|20000mg|20",
+      "canonicalName": "Piesan 1% Clotrimazol x 20g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Piesan 1% Clotrimazol x 20g",
+          "channels": {
+            "store": 2980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=piesan%7C20000mg%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fpiesan-1-clotrimazol-x-20g%2F&cfmId=CFM-003661",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/02/piesan-x-20-g.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 2980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/02/piesan-x-20-g.jpg",
+      "presentationKey": "piesan|20000mg|20|bio:unknown|brand:unknown|var:clotrimazol",
+      "cfmId": "CFM-003661",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "canesten|20",
+      "canonicalName": "Canesten Crema 1% x 20 gramos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Canesten Crema 1% x 20 gramos",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=canesten%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fcanesten-crema-1-20g&cfmId=CFM-009052",
+          "imageUrl": "https://farmacia.araucomed.com/5708-home_default/canesten-crema-1-20g.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5708-home_default/canesten-crema-1-20g.jpg",
+      "presentationKey": "canesten|20|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009052",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clotrimazol|100mg|6",
+      "canonicalName": "Clotrimazol 100 mg x 6...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Clotrimazol 100 mg x 6...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotrimazol%7C100mg%7C6&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24611-clotrimazol-100-mg-ovulos-x-6.html&cfmId=CFM-003638",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "clotrimazol|100mg|6|bio:unknown|brand:unknown",
+      "cfmId": "CFM-003638",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|500mg",
+      "canonicalName": "Clotrimazol 500mg 1 Óvulo",
+      "laboratory": "Clotrimazol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimazol 500mg 1 Óvulo",
+          "channels": {
+            "store": 2999,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2999
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C500mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-500mg-1-ovulo%3Fdefault_sku%3D2504143&cfmId=CFM-009463",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/143797/small/2504143.jpg?1747149709",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 2999,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/143797/small/2504143.jpg?1747149709",
+      "presentationKey": "clotrimazol|500mg|bio:unknown|brand:clotrimazol|form:suppository",
+      "cfmId": "CFM-009463",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|100mg",
+      "canonicalName": "Clotrimazol 100 mg 6 Ovulos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Clotrimazol 100 mg 6 Ovulos",
+          "channels": {
+            "store": 3290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clotrimazol%7C100mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclotrimazol-100-mg-6-ovulos%2F199231.html&cfmId=CFM-009456",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw985fa8b5/images/large/199231-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 3290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw985fa8b5/images/large/199231-1.jpg",
+      "presentationKey": "clotrimazol|100mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-009456",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "piesan|100",
+      "canonicalName": "Piesan Clotrimazol Polvo 1% x 100 gramos.",
+      "laboratory": "Iphsa",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Piesan Clotrimazol Polvo 1% x 100 gramos.",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=piesan%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fpiesan-clotrimazol-polvo-1-x-30-gramos&cfmId=CFM-005225",
+          "imageUrl": "https://farmacia.araucomed.com/13319-home_default/piesan-clotrimazol-polvo-1-x-30-gramos.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 3490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13319-home_default/piesan-clotrimazol-polvo-1-x-30-gramos.jpg",
+      "presentationKey": "piesan|100|bio:unknown|brand:iphsa|var:clotrimazol|form:fluid-oral",
+      "cfmId": "CFM-005225",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "canesten|20000mg|20",
+      "canonicalName": "Canesten 1 % x 20 g Crema Tópica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Canesten 1 % x 20 g Crema Tópica",
+          "channels": {
+            "store": 5049,
+            "online": null,
+            "cmr": 3787,
+            "sbpay": null,
+            "effective": 3787
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=canesten%7C20000mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcanesten-1-x-20-g-crema-topica-145.html&cfmId=CFM-003745",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw02ef0b7c/images/products/145/145.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 3787,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw02ef0b7c/images/products/145/145.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "canesten|20000mg|20|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-003745",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clotrimazol|500mg",
+      "canonicalName": "Clotrimazol 500mg 1 Comprimidos Vaginales",
+      "laboratory": "Clotrimazol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimazol 500mg 1 Comprimidos Vaginales",
+          "channels": {
+            "store": 4399,
+            "online": 3871,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3871
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C500mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-500mg-1-comprimidos-vaginales%3Fdefault_sku%3D581275&cfmId=CFM-009463",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/152192/small/Medicamento_Gen%C3%A9rico.jpeg?1753740553",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 3871,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/152192/small/Medicamento_Gen%C3%A9rico.jpeg?1753740553",
+      "presentationKey": "clotrimazol|500mg|bio:unknown|brand:clotrimazol|form:solid-oral",
+      "cfmId": "CFM-009463",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "piesan|100000mg",
+      "canonicalName": "Piesan clotrimazol 1 % polvo uso tópico 100 g",
+      "laboratory": "INTERPHARMA",
+      "isBioequivalent": false,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Piesan clotrimazol 1 % polvo uso tópico 100 g",
+          "channels": {
+            "store": 3960,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3960
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=piesan%7C100000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fpiesan-clotrimazol-1-100-gr-polvo-topico%2Fp&cfmId=CFM-009459",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156134/CH5300-1.jpg?v=637964772430770000",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 3960,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156134/CH5300-1.jpg?v=637964772430770000",
+      "presentationKey": "piesan|100000mg|bio:false|brand:interpharma|var:clotrimazol|form:fluid-oral",
+      "cfmId": "CFM-009459",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|500mg",
+      "canonicalName": "Clotrimazol 500 mg x 1 comp...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Clotrimazol 500 mg x 1 comp...",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotrimazol%7C500mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F101662-clotrimazol-500-mg-x-1-comp-vaginal.html&cfmId=CFM-009463",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "clotrimazol|500mg|bio:unknown|brand:vaginal|form:solid-oral",
+      "cfmId": "CFM-009463",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "canesten",
+      "canonicalName": "Canesten Crema Tópica 1% x...",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Canesten Crema Tópica 1% x...",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=canesten&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25068-canesten-crema-topica-1-x-20gr.html&cfmId=CFM-003636",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "canesten|bio:unknown|brand:20gr|form:topical",
+      "cfmId": "CFM-003636",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "canesten|20000mg",
+      "canonicalName": "Canesten Clotrimazol 1% Crema Tópica 20g",
+      "laboratory": "Canesten",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Canesten Clotrimazol 1% Crema Tópica 20g",
+          "channels": {
+            "store": 4999,
+            "online": 4399,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4399
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=canesten%7C20000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcanesten-clotrimazol-1-crema-topica-20g%3Fdefault_sku%3D150640&cfmId=CFM-009053",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/169968/small/150640.jpg?1765390764",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 4399,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/169968/small/150640.jpg?1765390764",
+      "presentationKey": "canesten|20000mg|bio:unknown|brand:canesten|var:clotrimazol|form:topical",
+      "cfmId": "CFM-009053",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|20000mg",
+      "canonicalName": "Clotrimazol 1% Crema Tópica 20g",
+      "laboratory": "Laboratorio de Chile",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimazol 1% Crema Tópica 20g",
+          "channels": {
+            "store": 5099,
+            "online": 4487,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4487
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C20000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchile-clotrimazol-1-crema-topica-20g%3Fdefault_sku%3D434370&cfmId=CFM-009042",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/16217/small/434370.jpg?1641480291",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 4487,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/16217/small/434370.jpg?1641480291",
+      "presentationKey": "clotrimazol|20000mg|bio:unknown|brand:dechile|form:topical",
+      "cfmId": "CFM-009042",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotrimazol|15000mg",
+      "canonicalName": "Clotrimazol Betametasona 1%/0.05% Crema Dérmica 15g",
+      "laboratory": "Clotrimazol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimazol Betametasona 1%/0.05% Crema Dérmica 15g",
+          "channels": {
+            "store": 5099,
+            "online": 4487,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4487
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-betametasona-1-0-05-crema-dermica-15g%3Fdefault_sku%3D434389&cfmId=CFM-003643",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27660/small/434389.jpg?1641479721",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 4487,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27660/small/434389.jpg?1641479721",
+      "presentationKey": "clotrimazol|15000mg|bio:unknown|brand:clotrimazol|var:betametasona|form:topical",
+      "cfmId": "CFM-003643",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "canesten",
+      "canonicalName": "Canesten (clotrimazol) 1% Crema 20grs",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Canesten (clotrimazol) 1% Crema 20grs",
+          "channels": {
+            "store": 4590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4590
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=canesten&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20058%26d_%3D1&cfmId=CFM-003636",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7891106000185.jpg?v=6a94d7c3bcdfc",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 4590,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7891106000185.jpg?v=6a94d7c3bcdfc",
+      "presentationKey": "canesten|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-003636",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "canesten",
+      "canonicalName": "Canesten Clotrimazol 1% Crema Tópica 20 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Canesten Clotrimazol 1% Crema Tópica 20 gr",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=canesten&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcanesten-clotrimazol-1-crema-topica-20-gr%2F3128.html&cfmId=CFM-003636",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw86930eeb/images/large/3128-canesten-clotrimazol-1-crema-topica-20-gr.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw86930eeb/images/large/3128-canesten-clotrimazol-1-crema-topica-20-gr.jpg",
+      "presentationKey": "canesten|bio:unknown|brand:unknown|var:clotrimazol|form:topical",
+      "cfmId": "CFM-003636",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "winasorb|60ml|60",
+      "canonicalName": "Winasorb Jarabe 150mg/5ml x 60 ml.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Winasorb Jarabe 150mg/5ml x 60 ml.",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=winasorb%7C60ml%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fwinasorb-jarabe-150mg-5ml-x60ml&cfmId=CFM-000052",
+          "imageUrl": "https://farmacia.araucomed.com/7593-home_default/winasorb-jarabe-150mg-5ml-x60ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/7593-home_default/winasorb-jarabe-150mg-5ml-x60ml.jpg",
+      "presentationKey": "winasorb|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000052",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clotriminb",
+      "canonicalName": "Clotrimin-B crema 15 grs.",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Clotrimin-B crema 15 grs.",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotriminb&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25879-clotrimin-b-crema-x-15gr.html&cfmId=CFM-009596",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "clotriminb|bio:unknown|brand:15gr|var:grs|form:topical",
+      "cfmId": "CFM-009596",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clotrimazol|20ml",
+      "canonicalName": "Clotrimazol 1% Tópico Lí­quido 20ml",
+      "laboratory": "Pasteur",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimazol 1% Tópico Lí­quido 20ml",
+          "channels": {
+            "store": 6299,
+            "online": 5543,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5543
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C20ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-1-sol-x20ml%3Fdefault_sku%3D2503045&cfmId=CFM-005764",
+          "imageUrl": "https://static.salcobrandonline.cl/spree/products/39507/small/259470-fungos-clotrimazol-1-solucion-topica-20-ml.jpg?1641477190",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 5543,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrandonline.cl/spree/products/39507/small/259470-fungos-clotrimazol-1-solucion-topica-20-ml.jpg?1641477190",
+      "presentationKey": "clotrimazol|20ml|bio:unknown|brand:pasteur|var:li",
+      "cfmId": "CFM-005764",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cutanil|30000mg",
+      "canonicalName": "Cutanil 1% 30 g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Cutanil 1% 30 g",
+          "channels": {
+            "store": 5995,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5995
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cutanil%7C30000mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102465-cutanil-1-30-g.html&cfmId=CFM-009454",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 5995,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "cutanil|30000mg|bio:unknown|brand:unknown",
+      "cfmId": "CFM-009454",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clotrimazol|100mg",
+      "canonicalName": "Clotrimazol 100mg 6 Óvulos",
+      "laboratory": "Clotrimazol",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimazol 100mg 6 Óvulos",
+          "channels": {
+            "store": 7699,
+            "online": 6775,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6775
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C100mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Flabchile-clotrimazol-100mg-6-ovulos%3Fdefault_sku%3D431419&cfmId=CFM-009456",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/144968/small/431419.jpg?1747773149",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 6775,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/144968/small/431419.jpg?1747773149",
+      "presentationKey": "clotrimazol|100mg|bio:unknown|brand:clotrimazol|form:suppository",
+      "cfmId": "CFM-009456",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "novadrel|0.5mg",
+      "canonicalName": "Novadrel Betametasona 0,5mg Clotrimazol 10mg Crema Tópica  20 gr (Prater)",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Novadrel Betametasona 0,5mg Clotrimazol 10mg Crema Tópica  20 gr (Prater)",
+          "channels": {
+            "store": 6980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=novadrel%7C0.5mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnovadrel-betametasona-crema-topica-05mg-clotrimazol-10mg-x-20-gr-prater%2F&cfmId=CFM-009461",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/novadrel-x-20-g-crema-topica.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 6980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/novadrel-x-20-g-crema-topica.jpg",
+      "presentationKey": "novadrel|0.5mg|bio:unknown|brand:unknown|var:betametasona|form:topical",
+      "cfmId": "CFM-009461",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "canesten|40ml|40",
+      "canonicalName": "Canesten Spray 1% x 40 ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Canesten 1% spray x 40 ml.",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=canesten%7C40ml%7C40&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fcanesten-1-spray-40ml&cfmId=CFM-009054",
+          "imageUrl": "https://farmacia.araucomed.com/5707-home_default/canesten-1-spray-40ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        },
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Canesten Spray 1% x 40 ml",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=canesten%7C40ml%7C40&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25066-canesten-spray-1-x-40ml.html&cfmId=CFM-009054",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5707-home_default/canesten-1-spray-40ml.jpg",
+      "presentationKey": "canesten|40ml|40|bio:unknown|brand:unknown",
+      "cfmId": "CFM-009054",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "fungos|500mg",
+      "canonicalName": "Fungos 500 mg x 1 Ovulo Vaginal",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Fungos 500 mg x 1 Ovulo Vaginal",
+          "channels": {
+            "store": 9604,
+            "online": null,
+            "cmr": 8474,
+            "sbpay": null,
+            "effective": 8474
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=fungos%7C500mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ffungos-500-mg-x-1-ovulo-vaginal-65006.html&cfmId=CFM-009467",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw78b6c9a9/images/products/65006/65006.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 8474,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw78b6c9a9/images/products/65006/65006.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "fungos|500mg|bio:unknown|brand:unknown|form:suppository",
+      "cfmId": "CFM-009467",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "fungos|500mg",
+      "canonicalName": "Fungos Clotrimazol 500mg 1 í“vulo",
+      "laboratory": "Fungos",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Fungos Clotrimazol 500mg 1 í“vulo",
+          "channels": {
+            "store": 10899,
+            "online": 9591,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9591
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=fungos%7C500mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-500mg-ovulo-bd2f5f99-b952-4379-be84-713f9e6ca108%3Fdefault_sku%3D2501047&cfmId=CFM-009467",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28019/small/2501047.jpg?1641479686",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 9591,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28019/small/2501047.jpg?1641479686",
+      "presentationKey": "fungos|500mg|bio:unknown|brand:fungos|var:clotrimazol",
+      "cfmId": "CFM-009467",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cutanil|30000mg|30",
+      "canonicalName": "Cutanil Pasta 1% x30g",
+      "laboratory": "ITF-Labomed",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Cutanil Pasta 1% x30g",
+          "channels": {
+            "store": 9990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 9990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cutanil%7C30000mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fcutanil-pasta-1-x30g&cfmId=CFM-009471",
+          "imageUrl": "https://farmacia.araucomed.com/5730-home_default/cutanil-pasta-1-x30g.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 9990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5730-home_default/cutanil-pasta-1-x30g.jpg",
+      "presentationKey": "cutanil|30000mg|30|bio:unknown|brand:itflabomed|var:pasta",
+      "cfmId": "CFM-009471",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "clotriminb|15000mg|15",
+      "canonicalName": "Clotrimin-B x 15 g Crema Topica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Clotrimin-B x 15 g Crema Topica",
+          "channels": {
+            "store": 14049,
+            "online": null,
+            "cmr": 10537,
+            "sbpay": null,
+            "effective": 10537
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clotriminb%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclotrimin-b-x-15-g-crema-topica-20787.html&cfmId=CFM-003728",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw85e6a2d4/images/products/20787/20787.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 10537,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw85e6a2d4/images/products/20787/20787.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "clotriminb|15000mg|15|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-003728",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "fungos|500mg",
+      "canonicalName": "Fungos Clotrimazol 500 mg 1 Ovulo",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Fungos Clotrimazol 500 mg 1 Ovulo",
+          "channels": {
+            "store": 10890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=fungos%7C500mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Ffungos-clotrimazol-500-mg-1-ovulo%2F259415.html&cfmId=CFM-009467",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw891f1a29/images/large/259415-fungos-ovulos-1-unidad-clotrimazol-500-mg.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 10890,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw891f1a29/images/large/259415-fungos-ovulos-1-unidad-clotrimazol-500-mg.jpg",
+      "presentationKey": "fungos|500mg|bio:unknown|brand:unknown|var:clotrimazol|form:suppository",
+      "cfmId": "CFM-009467",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "clotriminb|15000mg",
+      "canonicalName": "Clotrimin-B Clotrimazol / Betametasona Crema Tópica 15g",
+      "laboratory": "Clotrimin B",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Clotrimin-B Clotrimazol / Betametasona Crema Tópica 15g",
+          "channels": {
+            "store": 13199,
+            "online": 11615,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11615
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotriminb%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimin-b-clotrimazol-betametasona-crema-topica-15g%3Fdefault_sku%3D2100305&cfmId=CFM-006067",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/74331/small/2100305_CLOTRIMIN-B__1500X1500-1.jpg?1654198904",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 11615,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/74331/small/2100305_CLOTRIMIN-B__1500X1500-1.jpg?1654198904",
+      "presentationKey": "clotriminb|15000mg|bio:unknown|brand:clotriminb|combo:betametasona|form:topical",
+      "cfmId": "CFM-006067",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "cutanil|30000mg",
+      "canonicalName": "Cutanil Clotrimazol Pasta Tópica 1% 30g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Cutanil Clotrimazol Pasta Tópica 1% 30g",
+          "channels": {
+            "store": 12800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12800
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cutanil%7C30000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcutanil-clotrimazol-pasta-topica-1-30g%2F&cfmId=CFM-009454",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/cutanil-x-30.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 12800,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/cutanil-x-30.jpg",
+      "presentationKey": "cutanil|30000mg|bio:unknown|brand:unknown|var:clotrimazol",
+      "cfmId": "CFM-009454",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "micosepdeo|200ml",
+      "canonicalName": "Micosepdeo Clotrimazol Aerosol Topico 1% 110 Gr / 200 Ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Micosepdeo Clotrimazol Aerosol Topico 1% 110 Gr / 200 Ml",
+          "channels": {
+            "store": 12900,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12900
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=micosepdeo%7C200ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmicosepdeo-clotrimazol-aerosol-topico-1-110-gr-200-ml%2F&cfmId=CFM-003631",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/851559.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 12900,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/851559.jpg",
+      "presentationKey": "micosepdeo|200ml|bio:unknown|brand:unknown|var:clotrimazol|form:inhaled",
+      "cfmId": "CFM-003631",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "canesten|40ml|40",
+      "canonicalName": "Canesten 1 % x 40 mL Solución Tópica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Canesten 1 % x 40 mL Solución Tópica",
+          "channels": {
+            "store": 17269,
+            "online": null,
+            "cmr": 12952,
+            "sbpay": null,
+            "effective": 12952
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=canesten%7C40ml%7C40&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcanesten-1-x-40-ml-solucion-topica-80884.html&cfmId=CFM-009054",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe0499cf3/images/products/80884/80884.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 12952,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe0499cf3/images/products/80884/80884.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "canesten|40ml|40|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-009054",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "donomix|15000mg",
+      "canonicalName": "Donomix Clotrimazol crema dérmica 15g Lab Chile DESCUENTO",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Donomix Clotrimazol crema dérmica 15g Lab Chile DESCUENTO",
+          "channels": {
+            "store": 12990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 12990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=donomix%7C15000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fdonomix-clotrimazol-crema-dermica-15g-lab-chile-descuento%2F&cfmId=CFM-003655",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/donomix-crema-topica-15-gr-clotrimazol-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 12990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/donomix-crema-topica-15-gr-clotrimazol-1.jpg",
+      "presentationKey": "donomix|15000mg|bio:unknown|brand:unknown|var:clotrimazol|form:topical",
+      "cfmId": "CFM-003655",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "creminem|10mg",
+      "canonicalName": "Creminem?B Clotrimazol 10 mg Betametasona 0,5 mg Crema Dérmica 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Creminem?B Clotrimazol 10 mg Betametasona 0,5 mg Crema Dérmica 15 gr",
+          "channels": {
+            "store": 13090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=creminem%7C10mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcreminem-b-clotrimazol-10-mg-betametasona-0-5-mg-crema-dermica-15-gr%2F193079.html&cfmId=CFM-009466",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfdb5b607/images/large/193079.1.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 13090,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfdb5b607/images/large/193079.1.jpg",
+      "presentationKey": "creminem|10mg|bio:unknown|brand:unknown|var:b|form:topical",
+      "cfmId": "CFM-009466",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "fungos|100mg",
+      "canonicalName": "Fungos Clotrimazol 100mg 6 í“vulos",
+      "laboratory": "Fungos",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Fungos Clotrimazol 100mg 6 í“vulos",
+          "channels": {
+            "store": 15299,
+            "online": 13463,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13463
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=fungos%7C100mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-100mg-ovulo%3Fdefault_sku%3D2501048&cfmId=CFM-009460",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/28020/small/2501048.jpg?1641479686",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 13463,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/28020/small/2501048.jpg?1641479686",
+      "presentationKey": "fungos|100mg|bio:unknown|brand:fungos|var:clotrimazol",
+      "cfmId": "CFM-009460",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "micosepdeo|200ml",
+      "canonicalName": "Micosepdeo 1% Aerosol tópico 200 ml",
+      "laboratory": "Pablo Cassara",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Micosepdeo 1% Aerosol tópico 200 ml",
+          "channels": {
+            "store": 13990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=micosepdeo%7C200ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantimicoticos%2Fmicosep-1-desodorante-spray-200-ml&cfmId=CFM-003631",
+          "imageUrl": "https://farmacia.araucomed.com/5043-home_default/micosep-1-desodorante-spray-200-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.142Z"
+        }
+      ],
+      "bestPrice": 13990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5043-home_default/micosep-1-desodorante-spray-200-ml.jpg",
+      "presentationKey": "micosepdeo|200ml|bio:unknown|brand:pablocassara|form:inhaled",
+      "cfmId": "CFM-003631",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "cutanil|30000mg|30",
+      "canonicalName": "Cutanil 1 % x 30 g Pasta Tópica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Cutanil 1 % x 30 g Pasta Tópica",
+          "channels": {
+            "store": 19789,
+            "online": null,
+            "cmr": 14842,
+            "sbpay": null,
+            "effective": 14842
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cutanil%7C30000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcutanil-1-x-30-g-pasta-topica-2606.html&cfmId=CFM-009471",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw166df6dc/images/products/2606/2606.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 14842,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw166df6dc/images/products/2606/2606.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "cutanil|30000mg|30|bio:unknown|brand:unknown",
+      "cfmId": "CFM-009471",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "donomix|15000mg|15",
+      "canonicalName": "Donomix crema x 15 g",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Donomix crema x 15 g",
+          "channels": {
+            "store": 14990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 14990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=donomix%7C15000mg%7C15&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24627-donomix-crema-x-15-gr.html&cfmId=CFM-003740",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Donomix x 15 g Crema Tópica",
+          "channels": {
+            "store": 21020,
+            "online": null,
+            "cmr": 18547,
+            "sbpay": null,
+            "effective": 18547
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=donomix%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdonomix-x-15-g-crema-topica-1088.html&cfmId=CFM-003740",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw184899ec/images/products/1088/1088.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 14990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw184899ec/images/products/1088/1088.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "donomix|15000mg|15|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-003740",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "fungos|100mg",
+      "canonicalName": "Fungos Clotrimazol 100 mg 6 Óvulos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Fungos Clotrimazol 100 mg 6 Óvulos",
+          "channels": {
+            "store": 15290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=fungos%7C100mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Ffungos-clotrimazol-100-mg-6-ovulos%2F260785.html&cfmId=CFM-009460",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw54ae93a8/images/large/260785-fungos-clotrimazol-100-mg-6-ovulos.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 15290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw54ae93a8/images/large/260785-fungos-clotrimazol-100-mg-6-ovulos.jpg",
+      "presentationKey": "fungos|100mg|bio:unknown|brand:unknown|var:clotrimazol|form:suppository",
+      "cfmId": "CFM-009460",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "micosepdeo|200ml",
+      "canonicalName": "Micosepdeo Aerosol Topico 1% 200ml",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Micosepdeo Aerosol Topico 1% 200ml",
+          "channels": {
+            "store": 20839,
+            "online": null,
+            "cmr": 15629,
+            "sbpay": null,
+            "effective": 15629
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=micosepdeo%7C200ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmicosepdeo-aerosol-topico-1-200ml-81390.html&cfmId=CFM-003631",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw254a2311/images/products/81390/81390.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 15629,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw254a2311/images/products/81390/81390.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "micosepdeo|200ml|bio:unknown|brand:unknown|form:inhaled",
+      "cfmId": "CFM-003631",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "canesten|40ml",
+      "canonicalName": "Canesten Clotrimazol 1% Spray 40 mL",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Canesten Clotrimazol 1% Spray 40 mL",
+          "channels": {
+            "store": 16490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=canesten%7C40ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcanesten-clotrimazol-1-spray-40-ml%2F3133.html&cfmId=CFM-009055",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf9fc18bf/images/large/3133-canesten-clotrimazol-1-spray-40-ml.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 16490,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwf9fc18bf/images/large/3133-canesten-clotrimazol-1-spray-40-ml.jpg",
+      "presentationKey": "canesten|40ml|bio:unknown|brand:unknown|var:clotrimazol",
+      "cfmId": "CFM-009055",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "micosepdeo|200ml",
+      "canonicalName": "Micosepdeo Clotrimazol Aerosol Tópico 200ml",
+      "laboratory": "Micosepdeo",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Micosepdeo Clotrimazol Aerosol Tópico 200ml",
+          "channels": {
+            "store": 19999,
+            "online": 17599,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 17599
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=micosepdeo%7C200ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmicosepdeo-clotrimazol-aerosol-topico-200ml%3Fdefault_sku%3D851559&cfmId=CFM-003631",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27815/small/851559.jpg?1641479706",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 17599,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27815/small/851559.jpg?1641479706",
+      "presentationKey": "micosepdeo|200ml|bio:unknown|brand:micosepdeo|var:clotrimazol|form:inhaled",
+      "cfmId": "CFM-003631",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "tribesona|20000mg|20",
+      "canonicalName": "Tribesona x 20 g Crema",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Tribesona x 20 g Crema",
+          "channels": {
+            "store": 20450,
+            "online": null,
+            "cmr": 18044,
+            "sbpay": null,
+            "effective": 18044
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tribesona%7C20000mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftribesona-x-20-g-crema-790.html&cfmId=CFM-009468",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbb3a5407/images/products/790/790.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 18044,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbb3a5407/images/products/790/790.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "tribesona|20000mg|20|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-009468",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "cutanil",
+      "canonicalName": "Cutanil Clotrimazol 1% Pasta Dérmica 30 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Cutanil Clotrimazol 1% Pasta Dérmica 30 gr",
+          "channels": {
+            "store": 18890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 18890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cutanil&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcutanil-clotrimazol-1-pasta-dermica-30-gr%2F24149.html&cfmId=CFM-009453",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw13c9c6ac/images/large/24149-cutanil-pasta-dermica-30-gr-clotrimazol-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 18890,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw13c9c6ac/images/large/24149-cutanil-pasta-dermica-30-gr-clotrimazol-1.jpg",
+      "presentationKey": "cutanil|bio:unknown|brand:unknown|var:clotrimazol",
+      "cfmId": "CFM-009453",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "tribesona|20000mg",
+      "canonicalName": "Tribesona Clotrimazol / Dexametasona Acetato Crema Tópica 20g",
+      "laboratory": "Tribesona",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Tribesona Clotrimazol / Dexametasona Acetato Crema Tópica 20g",
+          "channels": {
+            "store": 23399,
+            "online": 20591,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 20591
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tribesona%7C20000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftribesona-clotrimazol-dexametasona-acetato-crema-topica-20g%3Fdefault_sku%3D340864&cfmId=CFM-007371",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/41293/small/340864-1.jpg?1641477088",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 20591,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/41293/small/340864-1.jpg?1641477088",
+      "presentationKey": "tribesona|20000mg|bio:unknown|brand:tribesona|combo:dexametasona|form:topical",
+      "cfmId": "CFM-007371",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "donomix|15000mg",
+      "canonicalName": "Donomix Betametasona / Clotrimazol Crema Dérmica 15g",
+      "laboratory": "Donomix",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Donomix Betametasona / Clotrimazol Crema Dérmica 15g",
+          "channels": {
+            "store": 23999,
+            "online": 21119,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 21119
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=donomix%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdonomix-betametasona-clotrimazol-crema-dermica-15g%3Fdefault_sku%3D431305&cfmId=CFM-003655",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/27580/small/431305.jpg?1641479727",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 21119,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/27580/small/431305.jpg?1641479727",
+      "presentationKey": "donomix|15000mg|bio:unknown|brand:donomix|combo:clotrimazol|form:topical",
+      "cfmId": "CFM-003655",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "baycuten|15",
+      "canonicalName": "Baycuten Crema x 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Baycuten Crema x 15 gr",
+          "channels": {
+            "store": 22990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 22990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=baycuten%7C15&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25067-baycuten-crema-x-15gr.html&cfmId=CFM-009597",
+          "imageUrl": null,
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 22990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "baycuten|15|bio:unknown|brand:15gr|form:topical",
+      "cfmId": "CFM-009597",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "donomix|10mg",
+      "canonicalName": "Donomix  Clotrimazol 10 mg / gr Crema Dérmica 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Donomix  Clotrimazol 10 mg / gr Crema Dérmica 15 gr",
+          "channels": {
+            "store": 23990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 23990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=donomix%7C10mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fdonomix-clotrimazol-10-mg-gr-crema-dermica-15-gr%2F1230.html&cfmId=CFM-005078",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw11383a09/images/large/1230-donomix-crema-topica-15-gr-clotrimazol-1.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 23990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw11383a09/images/large/1230-donomix-crema-topica-15-gr-clotrimazol-1.jpg",
+      "presentationKey": "donomix|10mg|bio:unknown|brand:unknown|var:clotrimazol|form:topical",
+      "cfmId": "CFM-005078",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "tribesona",
+      "canonicalName": "Tribesona Crema Clotrimazol 1 gr Crema Tópica 20 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Tribesona Crema Clotrimazol 1 gr Crema Tópica 20 gr",
+          "channels": {
+            "store": 24090,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24090
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tribesona&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftribesona-crema-clotrimazol-1-gr-crema-topica-20-gr%2F19176.html&cfmId=CFM-009457",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwffc0277c/images/large/19176-tribesona-crema-topica-20-gr-dexametasona-004.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 24090,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwffc0277c/images/large/19176-tribesona-crema-topica-20-gr-dexametasona-004.jpg",
+      "presentationKey": "tribesona|bio:unknown|brand:unknown|var:clotrimazol|form:topical",
+      "cfmId": "CFM-009457",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "baycuten",
+      "canonicalName": "Baycuten (dexametasona/clotrimazol)  Crema 15gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Baycuten (dexametasona/clotrimazol)  Crema 15gr",
+          "channels": {
+            "store": 24990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 24990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=baycuten&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D2714%26d_%3D1&cfmId=CFM-003639",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7891106000154.jpg?v=6a94d7c3bceca",
+          "fetchedAt": "2026-08-31T01:24:21.143Z"
+        }
+      ],
+      "bestPrice": 24990,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7891106000154.jpg?v=6a94d7c3bceca",
+      "presentationKey": "baycuten|bio:unknown|brand:unknown|combo:clotrimazol|form:topical",
+      "cfmId": "CFM-003639",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "baycuten|15000mg|15",
+      "canonicalName": "Baycuten x 15 g Crema Tópica",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Baycuten x 15 g Crema Tópica",
+          "channels": {
+            "store": 34169,
+            "online": null,
+            "cmr": 30149,
+            "sbpay": null,
+            "effective": 30149
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=baycuten%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbaycuten-x-15-g-crema-topica-93.html&cfmId=CFM-008533",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwef0e61ae/images/products/93/93.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 30149,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwef0e61ae/images/products/93/93.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "baycuten|15000mg|15|bio:unknown|brand:unknown|form:topical",
+      "cfmId": "CFM-008533",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "gynomax",
+      "canonicalName": "Gynomax XL 300/200/100 3 Óvulos",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Gynomax XL 300/200/100 3 Óvulos",
+          "channels": {
+            "store": 30299,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 30299
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=gynomax&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fgynomax-xl-300-200-100-3-ovulos-97878.html&cfmId=CFM-009464",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwddb8babf/images/products/97878/97878.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 30299,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwddb8babf/images/products/97878/97878.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "gynomax|bio:unknown|brand:unknown|var:xl|form:suppository",
+      "cfmId": "CFM-009464",
+      "lexicalMatch": "compatible"
+    },
+    {
+      "matchKey": "baycuten|15000mg",
+      "canonicalName": "Baycutén Clotrimazol / Dexametasona Crema 15g",
+      "laboratory": "Baycuten",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Baycutén Clotrimazol / Dexametasona Crema 15g",
+          "channels": {
+            "store": 40299,
+            "online": 35463,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 35463
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=baycuten%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbaycuten-clotrimazol-dexametasona-crema-15g%3Fdefault_sku%3D150540&cfmId=CFM-009470",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/64972/small/150540.jpg?1641328747",
+          "fetchedAt": "2026-08-31T01:24:21.141Z"
+        }
+      ],
+      "bestPrice": 35463,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/64972/small/150540.jpg?1641328747",
+      "presentationKey": "baycuten|15000mg|bio:unknown|brand:baycuten|combo:dexametasona|form:topical",
+      "cfmId": "CFM-009470",
+      "lexicalMatch": "exact"
+    },
+    {
+      "matchKey": "baycuten|6mg",
+      "canonicalName": "Baycuten Dexametasona 6 mg Crema Tópica 15 gr",
+      "laboratory": null,
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Baycuten Dexametasona 6 mg Crema Tópica 15 gr",
+          "channels": {
+            "store": 38080,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 38080
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=baycuten%7C6mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbaycuten-dexametasona-6-mg-crema-topica-15-gr%2F7021.html&cfmId=CFM-009462",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3f07211/images/large/7021-baycuten-crema-topica-15-gr-dexametasona-004.jpg",
+          "fetchedAt": "2026-08-31T01:24:21.140Z"
+        }
+      ],
+      "bestPrice": 38080,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3f07211/images/large/7021-baycuten-crema-topica-15-gr-dexametasona-004.jpg",
+      "presentationKey": "baycuten|6mg|bio:unknown|brand:unknown|var:dexametasona|form:topical",
+      "cfmId": "CFM-009462",
+      "lexicalMatch": "compatible"
+    }
+  ]
+}

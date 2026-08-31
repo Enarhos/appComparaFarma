@@ -1,0 +1,16 @@
+{
+  "campaign": "CF-QA-001",
+  "query": "aerosol",
+  "endpoint": "https://comparafarma-api.vercel.app/api/search",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=aerosol",
+  "method": "GET",
+  "auth": "none (endpoint publico)",
+  "requestedAt": "2026-08-31T01:25:47.377Z",
+  "completedAt": "2026-08-31T01:25:47.576Z",
+  "httpStatus": 400,
+  "error": null,
+  "resultCount": null,
+  "results": {
+    "error": "No se pudo interpretar la busqueda."
+  }
+}

@@ -1,0 +1,401 @@
+{
+ "summary": {
+  "total": 48,
+  "resolved": 41,
+  "dead": 7,
+  "deadPct": 14.6,
+  "deadByQuery": {
+   "diclofenaco": 1,
+   "tapsin": 3,
+   "clotrimazol": 2,
+   "glicerina": 1
+  },
+  "allHttp200": true
+ },
+ "rows": [
+  {
+   "query": "diclofenaco",
+   "slug": "/medicamento/diclofenaco-sodico-50-mg-x-10-comprimidos-26o63xhhny3xf",
+   "httpStatus": 200,
+   "title": "Precio de Diclofenaco sódico 50 mg x 10 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:39:44.031Z"
+  },
+  {
+   "query": "diclofenaco",
+   "slug": "/medicamento/diclofenaco-50-mg-x-10-3jqa27a0x1ofh",
+   "httpStatus": 200,
+   "title": "Precio de Diclofenaco 50 mg x 10... en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:39:44.871Z"
+  },
+  {
+   "query": "diclofenaco",
+   "slug": "/medicamento/diclofenaco-sodico-50-mg-x-10-comprimidos-andromaco-35ykcwx006i17",
+   "httpStatus": 200,
+   "title": "Precio de Diclofenaco sodico 50 mg x 10 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:39:45.649Z"
+  },
+  {
+   "query": "diclofenaco",
+   "slug": "/medicamento/diclofenaco-50-mg-10-comprimidos-con-recubrimiento-enterico-2vpq54n83amlm",
+   "httpStatus": 200,
+   "title": "Precio de Diclofenaco 50 mg 10 comprimidos con recubrimiento entérico en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:39:46.485Z"
+  },
+  {
+   "query": "diclofenaco",
+   "slug": "/medicamento/diclofenaco-sodico-100mg-x-8-comprimidos-curaespring-19ts7ozjxpc0u",
+   "httpStatus": 200,
+   "title": "Precio de Diclofenaco Sodico 100 mg 8 Cápsulas de Liberación Prolongada en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:39:54.005Z"
+  },
+  {
+   "query": "diclofenaco",
+   "slug": "/medicamento/diclofenaco-retard-100-mg-x-8-capsulas-opko-1l4aourepmu3b",
+   "httpStatus": 200,
+   "title": "Medicamento no encontrado | PreciosFarma",
+   "resolved": false,
+   "checkedAt": "2026-08-31T01:40:00.003Z"
+  },
+  {
+   "query": "tapsin",
+   "slug": "/medicamento/tapsin-limonada-noche-x5g-7kaozqfpqe42",
+   "httpStatus": 200,
+   "title": "Precio de Tapsin Limonada noche x5g en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:01.164Z"
+  },
+  {
+   "query": "tapsin",
+   "slug": "/medicamento/tapsin-x-6-comprimidos-noche-maver-3a14ey6g56zgt",
+   "httpStatus": 200,
+   "title": "Medicamento no encontrado | PreciosFarma",
+   "resolved": false,
+   "checkedAt": "2026-08-31T01:40:01.890Z"
+  },
+  {
+   "query": "tapsin",
+   "slug": "/medicamento/tapsin-x-6-comprimidos-maver-jfz5p0p85x6n",
+   "httpStatus": 200,
+   "title": "Medicamento no encontrado | PreciosFarma",
+   "resolved": false,
+   "checkedAt": "2026-08-31T01:40:02.642Z"
+  },
+  {
+   "query": "tapsin",
+   "slug": "/medicamento/tapsin-forte-x-6-comprimidos-recubiertos-2tz36rk5hze2s",
+   "httpStatus": 200,
+   "title": "Medicamento no encontrado | PreciosFarma",
+   "resolved": false,
+   "checkedAt": "2026-08-31T01:40:03.360Z"
+  },
+  {
+   "query": "tapsin",
+   "slug": "/medicamento/tapsin-rojo-dolor-de-cabeza-tira-x-6-comprimidos-1in3b0wgz9tor",
+   "httpStatus": 200,
+   "title": "Precio de Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:11.523Z"
+  },
+  {
+   "query": "tapsin",
+   "slug": "/medicamento/tapsin-plus-caliente-dia-limonada-antigripal-x-5-gramos-u97c37f6fpqu",
+   "httpStatus": 200,
+   "title": "Precio de Tapsin Plus Caliente Día limonada Antigripal x 5 gramos. en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:17.913Z"
+  },
+  {
+   "query": "clotrimazol",
+   "slug": "/medicamento/clotrimazol-crema-topica-al-1-x-20-g-surfarma-23poitc26mv6o",
+   "httpStatus": 200,
+   "title": "Medicamento no encontrado | PreciosFarma",
+   "resolved": false,
+   "checkedAt": "2026-08-31T01:40:19.073Z"
+  },
+  {
+   "query": "clotrimazol",
+   "slug": "/medicamento/clotrimazol-crema-topica-1-20g-ethon-cenabast-11k1hgfzyyees",
+   "httpStatus": 200,
+   "title": "Medicamento no encontrado | PreciosFarma",
+   "resolved": false,
+   "checkedAt": "2026-08-31T01:40:19.779Z"
+  },
+  {
+   "query": "clotrimazol",
+   "slug": "/medicamento/ethonazol-clotrimazol-1-crema-20-gramos-1kbukjxz238ut",
+   "httpStatus": 200,
+   "title": "Precio de Ethonazol Clotrimazol 1% crema 20 gramos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:20.492Z"
+  },
+  {
+   "query": "clotrimazol",
+   "slug": "/medicamento/clotrimazol-crema-topica-1-x-20-g-3fi8p6b5z9fiw",
+   "httpStatus": 200,
+   "title": "Precio de Clotrimazol Crema Topica 1 % x 20 g. en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:21.306Z"
+  },
+  {
+   "query": "clotrimazol",
+   "slug": "/medicamento/clotrimazol-1-crema-x-20-gramos-curaespring-f2n7wxj20k3z",
+   "httpStatus": 200,
+   "title": "Precio de Clotrimazol 1% crema x 20 gramos (CuraeSpring) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:28.381Z"
+  },
+  {
+   "query": "clotrimazol",
+   "slug": "/medicamento/clotrimazol-1-crema-x-20-gramos-ethon-a8u247rtw5y6",
+   "httpStatus": 200,
+   "title": "Precio de Clotrimazol 1% crema x 20 gramos. (Ethon) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:34.735Z"
+  },
+  {
+   "query": "paracetamol",
+   "slug": "/medicamento/paracetamol-500-mg-x-16-comprimidos-2vztkp6f4lcvz",
+   "httpStatus": 200,
+   "title": "Precio de Paracetamol 500 mg x 16 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:45.162Z"
+  },
+  {
+   "query": "paracetamol",
+   "slug": "/medicamento/paracetamol-500-mg-16-comprimidos-3luv1igt6hw1t",
+   "httpStatus": 200,
+   "title": "Precio de Paracetamol 500 mg 16 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:46.062Z"
+  },
+  {
+   "query": "paracetamol",
+   "slug": "/medicamento/paracetamol-500-mg-x-16-comprimidos-1bskdry9t8hpp",
+   "httpStatus": 200,
+   "title": "Precio de Paracetamol 500 mg x 16 Comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:46.909Z"
+  },
+  {
+   "query": "paracetamol",
+   "slug": "/medicamento/paracetamol-500-mg-x-16-comprimidos-chile-3aq15txkp1qg",
+   "httpStatus": 200,
+   "title": "Precio de Paracetamol 500 mg x 16 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:40:54.396Z"
+  },
+  {
+   "query": "paracetamol",
+   "slug": "/medicamento/paracetamol-infantil-80-mg-100-comprimidos-2nktkgxue9hty",
+   "httpStatus": 200,
+   "title": "Precio de Paracetamol Infantil  80 mg 100 Comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:15.115Z"
+  },
+  {
+   "query": "paracetamol",
+   "slug": "/medicamento/kitadol-paracetamol-500mg-x-24-comp-lch-descuento-caja-arrugada-2ojskny3snhh5",
+   "httpStatus": 200,
+   "title": "Precio de Kitadol 500 mg x 24 Comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:24.286Z"
+  },
+  {
+   "query": "ibuprofeno",
+   "slug": "/medicamento/ibuprofeno-400-mg-x-20-comprimidos-1j9s9xgccjjs6",
+   "httpStatus": 200,
+   "title": "Precio de Ibuprofeno 400 mg x 20 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:34.996Z"
+  },
+  {
+   "query": "ibuprofeno",
+   "slug": "/medicamento/ibuprofeno-b-400mg-20-comprimidos-jikmou816ztd",
+   "httpStatus": 200,
+   "title": "Precio de Ibuprofeno (B) 400mg 20 Comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:35.926Z"
+  },
+  {
+   "query": "ibuprofeno",
+   "slug": "/medicamento/ibuprofeno-400mg-20-comprimidos-ux99uorm4w5z",
+   "httpStatus": 200,
+   "title": "Precio de Ibuprofeno 400mg 20 Comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:36.810Z"
+  },
+  {
+   "query": "ibuprofeno",
+   "slug": "/medicamento/ibuprofeno-400-mg-x-20-7q6ctzmy4jsr",
+   "httpStatus": 200,
+   "title": "Precio de Ibuprofeno 400 mg x 20 en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:37.703Z"
+  },
+  {
+   "query": "ibuprofeno",
+   "slug": "/medicamento/ibuprofeno-400-mg-20-comprimidos-jxkx67btyr39",
+   "httpStatus": 200,
+   "title": "Precio de Ibuprofeno 400 mg 20 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:38.591Z"
+  },
+  {
+   "query": "ibuprofeno",
+   "slug": "/medicamento/ibuprofeno-600-mg-20-comp-1artxwsg3wfha",
+   "httpStatus": 200,
+   "title": "Precio de Ibuprofeno 600 Mg 20 Comp.... en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:39.864Z"
+  },
+  {
+   "query": "omeprazol",
+   "slug": "/medicamento/omeprazol-20-mg-x-30-capsulas-opko-cenabast-descuento-3spaum39ayw3q",
+   "httpStatus": 200,
+   "title": "Precio de Omeprazol 20 mg 30 Cápsulas con Gránulos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:52.684Z"
+  },
+  {
+   "query": "omeprazol",
+   "slug": "/medicamento/omeprazol-20-mg-x-30-capsulas-curae-spring-uvtp09xio8o1",
+   "httpStatus": 200,
+   "title": "Precio de Omeprazol 20 mg x 30 cápsulas. (Curae Spring) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:41:59.241Z"
+  },
+  {
+   "query": "omeprazol",
+   "slug": "/medicamento/omeprazol-20-mg-x-30-comprimidos-opko-1gbrcde4f9qq1",
+   "httpStatus": 200,
+   "title": "Precio de Omeprazol 20 mg x 30 comprimidos. (Opko) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:05.469Z"
+  },
+  {
+   "query": "omeprazol",
+   "slug": "/medicamento/omeprazol-40-mg-10-ml-inyectable-x-1-frasco-ampolla-hospifarma-39s3e5t9i8dqo",
+   "httpStatus": 200,
+   "title": "Precio de Omeprazol 40 mg/10 ml. Inyectable x 1 Frasco Ampolla (Hospifarma) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:11.604Z"
+  },
+  {
+   "query": "omeprazol",
+   "slug": "/medicamento/omeprazol-20-mg-x-30-capsulas-3j3gyd1rxo21i",
+   "httpStatus": 200,
+   "title": "Precio de Omeprazol 20 mg x 30 capsulas en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:12.395Z"
+  },
+  {
+   "query": "omeprazol",
+   "slug": "/medicamento/omeprazol-20-mg-x-30-capsulas-wux72s3209m5",
+   "httpStatus": 200,
+   "title": "Precio de Omeprazol 20 mg x 30 cápsulas en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:13.234Z"
+  },
+  {
+   "query": "losartan",
+   "slug": "/medicamento/losartan-50-mg-x-30-comprimidos-lch-descuento-3h6gtw9cq2s2k",
+   "httpStatus": 200,
+   "title": "Precio de Losartan Potasico 50 mg x 30 Comprimidos Recubiertos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:27.441Z"
+  },
+  {
+   "query": "losartan",
+   "slug": "/medicamento/losartan-potasico-50-mg-x30com-hospifarma-35tl7noz4zjva",
+   "httpStatus": 200,
+   "title": "Precio de Losartan Potasico 50 mg x30com. (Hospifarma) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:33.378Z"
+  },
+  {
+   "query": "losartan",
+   "slug": "/medicamento/losartan-potasico-50-mg-x-30-comprimidos-opko-3dwgodp8ejy7b",
+   "httpStatus": 200,
+   "title": "Precio de Losartan Potasico 50 mg x 30 comprimidos. (Opko) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:39.379Z"
+  },
+  {
+   "query": "losartan",
+   "slug": "/medicamento/losartan-potasico-50-mg-x-30-comprimidos-seven-pharma-2k9a134fg3un6",
+   "httpStatus": 200,
+   "title": "Precio de Losartan Potasico 50 mg x 30 comprimidos. (Seven Pharma) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:45.434Z"
+  },
+  {
+   "query": "losartan",
+   "slug": "/medicamento/losartan-potasico-50-mg-x30com-mintlab-16mr6o035uljp",
+   "httpStatus": 200,
+   "title": "Precio de Losartan Potasico 50 mg x30com. (Mintlab) en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:51.400Z"
+  },
+  {
+   "query": "losartan",
+   "slug": "/medicamento/losartan-potasico-50-mg-x-30-comprimidos-1nsv10i9ylrqn",
+   "httpStatus": 200,
+   "title": "Precio de Losartan Potásico 50 mg x 30 comprimidos en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:42:59.045Z"
+  },
+  {
+   "query": "glicerina",
+   "slug": "/medicamento/palmolive-jabon-en-barra-humectante-oliva-y-aloe-vera-85-g-2xgk5ldrsrhb8",
+   "httpStatus": 200,
+   "title": "Precio de Palmolive jabón en barra humectante Oliva y Aloe Vera 85 g. en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:43:12.320Z"
+  },
+  {
+   "query": "glicerina",
+   "slug": "/medicamento/sany-farm-alco-gel70-60m-52h9m05l8kg7",
+   "httpStatus": 200,
+   "title": "Precio de SANY FARM ALCO.GEL70° 60M en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:43:19.251Z"
+  },
+  {
+   "query": "glicerina",
+   "slug": "/medicamento/jabon-glicerina-idem-70g-394rv28ad8tcg",
+   "httpStatus": 200,
+   "title": "Precio de Jabón Glicerina Idem 70g en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:43:25.842Z"
+  },
+  {
+   "query": "glicerina",
+   "slug": "/medicamento/jabon-de-glicerina-x-90-g-1m03dvy2sgrmz",
+   "httpStatus": 200,
+   "title": "Precio de Jabón de Glicerina x 90 g en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:43:33.665Z"
+  },
+  {
+   "query": "glicerina",
+   "slug": "/medicamento/ballerina-jabon-de-glicerina-750-ml-1gno4wnnjz0xe",
+   "httpStatus": 200,
+   "title": "Medicamento no encontrado | PreciosFarma",
+   "resolved": false,
+   "checkedAt": "2026-08-31T01:43:40.363Z"
+  },
+  {
+   "query": "glicerina",
+   "slug": "/medicamento/jabon-de-glicerina-coco-340-jptg1n1e6whg",
+   "httpStatus": 200,
+   "title": "Precio de Jabon De Glicerina Coco 340... en farmacias | PreciosFarma",
+   "resolved": true,
+   "checkedAt": "2026-08-31T01:43:46.838Z"
+  }
+ ]
+}
