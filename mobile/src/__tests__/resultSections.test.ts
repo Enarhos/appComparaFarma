@@ -20,6 +20,10 @@ function card(
   return {
     matchKey: "ibuprofeno|400mg|20",
     laboratory: null,
+    brand: null,
+    manufacturer: null,
+    activeIngredient: null,
+    brandSource: "unknown",
     isBioequivalent: false,
     prices: [],
     bestPharmacy: "araucomed",

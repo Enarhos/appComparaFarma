@@ -54,6 +54,10 @@ function card(isBioequivalent: boolean | null): MedicationResult {
     matchKey: "atorvastatina|20mg|30",
     canonicalName: "Atorvastatina 20 mg 30 Comprimidos",
     laboratory: null,
+    brand: null,
+    manufacturer: null,
+    activeIngredient: null,
+    brandSource: "unknown",
     isBioequivalent,
     presentationKey: `atorvastatina|20mg|30|bio:${
       isBioequivalent === true ? "true" : isBioequivalent === false ? "false" : "unknown"
