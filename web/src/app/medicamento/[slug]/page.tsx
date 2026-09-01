@@ -29,18 +29,18 @@ interface PageProps {
 }
 
 /**
- * CF-WEB-002  una sola resolución por request.
+ * CF-WEB-002  una sola resoluciÃ³n por request.
  *
- * `generateMetadata` y el componente de página resolvían el MISMO slug por
- * separado, así que cada visita disparaba dos búsquedas en vivo independientes
- * contra las 9 farmacias. Además de duplicar el costo, las dos podían diferir:
- * el catálogo cambia entre llamadas, así que la ficha podía renderizarse con un
- * producto mientras el `<title>`/`canonical` describían otro o directamente
- * decir "Medicamento no encontrado" sobre una ficha que sí resolvió.
+ * `generateMetadata` y el componente de pÃ¡gina resolvÃ­an el MISMO slug por
+ * separado, asÃ­ que cada visita disparaba dos bÃºsquedas en vivo independientes
+ * contra las 9 farmacias. AdemÃ¡s de duplicar el costo, las dos podÃ­an diferir:
+ * el catÃ¡logo cambia entre llamadas, asÃ­ que la ficha podÃ­a renderizarse con un
+ * producto mientras el `<title>`/`canonical` describÃ­an otro o directamente
+ * decir "Medicamento no encontrado" sobre una ficha que sÃ­ resolviÃ³.
  *
  * `cache()` de React memoiza por request en el App Router: ambas rutas de
- * ejecución ven exactamente la misma resolución. Con la escalera de
- * recuperación de `resolveMedicationBySlug` esto pasa de 2-4 búsquedas por
+ * ejecuciÃ³n ven exactamente la misma resoluciÃ³n. Con la escalera de
+ * recuperaciÃ³n de `resolveMedicationBySlug` esto pasa de 2-4 bÃºsquedas por
  * visita a 1-2.
  */
 const resolveOnce = cache(resolveMedicationBySlug);
@@ -50,12 +50,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const resolution = await resolveOnce(slug);
 
   if (resolution.status !== "ok") {
-    // CF-WEB-002  el `noindex` es lo que hoy contiene el daño SEO del
+    // CF-WEB-002  el `noindex` es lo que hoy contiene el daÃ±o SEO del
     // soft-404: la URL responde 200 (Next ya hizo flush del shell por el
-    // `loading.tsx` del segmento raíz, ver `docs/qa/cf-web-002/QA_SUMMARY.md`
-    // §7 para la matriz de experimentos), así que la única señal efectiva
-    // contra la indexación de una ficha irresoluble es esta. NO cambiar por
-    // `notFound()` acá: se midió y no altera el status, y sí haría perder el
+    // `loading.tsx` del segmento raÃ­z, ver `docs/qa/cf-web-002/QA_SUMMARY.md`
+    // Â§7 para la matriz de experimentos), asÃ­ que la Ãºnica seÃ±al efectiva
+    // contra la indexaciÃ³n de una ficha irresoluble es esta. NO cambiar por
+    // `notFound()` acÃ¡: se midiÃ³ y no altera el status, y sÃ­ harÃ­a perder el
     // `noindex`.
     return {
       title: "Medicamento no encontrado",
