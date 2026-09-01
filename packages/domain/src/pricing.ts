@@ -1,6 +1,7 @@
 import type { MedicationResult, PharmacyPrice, PharmacySlug, ScrapedProduct } from "./types.js";
 import { combinationKey, matchKey } from "./matching.js";
 import { bioequivalenceKey, presentationKey, resolveCommercialIdentity } from "./commercialIdentity.js";
+import { resolveBrandIdentity } from "./brandIdentity.js";
 import {
   commercialVariantKey,
   dosageFormClass,
@@ -87,10 +88,38 @@ export function sortByEffectivePrice(prices: PharmacyPrice[]): PharmacyPrice[] {
  * compatibilidad (`isSameProduct`) sin re-parsear nombres ni depender del
  * formato concatenado de `presentationKey`.
  */
+/**
+ * CF-DATA-001 (2026-08-31) — VALOR HISTÓRICO del antiguo campo único
+ * `ScrapedProduct.laboratory`, reconstruido a partir de los dos campos que lo
+ * reemplazaron.
+ *
+ * Existe para UNA cosa y es la garantía central de este cambio: es lo que se le
+ * sigue pasando a `resolveCommercialIdentity()` —y, por lo tanto, a
+ * `presentationKey()`— para que la identidad de producto no se mueva ni un
+ * byte. `presentationKey` gobierna la deduplicación Y el hash del slug de las
+ * fichas de Web; rotarlo habría roto URLs ya indexadas y habría exigido una
+ * generación nueva en `web/src/lib/resolveMedication.ts`.
+ *
+ * El orden `manufacturer ?? brand` reproduce el mapeo anterior exactamente, sin
+ * excepciones: las 3 farmacias que llenaban `laboratory` con un fabricante
+ * (Dr. Simi, AraucoMed, Farmex) ahora lo entregan en `manufacturer`, y la única
+ * que lo llenaba con una marca (Salcobrand) lo entrega en `brand` y deja
+ * `manufacturer` en `null`. Las 5 restantes tienen ambos en `null`.
+ *
+ * Deliberadamente NO se usa la marca ya saneada (`resolveBrandIdentity`): esa
+ * sí cambia de valor —descarta marcas que son principios activos, limpia
+ * caracteres invisibles, corrige mayúsculas— y usarla acá rotaría la clave.
+ * La separación de responsabilidades es el punto: la capa de PRESENTACIÓN
+ * mejora, la capa de IDENTIDAD se congela.
+ */
+function legacyLaboratoryValue(product: ScrapedProduct): string | null {
+  return product.manufacturer ?? product.brand ?? null;
+}
+
 export function toProductIdentity(product: ScrapedProduct): ProductIdentity {
   const key = matchKey(product.name);
   const identity = resolveCommercialIdentity({
-    structuredBrand: product.laboratory,
+    structuredBrand: legacyLaboratoryValue(product),
     name: product.name,
     onlineUrl: product.onlineUrl,
     matchKey: key,
@@ -116,7 +145,9 @@ export function toMedicationResult(product: ScrapedProduct, pharmacySlug: Pharma
   // estructurado, luego URL) sin importar de qué farmacia venga — ver
   // commercialIdentity.ts. `matchKey` NO cambia de significado ni de cálculo.
   const identity = resolveCommercialIdentity({
-    structuredBrand: product.laboratory,
+    // CF-DATA-001: valor histórico reconstruido — `presentationKey` NO rota.
+    // Ver `legacyLaboratoryValue()` arriba para la justificación completa.
+    structuredBrand: legacyLaboratoryValue(product),
     name: product.name,
     onlineUrl: product.onlineUrl,
     // FASE P1 (hardening) — permite la guardia "principio activo no es
@@ -124,10 +155,23 @@ export function toMedicationResult(product: ScrapedProduct, pharmacySlug: Pharma
     matchKey: key,
   });
 
+  // CF-DATA-001 — taxonomía de presentación (marca / fabricante / principio
+  // activo), separada por completo de la identidad de arriba. Es aditiva: no
+  // alimenta ninguna clave, solo los campos que consumen `web` y `mobile`.
+  const brandIdentity = resolveBrandIdentity({
+    name: product.name,
+    structuredBrand: product.brand,
+    structuredManufacturer: product.manufacturer,
+  });
+
   return {
     matchKey: key,
     canonicalName: product.name,
-    laboratory: product.laboratory,
+    laboratory: legacyLaboratoryValue(product),
+    brand: brandIdentity.brand,
+    manufacturer: brandIdentity.manufacturer,
+    activeIngredient: brandIdentity.activeIngredient,
+    brandSource: brandIdentity.brandSource,
     isBioequivalent: product.isBioequivalent,
     prices: [price],
     bestPrice: price.channels.effective,

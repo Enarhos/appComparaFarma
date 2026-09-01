@@ -74,7 +74,21 @@ export function parseFarmexResponse(products: ShopifyProduct[]): ScrapedProduct[
       hasOnlineDelivery: true,
       onlineUrl: `${BASE}${primary.url}`,
       imageUrl: primary.image ?? null,
-      laboratory: lab,
+      // CF-DATA-001 (2026-08-31): `vendor` de Shopify es el FABRICANTE. Medido
+      // sobre la fuente real (9 búsquedas, 90 listings): 100 % con valor;
+      // MAVER(11), OPKO(10), ASCEND(8), MINTLAB(7), EUROLAB, ABBOTT, BAGÓ… y
+      // 0 % de coincidencia con el nombre del producto.
+      //
+      // Es el origen literal del defecto reportado: "Muxol Jarabe adulto
+      // Ambroxol 30 mg / 5 mL x 100 mL" -> "EUROLAB" y "Broncot Forte G.T.F.
+      // Jarabe" -> "ABBOTT" se mostraban bajo la etiqueta "Marca". Son
+      // laboratorios; las marcas son Muxol y Broncot.
+      //
+      // `lab` ya viene filtrado de los vendors de canal comercial
+      // ("Farmex-Fonasa", "Farmex-Pluxee-Persistente", …) por `classifyVendor`
+      // más arriba — esos no son fabricantes y nunca deben publicarse.
+      brand: null,
+      manufacturer: lab,
       // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): Farmex no entrega el dato.
       // El `false` anterior no era "Farmex confirma que no es bioequivalente":
       // era un placeholder de dato no implementado, publicado como afirmación

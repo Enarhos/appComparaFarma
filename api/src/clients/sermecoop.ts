@@ -70,7 +70,14 @@ export function parseSermecoopHtml(html: string): ScrapedProduct[] {
       hasOnlineDelivery: true,
       onlineUrl: `${BASE}${anchors[i].href}`,
       imageUrl,
-      laboratory: null,
+      // CF-DATA-001 (2026-08-31): la tarjeta HTML no expone marca ni
+      // fabricante (9 búsquedas, 40 productos). Sermecoop sí usa una grafía
+      // muy regular que el dominio aprovecha —marca primero y molécula entre
+      // paréntesis: "**Muxol** (ambroxol) 15mg/5ml Jarabe 100ml"—, y por eso
+      // `brandFromName()` NO descarta el contenido entre paréntesis del
+      // segmento descriptivo, a diferencia de `commercialVariantKey()`.
+      brand: null,
+      manufacturer: null,
       isBioequivalent,
     });
   }

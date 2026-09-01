@@ -72,7 +72,15 @@ export function parseAraucoMedResponse(data: SearchResponse): ScrapedProduct[] {
       hasOnlineDelivery: true,
       onlineUrl: p.url ?? null,
       imageUrl: p.cover?.bySize?.home_default?.url ?? null,
-      laboratory: p.manufacturer_name ?? null,
+      // CF-DATA-001 (2026-08-31): FABRICANTE confiable. Medido sobre la fuente
+      // real (9 búsquedas, 172 productos): 79,1 % con valor, 22 valores
+      // distintos, todos laboratorios — Maver(24), Laboratorio Chile(20),
+      // Ascend(12), Opko(12), Mintlab(10), Hospifarma(9), CuraeSpring(6)… El
+      // 40,4 % aparece además dentro del propio nombre, pero SIEMPRE al final y
+      // entre paréntesis ("Ambroxol 15mg/5ml jarabe infantil x 100 ml.
+      // (Ascend)"), que es la anotación de laboratorio, no la marca.
+      brand: null,
+      manufacturer: p.manufacturer_name ?? null,
       // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): buscar "bioequivalen" en
       // el nombre/descripción corta es evidencia POSITIVA débil pero honesta
       // (si AraucoMed lo escribe, lo está afirmando). Lo que NO es evidencia es

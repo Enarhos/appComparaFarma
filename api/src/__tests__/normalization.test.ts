@@ -60,7 +60,8 @@ function makeMedication(
     hasOnlineDelivery: true,
     onlineUrl: null,
     imageUrl: null,
-    laboratory: null,
+    brand: null,
+    manufacturer: null,
     isBioequivalent: false,
   }, pharmacySlug, pharmacySlug === "cruz-verde" ? "Cruz Verde" : "Dr. Simi");
 }

@@ -44,7 +44,8 @@ function scraped(over: Partial<ScrapedProduct> & { name: string }): ScrapedProdu
     hasOnlineDelivery: true,
     onlineUrl: null,
     imageUrl: null,
-    laboratory: null,
+    brand: null,
+    manufacturer: null,
     isBioequivalent: false,
     ...over,
   };

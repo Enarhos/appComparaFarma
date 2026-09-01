@@ -59,7 +59,15 @@ export function parseEcoFarmaciasResponse(products: WooProduct[]): ScrapedProduc
       hasOnlineDelivery: true,
       onlineUrl: p.permalink ?? null,
       imageUrl: p.images?.[0]?.src ?? null,
-      laboratory: null,
+      // CF-DATA-001 (2026-08-31): WooCommerce expone `brands` y `attributes`,
+      // pero en la fuente real (9 búsquedas, 160 productos) ambos vienen
+      // VACÍOS en el 100 % de los casos — no hay dato estructurado que leer.
+      // EcoFarmacias escribe el laboratorio dentro del nombre y al final
+      // ("… 100ml **SEVEN PHARMA** DESCUENTO", "… (Hospifarma)"), que es
+      // justamente la posición donde NO se puede confundir con la marca; no se
+      // extrae de ahí para no publicar un fabricante inferido de texto libre.
+      brand: null,
+      manufacturer: null,
       isBioequivalent,
     }];
   });

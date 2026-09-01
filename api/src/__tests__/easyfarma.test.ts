@@ -80,7 +80,7 @@ describe("parseEasyFarmaResponse (nuevo.easyfarma.cl, precio desde microdata)", 
   it("no expone canales online/cmr/sbpay ni laboratorio (EasyFarma solo expone precio de lista)", () => {
     const results = parseEasyFarmaResponse(html);
     expect(results.every((r) => r.onlinePrice === null && r.cmrPrice === null && r.sbpayPrice === null)).toBe(true);
-    expect(results.every((r) => r.laboratory === null)).toBe(true);
+    expect(results.every((r) => r.brand === null && r.manufacturer === null)).toBe(true);
   });
 
   it("toPharmacyPrice() da effective = store para un producto de EasyFarma", () => {

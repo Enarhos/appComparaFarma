@@ -40,7 +40,9 @@ describe("parseAraucoMedResponse", () => {
     const [first] = results;
     expect(first.name).toBe("Paracetamol 500mg x16");
     expect(first.price).toBe(1490);
-    expect(first.laboratory).toBe("Laboratorio Chile");
+    // CF-DATA-001: `manufacturer_name` es FABRICANTE — se publica en `manufacturer`.
+    expect(first.manufacturer).toBe("Laboratorio Chile");
+    expect(first.brand).toBeNull();
     expect(first.onlineUrl).toBe("https://farmacia.araucomed.com/medicamentos/paracetamol-500mg.html");
     expect(first.imageUrl).toContain("home_default");
     expect(first.hasStock).toBe(true);

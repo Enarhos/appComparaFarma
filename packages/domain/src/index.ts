@@ -10,9 +10,26 @@ export type {
   SearchExecution,
   LexicalMatch,
   ConcentrationMatch,
+  BrandSource,
 } from "./types.js";
 
-export { matchKey, combinationKey, normalizedWords, brandHeadTokens } from "./matching.js";
+export {
+  matchKey,
+  combinationKey,
+  normalizedWords,
+  brandHeadTokens,
+  SALT_QUALIFIER_WORDS,
+  PRESENTATION_FORM_WORDS,
+  STOP_WORDS,
+} from "./matching.js";
+export {
+  resolveBrandIdentity,
+  brandFromName,
+  COMPOSITION_VOCABULARY,
+  type BrandIdentityInput,
+  type BrandIdentityResult,
+  type NameDerivedIdentity,
+} from "./brandIdentity.js";
 export { cleanQuery } from "./normalization.js";
 export {
   parseQueryIntent,

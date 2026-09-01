@@ -121,7 +121,7 @@ describe("QA-03/QA-04 — EasyFarma nunca declara bioequivalencia ni laboratorio
     const results = parseEasyFarmaResponse(html);
     expect(results.length).toBeGreaterThan(0);
     expect(results.some((r) => r.isBioequivalent === false)).toBe(false);
-    expect(results.every((r) => r.laboratory === null)).toBe(true);
+    expect(results.every((r) => r.brand === null && r.manufacturer === null)).toBe(true);
   });
 
   it("[CORREGIDO] la ausencia de dato se representa como `null`", () => {

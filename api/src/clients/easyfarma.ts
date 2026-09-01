@@ -114,7 +114,15 @@ export function parseEasyFarmaResponse(html: string): ScrapedProduct[] {
       hasOnlineDelivery: true,
       onlineUrl,
       imageUrl,
-      laboratory: null,
+      // CF-DATA-001 (2026-08-31): el listado de leoproductsearch no expone
+      // marca ni fabricante (9 búsquedas, 99 productos: ningún bloque
+      // `manufacturer`). Agravante propio de EasyFarma: TRUNCA los nombres
+      // ("Ambroxol Pediatrico 15mg/5...", "Broncot Pediatrico GFT..."), así que
+      // la derivación desde el nombre también rinde menos acá — es el caso
+      // "Amrodil 30 Mg/5ml 100 Ml", donde el nombre nunca nombra la molécula y
+      // el resultado correcto es `brand: null` antes que una marca inventada.
+      brand: null,
+      manufacturer: null,
       // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): EasyFarma no entrega el
       // dato. El `false` anterior era un placeholder de dato no implementado,
       // publicado como afirmación en el 100% de sus ofertas (producción: 0 de

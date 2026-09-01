@@ -32,7 +32,8 @@ function scraped(overrides: Partial<ScrapedProduct> & { name: string }): Scraped
     hasOnlineDelivery: true,
     onlineUrl: null,
     imageUrl: null,
-    laboratory: null,
+    brand: null,
+    manufacturer: null,
     isBioequivalent: null,
     ...overrides,
   };
@@ -94,10 +95,10 @@ describe("Caso C — misma molécula y concentración, distinta cantidad", () =>
 describe("Caso D — mismo principio activo, distinto laboratorio/marca", () => {
   it("Ascend bioequivalente no vuelve bioequivalente al de CuraeSpring", () => {
     const ascend = offer("Omeprazol 20 mg x 30 cápsulas", "ecofarmacias", true, {
-      laboratory: "Ascend",
+      manufacturer: "Ascend",
     });
     const curae = offer("Omeprazol 20 mg x 30 cápsulas", "farmex", null, {
-      laboratory: "Curae Spring",
+      manufacturer: "Curae Spring",
     });
 
     const merged = mergeDuplicates([ascend, curae]);
@@ -135,8 +136,8 @@ describe("Caso E — combinaciones", () => {
 
 describe("Caso D-bis — variante comercial dentro de la misma familia de marca", () => {
   it("Tapsin Forte bioequivalente no contagia a Tapsin Migraña", () => {
-    const forte = offer("Tapsin Forte x 30 comprimidos", "ahumada", true, { laboratory: "Maver" });
-    const migrana = offer("Tapsin Migraña x 30 comprimidos", "farmex", null, { laboratory: "Maver" });
+    const forte = offer("Tapsin Forte x 30 comprimidos", "ahumada", true, { manufacturer: "Maver" });
+    const migrana = offer("Tapsin Migraña x 30 comprimidos", "farmex", null, { manufacturer: "Maver" });
 
     const merged = mergeDuplicates([forte, migrana]);
 

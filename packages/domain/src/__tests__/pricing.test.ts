@@ -13,7 +13,8 @@ const baseProduct: ScrapedProduct = {
   hasOnlineDelivery: false,
   onlineUrl: null,
   imageUrl: null,
-  laboratory: null,
+  brand: null,
+  manufacturer: null,
   isBioequivalent: false,
 };
 
