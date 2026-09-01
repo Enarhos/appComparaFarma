@@ -1,0 +1,1508 @@
+{
+  "query": "ambroxol 30mg",
+  "intent": {
+    "retrievalQuery": "ambroxol",
+    "concentration": "30mg",
+    "quantity": null,
+    "dosageForm": null
+  },
+  "cards": [
+    {
+      "rank": 1,
+      "canonicalName": "Ambroxol clorhidrato 30mg 100ml Ascend DESCUENTO",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown",
+      "slug": "ambroxol-clorhidrato-30mg-100ml-ascend-descuento-2eu6hvxg2sqa",
+      "slugHash": "2eu6hvxg2sqa",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "exact",
+      "bestPrice": 1100,
+      "pharmacies": "ecofarmacias",
+      "offers": [
+        {
+          "pharmacy": "ecofarmacias",
+          "name": "Ambroxol clorhidrato 30mg 100ml Ascend DESCUENTO",
+          "effective": 1100,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": null,
+          "unitCount": null,
+          "concentration": "30mg"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "canonicalName": "Muxol 30 mg x 20 comprimidos",
+      "matchKey": "muxol|30mg|20",
+      "presentationKey": "muxol|30mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "slug": "muxol-30-mg-x-20-comprimidos-1sj2lktyo95uo",
+      "slugHash": "1sj2lktyo95uo",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "exact",
+      "bestPrice": 6877,
+      "pharmacies": "farmex",
+      "offers": [
+        {
+          "pharmacy": "farmex",
+          "name": "Muxol 30 mg x 20 comprimidos",
+          "effective": 6877,
+          "matchKey": "muxol|30mg|20",
+          "combo": null,
+          "variant": null,
+          "form": "solid-oral",
+          "unitCount": 20,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "canonicalName": "Muxol Ambroxol 30 mg 20 Comprimidos",
+      "matchKey": "muxol|30mg|20",
+      "presentationKey": "muxol|30mg|20|bio:unknown|brand:unknown|var:ambroxol|form:solid-oral",
+      "slug": "muxol-ambroxol-30-mg-20-comprimidos-30vyetomqan8v",
+      "slugHash": "30vyetomqan8v",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "exact",
+      "bestPrice": 11190,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Muxol Ambroxol 30 mg 20 Comprimidos",
+          "effective": 11190,
+          "matchKey": "muxol|30mg|20",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "solid-oral",
+          "unitCount": 20,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "canonicalName": "Muxol Adulto Jarabe...",
+      "matchKey": "muxol",
+      "presentationKey": "muxol|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "muxol-adulto-jarabe-1t2w7ypfbikl6",
+      "slugHash": "1t2w7ypfbikl6",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "unknown",
+      "bestPrice": 5490,
+      "pharmacies": "easyfarma",
+      "offers": [
+        {
+          "pharmacy": "easyfarma",
+          "name": "Muxol Adulto Jarabe...",
+          "effective": 5490,
+          "matchKey": "muxol",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "canonicalName": "Muxol Pediatrico Jarabe x...",
+      "matchKey": "muxol",
+      "presentationKey": "muxol|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "slug": "muxol-pediatrico-jarabe-x-37ov3va39ub5o",
+      "slugHash": "37ov3va39ub5o",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "unknown",
+      "bestPrice": 5490,
+      "pharmacies": "easyfarma",
+      "offers": [
+        {
+          "pharmacy": "easyfarma",
+          "name": "Muxol Pediatrico Jarabe x...",
+          "effective": 5490,
+          "matchKey": "muxol",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "canonicalName": "Broncot Pediatrico GFT...",
+      "matchKey": "broncot",
+      "presentationKey": "broncot|bio:unknown|brand:unknown|var:infantil",
+      "slug": "broncot-pediatrico-gft-lde7lxmnlyor",
+      "slugHash": "lde7lxmnlyor",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "unknown",
+      "bestPrice": 8990,
+      "pharmacies": "easyfarma",
+      "offers": [
+        {
+          "pharmacy": "easyfarma",
+          "name": "Broncot Pediatrico GFT...",
+          "effective": 8990,
+          "matchKey": "broncot",
+          "combo": null,
+          "variant": "infantil",
+          "form": null,
+          "unitCount": null,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "canonicalName": "Muxol Ambroxol 20 Comprimidos",
+      "matchKey": "muxol|20",
+      "presentationKey": "muxol|20|bio:unknown|brand:muxol|var:ambroxol|form:solid-oral",
+      "slug": "muxol-ambroxol-20-comprimidos-31nut2bf4asj5",
+      "slugHash": "31nut2bf4asj5",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "unknown",
+      "bestPrice": 10031,
+      "pharmacies": "salcobrand",
+      "offers": [
+        {
+          "pharmacy": "salcobrand",
+          "name": "Muxol Ambroxol 20 Comprimidos",
+          "effective": 10031,
+          "matchKey": "muxol|20",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "solid-oral",
+          "unitCount": 20,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "canonicalName": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+      "matchKey": "tocalm|100ml",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "slug": "tocalm-infantil-15mg-5ml-jarabe-100-ml-2i7n8kpu9ov4x",
+      "slugHash": "2i7n8kpu9ov4x",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 790,
+      "pharmacies": "araucomed+cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+          "effective": 790,
+          "matchKey": "tocalm|100ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        },
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "effective": 4290,
+          "matchKey": "tocalm|100ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "canonicalName": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:ascend|form:fluid-oral",
+      "slug": "ambroxol-30mg-5ml-jarabe-adulto-100-ml-ascend-3mqgnluijnzbx",
+      "slugHash": "3mqgnluijnzbx",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 790,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)",
+          "effective": 790,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:andromaco|form:fluid-oral",
+      "slug": "ambroxol-30mg-5ml-jarabe-adulto-100ml-andromaco-2hv956i1zu4np",
+      "slugHash": "2hv956i1zu4np",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 800,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)",
+          "effective": 800,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "canonicalName": "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:eurofarma|form:fluid-oral",
+      "slug": "ambroxol-15mg-5ml-jarabe-100ml-eurofarma-2jl2o7cp50jkf",
+      "slugHash": "2jl2o7cp50jkf",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 900,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)",
+          "effective": 900,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe 100ml",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "ambroxol-30mg-5ml-jarabe-100ml-368kw3kmwe8r5",
+      "slugHash": "368kw3kmwe8r5",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 990,
+      "pharmacies": "ecofarmacias+sermecoop+ahumada",
+      "offers": [
+        {
+          "pharmacy": "ecofarmacias",
+          "name": "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO",
+          "effective": 990,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg"
+        },
+        {
+          "pharmacy": "sermecoop",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml",
+          "effective": 2390,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        },
+        {
+          "pharmacy": "ahumada",
+          "name": "Ambroxol 30mg./5ml. Jarabe Fco. 100ml",
+          "effective": 3544,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:sevenpharma|form:fluid-oral",
+      "slug": "ambroxol-30mg-5ml-jarabe-adulto-100ml-seven-pharma-1zj6o2kqvek4v",
+      "slugHash": "1zj6o2kqvek4v",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 1200,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)",
+          "effective": 1200,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "canonicalName": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)",
+      "matchKey": "ambroxol|100ml|100",
+      "presentationKey": "ambroxol|100ml|100|bio:unknown|brand:ascend|form:fluid-oral",
+      "slug": "ambroxol-15mg-5ml-jarabe-infantil-x-100-ml-ascend-3e21lnv7p7its",
+      "slugHash": "3e21lnv7p7its",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 1490,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)",
+          "effective": 1490,
+          "matchKey": "ambroxol|100ml|100",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)",
+      "matchKey": "ambroxol|100ml|100",
+      "presentationKey": "ambroxol|100ml|100|bio:unknown|brand:hospifarma|form:fluid-oral",
+      "slug": "ambroxol-30mg-5ml-jarabe-adulto-x-100-ml-hospifarma-1pjpftt38re8e",
+      "slugHash": "1pjpftt38re8e",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 1490,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)",
+          "effective": 1490,
+          "matchKey": "ambroxol|100ml|100",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "canonicalName": "Ambroxol Infantil 100ml (Andromaco)",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|var:infantil",
+      "slug": "ambroxol-infantil-100ml-andromaco-tthyx3lnma5e",
+      "slugHash": "tthyx3lnma5e",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 1890,
+      "pharmacies": "ecofarmacias",
+      "offers": [
+        {
+          "pharmacy": "ecofarmacias",
+          "name": "Ambroxol Infantil 100ml (Andromaco)",
+          "effective": 1890,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": null,
+          "unitCount": null,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:mintlab|form:fluid-oral",
+      "slug": "ambroxol-30mg-5ml-jarabe-adulto-100-ml-mintlab-2lldnr57yv6w4",
+      "slugHash": "2lldnr57yv6w4",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 1990,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)",
+          "effective": 1990,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:opko|form:fluid-oral",
+      "slug": "ambroxol-30mg-5ml-jarabe-adulto-100ml-opko-uj2qzkb5vhmq",
+      "slugHash": "uj2qzkb5vhmq",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 1990,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)",
+          "effective": 1990,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "canonicalName": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Mintlab)",
+      "matchKey": "ambroxol|100ml|100",
+      "presentationKey": "ambroxol|100ml|100|bio:unknown|brand:mintlab|form:fluid-oral",
+      "slug": "ambroxol-15mg-5ml-jarabe-infantil-x-100-ml-mintlab-1jbs21biw9p4n",
+      "slugHash": "1jbs21biw9p4n",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 1990,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Mintlab)",
+          "effective": 1990,
+          "matchKey": "ambroxol|100ml|100",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "canonicalName": "Mintamox Adulto 30mg/5ml jarabe 100ml",
+      "matchKey": "mintamox|100ml",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:mintlab|form:fluid-oral",
+      "slug": "mintamox-adulto-30mg-5ml-jarabe-100ml-3plikh01rfm37",
+      "slugHash": "3plikh01rfm37",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 2490,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Mintamox Adulto 30mg/5ml jarabe 100ml",
+          "effective": 2490,
+          "matchKey": "mintamox|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "canonicalName": "Mintamox Infantil 15mg/5ml jarabe 100ml",
+      "matchKey": "mintamox|100ml",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:mintlab|var:infantil|form:fluid-oral",
+      "slug": "mintamox-infantil-15mg-5ml-jarabe-100ml-1x37maeg4ytfz",
+      "slugHash": "1x37maeg4ytfz",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 2490,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Mintamox Infantil 15mg/5ml jarabe 100ml",
+          "effective": 2490,
+          "matchKey": "mintamox|100ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "canonicalName": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+      "matchKey": "tocalm|100ml|100",
+      "presentationKey": "tocalm|100ml|100|bio:true|brand:unknown|form:fluid-oral",
+      "slug": "tocalm-adulto-30-mg-5-ml-x-100-ml-jarabe-2u1lfrp6e61xs",
+      "slugHash": "2u1lfrp6e61xs",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 2549,
+      "pharmacies": "ahumada",
+      "offers": [
+        {
+          "pharmacy": "ahumada",
+          "name": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+          "effective": 2549,
+          "matchKey": "tocalm|100ml|100",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 23,
+      "canonicalName": "Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL",
+      "matchKey": "tocalm|100ml",
+      "presentationKey": "tocalm|100ml|bio:true|brand:prater|var:ambroxol|form:fluid-oral",
+      "slug": "tocalm-ambroxol-15-mg-5-ml-jarabe-pediatrico-100-ml-zrgrm5q0039s",
+      "slugHash": "zrgrm5q0039s",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 2550,
+      "pharmacies": "dr-simi",
+      "offers": [
+        {
+          "pharmacy": "dr-simi",
+          "name": "Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL",
+          "effective": 2550,
+          "matchKey": "tocalm|100ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "canonicalName": "Mintamox 15 mg / 5 mL x 100 mL",
+      "matchKey": "mintamox|100ml|100",
+      "presentationKey": "mintamox|100ml|100|bio:unknown|brand:mintlab",
+      "slug": "mintamox-15-mg-5-ml-x-100-ml-fppfm9n7swln",
+      "slugHash": "fppfm9n7swln",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 2690,
+      "pharmacies": "farmex",
+      "offers": [
+        {
+          "pharmacy": "farmex",
+          "name": "Mintamox 15 mg / 5 mL x 100 mL",
+          "effective": 2690,
+          "matchKey": "mintamox|100ml|100",
+          "combo": null,
+          "variant": null,
+          "form": null,
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 25,
+      "canonicalName": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)",
+      "matchKey": "tocalm|100ml",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "slug": "tocalm-ambroxol-jarabe-adulto-100-ml-prater-1q7q94mtdj0v6",
+      "slugHash": "1q7q94mtdj0v6",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 2980,
+      "pharmacies": "ecofarmacias+cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "ecofarmacias",
+          "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)",
+          "effective": 2980,
+          "matchKey": "tocalm|100ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": null
+        },
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL",
+          "effective": 4290,
+          "matchKey": "tocalm|100ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 26,
+      "canonicalName": "Tocalm Adulto 30mg/5ml jarabe 100 ml.",
+      "matchKey": "tocalm|100ml",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "tocalm-adulto-30mg-5ml-jarabe-100-ml-2y8m4vyd1u39t",
+      "slugHash": "2y8m4vyd1u39t",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 2990,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Adulto 30mg/5ml jarabe 100 ml.",
+          "effective": 2990,
+          "matchKey": "tocalm|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 27,
+      "canonicalName": "Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml",
+      "matchKey": "pazbronq|100ml",
+      "presentationKey": "pazbronq|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "slug": "pazbronq-ambroxol-clorhidrato-30-mg-5-ml-jarabe-100-ml-3g87yvmzhkiq3",
+      "slugHash": "3g87yvmzhkiq3",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 2990,
+      "pharmacies": "ecofarmacias",
+      "offers": [
+        {
+          "pharmacy": "ecofarmacias",
+          "name": "Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml",
+          "effective": 2990,
+          "matchKey": "pazbronq|100ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 28,
+      "canonicalName": "Ambroxol Pediatrico 15mg/5...",
+      "matchKey": "ambroxol|15mg",
+      "presentationKey": "ambroxol|15mg|bio:unknown|brand:ascend|var:infantil",
+      "slug": "ambroxol-pediatrico-15mg-5-2c0taqs5f43w8",
+      "slugHash": "2c0taqs5f43w8",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 2990,
+      "pharmacies": "easyfarma",
+      "offers": [
+        {
+          "pharmacy": "easyfarma",
+          "name": "Ambroxol Pediatrico 15mg/5...",
+          "effective": 2990,
+          "matchKey": "ambroxol|15mg",
+          "combo": null,
+          "variant": "infantil",
+          "form": null,
+          "unitCount": null,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 29,
+      "canonicalName": "Amrodil 30 Mg/5ml 100 Ml",
+      "matchKey": "amrodil|100ml",
+      "presentationKey": "amrodil|100ml|bio:unknown|brand:unknown",
+      "slug": "amrodil-30-mg-5ml-100-ml-c0kxdm15pmxw",
+      "slugHash": "c0kxdm15pmxw",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 2990,
+      "pharmacies": "easyfarma",
+      "offers": [
+        {
+          "pharmacy": "easyfarma",
+          "name": "Amrodil 30 Mg/5ml 100 Ml",
+          "effective": 2990,
+          "matchKey": "amrodil|100ml",
+          "combo": null,
+          "variant": null,
+          "form": null,
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 30,
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe 100ml",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:ambroxol|form:fluid-oral",
+      "slug": "ambroxol-30mg-5ml-jarabe-100ml-z39fzv5pa8rd",
+      "slugHash": "z39fzv5pa8rd",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 3255,
+      "pharmacies": "salcobrand",
+      "offers": [
+        {
+          "pharmacy": "salcobrand",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml",
+          "effective": 3255,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 31,
+      "canonicalName": "Muxol Pediátrico 15mg/5ml jarabe x 100 ml.",
+      "matchKey": "muxol|100ml|100",
+      "presentationKey": "muxol|100ml|100|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "slug": "muxol-pediatrico-15mg-5ml-jarabe-x-100-ml-1ls9fk4mchxkf",
+      "slugHash": "1ls9fk4mchxkf",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 3490,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Muxol Pediátrico 15mg/5ml jarabe x 100 ml.",
+          "effective": 3490,
+          "matchKey": "muxol|100ml|100",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 32,
+      "canonicalName": "Mintamox Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+      "matchKey": "mintamox|100ml",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "slug": "mintamox-pediatrico-ambroxol-15-mg-5ml-jarabe-100-ml-2st6sm79gxbwc",
+      "slugHash": "2st6sm79gxbwc",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 3690,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Mintamox Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "effective": 3690,
+          "matchKey": "mintamox|100ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 33,
+      "canonicalName": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe",
+      "matchKey": "tocalm|100ml|100",
+      "presentationKey": "tocalm|100ml|100|bio:true|brand:unknown|var:infantil|form:fluid-oral",
+      "slug": "tocalm-pediatrico-15-mg-5-ml-x-100-ml-jarabe-253tfkyppy9wu",
+      "slugHash": "253tfkyppy9wu",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 3787,
+      "pharmacies": "ahumada",
+      "offers": [
+        {
+          "pharmacy": "ahumada",
+          "name": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe",
+          "effective": 3787,
+          "matchKey": "tocalm|100ml|100",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 34,
+      "canonicalName": "Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL",
+      "matchKey": "mintamox|100ml",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "slug": "mintamox-adulto-ambroxol-30-mg-5-ml-jarabe-100-ml-1sfw6tf21rph3",
+      "slugHash": "1sfw6tf21rph3",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 3790,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL",
+          "effective": 3790,
+          "matchKey": "mintamox|100ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 35,
+      "canonicalName": "Muxol Adulto Ambroxol Jarabe 100ml",
+      "matchKey": "muxol|100ml",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:muxol|var:ambroxol|form:fluid-oral",
+      "slug": "muxol-adulto-ambroxol-jarabe-100ml-v9hsg5qvdwrk",
+      "slugHash": "v9hsg5qvdwrk",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 3921,
+      "pharmacies": "salcobrand",
+      "offers": [
+        {
+          "pharmacy": "salcobrand",
+          "name": "Muxol Adulto Ambroxol Jarabe 100ml",
+          "effective": 3921,
+          "matchKey": "muxol|100ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 36,
+      "canonicalName": "Muxol Adulto 30mg/5ml jarabe 100ml",
+      "matchKey": "muxol|100ml",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "muxol-adulto-30mg-5ml-jarabe-100ml-ouqw7x1crum0",
+      "slugHash": "ouqw7x1crum0",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 3990,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Muxol Adulto 30mg/5ml jarabe 100ml",
+          "effective": 3990,
+          "matchKey": "muxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 37,
+      "canonicalName": "Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml",
+      "matchKey": "muxol|100ml",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "slug": "muxol-jarabe-adulto-ambroxol-600-mg-100-ml-141k4oml9gm7x",
+      "slugHash": "141k4oml9gm7x",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 4590,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml",
+          "effective": 4590,
+          "matchKey": "muxol|100ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "600mg/100ml"
+        }
+      ]
+    },
+    {
+      "rank": 38,
+      "canonicalName": "MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml",
+      "matchKey": "muxol|100ml",
+      "presentationKey": "muxol|100ml|bio:true|brand:unknown|var:ambroxol|form:fluid-oral",
+      "slug": "muxol-jarabe-adulto-ambroxol-clorhidrato-600-mg-100-ml-3k6o8sihfbaz3",
+      "slugHash": "3k6o8sihfbaz3",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 4590,
+      "pharmacies": "ahumada",
+      "offers": [
+        {
+          "pharmacy": "ahumada",
+          "name": "MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml",
+          "effective": 4590,
+          "matchKey": "muxol|100ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "600mg"
+        }
+      ]
+    },
+    {
+      "rank": 39,
+      "canonicalName": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+      "matchKey": "muxol|100ml",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "muxol-ambroxol-15mg-5ml-jarabe-100ml-ouqw7x1crum0",
+      "slugHash": "ouqw7x1crum0",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 4890,
+      "pharmacies": "sermecoop",
+      "offers": [
+        {
+          "pharmacy": "sermecoop",
+          "name": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+          "effective": 4890,
+          "matchKey": "muxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 40,
+      "canonicalName": "Broncot 15mg/5ml Jarabe x 120 ml.",
+      "matchKey": "broncot|120ml|120",
+      "presentationKey": "broncot|120ml|120|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "broncot-15mg-5ml-jarabe-x-120-ml-13vd75vgd9gxf",
+      "slugHash": "13vd75vgd9gxf",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 4990,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Broncot 15mg/5ml Jarabe x 120 ml.",
+          "effective": 4990,
+          "matchKey": "broncot|120ml|120",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 41,
+      "canonicalName": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+      "matchKey": "muxol|100ml|100",
+      "presentationKey": "muxol|100ml|100|bio:unknown|brand:eurolab|var:ambroxol|form:fluid-oral",
+      "slug": "muxol-jarabe-adulto-ambroxol-30-mg-5-ml-x-100-ml-gjpn5yhpsife",
+      "slugHash": "gjpn5yhpsife",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 5190,
+      "pharmacies": "farmex",
+      "offers": [
+        {
+          "pharmacy": "farmex",
+          "name": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+          "effective": 5190,
+          "matchKey": "muxol|100ml|100",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 42,
+      "canonicalName": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+      "matchKey": "ambroxol|100ml",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "ambroxol-15-mg-5ml-jarabe-100-ml-368kw3kmwe8r5",
+      "slugHash": "368kw3kmwe8r5",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 5490,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "effective": 5490,
+          "matchKey": "ambroxol|100ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 43,
+      "canonicalName": "Muxol Pediátrico Ambroxol Jarabe 100ml",
+      "matchKey": "muxol|100ml",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:muxolpediatrico|var:infantil|form:fluid-oral",
+      "slug": "muxol-pediatrico-ambroxol-jarabe-100ml-w2nkt0oostex",
+      "slugHash": "w2nkt0oostex",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 5829,
+      "pharmacies": "salcobrand",
+      "offers": [
+        {
+          "pharmacy": "salcobrand",
+          "name": "Muxol Pediátrico Ambroxol Jarabe 100ml",
+          "effective": 5829,
+          "matchKey": "muxol|100ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 44,
+      "canonicalName": "Broncot Forte 30mg/5ml sin azucar 120 ml.",
+      "matchKey": "broncot|120ml",
+      "presentationKey": "broncot|120ml|bio:unknown|brand:unknown|var:forte",
+      "slug": "broncot-forte-30mg-5ml-sin-azucar-120-ml-2a5u69y15itf6",
+      "slugHash": "2a5u69y15itf6",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 5990,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Broncot Forte 30mg/5ml sin azucar 120 ml.",
+          "effective": 5990,
+          "matchKey": "broncot|120ml",
+          "combo": null,
+          "variant": "forte",
+          "form": null,
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 45,
+      "canonicalName": "Muxol Jarabe Pediátrico Ambroxol 300 mg / 100 ml",
+      "matchKey": "muxol|100ml",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "slug": "muxol-jarabe-pediatrico-ambroxol-300-mg-100-ml-1acaqqjc9k5ee",
+      "slugHash": "1acaqqjc9k5ee",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 6190,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Muxol Jarabe Pediátrico Ambroxol 300 mg / 100 ml",
+          "effective": 6190,
+          "matchKey": "muxol|100ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "300mg/100ml"
+        }
+      ]
+    },
+    {
+      "rank": 46,
+      "canonicalName": "Muxol Jarabe Pediátrico Ambroxol Clorhidrato 300 mg 100 ml",
+      "matchKey": "muxol|100ml",
+      "presentationKey": "muxol|100ml|bio:true|brand:unknown|var:infantil|form:fluid-oral",
+      "slug": "muxol-jarabe-pediatrico-ambroxol-clorhidrato-300-mg-100-ml-2qpxe9pfycql0",
+      "slugHash": "2qpxe9pfycql0",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 6190,
+      "pharmacies": "ahumada",
+      "offers": [
+        {
+          "pharmacy": "ahumada",
+          "name": "Muxol Jarabe Pediátrico Ambroxol Clorhidrato 300 mg 100 ml",
+          "effective": 6190,
+          "matchKey": "muxol|100ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "300mg"
+        }
+      ]
+    },
+    {
+      "rank": 47,
+      "canonicalName": "Broncot 7,5mg/ml gotas x 30 ml.",
+      "matchKey": "broncot|30ml|30",
+      "presentationKey": "broncot|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "broncot-7-5mg-ml-gotas-x-30-ml-3ljl5zg40seef",
+      "slugHash": "3ljl5zg40seef",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 6490,
+      "pharmacies": "araucomed",
+      "offers": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Broncot 7,5mg/ml gotas x 30 ml.",
+          "effective": 6490,
+          "matchKey": "broncot|30ml|30",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "7.5mg/1ml"
+        }
+      ]
+    },
+    {
+      "rank": 48,
+      "canonicalName": "Broncot Forte G.T.F. Jarabe 30 mg / 5 mL x 120 mL",
+      "matchKey": "broncot|120ml|120",
+      "presentationKey": "broncot|120ml|120|bio:unknown|brand:abbott|var:forte|form:fluid-oral",
+      "slug": "broncot-forte-g-t-f-jarabe-30-mg-5-ml-x-120-ml-1favj838sgruu",
+      "slugHash": "1favj838sgruu",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 6990,
+      "pharmacies": "farmex",
+      "offers": [
+        {
+          "pharmacy": "farmex",
+          "name": "Broncot Forte G.T.F. Jarabe 30 mg / 5 mL x 120 mL",
+          "effective": 6990,
+          "matchKey": "broncot|120ml|120",
+          "combo": null,
+          "variant": "forte",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 49,
+      "canonicalName": "Broncot Fte G.F.T. S/Azu. 30mg/5ml 120ml",
+      "matchKey": "broncot|120ml",
+      "presentationKey": "broncot|120ml|bio:unknown|brand:unknown|var:fte",
+      "slug": "broncot-fte-g-f-t-s-azu-30mg-5ml-120ml-1v5y57nioo3ir",
+      "slugHash": "1v5y57nioo3ir",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 7807,
+      "pharmacies": "ahumada",
+      "offers": [
+        {
+          "pharmacy": "ahumada",
+          "name": "Broncot Fte G.F.T. S/Azu. 30mg/5ml 120ml",
+          "effective": 7807,
+          "matchKey": "broncot|120ml",
+          "combo": null,
+          "variant": "fte",
+          "form": null,
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 50,
+      "canonicalName": "Broncot Gotas 7,5 mg/ml x...",
+      "matchKey": "broncot|7.5mg",
+      "presentationKey": "broncot|7.5mg|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "broncot-gotas-7-5-mg-ml-x-3qjm7adtuxjte",
+      "slugHash": "3qjm7adtuxjte",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 7990,
+      "pharmacies": "easyfarma",
+      "offers": [
+        {
+          "pharmacy": "easyfarma",
+          "name": "Broncot Gotas 7,5 mg/ml x...",
+          "effective": 7990,
+          "matchKey": "broncot|7.5mg",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "7.5mg/1ml"
+        }
+      ]
+    },
+    {
+      "rank": 51,
+      "canonicalName": "Broncot Ambroxol 30mg/5ml 120ml",
+      "matchKey": "broncot|120ml",
+      "presentationKey": "broncot|120ml|bio:unknown|brand:broncot|var:ambroxol",
+      "slug": "broncot-ambroxol-30mg-5ml-120ml-v1dkbyxkecod",
+      "slugHash": "v1dkbyxkecod",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 8095,
+      "pharmacies": "salcobrand",
+      "offers": [
+        {
+          "pharmacy": "salcobrand",
+          "name": "Broncot Ambroxol 30mg/5ml 120ml",
+          "effective": 8095,
+          "matchKey": "broncot|120ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": null,
+          "unitCount": null,
+          "concentration": "30mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 52,
+      "canonicalName": "Mucosolvan-Dual Infantil 120Ml",
+      "matchKey": "mucosolvandual|120ml",
+      "presentationKey": "mucosolvandual|120ml|bio:unknown|brand:unknown|var:infantil",
+      "slug": "mucosolvan-dual-infantil-120ml-2th8dl3p0jtit",
+      "slugHash": "2th8dl3p0jtit",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 8290,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Mucosolvan-Dual Infantil 120Ml",
+          "effective": 8290,
+          "matchKey": "mucosolvandual|120ml",
+          "combo": null,
+          "variant": "infantil",
+          "form": null,
+          "unitCount": null,
+          "concentration": null
+        }
+      ]
+    },
+    {
+      "rank": 53,
+      "canonicalName": "Broncot GFT 15 mg/5 mL x 120 mL Jarabe",
+      "matchKey": "broncot|120ml|120",
+      "presentationKey": "broncot|120ml|120|bio:unknown|brand:unknown|var:gft|form:fluid-oral",
+      "slug": "broncot-gft-15-mg-5-ml-x-120-ml-jarabe-1s18o538zsjkv",
+      "slugHash": "1s18o538zsjkv",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 9427,
+      "pharmacies": "ahumada",
+      "offers": [
+        {
+          "pharmacy": "ahumada",
+          "name": "Broncot GFT 15 mg/5 mL x 120 mL Jarabe",
+          "effective": 9427,
+          "matchKey": "broncot|120ml|120",
+          "combo": null,
+          "variant": "gft",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 54,
+      "canonicalName": "Broncot 7.5 mg/ml Gotas Fco. 30ml",
+      "matchKey": "broncot|30ml",
+      "presentationKey": "broncot|30ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "slug": "broncot-7-5-mg-ml-gotas-fco-30ml-1tcel2ll3u3yk",
+      "slugHash": "1tcel2ll3u3yk",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other",
+      "bestPrice": 13402,
+      "pharmacies": "ahumada",
+      "offers": [
+        {
+          "pharmacy": "ahumada",
+          "name": "Broncot 7.5 mg/ml Gotas Fco. 30ml",
+          "effective": 13402,
+          "matchKey": "broncot|30ml",
+          "combo": null,
+          "variant": null,
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "7.5mg/1ml"
+        }
+      ]
+    },
+    {
+      "rank": 55,
+      "canonicalName": "Broncot GFT Pediatrico Ambroxol 15 mg/5mL Jarabe 120 mL",
+      "matchKey": "broncot|120ml",
+      "presentationKey": "broncot|120ml|bio:unknown|brand:unknown|var:gft|form:fluid-oral",
+      "slug": "broncot-gft-pediatrico-ambroxol-15-mg-5ml-jarabe-120-ml-ptpbwfrl19ci",
+      "slugHash": "ptpbwfrl19ci",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 13540,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Broncot GFT Pediatrico Ambroxol 15 mg/5mL Jarabe 120 mL",
+          "effective": 13540,
+          "matchKey": "broncot|120ml",
+          "combo": null,
+          "variant": "gft",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "15mg/5ml"
+        }
+      ]
+    },
+    {
+      "rank": 56,
+      "canonicalName": "Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml",
+      "matchKey": "broncot|30ml",
+      "presentationKey": "broncot|30ml|bio:unknown|brand:broncot|var:ambroxol|form:fluid-oral",
+      "slug": "broncot-ambroxol-clorhidrato-7-5mg-ml-gotas-30ml-24ic16aauheek",
+      "slugHash": "24ic16aauheek",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 15311,
+      "pharmacies": "salcobrand",
+      "offers": [
+        {
+          "pharmacy": "salcobrand",
+          "name": "Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml",
+          "effective": 15311,
+          "matchKey": "broncot|30ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "7.5mg/1ml"
+        }
+      ]
+    },
+    {
+      "rank": 57,
+      "canonicalName": "Broncot Ambroxol 7,5 mg/mL Gotas 30 mL",
+      "matchKey": "broncot|30ml",
+      "presentationKey": "broncot|30ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "slug": "broncot-ambroxol-7-5-mg-ml-gotas-30-ml-3vz8myj36ur6h",
+      "slugHash": "3vz8myj36ur6h",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other",
+      "bestPrice": 16990,
+      "pharmacies": "cruz-verde",
+      "offers": [
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Broncot Ambroxol 7,5 mg/mL Gotas 30 mL",
+          "effective": 16990,
+          "matchKey": "broncot|30ml",
+          "combo": null,
+          "variant": "ambroxol",
+          "form": "fluid-oral",
+          "unitCount": null,
+          "concentration": "7.5mg/1ml"
+        }
+      ]
+    }
+  ],
+  "slugCollisions": [
+    {
+      "hash": "368kw3kmwe8r5",
+      "cards": [
+        {
+          "canonicalName": "Ambroxol 30mg/5ml Jarabe 100ml",
+          "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral"
+        },
+        {
+          "canonicalName": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral"
+        }
+      ]
+    },
+    {
+      "hash": "ouqw7x1crum0",
+      "cards": [
+        {
+          "canonicalName": "Muxol Adulto 30mg/5ml jarabe 100ml",
+          "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral"
+        },
+        {
+          "canonicalName": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+          "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "capturedQueries": 16,
+  "totalCards": 1447,
+  "totalOffers": 1634,
+  "uniqueUpstreamNames": 982,
+  "pharmaciesCovered": 9,
+  "matchKeyCardinality": 440,
+  "presentationKeyCardinality": 874,
+  "presentationKeysProducingMoreThanOneCard": 12,
+  "presentationKeysProducingMoreThanOneCardExamples": [
+    {
+      "key": "ambroxol 30mg/5ml::ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ambroxol 30mg/5ml::muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ambroxol 30mg::ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ambroxol 30mg::muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ambroxol 30mg/5ml jarabe 100ml::ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ambroxol 30mg/5ml jarabe 100ml::muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ambroxol::ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ambroxol::muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ibuprofeno 400mg::ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ibuprofeno 400mg::pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ibuprofeno::ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    },
+    {
+      "key": "ibuprofeno::pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cards": 2
+    }
+  ],
+  "multiPharmacyCards": 150,
+  "singlePharmacyCards": 1297,
+  "singlePharmacyCardRate": 0.8963,
+  "lexicalMatch": {
+    "exact": 1020,
+    "compatible": 381,
+    "mismatch": 46,
+    "absent": 0
+  },
+  "concentrationCohort": {
+    "exact": 218,
+    "unknown": 95,
+    "other": 578,
+    "absent": 556
+  },
+  "unknownStrengthCards": 95,
+  "incompatibleShownInTopHalf": 149,
+  "intraCardContradictions": 0,
+  "intraCardContradictionSamples": [],
+  "fragmentedIdentityGroups": 242,
+  "fragmentedCards": 705,
+  "lostComparisonGroups": 185,
+  "offersWithStructuredBrand": 200,
+  "offersWithManufacturer": 449,
+  "freeTextIdentityRate": 0.7252,
+  "identityRulesPerOfferAtIngestion": 10,
+  "pairwiseMergeComparisons": 229
+}

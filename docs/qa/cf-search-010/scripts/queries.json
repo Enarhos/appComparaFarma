@@ -1,0 +1,22 @@
+{
+  "corpus": [
+    { "id": "ambroxol",            "q": "ambroxol" },
+    { "id": "ambroxol-30mg",       "q": "ambroxol 30mg" },
+    { "id": "ambroxol-30mg-5ml",   "q": "ambroxol 30mg/5ml" },
+    { "id": "tapsin",              "q": "tapsin" },
+    { "id": "paracetamol-500mg",   "q": "paracetamol 500mg" },
+    { "id": "ibuprofeno-400mg",    "q": "ibuprofeno 400mg" },
+    { "id": "losartan-50mg",       "q": "losartan 50mg" },
+    { "id": "omeprazol-20mg",      "q": "omeprazol 20mg" },
+    { "id": "amoxicilina-500mg",   "q": "amoxicilina 500mg" },
+    { "id": "diclofenaco-50mg",    "q": "diclofenaco 50mg" },
+    { "id": "cetirizina-10mg",     "q": "cetirizina 10mg" }
+  ],
+  "extra": [
+    { "id": "ambroxol-jarabe-100ml", "q": "ambroxol 30mg/5ml jarabe 100ml" },
+    { "id": "paracetamol",           "q": "paracetamol" },
+    { "id": "ibuprofeno",            "q": "ibuprofeno" },
+    { "id": "omeprazol",             "q": "omeprazol" },
+    { "id": "losartan",              "q": "losartan" }
+  ]
+}

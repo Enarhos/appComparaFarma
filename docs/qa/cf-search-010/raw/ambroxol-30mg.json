@@ -1,0 +1,2132 @@
+{
+  "id": "ambroxol-30mg",
+  "query": "ambroxol 30mg",
+  "url": "https://comparafarma-api.vercel.app/api/search?q=ambroxol%2030mg",
+  "method": "GET",
+  "status": 200,
+  "startedAt": "2026-09-01T03:06:05.642Z",
+  "finishedAt": "2026-09-01T03:06:06.165Z",
+  "error": null,
+  "body": [
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol clorhidrato 30mg 100ml Ascend DESCUENTO",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ambroxol clorhidrato 30mg 100ml Ascend DESCUENTO",
+          "channels": {
+            "store": 1100,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1100
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fambroxol-clorhidrato-30mg-100ml-ascend-descuento%2F&cfmId=CFM-000068",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/02/AMBROXOLCLORHIDRATO-30MG-5ML.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.228Z"
+        }
+      ],
+      "bestPrice": 1100,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/02/AMBROXOLCLORHIDRATO-30MG-5ML.jpg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|30mg|20",
+      "canonicalName": "Muxol 30 mg x 20 comprimidos",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Muxol 30 mg x 20 comprimidos",
+          "channels": {
+            "store": 6877,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6877
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=muxol%7C30mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmuxol-30-mg-x-20-comprimidos-5%3F_pos%3D5%26_psq%3Dambroxol%26_psid%3D160672eda%26_ss%3De&cfmId=CFM-001437",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/muxol-30-mg-x-20-comprimidos-farmex-pluxee-persistente-943878.webp?v=1784664024",
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 6877,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/muxol-30-mg-x-20-comprimidos-farmex-pluxee-persistente-943878.webp?v=1784664024",
+      "presentationKey": "muxol|30mg|20|bio:unknown|brand:unknown|form:solid-oral",
+      "cfmId": "CFM-001437",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "exact"
+    },
+    {
+      "matchKey": "muxol|30mg|20",
+      "canonicalName": "Muxol Ambroxol 30 mg 20 Comprimidos",
+      "laboratory": null,
+      "brand": "Muxol",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Muxol Ambroxol 30 mg 20 Comprimidos",
+          "channels": {
+            "store": 11190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 11190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=muxol%7C30mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmuxol-ambroxol-30-mg-20-comprimidos%2F6176.html&cfmId=CFM-001437",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw56d5e471/images/large/6176-1.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.221Z"
+        }
+      ],
+      "bestPrice": 11190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw56d5e471/images/large/6176-1.jpg",
+      "presentationKey": "muxol|30mg|20|bio:unknown|brand:unknown|var:ambroxol|form:solid-oral",
+      "cfmId": "CFM-001437",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "exact"
+    },
+    {
+      "matchKey": "muxol",
+      "canonicalName": "Muxol Adulto Jarabe...",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Muxol Adulto Jarabe...",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=muxol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25414-muxol-adulto-jarabe-x-100ml.html&cfmId=CFM-001440",
+          "imageUrl": null,
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "muxol|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001440",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "unknown"
+    },
+    {
+      "matchKey": "muxol",
+      "canonicalName": "Muxol Pediatrico Jarabe x...",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Muxol Pediatrico Jarabe x...",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=muxol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25413-muxol-pediatrico-jarabe-x-100ml.html&cfmId=CFM-001440",
+          "imageUrl": null,
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "muxol|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001440",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "unknown"
+    },
+    {
+      "matchKey": "broncot",
+      "canonicalName": "Broncot Pediatrico GFT...",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Broncot Pediatrico GFT...",
+          "channels": {
+            "store": 8990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=broncot&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24773-broncot-gft-jarabe.html&cfmId=CFM-001434",
+          "imageUrl": null,
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 8990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "broncot|bio:unknown|brand:unknown|var:infantil",
+      "cfmId": "CFM-001434",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "unknown"
+    },
+    {
+      "matchKey": "muxol|20",
+      "canonicalName": "Muxol Ambroxol 20 Comprimidos",
+      "laboratory": "Muxol",
+      "brand": "Muxol",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "structured",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Muxol Ambroxol 20 Comprimidos",
+          "channels": {
+            "store": 11399,
+            "online": 10031,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 10031
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=muxol%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmuxol-ambroxol-20-comprimidos%3Fdefault_sku%3D2979200&cfmId=CFM-001441",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/128966/small/2979200_1.jpg?1733505011",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 10031,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/128966/small/2979200_1.jpg?1733505011",
+      "presentationKey": "muxol|20|bio:unknown|brand:muxol|var:ambroxol|form:solid-oral",
+      "cfmId": "CFM-001441",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "unknown"
+    },
+    {
+      "matchKey": "tocalm|100ml",
+      "canonicalName": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Tocalm Infantil 15mg/5ml jarabe 100 ml.",
+          "channels": {
+            "store": 790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tocalm%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Ftocalm-infantil-15mg-5ml-jarabe-100ml&cfmId=CFM-001430",
+          "imageUrl": "https://farmacia.araucomed.com/9940-home_default/tocalm-infantil-15mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tocalm%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftocalm-pediatrico-ambroxol-15-mg-5ml-jarabe-100-ml%2F111094.html&cfmId=CFM-001430",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd0bd4792/images/large/111094-tocalm-pediatrico-ambroxol-15-mg5ml-jarabe-100-ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.221Z"
+        }
+      ],
+      "bestPrice": 790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9940-home_default/tocalm-infantil-15mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001430",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)",
+      "laboratory": "Ascend",
+      "brand": null,
+      "manufacturer": "Ascend",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)",
+          "channels": {
+            "store": 790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 790
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-30mg-5ml-jarabe-adulto-100-ml-ascend&cfmId=CFM-000068",
+          "imageUrl": "https://farmacia.araucomed.com/13644-home_default/ambroxol-30mg-5ml-jarabe-adulto-100-ml-ascend.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 790,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13644-home_default/ambroxol-30mg-5ml-jarabe-adulto-100-ml-ascend.jpg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:ascend|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)",
+      "laboratory": "Andrómaco",
+      "brand": null,
+      "manufacturer": "Andrómaco",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)",
+          "channels": {
+            "store": 800,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 800
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-30mg-5ml-jarabe-100ml-andromaco&cfmId=CFM-000068",
+          "imageUrl": "https://farmacia.araucomed.com/4227-home_default/ambroxol-30mg-5ml-jarabe-100ml-andromaco.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 800,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/4227-home_default/ambroxol-30mg-5ml-jarabe-100ml-andromaco.jpg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:andromaco|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)",
+      "laboratory": "Eurofarma",
+      "brand": null,
+      "manufacturer": "Eurofarma",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)",
+          "channels": {
+            "store": 900,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 900
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-15mg-5ml-jarabe-100ml-eurofarma&cfmId=CFM-000068",
+          "imageUrl": "https://farmacia.araucomed.com/5670-home_default/ambroxol-15mg-5ml-jarabe-100ml-eurofarma.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.226Z"
+        }
+      ],
+      "bestPrice": 900,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5670-home_default/ambroxol-15mg-5ml-jarabe-100ml-eurofarma.jpg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:eurofarma|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe 100ml",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO",
+          "channels": {
+            "store": 990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fjarabe-ambroxol-clorhidrato-30mg5ml-100ml-hospifarma-descuento%2F&cfmId=CFM-000068",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/08/ambroxol-15mg-5ml-jarabe-120-ml-hospifarma.png",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        },
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Ambroxol 30mg/5ml Jarabe 100ml",
+          "channels": {
+            "store": 2390,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2390
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D1602%26d_%3D1&cfmId=CFM-000068",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620833580.jpg?v=6a96411bcbf92",
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        },
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Ambroxol 30mg./5ml. Jarabe Fco. 100ml",
+          "channels": {
+            "store": 3544,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3544
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fambroxol-30mg.-5ml.-jarabe-fco.-100ml-84384.html&cfmId=CFM-000068",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf8bfe0ca/images/products/84384/84384.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620833580.jpg?v=6a96411bcbf92",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)",
+      "laboratory": "Seven Pharma",
+      "brand": null,
+      "manufacturer": "Seven Pharma",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)",
+          "channels": {
+            "store": 1200,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1200
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-30mg-5ml-jarabe-adulto-100ml-seven-pharma&cfmId=CFM-000068",
+          "imageUrl": "https://farmacia.araucomed.com/13188-home_default/ambroxol-30mg-5ml-jarabe-adulto-100ml-seven-pharma.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 1200,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13188-home_default/ambroxol-30mg-5ml-jarabe-adulto-100ml-seven-pharma.jpg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:sevenpharma|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml|100",
+      "canonicalName": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)",
+      "laboratory": "Ascend",
+      "brand": null,
+      "manufacturer": "Ascend",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-15mg-5ml-jarabe-infantil-x-100-ml-ascend&cfmId=CFM-000816",
+          "imageUrl": "https://farmacia.araucomed.com/14680-home_default/ambroxol-15mg-5ml-jarabe-infantil-x-100-ml-ascend.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.226Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/14680-home_default/ambroxol-15mg-5ml-jarabe-infantil-x-100-ml-ascend.jpg",
+      "presentationKey": "ambroxol|100ml|100|bio:unknown|brand:ascend|form:fluid-oral",
+      "cfmId": "CFM-000816",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml|100",
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)",
+      "laboratory": "Hospifarma",
+      "brand": null,
+      "manufacturer": "Hospifarma",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)",
+          "channels": {
+            "store": 1490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-30mg-5ml-jarabe-120-ml-hospifarma&cfmId=CFM-000816",
+          "imageUrl": "https://farmacia.araucomed.com/11024-home_default/ambroxol-30mg-5ml-jarabe-120-ml-hospifarma.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.226Z"
+        }
+      ],
+      "bestPrice": 1490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/11024-home_default/ambroxol-30mg-5ml-jarabe-120-ml-hospifarma.jpg",
+      "presentationKey": "ambroxol|100ml|100|bio:unknown|brand:hospifarma|form:fluid-oral",
+      "cfmId": "CFM-000816",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol Infantil 100ml (Andromaco)",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Ambroxol Infantil 100ml (Andromaco)",
+          "channels": {
+            "store": 1890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1890
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fambroxol-infantil-100ml%2F&cfmId=CFM-000068",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-25-at-22.46.35.jpeg",
+          "fetchedAt": "2026-09-01T03:06:04.228Z"
+        }
+      ],
+      "bestPrice": 1890,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-25-at-22.46.35.jpeg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|var:infantil",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)",
+      "laboratory": "Mintlab",
+      "brand": null,
+      "manufacturer": "Mintlab",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-30mg-5ml-jarabe-100ml-mintlab&cfmId=CFM-000068",
+          "imageUrl": "https://farmacia.araucomed.com/13669-home_default/ambroxol-30mg-5ml-jarabe-100ml-mintlab.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.226Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13669-home_default/ambroxol-30mg-5ml-jarabe-100ml-mintlab.jpg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:mintlab|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)",
+      "laboratory": "Opko",
+      "brand": null,
+      "manufacturer": "Opko",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-30mg-5ml-jarabe-100ml-opko&cfmId=CFM-000068",
+          "imageUrl": "https://farmacia.araucomed.com/5669-home_default/ambroxol-30mg-5ml-jarabe-100ml-opko.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5669-home_default/ambroxol-30mg-5ml-jarabe-100ml-opko.jpg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:opko|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml|100",
+      "canonicalName": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Mintlab)",
+      "laboratory": "Mintlab",
+      "brand": null,
+      "manufacturer": "Mintlab",
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Mintlab)",
+          "channels": {
+            "store": 1990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 1990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=ambroxol%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fambroxol-15mg-5ml-jarabe-100ml-mintlab&cfmId=CFM-000816",
+          "imageUrl": "https://farmacia.araucomed.com/13668-home_default/ambroxol-15mg-5ml-jarabe-100ml-mintlab.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 1990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/13668-home_default/ambroxol-15mg-5ml-jarabe-100ml-mintlab.jpg",
+      "presentationKey": "ambroxol|100ml|100|bio:unknown|brand:mintlab|form:fluid-oral",
+      "cfmId": "CFM-000816",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "mintamox|100ml",
+      "canonicalName": "Mintamox Adulto 30mg/5ml jarabe 100ml",
+      "laboratory": "Mintlab",
+      "brand": null,
+      "manufacturer": "Mintlab",
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Mintamox Adulto 30mg/5ml jarabe 100ml",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=mintamox%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fmintamox-adulto-30mg-5ml-jarabe-100ml&cfmId=CFM-001436",
+          "imageUrl": "https://farmacia.araucomed.com/9362-home_default/mintamox-adulto-30mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9362-home_default/mintamox-adulto-30mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:mintlab|form:fluid-oral",
+      "cfmId": "CFM-001436",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "mintamox|100ml",
+      "canonicalName": "Mintamox Infantil 15mg/5ml jarabe 100ml",
+      "laboratory": "Mintlab",
+      "brand": null,
+      "manufacturer": "Mintlab",
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Mintamox Infantil 15mg/5ml jarabe 100ml",
+          "channels": {
+            "store": 2490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=mintamox%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fmintamox-infantil-15mg-5ml-jarabe-100ml&cfmId=CFM-001436",
+          "imageUrl": "https://farmacia.araucomed.com/9480-home_default/mintamox-infantil-15mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 2490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9480-home_default/mintamox-infantil-15mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:mintlab|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001436",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "tocalm|100ml|100",
+      "canonicalName": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+          "channels": {
+            "store": 2549,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2549
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tocalm%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftocalm-adulto-30-mg-5-ml-x-100-ml-jarabe-47395.html&cfmId=CFM-001435",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdf5c64fe/images/products/47395/47395.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 2549,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdf5c64fe/images/products/47395/47395.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "tocalm|100ml|100|bio:true|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001435",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "tocalm|100ml",
+      "canonicalName": "Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL",
+      "laboratory": "PRATER",
+      "brand": "Tocalm",
+      "manufacturer": "Prater",
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "dr-simi",
+          "pharmacyName": "Dr. Simi",
+          "productName": "Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL",
+          "channels": {
+            "store": 3400,
+            "online": 2550,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2550
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tocalm%7C100ml&url=https%3A%2F%2Fwww.drsimi.cl%2Ftocalm-15-mg-5ml-jarabe-infantil-100-ml%2Fp&cfmId=CFM-001430",
+          "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157552/CH0006-1.jpg?v=638255491644270000",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 2550,
+      "bestPharmacy": "dr-simi",
+      "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157552/CH0006-1.jpg?v=638255491644270000",
+      "presentationKey": "tocalm|100ml|bio:true|brand:prater|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001430",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "mintamox|100ml|100",
+      "canonicalName": "Mintamox 15 mg / 5 mL x 100 mL",
+      "laboratory": "MINTLAB",
+      "brand": null,
+      "manufacturer": "Mintlab",
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Mintamox 15 mg / 5 mL x 100 mL",
+          "channels": {
+            "store": 2690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=mintamox%7C100ml%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmintamox-15-mg-5-ml-x-100-ml%3F_pos%3D2%26_psq%3Dambroxol%26_psid%3D160672eda%26_ss%3De&cfmId=CFM-014930",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/mintamox-15-mg-5-ml-x-100-ml-mintlab-552339.webp?v=1692989646",
+          "fetchedAt": "2026-09-01T03:06:04.228Z"
+        }
+      ],
+      "bestPrice": 2690,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/mintamox-15-mg-5-ml-x-100-ml-mintlab-552339.webp?v=1692989646",
+      "presentationKey": "mintamox|100ml|100|bio:unknown|brand:mintlab",
+      "cfmId": "CFM-014930",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "tocalm|100ml",
+      "canonicalName": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)",
+      "laboratory": null,
+      "brand": "Tocalm",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)",
+          "channels": {
+            "store": 2980,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2980
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tocalm%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftocalm-ambroxol-jarabe-adulto-100-ml-prater%2F&cfmId=CFM-001430",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/06/tocalm.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.228Z"
+        },
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4290
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tocalm%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftocalm-adulto-ambroxol-30-mg-5ml-jarabe-100-ml%2F111093.html&cfmId=CFM-001430",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6502b7d3/images/large/111093-tocalm-adulto-ambroxol-30-mg5ml-jarabe-100-ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.221Z"
+        }
+      ],
+      "bestPrice": 2980,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/06/tocalm.jpg",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001430",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "tocalm|100ml",
+      "canonicalName": "Tocalm Adulto 30mg/5ml jarabe 100 ml.",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Tocalm Adulto 30mg/5ml jarabe 100 ml.",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tocalm%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Ftocalm-adulto-30mg-5ml-jarabe-100ml&cfmId=CFM-001430",
+          "imageUrl": "https://farmacia.araucomed.com/9511-home_default/tocalm-adulto-30mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/9511-home_default/tocalm-adulto-30mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "tocalm|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001430",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "pazbronq|100ml",
+      "canonicalName": "Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml",
+      "laboratory": null,
+      "brand": "Pazbronq",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ecofarmacias",
+          "pharmacyName": "EcoFarmacias",
+          "productName": "Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=pazbronq%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fpazbronq-ambroxol-clorhidrato-30-mg-5-ml-jarabe-100-ml%2F&cfmId=CFM-001428",
+          "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/01/pazbronq-30-mg-5-ml-jarabe-adulto-100-ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.228Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "ecofarmacias",
+      "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/01/pazbronq-30-mg-5-ml-jarabe-adulto-100-ml.jpg",
+      "presentationKey": "pazbronq|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001428",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|15mg",
+      "canonicalName": "Ambroxol Pediatrico 15mg/5...",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Ambroxol Pediatrico 15mg/5...",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=ambroxol%7C15mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105165-ambroxol-pediatrico-15mg-5-ml-100-ml-ascend.html&cfmId=CFM-001429",
+          "imageUrl": null,
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "ambroxol|15mg|bio:unknown|brand:ascend|var:infantil",
+      "cfmId": "CFM-001429",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "amrodil|100ml",
+      "canonicalName": "Amrodil 30 Mg/5ml 100 Ml",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Amrodil 30 Mg/5ml 100 Ml",
+          "channels": {
+            "store": 2990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 2990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=amrodil%7C100ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105664-amrodil-30-mg-5ml-100-ml.html&cfmId=CFM-014924",
+          "imageUrl": null,
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 2990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "amrodil|100ml|bio:unknown|brand:unknown",
+      "cfmId": "CFM-014924",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 30mg/5ml Jarabe 100ml",
+      "laboratory": "Ambroxol",
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Ambroxol 30mg/5ml Jarabe 100ml",
+          "channels": {
+            "store": 3699,
+            "online": 3255,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3255
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fambroxol-30mg-5ml-jaraabe-100ml%3Fdefault_sku%3D1763358&cfmId=CFM-000068",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/96918/small/Ambroxol-adulto.jpg?1691772063",
+          "fetchedAt": "2026-09-01T03:06:04.223Z"
+        }
+      ],
+      "bestPrice": 3255,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/96918/small/Ambroxol-adulto.jpg?1691772063",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml|100",
+      "canonicalName": "Muxol Pediátrico 15mg/5ml jarabe x 100 ml.",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Muxol Pediátrico 15mg/5ml jarabe x 100 ml.",
+          "channels": {
+            "store": 3490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=muxol%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fmuxol-pediatrico-15mg-5ml-jarabe-100ml&cfmId=CFM-001433",
+          "imageUrl": "https://farmacia.araucomed.com/5840-home_default/muxol-pediatrico-15mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.226Z"
+        }
+      ],
+      "bestPrice": 3490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5840-home_default/muxol-pediatrico-15mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "muxol|100ml|100|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001433",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "mintamox|100ml",
+      "canonicalName": "Mintamox Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+      "laboratory": null,
+      "brand": "Mintamox",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Mintamox Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "channels": {
+            "store": 3690,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3690
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=mintamox%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmintamox-pediatrico-ambroxol-15-mg-5ml-jarabe-100-ml%2F193055.html&cfmId=CFM-001436",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwafa00551/images/large/193055-mintamox-pediatrico-ambroxol-15-mg5ml-jarabe-100-ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.221Z"
+        }
+      ],
+      "bestPrice": 3690,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwafa00551/images/large/193055-mintamox-pediatrico-ambroxol-15-mg5ml-jarabe-100-ml.jpg",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001436",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "tocalm|100ml|100",
+      "canonicalName": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe",
+          "channels": {
+            "store": 4290,
+            "online": null,
+            "cmr": 3787,
+            "sbpay": null,
+            "effective": 3787
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tocalm%7C100ml%7C100&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftocalm-pediatrico-15-mg-5-ml-x-100-ml-jarabe-47393.html&cfmId=CFM-001435",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw72aa6528/images/products/47393/47393.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 3787,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw72aa6528/images/products/47393/47393.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "tocalm|100ml|100|bio:true|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-001435",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "mintamox|100ml",
+      "canonicalName": "Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL",
+      "laboratory": null,
+      "brand": "Mintamox",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL",
+          "channels": {
+            "store": 3790,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3790
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=mintamox%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmintamox-adulto-ambroxol-30-mg-5-ml-jarabe-100-ml%2F193049.html&cfmId=CFM-001436",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe72d6544/images/large/193049-mintamox-adulto-jarabe-100-ml-ambroxol-30-mg-5ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.223Z"
+        }
+      ],
+      "bestPrice": 3790,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe72d6544/images/large/193049-mintamox-adulto-jarabe-100-ml-ambroxol-30-mg-5ml.jpg",
+      "presentationKey": "mintamox|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001436",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Adulto Ambroxol Jarabe 100ml",
+      "laboratory": "Muxol",
+      "brand": "Muxol",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "structured",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Muxol Adulto Ambroxol Jarabe 100ml",
+          "channels": {
+            "store": 7399,
+            "online": 4661,
+            "cmr": null,
+            "sbpay": 3921,
+            "effective": 3921
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=muxol%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmuxol-adulto-ambroxol-jarabe-100ml%3Fdefault_sku%3D2979230&cfmId=CFM-000997",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/170054/small/2979230.jpg?1765396260",
+          "fetchedAt": "2026-09-01T03:06:04.224Z"
+        }
+      ],
+      "bestPrice": 3921,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/170054/small/2979230.jpg?1765396260",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:muxol|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Adulto 30mg/5ml jarabe 100ml",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Muxol Adulto 30mg/5ml jarabe 100ml",
+          "channels": {
+            "store": 3990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 3990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=muxol%7C100ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fmuxol-adulto-30mg-5ml-jarabe-100ml&cfmId=CFM-000997",
+          "imageUrl": "https://farmacia.araucomed.com/5839-home_default/muxol-adulto-30mg-5ml-jarabe-100ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.226Z"
+        }
+      ],
+      "bestPrice": 3990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5839-home_default/muxol-adulto-30mg-5ml-jarabe-100ml.jpg",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml",
+      "laboratory": null,
+      "brand": "Muxol",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml",
+          "channels": {
+            "store": 4590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmuxol-jarabe-adulto-ambroxol-600-mg-100-ml%2F6179.html&cfmId=CFM-000997",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbca2355f/images/large/6179-1.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.222Z"
+        }
+      ],
+      "bestPrice": 4590,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbca2355f/images/large/6179-1.jpg",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml",
+      "laboratory": null,
+      "brand": "MUXOL",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml",
+          "channels": {
+            "store": 4590,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4590
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmuxol-jarabe-adulto-ambroxol-clorhidrato-600-mg-100-ml-9257.html&cfmId=CFM-000997",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd8dcf54c/images/products/9257/9257.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 4590,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd8dcf54c/images/products/9257/9257.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "muxol|100ml|bio:true|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+      "laboratory": null,
+      "brand": "Muxol",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "sermecoop",
+          "pharmacyName": "Sermecoop",
+          "productName": "Muxol (ambroxol) 15mg/5ml Jarabe 100ml",
+          "channels": {
+            "store": 4890,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4890
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D16812%26d_%3D1&cfmId=CFM-000997",
+          "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060009738.jpg?v=6a96411bcbe20",
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 4890,
+      "bestPharmacy": "sermecoop",
+      "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060009738.jpg?v=6a96411bcbe20",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|120ml|120",
+      "canonicalName": "Broncot 15mg/5ml Jarabe x 120 ml.",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Broncot 15mg/5ml Jarabe x 120 ml.",
+          "channels": {
+            "store": 4990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 4990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=broncot%7C120ml%7C120&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fbroncot-gft-15mg-5ml-sin-azucar-120ml&cfmId=CFM-001432",
+          "imageUrl": "https://farmacia.araucomed.com/6498-home_default/broncot-gft-15mg-5ml-sin-azucar-120ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.226Z"
+        }
+      ],
+      "bestPrice": 4990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/6498-home_default/broncot-gft-15mg-5ml-sin-azucar-120ml.jpg",
+      "presentationKey": "broncot|120ml|120|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001432",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml|100",
+      "canonicalName": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+      "laboratory": "EUROLAB",
+      "brand": "Muxol",
+      "manufacturer": "Eurolab",
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+          "channels": {
+            "store": 5190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=muxol%7C100ml%7C100&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmuxol-jarabe-adulto-ambroxol%3F_pos%3D1%26_psq%3Dambroxol%26_psid%3D160672eda%26_ss%3De&cfmId=CFM-001433",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/muxol-jarabe-adulto-ambroxol-30-mg-5-ml-x-100-ml-eurolab-836144.jpg?v=1763923904",
+          "fetchedAt": "2026-09-01T03:06:04.228Z"
+        }
+      ],
+      "bestPrice": 5190,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/muxol-jarabe-adulto-ambroxol-30-mg-5-ml-x-100-ml-eurolab-836144.jpg?v=1763923904",
+      "presentationKey": "muxol|100ml|100|bio:unknown|brand:eurolab|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001433",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "ambroxol|100ml",
+      "canonicalName": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+          "channels": {
+            "store": 5490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5490
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=ambroxol%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fambroxol-15-mg-5ml-jarabe-100-ml%2F2224.html&cfmId=CFM-000068",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw38881a90/images/large/2224-1.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.218Z"
+        }
+      ],
+      "bestPrice": 5490,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw38881a90/images/large/2224-1.jpg",
+      "presentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-000068",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Pediátrico Ambroxol Jarabe 100ml",
+      "laboratory": "Muxol Pediatrico",
+      "brand": "Muxol Pediatrico",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "structured",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Muxol Pediátrico Ambroxol Jarabe 100ml",
+          "channels": {
+            "store": 10999,
+            "online": 6929,
+            "cmr": null,
+            "sbpay": 5829,
+            "effective": 5829
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=muxol%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmuxol-pediatrico-ambroxol-jarabe-100ml%3Fdefault_sku%3D2979220&cfmId=CFM-000997",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/185031/small/2979220_1.jpg?1777407458",
+          "fetchedAt": "2026-09-01T03:06:04.224Z"
+        }
+      ],
+      "bestPrice": 5829,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/185031/small/2979220_1.jpg?1777407458",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:muxolpediatrico|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|120ml",
+      "canonicalName": "Broncot Forte 30mg/5ml sin azucar 120 ml.",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Broncot Forte 30mg/5ml sin azucar 120 ml.",
+          "channels": {
+            "store": 5990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 5990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=broncot%7C120ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fbroncot-gft-forte-30mg-5ml-sin-azucar-120ml&cfmId=CFM-001431",
+          "imageUrl": "https://farmacia.araucomed.com/6497-home_default/broncot-gft-forte-30mg-5ml-sin-azucar-120ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.226Z"
+        }
+      ],
+      "bestPrice": 5990,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/6497-home_default/broncot-gft-forte-30mg-5ml-sin-azucar-120ml.jpg",
+      "presentationKey": "broncot|120ml|bio:unknown|brand:unknown|var:forte",
+      "cfmId": "CFM-001431",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Jarabe Pediátrico Ambroxol 300 mg / 100 ml",
+      "laboratory": null,
+      "brand": "Muxol",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Muxol Jarabe Pediátrico Ambroxol 300 mg / 100 ml",
+          "channels": {
+            "store": 6190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmuxol-jarabe-pediatrico-ambroxol-300-mg-100-ml%2F6178.html&cfmId=CFM-000997",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwacaf2cbd/images/large/6178-1.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.221Z"
+        }
+      ],
+      "bestPrice": 6190,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwacaf2cbd/images/large/6178-1.jpg",
+      "presentationKey": "muxol|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "muxol|100ml",
+      "canonicalName": "Muxol Jarabe Pediátrico Ambroxol Clorhidrato 300 mg 100 ml",
+      "laboratory": null,
+      "brand": "Muxol",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": true,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Muxol Jarabe Pediátrico Ambroxol Clorhidrato 300 mg 100 ml",
+          "channels": {
+            "store": 6190,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6190
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=muxol%7C100ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmuxol-jarabe-pediatrico-ambroxol-clorhidrato-300-mg-100-ml-9166.html&cfmId=CFM-000997",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd8b1abce/images/products/9166/9166.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 6190,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd8b1abce/images/products/9166/9166.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "muxol|100ml|bio:true|brand:unknown|var:infantil|form:fluid-oral",
+      "cfmId": "CFM-000997",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|30ml|30",
+      "canonicalName": "Broncot 7,5mg/ml gotas x 30 ml.",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "araucomed",
+          "pharmacyName": "AraucoMed",
+          "productName": "Broncot 7,5mg/ml gotas x 30 ml.",
+          "channels": {
+            "store": 6490,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6490
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=broncot%7C30ml%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fmucoliticos-y-expectorantes%2Fbroncot-75mg-ml-gotas-30ml&cfmId=CFM-001442",
+          "imageUrl": "https://farmacia.araucomed.com/5692-home_default/broncot-75mg-ml-gotas-30ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.227Z"
+        }
+      ],
+      "bestPrice": 6490,
+      "bestPharmacy": "araucomed",
+      "imageUrl": "https://farmacia.araucomed.com/5692-home_default/broncot-75mg-ml-gotas-30ml.jpg",
+      "presentationKey": "broncot|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001442",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|120ml|120",
+      "canonicalName": "Broncot Forte G.T.F. Jarabe 30 mg / 5 mL x 120 mL",
+      "laboratory": "ABBOTT",
+      "brand": null,
+      "manufacturer": "Abbott",
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "farmex",
+          "pharmacyName": "Farmex",
+          "productName": "Broncot Forte G.T.F. Jarabe 30 mg / 5 mL x 120 mL",
+          "channels": {
+            "store": 6990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 6990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=broncot%7C120ml%7C120&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fbroncot-forte-g-t-f-jarabe-30-mg-5ml%3F_pos%3D8%26_psq%3Dambroxol%26_psid%3D160672eda%26_ss%3De&cfmId=CFM-001432",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/broncot-forte-gtf-jarabe-30-mg5ml-vencimiento-marzo-2022-abbott-821749.jpg?v=1692989684",
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 6990,
+      "bestPharmacy": "farmex",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/broncot-forte-gtf-jarabe-30-mg5ml-vencimiento-marzo-2022-abbott-821749.jpg?v=1692989684",
+      "presentationKey": "broncot|120ml|120|bio:unknown|brand:abbott|var:forte|form:fluid-oral",
+      "cfmId": "CFM-001432",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|120ml",
+      "canonicalName": "Broncot Fte G.F.T. S/Azu. 30mg/5ml 120ml",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Broncot Fte G.F.T. S/Azu. 30mg/5ml 120ml",
+          "channels": {
+            "store": 10409,
+            "online": null,
+            "cmr": 7807,
+            "sbpay": null,
+            "effective": 7807
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=broncot%7C120ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbroncot-fte-g.f.t.-s-azu.-30mg-5ml-120ml-50483.html&cfmId=CFM-001431",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc6b3e103/images/products/50483/50483.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 7807,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc6b3e103/images/products/50483/50483.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "broncot|120ml|bio:unknown|brand:unknown|var:fte",
+      "cfmId": "CFM-001431",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|7.5mg",
+      "canonicalName": "Broncot Gotas 7,5 mg/ml x...",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "easyfarma",
+          "pharmacyName": "EasyFarma",
+          "productName": "Broncot Gotas 7,5 mg/ml x...",
+          "channels": {
+            "store": 7990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 7990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=broncot%7C7.5mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26341-broncot-gotas-x-30ml.html&cfmId=CFM-001438",
+          "imageUrl": null,
+          "fetchedAt": "2026-09-01T03:06:04.229Z"
+        }
+      ],
+      "bestPrice": 7990,
+      "bestPharmacy": "easyfarma",
+      "imageUrl": null,
+      "presentationKey": "broncot|7.5mg|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001438",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|120ml",
+      "canonicalName": "Broncot Ambroxol 30mg/5ml 120ml",
+      "laboratory": "Broncot",
+      "brand": "Broncot",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "structured",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Broncot Ambroxol 30mg/5ml 120ml",
+          "channels": {
+            "store": 9199,
+            "online": 8095,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8095
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=broncot%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbroncot-ambroxol-30mg-5ml-120ml%3Fdefault_sku%3D2830326&cfmId=CFM-001431",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/45696/small/2830326_%281%29.jpg?1641476836",
+          "fetchedAt": "2026-09-01T03:06:04.224Z"
+        }
+      ],
+      "bestPrice": 8095,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/45696/small/2830326_%281%29.jpg?1641476836",
+      "presentationKey": "broncot|120ml|bio:unknown|brand:broncot|var:ambroxol",
+      "cfmId": "CFM-001431",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "mucosolvandual|120ml",
+      "canonicalName": "Mucosolvan-Dual Infantil 120Ml",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Mucosolvan-Dual Infantil 120Ml",
+          "channels": {
+            "store": 8290,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 8290
+          },
+          "hasStock": false,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=mucosolvandual%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmucosolvan-dual-infantil-120ml%2F65002.html&cfmId=CFM-000990",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_YzaMexico/default/dw4e142273/images/large/7501070641184_1.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.223Z"
+        }
+      ],
+      "bestPrice": 8290,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_YzaMexico/default/dw4e142273/images/large/7501070641184_1.jpg",
+      "presentationKey": "mucosolvandual|120ml|bio:unknown|brand:unknown|var:infantil",
+      "cfmId": "CFM-000990",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|120ml|120",
+      "canonicalName": "Broncot GFT 15 mg/5 mL x 120 mL Jarabe",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Broncot GFT 15 mg/5 mL x 120 mL Jarabe",
+          "channels": {
+            "store": 12569,
+            "online": null,
+            "cmr": 9427,
+            "sbpay": null,
+            "effective": 9427
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=broncot%7C120ml%7C120&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbroncot-gft-15-mg-5-ml-x-120-ml-jarabe-50485.html&cfmId=CFM-001432",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfddc26c0/images/products/50485/50485.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 9427,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfddc26c0/images/products/50485/50485.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "broncot|120ml|120|bio:unknown|brand:unknown|var:gft|form:fluid-oral",
+      "cfmId": "CFM-001432",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|30ml",
+      "canonicalName": "Broncot 7.5 mg/ml Gotas Fco. 30ml",
+      "laboratory": null,
+      "brand": null,
+      "manufacturer": null,
+      "activeIngredient": null,
+      "brandSource": "unknown",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "ahumada",
+          "pharmacyName": "Farmacias Ahumada",
+          "productName": "Broncot 7.5 mg/ml Gotas Fco. 30ml",
+          "channels": {
+            "store": 17869,
+            "online": null,
+            "cmr": 13402,
+            "sbpay": null,
+            "effective": 13402
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=broncot%7C30ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbroncot-7.5-mg-ml-gotas-fco.-30ml-4499.html&cfmId=CFM-001439",
+          "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw794f08f1/images/products/4499/4499.jpg?sw=247&amp;sh=247&amp;sm=fit",
+          "fetchedAt": "2026-09-01T03:06:04.225Z"
+        }
+      ],
+      "bestPrice": 13402,
+      "bestPharmacy": "ahumada",
+      "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw794f08f1/images/products/4499/4499.jpg?sw=247&amp;sh=247&amp;sm=fit",
+      "presentationKey": "broncot|30ml|bio:unknown|brand:unknown|form:fluid-oral",
+      "cfmId": "CFM-001439",
+      "lexicalMatch": "compatible",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|120ml",
+      "canonicalName": "Broncot GFT Pediatrico Ambroxol 15 mg/5mL Jarabe 120 mL",
+      "laboratory": null,
+      "brand": "Broncot",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Broncot GFT Pediatrico Ambroxol 15 mg/5mL Jarabe 120 mL",
+          "channels": {
+            "store": 13540,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 13540
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=broncot%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbroncot-gft-pediatrico-ambroxol-15-mg-5ml-jarabe-120-ml%2F256478.html&cfmId=CFM-001431",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw560d6935/images/large/256478-broncot-gft-pediatrico-ambroxol-15-mg5ml-jarabe-120-ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.222Z"
+        }
+      ],
+      "bestPrice": 13540,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw560d6935/images/large/256478-broncot-gft-pediatrico-ambroxol-15-mg5ml-jarabe-120-ml.jpg",
+      "presentationKey": "broncot|120ml|bio:unknown|brand:unknown|var:gft|form:fluid-oral",
+      "cfmId": "CFM-001431",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|30ml",
+      "canonicalName": "Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml",
+      "laboratory": "Broncot",
+      "brand": "Broncot",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "structured",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "salcobrand",
+          "pharmacyName": "Salcobrand",
+          "productName": "Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml",
+          "channels": {
+            "store": 17399,
+            "online": 15311,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 15311
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=broncot%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbroncot-ambroxol-clorhidrato-7-5mg-ml-gotas-30ml%3Fdefault_sku%3D2836255&cfmId=CFM-001439",
+          "imageUrl": "https://static.salcobrand.cl/spree/products/40892/small/2836255_001.jpg?1641477110",
+          "fetchedAt": "2026-09-01T03:06:04.224Z"
+        }
+      ],
+      "bestPrice": 15311,
+      "bestPharmacy": "salcobrand",
+      "imageUrl": "https://static.salcobrand.cl/spree/products/40892/small/2836255_001.jpg?1641477110",
+      "presentationKey": "broncot|30ml|bio:unknown|brand:broncot|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001439",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    },
+    {
+      "matchKey": "broncot|30ml",
+      "canonicalName": "Broncot Ambroxol 7,5 mg/mL Gotas 30 mL",
+      "laboratory": null,
+      "brand": "Broncot",
+      "manufacturer": null,
+      "activeIngredient": "ambroxol",
+      "brandSource": "name",
+      "isBioequivalent": null,
+      "prices": [
+        {
+          "pharmacySlug": "cruz-verde",
+          "pharmacyName": "Cruz Verde",
+          "productName": "Broncot Ambroxol 7,5 mg/mL Gotas 30 mL",
+          "channels": {
+            "store": 16990,
+            "online": null,
+            "cmr": null,
+            "sbpay": null,
+            "effective": 16990
+          },
+          "hasStock": true,
+          "hasOnlineDelivery": true,
+          "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=broncot%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbroncot-ambroxol-7-5-mg-ml-gotas-30-ml%2F4081.html&cfmId=CFM-001439",
+          "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw36d5629f/images/large/4081-broncot-ambroxol-75-mgml-gotas-30-ml.jpg",
+          "fetchedAt": "2026-09-01T03:06:04.221Z"
+        }
+      ],
+      "bestPrice": 16990,
+      "bestPharmacy": "cruz-verde",
+      "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw36d5629f/images/large/4081-broncot-ambroxol-75-mgml-gotas-30-ml.jpg",
+      "presentationKey": "broncot|30ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral",
+      "cfmId": "CFM-001439",
+      "lexicalMatch": "exact",
+      "concentrationMatch": "other"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "probedAt": "2026-09-01T03:12:42.567Z",
+  "note": "Sonda de viabilidad, no integracion. Lectura publica sin credenciales.",
+  "ckanDatastoreApi": {
+    "url": "https://datos.gob.cl/api/3/action/datastore_search?resource_id=93df17ca-b694-4697-96b2-3dae87d9761d&limit=5",
+    "status": 200,
+    "success": true,
+    "total": 0,
+    "recordsReturned": 0,
+    "fields": [
+      "_id",
+      "Ndeg",
+      "Principio Activo",
+      "Producto",
+      "Registro",
+      "Titular",
+      "Estado",
+      "Vigencia",
+      "Uso / Tratamiento"
+    ]
+  },
+  "csvSnapshot": {
+    "url": "https://datos.gob.cl/dataset/7a6758f2-7c91-42c9-8fbe-cec006471a2c/resource/93df17ca-b694-4697-96b2-3dae87d9761d/download/listadocronologico2017.csv",
+    "status": 200,
+    "bytes": 221155,
+    "encoding": "ISO-8859-1",
+    "headerBanner": [
+      "Listado de productos Bioequivalentes,",
+      "actualizado al 31 de Mayo de 2016"
+    ],
+    "dataRows": 1555,
+    "distinctActiveIngredients": 245,
+    "distinctIspRegistrations": 1555,
+    "distinctHolders": 69,
+    "columns": [
+      "N°",
+      "Principio Activo",
+      "Producto",
+      "Registro",
+      "Titular",
+      "Estado",
+      "Vigencia",
+      "Uso / Tratamiento"
+    ],
+    "coverageOfAuditCorpus": {
+      "AMBROXOL": 0,
+      "PARACETAMOL": 30,
+      "IBUPROFENO": 46,
+      "LOSARTAN": 3,
+      "OMEPRAZOL": 18,
+      "AMOXICILINA": 19,
+      "DICLOFENACO": 1,
+      "CETIRIZINA": 14
+    },
+    "sampleRow": "1;PREGABALINA;PLENICA 75 CÁPSULAS 75 mg ;F-18790/16;DEUTSCHE PHARMA S.A.;EQUIVALENTE TERAPÉUTICO;Sí;Anticonvulsivantes"
+  },
+  "officialRegistrySearchUi": {
+    "url": "https://registrosanitario.ispch.gob.cl/",
+    "status": 0,
+    "error": "fetch failed"
+  }
+}

@@ -1,0 +1,658 @@
+presentation_signature,cards,distinct_presentation_keys,pharmacies,min_price,max_price
+"losartan 50mg::losartan~-~solid-oral~-~30~-",17,17,7,490,3490
+"losartan::losartan~-~solid-oral~-~30~-",17,17,7,490,3490
+"tapsin::tapsin~-~fluid-oral~-~1~-",16,16,7,590,5790
+"ibuprofeno 400mg::ibuprofeno~-~solid-oral~-~20~-",15,15,9,642,2090
+"ibuprofeno::ibuprofeno~-~solid-oral~-~20~-",15,15,9,642,2090
+"tapsin::tapsin~-~solid-oral~-~12~-",15,15,7,1290,5599
+"diclofenaco 50mg::diclofenaco~-~topical~-~-~-",13,13,7,800,2815
+"diclofenaco 50mg::diclofenaco~-~suppository~-~5~-",12,12,5,839,3343
+"tapsin::tapsin~-~solid-oral~-~30~-",11,11,5,2890,6599
+"amoxicilina 500mg::amoxicilina~-~solid-oral~acido~20~-",10,10,6,4980,11527
+"tapsin::tapsin~-~solid-oral~-~20~-",10,10,6,1990,7552
+"tapsin::tapsin~-~solid-oral~-~18~-",10,10,7,1990,4190
+"losartan 50mg::losartan~-~solid-oral~hidroclorotiazida~30~-",9,9,6,1690,3990
+"losartan::losartan~-~solid-oral~hidroclorotiazida~30~-",9,9,6,1690,3990
+"omeprazol 20mg::esomeprazol~-~solid-oral~-~30~-",9,9,4,2520,5990
+"omeprazol::esomeprazol~-~solid-oral~-~30~-",9,9,4,2520,5990
+"cetirizina 10mg::cetirizina~-~solid-oral~-~30~-",8,8,5,1790,3599
+"diclofenaco 50mg::diclofenaco~-~solid-oral~-~8~-",8,8,6,690,1847
+"ibuprofeno 400mg::dolorub~-~topical~-~-~-",8,8,6,2700,5849
+"ibuprofeno::dolorub~-~topical~-~-~-",8,8,6,2700,5849
+"tapsin::tapsin~-~solid-oral~-~6~-",8,8,5,460,5490
+"tapsin::tapsin~-~solid-oral~-~16~-",8,8,6,890,2890
+"ambroxol 30mg/5ml::ambroxol~30mg/5ml~fluid-oral~-~-~100",7,7,2,790,3255
+"ambroxol 30mg::ambroxol~30mg/5ml~fluid-oral~-~-~100",7,7,2,790,3255
+"ambroxol 30mg/5ml jarabe 100ml::ambroxol~30mg/5ml~fluid-oral~-~-~100",7,7,2,790,3255
+"ambroxol::ambroxol~30mg/5ml~fluid-oral~-~-~100",7,7,2,790,3255
+"amoxicilina 500mg::amoxicilina~-~solid-oral~-~21~-",7,7,8,1690,3190
+"ibuprofeno 400mg::actron~-~solid-oral~-~10~-",7,7,6,2771,5620
+"ibuprofeno::actron~-~solid-oral~-~10~-",7,7,6,2771,5620
+"losartan 50mg::losapres~-~solid-oral~-~30~-",7,7,4,17990,32090
+"losartan::losapres~-~solid-oral~-~30~-",7,7,4,17990,32090
+"omeprazol 20mg::omeprazol~-~solid-oral~-~30~-",7,7,7,750,1387
+"omeprazol::omeprazol~-~solid-oral~-~30~-",7,7,7,750,1387
+"paracetamol 500mg::paracetamol~-~solid-oral~-~16~-",7,7,8,359,1740
+"paracetamol 500mg::paracetamol~-~solid-oral~-~20~-",7,7,4,990,10999
+"paracetamol::paracetamol~-~solid-oral~-~16~-",7,7,8,359,1740
+"paracetamol::paracetamol~-~solid-oral~-~20~-",7,7,4,990,10999
+"tapsin::tapsin~-~fluid-oral~-~-~-",7,7,4,600,1040
+"cetirizina 10mg::rigotax~-~solid-oral~-~30~-",6,6,6,3000,14990
+"ibuprofeno 400mg::ibucalm~-~solid-oral~-~10~-",6,6,4,1490,5280
+"ibuprofeno::ibucalm~-~solid-oral~-~10~-",6,6,4,1490,5280
+"omeprazol 20mg::omeprazol~-~solid-oral~-~60~-",6,6,6,1550,2990
+"omeprazol::omeprazol~-~solid-oral~-~60~-",6,6,6,1550,2990
+"tapsin::tapsin~-~-~-~-~-",6,6,2,450,791
+"tapsin::tapsin~-~fluid-oral~-~20~-",6,6,6,4989,5990
+"amoxicilina 500mg::amoval~-~solid-oral~-~21~-",5,5,4,15390,30940
+"amoxicilina 500mg::amoxicilina~-~solid-oral~-~10~-",5,5,7,1690,3290
+"amoxicilina 500mg::novamox~-~solid-oral~-~14~-",5,5,5,8550,15290
+"cetirizina 10mg::cetirizina~5mg/5ml~fluid-oral~-~-~60",5,5,4,2989,3799
+"diclofenaco 50mg::diclofenaco~-~solid-oral~-~10~-",5,5,5,290,1231
+"diclofenaco 50mg::diclofenaco~-~-~-~-~-",5,5,1,990,1990
+"ibuprofeno 400mg::ibupirac~-~solid-oral~-~10~-",5,5,5,1690,6599
+"ibuprofeno 400mg::ibucalm~-~solid-oral~-~20~-",5,5,3,1990,7590
+"ibuprofeno::ibupirac~-~solid-oral~-~10~-",5,5,5,1690,6599
+"ibuprofeno::ibucalm~-~solid-oral~-~20~-",5,5,3,1990,7590
+"losartan 50mg::corodin~-~solid-oral~-~30~-",5,5,3,19246,28790
+"losartan::corodin~-~solid-oral~-~30~-",5,5,3,19246,28790
+"paracetamol 500mg::paracetamol~-~suppository~-~6~-",5,5,6,780,2040
+"paracetamol 500mg::xumadol~-~solid-oral~-~20~-",5,5,5,5690,7690
+"paracetamol::paracetamol~-~suppository~-~6~-",5,5,6,780,2040
+"paracetamol::xumadol~-~solid-oral~-~20~-",5,5,5,5690,7690
+"tapsin::tapsin~-~solid-oral~-~10~-",5,5,5,1000,2290
+"ambroxol 30mg/5ml::ambroxol~15mg/5ml~fluid-oral~-~-~100",4,4,2,900,5490
+"ambroxol 30mg/5ml::broncot~7.5mg/1ml~fluid-oral~-~-~30",4,4,4,6490,16990
+"ambroxol 30mg::ambroxol~15mg/5ml~fluid-oral~-~-~100",4,4,2,900,5490
+"ambroxol 30mg::broncot~7.5mg/1ml~fluid-oral~-~-~30",4,4,4,6490,16990
+"ambroxol 30mg/5ml jarabe 100ml::ambroxol~15mg/5ml~fluid-oral~-~-~100",4,4,2,900,5490
+"ambroxol 30mg/5ml jarabe 100ml::broncot~7.5mg/1ml~fluid-oral~-~-~30",4,4,4,6490,16990
+"ambroxol::ambroxol~15mg/5ml~fluid-oral~-~-~100",4,4,2,900,5490
+"ambroxol::broncot~7.5mg/1ml~fluid-oral~-~-~30",4,4,4,6490,16990
+"amoxicilina 500mg::maximox~-~solid-oral~-~20~-",4,4,4,15958,29990
+"amoxicilina 500mg::amoxicilina~57mg~fluid-oral~acido~-~70",4,4,3,5960,8990
+"amoxicilina 500mg::amobiotic~-~solid-oral~-~14~-",4,4,4,9490,19990
+"amoxicilina 500mg::optamox~-~solid-oral~-~21~-",4,4,4,11399,17590
+"amoxicilina 500mg::amoval~-~solid-oral~-~14~-",4,4,6,13890,18540
+"cetirizina 10mg::cetirex~-~solid-oral~-~30~-",4,4,4,3290,8809
+"cetirizina 10mg::rigotax~-~solid-oral~-~10~-",4,4,4,5699,6775
+"cetirizina 10mg::remitex~-~solid-oral~-~30~-",4,4,4,12390,16990
+"cetirizina 10mg::rigotax~5mg/5ml~fluid-oral~-~-~60",4,4,5,4350,19189
+"cetirizina 10mg::rigotax~10mg/1ml~fluid-oral~-~-~15",4,4,5,4989,15311
+"cetirizina 10mg::remitex~10mg/1ml~fluid-oral~-~-~15",4,4,4,13990,28140
+"cetirizina 10mg::remitex~5mg/5ml~fluid-oral~-~-~100",4,4,4,14495,22140
+"diclofenaco 50mg::dolo~-~solid-oral~-~20~-",4,4,4,6990,22190
+"diclofenaco 50mg::diclofenaco~-~fluid-oral~-~-~20",4,4,4,2190,6335
+"diclofenaco 50mg::diclofenaco~-~injectable~-~5~-",4,4,4,2700,7127
+"diclofenaco 50mg::promerpal~-~solid-oral~-~10~-",4,4,5,3279,6687
+"ibuprofeno 400mg::ibupirac~-~solid-oral~-~20~-",4,4,4,2949,6590
+"ibuprofeno 400mg::actron~-~solid-oral~-~20~-",4,4,3,5819,10690
+"ibuprofeno::ibupirac~-~solid-oral~-~20~-",4,4,4,2949,6590
+"ibuprofeno::actron~-~solid-oral~-~20~-",4,4,3,5819,10690
+"losartan 50mg::losartan~-~-~-~-~-",4,4,1,1490,3490
+"losartan 50mg::cozaar~-~solid-oral~-~30~-",4,4,4,11890,33263
+"losartan 50mg::simpertend~-~solid-oral~-~30~-",4,4,3,6600,32740
+"losartan::losartan~-~-~-~-~-",4,4,1,1490,3490
+"losartan::simpertend~-~solid-oral~-~30~-",4,4,3,6600,32740
+"losartan::cozaar~-~solid-oral~-~30~-",4,4,4,11890,33263
+"paracetamol 500mg::kitadol~-~solid-oral~-~24~-",4,4,4,650,1190
+"paracetamol 500mg::tramadol~-~solid-oral~-~30~-",4,4,2,1990,5190
+"paracetamol::kitadol~-~solid-oral~-~24~-",4,4,4,650,1190
+"paracetamol::tramadol~-~solid-oral~-~30~-",4,4,2,1990,5190
+"tapsin::tapsin~-~fluid-oral~-~6~-",4,4,2,3854,4399
+"ambroxol 30mg/5ml::broncot~30mg/5ml~-~-~-~120",3,3,3,5990,8095
+"ambroxol 30mg/5ml::muxol~-~solid-oral~-~20~-",3,3,3,6877,11190
+"ambroxol 30mg/5ml::tocalm~15mg/5ml~fluid-oral~-~-~100",3,3,4,790,3787
+"ambroxol 30mg/5ml::broncot~15mg/5ml~fluid-oral~-~-~120",3,3,3,4990,13540
+"ambroxol 30mg::muxol~-~solid-oral~-~20~-",3,3,3,6877,11190
+"ambroxol 30mg::tocalm~15mg/5ml~fluid-oral~-~-~100",3,3,4,790,3787
+"ambroxol 30mg::broncot~15mg/5ml~fluid-oral~-~-~120",3,3,3,4990,13540
+"ambroxol 30mg::broncot~30mg/5ml~-~-~-~120",3,3,3,5990,8095
+"ambroxol 30mg/5ml jarabe 100ml::broncot~30mg/5ml~-~-~-~120",3,3,3,5990,8095
+"ambroxol 30mg/5ml jarabe 100ml::muxol~-~solid-oral~-~20~-",3,3,3,6877,11190
+"ambroxol 30mg/5ml jarabe 100ml::tocalm~15mg/5ml~fluid-oral~-~-~100",3,3,4,790,3787
+"ambroxol 30mg/5ml jarabe 100ml::broncot~15mg/5ml~fluid-oral~-~-~120",3,3,3,4990,13540
+"ambroxol::tocalm~15mg/5ml~fluid-oral~-~-~100",3,3,4,790,3787
+"ambroxol::broncot~15mg/5ml~fluid-oral~-~-~120",3,3,3,4990,13540
+"ambroxol::broncot~30mg/5ml~-~-~-~120",3,3,3,5990,8095
+"ambroxol::muxol~-~solid-oral~-~20~-",3,3,3,6877,11190
+"amoxicilina 500mg::amoxicilina~-~solid-oral~acido~14~-",3,3,2,7990,10823
+"amoxicilina 500mg::clavam~-~solid-oral~-~14~-",3,3,3,14023,24250
+"amoxicilina 500mg::clavam~-~solid-oral~-~20~-",3,3,3,13979,27890
+"amoxicilina 500mg::amoxicilina~250mg/5ml~fluid-oral~-~-~60",3,3,5,1390,1650
+"amoxicilina 500mg::optamox~-~solid-oral~-~14~-",3,3,3,11990,20590
+"amoxicilina 500mg::amoval~1000mg/5ml~fluid-oral~-~-~90",3,3,3,17990,20108
+"cetirizina 10mg::findaler~-~solid-oral~-~30~-",3,3,3,1990,6863
+"cetirizina 10mg::rigotaxd~-~solid-oral~-~10~-",3,3,4,4799,7990
+"cetirizina 10mg::findaler~5mg/5ml~fluid-oral~-~-~100",3,3,3,3490,17240
+"cetirizina 10mg::zyrtec~1mg/1ml~fluid-oral~-~-~60",3,3,3,23317,31090
+"cetirizina 10mg::levocetirizina~-~solid-oral~-~30~-",3,3,2,1000,2640
+"cetirizina 10mg::levocetirizina~-~-~-~-~-",3,3,1,3490,3990
+"diclofenaco 50mg::lertus~-~solid-oral~-~10~-",3,3,3,7990,14415
+"diclofenaco 50mg::merpal~-~fluid-oral~-~-~110",3,3,3,3450,7267
+"diclofenaco 50mg::lertus~15mg/1ml~fluid-oral~-~-~25",3,3,3,6490,14871
+"diclofenaco 50mg::lertus~-~solid-oral~-~20~-",3,3,4,8990,15652
+"diclofenaco 50mg::lertus~-~topical~-~-~-",3,3,3,9490,15990
+"ibuprofeno 400mg::doraliv~-~solid-oral~-~10~-",3,3,2,3079,6159
+"ibuprofeno 400mg::doraliv~-~solid-oral~-~20~-",3,3,2,5103,9327
+"ibuprofeno 400mg::tapsin~-~solid-oral~-~12~-",3,3,3,2290,2990
+"ibuprofeno 400mg::ibuprofeno~100mg/5ml~fluid-oral~-~-~100",3,3,4,1349,3140
+"ibuprofeno 400mg::ibuprofeno~200mg/5ml~fluid-oral~-~-~100",3,3,5,1490,2090
+"ibuprofeno 400mg::niofen~200mg/5ml~fluid-oral~-~-~120",3,3,4,3690,7215
+"ibuprofeno::ibuprofeno~100mg/5ml~fluid-oral~-~-~100",3,3,4,1349,3140
+"ibuprofeno::ibuprofeno~200mg/5ml~fluid-oral~-~-~100",3,3,5,1490,2090
+"ibuprofeno::tapsin~-~solid-oral~-~12~-",3,3,3,2290,2990
+"ibuprofeno::doraliv~-~solid-oral~-~10~-",3,3,2,3079,6159
+"ibuprofeno::niofen~200mg/5ml~fluid-oral~-~-~120",3,3,4,3690,7215
+"ibuprofeno::doraliv~-~solid-oral~-~20~-",3,3,2,5103,9327
+"losartan 50mg::hyzaar~-~solid-oral~-~30~-",3,3,3,10490,13306
+"losartan 50mg::losapresd~-~solid-oral~-~30~-",3,3,3,18290,23074
+"losartan::hyzaar~-~solid-oral~-~30~-",3,3,3,10490,13306
+"losartan::losapresd~-~solid-oral~-~30~-",3,3,3,18290,23074
+"omeprazol 20mg::omeprazol~-~-~-~60~-",3,3,2,2980,2990
+"omeprazol 20mg::lomex~-~solid-oral~-~28~-",3,3,3,5010,29990
+"omeprazol::omeprazol~-~-~-~60~-",3,3,2,2980,2990
+"omeprazol::lomex~-~solid-oral~-~28~-",3,3,3,5010,29990
+"paracetamol 500mg::panadol~-~solid-oral~-~12~-",3,3,3,990,2727
+"paracetamol 500mg::tapsin~-~solid-oral~-~16~-",3,3,3,1090,1950
+"paracetamol 500mg::alividol~-~solid-oral~-~20~-",3,3,3,2690,8390
+"paracetamol 500mg::paracetamol~100mg/1ml~fluid-oral~-~-~15",3,3,4,990,1050
+"paracetamol 500mg::gesidol~120mg/5ml~fluid-oral~-~-~100",3,3,2,4469,6990
+"paracetamol 500mg::dropol~-~solid-oral~-~20~-",3,3,3,4470,14590
+"paracetamol 500mg::kitadol~-~solid-oral~-~18~-",3,3,3,5885,7490
+"paracetamol 500mg::gesidol~-~solid-oral~-~20~-",3,3,3,6979,9890
+"paracetamol::panadol~-~solid-oral~-~12~-",3,3,3,990,2727
+"paracetamol::paracetamol~100mg/1ml~fluid-oral~-~-~15",3,3,4,990,1050
+"paracetamol::tapsin~-~solid-oral~-~16~-",3,3,3,1090,1950
+"paracetamol::alividol~-~solid-oral~-~20~-",3,3,3,2690,8390
+"paracetamol::gesidol~120mg/5ml~fluid-oral~-~-~100",3,3,2,4469,6990
+"paracetamol::dropol~-~solid-oral~-~20~-",3,3,3,4470,14590
+"paracetamol::kitadol~-~solid-oral~-~18~-",3,3,3,5885,7490
+"paracetamol::gesidol~-~solid-oral~-~20~-",3,3,3,6979,9890
+"tapsin::tapsin~-~solid-oral~-~24~-",3,3,3,900,2467
+"tapsin::tapsin~100mg/1ml~fluid-oral~-~-~15",3,3,5,2600,4090
+"tapsin::tapsin~120mg/5ml~fluid-oral~-~-~100",3,3,5,4990,7890
+"ambroxol 30mg/5ml::mintamox~30mg/5ml~fluid-oral~-~-~100",2,2,2,2490,3790
+"ambroxol 30mg/5ml::tocalm~30mg/5ml~fluid-oral~-~-~100",2,2,2,2549,2990
+"ambroxol 30mg/5ml::muxol~30mg/5ml~fluid-oral~-~-~100",2,2,2,3990,5190
+"ambroxol 30mg/5ml::muxol~-~fluid-oral~-~-~-",2,2,1,5490,5490
+"ambroxol 30mg/5ml::mintamox~15mg/5ml~fluid-oral~-~-~100",2,2,2,2490,3690
+"ambroxol 30mg/5ml::muxol~15mg/5ml~fluid-oral~-~-~100",2,2,2,3490,4890
+"ambroxol 30mg/5ml::muxol~-~fluid-oral~-~-~100",2,2,1,3921,5829
+"ambroxol 30mg::muxol~-~fluid-oral~-~-~-",2,2,1,5490,5490
+"ambroxol 30mg::mintamox~30mg/5ml~fluid-oral~-~-~100",2,2,2,2490,3790
+"ambroxol 30mg::mintamox~15mg/5ml~fluid-oral~-~-~100",2,2,2,2490,3690
+"ambroxol 30mg::tocalm~30mg/5ml~fluid-oral~-~-~100",2,2,2,2549,2990
+"ambroxol 30mg::muxol~15mg/5ml~fluid-oral~-~-~100",2,2,2,3490,4890
+"ambroxol 30mg::muxol~-~fluid-oral~-~-~100",2,2,1,3921,5829
+"ambroxol 30mg::muxol~30mg/5ml~fluid-oral~-~-~100",2,2,2,3990,5190
+"ambroxol 30mg/5ml jarabe 100ml::mintamox~30mg/5ml~fluid-oral~-~-~100",2,2,2,2490,3790
+"ambroxol 30mg/5ml jarabe 100ml::tocalm~30mg/5ml~fluid-oral~-~-~100",2,2,2,2549,2990
+"ambroxol 30mg/5ml jarabe 100ml::muxol~30mg/5ml~fluid-oral~-~-~100",2,2,2,3990,5190
+"ambroxol 30mg/5ml jarabe 100ml::muxol~-~fluid-oral~-~-~-",2,2,1,5490,5490
+"ambroxol 30mg/5ml jarabe 100ml::mintamox~15mg/5ml~fluid-oral~-~-~100",2,2,2,2490,3690
+"ambroxol 30mg/5ml jarabe 100ml::muxol~15mg/5ml~fluid-oral~-~-~100",2,2,2,3490,4890
+"ambroxol 30mg/5ml jarabe 100ml::muxol~-~fluid-oral~-~-~100",2,2,1,3921,5829
+"ambroxol::mintamox~30mg/5ml~fluid-oral~-~-~100",2,2,2,2490,3790
+"ambroxol::mintamox~15mg/5ml~fluid-oral~-~-~100",2,2,2,2490,3690
+"ambroxol::tocalm~30mg/5ml~fluid-oral~-~-~100",2,2,2,2549,2990
+"ambroxol::muxol~15mg/5ml~fluid-oral~-~-~100",2,2,2,3490,4890
+"ambroxol::muxol~-~fluid-oral~-~-~100",2,2,1,3921,5829
+"ambroxol::muxol~30mg/5ml~fluid-oral~-~-~100",2,2,2,3990,5190
+"ambroxol::muxol~-~fluid-oral~-~-~-",2,2,1,5490,5490
+"amoxicilina 500mg::amoxicilina~-~solid-oral~-~20~-",2,2,2,4990,5850
+"amoxicilina 500mg::amoxicilina~-~-~acido~-~-",2,2,1,7490,7990
+"amoxicilina 500mg::maximox~-~solid-oral~-~14~-",2,2,2,12282,26690
+"amoxicilina 500mg::amoxicilina~250mg/5ml~-~-~-~60",2,2,2,1990,2100
+"amoxicilina 500mg::amoval~400mg/5ml~fluid-oral~-~-~70",2,2,3,9790,17354
+"amoxicilina 500mg::clavam~400mg~fluid-oral~-~-~70",2,2,2,10470,15984
+"amoxicilina 500mg::amoval~250mg/5ml~fluid-oral~-~-~100",2,2,4,10490,14200
+"amoxicilina 500mg::clavinex~-~fluid-oral~-~-~35",2,2,1,13490,13990
+"amoxicilina 500mg::amobiotic~1000mg/5ml~-~-~-~90",2,2,2,14990,18490
+"amoxicilina 500mg::moxivulan~-~solid-oral~-~14~-",2,2,2,15399,17340
+"amoxicilina 500mg::amoval~-~solid-oral~-~20~-",2,2,4,16990,24580
+"amoxicilina 500mg::novamox~-~solid-oral~-~20~-",2,2,2,18127,20590
+"cetirizina 10mg::coolips~-~solid-oral~-~10~-",2,2,3,2490,4990
+"cetirizina 10mg::coolips~-~solid-oral~-~30~-",2,2,4,3090,4990
+"cetirizina 10mg::zyrtec~-~solid-oral~-~30~-",2,2,3,27742,32559
+"cetirizina 10mg::cetirizina~-~-~-~-~-",2,2,1,2990,2990
+"cetirizina 10mg::rigotaxd~-~solid-oral~-~30~-",2,2,3,7990,15990
+"cetirizina 10mg::remitexd~-~solid-oral~-~20~-",2,2,2,15989,21490
+"cetirizina 10mg::levocetirizina~2.5mg/5ml~fluid-oral~-~-~100",2,2,1,3590,3590
+"diclofenaco 50mg::flector~-~fluid-oral~-~10~-",2,2,2,12013,19390
+"diclofenaco 50mg::adorlan~-~solid-oral~tramadol~10~-",2,2,2,6980,11175
+"diclofenaco 50mg::adorlan~-~solid-oral~-~10~-",2,2,2,6600,8490
+"diclofenaco 50mg::diclofenaco~75mg/3ml~injectable~-~5~-",2,2,3,2200,2940
+"diclofenaco 50mg::merpal~15mg/1ml~fluid-oral~-~-~20",2,2,2,2760,8990
+"diclofenaco 50mg::diclac~-~topical~-~-~-",2,2,2,6989,8359
+"diclofenaco 50mg::pro~-~solid-oral~-~10~-",2,2,2,7290,9248
+"diclofenaco 50mg::merpal~-~-~-~-~110",2,2,2,7990,8711
+"diclofenaco 50mg::dolodrin~-~solid-oral~tramadol~10~-",2,2,3,8990,9591
+"diclofenaco 50mg::prolertus~-~solid-oral~-~10~-",2,2,2,10999,12490
+"diclofenaco 50mg::dolodrops~-~fluid-oral~-~-~25",2,2,2,11410,13490
+"ibuprofeno 400mg::ibuprofeno~-~-~-~20~-",2,2,1,890,1290
+"ibuprofeno 400mg::pyriped~-~solid-oral~-~20~-",2,2,2,2990,4490
+"ibuprofeno 400mg::pironal~-~solid-oral~-~12~-",2,2,2,5990,15290
+"ibuprofeno 400mg::ibuprofeno~-~fluid-oral~-~-~-",2,2,2,2990,3980
+"ibuprofeno 400mg::ibupirac~200mg/5ml~fluid-oral~-~-~100",2,2,2,3990,4189
+"ibuprofeno 400mg::deucodol~200mg/5ml~fluid-oral~-~-~120",2,2,2,5173,5983
+"ibuprofeno 400mg::ipson~-~-~-~-~120",2,2,1,5576,5625
+"ibuprofeno::ibuprofeno~-~-~-~20~-",2,2,1,890,1290
+"ibuprofeno::pyriped~-~solid-oral~-~20~-",2,2,2,2990,4490
+"ibuprofeno::ibuprofeno~-~fluid-oral~-~-~-",2,2,2,2990,3980
+"ibuprofeno::ibupirac~200mg/5ml~fluid-oral~-~-~100",2,2,2,3990,4189
+"ibuprofeno::deucodol~200mg/5ml~fluid-oral~-~-~120",2,2,2,5173,5983
+"ibuprofeno::ipson~-~-~-~-~120",2,2,1,5576,5625
+"ibuprofeno::pironal~-~solid-oral~-~12~-",2,2,2,5990,15290
+"losartan 50mg::hyzaar~-~solid-oral~hidroclorotiazida~30~-",2,2,2,26640,29567
+"losartan 50mg::losapres~-~solid-oral~hidroclorotiazida~30~-",2,2,1,25959,29391
+"losartan 50mg::iltuxam~-~-~-~28~-",2,2,1,28299,28299
+"losartan::losapres~-~solid-oral~hidroclorotiazida~30~-",2,2,1,25959,29391
+"losartan::hyzaar~-~solid-oral~hidroclorotiazida~30~-",2,2,2,26640,29567
+"losartan::iltuxam~-~-~-~28~-",2,2,1,28299,28299
+"omeprazol 20mg::zomel~-~solid-oral~-~30~-",2,2,1,8990,13990
+"omeprazol 20mg::esomeprazol~-~-~-~-~-",2,2,1,3990,5990
+"omeprazol::zomel~-~solid-oral~-~30~-",2,2,1,8990,13990
+"omeprazol::esomeprazol~-~-~-~-~-",2,2,1,3990,5990
+"paracetamol 500mg::tapsin~-~solid-oral~-~24~-",2,2,2,900,990
+"paracetamol 500mg::geniol~-~solid-oral~-~20~-",2,2,2,990,5990
+"paracetamol 500mg::panadol~-~solid-oral~-~48~-",2,2,2,6229,7743
+"paracetamol 500mg::kitadol~-~solid-oral~-~16~-",2,2,2,2347,2799
+"paracetamol 500mg::xumadol~-~fluid-oral~-~20~-",2,2,2,5159,7990
+"paracetamol 500mg::brevex~-~solid-oral~-~20~-",2,2,2,10990,16390
+"paracetamol 500mg::supracalm~-~solid-oral~-~20~-",2,2,2,7995,12583
+"paracetamol 500mg::tapsin~-~-~-~-~-",2,2,1,791,791
+"paracetamol 500mg::panadol~-~solid-oral~-~20~-",2,2,2,2400,3163
+"paracetamol 500mg::tapsin~-~fluid-oral~-~20~-",2,2,2,4989,5910
+"paracetamol 500mg::panadol~160mg/5ml~fluid-oral~-~-~90",2,2,2,5940,9204
+"paracetamol 500mg::bufferin~-~solid-oral~-~18~-",2,2,2,8924,9299
+"paracetamol::tapsin~-~-~-~-~-",2,2,1,791,791
+"paracetamol::tapsin~-~solid-oral~-~24~-",2,2,2,900,990
+"paracetamol::geniol~-~solid-oral~-~20~-",2,2,2,990,5990
+"paracetamol::kitadol~-~solid-oral~-~16~-",2,2,2,2347,2799
+"paracetamol::panadol~-~solid-oral~-~20~-",2,2,2,2400,3163
+"paracetamol::tapsin~-~fluid-oral~-~20~-",2,2,2,4989,5910
+"paracetamol::xumadol~-~fluid-oral~-~20~-",2,2,2,5159,7990
+"paracetamol::panadol~160mg/5ml~fluid-oral~-~-~90",2,2,2,5940,9204
+"paracetamol::panadol~-~solid-oral~-~48~-",2,2,2,6229,7743
+"paracetamol::supracalm~-~solid-oral~-~20~-",2,2,2,7995,12583
+"paracetamol::bufferin~-~solid-oral~-~18~-",2,2,2,8924,9299
+"paracetamol::brevex~-~solid-oral~-~20~-",2,2,2,10990,16390
+"tapsin::tapsin~-~fluid-oral~miel~1~-",2,2,1,890,940
+"ambroxol 30mg/5ml::ambroxol~30mg~fluid-oral~-~-~100",1,1,3,990,990
+"ambroxol 30mg/5ml::pazbronq~30mg/5ml~fluid-oral~-~-~100",1,1,1,2990,2990
+"ambroxol 30mg/5ml::amrodil~30mg/5ml~-~-~-~100",1,1,1,2990,2990
+"ambroxol 30mg/5ml::muxol~600mg/100ml~fluid-oral~-~-~-",1,1,1,4590,4590
+"ambroxol 30mg/5ml::broncot~30mg/5ml~fluid-oral~-~-~120",1,1,1,6990,6990
+"ambroxol 30mg/5ml::broncot~-~-~-~-~-",1,1,1,8990,8990
+"ambroxol 30mg/5ml::ambroxol~30mg~-~-~-~100",1,1,1,1100,1100
+"ambroxol 30mg/5ml::ambroxol~-~-~-~-~100",1,1,1,1890,1890
+"ambroxol 30mg/5ml::mintamox~15mg/5ml~-~-~-~100",1,1,1,2690,2690
+"ambroxol 30mg/5ml::tocalm~-~fluid-oral~-~-~100",1,1,2,2980,2980
+"ambroxol 30mg/5ml::ambroxol~-~-~-~-~-",1,1,1,2990,2990
+"ambroxol 30mg/5ml::muxol~600mg~fluid-oral~-~-~100",1,1,1,4590,4590
+"ambroxol 30mg/5ml::muxol~300mg/100ml~fluid-oral~-~-~-",1,1,1,6190,6190
+"ambroxol 30mg/5ml::muxol~300mg~fluid-oral~-~-~100",1,1,1,6190,6190
+"ambroxol 30mg/5ml::broncot~7.5mg/1ml~fluid-oral~-~-~-",1,1,1,7990,7990
+"ambroxol 30mg/5ml::mucosolvandual~-~-~-~-~120",1,1,1,8290,8290
+"ambroxol 30mg::ambroxol~30mg~-~-~-~100",1,1,1,1100,1100
+"ambroxol 30mg::broncot~-~-~-~-~-",1,1,1,8990,8990
+"ambroxol 30mg::ambroxol~30mg~fluid-oral~-~-~100",1,1,3,990,990
+"ambroxol 30mg::ambroxol~-~-~-~-~100",1,1,1,1890,1890
+"ambroxol 30mg::mintamox~15mg/5ml~-~-~-~100",1,1,1,2690,2690
+"ambroxol 30mg::tocalm~-~fluid-oral~-~-~100",1,1,2,2980,2980
+"ambroxol 30mg::pazbronq~30mg/5ml~fluid-oral~-~-~100",1,1,1,2990,2990
+"ambroxol 30mg::ambroxol~-~-~-~-~-",1,1,1,2990,2990
+"ambroxol 30mg::amrodil~30mg/5ml~-~-~-~100",1,1,1,2990,2990
+"ambroxol 30mg::muxol~600mg/100ml~fluid-oral~-~-~-",1,1,1,4590,4590
+"ambroxol 30mg::muxol~600mg~fluid-oral~-~-~100",1,1,1,4590,4590
+"ambroxol 30mg::muxol~300mg/100ml~fluid-oral~-~-~-",1,1,1,6190,6190
+"ambroxol 30mg::muxol~300mg~fluid-oral~-~-~100",1,1,1,6190,6190
+"ambroxol 30mg::broncot~30mg/5ml~fluid-oral~-~-~120",1,1,1,6990,6990
+"ambroxol 30mg::broncot~7.5mg/1ml~fluid-oral~-~-~-",1,1,1,7990,7990
+"ambroxol 30mg::mucosolvandual~-~-~-~-~120",1,1,1,8290,8290
+"ambroxol 30mg/5ml jarabe 100ml::ambroxol~30mg~fluid-oral~-~-~100",1,1,3,990,990
+"ambroxol 30mg/5ml jarabe 100ml::pazbronq~30mg/5ml~fluid-oral~-~-~100",1,1,1,2990,2990
+"ambroxol 30mg/5ml jarabe 100ml::muxol~600mg/100ml~fluid-oral~-~-~-",1,1,1,4590,4590
+"ambroxol 30mg/5ml jarabe 100ml::broncot~30mg/5ml~fluid-oral~-~-~120",1,1,1,6990,6990
+"ambroxol 30mg/5ml jarabe 100ml::amrodil~30mg/5ml~-~-~-~100",1,1,1,2990,2990
+"ambroxol 30mg/5ml jarabe 100ml::broncot~-~-~-~-~-",1,1,1,8990,8990
+"ambroxol 30mg/5ml jarabe 100ml::tocalm~-~fluid-oral~-~-~100",1,1,2,2980,2980
+"ambroxol 30mg/5ml jarabe 100ml::muxol~600mg~fluid-oral~-~-~100",1,1,1,4590,4590
+"ambroxol 30mg/5ml jarabe 100ml::muxol~300mg/100ml~fluid-oral~-~-~-",1,1,1,6190,6190
+"ambroxol 30mg/5ml jarabe 100ml::muxol~300mg~fluid-oral~-~-~100",1,1,1,6190,6190
+"ambroxol 30mg/5ml jarabe 100ml::broncot~7.5mg/1ml~fluid-oral~-~-~-",1,1,1,7990,7990
+"ambroxol 30mg/5ml jarabe 100ml::ambroxol~30mg~-~-~-~100",1,1,1,1100,1100
+"ambroxol 30mg/5ml jarabe 100ml::ambroxol~-~-~-~-~100",1,1,1,1890,1890
+"ambroxol 30mg/5ml jarabe 100ml::mintamox~15mg/5ml~-~-~-~100",1,1,1,2690,2690
+"ambroxol 30mg/5ml jarabe 100ml::ambroxol~-~-~-~-~-",1,1,1,2990,2990
+"ambroxol 30mg/5ml jarabe 100ml::mucosolvandual~-~-~-~-~120",1,1,1,8290,8290
+"ambroxol::ambroxol~30mg~fluid-oral~-~-~100",1,1,3,990,990
+"ambroxol::ambroxol~30mg~-~-~-~100",1,1,1,1100,1100
+"ambroxol::ambroxol~-~-~-~-~100",1,1,1,1890,1890
+"ambroxol::mintamox~15mg/5ml~-~-~-~100",1,1,1,2690,2690
+"ambroxol::tocalm~-~fluid-oral~-~-~100",1,1,2,2980,2980
+"ambroxol::pazbronq~30mg/5ml~fluid-oral~-~-~100",1,1,1,2990,2990
+"ambroxol::ambroxol~-~-~-~-~-",1,1,1,2990,2990
+"ambroxol::amrodil~30mg/5ml~-~-~-~100",1,1,1,2990,2990
+"ambroxol::muxol~600mg/100ml~fluid-oral~-~-~-",1,1,1,4590,4590
+"ambroxol::muxol~600mg~fluid-oral~-~-~100",1,1,1,4590,4590
+"ambroxol::muxol~300mg/100ml~fluid-oral~-~-~-",1,1,1,6190,6190
+"ambroxol::muxol~300mg~fluid-oral~-~-~100",1,1,1,6190,6190
+"ambroxol::broncot~30mg/5ml~fluid-oral~-~-~120",1,1,1,6990,6990
+"ambroxol::broncot~7.5mg/1ml~fluid-oral~-~-~-",1,1,1,7990,7990
+"ambroxol::mucosolvandual~-~-~-~-~120",1,1,1,8290,8290
+"ambroxol::broncot~-~-~-~-~-",1,1,1,8990,8990
+"amoxicilina 500mg::amoxicilina~-~fluid-oral~acido~-~-",1,1,1,2690,2690
+"amoxicilina 500mg::medoclav~-~solid-oral~-~14~-",1,1,1,4990,4990
+"amoxicilina 500mg::amoxicilina~-~-~-~-~-",1,1,1,10490,10490
+"amoxicilina 500mg::ambilan~-~solid-oral~-~20~-",1,1,1,27509,27509
+"amoxicilina 500mg::clavinex~-~solid-oral~acido~14~-",1,1,1,31679,31679
+"amoxicilina 500mg::amoxicilina~500mg/5ml~fluid-oral~-~-~60",1,1,1,1800,1800
+"amoxicilina 500mg::amoxicilina~250mg/5ml~-~-~-~-",1,1,1,1990,1990
+"amoxicilina 500mg::amoxicilina~500mg/5ml~-~-~-~-",1,1,1,2990,2990
+"amoxicilina 500mg::amoxicilina~500mg/5ml~-~-~-~60",1,1,1,2990,2990
+"amoxicilina 500mg::amoxicilina~400mg~fluid-oral~-~-~70",1,1,1,5970,5970
+"amoxicilina 500mg::amoxicilina~-~solid-oral~-~14~-",1,1,1,6150,6150
+"amoxicilina 500mg::maximox~400mg~fluid-oral~-~-~70",1,1,1,10469,10469
+"amoxicilina 500mg::synulox~-~-~-~-~-",1,1,1,10790,10790
+"amoxicilina 500mg::amoval~1000mg/5ml~fluid-oral~-~-~50",1,1,2,14390,14390
+"amoxicilina 500mg::amoxicilina~-~solid-oral~-~500~-",1,1,1,16807,16807
+"amoxicilina 500mg::maximox~57mg/5ml~fluid-oral~-~-~70",1,1,1,18190,18190
+"amoxicilina 500mg::zolimax~-~solid-oral~-~14~-",1,1,1,19540,19540
+"amoxicilina 500mg::zolimax~-~solid-oral~-~20~-",1,1,1,19791,19791
+"amoxicilina 500mg::clavinex~-~fluid-oral~-~-~70",1,1,2,20990,20990
+"amoxicilina 500mg::ambilan~-~fluid-oral~-~-~70",1,1,1,21102,21102
+"amoxicilina 500mg::ambilan~-~solid-oral~clavulanico~14~-",1,1,1,22090,22090
+"amoxicilina 500mg::clavinex~800mg~-~-~-~100",1,1,1,22490,22490
+"amoxicilina 500mg::ambilan~-~fluid-oral~acido~-~70",1,1,1,23839,23839
+"amoxicilina 500mg::ambilan~57mg~fluid-oral~clavulanico~-~90",1,1,1,25990,25990
+"amoxicilina 500mg::amobiotic~-~solid-oral~-~20~-",1,1,1,27290,27290
+"amoxicilina 500mg::clavinex~400mg~-~acido~-~70",1,1,1,27690,27690
+"amoxicilina 500mg::ambilan~-~fluid-oral~acido~-~90",1,1,1,28399,28399
+"amoxicilina 500mg::ambilan~-~solid-oral~clavulanico~20~-",1,1,1,28890,28890
+"amoxicilina 500mg::clavinex~-~solid-oral~-~14~-",1,1,1,35790,35790
+"amoxicilina 500mg::zomel~-~-~triterapia~-~-",1,1,1,41242,41242
+"amoxicilina 500mg::clavinex~-~solid-oral~-~20~-",1,1,1,45790,45790
+"cetirizina 10mg::zotaban~-~solid-oral~-~28~-",1,1,1,39999,39999
+"cetirizina 10mg::findalerd~-~solid-oral~-~10~-",1,1,1,3290,3290
+"cetirizina 10mg::remitex~-~solid-oral~-~20~-",1,1,1,14290,14290
+"cetirizina 10mg::remitexd~-~solid-oral~pseudoefedrina~20~-",1,1,1,23495,23495
+"cetirizina 10mg::cetirizina~5mg/5ml~-~-~-~60",1,1,1,3990,3990
+"cetirizina 10mg::cetirizina~5mg/5ml~fluid-oral~-~-~-",1,1,1,3990,3990
+"cetirizina 10mg::alerpriv~5mg/1ml~-~-~-~20",1,1,1,4990,4990
+"cetirizina 10mg::findaler~10mg/1ml~-~-~-~15",1,1,1,6690,6690
+"cetirizina 10mg::findaler~5mg/5ml~-~-~-~100",1,1,1,6980,6980
+"cetirizina 10mg::alerpriv~-~-~-~-~100",1,1,1,6990,6990
+"cetirizina 10mg::rigotaxd~-~solid-oral~pseudoefedrina~10~-",1,1,1,9415,9415
+"cetirizina 10mg::rigotaxd~-~solid-oral~pseudoefedrina~30~-",1,1,1,17159,17159
+"cetirizina 10mg::degraler~-~solid-oral~-~40~-",1,1,1,17990,17990
+"cetirizina 10mg::levocetirizina~-~solid-oral~-~-~-",1,1,1,3990,3990
+"cetirizina 10mg::levorigotax~-~solid-oral~-~30~-",1,1,1,3510,3510
+"cetirizina 10mg::levorigotax~2.5mg/5ml~fluid-oral~-~-~100",1,1,1,4800,4800
+"cetirizina 10mg::alerpriv~-~fluid-oral~-~-~100",1,1,1,5690,5690
+"cetirizina 10mg::alerpriv~-~fluid-oral~-~-~20",1,1,1,5990,5990
+"cetirizina 10mg::levorigotax~5mg/1ml~fluid-oral~-~-~20",1,1,1,7800,7800
+"cetirizina 10mg::neoalertop~2.5mg/5ml~fluid-oral~-~-~120",1,1,1,9980,9980
+"cetirizina 10mg::neoalertop~5mg~fluid-oral~-~-~20",1,1,1,9990,9990
+"cetirizina 10mg::levorigotax~5mg/5ml~fluid-oral~-~-~120",1,1,1,10470,10470
+"cetirizina 10mg::neoalertop~2.5mg~fluid-oral~-~-~120",1,1,1,10900,10900
+"cetirizina 10mg::xuzal~-~-~-~30~-",1,1,1,10990,10990
+"cetirizina 10mg::zival~2.5mg~fluid-oral~-~-~120",1,1,1,12990,12990
+"diclofenaco 50mg::diclofenaco~-~-~-~10~-",1,1,1,390,390
+"diclofenaco 50mg::flector~-~fluid-oral~-~-~-",1,1,1,8990,8990
+"diclofenaco 50mg::diclofenaco~-~solid-oral~tramadol~2525~-",1,1,1,9490,9490
+"diclofenaco 50mg::doloneurobionta~-~solid-oral~-~10~-",1,1,1,10559,10559
+"diclofenaco 50mg::dicasen~-~solid-oral~tramadol~10~-",1,1,1,10647,10647
+"diclofenaco 50mg::dolo~-~-~-~10~-",1,1,1,13590,13590
+"diclofenaco 50mg::diclotaren~-~topical~-~-~-",1,1,1,1195,1195
+"diclofenaco 50mg::diclofenaco~-~-~-~8~-",1,1,1,1200,1200
+"diclofenaco 50mg::diclofenaco~50mg/1ml~injectable~-~-~-",1,1,1,1290,1290
+"diclofenaco 50mg::dicogel~-~-~-~-~-",1,1,1,1890,1890
+"diclofenaco 50mg::diflam~-~topical~-~-~-",1,1,1,2890,2890
+"diclofenaco 50mg::elitiran~15mg/1ml~fluid-oral~-~-~25",1,1,1,3290,3290
+"diclofenaco 50mg::dicogel~-~topical~-~-~-",1,1,1,3990,3990
+"diclofenaco 50mg::flexfull~-~topical~-~-~-",1,1,2,6980,6980
+"diclofenaco 50mg::flector~-~topical~-~-~-",1,1,1,8490,8490
+"diclofenaco 50mg::merpal~-~topical~-~-~-",1,1,1,9490,9490
+"diclofenaco 50mg::flectane~-~solid-oral~-~30~-",1,1,1,9599,9599
+"diclofenaco 50mg::lertus~15mg/1ml~-~-~-~25",1,1,1,9980,9980
+"diclofenaco 50mg::merpal~15mg/5ml~fluid-oral~-~-~20",1,1,1,10471,10471
+"diclofenaco 50mg::flector~-~patch~-~2~-",1,1,1,11490,11490
+"diclofenaco 50mg::artren~-~fluid-oral~-~-~20",1,1,1,12990,12990
+"diclofenaco 50mg::pro~-~solid-oral~-~20~-",1,1,1,13990,13990
+"diclofenaco 50mg::dolo~-~fluid-oral~-~-~25",1,1,1,14255,14255
+"diclofenaco 50mg::coxidol~-~solid-oral~-~14~-",1,1,1,14271,14271
+"diclofenaco 50mg::lertus~75mg/3ml~injectable~-~5~-",1,1,1,17899,17899
+"diclofenaco 50mg::lertussr~-~solid-oral~-~10~-",1,1,1,19340,19340
+"diclofenaco 50mg::oftic~1mg/1ml~ophthalmic~-~-~10",1,1,1,20392,20392
+"diclofenaco 50mg::lertus~-~injectable~-~5~-",1,1,1,21735,21735
+"diclofenaco 50mg::prolertus~-~solid-oral~-~20~-",1,1,1,22439,22439
+"diclofenaco 50mg::oftic~-~ophthalmic~-~-~10",1,1,2,23990,23990
+"diclofenaco 50mg::oftic~-~fluid-oral~-~-~25",1,1,1,24190,24190
+"diclofenaco 50mg::lertus~75mg~injectable~-~5~3",1,1,1,24390,24390
+"diclofenaco 50mg::ofteno~-~ophthalmic~-~-~5",1,1,2,24900,24900
+"ibuprofeno 400mg::pyriped~-~solid-oral~-~10~-",1,1,1,2290,2290
+"ibuprofeno 400mg::kitadol~-~solid-oral~-~10~-",1,1,1,2490,2490
+"ibuprofeno 400mg::tapsin~-~solid-oral~ibuprofeno~12~-",1,1,1,2612,2612
+"ibuprofeno 400mg::finagrip~-~solid-oral~-~10~-",1,1,1,2990,2990
+"ibuprofeno 400mg::kitadol~-~solid-oral~paracetamol~10~-",1,1,1,3674,3674
+"ibuprofeno 400mg::dolad~200mg/5ml~fluid-oral~-~-~120",1,1,1,1990,1990
+"ibuprofeno 400mg::ibufren~200mg/5ml~fluid-oral~-~-~100",1,1,1,2290,2290
+"ibuprofeno 400mg::ibuprofeno~200mg/5ml~fluid-oral~-~-~120",1,1,1,2430,2430
+"ibuprofeno 400mg::bediatil~200mg/5ml~fluid-oral~-~-~100",1,1,1,2490,2490
+"ibuprofeno 400mg::ibualiv~100mg/5ml~fluid-oral~-~-~100",1,1,1,2550,2550
+"ibuprofeno 400mg::pyriped~100mg/5ml~fluid-oral~-~-~100",1,1,2,2990,2990
+"ibuprofeno 400mg::actron~-~-~-~-~-",1,1,1,2990,2990
+"ibuprofeno 400mg::ibuprofeno~-~solid-oral~-~10~-",1,1,1,3167,3167
+"ibuprofeno 400mg::ibufren~200mg/5ml~-~-~-~100",1,1,1,3596,3596
+"ibuprofeno 400mg::pyriped~200mg/5ml~fluid-oral~-~-~100",1,1,1,3990,3990
+"ibuprofeno 400mg::ibuprofeno~200mg/5ml~-~-~-~120",1,1,1,4690,4690
+"ibuprofeno 400mg::doraliv~-~-~-~10~-",1,1,1,4990,4990
+"ibuprofeno 400mg::ibuprofeno~200mg~fluid-oral~-~-~120",1,1,1,5367,5367
+"ibuprofeno 400mg::ibualiv~200mg/5ml~fluid-oral~-~-~100",1,1,1,5524,5524
+"ibuprofeno 400mg::ipson~100mg/5ml~fluid-oral~-~-~120",1,1,1,6582,6582
+"ibuprofeno 400mg::algiasol~200mg/5ml~fluid-oral~-~-~100",1,1,1,6746,6746
+"ibuprofeno 400mg::ipson~200mg/5ml~fluid-oral~-~-~120",1,1,2,6990,6990
+"ibuprofeno 400mg::ipsond~15mg/5ml~-~-~-~120",1,1,1,7430,7430
+"ibuprofeno 400mg::pironal~-~fluid-oral~-~-~100",1,1,1,10990,10990
+"ibuprofeno 400mg::niofen~-~solid-oral~-~10~-",1,1,1,11490,11490
+"ibuprofeno 400mg::ipson~-~fluid-oral~-~-~120",1,1,1,11990,11990
+"ibuprofeno 400mg::triofeno~-~solid-oral~-~20~-",1,1,1,13090,13090
+"ibuprofeno 400mg::pironal~200mg~fluid-oral~-~-~100",1,1,1,17390,17390
+"ibuprofeno 400mg::pironal~200mg/5ml~fluid-oral~-~-~100",1,1,1,19290,19290
+"ibuprofeno::dolad~200mg/5ml~fluid-oral~-~-~120",1,1,1,1990,1990
+"ibuprofeno::pyriped~-~solid-oral~-~10~-",1,1,1,2290,2290
+"ibuprofeno::ibufren~200mg/5ml~fluid-oral~-~-~100",1,1,1,2290,2290
+"ibuprofeno::ibuprofeno~200mg/5ml~fluid-oral~-~-~120",1,1,1,2430,2430
+"ibuprofeno::kitadol~-~solid-oral~-~10~-",1,1,1,2490,2490
+"ibuprofeno::bediatil~200mg/5ml~fluid-oral~-~-~100",1,1,1,2490,2490
+"ibuprofeno::ibualiv~100mg/5ml~fluid-oral~-~-~100",1,1,1,2550,2550
+"ibuprofeno::tapsin~-~solid-oral~ibuprofeno~12~-",1,1,1,2612,2612
+"ibuprofeno::finagrip~-~solid-oral~-~10~-",1,1,1,2990,2990
+"ibuprofeno::pyriped~100mg/5ml~fluid-oral~-~-~100",1,1,2,2990,2990
+"ibuprofeno::actron~-~-~-~-~-",1,1,1,2990,2990
+"ibuprofeno::ibuprofeno~-~solid-oral~-~10~-",1,1,1,3167,3167
+"ibuprofeno::ibufren~200mg/5ml~-~-~-~100",1,1,1,3596,3596
+"ibuprofeno::kitadol~-~solid-oral~paracetamol~10~-",1,1,1,3674,3674
+"ibuprofeno::pyriped~200mg/5ml~fluid-oral~-~-~100",1,1,1,3990,3990
+"ibuprofeno::ibuprofeno~200mg/5ml~-~-~-~120",1,1,1,4690,4690
+"ibuprofeno::doraliv~-~-~-~10~-",1,1,1,4990,4990
+"ibuprofeno::ibuprofeno~200mg~fluid-oral~-~-~120",1,1,1,5367,5367
+"ibuprofeno::ibualiv~200mg/5ml~fluid-oral~-~-~100",1,1,1,5524,5524
+"ibuprofeno::ipson~100mg/5ml~fluid-oral~-~-~120",1,1,1,6582,6582
+"ibuprofeno::algiasol~200mg/5ml~fluid-oral~-~-~100",1,1,1,6746,6746
+"ibuprofeno::ipson~200mg/5ml~fluid-oral~-~-~120",1,1,2,6990,6990
+"ibuprofeno::ipsond~15mg/5ml~-~-~-~120",1,1,1,7430,7430
+"ibuprofeno::pironal~-~fluid-oral~-~-~100",1,1,1,10990,10990
+"ibuprofeno::niofen~-~solid-oral~-~10~-",1,1,1,11490,11490
+"ibuprofeno::ipson~-~fluid-oral~-~-~120",1,1,1,11990,11990
+"ibuprofeno::triofeno~-~solid-oral~-~20~-",1,1,1,13090,13090
+"ibuprofeno::pironal~200mg~fluid-oral~-~-~100",1,1,1,17390,17390
+"ibuprofeno::pironal~200mg/5ml~fluid-oral~-~-~100",1,1,1,19290,19290
+"losartan 50mg::lopren~-~solid-oral~-~30~-",1,1,1,7890,7890
+"losartan 50mg::lorsartan~-~solid-oral~hidroclorotiazida~30~-",1,1,1,6247,6247
+"losartan 50mg::simperten~-~solid-oral~-~30~-",1,1,1,12400,12400
+"losartan 50mg::simpertend~-~solid-oral~losartan~30~-",1,1,1,26575,26575
+"losartan 50mg::hyzaar~-~solid-oral~losartan~30~-",1,1,1,30359,30359
+"losartan 50mg::hyzaar~-~-~-~-~-",1,1,1,17990,17990
+"losartan 50mg::tellmi~-~solid-oral~-~30~-",1,1,1,24494,24494
+"losartan 50mg::simpertend~-~-~-~-~-",1,1,1,26990,26990
+"losartan 50mg::cordiax~-~solid-oral~-~40~-",1,1,1,40099,40099
+"losartan::lorsartan~-~solid-oral~hidroclorotiazida~30~-",1,1,1,6247,6247
+"losartan::lopren~-~solid-oral~-~30~-",1,1,1,7890,7890
+"losartan::simperten~-~solid-oral~-~30~-",1,1,1,12400,12400
+"losartan::hyzaar~-~-~-~-~-",1,1,1,17990,17990
+"losartan::tellmi~-~solid-oral~-~30~-",1,1,1,24494,24494
+"losartan::simpertend~-~solid-oral~losartan~30~-",1,1,1,26575,26575
+"losartan::simpertend~-~-~-~-~-",1,1,1,26990,26990
+"losartan::hyzaar~-~solid-oral~losartan~30~-",1,1,1,30359,30359
+"losartan::cordiax~-~solid-oral~-~40~-",1,1,1,40099,40099
+"omeprazol 20mg::omeprazol~-~-~-~30~-",1,1,1,1690,1690
+"omeprazol 20mg::omeprazol~40mg/10ml~injectable~-~1~-",1,1,1,1000,1000
+"omeprazol 20mg::omeprazol~-~injectable~-~10~-",1,1,1,12990,12990
+"omeprazol 20mg::obexol~-~solid-oral~-~30~-",1,1,1,17142,17142
+"omeprazol 20mg::esomeprazol~-~-~-~30~-",1,1,1,5990,5990
+"omeprazol 20mg::flectane~-~solid-oral~-~30~-",1,1,1,9600,9600
+"omeprazol::omeprazol~40mg/10ml~injectable~-~1~-",1,1,1,1000,1000
+"omeprazol::omeprazol~-~-~-~30~-",1,1,1,1690,1690
+"omeprazol::omeprazol~-~injectable~-~10~-",1,1,1,12990,12990
+"omeprazol::obexol~-~solid-oral~-~30~-",1,1,1,17142,17142
+"omeprazol::esomeprazol~-~-~-~30~-",1,1,1,5990,5990
+"omeprazol::flectane~-~solid-oral~-~30~-",1,1,1,9600,9600
+"paracetamol 500mg::tapsin~-~fluid-oral~-~1~-",1,1,1,810,810
+"paracetamol 500mg::paracetamol~-~solid-oral~-~80~-",1,1,1,2290,2290
+"paracetamol 500mg::tapsn~-~solid-oral~-~24~-",1,1,1,2815,2815
+"paracetamol 500mg::bufferin~-~solid-oral~-~12~-",1,1,1,3074,3074
+"paracetamol 500mg::paracetamol~-~fluid-oral~-~-~-",1,1,1,1390,1390
+"paracetamol 500mg::paracetamol~-~-~-~-~-",1,1,1,1490,1490
+"paracetamol 500mg::anacin~-~solid-oral~-~8~-",1,1,1,1990,1990
+"paracetamol 500mg::tapsin~-~solid-oral~ibuprofeno~12~-",1,1,1,2612,2612
+"paracetamol 500mg::tapsi~-~solid-oral~-~10~-",1,1,1,2651,2651
+"paracetamol 500mg::cortigrip~-~-~-~-~-",1,1,1,3490,3490
+"paracetamol 500mg::kitadol~-~solid-oral~paracetamol~10~-",1,1,1,3674,3674
+"paracetamol 500mg::tapsin~-~solid-oral~-~20~-",1,1,1,3783,3783
+"paracetamol 500mg::paracetamol~-~-~tramadol~-~-",1,1,1,4990,4990
+"paracetamol 500mg::cronotan~-~solid-oral~-~20~-",1,1,1,9990,9990
+"paracetamol 500mg::cronus~-~solid-oral~-~30~-",1,1,1,16990,16990
+"paracetamol 500mg::paracetamol~-~solid-oral~-~100~-",1,1,1,590,590
+"paracetamol 500mg::paracetamol~100mg/1ml~-~-~-~15",1,1,1,990,990
+"paracetamol 500mg::paracetamol~-~-~-~16~-",1,1,1,1200,1200
+"paracetamol 500mg::paracetamol~100mg/1ml~fluid-oral~-~-~-",1,1,1,1490,1490
+"paracetamol 500mg::dolsom~100mg/1ml~fluid-oral~-~-~30",1,1,1,1800,1800
+"paracetamol 500mg::dropol~100mg/1ml~fluid-oral~-~-~15",1,1,1,1990,1990
+"paracetamol 500mg::kitadol~100mg~fluid-oral~-~-~15",1,1,1,2400,2400
+"paracetamol 500mg::paracetamol~100mg~fluid-oral~-~-~15",1,1,2,2690,2690
+"paracetamol 500mg::tapsin~-~solid-oral~-~12~-",1,1,1,2700,2700
+"paracetamol 500mg::algiafin~120mg/5ml~fluid-oral~-~-~60",1,1,1,2760,2760
+"paracetamol 500mg::paracetamol~1000mg/100ml~injectable~-~1~-",1,1,1,2990,2990
+"paracetamol 500mg::panadol~100mg/1ml~fluid-oral~-~-~15",1,1,1,3380,3380
+"paracetamol 500mg::tapsin~100mg/1ml~fluid-oral~-~-~15",1,1,1,3480,3480
+"paracetamol 500mg::kitadol~100mg/1ml~fluid-oral~-~-~15",1,1,1,3487,3487
+"paracetamol 500mg::algiafin~-~fluid-oral~-~-~60",1,1,1,3490,3490
+"paracetamol 500mg::gesidol~-~fluid-oral~-~-~15",1,1,1,3519,3519
+"paracetamol 500mg::bromhexina~4mg/5ml~fluid-oral~-~-~100",1,1,1,3990,3990
+"paracetamol 500mg::alividol~-~-~-~-~-",1,1,1,3990,3990
+"paracetamol 500mg::kitadol~-~fluid-oral~-~-~15",1,1,1,4017,4017
+"paracetamol 500mg::panadol~-~fluid-oral~-~-~15",1,1,1,4135,4135
+"paracetamol 500mg::tapsin~-~fluid-oral~-~-~15",1,1,1,4223,4223
+"paracetamol 500mg::kitadol~120mg/5ml~fluid-oral~-~-~100",1,1,1,4470,4470
+"paracetamol 500mg::paracetamol~-~solid-oral~tramadol~30~-",1,1,1,4850,4850
+"paracetamol 500mg::tramadol~-~solid-oral~paracetamol~30~-",1,1,1,4850,4850
+"paracetamol 500mg::desdol~-~solid-oral~-~20~-",1,1,1,4950,4950
+"paracetamol 500mg::winasorb~150mg/5ml~fluid-oral~-~-~60",1,1,3,4990,4990
+"paracetamol 500mg::ambroxol~15mg/5ml~fluid-oral~-~-~100",1,1,1,5490,5490
+"paracetamol 500mg::tral~-~solid-oral~-~30~-",1,1,1,5850,5850
+"paracetamol 500mg::tramadol~100mg/1ml~fluid-oral~-~-~20",1,1,1,5990,5990
+"paracetamol 500mg::paracetamol~-~solid-oral~-~10~-",1,1,1,6999,6999
+"paracetamol 500mg::sales~-~fluid-oral~-~4~-",1,1,1,7190,7190
+"paracetamol 500mg::tapsin~120mg/5ml~fluid-oral~-~-~100",1,1,1,7890,7890
+"paracetamol 500mg::kitadol~-~fluid-oral~-~-~100",1,1,1,7950,7950
+"paracetamol 500mg::panadol~-~fluid-oral~-~-~90",1,1,1,8449,8449
+"paracetamol 500mg::sales~-~fluid-oral~-~8~-",1,1,1,9290,9290
+"paracetamol 500mg::salbutamol~-~inhaled~-~-~20",1,1,1,13490,13490
+"paracetamol 500mg::ipratropio~-~inhaled~-~-~20",1,1,1,16990,16990
+"paracetamol 500mg::bonavid~-~fluid-oral~-~-~2",1,1,1,18390,18390
+"paracetamol 500mg::betacort~0.5mg/1ml~fluid-oral~-~-~30",1,1,1,21590,21590
+"paracetamol 500mg::lirex~-~solid-oral~-~30~-",1,1,1,22989,22989
+"paracetamol 500mg::uroplus~-~fluid-oral~-~1~-",1,1,1,35440,35440
+"paracetamol 500mg::combodart~-~solid-oral~-~30~-",1,1,1,38690,38690
+"paracetamol 500mg::trelegy~-~inhaled~-~-~-",1,1,1,93463,93463
+"paracetamol::paracetamol~-~solid-oral~-~100~-",1,1,1,590,590
+"paracetamol::tapsin~-~fluid-oral~-~1~-",1,1,1,810,810
+"paracetamol::paracetamol~100mg/1ml~-~-~-~15",1,1,1,990,990
+"paracetamol::paracetamol~-~-~-~16~-",1,1,1,1200,1200
+"paracetamol::paracetamol~-~fluid-oral~-~-~-",1,1,1,1390,1390
+"paracetamol::paracetamol~-~-~-~-~-",1,1,1,1490,1490
+"paracetamol::paracetamol~100mg/1ml~fluid-oral~-~-~-",1,1,1,1490,1490
+"paracetamol::dolsom~100mg/1ml~fluid-oral~-~-~30",1,1,1,1800,1800
+"paracetamol::anacin~-~solid-oral~-~8~-",1,1,1,1990,1990
+"paracetamol::dropol~100mg/1ml~fluid-oral~-~-~15",1,1,1,1990,1990
+"paracetamol::paracetamol~-~solid-oral~-~80~-",1,1,1,2290,2290
+"paracetamol::kitadol~100mg~fluid-oral~-~-~15",1,1,1,2400,2400
+"paracetamol::tapsin~-~solid-oral~ibuprofeno~12~-",1,1,1,2612,2612
+"paracetamol::tapsi~-~solid-oral~-~10~-",1,1,1,2651,2651
+"paracetamol::paracetamol~100mg~fluid-oral~-~-~15",1,1,2,2690,2690
+"paracetamol::tapsin~-~solid-oral~-~12~-",1,1,1,2700,2700
+"paracetamol::algiafin~120mg/5ml~fluid-oral~-~-~60",1,1,1,2760,2760
+"paracetamol::tapsn~-~solid-oral~-~24~-",1,1,1,2815,2815
+"paracetamol::paracetamol~1000mg/100ml~injectable~-~1~-",1,1,1,2990,2990
+"paracetamol::bufferin~-~solid-oral~-~12~-",1,1,1,3074,3074
+"paracetamol::panadol~100mg/1ml~fluid-oral~-~-~15",1,1,1,3380,3380
+"paracetamol::tapsin~100mg/1ml~fluid-oral~-~-~15",1,1,1,3480,3480
+"paracetamol::kitadol~100mg/1ml~fluid-oral~-~-~15",1,1,1,3487,3487
+"paracetamol::cortigrip~-~-~-~-~-",1,1,1,3490,3490
+"paracetamol::algiafin~-~fluid-oral~-~-~60",1,1,1,3490,3490
+"paracetamol::gesidol~-~fluid-oral~-~-~15",1,1,1,3519,3519
+"paracetamol::kitadol~-~solid-oral~paracetamol~10~-",1,1,1,3674,3674
+"paracetamol::tapsin~-~solid-oral~-~20~-",1,1,1,3783,3783
+"paracetamol::bromhexina~4mg/5ml~fluid-oral~-~-~100",1,1,1,3990,3990
+"paracetamol::alividol~-~-~-~-~-",1,1,1,3990,3990
+"paracetamol::kitadol~-~fluid-oral~-~-~15",1,1,1,4017,4017
+"paracetamol::panadol~-~fluid-oral~-~-~15",1,1,1,4135,4135
+"paracetamol::tapsin~-~fluid-oral~-~-~15",1,1,1,4223,4223
+"paracetamol::kitadol~120mg/5ml~fluid-oral~-~-~100",1,1,1,4470,4470
+"paracetamol::paracetamol~-~solid-oral~tramadol~30~-",1,1,1,4850,4850
+"paracetamol::tramadol~-~solid-oral~paracetamol~30~-",1,1,1,4850,4850
+"paracetamol::desdol~-~solid-oral~-~20~-",1,1,1,4950,4950
+"paracetamol::paracetamol~-~-~tramadol~-~-",1,1,1,4990,4990
+"paracetamol::winasorb~150mg/5ml~fluid-oral~-~-~60",1,1,3,4990,4990
+"paracetamol::ambroxol~15mg/5ml~fluid-oral~-~-~100",1,1,1,5490,5490
+"paracetamol::tral~-~solid-oral~-~30~-",1,1,1,5850,5850
+"paracetamol::tramadol~100mg/1ml~fluid-oral~-~-~20",1,1,1,5990,5990
+"paracetamol::paracetamol~-~solid-oral~-~10~-",1,1,1,6999,6999
+"paracetamol::sales~-~fluid-oral~-~4~-",1,1,1,7190,7190
+"paracetamol::tapsin~120mg/5ml~fluid-oral~-~-~100",1,1,1,7890,7890
+"paracetamol::kitadol~-~fluid-oral~-~-~100",1,1,1,7950,7950
+"paracetamol::panadol~-~fluid-oral~-~-~90",1,1,1,8449,8449
+"paracetamol::sales~-~fluid-oral~-~8~-",1,1,1,9290,9290
+"paracetamol::cronotan~-~solid-oral~-~20~-",1,1,1,9990,9990
+"paracetamol::salbutamol~-~inhaled~-~-~20",1,1,1,13490,13490
+"paracetamol::cronus~-~solid-oral~-~30~-",1,1,1,16990,16990
+"paracetamol::ipratropio~-~inhaled~-~-~20",1,1,1,16990,16990
+"paracetamol::bonavid~-~fluid-oral~-~-~2",1,1,1,18390,18390
+"paracetamol::betacort~0.5mg/1ml~fluid-oral~-~-~30",1,1,1,21590,21590
+"paracetamol::lirex~-~solid-oral~-~30~-",1,1,1,22989,22989
+"paracetamol::uroplus~-~fluid-oral~-~1~-",1,1,1,35440,35440
+"paracetamol::combodart~-~solid-oral~-~30~-",1,1,1,38690,38690
+"paracetamol::trelegy~-~inhaled~-~-~-",1,1,1,93463,93463
+"tapsin::tapsin~-~solid-oral~-~600~-",1,1,1,690,690
+"tapsin::paracetamol~-~solid-oral~-~16~-",1,1,1,690,690
+"tapsin::paracetamol~-~suppository~-~6~-",1,1,1,1190,1190
+"tapsin::paracetamol~-~fluid-oral~-~-~-",1,1,1,1390,1390
+"tapsin::paracetamol~100mg/1ml~fluid-oral~-~-~-",1,1,1,1490,1490
+"tapsin::paracetamol~-~-~-~-~-",1,1,1,1490,1490
+"tapsin::anacin~-~solid-oral~-~8~-",1,1,1,1990,1990
+"tapsin::tapsin~-~solid-oral~cafeina~12~-",1,1,1,2375,2375
+"tapsin::tapsin~-~solid-oral~ibuprofeno~12~-",1,1,1,2612,2612
+"tapsin::tapsi~-~solid-oral~-~10~-",1,1,1,2651,2651
+"tapsin::tapsn~-~solid-oral~-~24~-",1,1,1,2815,2815
+"tapsin::algiafin~-~fluid-oral~-~-~60",1,1,1,3490,3490
+"tapsin::cortigrip~-~-~-~-~-",1,1,1,3490,3490
+"tapsin::alividol~-~-~-~-~-",1,1,1,3990,3990
+"tapsin::tapsin~-~fluid-oral~-~-~15",1,1,1,4223,4223
+"tapsin::paracetamol~-~-~tramadol~-~-",1,1,1,4990,4990
+"tapsin::tapsi~-~solid-oral~-~18~-",1,1,1,5279,5279
+"tapsin::tapsin~-~solid-oral~ibuprofeno~30~-",1,1,1,6399,6399
+"tapsin::brevex~-~solid-oral~-~20~-",1,1,1,10990,10990
+"tapsin::cronus~-~solid-oral~-~30~-",1,1,1,16990,16990
