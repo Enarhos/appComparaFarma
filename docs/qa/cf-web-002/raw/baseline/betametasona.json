@@ -1,0 +1,4438 @@
+{
+ "query": "betametasona",
+ "apiUrl": "https://comparafarma-api.vercel.app",
+ "fetchedAt": "2026-08-31T23:59:35.148Z",
+ "results": [
+  {
+   "matchKey": "betametasona|4mg",
+   "canonicalName": "Betametasona 4 mg/ml solucion inyectable x 1 ampolla. (Biosano)",
+   "laboratory": "Biosano",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Betametasona 4 mg/ml solucion inyectable x 1 ampolla. (Biosano)",
+     "channels": {
+      "store": 250,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 250
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=betametasona%7C4mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fbetametasona-4-mg-ml-solucion-inyectable-x-1-ampolla-biosano&cfmId=CFM-014132",
+     "imageUrl": "https://farmacia.araucomed.com/12980-home_default/betametasona-4-mg-ml-solucion-inyectable-x-1-ampolla-biosano.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 250,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/12980-home_default/betametasona-4-mg-ml-solucion-inyectable-x-1-ampolla-biosano.jpg",
+   "presentationKey": "betametasona|4mg|bio:unknown|brand:biosano|form:injectable",
+   "cfmId": "CFM-014132",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betamec",
+   "canonicalName": "Betamec Betametasona 0,05% Crema 15 Gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Betamec Betametasona 0,05% Crema 15 Gr",
+     "channels": {
+      "store": 640,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 640
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=betamec&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fbetamec-betametasona-005-crema-15-gr%2F&cfmId=CFM-014357",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-13.10.08.jpeg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 640,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-13.10.08.jpeg",
+   "presentationKey": "betamec|bio:unknown|brand:unknown|var:betametasona|form:topical",
+   "cfmId": "CFM-014357",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15000mg",
+   "canonicalName": "Betametasona 0,05 % Ung&uuml;ento Tópico Pomo 15 g CHILE",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Betametasona 0,05 % Ung&uuml;ento Tópico Pomo 15 g CHILE",
+     "channels": {
+      "store": 659,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 659
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=betametasona%7C15000mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbetametasona-0-05-unguento-topico-pomo-15-g-chile-2848.html&cfmId=CFM-007370",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbf7745b7/images/products/2848/2848.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 659,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbf7745b7/images/products/2848/2848.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "betametasona|15000mg|bio:unknown|brand:unknown|var:uuml|form:topical",
+   "cfmId": "CFM-007370",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15000mg",
+   "canonicalName": "Betametasona 0,05 % crema tópica 15 g",
+   "laboratory": "OPKO",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Betametasona 0,05 % crema tópica 15 g",
+     "channels": {
+      "store": 880,
+      "online": 660,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 660
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=betametasona%7C15000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fzerolerg-betametasona-0-05-crema-15-gr%2Fp&cfmId=CFM-007370",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159790/CH0016-1---OPKO.jpg?v=638947535579500000",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 660,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159790/CH0016-1---OPKO.jpg?v=638947535579500000",
+   "presentationKey": "betametasona|15000mg|bio:false|brand:opko|form:topical",
+   "cfmId": "CFM-007370",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotrimazol|15000mg|15",
+   "canonicalName": "Clotrimazol + Betametasona Crema Dérmica x 15 g (OPKO)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Clotrimazol + Betametasona Crema Dérmica x 15 g (OPKO)",
+     "channels": {
+      "store": 680,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 680
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C15000mg%7C15&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-betametasona-crema-dermica-x-15-g%2F&cfmId=CFM-001097",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/7804620834570.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Clotrimazol + Betametasona x 15 g Crema Tópica HOSPIFARMA CHILE LTD",
+     "channels": {
+      "store": 689,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 689
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clotrimazol%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclotrimazol-betametasona-x-15-g-crema-topica-hospifarma-chile-ltd-84022.html&cfmId=CFM-001097",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw1db3fdee/images/products/84022/84022.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 680,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/7804620834570.jpg",
+   "presentationKey": "clotrimazol|15000mg|15|bio:unknown|brand:unknown|combo:betametasona|form:topical",
+   "cfmId": "CFM-001097",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotrimazol|15000mg",
+   "canonicalName": "Clotrimazol + Betametasona crema 15g",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Clotrimazol + Betametasona crema 15g",
+     "channels": {
+      "store": 680,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 680
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclotrimazol-betametasona-crema-15g%2F&cfmId=CFM-003643",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/03/clotrimazol-crema-15g.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 680,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/03/clotrimazol-crema-15g.jpg",
+   "presentationKey": "clotrimazol|15000mg|bio:unknown|brand:unknown|combo:betametasona|form:topical",
+   "cfmId": "CFM-003643",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotrimazol|15000mg",
+   "canonicalName": "Clotrimazol  1 g betametasona 0,05 g crema tópica 15 g",
+   "laboratory": "OPKO",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Clotrimazol  1 g betametasona 0,05 g crema tópica 15 g",
+     "channels": {
+      "store": 920,
+      "online": 690,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fbetametasona-clotrimazol-0-05-1-crema-15-gr%2Fp&cfmId=CFM-003643",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155914/CH0013-1.jpg?v=637964771637470000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 690,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155914/CH0013-1.jpg?v=637964771637470000",
+   "presentationKey": "clotrimazol|15000mg|bio:false|brand:opko|form:topical",
+   "cfmId": "CFM-003643",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15",
+   "canonicalName": "Betametasona Crema 0.05% x 15 gramos. (CuraeSpring)",
+   "laboratory": "CuraeSpring",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Betametasona Crema 0.05% x 15 gramos. (CuraeSpring)",
+     "channels": {
+      "store": 690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=betametasona%7C15&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fbetametasona-crema-005-x-15-gramos-curaespring&cfmId=CFM-012732",
+     "imageUrl": "https://farmacia.araucomed.com/11612-home_default/betametasona-crema-005-x-15-gramos-curaespring.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 690,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/11612-home_default/betametasona-crema-005-x-15-gramos-curaespring.jpg",
+   "presentationKey": "betametasona|15|bio:unknown|brand:curaespring|form:topical",
+   "cfmId": "CFM-012732",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15000mg|15",
+   "canonicalName": "Betametasona Crema 0.05 % x 15 g",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Betametasona Crema 0.05 % x 15 g",
+     "channels": {
+      "store": 890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 890
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=betametasona%7C15000mg%7C15&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fbetametasona-crema-0-05-x-15-g%2F&cfmId=CFM-012728",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/betametasona-15g.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 890,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/betametasona-15g.jpg",
+   "presentationKey": "betametasona|15000mg|15|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-012728",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15000mg|15",
+   "canonicalName": "Betametasona Dipropionato Crema Tópica 0,05% x 15 g (Opkro)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Betametasona Dipropionato Crema Tópica 0,05% x 15 g (Opkro)",
+     "channels": {
+      "store": 890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=betametasona%7C15000mg%7C15&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fbetametasona-dipropionato-crema-topica-005-x-15-gr-opkro%2F&cfmId=CFM-012728",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/betameetasona-15ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 890,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/betameetasona-15ml.jpg",
+   "presentationKey": "betametasona|15000mg|15|bio:unknown|brand:unknown|var:dipropionato|form:topical",
+   "cfmId": "CFM-012728",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona",
+   "canonicalName": "Betametasona Crema Tópica...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Betametasona Crema Tópica...",
+     "channels": {
+      "store": 990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=betametasona&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26097-betametasona-crema-topica-005-x-15gr-2.html&cfmId=CFM-006064",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    },
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Betametasona 0,05% Crema Tópica 15 gr",
+     "channels": {
+      "store": 1490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=betametasona&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbetametasona-0-05-crema-topica-15-gr%2F199023.html&cfmId=CFM-006064",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8f5ee502/images/large/199023-1.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8f5ee502/images/large/199023-1.jpg",
+   "presentationKey": "betametasona|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-006064",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15000mg|15",
+   "canonicalName": "Betametasona Dipropionato Crema 0,05 % x 15 g",
+   "laboratory": "OPKO",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Betametasona Dipropionato Crema 0,05 % x 15 g",
+     "channels": {
+      "store": 990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=betametasona%7C15000mg%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fbetametasona-dipropionato-crema-0-05-x-15-g%3F_pos%3D8%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-012728",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/betametasona-dipropionato-crema-005-x-15-g-opko-946261.jpg?v=1692989470",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/betametasona-dipropionato-crema-005-x-15-g-opko-946261.jpg?v=1692989470",
+   "presentationKey": "betametasona|15000mg|15|bio:unknown|brand:opko|var:dipropionato|form:topical",
+   "cfmId": "CFM-012728",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15000mg|15",
+   "canonicalName": "Betametasona Crema 0.05% x 15 g",
+   "laboratory": "ASCEND",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Betametasona Crema 0.05% x 15 g",
+     "channels": {
+      "store": 1195,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1195
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=betametasona%7C15000mg%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fbetametasona-crema-0-05-x-15-g-1%3F_pos%3D4%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-012728",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/betametasona-crema-005-x-15-g-ascend-583504.jpg?v=1692989454",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 1195,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/betametasona-crema-005-x-15-g-ascend-583504.jpg?v=1692989454",
+   "presentationKey": "betametasona|15000mg|15|bio:unknown|brand:ascend|form:topical",
+   "cfmId": "CFM-012728",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotrimazol|15000mg",
+   "canonicalName": "Clotrimazol Betametasona crema 15g (Chile)",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Clotrimazol Betametasona crema 15g (Chile)",
+     "channels": {
+      "store": 1200,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1200
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fclotrimazol-betametasona-crema-15g-chile&cfmId=CFM-003643",
+     "imageUrl": "https://farmacia.araucomed.com/8148-home_default/clotrimazol-betametasona-crema-15g-chile.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 1200,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/8148-home_default/clotrimazol-betametasona-crema-15g-chile.jpg",
+   "presentationKey": "clotrimazol|15000mg|bio:unknown|brand:chile|var:betametasona|form:topical",
+   "cfmId": "CFM-003643",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|0.6mg",
+   "canonicalName": "Betametasona 0.6 mg comprimidos",
+   "laboratory": "DR. SIMI",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Betametasona 0.6 mg comprimidos",
+     "channels": {
+      "store": 1290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1290
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=betametasona%7C0.6mg&url=https%3A%2F%2Fwww.drsimi.cl%2Fbetametasona-ch0015%2Fp&cfmId=CFM-010616",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156969/CH0015ND.jpg?v=638012014794300000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 1290,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156969/CH0015ND.jpg?v=638012014794300000",
+   "presentationKey": "betametasona|0.6mg|bio:false|brand:drsimi|form:solid-oral",
+   "cfmId": "CFM-010616",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona",
+   "canonicalName": "Betametasona 0,1% ungüento oftálmico",
+   "laboratory": "DR. SIMI",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Betametasona 0,1% ungüento oftálmico",
+     "channels": {
+      "store": 1290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1290
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=betametasona&url=https%3A%2F%2Fwww.drsimi.cl%2Fbetametasona-0-1-unguento-oftalmico-10-gr%2Fp&cfmId=CFM-006064",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157002/CH01960ND.jpg?v=638012014909400000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 1290,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157002/CH01960ND.jpg?v=638012014909400000",
+   "presentationKey": "betametasona|bio:false|brand:drsimi|var:oftalmico|form:ophthalmic",
+   "cfmId": "CFM-006064",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15",
+   "canonicalName": "Betametasona Crema 0.05% x 15 gramos. (Chile)",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Betametasona Crema 0.05% x 15 gramos. (Chile)",
+     "channels": {
+      "store": 1290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=betametasona%7C15&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fbetametasona-crema-005-x15gr-chile&cfmId=CFM-012732",
+     "imageUrl": "https://farmacia.araucomed.com/5096-home_default/betametasona-crema-005-x15gr-chile.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 1290,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/5096-home_default/betametasona-crema-005-x15gr-chile.jpg",
+   "presentationKey": "betametasona|15|bio:unknown|brand:chile|form:topical",
+   "cfmId": "CFM-012732",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15000mg",
+   "canonicalName": "Betametasona 0.05% Crema 15g",
+   "laboratory": "Betametasona",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Betametasona 0.05% Crema 15g",
+     "channels": {
+      "store": 1499,
+      "online": 1319,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1319
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=betametasona%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbetametasona-0-05-crema-15g%3Fdefault_sku%3D1764252&cfmId=CFM-007370",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/81610/small/1764252.jpg?1665776288",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 1319,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/81610/small/1764252.jpg?1665776288",
+   "presentationKey": "betametasona|15000mg|bio:unknown|brand:betametasona|form:topical",
+   "cfmId": "CFM-007370",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "zerolerg|15000mg",
+   "canonicalName": "Zerolerg Betametasona 0,05% Crema 15 g (Ethon)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Zerolerg Betametasona 0,05% Crema 15 g (Ethon)",
+     "channels": {
+      "store": 1390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=zerolerg%7C15000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fzerolerg-betametasona-005-crema-15-g-ethon%2F&cfmId=CFM-014359",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/zeroleg.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 1390,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/zeroleg.jpg",
+   "presentationKey": "zerolerg|15000mg|bio:unknown|brand:unknown|var:betametasona|form:topical",
+   "cfmId": "CFM-014359",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15000mg",
+   "canonicalName": "Betametasona Crema 15g",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Betametasona Crema 15g",
+     "channels": {
+      "store": 1390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1390
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=betametasona%7C15000mg&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D2891%26d_%3D1&cfmId=CFM-007370",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620834563.jpg?v=6a96156676e6a",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    },
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Betametasona 0,05% unguento 15 g (LCh)",
+     "channels": {
+      "store": 2480,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2480
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=betametasona%7C15000mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fbetametasona-005-unguento-15-g%2F&cfmId=CFM-007370",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/04/Betametasona_Crema_15G_HD.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 1390,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804620834563.jpg?v=6a96156676e6a",
+   "presentationKey": "betametasona|15000mg|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-007370",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|15",
+   "canonicalName": "Betametasona Crema Topica X 15 Gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Betametasona Crema Topica X 15 Gr",
+     "channels": {
+      "store": 1490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1490
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=betametasona%7C15&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D21608%26d_%3D1&cfmId=CFM-012732",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804673040256.jpg?v=6a96156676bf7",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 1490,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804673040256.jpg?v=6a96156676bf7",
+   "presentationKey": "betametasona|15|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-012732",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotrimazol",
+   "canonicalName": "Clotrimazol / Betametasona...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Clotrimazol / Betametasona...",
+     "channels": {
+      "store": 1490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotrimazol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104289-clotrimazol-betametasona-15-gr-curaespring.html&cfmId=CFM-006072",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 1490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "clotrimazol|bio:unknown|brand:curaespring|combo:betametasona",
+   "cfmId": "CFM-006072",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotrimazol",
+   "canonicalName": "Clotrimazol / Betametasona...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Clotrimazol / Betametasona...",
+     "channels": {
+      "store": 1490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=clotrimazol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26095-clotrimazol-betametasona-dipropionato-crema-x-15gr.html&cfmId=CFM-006072",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 1490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "clotrimazol|bio:unknown|brand:15gr|combo:betametasona",
+   "cfmId": "CFM-006072",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotrimazol",
+   "canonicalName": "Clotrimazol 1 gr Betametasona 0,05 gr Crema Tópica 15 gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Clotrimazol 1 gr Betametasona 0,05 gr Crema Tópica 15 gr",
+     "channels": {
+      "store": 1590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clotrimazol&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclotrimazol-1-gr-betametasona-0-05-gr-crema-topica-15-gr%2F2384.html&cfmId=CFM-006072",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1871412b/images/large/2384-1.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 1590,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1871412b/images/large/2384-1.jpg",
+   "presentationKey": "clotrimazol|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-006072",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "zerolerg|15",
+   "canonicalName": "Zerolerg (betametasona) 0,5% Crema Topica X 15 Gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Zerolerg (betametasona) 0,5% Crema Topica X 15 Gr",
+     "channels": {
+      "store": 1590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1590
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=zerolerg%7C15&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D21856%26d_%3D1&cfmId=CFM-013911",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804633500868.jpg?v=6a96156676d43",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 1590,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7804633500868.jpg?v=6a96156676d43",
+   "presentationKey": "zerolerg|15|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-013911",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona",
+   "canonicalName": "Betametasona 0.05% 15 Gr...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Betametasona 0.05% 15 Gr...",
+     "channels": {
+      "store": 2890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=betametasona&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102894-betametasona-005-15-gr-unguento-topico.html&cfmId=CFM-006064",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 2890,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "betametasona|bio:unknown|brand:unknown",
+   "cfmId": "CFM-006064",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|10",
+   "canonicalName": "Betametasona + Neomicina Unguento x 10 gramos (Chile)",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Betametasona + Neomicina Unguento x 10 gramos (Chile)",
+     "channels": {
+      "store": 3990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=betametasona%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fbetametasona-neomicina-unguento-x-10-gramos-chile&cfmId=CFM-011270",
+     "imageUrl": "https://farmacia.araucomed.com/13052-home_default/betametasona-neomicina-unguento-x-10-gramos-chile.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 3990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13052-home_default/betametasona-neomicina-unguento-x-10-gramos-chile.jpg",
+   "presentationKey": "betametasona|10|bio:unknown|brand:chile|combo:neomicina|form:topical",
+   "cfmId": "CFM-011270",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "prodelb|10",
+   "canonicalName": "Prodel-B Betametasona / Clorfenamina 10 Comprimidos",
+   "laboratory": "Prodel B",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Prodel-B Betametasona / Clorfenamina 10 Comprimidos",
+     "channels": {
+      "store": 5999,
+      "online": 4559,
+      "cmr": null,
+      "sbpay": 4259,
+      "effective": 4259
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=prodelb%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fprodel-b-betametasona-clorfenamina-10-comprimidos%3Fdefault_sku%3D2500909&cfmId=CFM-008018",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/60911/small/2500909-Prodel-B-comp-1050-x-1050.jpg?1641328942",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 4259,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/60911/small/2500909-Prodel-B-comp-1050-x-1050.jpg?1641328942",
+   "presentationKey": "prodelb|10|bio:unknown|brand:prodelb|combo:clorfenamina|form:solid-oral",
+   "cfmId": "CFM-008018",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotrimazol|15000mg",
+   "canonicalName": "Clotrimazol Betametasona 1%/0.05% Crema Dérmica 15g",
+   "laboratory": "Clotrimazol",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Clotrimazol Betametasona 1%/0.05% Crema Dérmica 15g",
+     "channels": {
+      "store": 5099,
+      "online": 4487,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4487
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotrimazol%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimazol-betametasona-1-0-05-crema-dermica-15g%3Fdefault_sku%3D434389&cfmId=CFM-003643",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27660/small/434389.jpg?1641479721",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 4487,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27660/small/434389.jpg?1641479721",
+   "presentationKey": "clotrimazol|15000mg|bio:unknown|brand:clotrimazol|var:betametasona|form:topical",
+   "cfmId": "CFM-003643",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "probelb|120ml",
+   "canonicalName": "Probel-B betametasona 0,25 mg clorfenamina 2 mg jarabe 120 mL",
+   "laboratory": "PASTEUR",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Probel-B betametasona 0,25 mg clorfenamina 2 mg jarabe 120 mL",
+     "channels": {
+      "store": 6040,
+      "online": 4530,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4530
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=probelb%7C120ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fclorfe-betame-2-0-25mg-5ml-jarabe-120ml-ch5834%2Fp&cfmId=CFM-009220",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157351/CH5834-1200X1200PX.jpg?v=638189457453370000",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 4530,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157351/CH5834-1200X1200PX.jpg?v=638189457453370000",
+   "presentationKey": "probelb|120ml|bio:true|brand:pasteur|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-009220",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|10000mg",
+   "canonicalName": "Betametasona + Neomicina Ung&uuml;ento Dérmico Pomo 10 g CHILE",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Betametasona + Neomicina Ung&uuml;ento Dérmico Pomo 10 g CHILE",
+     "channels": {
+      "store": 4621,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4621
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=betametasona%7C10000mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbetametasona-neomicina-unguento-dermico-pomo-10-g-chile-2471.html&cfmId=CFM-012559",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe772499d/images/products/2471/2471.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 4621,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe772499d/images/products/2471/2471.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "betametasona|10000mg|bio:unknown|brand:unknown|combo:neomicina|form:topical",
+   "cfmId": "CFM-012559",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|10000mg|10",
+   "canonicalName": "Betametasona + Neomicina ungüento dérmico x 10 g  (Laboratorio Chile)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Betametasona + Neomicina ungüento dérmico x 10 g  (Laboratorio Chile)",
+     "channels": {
+      "store": 4980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4980
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=betametasona%7C10000mg%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fbetametasona-neomicina-unguento-dermico-x-10-g%2F&cfmId=CFM-012729",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/betametasona.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 4980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/betametasona.jpg",
+   "presentationKey": "betametasona|10000mg|10|bio:unknown|brand:unknown|combo:neomicina|form:topical",
+   "cfmId": "CFM-012729",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clofexan|30",
+   "canonicalName": "Clofexan x 30 comprimidos.",
+   "laboratory": "Bagó",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Clofexan x 30 comprimidos.",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clofexan%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Fclofexan-x30com&cfmId=CFM-006644",
+     "imageUrl": "https://farmacia.araucomed.com/5716-home_default/clofexan-x30com.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/5716-home_default/clofexan-x30com.jpg",
+   "presentationKey": "clofexan|30|bio:unknown|brand:bago|form:solid-oral",
+   "cfmId": "CFM-006644",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betametasona",
+   "canonicalName": "Betametasona  Con Neomicina...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Betametasona  Con Neomicina...",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=betametasona&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24598-betametasona-neomicina.html&cfmId=CFM-006064",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "betametasona|bio:unknown|brand:neomicina|var:neomicina",
+   "cfmId": "CFM-006064",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cobefen|120ml",
+   "canonicalName": "Cobefen betametasona 0,25 mg/5 mL dexclorfeniramina 2 mg/5 mL jarabe 120 mL",
+   "laboratory": "SANITAS",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Cobefen betametasona 0,25 mg/5 mL dexclorfeniramina 2 mg/5 mL jarabe 120 mL",
+     "channels": {
+      "store": 6800,
+      "online": 5100,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5100
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=cobefen%7C120ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fcobefen-betame-2-0-25mg-sol-120ml-ch5040%2Fp&cfmId=CFM-010018",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157581/CH5040.jpg?v=638665144076200000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 5100,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157581/CH5040.jpg?v=638665144076200000",
+   "presentationKey": "cobefen|120ml|bio:false|brand:sanitas|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-010018",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "prodelb|30",
+   "canonicalName": "Prodel-B x 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Prodel-B x 30 Comprimidos",
+     "channels": {
+      "store": 5249,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5249
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=prodelb%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fprodel-b-x-30-comprimidos-41745.html&cfmId=CFM-006663",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8ab9ef95/images/products/41745/41745.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 5249,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw8ab9ef95/images/products/41745/41745.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "prodelb|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-006663",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "prodelb|0.25mg|30",
+   "canonicalName": "Prodel-B betametasona 0,25 mg clorfenamina 2 mg 30 comprimidos",
+   "laboratory": "PASTEUR",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Prodel-B betametasona 0,25 mg clorfenamina 2 mg 30 comprimidos",
+     "channels": {
+      "store": 7000,
+      "online": 5250,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5250
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=prodelb%7C0.25mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fclorfenamina-betameta-2-0--25mg-30comp-ch5983-1%2Fp&cfmId=CFM-008022",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157363/CH5983-1200X1200PX.jpg?v=638189465401200000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 5250,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157363/CH5983-1200X1200PX.jpg?v=638189465401200000",
+   "presentationKey": "prodelb|0.25mg|30|bio:false|brand:pasteur|var:betametasona|form:solid-oral",
+   "cfmId": "CFM-008022",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cobefen|120ml",
+   "canonicalName": "Cobefen Jarabe 120 ml.",
+   "laboratory": "Sanitas",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Cobefen Jarabe 120 ml.",
+     "channels": {
+      "store": 6490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cobefen%7C120ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Fcobefen-jarabe-120ml&cfmId=CFM-010018",
+     "imageUrl": "https://farmacia.araucomed.com/14236-home_default/cobefen-jarabe-120ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 6490,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/14236-home_default/cobefen-jarabe-120ml.jpg",
+   "presentationKey": "cobefen|120ml|bio:unknown|brand:sanitas|form:fluid-oral",
+   "cfmId": "CFM-010018",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cobefen|2mg|30",
+   "canonicalName": "Cobefen dexclorfeniramina 2 mg betametasona 0,25 mg 30 comprimidos",
+   "laboratory": "SANITAS",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Cobefen dexclorfeniramina 2 mg betametasona 0,25 mg 30 comprimidos",
+     "channels": {
+      "store": 8720,
+      "online": 6540,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6540
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=cobefen%7C2mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fdexclorfenir-betameta-2-0--25mg-30comp-ch5044-1%2Fp&cfmId=CFM-011763",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157343/CH5044-1200X1200PX.jpg?v=638189452389130000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 6540,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157343/CH5044-1200X1200PX.jpg?v=638189452389130000",
+   "presentationKey": "cobefen|2mg|30|bio:false|brand:sanitas|var:dexclorfeniramina|form:solid-oral",
+   "cfmId": "CFM-011763",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clofexan|30",
+   "canonicalName": "Clofexan Betametasona / Dexclorfenamina 30 Comprimidos",
+   "laboratory": "Clofexan",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Clofexan Betametasona / Dexclorfenamina 30 Comprimidos",
+     "channels": {
+      "store": 21899,
+      "online": 8760,
+      "cmr": null,
+      "sbpay": 6570,
+      "effective": 6570
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clofexan%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclofexan-betametasona-dexclorfenamina-30-comprimidos%3Fdefault_sku%3D2591080&cfmId=CFM-006644",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/45592/small/2591080_%281%29.jpg?1641476842",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 6570,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/45592/small/2591080_%281%29.jpg?1641476842",
+   "presentationKey": "clofexan|30|bio:unknown|brand:clofexan|combo:dexclorfenamina|form:solid-oral",
+   "cfmId": "CFM-006644",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clofexan|30",
+   "canonicalName": "Clofexan x 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Clofexan x 30 Comprimidos",
+     "channels": {
+      "store": 6899,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6899
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=clofexan%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fclofexan-x-30-comprimidos-3567.html&cfmId=CFM-006644",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5ccfbdbf/images/products/3567/3567.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 6899,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5ccfbdbf/images/products/3567/3567.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "clofexan|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-006644",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "clofexan|30",
+   "canonicalName": "Clofexan Betametasona con Dexclorfenamina Maleato 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Clofexan Betametasona con Dexclorfenamina Maleato 30 Comprimidos",
+     "channels": {
+      "store": 6900,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6900
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=clofexan%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fclofexan-betametasona-con-dexclorfenamina-maleato-30-comprimidos%2F&cfmId=CFM-006644",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/9099-clofexan-comprimido-30-unidades-betametasona-2-mg-scaled.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 6900,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/9099-clofexan-comprimido-30-unidades-betametasona-2-mg-scaled.jpg",
+   "presentationKey": "clofexan|30|bio:unknown|brand:unknown|var:betametasona|form:solid-oral",
+   "cfmId": "CFM-006644",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "novadrel|0.5mg",
+   "canonicalName": "Novadrel Betametasona 0,5mg Clotrimazol 10mg Crema Tópica  20 gr (Prater)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Novadrel Betametasona 0,5mg Clotrimazol 10mg Crema Tópica  20 gr (Prater)",
+     "channels": {
+      "store": 6980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6980
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=novadrel%7C0.5mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnovadrel-betametasona-crema-topica-05mg-clotrimazol-10mg-x-20-gr-prater%2F&cfmId=CFM-009461",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/novadrel-x-20-g-crema-topica.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 6980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/novadrel-x-20-g-crema-topica.jpg",
+   "presentationKey": "novadrel|0.5mg|bio:unknown|brand:unknown|var:betametasona|form:topical",
+   "cfmId": "CFM-009461",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cobefen|120ml|120",
+   "canonicalName": "Cobefen Dexclorfeniramina 2 mg - Betametasona 0,25 mg / x 120 mL Jarabe",
+   "laboratory": "SANITAS",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Cobefen Dexclorfeniramina 2 mg - Betametasona 0,25 mg / x 120 mL Jarabe",
+     "channels": {
+      "store": 6990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=cobefen%7C120ml%7C120&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fcobefen-jarabe-x-120-ml-sanitas%3F_pos%3D3%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-012956",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cobefen-dexclorfeniramina-2-mg-betametasona-025-mg-x-120-ml-jarabe-sanitas-328838.jpg?v=1692989798",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 6990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cobefen-dexclorfeniramina-2-mg-betametasona-025-mg-x-120-ml-jarabe-sanitas-328838.jpg?v=1692989798",
+   "presentationKey": "cobefen|120ml|120|bio:unknown|brand:sanitas|var:dexclorfeniramina|form:fluid-oral",
+   "cfmId": "CFM-012956",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oticum|5ml|5",
+   "canonicalName": "Oticum x 5 mL Solución Para Gotas Oticas",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Oticum x 5 mL Solución Para Gotas Oticas",
+     "channels": {
+      "store": 7559,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 7559
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=oticum%7C5ml%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Foticum-x-5-ml-solucion-para-gotas-oticas-11393.html&cfmId=CFM-005766",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw26aa4785/images/products/11393/11393.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 7559,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw26aa4785/images/products/11393/11393.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "oticum|5ml|5|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-005766",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betametasona",
+   "canonicalName": "Betametasona 0,05% Neomicina 0,5% Unguento 10 gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Betametasona 0,05% Neomicina 0,5% Unguento 10 gr",
+     "channels": {
+      "store": 7790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 7790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=betametasona&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbetametasona-0-05-neomicina-0-5-unguento-10-gr%2F2372.html&cfmId=CFM-006064",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1a474bcf/images/large/2372-1.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 7790,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1a474bcf/images/large/2372-1.jpg",
+   "presentationKey": "betametasona|bio:unknown|brand:unknown|var:neomicina|form:topical",
+   "cfmId": "CFM-006064",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "prodelb|2mg|10",
+   "canonicalName": "Prodel-B Betametasona 2 mg 10 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Prodel-B Betametasona 2 mg 10 Comprimidos",
+     "channels": {
+      "store": 7990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 7990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=prodelb%7C2mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fprodel-b-betametasona-2-mg-10-comprimidos%2F41031.html&cfmId=CFM-008020",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwcf9b9147/images/large/41031-prodel-b-betametasona-2-mg-10-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 7990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwcf9b9147/images/large/41031-prodel-b-betametasona-2-mg-10-comprimidos.jpg",
+   "presentationKey": "prodelb|2mg|10|bio:unknown|brand:unknown|var:betametasona|form:solid-oral",
+   "cfmId": "CFM-008020",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|1ml|5",
+   "canonicalName": "Betametasona Sodio Fosfato Solución Inyectable 4MG/1ML X 5 Ampollas",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Betametasona Sodio Fosfato Solución Inyectable 4MG/1ML X 5 Ampollas",
+     "channels": {
+      "store": 7990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 7990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=betametasona%7C1ml%7C5&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fbetametasona-sodio-fosfato-solucion-inyectable-4mg-1ml-x-5-ampollas%2F&cfmId=CFM-010033",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/betametasona-sodio-fosfato.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 7990,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/05/betametasona-sodio-fosfato.jpg",
+   "presentationKey": "betametasona|1ml|5|bio:unknown|brand:unknown|var:sodio|form:injectable",
+   "cfmId": "CFM-010033",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|4mg|5",
+   "canonicalName": "Betametasona 4 mg / mL 5 Ampollas",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Betametasona 4 mg/ml Solución Inyectable Caja 5 Ampollas BIOSANO",
+     "channels": {
+      "store": 8099,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8099
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=betametasona%7C4mg%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbetametasona-4-mg-ml-solucion-inyectable-caja-5-ampollas-biosano-66842.html&cfmId=CFM-009450",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7acaf11c/images/products/66842/66842.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    },
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Betametasona 4 mg / mL 5 Ampollas",
+     "channels": {
+      "store": 13790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=betametasona%7C4mg%7C5&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbetametasona-4-mg-ml-5-ampollas%2F260574.html&cfmId=CFM-009450",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbc2a958e/images/large/260574-1.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 8099,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbc2a958e/images/large/260574-1.jpg",
+   "presentationKey": "betametasona|4mg|5|bio:unknown|brand:unknown|form:injectable",
+   "cfmId": "CFM-009450",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|1ml|5",
+   "canonicalName": "Betametasona sodio fosfato 4 mg/mL 5 ampollas solución inyectable 1 mL",
+   "laboratory": "BIOSANO",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Betametasona sodio fosfato 4 mg/mL 5 ampollas solución inyectable 1 mL",
+     "channels": {
+      "store": 10800,
+      "online": 8100,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8100
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=betametasona%7C1ml%7C5&url=https%3A%2F%2Fwww.drsimi.cl%2Fbetametasona-ch9033%2Fp&cfmId=CFM-010033",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158098/CH9033-1200X1200PX.jpg?v=638526864325830000",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 8100,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158098/CH9033-1200X1200PX.jpg?v=638526864325830000",
+   "presentationKey": "betametasona|1ml|5|bio:false|brand:biosano|var:sodio|form:injectable",
+   "cfmId": "CFM-010033",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cremirit",
+   "canonicalName": "Cremirit Betametasona 0,05% Crema Tópica 15 gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Cremirit Betametasona 0,05% Crema Tópica 15 gr",
+     "channels": {
+      "store": 8340,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8340
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cremirit&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcremirit-betametasona-0-05-crema-topica-15-gr%2F193070.html&cfmId=CFM-013226",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw95446453/images/large/193070.1.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 8340,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw95446453/images/large/193070.1.jpg",
+   "presentationKey": "cremirit|bio:unknown|brand:unknown|var:betametasona|form:topical",
+   "cfmId": "CFM-013226",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betavol|5mg",
+   "canonicalName": "Betavol Betametasona 5 mg 1 Ampolla",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Betavol Betametasona 5 mg 1 Ampolla DESCUENTO",
+     "channels": {
+      "store": 8990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=betavol%7C5mg&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fbetavol-betametasona-5-mg-1-ampolla-descuento%2F&cfmId=CFM-009994",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/08/0.-3D-Betavol-1000X1000.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    },
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Betavol Betametasona 5 mg 1 Ampolla",
+     "channels": {
+      "store": 20690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 20690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=betavol%7C5mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbetavol-betametasona-5-mg-1-ampolla%2F272218.html&cfmId=CFM-009994",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw620b96ff/images/large/272218-betavol-betametasona-5-mg-1-ampolla.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 8990,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw620b96ff/images/large/272218-betavol-betametasona-5-mg-1-ampolla.jpg",
+   "presentationKey": "betavol|5mg|bio:unknown|brand:unknown|var:betametasona|form:injectable",
+   "cfmId": "CFM-009994",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cobefen|120ml",
+   "canonicalName": "Cobefen (betametasona/dexclorfeniramina) Jarabe 120ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Cobefen (betametasona/dexclorfeniramina) Jarabe 120ml",
+     "channels": {
+      "store": 8990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=cobefen%7C120ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D4340%26d_%3D1&cfmId=CFM-010018",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800038042200.jpg?v=6a961566771d5",
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 8990,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800038042200.jpg?v=6a961566771d5",
+   "presentationKey": "cobefen|120ml|bio:unknown|brand:unknown|combo:dexclorfeniramina|form:fluid-oral",
+   "cfmId": "CFM-010018",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "prodelb|30",
+   "canonicalName": "Prodel-B Betametasona / Clorfenamina 30 Comprimidos",
+   "laboratory": "Prodel-B",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Prodel-B Betametasona / Clorfenamina 30 Comprimidos",
+     "channels": {
+      "store": 12199,
+      "online": 9759,
+      "cmr": null,
+      "sbpay": 9149,
+      "effective": 9149
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=prodelb%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fprodel-b-betametasona-clorfenamina-30-comprimidos%3Fdefault_sku%3D2506379&cfmId=CFM-006663",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/72146/small/2506379_PRODEL-B-X30COM.jpg?1651852579",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 9149,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/72146/small/2506379_PRODEL-B-X30COM.jpg?1651852579",
+   "presentationKey": "prodelb|30|bio:unknown|brand:prodelb|combo:clorfenamina|form:solid-oral",
+   "cfmId": "CFM-006663",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cobefen|30",
+   "canonicalName": "Cobefen x 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Cobefen x 30 Comprimidos",
+     "channels": {
+      "store": 12849,
+      "online": null,
+      "cmr": 9637,
+      "sbpay": null,
+      "effective": 9637
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cobefen%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcobefen-x-30-comprimidos-11364.html&cfmId=CFM-010020",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw64a9b591/images/products/11364/11364.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 9637,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw64a9b591/images/products/11364/11364.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "cobefen|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-010020",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cam|120ml",
+   "canonicalName": "Cam Jarabe Betametasona 0,25 mg 120 Ml (Lab Chile)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Cam Jarabe Betametasona 0,25 mg 120 Ml (Lab Chile)",
+     "channels": {
+      "store": 9980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9980
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=cam%7C120ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcam-jarabe-betametasona-025-mg-120-ml%2F&cfmId=CFM-009757",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/cam-x-120-ml-jarabe.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 9980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/cam-x-120-ml-jarabe.jpg",
+   "presentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-009757",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oticum|5ml",
+   "canonicalName": "Oticum solución ótica 5 ml.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Oticum solución ótica 5 ml.",
+     "channels": {
+      "store": 9990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=oticum%7C5ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Foido-y-vertigo%2Foticum-solucion-otica-x5ml&cfmId=CFM-008756",
+     "imageUrl": "https://farmacia.araucomed.com/14241-home_default/oticum-solucion-otica-x5ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 9990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/14241-home_default/oticum-solucion-otica-x5ml.jpg",
+   "presentationKey": "oticum|5ml|bio:unknown|brand:unknown|form:ophthalmic",
+   "cfmId": "CFM-008756",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betametasona|10000mg",
+   "canonicalName": "Betametasona + Neomicina Ungüento Tópico 10g",
+   "laboratory": "Betametasona",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Betametasona + Neomicina Ungüento Tópico 10g",
+     "channels": {
+      "store": 11399,
+      "online": 10031,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10031
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=betametasona%7C10000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbetametasona-neomicina-unguento-topico-10g%3Fdefault_sku%3D434338&cfmId=CFM-012559",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27658/small/434338.jpg?1641479721",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 10031,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27658/small/434338.jpg?1641479721",
+   "presentationKey": "betametasona|10000mg|bio:unknown|brand:betametasona|combo:neomicina|form:topical",
+   "cfmId": "CFM-012559",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cobefen|120ml",
+   "canonicalName": "Cobefen Betametasona / Dexclorfenamina Jarabe 120ml",
+   "laboratory": "Cobefen",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Cobefen Betametasona / Dexclorfenamina Jarabe 120ml",
+     "channels": {
+      "store": 13399,
+      "online": 10719,
+      "cmr": null,
+      "sbpay": 10049,
+      "effective": 10049
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=cobefen%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcobefen-betametasona-dexclorfenamina-jarabe-120ml%3Fdefault_sku%3D2980402&cfmId=CFM-010018",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/60845/small/2980402.jpg?1641328944",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 10049,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/60845/small/2980402.jpg?1641328944",
+   "presentationKey": "cobefen|120ml|bio:unknown|brand:cobefen|combo:dexclorfenamina|form:fluid-oral",
+   "cfmId": "CFM-010018",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cam|0.25mg|30",
+   "canonicalName": "Cam 0.25 mg/2 mg x 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Cam 0.25 mg/2 mg x 30 Comprimidos",
+     "channels": {
+      "store": 10689,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10689
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cam%7C0.25mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcam-0.25-mg-2-mg-x-30-comprimidos-919.html&cfmId=CFM-014358",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb9f26068/images/products/919/919.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 10689,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb9f26068/images/products/919/919.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "cam|0.25mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-014358",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cobefen|30",
+   "canonicalName": "Cobefen Betametasona / Dexclorfenamina 30 Comprimidos",
+   "laboratory": "Cobefen",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Cobefen Betametasona / Dexclorfenamina 30 Comprimidos",
+     "channels": {
+      "store": 12399,
+      "online": 10911,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10911
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=cobefen%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcobefen-betametasona-dexclorfenamina-30-comprimidos%3Fdefault_sku%3D2980401&cfmId=CFM-010020",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/60847/small/2980401.jpg?1641328944",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 10911,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/60847/small/2980401.jpg?1641328944",
+   "presentationKey": "cobefen|30|bio:unknown|brand:cobefen|combo:dexclorfenamina|form:solid-oral",
+   "cfmId": "CFM-010020",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cam|120ml|120",
+   "canonicalName": "Cam Jarabe x 120 ml.",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Cam Jarabe x 120 ml.",
+     "channels": {
+      "store": 10990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=cam%7C120ml%7C120&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fcam-jarabe-120ml&cfmId=CFM-002851",
+     "imageUrl": "https://farmacia.araucomed.com/5706-home_default/cam-jarabe-120ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 10990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/5706-home_default/cam-jarabe-120ml.jpg",
+   "presentationKey": "cam|120ml|120|bio:unknown|brand:chile|form:fluid-oral",
+   "cfmId": "CFM-002851",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "oftagen",
+   "canonicalName": "Oftagen Compuesto ungüento oftálmico 3,5 gramos.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Oftagen Compuesto ungüento oftálmico 3,5 gramos.",
+     "channels": {
+      "store": 10990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=oftagen&url=https%3A%2F%2Ffarmacia.araucomed.com%2Foftalmicos%2Foftagen-compuesto-unguento-oftalmico-35g&cfmId=CFM-006461",
+     "imageUrl": "https://farmacia.araucomed.com/3801-home_default/oftagen-compuesto-unguento-oftalmico-35g.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    },
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Oftagen Compuesto (gentamicina;betametasona) Unguento Oftalmico 3,5grs",
+     "channels": {
+      "store": 11990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=oftagen&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D17969%26d_%3D1&cfmId=CFM-006461",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060003330.jpg?v=6a9615667754e",
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 10990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/3801-home_default/oftagen-compuesto-unguento-oftalmico-35g.jpg",
+   "presentationKey": "oftagen|bio:unknown|brand:unknown|var:compuesto|form:ophthalmic",
+   "cfmId": "CFM-006461",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betametasona|1ml|5",
+   "canonicalName": "Betametasona Solución Inyectable 4 mg / 1 mL x 5 Ampollas",
+   "laboratory": "Vitalis",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Betametasona Solución Inyectable 4 mg / 1 mL x 5 Ampollas",
+     "channels": {
+      "store": 10990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=betametasona%7C1ml%7C5&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fbetametasona-solucion-inyectable-4-mg-1-ml-x-5-ampollas%3F_pos%3D2%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-010033",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/betametasona-solucion-inyectable-4-mg-1-ml-x-5-ampollas-vitalis-597383.jpg?v=1737059725",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 10990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/betametasona-solucion-inyectable-4-mg-1-ml-x-5-ampollas-vitalis-597383.jpg?v=1737059725",
+   "presentationKey": "betametasona|1ml|5|bio:unknown|brand:vitalis|form:injectable",
+   "cfmId": "CFM-010033",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cam|30",
+   "canonicalName": "Cam (betametasona/dexclorfeniramina) 30comp",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Cam (betametasona/dexclorfeniramina) 30comp",
+     "channels": {
+      "store": 10990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=cam%7C30&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D3509%26d_%3D1&cfmId=CFM-013653",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007187833.jpg?v=6a961566770b1",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 10990,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800007187833.jpg?v=6a961566770b1",
+   "presentationKey": "cam|30|bio:unknown|brand:unknown|combo:dexclorfeniramina|form:solid-oral",
+   "cfmId": "CFM-013653",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betavol|1ml",
+   "canonicalName": "Betavol betametasona dipropionato 5 mg/mL betametasona fosfato disodico 2 mg/mL ampolla suspensión inyectable 1 mL",
+   "laboratory": "EUROFARMA",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Betavol betametasona dipropionato 5 mg/mL betametasona fosfato disodico 2 mg/mL ampolla suspensión inyectable 1 mL",
+     "channels": {
+      "store": 14800,
+      "online": 11100,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11100
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=betavol%7C1ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fbetavol-betametasona-d-betame-fd-susp-iny-ch6067-1%2Fp&cfmId=CFM-004729",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157368/CH6067-1200X1200PX.jpg?v=638189467919770000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 11100,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157368/CH6067-1200X1200PX.jpg?v=638189467919770000",
+   "presentationKey": "betavol|1ml|bio:false|brand:eurofarma|var:betametasona|form:injectable",
+   "cfmId": "CFM-004729",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betavol|1ml",
+   "canonicalName": "Betavol Solución Inyectable 5 +2 mg / mL x 1 mL 1 ampolla + 1 jeringa",
+   "laboratory": "EUROFARMA",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Betavol Solución Inyectable 5 +2 mg / mL x 1 mL 1 ampolla + 1 jeringa",
+     "channels": {
+      "store": 11290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=betavol%7C1ml&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fbetavol-ampolla-5-2-mg-ml-x-1-ml-1-ampolla-1-jeringa-debe-presentar-receta%3F_pos%3D1%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-004729",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/betavol-ampolla-5-2-mg-ml-x-1-ml-1-ampolla-1-jeringa-debe-presentar-receta-eurofarma-625249.jpg?v=1692989621",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 11290,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/betavol-ampolla-5-2-mg-ml-x-1-ml-1-ampolla-1-jeringa-debe-presentar-receta-eurofarma-625249.jpg?v=1692989621",
+   "presentationKey": "betavol|1ml|bio:unknown|brand:eurofarma|form:injectable",
+   "cfmId": "CFM-004729",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "clofexan|120ml",
+   "canonicalName": "Clofexan (B) Betametasona / Dexclorfenamina Jarabe 120ml",
+   "laboratory": "Clofexan",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Clofexan (B) Betametasona / Dexclorfenamina Jarabe 120ml",
+     "channels": {
+      "store": 12899,
+      "online": 11351,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11351
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clofexan%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclofexan-b-betametasona-dexclorfenamina-jarabe-120ml%3Fdefault_sku%3D2591085&cfmId=CFM-008029",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/64970/small/2591085.jpg?1641328747",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 11351,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/64970/small/2591085.jpg?1641328747",
+   "presentationKey": "clofexan|120ml|bio:unknown|brand:clofexan|combo:dexclorfenamina|form:fluid-oral",
+   "cfmId": "CFM-008029",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oftagen|5ml",
+   "canonicalName": "Oftagen Compuesto solucion oftalmica 5ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Oftagen Compuesto solucion oftalmica 5ml",
+     "channels": {
+      "store": 11490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=oftagen%7C5ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Foftalmicos%2Foftagen-compuesto-solucion-oftalmica-5ml&cfmId=CFM-006460",
+     "imageUrl": "https://farmacia.araucomed.com/3802-home_default/oftagen-compuesto-solucion-oftalmica-5ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 11490,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/3802-home_default/oftagen-compuesto-solucion-oftalmica-5ml.jpg",
+   "presentationKey": "oftagen|5ml|bio:unknown|brand:unknown|var:compuesto|form:ophthalmic",
+   "cfmId": "CFM-006460",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "prodelb|120ml",
+   "canonicalName": "Prodel-B Betametasona 2 mg Jarabe 120 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Prodel-B Betametasona 2 mg Jarabe 120 mL",
+     "channels": {
+      "store": 11590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=prodelb%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fprodel-b-betametasona-2-mg-jarabe-120-ml%2F41032.html&cfmId=CFM-008017",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7d861a28/images/large/41032-prodel-b-jarabe-120-ml-betametasona-2-mg.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 11590,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7d861a28/images/large/41032-prodel-b-jarabe-120-ml-betametasona-2-mg.jpg",
+   "presentationKey": "prodelb|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-008017",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clotriminb|15000mg",
+   "canonicalName": "Clotrimin-B Clotrimazol / Betametasona Crema Tópica 15g",
+   "laboratory": "Clotrimin B",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Clotrimin-B Clotrimazol / Betametasona Crema Tópica 15g",
+     "channels": {
+      "store": 13199,
+      "online": 11615,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11615
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=clotriminb%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fclotrimin-b-clotrimazol-betametasona-crema-topica-15g%3Fdefault_sku%3D2100305&cfmId=CFM-006067",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/74331/small/2100305_CLOTRIMIN-B__1500X1500-1.jpg?1654198904",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 11615,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/74331/small/2100305_CLOTRIMIN-B__1500X1500-1.jpg?1654198904",
+   "presentationKey": "clotriminb|15000mg|bio:unknown|brand:clotriminb|combo:betametasona|form:topical",
+   "cfmId": "CFM-006067",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oftagen|5ml|5",
+   "canonicalName": "Oftagen Compuesto x 5 mL Solución Oftálmica",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Oftagen Compuesto x 5 mL Solución Oftálmica",
+     "channels": {
+      "store": 11899,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11899
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=oftagen%7C5ml%7C5&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Foftagen-compuesto-x-5-ml-solucion-oftalmica-9517.html&cfmId=CFM-002350",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw46bea521/images/products/9517/9517.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 11899,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw46bea521/images/products/9517/9517.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "oftagen|5ml|5|bio:unknown|brand:unknown|var:compuesto|form:ophthalmic",
+   "cfmId": "CFM-002350",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betametasona|1ml|5",
+   "canonicalName": "Betametasona 4mg/1ml 5 Ampollas Inyectables",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Betametasona 4mg/1ml 5 Ampollas Inyectables",
+     "channels": {
+      "store": 11990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=betametasona%7C1ml%7C5&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D2880%26d_%3D1&cfmId=CFM-010033",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800061001212.jpg?v=6a96156677411",
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 11990,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800061001212.jpg?v=6a96156677411",
+   "presentationKey": "betametasona|1ml|5|bio:unknown|brand:unknown|form:injectable",
+   "cfmId": "CFM-010033",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "salicort|30ml|30",
+   "canonicalName": "Salicort x 30 ml Loción Capilar",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Salicort x 30 ml Loción Capilar",
+     "channels": {
+      "store": 12232,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 12232
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=salicort%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fsalicort-x-30-ml-locion-capilar-84493.html&cfmId=CFM-008516",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw37d1bbd9/images/products/84493/84493.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 12232,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw37d1bbd9/images/products/84493/84493.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "salicort|30ml|30|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-008516",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "prodelb|2mg|30",
+   "canonicalName": "Prodel-B Betametasona 2 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Prodel-B Betametasona 2 mg 30 Comprimidos",
+     "channels": {
+      "store": 12290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 12290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=prodelb%7C2mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fprodel-b-betametasona-2-mg-30-comprimidos%2F41084.html&cfmId=CFM-008024",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2dff0397/images/large/41084-prodel-b-betametasona-2-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 12290,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2dff0397/images/large/41084-prodel-b-betametasona-2-mg-30-comprimidos.jpg",
+   "presentationKey": "prodelb|2mg|30|bio:unknown|brand:unknown|var:betametasona|form:solid-oral",
+   "cfmId": "CFM-008024",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "clofexan|120ml",
+   "canonicalName": "Clofexan Jarabe 120ml",
+   "laboratory": "Bagó",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Clofexan Jarabe 120ml",
+     "channels": {
+      "store": 12490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 12490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=clofexan%7C120ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantihistaminicos%2Fclofexan-jarabe-120ml&cfmId=CFM-008029",
+     "imageUrl": "https://farmacia.araucomed.com/5715-home_default/clofexan-jarabe-120ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 12490,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/5715-home_default/clofexan-jarabe-120ml.jpg",
+   "presentationKey": "clofexan|120ml|bio:unknown|brand:bago|form:fluid-oral",
+   "cfmId": "CFM-008029",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betacort|30ml",
+   "canonicalName": "Betacort cassará betametasona 0,5 mg/mL solución oral para gotas 30 mL",
+   "laboratory": "D&M PHARMA",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Betacort cassará betametasona 0,5 mg/mL solución oral para gotas 30 mL",
+     "channels": {
+      "store": 17200,
+      "online": 12900,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 12900
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=betacort%7C30ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fbetacort-betametasona-ml-solucion-gotas-30-ml-ch6164-1%2Fp&cfmId=CFM-000077",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158436/CH6164-1.png?v=638645077705270000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 12900,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158436/CH6164-1.png?v=638645077705270000",
+   "presentationKey": "betacort|30ml|bio:false|brand:dmpharma|var:cassara|form:fluid-oral",
+   "cfmId": "CFM-000077",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "creminem|10mg",
+   "canonicalName": "Creminem?B Clotrimazol 10 mg Betametasona 0,5 mg Crema Dérmica 15 gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Creminem?B Clotrimazol 10 mg Betametasona 0,5 mg Crema Dérmica 15 gr",
+     "channels": {
+      "store": 13090,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13090
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=creminem%7C10mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcreminem-b-clotrimazol-10-mg-betametasona-0-5-mg-crema-dermica-15-gr%2F193079.html&cfmId=CFM-009466",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfdb5b607/images/large/193079.1.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 13090,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfdb5b607/images/large/193079.1.jpg",
+   "presentationKey": "creminem|10mg|bio:unknown|brand:unknown|var:b|form:topical",
+   "cfmId": "CFM-009466",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "contralmor|6",
+   "canonicalName": "Contralmor x 6 Supositorios",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Contralmor x 6 Supositorios",
+     "channels": {
+      "store": 13342,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13342
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=contralmor%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcontralmor-x-6-supositorios-9836.html&cfmId=CFM-004588",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa6437f90/images/products/9836/9836.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 13342,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa6437f90/images/products/9836/9836.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "contralmor|6|bio:unknown|brand:unknown|form:suppository",
+   "cfmId": "CFM-004588",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "arzimol|20mg",
+   "canonicalName": "Arzimol B ácido fusídico 20 mg betametasona 1 mg crema tópica 15 g",
+   "laboratory": "RAFFO",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Arzimol B ácido fusídico 20 mg betametasona 1 mg crema tópica 15 g",
+     "channels": {
+      "store": 17800,
+      "online": 13350,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13350
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=arzimol%7C20mg&url=https%3A%2F%2Fwww.drsimi.cl%2Farzimol-ac-fusidico-betametasona-crema-topica-ch6103-1%2Fp&cfmId=CFM-007369",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157605/CH6103-1.jpg?v=638279651787070000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 13350,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157605/CH6103-1.jpg?v=638279651787070000",
+   "presentationKey": "arzimol|20mg|bio:false|brand:raffo|var:b|form:topical",
+   "cfmId": "CFM-007369",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cidoten|1ml",
+   "canonicalName": "Cidoten 4 mg/1 mL x 1 Ampolla Solucion Inyectable",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Cidoten 4 mg/1 mL x 1 Ampolla Solucion Inyectable",
+     "channels": {
+      "store": 13683,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13683
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cidoten%7C1ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcidoten-4-mg-1-ml-x-1-ampolla-solucion-inyectable-1614.html&cfmId=CFM-009446",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw59e08480/images/products/1614/1614.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 13683,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw59e08480/images/products/1614/1614.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "cidoten|1ml|bio:unknown|brand:unknown|form:injectable",
+   "cfmId": "CFM-009446",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cam|30",
+   "canonicalName": "Cam Betametasona / Dexclorfenamina 30 Comprimidos",
+   "laboratory": "Cam",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Cam Betametasona / Dexclorfenamina 30 Comprimidos",
+     "channels": {
+      "store": 15799,
+      "online": 13903,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13903
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=cam%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcam-betametasona-dexclorfenamina-30-comprimidos%3Fdefault_sku%3D430954&cfmId=CFM-013653",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/57587/small/430954.jpg?1641329164",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 13903,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/57587/small/430954.jpg?1641329164",
+   "presentationKey": "cam|30|bio:unknown|brand:cam|combo:dexclorfenamina|form:solid-oral",
+   "cfmId": "CFM-013653",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "arzimolb|15",
+   "canonicalName": "Arzimol-B crema x 15 gramos.",
+   "laboratory": "Raffo",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Arzimol-B crema x 15 gramos.",
+     "channels": {
+      "store": 13990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=arzimolb%7C15&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Farzimol-b-crema-15g&cfmId=CFM-000569",
+     "imageUrl": "https://farmacia.araucomed.com/11183-home_default/arzimol-b-crema-15g.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 13990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/11183-home_default/arzimol-b-crema-15g.jpg",
+   "presentationKey": "arzimolb|15|bio:unknown|brand:raffo|form:topical",
+   "cfmId": "CFM-000569",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betavol|2mg",
+   "canonicalName": "Betavol 5 + 2 mg/mL x 1...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Betavol 5 + 2 mg/mL x 1...",
+     "channels": {
+      "store": 13990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=betavol%7C2mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F32594-betavol-5-2-mg-ml-inyectable.html&cfmId=CFM-009293",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 13990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "betavol|2mg|bio:unknown|brand:unknown",
+   "cfmId": "CFM-009293",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cam|120ml",
+   "canonicalName": "Cam Jarabe 120 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Cam Jarabe 120 mL",
+     "channels": {
+      "store": 13990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cam%7C120ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24604-cam-jarabe-sin-azuc-x-120-ml.html&cfmId=CFM-009757",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 13990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "cam|120ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-009757",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "oftasona|10ml|10",
+   "canonicalName": "Oftasona P solución oftálmica x10ml",
+   "laboratory": "Saval",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Oftasona P solución oftálmica x10ml",
+     "channels": {
+      "store": 14090,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14090
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=oftasona%7C10ml%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Foftalmicos%2Foftasona-p-solucion-oftalmica-x10ml&cfmId=CFM-010618",
+     "imageUrl": "https://farmacia.araucomed.com/5433-home_default/oftasona-p-solucion-oftalmica-x10ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 14090,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/5433-home_default/oftasona-p-solucion-oftalmica-x10ml.jpg",
+   "presentationKey": "oftasona|10ml|10|bio:unknown|brand:saval|var:p|form:ophthalmic",
+   "cfmId": "CFM-010618",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "oftasona|3000mg|3",
+   "canonicalName": "Oftasona N x 3 g Ung&uuml;ento Oftalmico",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Oftasona N x 3 g Ung&uuml;ento Oftalmico",
+     "channels": {
+      "store": 14092,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14092
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=oftasona%7C3000mg%7C3&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Foftasona-n-x-3-g-unguento-oftalmico-9153.html&cfmId=CFM-008390",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb836b6fc/images/products/9153/9153.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 14092,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb836b6fc/images/products/9153/9153.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "oftasona|3000mg|3|bio:unknown|brand:unknown|var:n|form:ophthalmic",
+   "cfmId": "CFM-008390",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "arzimol|15000mg",
+   "canonicalName": "Arzimol B Ácido Fusídico / Betametasona Crema Tópica 15g",
+   "laboratory": "Arzimol B",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Arzimol B Ácido Fusídico / Betametasona Crema Tópica 15g",
+     "channels": {
+      "store": 23599,
+      "online": 20767,
+      "cmr": null,
+      "sbpay": 14159,
+      "effective": 14159
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=arzimol%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Farzimol-b-acido-fusidico-betametasona-crema-topica-15g%3Fdefault_sku%3D579623&cfmId=CFM-000570",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/73694/small/579623.jpg?1653330485",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 14159,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/73694/small/579623.jpg?1653330485",
+   "presentationKey": "arzimol|15000mg|bio:unknown|brand:arzimolb|combo:betametasona|form:topical",
+   "cfmId": "CFM-000570",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oftasona|10ml",
+   "canonicalName": "Oftasona P (betametasona)  01%  Solucion Oftalmica 10ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Oftasona P (betametasona)  01%  Solucion Oftalmica 10ml",
+     "channels": {
+      "store": 14390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=oftasona%7C10ml&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D17976%26d_%3D1&cfmId=CFM-010621",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060003132.jpg?v=6a96156676f8d",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 14390,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800060003132.jpg?v=6a96156676f8d",
+   "presentationKey": "oftasona|10ml|bio:unknown|brand:unknown|var:p|form:ophthalmic",
+   "cfmId": "CFM-010621",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betacort|30ml|30",
+   "canonicalName": "Betacort solución para Gotas orales 0,5 mg/mL x 30 mL",
+   "laboratory": "Pablo Cassara",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Betacort solución para Gotas orales 0,5 mg/mL x 30 mL",
+     "channels": {
+      "store": 14395,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14395
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=betacort%7C30ml%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fbetacort-solucion-para-gotas-orales-0-5-mg-ml-x-30-ml%3F_pos%3D6%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-001663",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/betacort-solucion-para-gotas-orales-05-mgml-x-30-ml-pablo-cassara-463886.jpg?v=1725100335",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 14395,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/betacort-solucion-para-gotas-orales-05-mgml-x-30-ml-pablo-cassara-463886.jpg?v=1725100335",
+   "presentationKey": "betacort|30ml|30|bio:unknown|brand:pablocassara|var:orales|form:fluid-oral",
+   "cfmId": "CFM-001663",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cam|120ml",
+   "canonicalName": "Cam Betametasona / Dexclorfenamina Jarabe 120ml",
+   "laboratory": "Cam",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Cam Betametasona / Dexclorfenamina Jarabe 120ml",
+     "channels": {
+      "store": 16499,
+      "online": 14519,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14519
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=cam%7C120ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcam-jarabe%3Fdefault_sku%3D430950&cfmId=CFM-009757",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/57586/small/430950.jpg?1641329164",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 14519,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/57586/small/430950.jpg?1641329164",
+   "presentationKey": "cam|120ml|bio:unknown|brand:cam|combo:dexclorfenamina|form:fluid-oral",
+   "cfmId": "CFM-009757",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oftasona|10ml|10",
+   "canonicalName": "Oftasona P 0,1% x 10 mL Solucion Oftalmica",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Oftasona P 0,1% x 10 mL Solucion Oftalmica",
+     "channels": {
+      "store": 14767,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14767
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=oftasona%7C10ml%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Foftasona-p-0-1-x-10-ml-solucion-oftalmica-8282.html&cfmId=CFM-010618",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6b864ead/images/products/8282/8282.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 14767,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6b864ead/images/products/8282/8282.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "oftasona|10ml|10|bio:true|brand:unknown|var:p|form:ophthalmic",
+   "cfmId": "CFM-010618",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cam|120ml",
+   "canonicalName": "Cam Betametasona 2 mg Jarabe 120 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Cam Betametasona 2 mg Jarabe 120 mL",
+     "channels": {
+      "store": 14790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cam%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcam-betametasona-2-mg-jarabe-120-ml%2F1122.html&cfmId=CFM-009757",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw69bc6892/images/large/1122-cam-jarabe-120-ml-betametasona-2-mg.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 14790,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw69bc6892/images/large/1122-cam-jarabe-120-ml-betametasona-2-mg.jpg",
+   "presentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-009757",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betacort|30ml|30",
+   "canonicalName": "Betacort 0,5mg/ml gotas x 30 ml.",
+   "laboratory": "Pablo Cassara",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Betacort 0,5mg/ml gotas x 30 ml.",
+     "channels": {
+      "store": 14990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=betacort%7C30ml%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fbetacort-05mg-ml-x30ml&cfmId=CFM-001663",
+     "imageUrl": "https://farmacia.araucomed.com/8845-home_default/betacort-05mg-ml-x30ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 14990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/8845-home_default/betacort-05mg-ml-x30ml.jpg",
+   "presentationKey": "betacort|30ml|30|bio:unknown|brand:pablocassara|form:fluid-oral",
+   "cfmId": "CFM-001663",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cobefen|2mg|30",
+   "canonicalName": "Cobefen Betametasona 2 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Cobefen Betametasona 2 mg 30 Comprimidos",
+     "channels": {
+      "store": 15190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15190
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cobefen%7C2mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcobefen-betametasona-2-mg-30-comprimidos%2F12146.html&cfmId=CFM-011763",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3d75272a/images/large/12146-cobefen-comprimido-30-unidades-betametasona-2-mg.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 15190,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3d75272a/images/large/12146-cobefen-comprimido-30-unidades-betametasona-2-mg.jpg",
+   "presentationKey": "cobefen|2mg|30|bio:unknown|brand:unknown|var:betametasona|form:solid-oral",
+   "cfmId": "CFM-011763",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oftasonap|10ml|10",
+   "canonicalName": "Oftasona-P Solución Oftálmica 0,1% x 10 mL",
+   "laboratory": "SAVAL",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Oftasona-P Solución Oftálmica 0,1% x 10 mL",
+     "channels": {
+      "store": 15195,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15195
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=oftasonap%7C10ml%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Foftasona-p-solucion-oft-betametasona%3F_pos%3D9%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-012697",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/oftasona-p-solucion-oftalmica-01-x-10-ml-saval-617112.jpg?v=1692989843",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 15195,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/oftasona-p-solucion-oftalmica-01-x-10-ml-saval-617112.jpg?v=1692989843",
+   "presentationKey": "oftasonap|10ml|10|bio:unknown|brand:saval|form:ophthalmic",
+   "cfmId": "CFM-012697",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betavol|1ml",
+   "canonicalName": "Betavol Suspensión Inyectable Jeringa y Ampolla 1 ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Betavol Suspensión Inyectable Jeringa y Ampolla 1 ml",
+     "channels": {
+      "store": 15418,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15418
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=betavol%7C1ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fbetavol-suspension-inyectable-jeringa-y-ampolla-1-ml-79711.html&cfmId=CFM-004729",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9f5500ba/images/products/79711/79711.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 15418,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9f5500ba/images/products/79711/79711.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "betavol|1ml|bio:unknown|brand:unknown|form:injectable",
+   "cfmId": "CFM-004729",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "clofexan|120ml",
+   "canonicalName": "Clofexan Betametasona 2 mg Jarabe 120 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Clofexan Betametasona 2 mg Jarabe 120 mL",
+     "channels": {
+      "store": 15590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clofexan%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclofexan-betametasona-2-mg-jarabe-120-ml%2F9098.html&cfmId=CFM-008029",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe769f35e/images/large/9098-clofexan-jarabe-120-ml-betametasona-2-mg.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 15590,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe769f35e/images/large/9098-clofexan-jarabe-120-ml-betametasona-2-mg.jpg",
+   "presentationKey": "clofexan|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-008029",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oftasonap|10ml|10",
+   "canonicalName": "Oftasona-P Betametasona 0,1 % x 10 ml",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Oftasona-P Betametasona 0,1 % x 10 ml",
+     "channels": {
+      "store": 15600,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15600
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=oftasonap%7C10ml%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Foftasona-p-betametasona-01-x-10-ml%2F&cfmId=CFM-012697",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/oftasona-p.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 15600,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/oftasona-p.jpg",
+   "presentationKey": "oftasonap|10ml|10|bio:true|brand:unknown|var:betametasona",
+   "cfmId": "CFM-012697",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cam|2mg|30",
+   "canonicalName": "Cam Betametasona 2 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Cam Betametasona 2 mg 30 Comprimidos",
+     "channels": {
+      "store": 15640,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15640
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cam%7C2mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcam-betametasona-2-mg-30-comprimidos%2F1121.html&cfmId=CFM-009758",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw80916021/images/large/1121-cam-comprimido-30-unidades-betametasona-2-mg.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 15640,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw80916021/images/large/1121-cam-comprimido-30-unidades-betametasona-2-mg.jpg",
+   "presentationKey": "cam|2mg|30|bio:unknown|brand:unknown|var:betametasona|form:solid-oral",
+   "cfmId": "CFM-009758",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "labosalic|20ml|20",
+   "canonicalName": "Labosalic Locion x 20 ml.",
+   "laboratory": "ITF-Labomed",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Labosalic Locion x 20 ml.",
+     "channels": {
+      "store": 15990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=labosalic%7C20ml%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Flabosalic-locion-20ml&cfmId=CFM-013227",
+     "imageUrl": "https://farmacia.araucomed.com/3361-home_default/labosalic-locion-20ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 15990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/3361-home_default/labosalic-locion-20ml.jpg",
+   "presentationKey": "labosalic|20ml|20|bio:unknown|brand:itflabomed|form:topical",
+   "cfmId": "CFM-013227",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betametasona|4mg|5",
+   "canonicalName": "Betametasona 4mg/ml Inyectable 5 Ampollas",
+   "laboratory": "Betametasona",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Betametasona 4mg/ml Inyectable 5 Ampollas",
+     "channels": {
+      "store": 18699,
+      "online": 16455,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16455
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=betametasona%7C4mg%7C5&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbetametasona-4mg-ml-inyectable-5-ampollas%3Fdefault_sku%3D300865&cfmId=CFM-009450",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/52352/small/300865.jpg?1641329601",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 16455,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/52352/small/300865.jpg?1641329601",
+   "presentationKey": "betametasona|4mg|5|bio:unknown|brand:betametasona|form:injectable",
+   "cfmId": "CFM-009450",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cidoten|1ml|4",
+   "canonicalName": "Cidoten Ampollas x 4 mg / 1 mL x 1 ampolla",
+   "laboratory": "MSD CHILE",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Cidoten Ampollas x 4 mg / 1 mL x 1 ampolla",
+     "channels": {
+      "store": 16490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=cidoten%7C1ml%7C4&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fcidoten-ampollas-x-4-mg-x-1%3F_pos%3D5%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-009756",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cidoten-ampollas-x-4-mg-x-1-msd-chile-997843.jpg?v=1692989553",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 16490,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/cidoten-ampollas-x-4-mg-x-1-msd-chile-997843.jpg?v=1692989553",
+   "presentationKey": "cidoten|1ml|4|bio:unknown|brand:msdchile|form:injectable",
+   "cfmId": "CFM-009756",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cobefen|120ml",
+   "canonicalName": "Cobefen Betametasona 2 mg Jarabe 120 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Cobefen Betametasona 2 mg Jarabe 120 mL",
+     "channels": {
+      "store": 16890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cobefen%7C120ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcobefen-betametasona-2-mg-jarabe-120-ml%2F12147.html&cfmId=CFM-010018",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw60d8d9ad/images/large/12147-cobefen-jarabe-120-ml-betametasona-2-mg.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 16890,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw60d8d9ad/images/large/12147-cobefen-jarabe-120-ml-betametasona-2-mg.jpg",
+   "presentationKey": "cobefen|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-010018",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "oftasonap|10ml",
+   "canonicalName": "Oftasona-P betametasona 0,1 % solución oftálmica 10 mL",
+   "laboratory": "SAVAL",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Oftasona-P betametasona 0,1 % solución oftálmica 10 mL",
+     "channels": {
+      "store": 16920,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16920
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=oftasonap%7C10ml&url=https%3A%2F%2Fwww.drsimi.cl%2Fbetametasona-ch0196%2Fp&cfmId=CFM-007827",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160354/CH0196-01.jpg?v=639041043765330000",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 16920,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160354/CH0196-01.jpg?v=639041043765330000",
+   "presentationKey": "oftasonap|10ml|bio:true|brand:saval|var:betametasona|form:ophthalmic",
+   "cfmId": "CFM-007827",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "donomix|15000mg|15",
+   "canonicalName": "Donomix x 15 g Crema Tópica",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Donomix x 15 g Crema Tópica",
+     "channels": {
+      "store": 16979,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16979
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=donomix%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdonomix-x-15-g-crema-topica-1088.html&cfmId=CFM-003740",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw184899ec/images/products/1088/1088.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 16979,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw184899ec/images/products/1088/1088.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "donomix|15000mg|15|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-003740",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "mixgen",
+   "canonicalName": "Mixgen Crema dérmica 15 gramos.",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Mixgen Crema dérmica 15 gramos.",
+     "channels": {
+      "store": 16990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=mixgen&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Fmixgen-crema-dermica-15g&cfmId=CFM-006840",
+     "imageUrl": "https://farmacia.araucomed.com/6617-home_default/mixgen-crema-dermica-15g.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 16990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/6617-home_default/mixgen-crema-dermica-15g.jpg",
+   "presentationKey": "mixgen|bio:unknown|brand:chile|var:dermica|form:topical",
+   "cfmId": "CFM-006840",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "betacort|30ml",
+   "canonicalName": "Betacort 0.5 mg/ml 30 ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Betacort 0.5 mg/ml 30 ml",
+     "channels": {
+      "store": 16990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=betacort%7C30ml&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102599-betacort-05-mg-ml-30-ml.html&cfmId=CFM-000077",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 16990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "betacort|30ml|bio:unknown|brand:unknown",
+   "cfmId": "CFM-000077",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "oftasonap|10ml",
+   "canonicalName": "Oftasona-P Betametasona 0.1% Solución Oftálmica 10ml",
+   "laboratory": "Oftasona-P",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Oftasona-P Betametasona 0.1% Solución Oftálmica 10ml",
+     "channels": {
+      "store": 19699,
+      "online": 17335,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 17335
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=oftasonap%7C10ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Foftasona-p-betametasona-0-1-solucion-oftalmica-10ml%3Fdefault_sku%3D2973240&cfmId=CFM-007827",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/131933/small/2973240_1.jpg?1736193546",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 17335,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/131933/small/2973240_1.jpg?1736193546",
+   "presentationKey": "oftasonap|10ml|bio:unknown|brand:oftasonap|var:betametasona|form:ophthalmic",
+   "cfmId": "CFM-007827",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "fusimed|15000mg|15",
+   "canonicalName": "Fusimed B Ácido Fusí­dico/Betametasona Emulsión Tópica x 15g",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Fusimed B Ácido Fusí­dico/Betametasona Emulsión Tópica x 15g",
+     "channels": {
+      "store": 17900,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 17900
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=fusimed%7C15000mg%7C15&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ffusimed-b-emulsion-topica-15-gr-cassara%2F&cfmId=CFM-008566",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/04/fusimed-b-emulsion-topica-15g.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 17900,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/04/fusimed-b-emulsion-topica-15g.jpg",
+   "presentationKey": "fusimed|15000mg|15|bio:unknown|brand:unknown|combo:betametasona|form:fluid-oral",
+   "cfmId": "CFM-008566",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betavol",
+   "canonicalName": "Betavol 5 Betametasona Inyectable 1 Ampolla",
+   "laboratory": "Betavol",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Betavol 5 Betametasona Inyectable 1 Ampolla",
+     "channels": {
+      "store": 20699,
+      "online": 18215,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 18215
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=betavol&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fbetavol-5-2mg-ml-x-1-ampolla%3Fdefault_sku%3D3403182&cfmId=CFM-010176",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/80021/small/3403182.jpg?1663206118",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 18215,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/80021/small/3403182.jpg?1663206118",
+   "presentationKey": "betavol|bio:unknown|brand:betavol|var:betametasona|form:injectable",
+   "cfmId": "CFM-010176",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "mixgen|15000mg|15",
+   "canonicalName": "Mixgen Crema x 15 g",
+   "laboratory": "LAB CHILE",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Mixgen Crema x 15 g",
+     "channels": {
+      "store": 18790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 18790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=mixgen%7C15000mg%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmixgen-crema-x-15-g%3F_pos%3D10%26_psq%3Dbetametasona%26_psid%3De2582157a%26_ss%3De&cfmId=CFM-006839",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/mixgen-crema-x-15-g-lab-chile-435161.jpg?v=1692989544",
+     "fetchedAt": "2026-08-31T23:59:34.995Z"
+    }
+   ],
+   "bestPrice": 18790,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/mixgen-crema-x-15-g-lab-chile-435161.jpg?v=1692989544",
+   "presentationKey": "mixgen|15000mg|15|bio:unknown|brand:chile|form:topical",
+   "cfmId": "CFM-006839",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "coritex|30ml|30",
+   "canonicalName": "Coritex Forte 1mg/ml x 30 ml.",
+   "laboratory": "Bagó",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Coritex Forte 1mg/ml x 30 ml.",
+     "channels": {
+      "store": 18990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 18990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=coritex%7C30ml%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fcoritex-forte-1mg-ml-x50ml&cfmId=CFM-001341",
+     "imageUrl": "https://farmacia.araucomed.com/12046-home_default/coritex-forte-1mg-ml-x50ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 18990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/12046-home_default/coritex-forte-1mg-ml-x50ml.jpg",
+   "presentationKey": "coritex|30ml|30|bio:unknown|brand:bago|var:forte",
+   "cfmId": "CFM-001341",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "arzimol",
+   "canonicalName": "Arzimol B Crema Lab Lazar",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Arzimol B Crema Lab Lazar",
+     "channels": {
+      "store": 18990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 18990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=arzimol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103815-arzimol-b-crema-lab-lazar.html&cfmId=CFM-001076",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    }
+   ],
+   "bestPrice": 18990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "arzimol|bio:unknown|brand:lazar|var:b|form:topical",
+   "cfmId": "CFM-001076",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "oftagen|5ml",
+   "canonicalName": "Oftagen Compuesto Gentamicina / Betametasona Solución Oftálmica 5ml",
+   "laboratory": "Oftagen",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Oftagen Compuesto Gentamicina / Betametasona Solución Oftálmica 5ml",
+     "channels": {
+      "store": 21799,
+      "online": 19183,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 19183
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=oftagen%7C5ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Foftagen-compuesto-gentamicina-betametasona-solucion-oftalmica-5ml%3Fdefault_sku%3D2973223&cfmId=CFM-006460",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/131913/small/2973223_1.jpg?1736193303",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 19183,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/131913/small/2973223_1.jpg?1736193303",
+   "presentationKey": "oftagen|5ml|bio:unknown|brand:oftagen|combo:betametasona|form:ophthalmic",
+   "cfmId": "CFM-006460",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "mixgen|15000mg|15",
+   "canonicalName": "Mixgen x 15 g Crema Tópica",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Mixgen x 15 g Crema Tópica",
+     "channels": {
+      "store": 19599,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 19599
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=mixgen%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmixgen-x-15-g-crema-topica-633.html&cfmId=CFM-006839",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw63125081/images/products/633/633.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 19599,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw63125081/images/products/633/633.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "mixgen|15000mg|15|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-006839",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "clofexan|2mg|30",
+   "canonicalName": "Clofexan Betametasona 2 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Clofexan Betametasona 2 mg 30 Comprimidos",
+     "channels": {
+      "store": 19690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 19690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=clofexan%7C2mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fclofexan-betametasona-2-mg-30-comprimidos%2F9099.html&cfmId=CFM-008030",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0bd59375/images/large/9099-clofexan-comprimido-30-unidades-betametasona-2-mg.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 19690,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0bd59375/images/large/9099-clofexan-comprimido-30-unidades-betametasona-2-mg.jpg",
+   "presentationKey": "clofexan|2mg|30|bio:unknown|brand:unknown|var:betametasona|form:solid-oral",
+   "cfmId": "CFM-008030",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "fusimedb|50",
+   "canonicalName": "Fusimed-b emulsión x 50 gramos.",
+   "laboratory": "D&M Pharma",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Fusimed-b emulsión x 50 gramos.",
+     "channels": {
+      "store": 20990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 20990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=fusimedb%7C50&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fantibioticos%2Ffusimed-b-emulsion-50g&cfmId=CFM-010804",
+     "imageUrl": "https://farmacia.araucomed.com/6783-home_default/fusimed-b-emulsion-50g.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 20990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/6783-home_default/fusimed-b-emulsion-50g.jpg",
+   "presentationKey": "fusimedb|50|bio:unknown|brand:dmpharma|var:emulsion|form:fluid-oral",
+   "cfmId": "CFM-010804",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "donomix|15000mg",
+   "canonicalName": "Donomix Betametasona / Clotrimazol Crema Dérmica 15g",
+   "laboratory": "Donomix",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Donomix Betametasona / Clotrimazol Crema Dérmica 15g",
+     "channels": {
+      "store": 23999,
+      "online": 21119,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 21119
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=donomix%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdonomix-betametasona-clotrimazol-crema-dermica-15g%3Fdefault_sku%3D431305&cfmId=CFM-003655",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27580/small/431305.jpg?1641479727",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 21119,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27580/small/431305.jpg?1641479727",
+   "presentationKey": "donomix|15000mg|bio:unknown|brand:donomix|combo:clotrimazol|form:topical",
+   "cfmId": "CFM-003655",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cidoten|4mg",
+   "canonicalName": "Cidoten Betametasona 4 mg 1 Ampolla",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Cidoten Betametasona 4 mg 1 Ampolla",
+     "channels": {
+      "store": 21440,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 21440
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cidoten%7C4mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcidoten-betametasona-4-mg-1-ampolla%2F23013.html&cfmId=CFM-009755",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwea3fa7fe/images/large/23013-cidoten-betametasona-4-mg-1-ampolla.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 21440,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwea3fa7fe/images/large/23013-cidoten-betametasona-4-mg-1-ampolla.jpg",
+   "presentationKey": "cidoten|4mg|bio:unknown|brand:unknown|var:betametasona|form:injectable",
+   "cfmId": "CFM-009755",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betacort|30ml",
+   "canonicalName": "Betacort Cassara Betametasona 0,5 mg / mL Solucion Oral para Gotas 30 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Betacort Cassara Betametasona 0,5 mg / mL Solucion Oral para Gotas 30 mL",
+     "channels": {
+      "store": 21590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 21590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=betacort%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fbetacort-cassara-betametasona-0-5-mg-ml-solucion-oral-para-gotas-30-ml%2F296197.html&cfmId=CFM-000077",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw96bf7488/images/large/296197-betacort-cassara-betametasona-05-mg--ml-solucion-oral-para-gotas-30-ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.989Z"
+    }
+   ],
+   "bestPrice": 21590,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw96bf7488/images/large/296197-betacort-cassara-betametasona-05-mg--ml-solucion-oral-para-gotas-30-ml.jpg",
+   "presentationKey": "betacort|30ml|bio:unknown|brand:unknown|var:cassara|form:fluid-oral",
+   "cfmId": "CFM-000077",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "coritex|30ml|30",
+   "canonicalName": "Coritex Forte Betametasona 1mg/ml x 30ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Coritex Forte Betametasona 1mg/ml x 30ml",
+     "channels": {
+      "store": 21980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 21980
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=coritex%7C30ml%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fcoritex-forte-solucion-betametasona-0-5-mg-o-ml-gotas-por-30ml%2F&cfmId=CFM-001341",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/01/coritex-forte-x-30-ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    }
+   ],
+   "bestPrice": 21980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/01/coritex-forte-x-30-ml.jpg",
+   "presentationKey": "coritex|30ml|30|bio:unknown|brand:unknown|var:forte",
+   "cfmId": "CFM-001341",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "betacort|30ml",
+   "canonicalName": "Betacort Cassará (B) Betametasona 0.5mg/ml Oral Gotas 30ml",
+   "laboratory": "Betacort Cassará",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Betacort Cassará (B) Betametasona 0.5mg/ml Oral Gotas 30ml",
+     "channels": {
+      "store": 26099,
+      "online": 22967,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 22967
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=betacort%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fprincipio-activo-betametasona%3Fdefault_sku%3D851156&cfmId=CFM-000077",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/64219/small/851156.jpg?1641328785",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 22967,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/64219/small/851156.jpg?1641328785",
+   "presentationKey": "betacort|30ml|bio:unknown|brand:betacortcassara|var:cassara|form:fluid-oral",
+   "cfmId": "CFM-000077",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cidoten|30ml|30",
+   "canonicalName": "Cidoten Gotas x 30 ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Cidoten Gotas x 30 ml",
+     "channels": {
+      "store": 22990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 22990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cidoten%7C30ml%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25967-cidoten-gotas-x-30.html&cfmId=CFM-009751",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    },
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Cidoten 0,5 Mg/ml (betametasona) Gotas X 30 Ml",
+     "channels": {
+      "store": 24090,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 24090
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=cidoten%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D20801%26d_%3D1&cfmId=CFM-009751",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800019010198.jpg?v=6a961566772f4",
+     "fetchedAt": "2026-08-31T23:59:34.996Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Cidoten 0,5 mg/mL x 30 mL Solución Oral Para Gotas",
+     "channels": {
+      "store": 24918,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 24918
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cidoten%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcidoten-0-5-mg-ml-x-30-ml-solucion-oral-para-gotas-1601.html&cfmId=CFM-009751",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw132886db/images/products/1601/1601.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 22990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800019010198.jpg?v=6a961566772f4",
+   "presentationKey": "cidoten|30ml|30|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-009751",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "coritex|30ml|30",
+   "canonicalName": "Coritex Forte 1 mg/mL x 30 mL Solucion para Gotas Orales",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Coritex Forte 1 mg/mL x 30 mL Solucion para Gotas Orales",
+     "channels": {
+      "store": 31869,
+      "online": null,
+      "cmr": 23902,
+      "sbpay": null,
+      "effective": 23902
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=coritex%7C30ml%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcoritex-forte-1-mg-ml-x-30-ml-solucion-para-gotas-orales-92086.html&cfmId=CFM-001341",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdf23e39e/images/products/92086/92086.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 23902,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwdf23e39e/images/products/92086/92086.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "coritex|30ml|30|bio:unknown|brand:unknown|var:forte|form:fluid-oral",
+   "cfmId": "CFM-001341",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "dacam|3mg",
+   "canonicalName": "Dacam Rapi Lento 3 mg/mL 1 Suspensión Inyectable",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Dacam Rapi Lento 3 mg/mL 1 Suspensión Inyectable",
+     "channels": {
+      "store": 24496,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 24496
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=dacam%7C3mg&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdacam-rapi-lento-3-mg-ml-1-suspension-inyectable-10904.html&cfmId=CFM-009292",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw439ebe9e/images/products/10904/10904.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 24496,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw439ebe9e/images/products/10904/10904.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "dacam|3mg|bio:unknown|brand:unknown|var:rapi|form:injectable",
+   "cfmId": "CFM-009292",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "fusimedb",
+   "canonicalName": "Fusimed-B Betametasona 0,1% Emulsión 50 gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Fusimed-B Betametasona 0,1% Emulsión 50 gr",
+     "channels": {
+      "store": 24980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 24980
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=fusimedb&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ffusimed-b-acido-fusidico-2-betametasona-01-emulsion-topica-50-gr-cassara%2F&cfmId=CFM-009658",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/04/fusimed-B-emulsion-50-g.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.994Z"
+    },
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Fusimed-B Betametasona 0,1% Emulsión 50 gr",
+     "channels": {
+      "store": 34390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 34390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=fusimedb&url=https%3A%2F%2Fwww.cruzverde.cl%2Ffusimed-b-betametasona-0-1-emulsion-50-gr%2F261455.html&cfmId=CFM-009658",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfd725290/images/large/261455-fusimed-b-betametasona-01-emulsion-50-gr.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 24980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/04/fusimed-B-emulsion-50-g.jpg",
+   "presentationKey": "fusimedb|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-009658",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "dacam|3mg",
+   "canonicalName": "Dacam Rapi lento 3mg/ml x 1 ampolla + Jeringa.",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Dacam Rapi lento 3mg/ml x 1 ampolla + Jeringa.",
+     "channels": {
+      "store": 26890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 26890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=dacam%7C3mg&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fcorticoides%2Fdacam-rapi-lento-3mg-ml-x1ampjeringa&cfmId=CFM-009292",
+     "imageUrl": "https://farmacia.araucomed.com/3344-home_default/dacam-rapi-lento-3mg-ml-x1ampjeringa.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.993Z"
+    }
+   ],
+   "bestPrice": 26890,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/3344-home_default/dacam-rapi-lento-3mg-ml-x1ampjeringa.jpg",
+   "presentationKey": "dacam|3mg|bio:unknown|brand:chile|var:rapi|form:injectable",
+   "cfmId": "CFM-009292",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cidoten",
+   "canonicalName": "Cidoten Rapi-Lento x 1 Vial Suspension Inyectable",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Cidoten Rapi-Lento x 1 Vial Suspension Inyectable",
+     "channels": {
+      "store": 27236,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 27236
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=cidoten&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fcidoten-rapi-lento-x-1-vial-suspension-inyectable-86924.html&cfmId=CFM-009753",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6c1c4ad3/images/products/86924/86924.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 27236,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6c1c4ad3/images/products/86924/86924.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "cidoten|bio:unknown|brand:unknown|var:rapilento|form:injectable",
+   "cfmId": "CFM-009753",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "fucicort|15000mg|15",
+   "canonicalName": "Fucicort x 15 g Crema Dérmica",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Fucicort x 15 g Crema Dérmica",
+     "channels": {
+      "store": 27759,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 27759
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=fucicort%7C15000mg%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ffucicort-x-15-g-crema-dermica-7192.html&cfmId=CFM-012006",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9d220c55/images/products/7192/7192.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 27759,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9d220c55/images/products/7192/7192.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "fucicort|15000mg|15|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-012006",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "mixgen|15000mg",
+   "canonicalName": "Mixgen Betametasona / Gentamicina Crema Dérmica 15g",
+   "laboratory": "Mixgen",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Mixgen Betametasona / Gentamicina Crema Dérmica 15g",
+     "channels": {
+      "store": 32099,
+      "online": 28247,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 28247
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=mixgen%7C15000mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmixgen-betametasona-gentamicina-crema-dermica-15g%3Fdefault_sku%3D432112&cfmId=CFM-006841",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27603/small/432112.jpg?1641479725",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 28247,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27603/small/432112.jpg?1641479725",
+   "presentationKey": "mixgen|15000mg|bio:unknown|brand:mixgen|combo:gentamicina|form:topical",
+   "cfmId": "CFM-006841",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "labosalic|20ml",
+   "canonicalName": "Labosalic Betametasona 0,05% Loción 20 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Labosalic Betametasona 0,05% Loción 20 mL",
+     "channels": {
+      "store": 29440,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 29440
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=labosalic%7C20ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Flabosalic-betametasona-0-05-locion-20-ml%2F66107.html&cfmId=CFM-013912",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd8274bca/images/large/66107-labosalic-locion-20-ml-betametasona-005.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 29440,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd8274bca/images/large/66107-labosalic-locion-20-ml-betametasona-005.jpg",
+   "presentationKey": "labosalic|20ml|bio:unknown|brand:unknown|var:betametasona|form:topical",
+   "cfmId": "CFM-013912",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "dacam|3mg",
+   "canonicalName": "Dacam Rapi-Lento Betametasona 3mg/ml Inyectable 1 Jeringa",
+   "laboratory": "Dacam",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Dacam Rapi-Lento Betametasona 3mg/ml Inyectable 1 Jeringa",
+     "channels": {
+      "store": 33999,
+      "online": 29919,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 29919
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=dacam%7C3mg&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdacam-rapi-lento-betametasona-3mg-ml-inyectable-1-jeringa%3Fdefault_sku%3D434102&cfmId=CFM-009292",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/138614/small/434102.jpg?1743165578",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 29919,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/138614/small/434102.jpg?1743165578",
+   "presentationKey": "dacam|3mg|bio:unknown|brand:dacam|var:rapilento|form:injectable",
+   "cfmId": "CFM-009292",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "coritex|30ml",
+   "canonicalName": "Coritex Forte Betametasona 1mg/ml Oral Gotas 30ml",
+   "laboratory": "Coritex",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Coritex Forte Betametasona 1mg/ml Oral Gotas 30ml",
+     "channels": {
+      "store": 30299,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 30299
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": false,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=coritex%7C30ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fcoritex-forte-betametasona-1mg-ml-oral-gotas-30ml%3Fdefault_sku%3D585212&cfmId=CFM-003347",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/96760/small/585212.jpg?1691172100",
+     "fetchedAt": "2026-08-31T23:59:34.991Z"
+    }
+   ],
+   "bestPrice": 30299,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/96760/small/585212.jpg?1691172100",
+   "presentationKey": "coritex|30ml|bio:unknown|brand:coritex|var:forte|form:fluid-oral",
+   "cfmId": "CFM-003347",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "coritex|1mg",
+   "canonicalName": "Coritex Forte Betametasona 1 mg/ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Coritex Forte Betametasona 1 mg/ml",
+     "channels": {
+      "store": 33890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 33890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=coritex%7C1mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcoritex-forte-betametasona-1-mg-ml%2F550044.html&cfmId=CFM-001350",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4c5af941/images/large/550044-coritex-forte-betametasona-1-mgml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 33890,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4c5af941/images/large/550044-coritex-forte-betametasona-1-mgml.jpg",
+   "presentationKey": "coritex|1mg|bio:unknown|brand:unknown|var:forte",
+   "cfmId": "CFM-001350",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "cidoten|30ml",
+   "canonicalName": "Cidoten Betametasona 0,5 mg / mL Gotas 30 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Cidoten Betametasona 0,5 mg / mL Gotas 30 mL",
+     "channels": {
+      "store": 36190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 36190
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=cidoten%7C30ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Fcidoten-betametasona-0-5-mg-ml-gotas-30-ml%2F23012.html&cfmId=CFM-009754",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8af8e81e/images/large/23012-cidoten-gotas-30-ml-betametasona-05-mg-ml.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 36190,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8af8e81e/images/large/23012-cidoten-gotas-30-ml-betametasona-05-mg-ml.jpg",
+   "presentationKey": "cidoten|30ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "cfmId": "CFM-009754",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "daivobet|30000mg|30",
+   "canonicalName": "Daivobet x 30 g Gel Topico",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Daivobet x 30 g Gel Topico",
+     "channels": {
+      "store": 57745,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 57745
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=daivobet%7C30000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fdaivobet-x-30-g-gel-topico-79579.html&cfmId=CFM-012557",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd50bf8e9/images/products/79579/79579.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:59:34.992Z"
+    }
+   ],
+   "bestPrice": 57745,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd50bf8e9/images/products/79579/79579.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "daivobet|30000mg|30|bio:unknown|brand:unknown|form:topical",
+   "cfmId": "CFM-012557",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "daivobet|0.05mg",
+   "canonicalName": "Daivobet Betametasona 0,05 mg Unguento 30 gr",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Daivobet Betametasona 0,05 mg Unguento 30 gr",
+     "channels": {
+      "store": 78990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 78990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=daivobet%7C0.05mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fdaivobet-betametasona-0-05-mg-unguento-30-gr%2F272670.html&cfmId=CFM-012731",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd50b5fe6/images/large/272670-daivobet-betametasona-005-mg-unguento-30-gr.jpg",
+     "fetchedAt": "2026-08-31T23:59:34.990Z"
+    }
+   ],
+   "bestPrice": 78990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd50b5fe6/images/large/272670-daivobet-betametasona-005-mg-unguento-30-gr.jpg",
+   "presentationKey": "daivobet|0.05mg|bio:unknown|brand:unknown|var:betametasona|form:topical",
+   "cfmId": "CFM-012731",
+   "lexicalMatch": "exact"
+  }
+ ]
+}

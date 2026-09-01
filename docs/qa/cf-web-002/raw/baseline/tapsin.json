@@ -1,0 +1,4407 @@
+{
+ "query": "tapsin",
+ "apiUrl": "https://comparafarma-api.vercel.app",
+ "fetchedAt": "2026-08-31T23:57:18.339Z",
+ "results": [
+  {
+   "matchKey": "tapsin|6",
+   "canonicalName": "Tapsin Forte Tira x 6com",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Forte Tira x 6com",
+     "channels": {
+      "store": 400,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 400
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C6&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-forte-tira-x-6com&cfmId=CFM-000046",
+     "imageUrl": "https://farmacia.araucomed.com/9353-home_default/tapsin-forte-tira-x-6com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 400,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/9353-home_default/tapsin-forte-tira-x-6com.jpg",
+   "presentationKey": "tapsin|6|bio:unknown|brand:maver|var:forte|form:solid-oral",
+   "cfmId": "CFM-000046",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n|6",
+   "canonicalName": "Tapsin X 6 comprimidos Noche (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin X 6 comprimidos Noche (Maver)",
+     "channels": {
+      "store": 460,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 460
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7Cn%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-x-6-noche%2F&cfmId=CFM-000847",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/tapsin-6-noche.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 460,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/tapsin-6-noche.jpg",
+   "presentationKey": "tapsin|n|6|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000847",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|6",
+   "canonicalName": "Tapsin X 6 Comprimidos (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin X 6 Comprimidos (Maver)",
+     "channels": {
+      "store": 460,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 460
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-x-6-analgesico%2F&cfmId=CFM-000046",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/tapsin-tira.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 460,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/tapsin-tira.jpg",
+   "presentationKey": "tapsin|6|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000046",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|6",
+   "canonicalName": "Tapsin Forte X 6 comprimidos recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Forte X 6 comprimidos recubiertos",
+     "channels": {
+      "store": 480,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 480
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C6&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-forte-x-6-comprimidos-recubiertos%2F&cfmId=CFM-000046",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/tapsin-x-6.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 480,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/02/tapsin-x-6.jpg",
+   "presentationKey": "tapsin|6|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+   "cfmId": "CFM-000046",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin Periodo x30com.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Periodo x30com.",
+     "channels": {
+      "store": 500,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 500
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-periodo-x30com&cfmId=CFM-000102",
+     "imageUrl": "https://farmacia.araucomed.com/7083-home_default/tapsin-periodo-x30com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 500,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/7083-home_default/tapsin-periodo-x30com.jpg",
+   "presentationKey": "tapsin|30|bio:unknown|brand:maver|var:periodo|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|d|5",
+   "canonicalName": "Tapsin Limonada dia x5g",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Limonada dia x5g",
+     "channels": {
+      "store": 500,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 500
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C5000mg%7Cd%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fgripe-y-resfrio%2Ftapsin-limonada-dia-x5g&cfmId=CFM-000852",
+     "imageUrl": "https://farmacia.araucomed.com/4568-home_default/tapsin-limonada-dia-x5g.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 500,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/4568-home_default/tapsin-limonada-dia-x5g.jpg",
+   "presentationKey": "tapsin|5000mg|d|5|bio:unknown|brand:maver|var:limonada",
+   "cfmId": "CFM-000852",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|d|5",
+   "canonicalName": "Tapsin Plus Caliente Día limonada Antigripal x 5 gramos.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Plus Caliente Día limonada Antigripal x 5 gramos.",
+     "channels": {
+      "store": 550,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 550
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7Cd%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fgripe-y-resfrio%2Ftapsin-plus-limonada-dia-x5g&cfmId=CFM-000856",
+     "imageUrl": "https://farmacia.araucomed.com/3469-home_default/tapsin-plus-limonada-dia-x5g.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 550,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/3469-home_default/tapsin-plus-limonada-dia-x5g.jpg",
+   "presentationKey": "tapsin|d|5|bio:unknown|brand:maver|var:plus",
+   "cfmId": "CFM-000856",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|n|5",
+   "canonicalName": "Tapsin Plus limonada noche x5g",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Plus limonada noche x5g",
+     "channels": {
+      "store": 550,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 550
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C5000mg%7Cn%7C5&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fgripe-y-resfrio%2Ftapsin-plus-limonada-noche-x5g&cfmId=CFM-000841",
+     "imageUrl": "https://farmacia.araucomed.com/4256-home_default/tapsin-plus-limonada-noche-x5g.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 550,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/4256-home_default/tapsin-plus-limonada-noche-x5g.jpg",
+   "presentationKey": "tapsin|5000mg|n|5|bio:unknown|brand:maver|var:plus",
+   "cfmId": "CFM-000841",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|400mg|6",
+   "canonicalName": "Tapsin Analgésico Paracetamol 400 mg 6 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Analgésico Paracetamol 400 mg 6 Comprimidos",
+     "channels": {
+      "store": 590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C400mg%7C6&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-analgesico-paracetamol-400-mg-6-comprimidos%2F72119.html&cfmId=CFM-001449",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb6e88afd/images/large/72119-tapsin-analgesico-paracetamol-400-mg-600-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 590,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb6e88afd/images/large/72119-tapsin-analgesico-paracetamol-400-mg-600-comprimidos.jpg",
+   "presentationKey": "tapsin|400mg|6|bio:unknown|brand:unknown|var:analgesico|form:solid-oral",
+   "cfmId": "CFM-001449",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n",
+   "canonicalName": "Tapsin Sobre Noche (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Sobre Noche (Maver)",
+     "channels": {
+      "store": 590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7Cn&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-sobre-noche%2F&cfmId=CFM-000012",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/tapsin-caliente-noche.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 590,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/06/tapsin-caliente-noche.jpg",
+   "presentationKey": "tapsin|n|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-000012",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|d",
+   "canonicalName": "Tapsin Sobre Dia (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Sobre Dia (Maver)",
+     "channels": {
+      "store": 590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7Cd&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-sobre-dia%2F&cfmId=CFM-000614",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/04/tapsin_caliente_dia.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 590,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/04/tapsin_caliente_dia.jpg",
+   "presentationKey": "tapsin|d|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-000614",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|d",
+   "canonicalName": "Tapsin caliente compuesto día polvo para solución oral 5 g",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin caliente compuesto día polvo para solución oral 5 g",
+     "channels": {
+      "store": 800,
+      "online": 600,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 600
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C5000mg%7Cd&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsin-compuesto-antigripal-dia-aroma-limon-miel-jengibre-polvo-para-solucion-oral-en-sobres%2Fp&cfmId=CFM-000009",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157524/ch5255-1.jpg?v=638664176717500000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 600,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157524/ch5255-1.jpg?v=638664176717500000",
+   "presentationKey": "tapsin|5000mg|d|bio:false|brand:maver|var:caliente|form:fluid-oral",
+   "cfmId": "CFM-000009",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|n",
+   "canonicalName": "Tapsin caliente compuesto noche polvo para solución oral 5 g",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin caliente compuesto noche polvo para solución oral 5 g",
+     "channels": {
+      "store": 800,
+      "online": 600,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 600
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C5000mg%7Cn&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsin-compuesto-antigripal-noche-aroma-limon-miel-jengibre-polvo-para-solucion-oral-en-sobres%2Fp&cfmId=CFM-000005",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157525/ch5284-1.jpg?v=638664177293300000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 600,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157525/ch5284-1.jpg?v=638664177293300000",
+   "presentationKey": "tapsin|5000mg|n|bio:false|brand:maver|var:caliente|form:fluid-oral",
+   "cfmId": "CFM-000005",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|d",
+   "canonicalName": "Tapsin Dia Limonada Sobre (ai)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Tapsin Dia Limonada Sobre (ai)",
+     "channels": {
+      "store": 600,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 600
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=tapsin%7Cd&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D12198%26d_%3D1&cfmId=CFM-000614",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800004399536.jpg?v=6a96145ec48e1",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 600,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800004399536.jpg?v=6a96145ec48e1",
+   "presentationKey": "tapsin|d|bio:unknown|brand:unknown|var:limonada|form:fluid-oral",
+   "cfmId": "CFM-000614",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n",
+   "canonicalName": "Tapsin Noche Limonada Sobre (ai)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Tapsin Noche Limonada Sobre (ai)",
+     "channels": {
+      "store": 600,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 600
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=tapsin%7Cn&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D12199%26d_%3D1&cfmId=CFM-000012",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800004399567.jpg?v=6a96145ec4a33",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 600,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800004399567.jpg?v=6a96145ec4a33",
+   "presentationKey": "tapsin|n|bio:unknown|brand:unknown|var:limonada|form:fluid-oral",
+   "cfmId": "CFM-000012",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|600",
+   "canonicalName": "Tapsin Nocturno Paracetamol 500 mg 600 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Nocturno Paracetamol 500 mg 600 Comprimidos",
+     "channels": {
+      "store": 690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C500mg%7C600&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-nocturno-paracetamol-500-mg-600-comprimidos%2F72198.html&cfmId=CFM-001448",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb4f794d8/images/large/72198-tapsin-nocturno-paracetamol-500-mg-600-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.183Z"
+    }
+   ],
+   "bestPrice": 690,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb4f794d8/images/large/72198-tapsin-nocturno-paracetamol-500-mg-600-comprimidos.jpg",
+   "presentationKey": "tapsin|500mg|600|bio:unknown|brand:unknown|var:nocturno|form:solid-oral",
+   "cfmId": "CFM-001448",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|d",
+   "canonicalName": "Tapsin Caliente Día Plus - Sabor Limón - Sobre de 5 g x ( 1 sobre )",
+   "laboratory": "MAVER",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin Caliente Día Plus - Sabor Limón - Sobre de 5 g x ( 1 sobre )",
+     "channels": {
+      "store": 690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7C5000mg%7Cd&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-dia-polvo-sabor-limon-sobre-de-5-g-1-sobre%3F_pos%3D8%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000009",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/tapsin-caliente-dia-plus-sabor-limon-sobre-de-5-g-1-sobre-maver-101675.jpg?v=1692989438",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 690,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/tapsin-caliente-dia-plus-sabor-limon-sobre-de-5-g-1-sobre-maver-101675.jpg?v=1692989438",
+   "presentationKey": "tapsin|5000mg|d|bio:unknown|brand:maver|var:caliente|form:fluid-oral",
+   "cfmId": "CFM-000009",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "paracetamol|500mg|16",
+   "canonicalName": "Paracetamol 500 mg. 16 comp.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Paracetamol 500 mg. 16 comp.",
+     "channels": {
+      "store": 690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=paracetamol%7C500mg%7C16&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24713-paracetamol-500-mg-x-16.html&cfmId=CFM-000019",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 690,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "paracetamol|500mg|16|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000019",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|5000mg|d",
+   "canonicalName": "Tapsin Compuesto Dia 5g 1 Sobre Polvo Para Solución Oral",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Compuesto Dia 5g 1 Sobre Polvo Para Solución Oral",
+     "channels": {
+      "store": 712,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 712
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C5000mg%7Cd&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-compuesto-dia-5g-1-sobre-polvo-para-solucion-oral-9235.html&cfmId=CFM-000009",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw59e93d02/images/products/9235/9235.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 712,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw59e93d02/images/products/9235/9235.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|5000mg|d|bio:true|brand:unknown|var:compuesto|form:fluid-oral",
+   "cfmId": "CFM-000009",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|n",
+   "canonicalName": "Tapsin Compuesto Noche 5g 1 Sobre Polvo Para Solución Oral",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Compuesto Noche 5g 1 Sobre Polvo Para Solución Oral",
+     "channels": {
+      "store": 712,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 712
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C5000mg%7Cn&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-compuesto-noche-5g-1-sobre-polvo-para-solucion-oral-15226.html&cfmId=CFM-000005",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0afc6c9c/images/products/15226/15226.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 712,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0afc6c9c/images/products/15226/15226.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|5000mg|n|bio:true|brand:unknown|var:compuesto|form:fluid-oral",
+   "cfmId": "CFM-000005",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n",
+   "canonicalName": "Tapsin Compuesto Antigripal Caliente Noche Limón, Miel, Jengibre x 1 Sobre Polvo Para Solucion Oral",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Compuesto Antigripal Caliente Noche Limón, Miel, Jengibre x 1 Sobre Polvo Para Solucion Oral",
+     "channels": {
+      "store": 742,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 742
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7Cn&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-compuesto-antigripal-caliente-noche-limon--miel--jengibre-x-1-sobre-polvo-para-solucion-oral-88321.html&cfmId=CFM-000012",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc2aa171a/images/products/88321/88321.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 742,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc2aa171a/images/products/88321/88321.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|n|bio:true|brand:unknown|var:compuesto|form:fluid-oral",
+   "cfmId": "CFM-000012",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|d",
+   "canonicalName": "Tapsin Instaflu Polvo Dia 5 g",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Instaflu Polvo Dia 5 g",
+     "channels": {
+      "store": 749,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 749
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C5000mg%7Cd&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-instaflu-polvo-dia-5-g-93351.html&cfmId=CFM-000009",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6bc90525/images/products/93351/93351.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 749,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6bc90525/images/products/93351/93351.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|5000mg|d|bio:unknown|brand:unknown|var:instaflu|form:fluid-oral",
+   "cfmId": "CFM-000009",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|n",
+   "canonicalName": "Tapsin Instaflu Polvo Noche 5 g",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Instaflu Polvo Noche 5 g",
+     "channels": {
+      "store": 749,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 749
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C5000mg%7Cn&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-instaflu-polvo-noche-5-g-93342.html&cfmId=CFM-000005",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw120ce527/images/products/93342/93342.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 749,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw120ce527/images/products/93342/93342.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|5000mg|n|bio:unknown|brand:unknown|var:instaflu|form:fluid-oral",
+   "cfmId": "CFM-000005",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|d",
+   "canonicalName": "Tapsin Compuesto Antigripal Caliente Día Limón, Miel, Jengibre x 1 Sobre Polvo Para Solucion Oral",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Compuesto Antigripal Caliente Día Limón, Miel, Jengibre x 1 Sobre Polvo Para Solucion Oral",
+     "channels": {
+      "store": 1029,
+      "online": null,
+      "cmr": 772,
+      "sbpay": null,
+      "effective": 772
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7Cd&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-compuesto-antigripal-caliente-dia-limon--miel--jengibre-x-1-sobre-polvo-para-solucion-oral-88322.html&cfmId=CFM-000614",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw406f042d/images/products/88322/88322.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 772,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw406f042d/images/products/88322/88322.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|d|bio:unknown|brand:unknown|var:compuesto|form:fluid-oral",
+   "cfmId": "CFM-000614",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n",
+   "canonicalName": "Tapsin Insta Flu Polvo Noche",
+   "laboratory": "MAVER",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin Insta Flu Polvo Noche",
+     "channels": {
+      "store": 790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7Cn&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-insta-flu-polvo-noche%3F_pos%3D7%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000012",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-insta-flu-polvo-noche-maver-486146.jpg?v=1776890091",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 790,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-insta-flu-polvo-noche-maver-486146.jpg?v=1776890091",
+   "presentationKey": "tapsin|n|bio:unknown|brand:maver|var:insta|form:fluid-oral",
+   "cfmId": "CFM-000012",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|d",
+   "canonicalName": "Tapsin Limonada (B) Paracetamol Día 5g",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Limonada (B) Paracetamol Día 5g",
+     "channels": {
+      "store": 899,
+      "online": 791,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 791
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C5000mg%7Cd&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-limonada-b-paracetamol-dia-5g%3Fdefault_sku%3D1991100&cfmId=CFM-000009",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/170036/small/1991100.jpg?1765395498",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 791,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/170036/small/1991100.jpg?1765395498",
+   "presentationKey": "tapsin|5000mg|d|bio:unknown|brand:tapsin|var:limonada",
+   "cfmId": "CFM-000009",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|n",
+   "canonicalName": "Tapsín Limonada Noche (B) Paracetamol 5g",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsín Limonada Noche (B) Paracetamol 5g",
+     "channels": {
+      "store": 899,
+      "online": 791,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 791
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C5000mg%7Cn&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-limonada-noche-b-paracetamol-5g%3Fdefault_sku%3D1999956&cfmId=CFM-000005",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/170038/small/1999956.jpg?1765395591",
+     "fetchedAt": "2026-08-31T23:55:11.186Z"
+    }
+   ],
+   "bestPrice": 791,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/170038/small/1999956.jpg?1765395591",
+   "presentationKey": "tapsin|5000mg|n|bio:unknown|brand:tapsin|var:limonada",
+   "cfmId": "CFM-000005",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n",
+   "canonicalName": "Tapsin Instaflu (B) Paracetamol Polvo Noche 1 Sobre",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Instaflu (B) Paracetamol Polvo Noche 1 Sobre",
+     "channels": {
+      "store": 899,
+      "online": 791,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 791
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7Cn&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-instaflu-b-paracetamol-polvo-noche-1-sobre%3Fdefault_sku%3D587987&cfmId=CFM-000012",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/132239/small/587987_1.jpg?1736271483",
+     "fetchedAt": "2026-08-31T23:55:11.186Z"
+    }
+   ],
+   "bestPrice": 791,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/132239/small/587987_1.jpg?1736271483",
+   "presentationKey": "tapsin|n|bio:unknown|brand:tapsin|var:instaflu|form:fluid-oral",
+   "cfmId": "CFM-000012",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|n",
+   "canonicalName": "Tapsin InstaFLU noche 1 sobre polvo para solución oral 5 g",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin InstaFLU noche 1 sobre polvo para solución oral 5 g",
+     "channels": {
+      "store": 1080,
+      "online": 810,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 810
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C5000mg%7Cn&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsin-instaflu-polvo-noche-ch6157%2Fp&cfmId=CFM-000005",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158772/Tapsin-Flu-Noche---CH6157-1.jpg?v=638688538169130000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 810,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158772/Tapsin-Flu-Noche---CH6157-1.jpg?v=638688538169130000",
+   "presentationKey": "tapsin|5000mg|n|bio:false|brand:maver|var:instaflu|form:fluid-oral",
+   "cfmId": "CFM-000005",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|d",
+   "canonicalName": "Tapsin InstaFLU día paracetamol 500 mg pseudoefedrina 60 mg 1 sobre polvo para solución oral 5 g",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin InstaFLU día paracetamol 500 mg pseudoefedrina 60 mg 1 sobre polvo para solución oral 5 g",
+     "channels": {
+      "store": 1080,
+      "online": 810,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 810
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C500mg%7Cd&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsin-instaflu-polvo-dia-ch6155%2Fp&cfmId=CFM-000037",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158598/CH6155-1.jpg?v=638677967764900000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 810,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158598/CH6155-1.jpg?v=638677967764900000",
+   "presentationKey": "tapsin|500mg|d|bio:false|brand:maver|var:instaflu|form:fluid-oral",
+   "cfmId": "CFM-000037",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|400mg|d",
+   "canonicalName": "Tapsin Dia Compuesto Antigripal Paracetamol 400 mg Noscapina 10 mg Cafeina 33 mg Polvo para Soluc.Oral  1 Sobre Sabor Limon / Miel / Jengibre",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Dia Compuesto Antigripal Paracetamol 400 mg Noscapina 10 mg Cafeina 33 mg Polvo para Soluc.Oral  1 Sobre Sabor Limon / Miel / Jengibre",
+     "channels": {
+      "store": 890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C400mg%7Cd&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-dia-compuesto-antigripal-paracetamol-400-mg-noscapina-10-mg-cafeina-33-mg-polvo-para-soluc-oral-1-sobre-sabor-limon-miel-jengibre%2F300607.html&cfmId=CFM-000853",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1f9a5a75/images/large/300607-tapsin-dia-compuesto-antigripal-polvo-sobre.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 890,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1f9a5a75/images/large/300607-tapsin-dia-compuesto-antigripal-polvo-sobre.jpg",
+   "presentationKey": "tapsin|400mg|d|bio:unknown|brand:unknown|combo:miel|form:fluid-oral",
+   "cfmId": "CFM-000853",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|16",
+   "canonicalName": "Tapsin SC puro 500 mg x 16 comprimidos.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin SC puro 500 mg x 16 comprimidos.",
+     "channels": {
+      "store": 890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C500mg%7C16&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-sc-puro-500mg-x16com&cfmId=CFM-000010",
+     "imageUrl": "https://farmacia.araucomed.com/4212-home_default/tapsin-sc-puro-500mg-x16com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 890,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/4212-home_default/tapsin-sc-puro-500mg-x16com.jpg",
+   "presentationKey": "tapsin|500mg|16|bio:unknown|brand:maver|var:sc|form:solid-oral",
+   "cfmId": "CFM-000010",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|d",
+   "canonicalName": "Tapsin Instaflu (B) Paracetamol  Polvo Día 1 Sobre",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Instaflu (B) Paracetamol  Polvo Día 1 Sobre",
+     "channels": {
+      "store": 899,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 899
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7Cd&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-instaflu-b-paracetamol-polvo-dia-1-sobre%3Fdefault_sku%3D587870&cfmId=CFM-000614",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/132235/small/587870_1.jpg?1736265926",
+     "fetchedAt": "2026-08-31T23:55:11.186Z"
+    }
+   ],
+   "bestPrice": 899,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/132235/small/587870_1.jpg?1736265926",
+   "presentationKey": "tapsin|d|bio:unknown|brand:tapsin|var:instaflu|form:fluid-oral",
+   "cfmId": "CFM-000614",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|24",
+   "canonicalName": "Tapsin paracetamol 500 mg 24 comprimidos",
+   "laboratory": "MAVER",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin paracetamol 500 mg 24 comprimidos",
+     "channels": {
+      "store": 1200,
+      "online": 900,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 900
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C500mg%7C24&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsin-paracetamol-500-mg-24-comprimidos-ch5296%2Fp&cfmId=CFM-000003",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159596/CH5296-1_.jpg?v=638884622582900000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 900,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159596/CH5296-1_.jpg?v=638884622582900000",
+   "presentationKey": "tapsin|500mg|24|bio:true|brand:maver|form:solid-oral",
+   "cfmId": "CFM-000003",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|400mg|n",
+   "canonicalName": "Tapsin Noche Compuesto Antigripal Paracetamol 400 mg Noscapina 10 mg Clorfenamina 4 mg Polvo para Soluc.Oral 1 Sobre Sabor Limon / Miel / Jengibre",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Noche Compuesto Antigripal Paracetamol 400 mg Noscapina 10 mg Clorfenamina 4 mg Polvo para Soluc.Oral 1 Sobre Sabor Limon / Miel / Jengibre",
+     "channels": {
+      "store": 940,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 940
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C400mg%7Cn&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-noche-compuesto-antigripal-paracetamol-400-mg-noscapina-10-mg-clorfenamina-4-mg-polvo-para-soluc-oral-1-sobre-sabor-limon-miel-jengibre%2F300604.html&cfmId=CFM-000844",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw51a4a399/images/large/300604-tapsin-noche-compuesto-antigripal-polvo-sobre.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 940,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw51a4a399/images/large/300604-tapsin-noche-compuesto-antigripal-polvo-sobre.jpg",
+   "presentationKey": "tapsin|400mg|n|bio:unknown|brand:unknown|combo:miel|form:fluid-oral",
+   "cfmId": "CFM-000844",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|650mg|n",
+   "canonicalName": "Tapsin Plus Noche Paracetamol 650 mg Solución Oral 1 Sobre",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Plus Noche Paracetamol 650 mg Solución Oral 1 Sobre",
+     "channels": {
+      "store": 990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C650mg%7Cn&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-plus-noche-paracetamol-650-mg-solucion-oral-1-sobre%2F72203.html&cfmId=CFM-000842",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd5ad7c45/images/large/72203-tapsin-plus-noche-paract-50-mg-solucion-oral-1-sobre.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd5ad7c45/images/large/72203-tapsin-plus-noche-paract-50-mg-solucion-oral-1-sobre.jpg",
+   "presentationKey": "tapsin|650mg|n|bio:unknown|brand:unknown|var:plus|form:fluid-oral",
+   "cfmId": "CFM-000842",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|650mg|d",
+   "canonicalName": "Tapsin Plus Día Paracetamol 650 mg Solución Oral 1 Sobre",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Plus Día Paracetamol 650 mg Solución Oral 1 Sobre",
+     "channels": {
+      "store": 990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C650mg%7Cd&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-plus-dia-paracetamol-650-mg-solucion-oral-1-sobre%2F72202.html&cfmId=CFM-000854",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1730f57e/images/large/72202-tapsin-plus-dia-paract-650-mg-solucion-oral-1-sobre.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1730f57e/images/large/72202-tapsin-plus-dia-paract-650-mg-solucion-oral-1-sobre.jpg",
+   "presentationKey": "tapsin|650mg|d|bio:unknown|brand:unknown|var:plus|form:fluid-oral",
+   "cfmId": "CFM-000854",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|24",
+   "canonicalName": "Tapsin SC puro 500 mg x 24 comprimidos.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin SC puro 500 mg x 24 comprimidos.",
+     "channels": {
+      "store": 990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C500mg%7C24&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-sc-puro-500mg-x24com&cfmId=CFM-000003",
+     "imageUrl": "https://farmacia.araucomed.com/9807-home_default/tapsin-sc-puro-500mg-x24com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/9807-home_default/tapsin-sc-puro-500mg-x24com.jpg",
+   "presentationKey": "tapsin|500mg|24|bio:unknown|brand:maver|var:sc|form:solid-oral",
+   "cfmId": "CFM-000003",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|80mg|16",
+   "canonicalName": "Tapsin Infantil 80mg x16com",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Infantil 80mg x16com",
+     "channels": {
+      "store": 990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C80mg%7C16&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-infantil-80mg-x16com&cfmId=CFM-000579",
+     "imageUrl": "https://farmacia.araucomed.com/933-home_default/tapsin-infantil-80mg-x16com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/933-home_default/tapsin-infantil-80mg-x16com.jpg",
+   "presentationKey": "tapsin|80mg|16|bio:unknown|brand:maver|var:infantil|form:solid-oral",
+   "cfmId": "CFM-000579",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin",
+   "canonicalName": "Tapsin M Migraña por10 comprimidos (Maver) DESCUENTO c.arrugada",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin M Migraña por10 comprimidos (Maver) DESCUENTO c.arrugada",
+     "channels": {
+      "store": 1000,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1000
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-m-migrana-por10-comprimidos-maver-descuento-c-arrugada%2F&cfmId=CFM-001075",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/12/tapsin-migrana-x-10.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 1000,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/12/tapsin-migrana-x-10.jpg",
+   "presentationKey": "tapsin|bio:unknown|brand:unknown|var:m|form:solid-oral",
+   "cfmId": "CFM-001075",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|d",
+   "canonicalName": "Tapsin Insta Flu Polvo Día",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Insta Flu Polvo Día",
+     "channels": {
+      "store": 1040,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1040
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7Cd&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-insta-flu-polvo-dia%2F573946.html&cfmId=CFM-000614",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw16f5c4c7/images/large/573946-1.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 1040,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw16f5c4c7/images/large/573946-1.jpg",
+   "presentationKey": "tapsin|d|bio:unknown|brand:unknown|var:insta|form:fluid-oral",
+   "cfmId": "CFM-000614",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n",
+   "canonicalName": "Tapsin Insta Flu  Polvo Noche",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Insta Flu  Polvo Noche",
+     "channels": {
+      "store": 1040,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1040
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7Cn&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-insta-flu-polvo-noche%2F573947.html&cfmId=CFM-000012",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb326c59a/images/large/573947-1.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 1040,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb326c59a/images/large/573947-1.jpg",
+   "presentationKey": "tapsin|n|bio:unknown|brand:unknown|var:insta|form:fluid-oral",
+   "cfmId": "CFM-000012",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|16",
+   "canonicalName": "Tapsin Puro Paracetamol 500 mg x 16 comprimidos",
+   "laboratory": "MAVER",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin Puro Paracetamol 500 mg x 16 comprimidos",
+     "channels": {
+      "store": 1090,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1090
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7C500mg%7C16&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-puro-paracetamol-500-mg-x-16-comprimidos%3F_pos%3D3%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000010",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-puro-paracetamol-500-mg-x-16-comprimidos-maver-827408.webp?v=1774288201",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 1090,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-puro-paracetamol-500-mg-x-16-comprimidos-maver-827408.webp?v=1774288201",
+   "presentationKey": "tapsin|500mg|16|bio:unknown|brand:maver|var:puro|form:solid-oral",
+   "cfmId": "CFM-000010",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "paracetamol|6",
+   "canonicalName": "Paracetamol inf. suposit. x 6",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Paracetamol inf. suposit. x 6",
+     "channels": {
+      "store": 1190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1190
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=paracetamol%7C6&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F24714-paracetamol-inf-suposit-x-6.html&cfmId=CFM-000017",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 1190,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "paracetamol|6|bio:unknown|brand:unknown|var:infantil|form:suppository",
+   "cfmId": "CFM-000017",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|500mg|16",
+   "canonicalName": "Tapsin Puro Sin Cafeina Paracetamol 500 mg 16 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Puro Sin Cafeina Paracetamol 500 mg 16 Comprimidos",
+     "channels": {
+      "store": 1290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C500mg%7C16&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-puro-sin-cafeina-paracetamol-500-mg-16-comprimidos%2F266050.html&cfmId=CFM-000010",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0a03b750/images/large/266050-tapsin-puro-sin-cafeina-comprimido-16-unidades-paracetamol-500-mg.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.182Z"
+    }
+   ],
+   "bestPrice": 1290,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0a03b750/images/large/266050-tapsin-puro-sin-cafeina-comprimido-16-unidades-paracetamol-500-mg.jpg",
+   "presentationKey": "tapsin|500mg|16|bio:unknown|brand:unknown|var:puro|form:solid-oral",
+   "cfmId": "CFM-000010",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|16",
+   "canonicalName": "Tapsin Puro Sin Cafeina Paracetamol 500 mg x 16 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Puro Sin Cafeina Paracetamol 500 mg x 16 Comprimidos",
+     "channels": {
+      "store": 1290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1290
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C500mg%7C16&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-puro-sin-cafeina-paracetamol-500-mg-x-16-comprimidos%2F&cfmId=CFM-000010",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/tapsin-500-x-16.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 1290,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/tapsin-500-x-16.jpg",
+   "presentationKey": "tapsin|500mg|16|bio:true|brand:unknown|var:puro|form:solid-oral",
+   "cfmId": "CFM-000010",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin X 12 comprimidos (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin X 12 comprimidos (Maver)",
+     "channels": {
+      "store": 1290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1290
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C12&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-x-12-analgesico%2F&cfmId=CFM-000109",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/06/tapsin-analgesico-x-12.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 1290,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/06/tapsin-analgesico-x-12.jpg",
+   "presentationKey": "tapsin|12|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "paracetamol",
+   "canonicalName": "Paracetamol Infantil Gotas...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Paracetamol Infantil Gotas...",
+     "channels": {
+      "store": 1390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=paracetamol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F26770-paracetamol-infantil-gotas.html&cfmId=CFM-000591",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 1390,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "paracetamol|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+   "cfmId": "CFM-000591",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Periodo x 12 comprimidos",
+   "laboratory": "MAVER",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Periodo x 12 comprimidos.",
+     "channels": {
+      "store": 1490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C12&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-mujer-x12com&cfmId=CFM-000109",
+     "imageUrl": "https://farmacia.araucomed.com/934-home_default/tapsin-mujer-x12com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    },
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin Periodo x 12 comprimidos",
+     "channels": {
+      "store": 1890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7C12&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-periodo-x-12-comprimidos%3F_pos%3D6%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000109",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-periodo-x-12-comprimidos-maver-881054.webp?v=1774284581",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 1490,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-periodo-x-12-comprimidos-maver-881054.webp?v=1774284581",
+   "presentationKey": "tapsin|12|bio:unknown|brand:maver|var:periodo|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "paracetamol|100mg",
+   "canonicalName": "Paracetamol Gotas 100 mg/mL...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Paracetamol Gotas 100 mg/mL...",
+     "channels": {
+      "store": 1490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=paracetamol%7C100mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104817-paracetamol-gotas-100-mg-ml-15-ml.html&cfmId=CFM-001053",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 1490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "paracetamol|100mg|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-001053",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "paracetamol",
+   "canonicalName": "Paracetamol Infantil 100...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Paracetamol Infantil 100...",
+     "channels": {
+      "store": 1490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=paracetamol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103813-paracetamol-infantil-100-mg-ml-15-ml-lab-chile.html&cfmId=CFM-000591",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 1490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "paracetamol|bio:unknown|brand:unknown|var:infantil",
+   "cfmId": "CFM-000591",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|160mg|16",
+   "canonicalName": "Tapsin Niños 160 mg x 16 comprimidos.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Niños 160 mg x 16 comprimidos.",
+     "channels": {
+      "store": 1690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C160mg%7C16&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-ninos-160mg-x16com&cfmId=CFM-000004",
+     "imageUrl": "https://farmacia.araucomed.com/932-home_default/tapsin-ninos-160mg-x16com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 1690,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/932-home_default/tapsin-ninos-160mg-x16com.jpg",
+   "presentationKey": "tapsin|160mg|16|bio:unknown|brand:maver|var:infantil|form:solid-oral",
+   "cfmId": "CFM-000004",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|10",
+   "canonicalName": "Tapsin M migraña x 10 comprimidos.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin M migraña x 10 comprimidos.",
+     "channels": {
+      "store": 1690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-m-migrana-x10com&cfmId=CFM-000855",
+     "imageUrl": "https://farmacia.araucomed.com/4779-home_default/tapsin-m-migrana-x10com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 1690,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/4779-home_default/tapsin-m-migrana-x10com.jpg",
+   "presentationKey": "tapsin|10|bio:unknown|brand:maver|var:m|form:solid-oral",
+   "cfmId": "CFM-000855",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Nocturno X 12 cápsulas",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Nocturno X 12 cápsulas",
+     "channels": {
+      "store": 1780,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1780
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C12&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-nocturno-x-12-capsulas%2F&cfmId=CFM-000109",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/07/Tapsin-Nocturno-X-12-capsulas.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Nocturno Caja 12 Comp.Displ.",
+     "channels": {
+      "store": 2659,
+      "online": null,
+      "cmr": 1994,
+      "sbpay": null,
+      "effective": 1994
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C12&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-nocturno-caja-12-comp.displ.-40942.html&cfmId=CFM-000109",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw04637578/images/products/40942/40942.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 1780,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/07/Tapsin-Nocturno-X-12-capsulas.jpg",
+   "presentationKey": "tapsin|12|bio:unknown|brand:unknown|var:nocturno|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Periodo x 12 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Periodo x 12 Comprimidos",
+     "channels": {
+      "store": 1867,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1867
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C12&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-periodo-x-12-comprimidos-65476.html&cfmId=CFM-000109",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb30119c0/images/products/65476/65476.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 1867,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb30119c0/images/products/65476/65476.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|12|bio:unknown|brand:unknown|var:periodo|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Mujer x12 comprimidos (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Mujer x12 comprimidos (Maver)",
+     "channels": {
+      "store": 1870,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1870
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C12&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-mujer%2F&cfmId=CFM-000109",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/tapsin-periodo-x-12.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 1870,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/tapsin-periodo-x-12.jpg",
+   "presentationKey": "tapsin|12|bio:unknown|brand:unknown|var:mujer|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|10",
+   "canonicalName": "Tapsin M x 10 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin M Migraña por 10 comprimidos (Maver)",
+     "channels": {
+      "store": 1890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-m-migrana-por10-comprimidos-maver%2F&cfmId=CFM-000855",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2020/12/tapsin-migrana-x-10.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin M x 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 2090,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2090
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-m-x-10-comprimidos-recubiertos-83374.html&cfmId=CFM-000855",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw21ec0fba/images/products/83374/83374.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 1890,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw21ec0fba/images/products/83374/83374.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|10|bio:unknown|brand:unknown|var:m|form:solid-oral",
+   "cfmId": "CFM-000855",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|160mg|16",
+   "canonicalName": "Tapsin infantil paracetamol 160 mg 16 comprimidos masticables infantil",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin infantil paracetamol 160 mg 16 comprimidos masticables infantil",
+     "channels": {
+      "store": 2600,
+      "online": 1950,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1950
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C160mg%7C16&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsin-panadol-paracetamol-160-mg-16-comprimidos-masticables%2Fp&cfmId=CFM-000004",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157905/FOTOS-WEB-ECOMMERCE_0017_CH5558-1.jpg?v=638664925706130000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 1950,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157905/FOTOS-WEB-ECOMMERCE_0017_CH5558-1.jpg?v=638664925706130000",
+   "presentationKey": "tapsin|160mg|16|bio:false|brand:maver|var:infantil|form:solid-oral",
+   "cfmId": "CFM-000004",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n|18",
+   "canonicalName": "Tapsin Dia y noche plus x 18 comprimidos.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Dia y noche plus x 18 comprimidos.",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7Cn%7C18&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fgripe-y-resfrio%2Ftapsin-dia-y-noche-plus-18-comprimidos&cfmId=CFM-000667",
+     "imageUrl": "https://farmacia.araucomed.com/3462-home_default/tapsin-dia-y-noche-plus-18-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/3462-home_default/tapsin-dia-y-noche-plus-18-comprimidos.jpg",
+   "presentationKey": "tapsin|n|18|bio:unknown|brand:maver|var:plus|form:solid-oral",
+   "cfmId": "CFM-000667",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|18",
+   "canonicalName": "Tapsin DN Instaflu x 18 comprimidos.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin DN Instaflu x 18 comprimidos.",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C18&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fgripe-y-resfrio%2Ftapsin-dn-instaflu-126-comprimidos&cfmId=CFM-000048",
+     "imageUrl": "https://farmacia.araucomed.com/10869-home_default/tapsin-dn-instaflu-126-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/10869-home_default/tapsin-dn-instaflu-126-comprimidos.jpg",
+   "presentationKey": "tapsin|18|bio:unknown|brand:maver|var:instaflu|form:solid-oral",
+   "cfmId": "CFM-000048",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|20",
+   "canonicalName": "Tapsin Forte x 20 comprimidos",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Forte x 20 comprimidos",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-forte-x20com&cfmId=CFM-000408",
+     "imageUrl": "https://farmacia.araucomed.com/4234-home_default/tapsin-forte-x20com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    },
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin Forte x 20 comprimidos",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-forte-x-20-comp%3F_pos%3D10%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000408",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/tapsin-forte-x-20-comp-maver-717369.jpg?v=1692989431",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/4234-home_default/tapsin-forte-x20com.jpg",
+   "presentationKey": "tapsin|20|bio:unknown|brand:maver|var:forte|form:solid-oral",
+   "cfmId": "CFM-000408",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|10",
+   "canonicalName": "Tapsin Migraña x 10 comprimidos",
+   "laboratory": "MAVER",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin Migraña x 10 comprimidos",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-m%3F_pos%3D4%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000855",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/tapsin-migrana-x-10-comprimidos-maver-126008.jpg?v=1692989426",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/tapsin-migrana-x-10-comprimidos-maver-126008.jpg?v=1692989426",
+   "presentationKey": "tapsin|10|bio:unknown|brand:maver|var:migrana|form:solid-oral",
+   "cfmId": "CFM-000855",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "anacin|8",
+   "canonicalName": "Anacin Max 8 Comp",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Anacin Max 8 Comp",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=anacin%7C8&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104495-anacin-max-8-comp.html&cfmId=CFM-001057",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "anacin|8|bio:unknown|brand:unknown|var:max|form:solid-oral",
+   "cfmId": "CFM-001057",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsín Nocturno (B) Paracetamol 12 Comprimidos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsín Nocturno (B) Paracetamol 12 Comprimidos",
+     "channels": {
+      "store": 2599,
+      "online": 2287,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2287
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C12&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-nocturno-b-paracetamol-12-comprimidos%3Fdefault_sku%3D1990005&cfmId=CFM-000109",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/23043/small/1990005.jpg?1641479951",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 2287,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/23043/small/1990005.jpg?1641479951",
+   "presentationKey": "tapsin|12|bio:unknown|brand:tapsin|var:nocturno|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Duo Paracetamol Ibuprofeno 12 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Duo Paracetamol Ibuprofeno 12 Comprimidos Recubiertos",
+     "channels": {
+      "store": 2290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C12&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-duo-paracetamol-ibuprofeno-12-comprimidos-recubiertos%2F550757.html&cfmId=CFM-000109",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw25e7f54d/images/large/550757-tapsin-duo-paracetamol-ibuprofeno-12-comprimidos-recubiertos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 2290,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw25e7f54d/images/large/550757-tapsin-duo-paracetamol-ibuprofeno-12-comprimidos-recubiertos.jpg",
+   "presentationKey": "tapsin|12|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|400mg|10",
+   "canonicalName": "Tapsin M Migraña Paracetamol 400 mg Cafeína 33 mg 10 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin M Migraña Paracetamol 400 mg Cafeína 33 mg 10 Comprimidos",
+     "channels": {
+      "store": 2290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C400mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-m-migra-a-paracetamol-400-mg-cafeina-33-mg-10-comprimidos%2F290830.html&cfmId=CFM-001450",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe7915ca3/images/large/290830-tapsin-m-aas(aspirina)-65-mg-10-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 2290,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe7915ca3/images/large/290830-tapsin-m-aas(aspirina)-65-mg-10-comprimidos.jpg",
+   "presentationKey": "tapsin|400mg|10|bio:unknown|brand:unknown|var:m|form:solid-oral",
+   "cfmId": "CFM-001450",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin (B) Paracetamol / Cafeína 12 Comprimidos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin (B) Paracetamol / Cafeína 12 Comprimidos",
+     "channels": {
+      "store": 2699,
+      "online": 2375,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2375
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C12&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-b-paracetamol-cafeina-12-comprimidos%3Fdefault_sku%3D1990194&cfmId=CFM-000109",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/101778/small/1990194.jpg?1699455752",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 2375,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/101778/small/1990194.jpg?1699455752",
+   "presentationKey": "tapsin|12|bio:unknown|brand:tapsin|combo:cafeina|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Periodo 12 Comprimidos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Periodo 12 Comprimidos",
+     "channels": {
+      "store": 2799,
+      "online": 2463,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2463
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C12&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-periodo-b-paracetamol-12-comprimidos%3Fdefault_sku%3D1990782&cfmId=CFM-000109",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/101782/small/1990782.jpg?1699458202",
+     "fetchedAt": "2026-08-31T23:55:11.188Z"
+    }
+   ],
+   "bestPrice": 2463,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/101782/small/1990782.jpg?1699458202",
+   "presentationKey": "tapsin|12|bio:unknown|brand:tapsin|var:periodo|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|24",
+   "canonicalName": "Tapsin Puro Sin Cafeina 500 mg x 24 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Puro Sin Cafeina 500 mg x 24 Comprimidos",
+     "channels": {
+      "store": 3289,
+      "online": null,
+      "cmr": 2467,
+      "sbpay": null,
+      "effective": 2467
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C500mg%7C24&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-puro-sin-cafeina-500-mg-x-24-comprimidos-60770.html&cfmId=CFM-000003",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb36b4590/images/products/60770/60770.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.189Z"
+    }
+   ],
+   "bestPrice": 2467,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb36b4590/images/products/60770/60770.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|500mg|24|bio:true|brand:unknown|var:puro|form:solid-oral",
+   "cfmId": "CFM-000003",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|25mg|12",
+   "canonicalName": "Tapsin Periodo Pamabrom 25 mg 12 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Periodo Pamabrom 25 mg 12 Comprimidos",
+     "channels": {
+      "store": 2490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C25mg%7C12&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-periodo-pamabrom-25-mg-12-comprimidos%2F259891.html&cfmId=CFM-001889",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwcec0a00b/images/large/259891-tapsin-periodo-alivia-el-dolor-y-deshincha-comprimido-12-unidades-paracetamol-25-mg.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.183Z"
+    }
+   ],
+   "bestPrice": 2490,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwcec0a00b/images/large/259891-tapsin-periodo-alivia-el-dolor-y-deshincha-comprimido-12-unidades-paracetamol-25-mg.jpg",
+   "presentationKey": "tapsin|25mg|12|bio:unknown|brand:unknown|var:periodo|form:solid-oral",
+   "cfmId": "CFM-001889",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|20",
+   "canonicalName": "Tapsin 1000 SC x 20 comprimidos recubiertos.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin 1000 SC x 20 comprimidos recubiertos.",
+     "channels": {
+      "store": 2490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fbioequivalentes%2Ftapsin-1000sc-x20com&cfmId=CFM-000408",
+     "imageUrl": "https://farmacia.araucomed.com/6599-home_default/tapsin-1000sc-x20com.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 2490,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/6599-home_default/tapsin-1000sc-x20com.jpg",
+   "presentationKey": "tapsin|20|bio:unknown|brand:maver|var:sc|form:solid-oral",
+   "cfmId": "CFM-000408",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|12",
+   "canonicalName": "Tapsin Nocturno Paracetamol 500 mg 12 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Nocturno Paracetamol 500 mg 12 Comprimidos",
+     "channels": {
+      "store": 2590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C500mg%7C12&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-nocturno-paracetamol-500-mg-12-comprimidos%2F72223.html&cfmId=CFM-001455",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1ab5e6e8/images/large/72223-tapsin-nocturno-paracetamol-500-mg-12-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 2590,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1ab5e6e8/images/large/72223-tapsin-nocturno-paracetamol-500-mg-12-comprimidos.jpg",
+   "presentationKey": "tapsin|500mg|12|bio:unknown|brand:unknown|var:nocturno|form:solid-oral",
+   "cfmId": "CFM-001455",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|400mg|12",
+   "canonicalName": "Tapsin Analgésico Paracetamol 400 mg 12 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Analgésico Paracetamol 400 mg 12 Comprimidos",
+     "channels": {
+      "store": 2590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C400mg%7C12&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-analgesico-paracetamol-400-mg-12-comprimidos%2F72222.html&cfmId=CFM-001453",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9ae61859/images/large/72222-tapsin-analgesico-comprimido-12-unidades-paracetamol-400-mg.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 2590,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9ae61859/images/large/72222-tapsin-analgesico-comprimido-12-unidades-paracetamol-400-mg.jpg",
+   "presentationKey": "tapsin|400mg|12|bio:unknown|brand:unknown|var:analgesico|form:solid-oral",
+   "cfmId": "CFM-001453",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|15ml|15",
+   "canonicalName": "Tapsin Pediatrico 100mg/ml gotas x 15 ml.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Pediatrico 100mg/ml gotas x 15 ml.",
+     "channels": {
+      "store": 2600,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2600
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C15ml%7C15&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-pediatrico-100mg-ml-gotas-x15ml&cfmId=CFM-000050",
+     "imageUrl": "https://farmacia.araucomed.com/936-home_default/tapsin-pediatrico-100mg-ml-gotas-x15ml.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    },
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin Infantil Gotas 100 mg / mL x 15 mL",
+     "channels": {
+      "store": 2690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7C15ml%7C15&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-infantil-gotas-100-mg-ml-x-15-ml%3F_pos%3D5%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000050",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/tapsin-infantil-gotas-100-mg-ml-x-15-ml-maver-213476.jpg?v=1692989533",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 2600,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/936-home_default/tapsin-pediatrico-100mg-ml-gotas-x15ml.jpg",
+   "presentationKey": "tapsin|15ml|15|bio:unknown|brand:maver|var:infantil|form:fluid-oral",
+   "cfmId": "CFM-000050",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos Recubiertos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos Recubiertos",
+     "channels": {
+      "store": 3899,
+      "online": 2807,
+      "cmr": null,
+      "sbpay": 2612,
+      "effective": 2612
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C12&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-duo-b-paracetamol-ibuprofeno-12-comprimidos-recubiertos%3Fdefault_sku%3D586353&cfmId=CFM-000109",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/103432/small/586353.jpg?1702475740",
+     "fetchedAt": "2026-08-31T23:55:11.188Z"
+    }
+   ],
+   "bestPrice": 2612,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/103432/small/586353.jpg?1702475740",
+   "presentationKey": "tapsin|12|bio:unknown|brand:tapsin|combo:ibuprofeno|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsi|10",
+   "canonicalName": "Tapsí­n M (B) Paracetamol 10 Comprimidos Recubiertos",
+   "laboratory": "Tapsin M",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsí­n M (B) Paracetamol 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 3399,
+      "online": 2821,
+      "cmr": null,
+      "sbpay": 2651,
+      "effective": 2651
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsi%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsi-n-m-b-paracetamol-10-comprimidos-recubiertos%3Fdefault_sku%3D1990016&cfmId=CFM-000053",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/22401/small/1990016.jpg?1641479980",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 2651,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/22401/small/1990016.jpg?1641479980",
+   "presentationKey": "tapsi|10|bio:unknown|brand:tapsinm|var:n|form:solid-oral",
+   "cfmId": "CFM-000053",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|300mg|12",
+   "canonicalName": "Tapsin Duo paracetamol 300 mg ibuprofeno 200 mg 12 comprimidos recubiertos",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin Duo paracetamol 300 mg ibuprofeno 200 mg 12 comprimidos recubiertos",
+     "channels": {
+      "store": 3600,
+      "online": 2700,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2700
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C300mg%7C12&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsin-duo-paracetamol-ibuprofeno-300-mg-200-mg-12-comprimidos-recubiertos-ch6158%2Fp&cfmId=CFM-000041",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158828/Tapsin-Duo-CH6158-1.jpg?v=638696280005300000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 2700,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158828/Tapsin-Duo-CH6158-1.jpg?v=638696280005300000",
+   "presentationKey": "tapsin|300mg|12|bio:false|brand:maver|var:duo|form:solid-oral",
+   "cfmId": "CFM-000041",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|160mg|16",
+   "canonicalName": "Tapsin 160 mg x 16 Comprimidos Masticables",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin 160 mg x 16 Comprimidos Masticables",
+     "channels": {
+      "store": 2990,
+      "online": null,
+      "cmr": 2767,
+      "sbpay": null,
+      "effective": 2767
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C160mg%7C16&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-160-mg-x-16-comprimidos-masticables-39823.html&cfmId=CFM-000004",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb788117e/images/products/39823/39823.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.189Z"
+    }
+   ],
+   "bestPrice": 2767,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb788117e/images/products/39823/39823.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|160mg|16|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000004",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsn|500mg|24",
+   "canonicalName": "Tapsn (B) Paracetamol 500mg 24 Comprimidos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsn (B) Paracetamol 500mg 24 Comprimidos",
+     "channels": {
+      "store": 3199,
+      "online": 2815,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2815
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsn%7C500mg%7C24&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsn-b-paracetamol-500mg-24-comprimidos%3Fdefault_sku%3D1990715&cfmId=CFM-000047",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/22715/small/1990715.jpg?1641479965",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 2815,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/22715/small/1990715.jpg?1641479965",
+   "presentationKey": "tapsn|500mg|24|bio:unknown|brand:tapsin|form:solid-oral",
+   "cfmId": "CFM-000047",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|160mg|16",
+   "canonicalName": "Tapsin Niños Paracetamol 160 mg 16 Comprimidos Masticables",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Niños Paracetamol 160 mg 16 Comprimidos Masticables",
+     "channels": {
+      "store": 2890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C160mg%7C16&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-ni-os-paracetamol-160-mg-16-comprimidos-masticables%2F72214.html&cfmId=CFM-000004",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0b5fa736/images/large/72214-tapsin-ninos-paracetamol-160-mg-16-comprimidos-masticable.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 2890,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0b5fa736/images/large/72214-tapsin-ninos-paracetamol-160-mg-16-comprimidos-masticable.jpg",
+   "presentationKey": "tapsin|160mg|16|bio:unknown|brand:unknown|var:infantil|form:solid-oral",
+   "cfmId": "CFM-000004",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin Periodo x 30 comprimidos (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Periodo x 30 comprimidos (Maver)",
+     "channels": {
+      "store": 2890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2890
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-periodo-x-30-comprimidos-maver%2F&cfmId=CFM-000102",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/05/tapsin-periodo-x-30-comprimidos-maver-245681_grande.webp",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 2890,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/05/tapsin-periodo-x-30-comprimidos-maver-245681_grande.webp",
+   "presentationKey": "tapsin|30|bio:unknown|brand:unknown|var:periodo|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|20",
+   "canonicalName": "Tapsin Forte X 20 comprimidos (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Forte X 20 comprimidos (Maver)",
+     "channels": {
+      "store": 2980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2980
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-forte-x-20%2F&cfmId=CFM-000408",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/tapsin-forte.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Forte x 20 Comprimidos Recubiertos",
+     "channels": {
+      "store": 4419,
+      "online": null,
+      "cmr": 3314,
+      "sbpay": null,
+      "effective": 3314
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-forte-x-20-comprimidos-recubiertos-63630.html&cfmId=CFM-000408",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw080fbbb2/images/products/63630/63630.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 2980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/tapsin-forte.jpg",
+   "presentationKey": "tapsin|20|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+   "cfmId": "CFM-000408",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Duo x 12 comprimidos",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Duo x 12 comprimidos",
+     "channels": {
+      "store": 2990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C12&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-duo-x-12-comprimidos&cfmId=CFM-000109",
+     "imageUrl": "https://farmacia.araucomed.com/13059-home_default/tapsin-duo-x-12-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 2990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13059-home_default/tapsin-duo-x-12-comprimidos.jpg",
+   "presentationKey": "tapsin|12|bio:unknown|brand:maver|var:duo|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin Forte x 30 comprimidos",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Forte x 30 comprimidos",
+     "channels": {
+      "store": 2990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-forte-x-30-comprimidos&cfmId=CFM-000102",
+     "imageUrl": "https://farmacia.araucomed.com/14121-home_default/tapsin-forte-x-30-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 2990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/14121-home_default/tapsin-forte-x-30-comprimidos.jpg",
+   "presentationKey": "tapsin|30|bio:unknown|brand:maver|var:forte|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin Analgésico x 30 comprimidos (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Analgésico x 30 comprimidos (Maver)",
+     "channels": {
+      "store": 2990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-analgesico-x-30-comprimidos%2F&cfmId=CFM-000102",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/Tapsin-Analgesico-x-30-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 2990,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/Tapsin-Analgesico-x-30-comprimidos.jpg",
+   "presentationKey": "tapsin|30|bio:unknown|brand:unknown|var:analgesico|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n|18",
+   "canonicalName": "Tapsin InstaFlu Dia y Noche x 18 comprimidos",
+   "laboratory": "MAVER",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin InstaFlu Dia y Noche x 18 comprimidos",
+     "channels": {
+      "store": 2990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7Cn%7C18&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-instaflu-dia-y-noche-x-18-comp%3F_pos%3D9%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000667",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/tapsin-instaflu-dia-y-noche-x-18-comp-maver-164803.jpg?v=1692989418",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 2990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/tapsin-instaflu-dia-y-noche-x-18-comp-maver-164803.jpg?v=1692989418",
+   "presentationKey": "tapsin|n|18|bio:unknown|brand:maver|var:instaflu|form:solid-oral",
+   "cfmId": "CFM-000667",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|6",
+   "canonicalName": "Tapsin Instaflu D/N (B) Paracetamol  6 Comprimidos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Instaflu D/N (B) Paracetamol  6 Comprimidos",
+     "channels": {
+      "store": 3499,
+      "online": 3079,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3079
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C6&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-instaflu-d-n-b-paracetamol-6-comprimidos%3Fdefault_sku%3D590737&cfmId=CFM-000046",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/138040/small/590737.jpg?1741810398",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 3079,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/138040/small/590737.jpg?1741810398",
+   "presentationKey": "tapsin|6|bio:unknown|brand:tapsin|var:instaflu|form:solid-oral",
+   "cfmId": "CFM-000046",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n|6",
+   "canonicalName": "Tapsin Instaflu Día Noche 6 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Instaflu Día Noche 6 Comprimidos",
+     "channels": {
+      "store": 4139,
+      "online": null,
+      "cmr": 3104,
+      "sbpay": null,
+      "effective": 3104
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7Cn%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-instaflu-dia-noche-6-comprimidos-95020.html&cfmId=CFM-000847",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa8cee7c8/images/products/95020/95020.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 3104,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa8cee7c8/images/products/95020/95020.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|n|6|bio:unknown|brand:unknown|var:instaflu|form:solid-oral",
+   "cfmId": "CFM-000847",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin x 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin x 30 Comprimidos",
+     "channels": {
+      "store": 4199,
+      "online": null,
+      "cmr": 3149,
+      "sbpay": null,
+      "effective": 3149
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-x-30-comprimidos-88013.html&cfmId=CFM-000102",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw642a6973/images/products/88013/88013.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 3149,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw642a6973/images/products/88013/88013.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|500mg|18",
+   "canonicalName": "Tapsin Instaflu DN Paracetamol 500 mg Pseudoefedrina Clorhidrato 60 mg 18 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Instaflu DN Paracetamol 500 mg Pseudoefedrina Clorhidrato 60 mg 18 Comprimidos",
+     "channels": {
+      "store": 3179,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3179
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C500mg%7C18&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-instaflu-dn-paracetamol-500-mg-pseudoefedrina-clorhidrato-60-mg-18-comprimidos-88087.html&cfmId=CFM-000850",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd63454dc/images/products/88087/88087.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 3179,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd63454dc/images/products/88087/88087.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|500mg|18|bio:unknown|brand:unknown|var:instaflu|form:solid-oral",
+   "cfmId": "CFM-000850",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|18",
+   "canonicalName": "Tapsin DN Compuesto + Plus x 18 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin DN Compuesto + Plus x 18 Comprimidos",
+     "channels": {
+      "store": 3180,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3180
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C18&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-dn-plus-x-18-comprimidos%2F&cfmId=CFM-000048",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/tapsin-dn-plus-x-18.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 3180,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/tapsin-dn-plus-x-18.jpg",
+   "presentationKey": "tapsin|18|bio:unknown|brand:unknown|var:compuesto|form:solid-oral",
+   "cfmId": "CFM-000048",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|18",
+   "canonicalName": "Tapsin instaFLU DN 18 comprimidos",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin instaFLU DN 18 comprimidos",
+     "channels": {
+      "store": 4400,
+      "online": 3300,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3300
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C18&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsininstaflu-dn-12-6-comprimidos%2Fp&cfmId=CFM-000048",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157045/CH5685-1.jpg?v=638012015063270000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 3300,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157045/CH5685-1.jpg?v=638012015063270000",
+   "presentationKey": "tapsin|18|bio:false|brand:maver|var:instaflu|form:solid-oral",
+   "cfmId": "CFM-000048",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|18",
+   "canonicalName": "Tapsin compuesto DN plus 18 comprimidos recubiertos",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin compuesto DN plus 18 comprimidos recubiertos",
+     "channels": {
+      "store": 4400,
+      "online": 3300,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3300
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C18&url=https%3A%2F%2Fwww.drsimi.cl%2Fparacet-nosc-cafe-ascor-dia-clorf-noche-ch6100-1%2Fp&cfmId=CFM-000048",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157601/CH6100.jpg?v=638279614093730000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 3300,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157601/CH6100.jpg?v=638279614093730000",
+   "presentationKey": "tapsin|18|bio:false|brand:maver|var:compuesto|form:solid-oral",
+   "cfmId": "CFM-000048",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|15ml|15",
+   "canonicalName": "Tapsin Paracetamol 100 mg/ml Gotas x 15 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin Paracetamol 100 mg/ml Gotas x 15 mL",
+     "channels": {
+      "store": 3480,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3480
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C15ml%7C15&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-paracetamol-100-mg-ml-gotas-x-15-ml%2F&cfmId=CFM-000050",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/tapsin-paracetamol-infantil.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin 100 mg/mL  x 15 mL Solución Oral Para Gotas",
+     "channels": {
+      "store": 4929,
+      "online": null,
+      "cmr": 3697,
+      "sbpay": null,
+      "effective": 3697
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C15ml%7C15&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-100-mg-ml--x-15-ml-solucion-oral-para-gotas-19274.html&cfmId=CFM-000050",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5d1ea595/images/products/19274/19274.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.189Z"
+    }
+   ],
+   "bestPrice": 3480,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/tapsin-paracetamol-infantil.jpg",
+   "presentationKey": "tapsin|15ml|15|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-000050",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "algiafin|60ml|60",
+   "canonicalName": "Algiafin Jarabe x 60 ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Algiafin Jarabe x 60 ml",
+     "channels": {
+      "store": 3490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=algiafin%7C60ml%7C60&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25683-algiafin-jarabe-x-60ml.html&cfmId=CFM-001059",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 3490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "algiafin|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-001059",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cortigrip|n",
+   "canonicalName": "Cortigrip Dia y Noche 15...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Cortigrip Dia y Noche 15...",
+     "channels": {
+      "store": 3490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cortigrip%7Cn&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25895-cortigrip-dia-noche-x-15.html&cfmId=CFM-001055",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 3490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "cortigrip|n|bio:unknown|brand:unknown",
+   "cfmId": "CFM-001055",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|650mg|20",
+   "canonicalName": "Tapsin Forte Paracetamol 650 mg 20 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Forte Paracetamol 650 mg 20 Comprimidos Recubiertos",
+     "channels": {
+      "store": 3690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C650mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-forte-paracetamol-650-mg-20-comprimidos-recubiertos%2F258320.html&cfmId=CFM-001451",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7a9a41e5/images/large/258320-tapsin-forte-comprimido-recubierto-20-unidades-paracetamol-650-mg.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.184Z"
+    }
+   ],
+   "bestPrice": 3690,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7a9a41e5/images/large/258320-tapsin-forte-comprimido-recubierto-20-unidades-paracetamol-650-mg.jpg",
+   "presentationKey": "tapsin|650mg|20|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+   "cfmId": "CFM-001451",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|20",
+   "canonicalName": "Tapsin Forte (B) Paracetamol  20 Comprimidos Recubiertos",
+   "laboratory": "Tapsin Forte",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Forte (B) Paracetamol  20 Comprimidos Recubiertos",
+     "channels": {
+      "store": 4299,
+      "online": 3783,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3783
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-forte-b-paracetamol-20-comprimidos-recubiertos%3Fdefault_sku%3D1990787&cfmId=CFM-000408",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27908/small/1990787.jpg?1641479697",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 3783,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27908/small/1990787.jpg?1641479697",
+   "presentationKey": "tapsin|20|bio:unknown|brand:tapsinforte|var:forte|form:solid-oral",
+   "cfmId": "CFM-000408",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n|18",
+   "canonicalName": "Tapsin Día Noche Plus Antigripal 18 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Día Noche Plus Antigripal 18 Comprimidos Recubiertos",
+     "channels": {
+      "store": 3990,
+      "online": null,
+      "cmr": 3839,
+      "sbpay": null,
+      "effective": 3839
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7Cn%7C18&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-dia-noche-plus-antigripal-18-comprimidos-recubiertos-85868.html&cfmId=CFM-000667",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw362adf93/images/products/85868/85868.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 3839,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw362adf93/images/products/85868/85868.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|n|18|bio:unknown|brand:unknown|var:plus|form:solid-oral",
+   "cfmId": "CFM-000667",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|n|6",
+   "canonicalName": "Tapsin Compuesto Noche 5 g 6 Sobres Polvo para Solución Oral",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Compuesto Noche 5 g 6 Sobres Polvo para Solución Oral",
+     "channels": {
+      "store": 5139,
+      "online": null,
+      "cmr": 3854,
+      "sbpay": null,
+      "effective": 3854
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C5000mg%7Cn%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-compuesto-noche-5-g-6-sobres-polvo-para-solucion-oral-84865.html&cfmId=CFM-000600",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6bd5c70e/images/products/84865/84865.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 3854,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw6bd5c70e/images/products/84865/84865.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|5000mg|n|6|bio:true|brand:unknown|var:compuesto|form:fluid-oral",
+   "cfmId": "CFM-000600",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|5000mg|d|6",
+   "canonicalName": "Tapsin Compuesto Dia 5 g x 6 Sobres Polvo Para Solución Oral",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Compuesto Dia 5 g x 6 Sobres Polvo Para Solución Oral",
+     "channels": {
+      "store": 5139,
+      "online": null,
+      "cmr": 3854,
+      "sbpay": null,
+      "effective": 3854
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C5000mg%7Cd%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-compuesto-dia-5-g-x-6-sobres-polvo-para-solucion-oral-84866.html&cfmId=CFM-001890",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dweff30aad/images/products/84866/84866.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 3854,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dweff30aad/images/products/84866/84866.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|5000mg|d|6|bio:true|brand:unknown|var:compuesto|form:fluid-oral",
+   "cfmId": "CFM-001890",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|18",
+   "canonicalName": "Tapsín DN Plus (B) Paracetamol 18 Comprimidos Recubiertos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsín DN Plus (B) Paracetamol 18 Comprimidos Recubiertos",
+     "channels": {
+      "store": 5099,
+      "online": 4375,
+      "cmr": null,
+      "sbpay": 3875,
+      "effective": 3875
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C18&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-dn-plus-b-paracetamol-18-comprimidos-recubiertos%3Fdefault_sku%3D1990216&cfmId=CFM-000048",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/170034/small/1990216.jpg?1765395428",
+     "fetchedAt": "2026-08-31T23:55:11.186Z"
+    }
+   ],
+   "bestPrice": 3875,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/170034/small/1990216.jpg?1765395428",
+   "presentationKey": "tapsin|18|bio:unknown|brand:tapsin|var:plus|form:solid-oral",
+   "cfmId": "CFM-000048",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|400mg|30",
+   "canonicalName": "Tapsin Paracetamol 400 mg Cafeina 33 mg 30 Comprimidos con Tapa de Seguridad Childproof",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Paracetamol 400 mg Cafeina 33 mg 30 Comprimidos con Tapa de Seguridad Childproof",
+     "channels": {
+      "store": 3990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C400mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-paracetamol-400-mg-cafeina-33-mg-30-comprimidos-con-tapa-de-seguridad-childproof%2F299186.html&cfmId=CFM-000665",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw95a9cd9c/images/large/299186-tapsin-paracetamol-400-mg-cafeina-33-mg-30-comprimidos-con-tapa-de-seguridad-childproof.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 3990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw95a9cd9c/images/large/299186-tapsin-paracetamol-400-mg-cafeina-33-mg-30-comprimidos-con-tapa-de-seguridad-childproof.jpg",
+   "presentationKey": "tapsin|400mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000665",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin M Migraña X 30 Comprimidos (Maver)",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin M Migraña X 30 Comprimidos (Maver)",
+     "channels": {
+      "store": 3990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-m-migrana-x-30-comprimidos-maver%2F&cfmId=CFM-000102",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/Tapsin-M-Migrana-X-30-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 3990,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2023/01/Tapsin-M-Migrana-X-30-comprimidos.jpg",
+   "presentationKey": "tapsin|30|bio:unknown|brand:unknown|var:m|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "alividol|1000mg",
+   "canonicalName": "Alividol 1000 mg 20...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Alividol 1000 mg 20...",
+     "channels": {
+      "store": 3990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=alividol%7C1000mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103867-alividol-1000-mg-20-comprimidos.html&cfmId=CFM-001058",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 3990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "alividol|1000mg|bio:unknown|brand:unknown",
+   "cfmId": "CFM-001058",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin Forte x 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Forte x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 5409,
+      "online": null,
+      "cmr": 4057,
+      "sbpay": null,
+      "effective": 4057
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-forte-x-30-comprimidos-recubiertos-88014.html&cfmId=CFM-000102",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw279655f2/images/products/88014/88014.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 4057,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw279655f2/images/products/88014/88014.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|30|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|15ml",
+   "canonicalName": "Tapsin Paracetamol 100 mg/ml Gotas 15 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Paracetamol 100 mg/ml Gotas 15 mL",
+     "channels": {
+      "store": 4090,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4090
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C15ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-paracetamol-100-mg-ml-gotas-15-ml%2F72127.html&cfmId=CFM-000051",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3d6b394/images/large/72127-tapsin-gotas-15-ml-paracetamol-100-mg-ml.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.180Z"
+    }
+   ],
+   "bestPrice": 4090,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb3d6b394/images/large/72127-tapsin-gotas-15-ml-paracetamol-100-mg-ml.jpg",
+   "presentationKey": "tapsin|15ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-000051",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|400mg|n|18",
+   "canonicalName": "Tapsin Día-Noche Plus Paracetamol 400 mg 18 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Día-Noche Plus Paracetamol 400 mg 18 Comprimidos Recubiertos",
+     "channels": {
+      "store": 4190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4190
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C400mg%7Cn%7C18&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-dia-noche-plus-paracetamol-400-mg-18-comprimidos-recubiertos%2F254625.html&cfmId=CFM-001454",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfefdf0e9/images/large/254625-tapsin-dia-noche-+-plus-antigripal-comprimido-recubierto-18-unidades-paract-50-mg.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 4190,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfefdf0e9/images/large/254625-tapsin-dia-noche-+-plus-antigripal-comprimido-recubierto-18-unidades-paract-50-mg.jpg",
+   "presentationKey": "tapsin|400mg|n|18|bio:unknown|brand:unknown|var:dianoche|form:solid-oral",
+   "cfmId": "CFM-001454",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|15ml",
+   "canonicalName": "Tapsin Infantil Gotas (B) Paracetamol 15ml",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Infantil Gotas (B) Paracetamol 15ml",
+     "channels": {
+      "store": 4799,
+      "online": 4223,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4223
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C15ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-infantil-gotas-b-paracetamol-15ml%3Fdefault_sku%3D1996968&cfmId=CFM-000051",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/59885/small/1996968.jpg?1641329008",
+     "fetchedAt": "2026-08-31T23:55:11.188Z"
+    }
+   ],
+   "bestPrice": 4223,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/59885/small/1996968.jpg?1641329008",
+   "presentationKey": "tapsin|15ml|bio:unknown|brand:tapsin|var:infantil|form:fluid-oral",
+   "cfmId": "CFM-000051",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|n|6",
+   "canonicalName": "Tapsín Limonada Noche (B) Paracetamol 6 Sobres",
+   "laboratory": "Tapsí­n",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsín Limonada Noche (B) Paracetamol 6 Sobres",
+     "channels": {
+      "store": 4999,
+      "online": 4399,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4399
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7Cn%7C6&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-limonada-noche-b-paracetamol-6-sobres%3Fdefault_sku%3D1993124&cfmId=CFM-000847",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/24110/small/1993124.jpg?1641479893",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 4399,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/24110/small/1993124.jpg?1641479893",
+   "presentationKey": "tapsin|n|6|bio:unknown|brand:tapsin|var:limonada|form:fluid-oral",
+   "cfmId": "CFM-000847",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|d|6",
+   "canonicalName": "Tapsín Limonada (B) Paracetamol Día 6 Sobres",
+   "laboratory": "Tapsin ",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsín Limonada (B) Paracetamol Día 6 Sobres",
+     "channels": {
+      "store": 4999,
+      "online": 4399,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4399
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7Cd%7C6&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-limonada-b-paracetamol-dia-6-sobres%3Fdefault_sku%3D1990181&cfmId=CFM-000851",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/24108/small/1990181.jpg?1641479893",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 4399,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/24108/small/1990181.jpg?1641479893",
+   "presentationKey": "tapsin|d|6|bio:unknown|brand:tapsin|var:limonada|form:fluid-oral",
+   "cfmId": "CFM-000851",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin Forte (B) Paracetamol  Frasco 30 Comprimidos",
+   "laboratory": "Tapsí­n",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Forte (B) Paracetamol  Frasco 30 Comprimidos",
+     "channels": {
+      "store": 5099,
+      "online": 4487,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4487
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-forte-b-paracetamol-frasco-30-comprimidos%3Fdefault_sku%3D574818&cfmId=CFM-000102",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/33495/small/image002.jpg?1641477597",
+     "fetchedAt": "2026-08-31T23:55:11.188Z"
+    }
+   ],
+   "bestPrice": 4487,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/33495/small/image002.jpg?1641477597",
+   "presentationKey": "tapsin|30|bio:unknown|brand:tapsin|var:forte|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg|20",
+   "canonicalName": "Tapsin 1000 SC 1 g x 20 comprimidos",
+   "laboratory": "MAVER",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin 1000 SC 1 g x 20 comprimidos",
+     "channels": {
+      "store": 4895,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4895
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7C1000mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-sc-1-gr-x-20-comp%3F_pos%3D1%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000006",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-1000-sc-1-g-x-20-comprimidos-maver-251043.webp?v=1774286061",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 4895,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-1000-sc-1-g-x-20-comprimidos-maver-251043.webp?v=1774286061",
+   "presentationKey": "tapsin|1000mg|20|bio:unknown|brand:maver|var:sc|form:solid-oral",
+   "cfmId": "CFM-000006",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg|20",
+   "canonicalName": "Tapsin 1g Efervescente X 20 Sobres",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin 1g Efervescente X 20 Sobres",
+     "channels": {
+      "store": 4989,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4989
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C1000mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-1g-efervescente-x-20-sobres-89070.html&cfmId=CFM-000006",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa5407c19/images/products/89070/89070.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.189Z"
+    }
+   ],
+   "bestPrice": 4989,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwa5407c19/images/products/89070/89070.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|1000mg|20|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-000006",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|100ml|100",
+   "canonicalName": "Tapsin Infantil 120mg/5ml jarabe x 100 ml.",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Infantil 120mg/5ml jarabe x 100 ml.",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C100ml%7C100&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-infantil-120mg-5ml-jarabe-x-100-ml&cfmId=CFM-000159",
+     "imageUrl": "https://farmacia.araucomed.com/14255-home_default/tapsin-infantil-120mg-5ml-jarabe-x-100-ml.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.192Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/14255-home_default/tapsin-infantil-120mg-5ml-jarabe-x-100-ml.jpg",
+   "presentationKey": "tapsin|100ml|100|bio:unknown|brand:maver|var:infantil|form:fluid-oral",
+   "cfmId": "CFM-000159",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|20",
+   "canonicalName": "Tapsin SC Polvo Para Solución Efervescente Paracetamol 1gr X 20 Sobres",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin SC Polvo Para Solución Efervescente Paracetamol 1gr X 20 Sobres",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-sc-polvo-para-solucion-efervescente-paracetamol-1gr-x-20-sobres%2F&cfmId=CFM-000408",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/577402.webp",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/577402.webp",
+   "presentationKey": "tapsin|20|bio:unknown|brand:unknown|var:sc|form:fluid-oral",
+   "cfmId": "CFM-000408",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "paracetamol",
+   "canonicalName": "Paracetamol/Tramadol...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Paracetamol/Tramadol...",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=paracetamol&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104846-paracetamol-tramadol-325-375-mg-x-30-comp.html&cfmId=CFM-000591",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "paracetamol|bio:unknown|brand:unknown|combo:tramadol",
+   "cfmId": "CFM-000591",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin Duo x 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Duo x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 6669,
+      "online": null,
+      "cmr": 5002,
+      "sbpay": null,
+      "effective": 5002
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-duo-x-30-comprimidos-recubiertos-92242.html&cfmId=CFM-000102",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw39d41250/images/products/92242/92242.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 5002,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw39d41250/images/products/92242/92242.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|30|bio:unknown|brand:unknown|var:duo|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|650mg|30",
+   "canonicalName": "Tapsin Forte Paracetamol 650 mg 30 Comprimidos Recibiertos con Tapa De Seguridad Childproof",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin Forte Paracetamol 650 mg 30 Comprimidos Recibiertos con Tapa De Seguridad Childproof",
+     "channels": {
+      "store": 5140,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5140
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C650mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-forte-paracetamol-650-mg-30-comprimidos-recibiertos-con-tapa-de-seguridad-childproof%2F299091.html&cfmId=CFM-001452",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwaadb86f2/images/large/299091-tapsin-forte-paracetamol-650-mg-30-comprimidos-recibiertos-con-tapa-de-seguridad-childproof.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 5140,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwaadb86f2/images/large/299091-tapsin-forte-paracetamol-650-mg-30-comprimidos-recibiertos-con-tapa-de-seguridad-childproof.jpg",
+   "presentationKey": "tapsin|650mg|30|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+   "cfmId": "CFM-001452",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg|20",
+   "canonicalName": "Tapsin Efervecente 1 g x 20 sobres",
+   "laboratory": "MAVER",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Tapsin Efervecente 1 g x 20 sobres",
+     "channels": {
+      "store": 5190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5190
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=tapsin%7C1000mg%7C20&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Ftapsin-efervecente-1-g-x-20-sobres%3F_pos%3D2%26_psq%3Dtapsin%26_psid%3D35d17658c%26_ss%3De&cfmId=CFM-000006",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-efervecente-1-g-x-20-sobres-farmex-fonasa-persistente-655979.jpg?v=1784665286",
+     "fetchedAt": "2026-08-31T23:55:11.194Z"
+    }
+   ],
+   "bestPrice": 5190,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/tapsin-efervecente-1-g-x-20-sobres-farmex-fonasa-persistente-655979.jpg?v=1784665286",
+   "presentationKey": "tapsin|1000mg|20|bio:unknown|brand:maver|var:efervecente|form:fluid-oral",
+   "cfmId": "CFM-000006",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|20",
+   "canonicalName": "Tapsin SC Efervescente (B) Paracetamol 20 Sobres",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin SC Efervescente (B) Paracetamol 20 Sobres",
+     "channels": {
+      "store": 7499,
+      "online": 5624,
+      "cmr": null,
+      "sbpay": 5249,
+      "effective": 5249
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-sc-efervescente-b-paracetamol-20-sobres%3Fdefault_sku%3D577402&cfmId=CFM-000408",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/92048/small/577402.jpg?1682704919",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 5249,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/92048/small/577402.jpg?1682704919",
+   "presentationKey": "tapsin|20|bio:unknown|brand:tapsin|var:sc|form:fluid-oral",
+   "cfmId": "CFM-000408",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsi|18",
+   "canonicalName": "Tapsí­n Instaflu DN 18 Comprimidos",
+   "laboratory": "Tapsí­n",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsí­n Instaflu DN 18 Comprimidos",
+     "channels": {
+      "store": 6599,
+      "online": 5807,
+      "cmr": null,
+      "sbpay": 5279,
+      "effective": 5279
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsi%7C18&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsi-n-instaflu-dn-18-comprimidos%3Fdefault_sku%3D574821&cfmId=CFM-001551",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/35129/small/TAPSIN_FLU_2_%281%29_%281%29_-_copia.jpg?1641477441",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 5279,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/35129/small/TAPSIN_FLU_2_%281%29_%281%29_-_copia.jpg?1641477441",
+   "presentationKey": "tapsi|18|bio:unknown|brand:tapsin|var:n|form:solid-oral",
+   "cfmId": "CFM-001551",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "tapsin|500mg|6",
+   "canonicalName": "Tapsin InstaFLU DN Paracetamol 500 mg Pseudoefedrina Clorhidrato 60 mg 12+6 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin InstaFLU DN Paracetamol 500 mg Pseudoefedrina Clorhidrato 60 mg 12+6 Comprimidos",
+     "channels": {
+      "store": 5490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C500mg%7C6&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-instaflu-dn-paracetamol-500-mg-pseudoefedrina-clorhidrato-60-mg-12-6-comprimidos%2F255388.html&cfmId=CFM-000849",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd5ae0e19/images/large/255388-tapsin-instaflu-dn-paracetamol-500-mg-pseudoefedrina-clorhidrato-60-mg-12+6-comprimidos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 5490,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd5ae0e19/images/large/255388-tapsin-instaflu-dn-paracetamol-500-mg-pseudoefedrina-clorhidrato-60-mg-12+6-comprimidos.jpg",
+   "presentationKey": "tapsin|500mg|6|bio:unknown|brand:unknown|var:instaflu|form:solid-oral",
+   "cfmId": "CFM-000849",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|12",
+   "canonicalName": "Tapsin Instaflu Compuesto Plus 12 Comprimidos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Instaflu Compuesto Plus 12 Comprimidos",
+     "channels": {
+      "store": 5599,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5599
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C12&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-instaflu-compuesto-plus-12-comprimidos%3Fdefault_sku%3D595157&cfmId=CFM-000109",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/182677/small/595157.jpg?1776257492",
+     "fetchedAt": "2026-08-31T23:55:11.189Z"
+    }
+   ],
+   "bestPrice": 5599,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/182677/small/595157.jpg?1776257492",
+   "presentationKey": "tapsin|12|bio:unknown|brand:tapsin|var:instaflu|form:solid-oral",
+   "cfmId": "CFM-000109",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg",
+   "canonicalName": "Tapsin SC Paracetamol 1000 mg Polvo para Soluc. Oral Efervescente 1 Sobre Sabor Limon",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin SC Paracetamol 1000 mg Polvo para Soluc. Oral Efervescente 1 Sobre Sabor Limon",
+     "channels": {
+      "store": 5790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C1000mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-sc-paracetamol-1000-mg-polvo-para-soluc-oral-efervescente-1-sobre-sabor-limon%2F387700.html&cfmId=CFM-000848",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw497d65e9/images/large/387700-tapsin-sc-paracetamol-1000-mg-polvo-efervescente-sobre-sabor-limon.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.185Z"
+    }
+   ],
+   "bestPrice": 5790,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw497d65e9/images/large/387700-tapsin-sc-paracetamol-1000-mg-polvo-efervescente-sobre-sabor-limon.jpg",
+   "presentationKey": "tapsin|1000mg|bio:unknown|brand:unknown|var:sc|form:fluid-oral",
+   "cfmId": "CFM-000848",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg|20",
+   "canonicalName": "Tapsin SC paracetamol 1 g 20 sobres polvo para solución oral efervescente",
+   "laboratory": "MAVER",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Tapsin SC paracetamol 1 g 20 sobres polvo para solución oral efervescente",
+     "channels": {
+      "store": 7880,
+      "online": 5910,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5910
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=tapsin%7C1000mg%7C20&url=https%3A%2F%2Fwww.drsimi.cl%2Ftapsin-sc-paracetamol-1-gr-polvo-para-solucion-oral-efervescente%2Fp&cfmId=CFM-000006",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157210/CH6045-1.jpg?v=638016170893330000",
+     "fetchedAt": "2026-08-31T23:55:11.191Z"
+    }
+   ],
+   "bestPrice": 5910,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157210/CH6045-1.jpg?v=638016170893330000",
+   "presentationKey": "tapsin|1000mg|20|bio:false|brand:maver|var:sc|form:fluid-oral",
+   "cfmId": "CFM-000006",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|20",
+   "canonicalName": "Tapsin SC Paracetamol 1 gr x 20 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin SC Paracetamol 1 gr x 20 Comprimidos",
+     "channels": {
+      "store": 5980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5980
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C20&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-sc-paracetamol-1-gr-x-20-comprimidos%2F&cfmId=CFM-000408",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/7800004003990.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 5980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/12/7800004003990.jpg",
+   "presentationKey": "tapsin|20|bio:unknown|brand:unknown|var:sc|form:solid-oral",
+   "cfmId": "CFM-000408",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg|20",
+   "canonicalName": "Tapsin Polvo efervescente limon 1g x20 sobres",
+   "laboratory": "Maver",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Tapsin Polvo efervescente limon 1g x20 sobres",
+     "channels": {
+      "store": 5990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=tapsin%7C1000mg%7C20&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Ftapsin-polvo-efervescente-limon-1g-x20-sobres&cfmId=CFM-000006",
+     "imageUrl": "https://farmacia.araucomed.com/6661-home_default/tapsin-polvo-efervescente-limon-1g-x20-sobres.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    }
+   ],
+   "bestPrice": 5990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/6661-home_default/tapsin-polvo-efervescente-limon-1g-x20-sobres.jpg",
+   "presentationKey": "tapsin|1000mg|20|bio:unknown|brand:maver|var:limon|form:fluid-oral",
+   "cfmId": "CFM-000006",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg|20",
+   "canonicalName": "Tapsin (B) Paracetamol 1g 20 Comprimidos Recubiertos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin (B) Paracetamol 1g 20 Comprimidos Recubiertos",
+     "channels": {
+      "store": 9799,
+      "online": 6859,
+      "cmr": null,
+      "sbpay": 6369,
+      "effective": 6369
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C1000mg%7C20&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-b-paracetamol-1g-20-comprimidos-recubiertos%3Fdefault_sku%3D575992&cfmId=CFM-000006",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/92046/small/575992.jpg?1682704873",
+     "fetchedAt": "2026-08-31T23:55:11.189Z"
+    }
+   ],
+   "bestPrice": 6369,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/92046/small/575992.jpg?1682704873",
+   "presentationKey": "tapsin|1000mg|20|bio:unknown|brand:tapsin|form:solid-oral",
+   "cfmId": "CFM-000006",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsin Duo (B) Paracetamol / Ibuprofeno 30 Comprimidos Recubiertos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Duo (B) Paracetamol / Ibuprofeno 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 6399,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6399
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-duo-b-paracetamol-ibuprofeno-30-comprimidos-recubiertos%3Fdefault_sku%3D586354&cfmId=CFM-000102",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/103434/small/586354.jpg?1702476034",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 6399,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/103434/small/586354.jpg?1702476034",
+   "presentationKey": "tapsin|30|bio:unknown|brand:tapsin|combo:ibuprofeno|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|30",
+   "canonicalName": "Tapsín M 30 Comprimidos Recubiertos",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsín M 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 7499,
+      "online": 6599,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6599
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-m-30-comprimidos-recubiertos%3Fdefault_sku%3D578147&cfmId=CFM-000102",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/71750/small/578147-2.jpg?1651518894",
+     "fetchedAt": "2026-08-31T23:55:11.187Z"
+    }
+   ],
+   "bestPrice": 6599,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/71750/small/578147-2.jpg?1651518894",
+   "presentationKey": "tapsin|30|bio:unknown|brand:tapsin|var:m|form:solid-oral",
+   "cfmId": "CFM-000102",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg|20",
+   "canonicalName": "Tapsin 1000 SC Paracetamol 1000 mg 20 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin 1000 SC Paracetamol 1000 mg 20 Comprimidos Recubiertos",
+     "channels": {
+      "store": 6790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C1000mg%7C20&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-1000-sc-paracetamol-1000-mg-20-comprimidos-recubiertos%2F383406.html&cfmId=CFM-000006",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwddc39161/images/large/383406-tapsin-1000-sc-paracetamol-1000-mg-20-comprimidos-recubiertos.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.182Z"
+    }
+   ],
+   "bestPrice": 6790,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwddc39161/images/large/383406-tapsin-1000-sc-paracetamol-1000-mg-20-comprimidos-recubiertos.jpg",
+   "presentationKey": "tapsin|1000mg|20|bio:unknown|brand:unknown|var:sc|form:solid-oral",
+   "cfmId": "CFM-000006",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|100ml",
+   "canonicalName": "Tapsin Infantil Paracetamol 120mg/5ml Jarabe 100ml",
+   "laboratory": "Tapsin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Tapsin Infantil Paracetamol 120mg/5ml Jarabe 100ml",
+     "channels": {
+      "store": 11399,
+      "online": 7979,
+      "cmr": null,
+      "sbpay": 7409,
+      "effective": 7409
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=tapsin%7C100ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftapsin-infantil-paracetamol-120mg-5ml-jarabe-100ml%3Fdefault_sku%3D591187&cfmId=CFM-000081",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/149929/small/591187.jpg?1751033593",
+     "fetchedAt": "2026-08-31T23:55:11.189Z"
+    }
+   ],
+   "bestPrice": 7409,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/149929/small/591187.jpg?1751033593",
+   "presentationKey": "tapsin|100ml|bio:unknown|brand:tapsin|var:infantil|form:fluid-oral",
+   "cfmId": "CFM-000081",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|1000mg|20",
+   "canonicalName": "Tapsin 1000 mg SC x 20 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin 1000 mg SC x 20 Comprimidos Recubiertos",
+     "channels": {
+      "store": 10069,
+      "online": null,
+      "cmr": 7552,
+      "sbpay": null,
+      "effective": 7552
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C1000mg%7C20&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-1000-mg-sc-x-20-comprimidos-recubiertos-88629.html&cfmId=CFM-000006",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw609eb506/images/products/88629/88629.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 7552,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw609eb506/images/products/88629/88629.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "tapsin|1000mg|20|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000006",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "tapsin|100ml",
+   "canonicalName": "Tapsin  Infantil Suspensión  100Ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Tapsin infantil paracetamol 120mg/5ml jarabe 100ml",
+     "channels": {
+      "store": 7890,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 7890
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=tapsin%7C100ml&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Ftapsin-infantil-paracetamol-120mg-5ml-jarabe-100ml%2F&cfmId=CFM-000081",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/09/tapsin-infantil-jarabe.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.193Z"
+    },
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Tapsin  Infantil Suspensión  100Ml",
+     "channels": {
+      "store": 8990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=tapsin%7C100ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftapsin-infantil-suspension-100ml%2F575404.html&cfmId=CFM-000081",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa305559b/images/large/575404-1.jpg",
+     "fetchedAt": "2026-08-31T23:55:11.183Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Tapsin Infantil 120 mg/ 5 mL Suspensión Oral Sabor Frambuesa 100 mL",
+     "channels": {
+      "store": 12179,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 12179
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=tapsin%7C100ml&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftapsin-infantil-120-mg--5-ml-suspension-oral-sabor-frambuesa-100-ml-95294.html&cfmId=CFM-000081",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw224508cd/images/products/95294/95294.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-08-31T23:55:11.190Z"
+    }
+   ],
+   "bestPrice": 7890,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa305559b/images/large/575404-1.jpg",
+   "presentationKey": "tapsin|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+   "cfmId": "CFM-000081",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "brevex|20",
+   "canonicalName": "Brevex 20 comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Brevex 20 comprimidos",
+     "channels": {
+      "store": 10990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=brevex%7C20&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25025-brevex-x-20.html&cfmId=CFM-001056",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.195Z"
+    }
+   ],
+   "bestPrice": 10990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "brevex|20|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001056",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "cronus|30",
+   "canonicalName": "Cronus x 30 comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Cronus x 30 comprimidos",
+     "channels": {
+      "store": 16990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=cronus%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104166-cronus-x-30-comprimidos.html&cfmId=CFM-001054",
+     "imageUrl": null,
+     "fetchedAt": "2026-08-31T23:55:11.196Z"
+    }
+   ],
+   "bestPrice": 16990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "cronus|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001054",
+   "lexicalMatch": "compatible"
+  }
+ ]
+}

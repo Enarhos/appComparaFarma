@@ -1,0 +1,1411 @@
+{
+ "query": "naproxeno",
+ "apiUrl": "https://comparafarma-api.vercel.app",
+ "fetchedAt": "2026-09-01T00:07:45.775Z",
+ "results": [
+  {
+   "matchKey": "naproxeno|550mg|10",
+   "canonicalName": "Naproxeno 550 mg x 10 comp. recubiertos Andrómaco DESCUENTO",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Naproxeno 550 mg x 10 comp. recubiertos Andrómaco DESCUENTO",
+     "channels": {
+      "store": 1150,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1150
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fnaproxeno-550-mg-x-10-comp-recubiertos-andromaco-descuento-3%2F&cfmId=CFM-002543",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/Naproxeno-550Mg-X-10.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Naproxeno Sodico 550 mg x 10 Comprimidos Recubiertos ANDROMACO S.A.",
+     "channels": {
+      "store": 1469,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1469
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fnaproxeno-sodico-550-mg-x-10-comprimidos-recubiertos-andromaco-s.a.-971.html&cfmId=CFM-002543",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe95a50f0/images/products/971/971.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 1150,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2019/07/Naproxeno-550Mg-X-10.jpg",
+   "presentationKey": "naproxeno|550mg|10|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-002543",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "naproxeno|550mg|10",
+   "canonicalName": "Naproxeno 550mg x10com. (Eurofarma)",
+   "laboratory": "Eurofarma",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Naproxeno 550mg x10com. (Eurofarma)",
+     "channels": {
+      "store": 1190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1190
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fnaproxeno-550mg-x10com-eurofarma&cfmId=CFM-002543",
+     "imageUrl": "https://farmacia.araucomed.com/949-home_default/naproxeno-550mg-x10com-eurofarma.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 1190,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/949-home_default/naproxeno-550mg-x10com-eurofarma.jpg",
+   "presentationKey": "naproxeno|550mg|10|bio:unknown|brand:eurofarma|form:solid-oral",
+   "cfmId": "CFM-002543",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "naproxeno|550mg|10",
+   "canonicalName": "Naproxeno 550 mg x 10 comprimidos",
+   "laboratory": "ANDROMACO",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Naproxeno 550mg x10com. (Andromaco)",
+     "channels": {
+      "store": 1350,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1350
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fnaproxeno-550mg-x10com-andromaco&cfmId=CFM-002543",
+     "imageUrl": "https://farmacia.araucomed.com/3724-home_default/naproxeno-550mg-x10com-andromaco.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    },
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Naproxeno 550 mg x 10 comprimidos",
+     "channels": {
+      "store": 2190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2190
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fnaproxeno-550-mg-x-10-comprimidos-recubiertos-1%3F_pos%3D1%26_psq%3Dnaproxeno%26_psid%3D1918f962b%26_ss%3De&cfmId=CFM-002543",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/naproxeno-550-mg-x-10-comprimidos-recubiertos-andromaco-569699.jpg?v=1692989410",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 1350,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/naproxeno-550-mg-x-10-comprimidos-recubiertos-andromaco-569699.jpg?v=1692989410",
+   "presentationKey": "naproxeno|550mg|10|bio:unknown|brand:andromaco|form:solid-oral",
+   "cfmId": "CFM-002543",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "naproxeno|550mg|10",
+   "canonicalName": "Naproxeno Sódico 550 mg x 10 comprimidos",
+   "laboratory": "MINTLAB",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Naproxeno 550 mg x 10 comprimidos. (Mintlab)",
+     "channels": {
+      "store": 1390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fnaproxeno-550mg-x10com-mintlab&cfmId=CFM-002543",
+     "imageUrl": "https://farmacia.araucomed.com/14076-home_default/naproxeno-550mg-x10com-mintlab.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    },
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Naproxeno Sódico 550 mg x 10 comprimidos",
+     "channels": {
+      "store": 1490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fnaproxeno-sodico-550-mg-x-10-comp%3F_pos%3D2%26_psq%3Dnaproxeno%26_psid%3D1918f962b%26_ss%3De&cfmId=CFM-002543",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/naproxeno-sodico-550-mg-x-10-comprimidos-mintlab-146435.jpg?v=1756442982",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 1390,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/naproxeno-sodico-550-mg-x-10-comprimidos-mintlab-146435.jpg?v=1756442982",
+   "presentationKey": "naproxeno|550mg|10|bio:unknown|brand:mintlab|form:solid-oral",
+   "cfmId": "CFM-002543",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "naproxeno|550mg|10",
+   "canonicalName": "Naproxeno 550 mg 10 comprimidos recubiertos",
+   "laboratory": "ANDRÓMACO",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Naproxeno 550 mg 10 comprimidos recubiertos",
+     "channels": {
+      "store": 1960,
+      "online": 1470,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1470
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Fwww.drsimi.cl%2Ftriox-n-f-forte-naproxeno-sodico-550-mg-10-comprimidos%2Fp&cfmId=CFM-002543",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157484/BE0037-2.jpg?v=638665148446570000",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 1470,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/157484/BE0037-2.jpg?v=638665148446570000",
+   "presentationKey": "naproxeno|550mg|10|bio:true|brand:andromaco|form:solid-oral",
+   "cfmId": "CFM-002543",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "naproxeno|550mg|10",
+   "canonicalName": "Naproxeno 550 mg x 10 comprimidos.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Naproxeno 550 mg x 10 comprimidos.",
+     "channels": {
+      "store": 1521,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1521
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fnaproxeno-550-mg-x-10-comprimidos-23%3F_pos%3D9%26_psq%3Dnaproxeno%26_psid%3D1918f962b%26_ss%3De&cfmId=CFM-002543",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/naproxeno-550-mg-x-10-comprimidos-recubiertos-laboratorio-chile-922491_5131d1ac-f4aa-4fd1-b76e-e2a12b74cee7.jpg?v=1788209348",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 1521,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/naproxeno-550-mg-x-10-comprimidos-recubiertos-laboratorio-chile-922491_5131d1ac-f4aa-4fd1-b76e-e2a12b74cee7.jpg?v=1788209348",
+   "presentationKey": "naproxeno|550mg|10|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-002543",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "naproxeno|550mg",
+   "canonicalName": "Naproxeno Sodico 550 Mg 10...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Naproxeno Sodico 550 Mg 10...",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=naproxeno%7C550mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105206-naproxeno-sodico-550-mg-10-comprimidos-lab-chile.html&cfmId=CFM-006823",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "naproxeno|550mg|bio:unknown|brand:unknown",
+   "cfmId": "CFM-006823",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "naproxeno|550mg",
+   "canonicalName": "Naproxeno Sódico 550 mg. 10...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Naproxeno Sódico 550 mg. 10...",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=naproxeno%7C550mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F41324-naproxeno-550-mg-10-comp-lab-andromaco.html&cfmId=CFM-006823",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "naproxeno|550mg|bio:unknown|brand:andromaco",
+   "cfmId": "CFM-006823",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "flogotone|10",
+   "canonicalName": "Flogotone Forte 10 comp.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Flogotone Forte 10 comp.",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=flogotone%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25684-flogotone-forte-x-10.html&cfmId=CFM-014901",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:07:45.547Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "flogotone|10|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+   "cfmId": "CFM-014901",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "triox|10",
+   "canonicalName": "Triox N.F. Forte x 10",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Triox N.F. Forte x 10",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=triox%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F35087-triox-n-f-forte-x-10.html&cfmId=CFM-010255",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:07:45.547Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "triox|10|bio:unknown|brand:unknown|var:n",
+   "cfmId": "CFM-010255",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|275mg|10",
+   "canonicalName": "Eurogesic 275mg x10com",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Eurogesic 275mg x10com",
+     "channels": {
+      "store": 2990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=eurogesic%7C275mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Feurogesic-275mg-x10com&cfmId=CFM-006824",
+     "imageUrl": "https://farmacia.araucomed.com/6393-home_default/eurogesic-275mg-x10com.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    },
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Eurogesic Adulto Naproxeno 275 mg 10 Comprimidos",
+     "channels": {
+      "store": 4190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4190
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=eurogesic%7C275mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Feurogesic-adulto-naproxeno-275-mg-10-comprimidos%2F6277.html&cfmId=CFM-006824",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwff1145f5/images/large/6277-1.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 2990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/6393-home_default/eurogesic-275mg-x10com.jpg",
+   "presentationKey": "eurogesic|275mg|10|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-006824",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "winasorb|25ml|25",
+   "canonicalName": "Winasorb Gotas 100mg/ml x25ml",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Winasorb Gotas 100mg/ml x25ml",
+     "channels": {
+      "store": 2990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=winasorb%7C25ml%7C25&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fwinasorb-gotas-100mg-ml-x25ml&cfmId=CFM-001602",
+     "imageUrl": "https://farmacia.araucomed.com/7594-home_default/winasorb-gotas-100mg-ml-x25ml.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 2990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/7594-home_default/winasorb-gotas-100mg-ml-x25ml.jpg",
+   "presentationKey": "winasorb|25ml|25|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-001602",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "naproxeno|550mg|10",
+   "canonicalName": "Naproxeno de Sodio 550 mg 10 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Naproxeno de Sodio 550 mg 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 3390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fnaproxeno-de-sodio-550-mg-10-comprimidos-recubiertos%2F297124.html&cfmId=CFM-002543",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4292fa32/images/large/297124.1.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 3390,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4292fa32/images/large/297124.1.jpg",
+   "presentationKey": "naproxeno|550mg|10|bio:unknown|brand:unknown|var:sodio|form:solid-oral",
+   "cfmId": "CFM-002543",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "eurogesic|550mg|10",
+   "canonicalName": "Eurogesic Forte 550 mg x 10 comprimidos.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Eurogesic Forte 550 mg x 10 comprimidos.",
+     "channels": {
+      "store": 3490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=eurogesic%7C550mg%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Feurogesic-forte-550mg-x10com&cfmId=CFM-001340",
+     "imageUrl": "https://farmacia.araucomed.com/924-home_default/eurogesic-forte-550mg-x10com.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    },
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Eurogesic FORTE Naproxeno 550 mg 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 4590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=eurogesic%7C550mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Feurogesic-forte-naproxeno-550-mg-10-comprimidos-recubiertos%2F6278.html&cfmId=CFM-001340",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6463f1c4/images/large/6278-eurogesic-naproxeno-550-mg-10-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 3490,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/924-home_default/eurogesic-forte-550mg-x10com.jpg",
+   "presentationKey": "eurogesic|550mg|10|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+   "cfmId": "CFM-001340",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "eurogesic|275mg",
+   "canonicalName": "Eurogesic Adulto 275 mg x...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Eurogesic Adulto 275 mg x...",
+     "channels": {
+      "store": 3490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=eurogesic%7C275mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25416-eurogesic-x-10.html&cfmId=CFM-010461",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 3490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "eurogesic|275mg|bio:unknown|brand:unknown",
+   "cfmId": "CFM-010461",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|275mg|10",
+   "canonicalName": "EUROGESIC Naproxeno Sódico 275 mg 10 comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "EUROGESIC Naproxeno Sódico 275 mg 10 comprimidos",
+     "channels": {
+      "store": 3503,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3503
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=eurogesic%7C275mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Feurogesic-naproxeno-sodico-275-mg-10-comprimidos-19187.html&cfmId=CFM-006824",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw76d118bd/images/products/19187/19187.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 3503,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw76d118bd/images/products/19187/19187.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "eurogesic|275mg|10|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-006824",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "naproxeno|550mg|10",
+   "canonicalName": "Naproxeno (B) 550mg 10 Comprimidos Recubiertos",
+   "laboratory": "Naproxeno",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Naproxeno (B) 550mg 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 3999,
+      "online": 3519,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3519
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=naproxeno%7C550mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fnaproxeno-b-550mg-10-comprimidos-recubiertos%3Fdefault_sku%3D437639&cfmId=CFM-002543",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/66188/small/437639.jpg?1641917671",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 3519,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/66188/small/437639.jpg?1641917671",
+   "presentationKey": "naproxeno|550mg|10|bio:unknown|brand:naproxeno|form:solid-oral",
+   "cfmId": "CFM-002543",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "flectane|10",
+   "canonicalName": "Flectane 500/20 x 10 comprimidos.",
+   "laboratory": "Sanitas",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Flectane 500/20 x 10 comprimidos.",
+     "channels": {
+      "store": 3590,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3590
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=flectane%7C10&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fflectane-500-20-x10com&cfmId=CFM-001524",
+     "imageUrl": "https://farmacia.araucomed.com/4737-home_default/flectane-500-20-x10com.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 3590,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/4737-home_default/flectane-500-20-x10com.jpg",
+   "presentationKey": "flectane|10|bio:unknown|brand:sanitas|form:solid-oral",
+   "cfmId": "CFM-001524",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|10",
+   "canonicalName": "Eurogesic Adulto Naproxeno Sódico 10 Comprimidos Recubiertos",
+   "laboratory": "Eurogesic",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Eurogesic Adulto Naproxeno Sódico 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 6799,
+      "online": 3943,
+      "cmr": null,
+      "sbpay": 3739,
+      "effective": 3739
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=eurogesic%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Feurogesic-adulto-naproxeno-sodico-10-comprimidos-recubiertos%3Fdefault_sku%3D2970274&cfmId=CFM-006825",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/164942/small/2970274_1.jpg?1761314326",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 3739,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/164942/small/2970274_1.jpg?1761314326",
+   "presentationKey": "eurogesic|10|bio:unknown|brand:eurogesic|form:solid-oral",
+   "cfmId": "CFM-006825",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "eurogesic|550mg|10",
+   "canonicalName": "Eurogesic Forte (B) Naproxeno 550mg 10 Comprimidos Recubiertos",
+   "laboratory": "Eurogesic Forte",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Eurogesic Forte (B) Naproxeno 550mg 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 7099,
+      "online": 4259,
+      "cmr": null,
+      "sbpay": 3904,
+      "effective": 3904
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=eurogesic%7C550mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Feurogesic-forte-b-naproxeno-550mg-10-comprimidos-recubiertos%3Fdefault_sku%3D2970398&cfmId=CFM-001340",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/119757/small/2970398_1.jpg?1724950649",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 3904,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/119757/small/2970398_1.jpg?1724950649",
+   "presentationKey": "eurogesic|550mg|10|bio:unknown|brand:eurogesicforte|var:forte|form:solid-oral",
+   "cfmId": "CFM-001340",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "triox|550mg|10",
+   "canonicalName": "Triox NF Forte 550 mg x 10 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Triox NF Forte 550 mg x 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 3907,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3907
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=triox%7C550mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Ftriox-nf-forte-550-mg-x-10-comprimidos-recubiertos-25471.html&cfmId=CFM-001342",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9983e044/images/products/25471/25471.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 3907,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw9983e044/images/products/25471/25471.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "triox|550mg|10|bio:true|brand:unknown|var:nf|form:solid-oral",
+   "cfmId": "CFM-001342",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|550mg|10",
+   "canonicalName": "EUROGESIC FORTE Naproxeno Sódico 550 mg 10 comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "EUROGESIC FORTE Naproxeno Sódico 550 mg 10 comprimidos",
+     "channels": {
+      "store": 3979,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3979
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=eurogesic%7C550mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Feurogesic-forte-naproxeno-sodico-550-mg-10-comprimidos-19226.html&cfmId=CFM-001340",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw828cfc5a/images/products/19226/19226.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 3979,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw828cfc5a/images/products/19226/19226.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "eurogesic|550mg|10|bio:true|brand:unknown|var:forte|form:solid-oral",
+   "cfmId": "CFM-001340",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "kitadol|60ml",
+   "canonicalName": "Kitadol Infantil 120mg/5ml jarabe 60 ml. (Cenabast)",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Kitadol Infantil 120mg/5ml jarabe 60 ml. (Cenabast)",
+     "channels": {
+      "store": 4490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=kitadol%7C60ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fkitadol-infantil-120mg-5ml-jarabe-60ml-cenabast&cfmId=CFM-000080",
+     "imageUrl": "https://farmacia.araucomed.com/7666-home_default/kitadol-infantil-120mg-5ml-jarabe-60ml-cenabast.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 4490,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/7666-home_default/kitadol-infantil-120mg-5ml-jarabe-60ml-cenabast.jpg",
+   "presentationKey": "kitadol|60ml|bio:unknown|brand:chile|var:infantil|form:fluid-oral",
+   "cfmId": "CFM-000080",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|50mg",
+   "canonicalName": "Eurogesic Infantil 50 mg x...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Eurogesic Infantil 50 mg x...",
+     "channels": {
+      "store": 4490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=eurogesic%7C50mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25417-eurogesic-infantil-supositorio-x-6.html&cfmId=CFM-001702",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 4490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "eurogesic|50mg|bio:unknown|brand:unknown|var:infantil",
+   "cfmId": "CFM-001702",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|50mg|6",
+   "canonicalName": "Eurogesic Infantil 50 mg x 6 Supositorios",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Eurogesic Infantil 50 mg x 6 Supositorios",
+     "channels": {
+      "store": 4560,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4560
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=eurogesic%7C50mg%7C6&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Feurogesic-infantil-50-mg-x-6-supositorios-19200.html&cfmId=CFM-003943",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbb391a3a/images/products/19200/19200.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 4560,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwbb391a3a/images/products/19200/19200.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "eurogesic|50mg|6|bio:unknown|brand:unknown|var:infantil|form:suppository",
+   "cfmId": "CFM-003943",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "winasorb|60ml|60",
+   "canonicalName": "Winasorb Jarabe 150mg/5ml x 60 ml.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Winasorb Jarabe 150mg/5ml x 60 ml.",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=winasorb%7C60ml%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fwinasorb-jarabe-150mg-5ml-x60ml&cfmId=CFM-000052",
+     "imageUrl": "https://farmacia.araucomed.com/7593-home_default/winasorb-jarabe-150mg-5ml-x60ml.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/7593-home_default/winasorb-jarabe-150mg-5ml-x60ml.jpg",
+   "presentationKey": "winasorb|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-000052",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "triox|550mg|10",
+   "canonicalName": "Triox N.F. Forte Naproxeno Sódico 550mg 10 Comprimidos Recubiertos",
+   "laboratory": "Triox",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Triox N.F. Forte Naproxeno Sódico 550mg 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 6299,
+      "online": 5543,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5543
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=triox%7C550mg%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Ftriox-n-f-forte%3Fdefault_sku%3D581860&cfmId=CFM-001342",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/71937/small/581860-1.JPG?1651625360",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 5543,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/71937/small/581860-1.JPG?1651625360",
+   "presentationKey": "triox|550mg|10|bio:unknown|brand:triox|var:n|form:solid-oral",
+   "cfmId": "CFM-001342",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "eurogesic",
+   "canonicalName": "Eurogesic Infantil Naproxeno Sódico 6 Supositorios",
+   "laboratory": "Eurogesic Pediatrico",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Eurogesic Infantil Naproxeno Sódico 6 Supositorios",
+     "channels": {
+      "store": 6299,
+      "online": 5543,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5543
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=eurogesic&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Feurogesic-pediatrico-50mg%3Fdefault_sku%3D2970428&cfmId=CFM-007021",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/22280/small/2970428.jpg?1641479989",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 5543,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/22280/small/2970428.jpg?1641479989",
+   "presentationKey": "eurogesic|bio:unknown|brand:eurogesicpediatrico|var:infantil|form:suppository",
+   "cfmId": "CFM-007021",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "triox|550mg|10",
+   "canonicalName": "Triox N.F. Forte Naproxeno 550 mg 10 Comprimidos Recubierto",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Triox N.F. Forte Naproxeno 550 mg 10 Comprimidos Recubierto",
+     "channels": {
+      "store": 6290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=triox%7C550mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Ftriox-n-f-forte-naproxeno-550-mg-10-comprimidos-recubierto%2F15466.html&cfmId=CFM-001342",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc6733452/images/large/15466-triox-nf-forte-naproxeno-550-mg-10-comprimidos-recubierto.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 6290,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc6733452/images/large/15466-triox-nf-forte-naproxeno-550-mg-10-comprimidos-recubierto.jpg",
+   "presentationKey": "triox|550mg|10|bio:unknown|brand:unknown|var:n|form:solid-oral",
+   "cfmId": "CFM-001342",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "eurogesic|50mg",
+   "canonicalName": "Eurogesic Pediatrico Naproxeno 50 mg 6 Supositorios",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Eurogesic Pediatrico Naproxeno 50 mg 6 Supositorios",
+     "channels": {
+      "store": 6340,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6340
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=eurogesic%7C50mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Feurogesic-pediatrico-naproxeno-50-mg-6-supositorios%2F6280.html&cfmId=CFM-001702",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw06dbd4ec/images/large/6280-eurogesic-pediatrico-naproxeno-50-mg-6-supositorios.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 6340,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw06dbd4ec/images/large/6280-eurogesic-pediatrico-naproxeno-50-mg-6-supositorios.jpg",
+   "presentationKey": "eurogesic|50mg|bio:unknown|brand:unknown|var:infantil|form:suppository",
+   "cfmId": "CFM-001702",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "flectane|500mg|10",
+   "canonicalName": "Flectane 500 mg/20 mg x 10 Comprimidos con Recubrimiento Entérico",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Flectane 500 mg/20 mg x 10 Comprimidos con Recubrimiento Entérico",
+     "channels": {
+      "store": 6363,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6363
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=flectane%7C500mg%7C10&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fflectane-500-mg-20-mg-x-10-comprimidos-con-recubrimiento-enterico-85557.html&cfmId=CFM-001521",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfa099943/images/products/85557/85557.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    },
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Flectane 500/20 Naproxeno 500 mg 10 Comprimidos con Recubierto Enterico",
+     "channels": {
+      "store": 13740,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13740
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=flectane%7C500mg%7C10&url=https%3A%2F%2Fwww.cruzverde.cl%2Fflectane-500-20-naproxeno-500-mg-10-comprimidos-con-recubierto-enterico%2F292505.html&cfmId=CFM-001521",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc64772af/images/large/292505-sanitas-naproxeno-50020-10-comprimidos-con-recubierto-enterico.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 6363,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfa099943/images/products/85557/85557.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "flectane|500mg|10|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001521",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "eurogesic|60ml|60",
+   "canonicalName": "Eurogesic 125 mg/5 mL x 60 mL Polvo Para Suspension Oral Con Solvente",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Eurogesic 125 mg/5 mL x 60 mL Polvo Para Suspension Oral Con Solvente",
+     "channels": {
+      "store": 6363,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6363
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=eurogesic%7C60ml%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Feurogesic-125-mg-5-ml-x-60-ml-polvo-para-suspension-oral-con-solvente-19051.html&cfmId=CFM-010462",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf0292a0a/images/products/19051/19051.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 6363,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf0292a0a/images/products/19051/19051.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "eurogesic|60ml|60|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-010462",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "flectane|20mg|10",
+   "canonicalName": "Flectane 500/20 mg x 10 comp",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Flectane 500/20 mg x 10 comp",
+     "channels": {
+      "store": 6490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=flectane%7C20mg%7C10&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F35277-flectane-500-20-mg-x-10-comp.html&cfmId=CFM-001522",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:07:45.547Z"
+    }
+   ],
+   "bestPrice": 6490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "flectane|20mg|10|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001522",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|60ml",
+   "canonicalName": "Eurogesic Infantil 125mg/5ml suspensión oral 60 ml.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Eurogesic Infantil 125mg/5ml suspensión oral 60 ml.",
+     "channels": {
+      "store": 6990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=eurogesic%7C60ml&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Feurogesic-infantil-125mg-5ml-suspension-oral-60-ml&cfmId=CFM-010741",
+     "imageUrl": "https://farmacia.araucomed.com/13693-home_default/eurogesic-infantil-125mg-5ml-suspension-oral-60-ml.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 6990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13693-home_default/eurogesic-infantil-125mg-5ml-suspension-oral-60-ml.jpg",
+   "presentationKey": "eurogesic|60ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral",
+   "cfmId": "CFM-010741",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|60ml",
+   "canonicalName": "Eurogesic Infantil Naproxeno Sódico 60ml",
+   "laboratory": "Eurogesic",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Eurogesic Infantil Naproxeno Sódico 60ml",
+     "channels": {
+      "store": 9899,
+      "online": 8711,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8711
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=eurogesic%7C60ml&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Feurogesic-infantil-naproxeno-sodico-60ml%3Fdefault_sku%3D2970411&cfmId=CFM-010741",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/128958/small/2970411_1.jpg?1733503366",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 8711,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/128958/small/2970411_1.jpg?1733503366",
+   "presentationKey": "eurogesic|60ml|bio:unknown|brand:eurogesic|var:infantil",
+   "cfmId": "CFM-010741",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "flectane|500mg|30",
+   "canonicalName": "Flectane naproxeno 500 mg esomeprazol 20 mg 30 comprimidos con recubrimiento entérico",
+   "laboratory": "SANITAS",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Flectane naproxeno 500 mg esomeprazol 20 mg 30 comprimidos con recubrimiento entérico",
+     "channels": {
+      "store": 12800,
+      "online": 9600,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9600
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=flectane%7C500mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fflectane-500-20-naproxeno-esomeprazol-500-20mg-30-comp-rec%2Fp&cfmId=CFM-001199",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156640/CH5997-1.jpg?v=637964774232000000",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 9600,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156640/CH5997-1.jpg?v=637964774232000000",
+   "presentationKey": "flectane|500mg|30|bio:false|brand:sanitas|form:solid-oral",
+   "cfmId": "CFM-001199",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "flectane|30",
+   "canonicalName": "Flectane 500/20 x 30 comprimidos.",
+   "laboratory": "Sanitas",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Flectane 500/20 x 30 comprimidos.",
+     "channels": {
+      "store": 9990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=flectane%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fanalgesicos-y-antinflamatorios%2Fflectane-500-20-x30com&cfmId=CFM-001517",
+     "imageUrl": "https://farmacia.araucomed.com/4736-home_default/flectane-500-20-x30com.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.546Z"
+    }
+   ],
+   "bestPrice": 9990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/4736-home_default/flectane-500-20-x30com.jpg",
+   "presentationKey": "flectane|30|bio:unknown|brand:sanitas|form:solid-oral",
+   "cfmId": "CFM-001517",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "eurogesic|60ml",
+   "canonicalName": "Eurogesic Naproxeno 25 mg Suspensión 60 mL",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Eurogesic Naproxeno 25 mg Suspensión 60 mL",
+     "channels": {
+      "store": 11090,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11090
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=eurogesic%7C60ml&url=https%3A%2F%2Fwww.cruzverde.cl%2Feurogesic-naproxeno-25-mg-suspension-60-ml%2F6286.html&cfmId=CFM-010741",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw783b576e/images/large/6286-eurogesic-naproxeno-25-mg-suspension-60-ml.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 11090,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw783b576e/images/large/6286-eurogesic-naproxeno-25-mg-suspension-60-ml.jpg",
+   "presentationKey": "eurogesic|60ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "cfmId": "CFM-010741",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "flectane|10",
+   "canonicalName": "Flectane Esomeprazol / Naproxeno 20/500 10 Comprimidos Recubiertos",
+   "laboratory": "Flectane",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Flectane Esomeprazol / Naproxeno 20/500 10 Comprimidos Recubiertos",
+     "channels": {
+      "store": 13399,
+      "online": 11791,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11791
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=flectane%7C10&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fesomeprazol-20mg-naproxeno-500mg-oral-solido-bc0ec912-796a-46e7-a9fd-32a76f305a47%3Fdefault_sku%3D2988385&cfmId=CFM-001524",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/28453/small/2988385.jpg?1641479647",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 11791,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/28453/small/2988385.jpg?1641479647",
+   "presentationKey": "flectane|10|bio:unknown|brand:flectane|combo:naproxeno|form:solid-oral",
+   "cfmId": "CFM-001524",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "flectane|20mg|30",
+   "canonicalName": "Flectane 500/20 mg x 30",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Flectane 500/20 mg x 30",
+     "channels": {
+      "store": 13990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=flectane%7C20mg%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F37104-flectane-500-20-mg-x-30.html&cfmId=CFM-001518",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:07:45.547Z"
+    }
+   ],
+   "bestPrice": 13990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "flectane|20mg|30|bio:unknown|brand:unknown",
+   "cfmId": "CFM-001518",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "flectane|30",
+   "canonicalName": "Flectane Esomeprazol / Naproxeno 20/500 30 Comprimidos Recubiertos",
+   "laboratory": "Flectane",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Flectane Esomeprazol / Naproxeno 20/500 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 26999,
+      "online": 23759,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 23759
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=flectane%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fesomeprazol-20mg-naproxeno-500mg-oral-solido%3Fdefault_sku%3D2988380&cfmId=CFM-001517",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/28452/small/2988380.jpg?1641479647",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 23759,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/28452/small/2988380.jpg?1641479647",
+   "presentationKey": "flectane|30|bio:unknown|brand:flectane|combo:naproxeno|form:solid-oral",
+   "cfmId": "CFM-001517",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "flectane|500mg|30",
+   "canonicalName": "Flectane 500/20 Naproxeno 500 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Flectane 500/20 Naproxeno 500 mg 30 Comprimidos",
+     "channels": {
+      "store": 25540,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 25540
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=flectane%7C500mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fflectane-500-20-naproxeno-500-mg-30-comprimidos%2F292507.html&cfmId=CFM-001199",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7b6620bb/images/large/292507-flectane-50020-naproxeno-500-mg-60-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:07:45.545Z"
+    }
+   ],
+   "bestPrice": 25540,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7b6620bb/images/large/292507-flectane-50020-naproxeno-500-mg-60-comprimidos.jpg",
+   "presentationKey": "flectane|500mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001199",
+   "lexicalMatch": "exact"
+  }
+ ]
+}
