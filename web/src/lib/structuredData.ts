@@ -12,7 +12,16 @@ function buildProductNode(medication: MedicationResult, url: string, opts: { det
     "@type": "Product",
     name: medication.canonicalName,
     ...(medication.imageUrl ? { image: medication.imageUrl } : {}),
-    ...(medication.laboratory ? { brand: { "@type": "Brand", name: medication.laboratory } } : {}),
+    // CF-DATA-001 (2026-08-31): `schema.org/brand` recibía `laboratory`, que en
+    // Dr. Simi/AraucoMed/Farmex es el FABRICANTE — se le declaraba a Google que
+    // la marca de "Muxol Jarabe adulto" era "EUROLAB". Ahora cada propiedad
+    // recibe lo suyo: `brand` la marca comercial y `manufacturer` el
+    // laboratorio, ambas omitidas cuando no hay dato (schema.org no exige
+    // ninguna de las dos y un valor inventado sería peor que su ausencia).
+    ...(medication.brand ? { brand: { "@type": "Brand", name: medication.brand } } : {}),
+    ...(medication.manufacturer
+      ? { manufacturer: { "@type": "Organization", name: medication.manufacturer } }
+      : {}),
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "CLP",

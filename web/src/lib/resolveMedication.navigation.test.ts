@@ -57,7 +57,8 @@ function scraped(spec: OfferSpec): ScrapedProduct {
     hasOnlineDelivery: true,
     onlineUrl: `https://example.test/${encodeURIComponent(spec.name)}`,
     imageUrl: null,
-    laboratory: spec.laboratory ?? null,
+    brand: null,
+    manufacturer: spec.laboratory ?? null,
     isBioequivalent: spec.isBioequivalent ?? null,
   };
 }

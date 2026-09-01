@@ -4,6 +4,7 @@ import { PHARMACIES } from "@/constants/pharmacies";
 import { formatCLP } from "@/lib/format";
 import { buildMedicationSlug } from "@/lib/medicationSlug";
 import { AddToRecipeButton } from "@/components/AddToRecipeButton";
+import { identityLine } from "@/lib/brandLabels";
 
 interface Props {
   medication: MedicationResult;
@@ -53,9 +54,11 @@ export function MedicationCard({ medication }: Props) {
               </span>
             )}
           </div>
-          <p className="mt-0.5 text-sm text-muted">
-            {medication.laboratory ?? "Laboratorio no especificado"}
-          </p>
+          {/* CF-DATA-001: la línea de identidad ya no lee `laboratory` (alias
+              ambiguo: fabricante en unas farmacias, marca en Salcobrand). Ver
+              `identityLine()` — mismo texto donde antes había dato, e
+              información nueva donde antes decía "no especificado". */}
+          <p className="mt-0.5 text-sm text-muted">{identityLine(medication)}</p>
         </div>
       </div>
 

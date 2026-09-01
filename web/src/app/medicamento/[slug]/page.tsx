@@ -16,6 +16,7 @@ import { getPriceHistory } from "@/lib/priceHistory";
 import { buildInsights } from "@/lib/insights";
 import { buildMedicationDetailJsonLd, toJsonLdScript } from "@/lib/structuredData";
 import { getSiteUrl } from "@/lib/site";
+import { identityLine } from "@/lib/brandLabels";
 
 function changeColorClass(value: number | null): string {
   if (value == null) return "text-ink";
@@ -186,7 +187,8 @@ export default async function MedicationDetailPage({ params }: PageProps) {
               </span>
             )}
           </div>
-          <p className="mt-0.5 text-sm text-muted">{medication.laboratory ?? "Laboratorio no especificado"}</p>
+          {/* CF-DATA-001 — ver `identityLine()` en @/lib/brandLabels. */}
+          <p className="mt-0.5 text-sm text-muted">{identityLine(medication)}</p>
 
           <div className="mt-2 flex flex-wrap items-start gap-2">
             <AddToRecipeButton

@@ -24,6 +24,10 @@ function medication(overrides: Partial<MedicationResult> = {}): MedicationResult
     matchKey: "omeprazol|20mg|30",
     canonicalName: "Omeprazol 20 mg x 30 cápsulas. (Curae Spring)",
     laboratory: "CuraeSpring",
+    brand: null,
+    manufacturer: "CuraeSpring",
+    activeIngredient: null,
+    brandSource: "unknown",
     isBioequivalent: false,
     bestPrice: 990,
     bestPharmacy: "araucomed",
@@ -58,21 +62,33 @@ function medication(overrides: Partial<MedicationResult> = {}): MedicationResult
 }
 
 describe("CommercialProductRow", () => {
-  it("muestra la marca/laboratorio, la cobertura y el precio desde", () => {
-    render(<CommercialProductRow medication={medication()} />);
+  it("muestra la marca, el laboratorio, la cobertura y el precio desde", () => {
+    render(
+      <CommercialProductRow medication={medication({ brand: "Omepral", manufacturer: "CuraeSpring" })} />
+    );
+    expect(screen.getByText("Omepral")).toBeTruthy();
     expect(screen.getByText("CuraeSpring")).toBeTruthy();
     expect(screen.getByText("2 farmacias")).toBeTruthy();
     expect(screen.getByText(/desde \$990/)).toBeTruthy();
   });
 
-  it('muestra "Marca no identificada" cuando laboratory es null', () => {
-    render(<CommercialProductRow medication={medication({ laboratory: null })} />);
+  it('muestra "Marca no identificada" cuando no hay marca', () => {
+    render(<CommercialProductRow medication={medication({ brand: null })} />);
     expect(screen.getByText("Marca no identificada")).toBeTruthy();
   });
 
-  it('muestra "Marca no identificada" cuando laboratory es una cadena en blanco', () => {
-    render(<CommercialProductRow medication={medication({ laboratory: "   " })} />);
+  it('muestra "Marca no identificada" cuando la marca es una cadena en blanco', () => {
+    render(<CommercialProductRow medication={medication({ brand: "   " })} />);
     expect(screen.getByText("Marca no identificada")).toBeTruthy();
+  });
+
+  // CF-DATA-001 — regresión del defecto reportado: la fila rotula "Marca", así
+  // que NUNCA debe mostrar ahí el fabricante. "Muxol Jarabe adulto" (Farmex)
+  // llegaba con vendor "EUROLAB" y se publicaba como si fuera su marca.
+  it("no presenta el fabricante como marca", () => {
+    render(<CommercialProductRow medication={medication({ brand: null, manufacturer: "Eurolab" })} />);
+    expect(screen.getByText("Marca no identificada")).toBeTruthy();
+    expect(screen.queryByText("Eurolab")).not.toBe(screen.getByText("Marca no identificada"));
   });
 
   it("muestra el badge Bioequivalente solo cuando isBioequivalent es true", () => {
@@ -159,7 +175,7 @@ describe("CommercialProductRow", () => {
     it("el nombre de marca trunca dentro de su caja en vez de desbordarla", () => {
       render(
         <CommercialProductRow
-          medication={medication({ laboratory: "LABORATORIO FARMACEUTICO INTERNACIONAL DE CHILE LIMITADA" })}
+          medication={medication({ brand: "LABORATORIO FARMACEUTICO INTERNACIONAL DE CHILE LIMITADA" })}
         />
       );
       const label = screen.getByText("LABORATORIO FARMACEUTICO INTERNACIONAL DE CHILE LIMITADA");

@@ -7,6 +7,10 @@ function makeMedication(): MedicationResult {
     matchKey: "paracetamol|500mg",
     canonicalName: "Paracetamol 500 mg",
     laboratory: "Andrómaco",
+    brand: null,
+    manufacturer: "Andrómaco",
+    activeIngredient: null,
+    brandSource: "unknown",
     isBioequivalent: true,
     bestPrice: 2290,
     bestPharmacy: "salcobrand",
@@ -70,6 +74,39 @@ describe("buildMedicationJsonLd — lista de resultados (sin Offer por farmacia)
     expect(product.offers.offers).toBeUndefined();
     expect(product.offers.lowPrice).toBe(2290);
     expect(product.offers.highPrice).toBe(2990);
+  });
+});
+
+/**
+ * CF-DATA-001 — `schema.org/brand` recibía `laboratory`, que en Dr. Simi,
+ * AraucoMed y Farmex es el FABRICANTE: se le declaraba a Google que la marca de
+ * "Muxol Jarabe adulto" era "EUROLAB".
+ */
+describe("buildMedicationJsonLd — marca y fabricante (CF-DATA-001)", () => {
+  function productNode(medication: MedicationResult) {
+    const jsonLd = buildMedicationJsonLd("paracetamol", [medication]);
+    return jsonLd["@graph"][0].itemListElement[0].item as {
+      brand?: { "@type": string; name: string };
+      manufacturer?: { "@type": string; name: string };
+    };
+  }
+
+  it("no declara como `brand` un fabricante", () => {
+    const product = productNode(makeMedication());
+    expect(product.brand).toBeUndefined();
+    expect(product.manufacturer).toEqual({ "@type": "Organization", name: "Andrómaco" });
+  });
+
+  it("declara `brand` solo cuando hay marca comercial real", () => {
+    const product = productNode({ ...makeMedication(), brand: "Kitadol", manufacturer: "Andrómaco" });
+    expect(product.brand).toEqual({ "@type": "Brand", name: "Kitadol" });
+    expect(product.manufacturer).toEqual({ "@type": "Organization", name: "Andrómaco" });
+  });
+
+  it("omite ambas propiedades cuando no hay dato, en vez de inventarlas", () => {
+    const product = productNode({ ...makeMedication(), brand: null, manufacturer: null });
+    expect(product.brand).toBeUndefined();
+    expect(product.manufacturer).toBeUndefined();
   });
 });
 
