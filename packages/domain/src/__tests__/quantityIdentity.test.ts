@@ -39,7 +39,8 @@ function scraped(over: Partial<ScrapedProduct> & { name: string }): ScrapedProdu
     hasOnlineDelivery: true,
     onlineUrl: null,
     imageUrl: null,
-    laboratory: null,
+    brand: null,
+    manufacturer: null,
     isBioequivalent: false,
     ...over,
   };
@@ -177,7 +178,7 @@ describe("isCompatibleUnitCount", () => {
 // 3. COMPATIBILIDAD DE IDENTIDAD
 // ---------------------------------------------------------------------------
 describe("isSameProduct — eje de cantidad", () => {
-  const identity = (name: string) => toProductIdentity(scraped({ name, laboratory: "Maver" }));
+  const identity = (name: string) => toProductIdentity(scraped({ name, manufacturer: "Maver" }));
 
   it("1 sobre y 6 sobres no son el mismo producto", () => {
     expect(isSameProduct(identity("Tapsin Forte x 1 sobre"), identity("Tapsin Forte x 6 sobres"))).toBe(false);
@@ -270,9 +271,9 @@ describe("regresión — sobre suelto contra caja de 6 sobres (QA 2026-08-30)", 
   });
 
   it("el sobre suelto queda fuera de la tarjeta de la caja de 6", () => {
-    const salcobrand = offer("salcobrand", { name: SALCOBRAND, laboratory: "Tapsin", price: 4999, onlinePrice: 4399 });
-    const eco = offer("ecofarmacias", { name: ECOFARMACIAS, laboratory: "Tapsin", price: 460 });
-    const ahumada = offer("ahumada", { name: AHUMADA, laboratory: "Tapsin", price: 4590 });
+    const salcobrand = offer("salcobrand", { name: SALCOBRAND, manufacturer: "Tapsin", price: 4999, onlinePrice: 4399 });
+    const eco = offer("ecofarmacias", { name: ECOFARMACIAS, manufacturer: "Tapsin", price: 460 });
+    const ahumada = offer("ahumada", { name: AHUMADA, manufacturer: "Tapsin", price: 4590 });
 
     const merged = mergeDuplicates(inSameGroup([salcobrand, eco, ahumada]));
 
@@ -300,15 +301,15 @@ describe("no-regresión de los ejes existentes", () => {
   });
 
   it("var: sigue separando dos variantes comerciales de la misma cantidad (CF-SEARCH-001)", () => {
-    const forte = offer("araucomed", { name: "Tapsin Forte x 30 comprimidos", laboratory: "Maver" });
-    const migrana = offer("farmex", { name: "Tapsin Migraña x 30 comprimidos", laboratory: "Maver", price: 4990 });
+    const forte = offer("araucomed", { name: "Tapsin Forte x 30 comprimidos", manufacturer: "Maver" });
+    const migrana = offer("farmex", { name: "Tapsin Migraña x 30 comprimidos", manufacturer: "Maver", price: 4990 });
     expect(forte.presentationKey).not.toBe(migrana.presentationKey);
     expect(mergeDuplicates([forte, migrana])).toHaveLength(2);
   });
 
   it("form: sigue separando comprimidos de sobres con la misma cantidad", () => {
-    const comprimidos = offer("farmex", { name: "Tapsin SC 1 g x 20 comprimidos", laboratory: "Maver" });
-    const sobres = offer("araucomed", { name: "Tapsin SC 1 g x 20 sobres", laboratory: "Maver", price: 3990 });
+    const comprimidos = offer("farmex", { name: "Tapsin SC 1 g x 20 comprimidos", manufacturer: "Maver" });
+    const sobres = offer("araucomed", { name: "Tapsin SC 1 g x 20 sobres", manufacturer: "Maver", price: 3990 });
     expect(unitCountKey("Tapsin SC 1 g x 20 comprimidos")).toBe(20);
     expect(unitCountKey("Tapsin SC 1 g x 20 sobres")).toBe(20);
     expect(comprimidos.presentationKey).not.toBe(sobres.presentationKey);

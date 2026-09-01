@@ -41,18 +41,28 @@ export interface MedicationGroup {
 }
 
 /**
- * Un producto comercial se considera "identificado" cuando `laboratory` es
- * un valor no vacío. Es una lectura directa del campo semántico existente,
- * no una reconstrucción de `commercialIdentity` — dos conceptos de dominio
- * distintos (`laboratory` es el atributo de laboratorio ya expuesto por la
- * API; `commercialIdentity`/`presentationKey` es interno del dominio y no se
- * lee acá). En la práctica, hoy ambos suelen coincidir (un producto con
- * marca reconocida casi siempre también trae `laboratory`), pero esta
- * función depende únicamente del campo público, tal como exige la regla de
- * "no parsear presentationKey".
+ * Un producto comercial se considera "identificado" cuando se sabe QUIÉN es:
+ * su marca comercial o su laboratorio.
+ *
+ * CF-DATA-001 (2026-08-31): antes leía `laboratory`, el campo único de
+ * semántica mixta. `laboratory` valía exactamente `manufacturer ?? brand`, así
+ * que todo producto que era "identificado" antes lo sigue siendo — el cambio es
+ * estrictamente aditivo: ahora también cuentan los productos cuya MARCA se
+ * conoce aunque la farmacia no informe laboratorio (Cruz Verde, Ahumada,
+ * EcoFarmacias, EasyFarma y Sermecoop, que no exponen ningún campo y hasta
+ * ahora caían siempre al final del grupo por falta de metadato, no por falta de
+ * identidad real).
+ *
+ * Sigue siendo una lectura directa de campos públicos de `MedicationResult`,
+ * sin parsear `presentationKey` — la regla de diseño aprobada no cambia.
  */
 function isIdentified(product: MedicationResult): boolean {
-  return typeof product.laboratory === "string" && product.laboratory.trim().length > 0;
+  const brand = product.brand;
+  const manufacturer = product.manufacturer;
+  return (
+    (typeof brand === "string" && brand.trim().length > 0) ||
+    (typeof manufacturer === "string" && manufacturer.trim().length > 0)
+  );
 }
 
 /**

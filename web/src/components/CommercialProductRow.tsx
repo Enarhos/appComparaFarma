@@ -8,6 +8,7 @@ import { formatCLP } from "@/lib/format";
 import { buildMedicationSlug } from "@/lib/medicationSlug";
 import { channelChips } from "@/components/MedicationCard";
 import { AddToRecipeButton } from "@/components/AddToRecipeButton";
+import { brandLabel, isUnknownBrand } from "@/lib/brandLabels";
 
 interface Props {
   /** Un producto comercial completo (una marca/presentationKey) dentro de un grupo farmacológico. */
@@ -22,14 +23,21 @@ interface Props {
  * `buildMedicationSlug`, `AddToRecipeButton`) para no duplicar lógica de
  * negocio de presentación.
  *
- * "Marca no identificada" (copy aprobado) se muestra cuando `laboratory` es
- * null/vacío — lectura directa del campo semántico existente, sin parsear
- * `presentationKey`.
+ * CF-DATA-001 (2026-08-31): esta fila rotula "Marca", así que ahora lee
+ * `medication.brand` —la marca comercial real— y ya no `laboratory`, que para
+ * Dr. Simi/AraucoMed/Farmex contenía el FABRICANTE. Era el origen visible del
+ * defecto reportado: "Muxol Jarabe adulto…" se mostraba como "EUROLAB" y
+ * "Broncot Forte…" como "ABBOTT", que son laboratorios, no marcas. Cuando la
+ * farmacia sí informa el laboratorio se muestra aparte, con su propia etiqueta.
+ *
+ * "Marca no identificada" (copy aprobado) se sigue mostrando cuando no hay
+ * marca — ver `brandLabels.ts`. Se sigue sin parsear `presentationKey`.
  */
 export function CommercialProductRow({ medication }: Props) {
   const [expanded, setExpanded] = useState(false);
-  const brandLabel = medication.laboratory?.trim() ? medication.laboratory : "Marca no identificada";
-  const isUnknownBrand = !medication.laboratory?.trim();
+  const displayBrand = brandLabel(medication);
+  const unknownBrand = isUnknownBrand(medication);
+  const manufacturer = medication.manufacturer?.trim() ?? "";
   const pharmacyCount = medication.prices.length;
   const detailHref = `/medicamento/${buildMedicationSlug(medication)}`;
   const sortedPrices = sortByEffectivePrice(medication.prices);
@@ -49,13 +57,16 @@ export function CommercialProductRow({ medication }: Props) {
         <div className="flex min-w-0 flex-[1_1_11rem] flex-wrap items-center gap-x-2 gap-y-1">
           <span
             className={
-              isUnknownBrand
+              unknownBrand
                 ? "min-w-0 max-w-full truncate text-sm font-medium text-muted"
                 : "min-w-0 max-w-full truncate text-sm font-medium text-ink"
             }
           >
-            {brandLabel}
+            {displayBrand}
           </span>
+          {manufacturer && (
+            <span className="min-w-0 max-w-full truncate text-xs text-muted">{manufacturer}</span>
+          )}
           {medication.isBioequivalent && (
             <span className="shrink-0 rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-accent-ink">
               🌿 Bioequivalente

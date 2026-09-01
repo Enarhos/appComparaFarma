@@ -30,6 +30,10 @@ function medication(overrides: Partial<MedicationResult> = {}): MedicationResult
     matchKey: "omeprazol|20mg|30",
     canonicalName: "Omeprazol 20 mg x 30 cápsulas",
     laboratory: null,
+    brand: null,
+    manufacturer: null,
+    activeIngredient: null,
+    brandSource: "unknown",
     isBioequivalent: null,
     prices: [price()],
     bestPrice: 1000,
@@ -137,25 +141,36 @@ describe("sortCommercialProducts (orden aprobado)", () => {
     expect(result.map((r) => r.laboratory)).toEqual(["barato", "caro-bio"]);
   });
 
-  it("productos con laboratory null (unknown) van al final cuando existe al menos una alternativa identificada", () => {
-    const unknownCheap = medication({ bestPrice: 100, laboratory: null });
-    const identifiedExpensive = medication({ bestPrice: 2000, laboratory: "Ascend" });
+  it("productos sin identificar (unknown) van al final cuando existe al menos una alternativa identificada", () => {
+    const unknownCheap = medication({ bestPrice: 100, manufacturer: null });
+    const identifiedExpensive = medication({ bestPrice: 2000, manufacturer: "Ascend" });
     const result = sortCommercialProducts([unknownCheap, identifiedExpensive]);
-    expect(result.map((r) => r.laboratory)).toEqual(["Ascend", null]);
+    expect(result.map((r) => r.manufacturer)).toEqual(["Ascend", null]);
   });
 
   it("si TODOS los productos son unknown, no hay partición especial: se ordenan solo por el criterio normal", () => {
-    const unknownExpensive = medication({ bestPrice: 900, laboratory: null });
-    const unknownCheap = medication({ bestPrice: 100, laboratory: null });
+    const unknownExpensive = medication({ bestPrice: 900, manufacturer: null });
+    const unknownCheap = medication({ bestPrice: 100, manufacturer: null });
     const result = sortCommercialProducts([unknownExpensive, unknownCheap]);
     expect(result.map((r) => r.bestPrice)).toEqual([100, 900]);
   });
 
-  it("laboratory vacío (string en blanco) se trata como no identificado", () => {
-    const blank = medication({ bestPrice: 100, laboratory: "   " });
-    const identified = medication({ bestPrice: 2000, laboratory: "Ascend" });
+  it("fabricante vacío (string en blanco) se trata como no identificado", () => {
+    const blank = medication({ bestPrice: 100, manufacturer: "   " });
+    const identified = medication({ bestPrice: 2000, manufacturer: "Ascend" });
     const result = sortCommercialProducts([blank, identified]);
-    expect(result.map((r) => r.laboratory)).toEqual(["Ascend", "   "]);
+    expect(result.map((r) => r.manufacturer)).toEqual(["Ascend", "   "]);
+  });
+
+  // CF-DATA-001 — un producto SIN fabricante pero CON marca está identificado.
+  // Es el caso de las 5 farmacias que no exponen ningún campo estructurado
+  // (Cruz Verde, Ahumada, EcoFarmacias, EasyFarma, Sermecoop): antes caían
+  // siempre al final del grupo por falta de metadato, no por falta de identidad.
+  it("una marca conocida identifica al producto aunque no haya fabricante", () => {
+    const branded = medication({ bestPrice: 2000, brand: "Tocalm", manufacturer: null });
+    const anonymous = medication({ bestPrice: 100, brand: null, manufacturer: null });
+    const result = sortCommercialProducts([anonymous, branded]);
+    expect(result.map((r) => r.brand)).toEqual(["Tocalm", null]);
   });
 });
 
@@ -280,17 +295,29 @@ describe("orden de operaciones: filtrar ANTES de agrupar", () => {
   it("agrupar sobre un array ya filtrado no produce grupos vacíos ni mezcla productos descartados", () => {
     const bioAscend = medication({
       laboratory: "Ascend",
+      brand: null,
+      manufacturer: "Ascend",
+      activeIngredient: null,
+      brandSource: "unknown",
       isBioequivalent: true,
       presentationKey: "x|brand:ascend",
     });
     const notBioOpko = medication({
       laboratory: "Opko",
+      brand: null,
+      manufacturer: "Opko",
+      activeIngredient: null,
+      brandSource: "unknown",
       isBioequivalent: false,
       presentationKey: "x|brand:opko",
     });
     const onlyUnknownMatchKey = medication({
       matchKey: "solo-no-bio",
       laboratory: null,
+      brand: null,
+      manufacturer: null,
+      activeIngredient: null,
+      brandSource: "unknown",
       isBioequivalent: false,
       presentationKey: "solo-no-bio|brand:unknown",
     });

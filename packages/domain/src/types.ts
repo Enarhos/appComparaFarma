@@ -32,7 +32,59 @@ export interface PharmacyPrice {
 export interface MedicationResult {
   matchKey: string;
   canonicalName: string;
+  /**
+   * CF-DATA-001 (2026-08-31) — ALIAS DE COMPATIBILIDAD, semántica AMBIGUA.
+   *
+   * Conserva EXACTAMENTE el valor que este campo tenía antes de la separación
+   * de taxonomía (`manufacturer ?? brand` de la oferta canónica), y por lo tanto
+   * conserva también su defecto: para 3 farmacias contiene un FABRICANTE
+   * (Dr. Simi, AraucoMed, Farmex), para Salcobrand contiene una MARCA, y para
+   * las 5 restantes es siempre `null`.
+   *
+   * Se mantiene por dos razones concretas, no por inercia: (1) `mobile/` lo
+   * consume y publica en producción, y (2) es el campo que
+   * `resolveCommercialIdentity()` alimenta hacia `presentationKey`, del que
+   * derivan los slugs de ficha de Web — cambiar su valor rotaría URLs indexadas.
+   *
+   * NO USAR EN CÓDIGO NUEVO. Para presentar: `brand` (marca) o `manufacturer`
+   * (laboratorio). Plan de retiro en docs/qa/cf-data-001/README.md.
+   */
   laboratory: string | null;
+  /**
+   * CF-DATA-001 — MARCA COMERCIAL del producto ("Tapsin", "Muxol", "Tocalm"),
+   * o `null` cuando no hay evidencia suficiente.
+   *
+   * `null` es un valor legítimo y frecuente, no un error: un genérico
+   * ("Paracetamol 500 mg x 16") no tiene marca, y el algoritmo prefiere el
+   * falso negativo antes que inventar una. La UI debe distinguir "sin marca"
+   * de "marca desconocida" con criterio de producto, no rellenar el hueco.
+   *
+   * Procedencia: campo estructurado de marca de la farmacia (hoy solo
+   * Salcobrand) o derivación corroborada desde el nombre — ver `brandSource` y
+   * `brandIdentity.ts`. NUNCA es un fabricante ni un principio activo.
+   */
+  brand: string | null;
+  /**
+   * CF-DATA-001 — LABORATORIO/FABRICANTE ("Maver", "Eurolab", "Abbott"), o
+   * `null`. Se publica SOLO cuando la farmacia lo entrega en un campo
+   * estructurado: nunca se infiere del nombre del producto.
+   */
+  manufacturer: string | null;
+  /**
+   * CF-DATA-001 — PRINCIPIO ACTIVO reconocido en el nombre, normalizado y sin
+   * acentos ("paracetamol", "ambroxol"), o `null` si no se reconoció.
+   *
+   * Es informativo y no participa de ninguna clave de identidad: `matchKey`
+   * sigue siendo la identidad farmacológica del sistema.
+   */
+  activeIngredient: string | null;
+  /**
+   * CF-DATA-001 — de dónde salió `brand`, para poder auditar la calidad del
+   * dato desde el cliente sin re-derivarlo: `"structured"` (campo declarado por
+   * la farmacia), `"name"` (derivado del nombre con corroboración) o
+   * `"unknown"` (sin marca).
+   */
+  brandSource: BrandSource;
   isBioequivalent: boolean | null;
   prices: PharmacyPrice[];
   bestPrice: number;
@@ -92,6 +144,14 @@ export interface MedicationResult {
 export type LexicalMatch = "exact" | "compatible" | "mismatch";
 export type ConcentrationMatch = "exact" | "unknown" | "other";
 
+/**
+ * CF-DATA-001 — procedencia de `MedicationResult.brand`. Se declara acá, junto
+ * al resto del contrato público, por el mismo motivo que `LexicalMatch`: viaja
+ * en la respuesta de `/api/search`, no es un detalle interno. La semántica de
+ * cada valor está documentada en `brandIdentity.ts`.
+ */
+export type BrandSource = "structured" | "name" | "unknown";
+
 export interface ScrapedProduct {
   name: string;
   price: number;
@@ -102,7 +162,28 @@ export interface ScrapedProduct {
   hasOnlineDelivery: boolean;
   onlineUrl: string | null;
   imageUrl: string | null;
-  laboratory: string | null;
+  /**
+   * CF-DATA-001 (2026-08-31) — reemplaza al antiguo campo único `laboratory`,
+   * que cada adaptador llenaba con una cosa distinta.
+   *
+   * `brand` es el campo que la farmacia declara como MARCA COMERCIAL. Hoy solo
+   * Salcobrand (`hit.brand`, Algolia) entrega uno: medido sobre 135 tarjetas de
+   * una sola oferta en producción, el 83,7 % de sus valores es el prefijo del
+   * propio nombre del producto ("Muxol", "Tapsin", "Broncot") — es una marca,
+   * no un laboratorio, y hasta ahora se publicaba mezclado con los fabricantes
+   * del resto de las farmacias.
+   *
+   * Cada adaptador debe mapear su campo por lo que se MIDIÓ que contiene, no
+   * por cómo se llama en el origen — ver la matriz en `brandIdentity.ts`.
+   */
+  brand: string | null;
+  /**
+   * CF-DATA-001 — campo que la farmacia declara como LABORATORIO/FABRICANTE:
+   * Dr. Simi `product.brand` (VTEX; el nombre engaña, contiene el fabricante),
+   * AraucoMed `manufacturer_name`, Farmex `vendor`. `null` en las 5 farmacias
+   * que no exponen ninguno.
+   */
+  manufacturer: string | null;
   isBioequivalent: boolean | null;
 }
 

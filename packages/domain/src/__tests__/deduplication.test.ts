@@ -25,12 +25,16 @@ function makeMedResult(
   imageUrl: string | null = null,
   isBioequivalent: boolean | null = false,
   commercialIdentity = "unknown",
-  laboratory: string | null = null
+  manufacturer: string | null = null
 ): MedicationResult {
   return {
     matchKey,
     canonicalName: "Test Medication",
-    laboratory,
+    laboratory: manufacturer,
+    brand: null,
+    manufacturer,
+    activeIngredient: null,
+    brandSource: "unknown",
     isBioequivalent,
     prices: [makePharmacyPrice(pharmacySlug, effective)],
     bestPrice: effective,
@@ -228,7 +232,7 @@ describe("mergeDuplicates — combinación vs monofármaco (S-1)", () => {
     pharmacySlug: PharmacySlug,
     name: string,
     price: number,
-    laboratory: string | null = null
+    manufacturer: string | null = null
   ): MedicationResult {
     const product: ScrapedProduct = {
       name,
@@ -240,7 +244,8 @@ describe("mergeDuplicates — combinación vs monofármaco (S-1)", () => {
       hasOnlineDelivery: true,
       onlineUrl: null,
       imageUrl: null,
-      laboratory,
+      brand: null,
+      manufacturer,
       isBioequivalent: false,
     };
     return toMedicationResult(product, pharmacySlug, pharmacySlug);

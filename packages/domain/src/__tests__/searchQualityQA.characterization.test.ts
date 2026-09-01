@@ -55,7 +55,8 @@ function scraped(over: Partial<ScrapedProduct> & { name: string }): ScrapedProdu
     hasOnlineDelivery: true,
     onlineUrl: null,
     imageUrl: null,
-    laboratory: null,
+    brand: null,
+    manufacturer: null,
     isBioequivalent: false,
     ...over,
   };
@@ -152,8 +153,8 @@ describe("QA-02 — omeprazol vs esomeprazol", () => {
 
   it("[OK, no-regresión] mergeDuplicates nunca fusiona omeprazol con esomeprazol", () => {
     const merged = mergeDuplicates([
-      offer("araucomed", { name: "Omeprazol 20 mg x 30 cápsulas", laboratory: "Opko" }),
-      offer("dr-simi", { name: "Esomeprazol 20 mg x 30 cápsulas", laboratory: "Opko" }),
+      offer("araucomed", { name: "Omeprazol 20 mg x 30 cápsulas", manufacturer: "Opko" }),
+      offer("dr-simi", { name: "Esomeprazol 20 mg x 30 cápsulas", manufacturer: "Opko" }),
     ]);
     expect(merged).toHaveLength(2);
   });
@@ -278,12 +279,12 @@ describe("QA-01 — fragmentación de identidad comercial", () => {
     // test de no-regresión, sin duplicar el resto de aquel Gate.
     const araucomed = offer("araucomed", {
       name: "Paracetamol 500 mg x 16 comprimidos. (Andromaco)",
-      laboratory: "ANDROMACO",
+      manufacturer: "ANDROMACO",
       isBioequivalent: false,
     });
     const drsimi = offer("dr-simi", {
       name: "Paracetamol 500 mg 16 comprimidos",
-      laboratory: "ANDRÓMACO",
+      manufacturer: "ANDRÓMACO",
       isBioequivalent: false,
     });
     expect(araucomed.presentationKey).toBe(drsimi.presentationKey);
@@ -296,13 +297,13 @@ describe("QA-01 — fragmentación de identidad comercial", () => {
     //   paracetamol|500mg|16|bio:true |brand:andromaco → dr-simi  $480
     const bioFalse = offer("araucomed", {
       name: "Paracetamol 500 mg x 16 comprimidos. (Andromaco)",
-      laboratory: "ANDROMACO",
+      manufacturer: "ANDROMACO",
       isBioequivalent: false,
       price: 450,
     });
     const bioTrue = offer("dr-simi", {
       name: "Paracetamol 500 mg 16 comprimidos",
-      laboratory: "ANDRÓMACO",
+      manufacturer: "ANDRÓMACO",
       isBioequivalent: true,
       price: 480,
     });
@@ -324,13 +325,13 @@ describe("QA-01 — fragmentación de identidad comercial", () => {
     // muestra dos tarjetas y esconde un ahorro real del 50%.
     const eco = offer("ecofarmacias", {
       name: "Losartan 50 mg x 30 comprimidos (LCH) DESCUENTO",
-      laboratory: "Losartan", // campo estructurado real: el principio activo
+      manufacturer: "Losartan", // campo estructurado real: el principio activo
       isBioequivalent: true,
       price: 490,
     });
     const farmex = offer("farmex", {
       name: "Losartan Potásico 50 mg x 30 comprimidos",
-      laboratory: "CHILE",
+      manufacturer: "CHILE",
       isBioequivalent: false,
       price: 990,
     });
@@ -353,13 +354,13 @@ describe("QA-01 — fragmentación de identidad comercial", () => {
     // unknown). Necesita además evidencia de identidad (EAN/GTIN).
     const eco = offer("ecofarmacias", {
       name: "Losartan 50 mg x 30 comprimidos (LCH) DESCUENTO",
-      laboratory: "Losartan",
+      manufacturer: "Losartan",
       isBioequivalent: false,
       price: 490,
     });
     const farmex = offer("farmex", {
       name: "Losartan Potásico 50 mg x 30 comprimidos",
-      laboratory: "CHILE",
+      manufacturer: "CHILE",
       isBioequivalent: false,
       price: 990,
     });
@@ -379,19 +380,19 @@ describe("QA-01 — fragmentación de identidad comercial", () => {
     // Se conserva el caso original y se agrega la versión con laboratorio en
     // AMBAS ofertas, que es la que ejercita de verdad la corrección.
     const merged = mergeDuplicates([
-      offer("ecofarmacias", { name: "Tapsin X 6 Comprimidos (Maver)", laboratory: "Maver" }),
+      offer("ecofarmacias", { name: "Tapsin X 6 Comprimidos (Maver)", manufacturer: "Maver" }),
       offer("araucomed", { name: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos" }),
     ]);
     expect(merged).toHaveLength(2);
 
     const eco = offer("ecofarmacias", {
       name: "Tapsin X 6 Comprimidos (Maver)",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 460,
     });
     const araucomed = offer("araucomed", {
       name: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 500,
     });
 
@@ -437,12 +438,12 @@ describe("SUB-HALLAZGO — combinaciones fusionadas con el monofármaco", () => 
     // monofármaco y $1990 la combinación) — un "ahorro" del 50% inexistente.
     const mono = offer("araucomed", {
       name: "Losartan Potasico 50 mg x 30 comprimidos. (Ascend)",
-      laboratory: "Ascend",
+      manufacturer: "Ascend",
       price: 990,
     });
     const combo = offer("farmex", {
       name: "Losartán Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos",
-      laboratory: "Ascend",
+      manufacturer: "Ascend",
       price: 1990,
     });
 
@@ -529,9 +530,9 @@ describe("QA-01/QA-05 — forma farmacéutica y cantidad en la identidad", () =>
 // ---------------------------------------------------------------------------
 describe("QA-05 — ranking exclusivamente por precio", () => {
   const catalogo = () => [
-    offer("dr-simi", { name: "Ibuprofeno 600 mg 20 comprimidos recubiertos", laboratory: "OPKO", price: 1200 }),
-    offer("farmex", { name: "Ibuprofeno 400 mg x 20 comprimidos", laboratory: "CHILE", price: 690 }),
-    offer("dr-simi", { name: "Ibuprofeno 200 mg 20 comprimidos recubiertos", laboratory: "ASCEND", price: 1200 }),
+    offer("dr-simi", { name: "Ibuprofeno 600 mg 20 comprimidos recubiertos", manufacturer: "OPKO", price: 1200 }),
+    offer("farmex", { name: "Ibuprofeno 400 mg x 20 comprimidos", manufacturer: "CHILE", price: 690 }),
+    offer("dr-simi", { name: "Ibuprofeno 200 mg 20 comprimidos recubiertos", manufacturer: "ASCEND", price: 1200 }),
   ];
 
   it("[SIN CAMBIOS] el orden BASE de mergeDuplicates sigue siendo solo por precio", () => {

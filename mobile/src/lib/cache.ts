@@ -1,6 +1,15 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { MedicationResult } from "@/lib/types";
 
+// v14 (CF-DATA-001, 2026-08-31): `MedicationResult` gana `brand`,
+// `manufacturer`, `activeIngredient` y `brandSource`
+// (packages/domain/src/types.ts). Los cuatro son NO opcionales en el contrato,
+// así que una entrada v13 servida desde el caché los entregaría como
+// `undefined` a componentes que los tipan como `string | null` — el caso exacto
+// que la regla de versionado de caché de CLAUDE.md §11 existe para evitar.
+// `presentationKey` NO cambia de valor en este ticket (ver
+// `legacyLaboratoryValue()` en packages/domain/src/pricing.ts), así que el
+// agrupamiento cacheado sigue siendo correcto; lo que falta es el dato nuevo.
 // v13 (CF-SEARCH-002, 2026-08-28): `MedicationResult` gana `lexicalMatch` y
 // `concentrationMatch` (packages/domain/src/types.ts), y —más importante— el
 // ORDEN de la lista cacheada pasó a depender de la intención de la consulta.
@@ -17,7 +26,7 @@ import type { MedicationResult } from "@/lib/types";
 // resultados v11 desde el caché dejaría la ficha sin resolver por la clave
 // nueva.
 // v11: MedicationResult gana presentationKey (FASE 1 Product Identity, 2026-08-19) — resultados por query pueden dividirse por marca
-const CACHE_PREFIX = "search_cache_v13_";
+const CACHE_PREFIX = "search_cache_v14_";
 const TTL_MS = 30 * 60 * 1000; // 30 min
 
 interface CacheEntry {

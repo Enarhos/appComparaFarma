@@ -17,7 +17,7 @@ describe("parseDrSimiResponse", () => {
       price: 550,
       onlinePrice: 480,
       hasStock: true,
-      laboratory: "ANDRÓMACO",
+      manufacturer: "ANDRÓMACO",
       isBioequivalent: true,
       onlineUrl: "https://www.drsimi.cl/paracetamol-500-mg-16-comprimidos/p",
     });

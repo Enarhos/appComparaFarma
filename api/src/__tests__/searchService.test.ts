@@ -310,7 +310,7 @@ function makeProduct(
   price: number,
   onlinePrice: number | null = null,
   isBioequivalent: boolean | null = false,
-  laboratory: string | null = null,
+  manufacturer: string | null = null,
   onlineUrl: string | null = null
 ): ScrapedProduct {
   return {
@@ -323,7 +323,8 @@ function makeProduct(
     hasOnlineDelivery: true,
     onlineUrl,
     imageUrl: null,
-    laboratory,
+    brand: null,
+    manufacturer,
     isBioequivalent,
   };
 }

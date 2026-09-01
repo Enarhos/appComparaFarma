@@ -107,7 +107,13 @@ export function parseAhumadaHtml(html: string): ScrapedProduct[] {
       hasOnlineDelivery: true,
       onlineUrl: href.startsWith("http") ? href : `${BASE}${href}`,
       imageUrl,
-      laboratory: null,
+      // CF-DATA-001 (2026-08-31): el tile de Demandware no expone marca ni
+      // laboratorio. Auditado sobre el HTML real (9 búsquedas, 168 tiles): no
+      // hay `product-brand`, ni `data-brand`, ni `"brand"` en el payload de
+      // analítica. La marca sí está en el nombre ("**Muxol** Jarabe Adulto
+      // Ambroxol Clorhidrato 600 mg 100 ml") y la deriva el dominio.
+      brand: null,
+      manufacturer: null,
       // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): el badge es evidencia
       // POSITIVA (`<img class="js-popover bioequivalent-badge"` con
       // `data-content="<span> Bioequivalente </span>"`). Su AUSENCIA no es una

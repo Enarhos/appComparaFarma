@@ -30,7 +30,8 @@ function scraped(over: Partial<ScrapedProduct> & { name: string }): ScrapedProdu
     hasOnlineDelivery: true,
     onlineUrl: null,
     imageUrl: null,
-    laboratory: null,
+    brand: null,
+    manufacturer: null,
     isBioequivalent: false,
     ...over,
   };
@@ -184,37 +185,37 @@ describe("dosageFormClass", () => {
 // 3. COMPATIBILIDAD DE IDENTIDAD
 // ---------------------------------------------------------------------------
 describe("isSameProduct", () => {
-  const base = toProductIdentity(scraped({ name: "Tapsin Forte x 20 comprimidos", laboratory: "Maver" }));
+  const base = toProductIdentity(scraped({ name: "Tapsin Forte x 20 comprimidos", manufacturer: "Maver" }));
 
   it("acepta la misma oferta descrita por dos farmacias distintas", () => {
-    const other = toProductIdentity(scraped({ name: "Tapsin Forte X 20 comprimidos", laboratory: "Maver" }));
+    const other = toProductIdentity(scraped({ name: "Tapsin Forte X 20 comprimidos", manufacturer: "Maver" }));
     expect(isSameProduct(base, other)).toBe(true);
   });
 
   it("rechaza una variante comercial distinta", () => {
-    const other = toProductIdentity(scraped({ name: "Tapsin Migraña x 20 comprimidos", laboratory: "Maver" }));
+    const other = toProductIdentity(scraped({ name: "Tapsin Migraña x 20 comprimidos", manufacturer: "Maver" }));
     expect(isSameProduct(base, other)).toBe(false);
   });
 
   it("rechaza una forma farmacéutica declarada distinta", () => {
-    const other = toProductIdentity(scraped({ name: "Tapsin Forte x 20 sobres", laboratory: "Maver" }));
+    const other = toProductIdentity(scraped({ name: "Tapsin Forte x 20 sobres", manufacturer: "Maver" }));
     expect(isSameProduct(base, other)).toBe(false);
   });
 
   it("tolera la forma no declarada: omitirla no afirma nada", () => {
-    const other = toProductIdentity(scraped({ name: "Tapsin Forte x 20", laboratory: "Maver" }));
+    const other = toProductIdentity(scraped({ name: "Tapsin Forte x 20", manufacturer: "Maver" }));
     expect(other.dosageForm).toBeNull();
     expect(isSameProduct(base, other)).toBe(true);
   });
 
   it("rechaza dosis, cantidad y bioequivalencia distintas", () => {
     expect(
-      isSameProduct(base, toProductIdentity(scraped({ name: "Tapsin Forte x 30 comprimidos", laboratory: "Maver" })))
+      isSameProduct(base, toProductIdentity(scraped({ name: "Tapsin Forte x 30 comprimidos", manufacturer: "Maver" })))
     ).toBe(false);
     expect(
       isSameProduct(
         base,
-        toProductIdentity(scraped({ name: "Tapsin Forte x 20 comprimidos", laboratory: "Maver", isBioequivalent: true }))
+        toProductIdentity(scraped({ name: "Tapsin Forte x 20 comprimidos", manufacturer: "Maver", isBioequivalent: true }))
       )
     ).toBe(false);
   });
@@ -230,12 +231,12 @@ describe("CF-SEARCH-001 — casos del ticket", () => {
     // `manufacturer_name`) y bioequivalencia: antes del fix nada las separaba.
     const eco = offer("ecofarmacias", {
       name: "Tapsin X 6 Comprimidos (Maver)",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 460,
     });
     const araucomed = offer("araucomed", {
       name: "Tapsin Rojo Dolor de Cabeza Tira x 6 comprimidos",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 500,
     });
 
@@ -268,8 +269,8 @@ describe("CF-SEARCH-001 — casos del ticket", () => {
     // presentationKey tapsin|30|bio:false|brand:maver: Forte vs Migraña.
     expect(
       mergeDuplicates([
-        offer("araucomed", { name: "Tapsin Forte x 30 comprimidos", laboratory: "Maver", price: 2990 }),
-        offer("farmex", { name: "Tapsin Migraña x 30 comprimidos", laboratory: "Maver", price: 4990 }),
+        offer("araucomed", { name: "Tapsin Forte x 30 comprimidos", manufacturer: "Maver", price: 2990 }),
+        offer("farmex", { name: "Tapsin Migraña x 30 comprimidos", manufacturer: "Maver", price: 4990 }),
       ])
     ).toHaveLength(2);
 
@@ -277,10 +278,10 @@ describe("CF-SEARCH-001 — casos del ticket", () => {
     // sobres de polvo efervescente — separados por el eje de forma.
     expect(
       mergeDuplicates([
-        offer("farmex", { name: "Tapsin 1000 SC 1 g x 20 comprimidos", laboratory: "MAVER", price: 4895 }),
+        offer("farmex", { name: "Tapsin 1000 SC 1 g x 20 comprimidos", manufacturer: "MAVER", price: 4895 }),
         offer("dr-simi", {
           name: "Tapsin SC paracetamol 1 g 20 sobres polvo para solución oral efervescente",
-          laboratory: "MAVER",
+          manufacturer: "MAVER",
           price: 7880,
         }),
       ])
@@ -300,8 +301,8 @@ describe("CF-SEARCH-001 — casos del ticket", () => {
 
   it("CASO C — misma marca, distinta dosis: NO se fusionan", () => {
     const merged = mergeDuplicates([
-      offer("araucomed", { name: "Losartan 50 mg x 30 comprimidos", laboratory: "Ascend" }),
-      offer("araucomed", { name: "Losartan 100 mg x 30 comprimidos", laboratory: "Ascend" }),
+      offer("araucomed", { name: "Losartan 50 mg x 30 comprimidos", manufacturer: "Ascend" }),
+      offer("araucomed", { name: "Losartan 100 mg x 30 comprimidos", manufacturer: "Ascend" }),
     ]);
     expect(merged).toHaveLength(2);
   });
@@ -347,12 +348,12 @@ describe("CF-SEARCH-001 — casos del ticket", () => {
     });
 
     it("Infantil separa, y sus sinónimos siguen agrupando entre sí", () => {
-      const ninos = offer("araucomed", { name: "Tapsin Niños 160 mg x 16 comprimidos.", laboratory: "Maver" });
+      const ninos = offer("araucomed", { name: "Tapsin Niños 160 mg x 16 comprimidos.", manufacturer: "Maver" });
       const infantil = offer("dr-simi", {
         name: "Tapsin infantil paracetamol 160 mg 16 comprimidos masticables infantil",
-        laboratory: "Maver",
+        manufacturer: "Maver",
       });
-      const adulto = offer("ahumada", { name: "Tapsin 160 mg x 16 Comprimidos Masticables", laboratory: "Maver" });
+      const adulto = offer("ahumada", { name: "Tapsin 160 mg x 16 Comprimidos Masticables", manufacturer: "Maver" });
 
       // "Niños" e "infantil" son el mismo calificador.
       expect(ninos.presentationKey).toBe(infantil.presentationKey);
@@ -388,12 +389,12 @@ describe("mergeDuplicates — integridad de oferta", () => {
     // y su nombre igual titulaba la tarjeta.
     const conNombre = offer("farmex", {
       name: "Tapsin Duo x 12 comprimidos",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 2500,
     });
     const masBarata = offer("farmex", {
       name: "Tapsin Duo x 12 comprimidos recubiertos",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 1890,
     });
 
@@ -409,13 +410,13 @@ describe("mergeDuplicates — integridad de oferta", () => {
   it("cada precio conserva su propia farmacia, canal y URL tras el merge", () => {
     const eco = offer("ecofarmacias", {
       name: "Tapsin Forte x 20 comprimidos",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 2980,
       onlineUrl: "https://www.ecofarmacias.cl/producto/tapsin-forte-x-20/",
     });
     const araucomed = offer("araucomed", {
       name: "Tapsin Forte x 20 comprimidos",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 1990,
       onlineUrl: "https://farmacia.araucomed.com/analgesicos-y-antinflamatorios/tapsin-forte-x20com",
     });
@@ -434,13 +435,13 @@ describe("mergeDuplicates — integridad de oferta", () => {
   it("la imagen de la tarjeta nunca viene de una oferta descartada", () => {
     const canonica = offer("araucomed", {
       name: "Tapsin Forte x 20 comprimidos",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 1990,
       imageUrl: "https://farmacia.araucomed.com/img/tapsin-forte.jpg",
     });
     const descartada = offer("araucomed", {
       name: "Tapsin Forte x 20 comprimidos recubiertos por caja arrugada",
-      laboratory: "Maver",
+      manufacturer: "Maver",
       price: 2990,
       imageUrl: "https://farmacia.araucomed.com/img/otra.jpg",
     });
@@ -459,8 +460,8 @@ describe("mergeDuplicates — integridad de oferta", () => {
     // el slug entre búsquedas — la causa del redirect loop documentado en
     // web/src/lib/resolveMedication.ts. Empate total: mismo laboratorio, mismo
     // largo de nombre, mismo precio; desempata el slug de farmacia.
-    const a = offer("ahumada", { name: "Tapsin Forte x 20 comprimidos", laboratory: "Maver", price: 1990 });
-    const b = offer("farmex", { name: "Tapsin Forte X 20 comprimidos", laboratory: "Maver", price: 1990 });
+    const a = offer("ahumada", { name: "Tapsin Forte x 20 comprimidos", manufacturer: "Maver", price: 1990 });
+    const b = offer("farmex", { name: "Tapsin Forte X 20 comprimidos", manufacturer: "Maver", price: 1990 });
 
     const forward = mergeDuplicates([a, b])[0];
     const backward = mergeDuplicates([b, a])[0];
@@ -474,9 +475,9 @@ describe("mergeDuplicates — integridad de oferta", () => {
     // Red de seguridad de la capa de validación: se fuerza a mano la MISMA
     // `presentationKey` sobre dos productos que el algoritmo de nombre
     // considera incompatibles. `mergeDuplicates` debe negarse a mezclarlos.
-    const real = offer("araucomed", { name: "Tapsin Forte x 20 comprimidos", laboratory: "Maver", price: 1990 });
+    const real = offer("araucomed", { name: "Tapsin Forte x 20 comprimidos", manufacturer: "Maver", price: 1990 });
     const contaminada: MedicationResult = {
-      ...offer("farmex", { name: "Tapsin Migraña x 30 comprimidos", laboratory: "Maver", price: 4990 }),
+      ...offer("farmex", { name: "Tapsin Migraña x 30 comprimidos", manufacturer: "Maver", price: 4990 }),
       presentationKey: real.presentationKey,
     };
 

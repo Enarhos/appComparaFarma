@@ -63,7 +63,19 @@ export function parseCruzVerdeResponse(
       hasOnlineDelivery: true,
       onlineUrl: id ? `${BASE}/${toSlug(name)}/${id}.html` : `${BASE}/search?q=${encodeURIComponent(name)}`,
       imageUrl,
-      laboratory: (hit.brand as string) ?? null,
+      // CF-DATA-001 (2026-08-31): el mapeo anterior leía `hit.brand`, un campo
+      // que el endpoint NO devuelve — mapeo muerto, `null` en el 100 % de las
+      // ofertas. Verificado contra la fuente real (9 búsquedas, 165 hits): las
+      // claves de cada `hit` son exactamente `_type, currency, hit_type, image,
+      // link, orderable, price, prices, product_id, product_name, product_type,
+      // represented_product`. No hay `brand` ni ningún equivalente.
+      //
+      // Se deja de leer una clave inexistente. Cruz Verde SÍ escribe la marca
+      // dentro del nombre ("**Tocalm** Adulto Ambroxol 30 mg/5mL Jarabe 100
+      // mL"), y de ahí la deriva `brandFromName()` en el dominio — no acá, para
+      // no duplicar esa regla en 9 adaptadores.
+      brand: null,
+      manufacturer: null,
       // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): el endpoint
       // `product_search` de Demandware NO devuelve ningún atributo de
       // bioequivalencia. Auditado contra la fuente real (omeprazol,

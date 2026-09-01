@@ -71,7 +71,15 @@ export function parseDrSimiResponse(
       hasOnlineDelivery: true,
       onlineUrl: product.link ? String(product.link) : `${BASE}/${encodeURIComponent(query)}`,
       imageUrl,
-      laboratory: product.brand ? String(product.brand) : null,
+      // CF-DATA-001 (2026-08-31): el campo se llama `brand` en VTEX pero
+      // contiene el FABRICANTE. Medido sobre la fuente real (9 búsquedas, 98
+      // productos): presente en el 100 %, 24 valores distintos, todos nombres
+      // de laboratorio — MAVER(21), PRATER(16), OPKO(9), ASCEND(8), TEVA(7),
+      // PASTEUR(6), ANDRÓMACO(4), SEVEN PHARMA(3)… y CERO coincidencias con el
+      // nombre del producto (0 % lo tiene como prefijo, 0 % lo contiene).
+      // "Tocalm ambroxol 15 mg/5 mL jarabe" -> "PRATER": la marca es Tocalm.
+      brand: null,
+      manufacturer: product.brand ? String(product.brand) : null,
       isBioequivalent,
     }];
   });

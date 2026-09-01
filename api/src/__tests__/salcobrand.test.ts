@@ -18,7 +18,11 @@ describe("parseSalcobrandResponse", () => {
       onlinePrice: 999,
       sbpayPrice: 854,
       cmrPrice: null,
-      laboratory: "Kitadol",
+      // CF-DATA-001: `hit.brand` de Salcobrand es la MARCA COMERCIAL, no un
+      // laboratorio. El propio fixture lo demuestra: el valor es "Kitadol", la
+      // marca del producto, no su fabricante. Salcobrand no expone fabricante.
+      brand: "Kitadol",
+      manufacturer: null,
       onlineUrl: "https://salcobrand.cl/products/kitadol-b-paracetamol-500mg-24-comprimidos?default_sku=430924",
     });
   });

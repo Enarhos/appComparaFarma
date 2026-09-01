@@ -43,7 +43,30 @@ export function parseSalcobrandResponse(
       hasOnlineDelivery: Boolean(hit.package_delivery ?? true),
       onlineUrl,
       imageUrl,
-      laboratory: (hit.brand as string) ?? null,
+      // CF-DATA-001 (2026-08-31): `hit.brand` de Salcobrand es una MARCA
+      // COMERCIAL, no un laboratorio. Hasta ahora se publicaba en el mismo
+      // campo que los FABRICANTES de Dr. Simi/AraucoMed/Farmex, así que la UI
+      // llamaba "Marca" a "MAVER" y "Muxol" indistintamente.
+      //
+      // Evidencia (producción, 9 búsquedas, 135 tarjetas de una sola oferta de
+      // Salcobrand — atribución exacta): 100 % de sus ofertas traen el campo y
+      // el 83,7 % de los valores es el PREFIJO del propio nombre del producto:
+      //   "Muxol Adulto Ambroxol Jarabe 100ml"  -> "Muxol"
+      //   "Muxol Pediátrico Ambroxol Jarabe..." -> "Muxol Pediatrico"
+      //   "Broncot Ambroxol 30mg/5ml 120ml"     -> "Broncot"
+      //   "Tapsin ..." (25 ofertas)             -> "Tapsin"
+      // Ningún valor coincide con un nombre de laboratorio (Maver, Prater,
+      // Opko, Ascend… no aparecen nunca). CF-QA-001 había leído este patrón
+      // como "contaminado con el nombre del producto"; la medición muestra lo
+      // contrario: el campo es correcto, es una marca, y estaba mal clasificado.
+      //
+      // Salvedad conocida, resuelta aguas abajo: en los GENÉRICOS la marca
+      // declarada es el propio principio activo ("Ambroxol", "diclofenaco").
+      // `resolveBrandIdentity()` descarta esos valores contra el vocabulario de
+      // composición en vez de publicar un principio activo como marca.
+      brand: (hit.brand as string) ?? null,
+      // Salcobrand no expone laboratorio/fabricante en `sb_variant_production`.
+      manufacturer: null,
       // BIOEQUIVALENCE-DATA-QUALITY-01 (2026-08-30): Salcobrand NO expone si un
       // producto ES bioequivalente. El campo que se leía hasta ahora,
       // `bioequivalent_filter.has_bioequivalent`, es una FACETA DE BÚSQUEDA que

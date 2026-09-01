@@ -1,0 +1,10 @@
+pharmacy,source_field,adapter_location,semantica_medida,ejemplo_nombre,ejemplo_valor,confiabilidad,pct_no_null,pct_claramente_incorrecto,mapeo_propuesto
+salcobrand,hit.brand (Algolia sb_variant_production),api/src/clients/salcobrand.ts:46,BRAND,"Muxol Adulto Ambroxol Jarabe 100ml",Muxol,alta (marca) — repite el principio activo en genericos,100.0,"18.5 (genericos donde la 'marca' es el INN: Ambroxol, diclofenaco)",brand
+dr-simi,product.brand (VTEX),api/src/clients/drsimi.ts:74,MANUFACTURER,"Tocalm ambroxol 15 mg/5 mL jarabe pediatrico 100 mL",PRATER,alta,100.0,0.0,manufacturer
+araucomed,product.manufacturer_name (PrestaShop),api/src/clients/araucomed.ts:75,MANUFACTURER,"Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)",Ascend,alta,79.1,0.0,manufacturer
+farmex,product.vendor (Shopify),api/src/clients/farmex.ts:65,MANUFACTURER,"Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",EUROLAB,alta tras filtrar vendors de canal,100.0,"vendors de canal (Farmex-Fonasa/Pluxee/...) ya filtrados por classifyVendor",manufacturer
+cruz-verde,hit.brand (Demandware product_search),api/src/clients/cruzverde.ts:66,NULL (campo inexistente),"Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL",,mapeo muerto — la clave no existe en el payload,0.0,100.0 (siempre null),"ninguno; marca derivada del nombre"
+ahumada,—,api/src/clients/ahumada.ts:110,NULL,"MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml",,sin campo en el tile HTML,0.0,n/a,"ninguno; marca derivada del nombre"
+ecofarmacias,brands/attributes (WooCommerce Store API),api/src/clients/ecofarmacias.ts:62,NULL,"Ambroxol 30 mg/5ml jarabe 100 ml Opko",,los arrays existen pero vienen vacios en el 100%,0.0,n/a,"ninguno; laboratorio escrito al final del nombre, no se extrae"
+easyfarma,—,api/src/clients/easyfarma.ts:117,NULL,"Amrodil 30 Mg/5ml 100 Ml",,sin campo; ademas trunca los nombres,0.0,n/a,"ninguno; nombre truncado limita tambien la derivacion"
+sermecoop,—,api/src/clients/sermecoop.ts:73,NULL,"Muxol (ambroxol) 15mg/5ml Jarabe 100ml",,sin campo en la tarjeta HTML,0.0,n/a,"ninguno; grafia regular marca + (molecula) permite derivar"
