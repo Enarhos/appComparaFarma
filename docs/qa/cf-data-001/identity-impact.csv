@@ -1,0 +1,13 @@
+eje_de_identidad,base_57cbd5d,propuesta,delta,metodo_de_medicion
+matchKey,1027 ofertas,1027 ofertas,0 cambios,"comparacion 1:1 por canonicalName sobre el corpus A/B; ademas el snapshot de contrato packages/domain/src/__tests__/__snapshots__/contract.test.ts.snap queda byte a byte igual"
+presentationKey (claves distintas),821,821,0 cambios,"conjunto de claves de BASE vs PROPUESTA: 0 claves solo-en-BASE y 0 claves solo-en-PROPUESTA"
+structuredBrand que alimenta resolveCommercialIdentity,manufacturer ?? brand,manufacturer ?? brand,identico,"legacyLaboratoryValue() en packages/domain/src/pricing.ts reconstruye el valor historico exacto"
+totalCards,870,870,0,mergeDuplicates sobre el mismo corpus
+totalOffers,1027,1027,0,suma de prices[] de todas las tarjetas
+multiPharmacyCards,123,123,0,tarjetas con prices.length > 1
+agrupacion (composicion de cada tarjeta),—,—,0 cambios,"firma ordenada de las ofertas de cada tarjeta comparada oferta por oferta"
+falseMergesIntroduced,—,0,0,"consecuencia demostrada de 0 cambios de agrupacion"
+falseSplitsIntroduced,—,0,0,"consecuencia demostrada de 0 cambios de agrupacion"
+slugChanges (web /medicamento/[slug]),870 slugs,870 slugs,0 cambios,"slug = slugify(canonicalName) + FNV-1a64(presentationKey); ambos componentes sin cambios"
+redirects requeridos,—,0,0,"no se necesita una generacion nueva en web/src/lib/resolveMedication.ts"
+riesgo SEO,—,ninguno,—,"0% del catalogo rota URL; schema.org gana manufacturer y deja de declarar un fabricante como brand"
