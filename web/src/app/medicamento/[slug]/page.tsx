@@ -1,3 +1,4 @@
+import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -27,11 +28,35 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+/**
+ * CF-WEB-002  una sola resolución por request.
+ *
+ * `generateMetadata` y el componente de página resolvían el MISMO slug por
+ * separado, así que cada visita disparaba dos búsquedas en vivo independientes
+ * contra las 9 farmacias. Además de duplicar el costo, las dos podían diferir:
+ * el catálogo cambia entre llamadas, así que la ficha podía renderizarse con un
+ * producto mientras el `<title>`/`canonical` describían otro o directamente
+ * decir "Medicamento no encontrado" sobre una ficha que sí resolvió.
+ *
+ * `cache()` de React memoiza por request en el App Router: ambas rutas de
+ * ejecución ven exactamente la misma resolución. Con la escalera de
+ * recuperación de `resolveMedicationBySlug` esto pasa de 2-4 búsquedas por
+ * visita a 1-2.
+ */
+const resolveOnce = cache(resolveMedicationBySlug);
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const resolution = await resolveMedicationBySlug(slug);
+  const resolution = await resolveOnce(slug);
 
   if (resolution.status !== "ok") {
+    // CF-WEB-002  el `noindex` es lo que hoy contiene el daño SEO del
+    // soft-404: la URL responde 200 (Next ya hizo flush del shell por el
+    // `loading.tsx` del segmento raíz, ver `docs/qa/cf-web-002/QA_SUMMARY.md`
+    // §7 para la matriz de experimentos), así que la única señal efectiva
+    // contra la indexación de una ficha irresoluble es esta. NO cambiar por
+    // `notFound()` acá: se midió y no altera el status, y sí haría perder el
+    // `noindex`.
     return {
       title: "Medicamento no encontrado",
       robots: { index: false, follow: true },
@@ -79,7 +104,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function MedicationDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const resolution = await resolveMedicationBySlug(slug);
+  const resolution = await resolveOnce(slug);
 
   if (resolution.status === "not-found") {
     notFound();

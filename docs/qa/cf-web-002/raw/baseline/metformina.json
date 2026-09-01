@@ -1,0 +1,4063 @@
+{
+ "query": "metformina",
+ "apiUrl": "https://comparafarma-api.vercel.app",
+ "fetchedAt": "2026-09-01T00:04:45.498Z",
+ "results": [
+  {
+   "matchKey": "metformina|850mg|30",
+   "canonicalName": "Metformina Clorhidrato 850mg x 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Metformina Clorhidrato 850mg x 30 Comprimidos",
+     "channels": {
+      "store": 1690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1690
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=metformina%7C850mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmetformina-clorhidrato-850mg-x-30-comprimidos%2F&cfmId=CFM-000800",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/02/metformina-850x30-1.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Metformina 850 mg Caja x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 1949,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1949
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=metformina%7C850mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmetformina-850-mg-caja-x-30-comprimidos-recubiertos-94705.html&cfmId=CFM-000800",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw38e9464d/images/products/94705/94705.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 1690,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/02/metformina-850x30-1.jpg",
+   "presentationKey": "metformina|850mg|30|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000800",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|850mg|60",
+   "canonicalName": "Metformina 850 mg x 60 comprimidos (Cenabast)",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Metformina 850 mg x 60 comprimidos (Cenabast)",
+     "channels": {
+      "store": 1930,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1930
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=metformina%7C850mg%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmetformina-850-mg-x-60-comprimidos-cenabast%2F&cfmId=CFM-000838",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/metformina-clor.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Metformina 850 mg x 60 Comprimidos Recubiertos ASCEND",
+     "channels": {
+      "store": 3528,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3528
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=metformina%7C850mg%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fmetformina-850-mg-x-60-comprimidos-recubiertos-ascend-73087.html&cfmId=CFM-000838",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe073f910/images/products/73087/73087.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 1930,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/10/metformina-clor.jpg",
+   "presentationKey": "metformina|850mg|60|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000838",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|850mg|30",
+   "canonicalName": "Metformina 850 mg 30 comprimidos recubiertos",
+   "laboratory": "ASCEND",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Metformina 850 mg 30 comprimidos recubiertos",
+     "channels": {
+      "store": 2600,
+      "online": 1950,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1950
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=metformina%7C850mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fmetformina-clorhidrato-850-mg-30-comprimidos-be0001%2Fp&cfmId=CFM-000800",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159751/Metformina BE0001-1.jpg?v=638943246509170000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 1950,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159751/Metformina BE0001-1.jpg?v=638943246509170000",
+   "presentationKey": "metformina|850mg|30|bio:true|brand:ascend|form:solid-oral",
+   "cfmId": "CFM-000800",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|1000mg|30",
+   "canonicalName": "Metformina 1000mg x 30 Comp. de Liberación Prolongada DESCUENTO",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Metformina 1000mg x 30 Comp. de Liberación Prolongada DESCUENTO",
+     "channels": {
+      "store": 1980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1980
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=metformina%7C1000mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmetformina-1000mg-x-30-comp-de-liberacion-prolongada-descuento%2F&cfmId=CFM-000812",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/metformina-1000-x-30.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 1980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/metformina-1000-x-30.jpg",
+   "presentationKey": "metformina|1000mg|30|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000812",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|500mg|30",
+   "canonicalName": "Metformina XR 500 mg x 30 comprimidos. Caplin Point (Cenabast)",
+   "laboratory": "Ascend",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Metformina XR 500 mg x 30 comprimidos. Caplin Point (Cenabast)",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=metformina%7C500mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fmetformina-xr-500-mg-x-30-comprimidos-caplin-point-cenabast&cfmId=CFM-001124",
+     "imageUrl": "https://farmacia.araucomed.com/14637-home_default/metformina-xr-500-mg-x-30-comprimidos-caplin-point-cenabast.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/14637-home_default/metformina-xr-500-mg-x-30-comprimidos-caplin-point-cenabast.jpg",
+   "presentationKey": "metformina|500mg|30|bio:unknown|brand:ascend|var:xr|form:solid-oral",
+   "cfmId": "CFM-001124",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|850mg|30",
+   "canonicalName": "Metformina 850 Mg 30 Comp....",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Metformina 850 Mg 30 Comp....",
+     "channels": {
+      "store": 1990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 1990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=metformina%7C850mg%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105155-metformina-850-mg-30-comp-recubiertos-opko.html&cfmId=CFM-000800",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 1990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "metformina|850mg|30|bio:unknown|brand:opko|form:solid-oral",
+   "cfmId": "CFM-000800",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|500mg|30",
+   "canonicalName": "Metformina Clorhidrato 500 mg x 30 Comprimidos (cenabast)",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Metformina Clorhidrato 500 mg x 30 Comprimidos (cenabast)",
+     "channels": {
+      "store": 2080,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2080
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=metformina%7C500mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmetformina-clorhidrato-500-mg-x-30-comprimidos-cenabast%2F&cfmId=CFM-001124",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/metformina-500-x-30.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 2080,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2021/06/metformina-500-x-30.jpg",
+   "presentationKey": "metformina|500mg|30|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001124",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|750mg|30",
+   "canonicalName": "Metformina Clorhidrato750 mg x 30 Comprimidos (Cenabast) DESCUENTO",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Metformina Clorhidrato750 mg x 30 Comprimidos (Cenabast) DESCUENTO",
+     "channels": {
+      "store": 2390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2390
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=metformina%7C750mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fmetformina-clorhidrato750-mg-x-30-comprimidos-cenabast-descuento%2F&cfmId=CFM-001138",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/metformina.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 2390,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/06/metformina.jpg",
+   "presentationKey": "metformina|750mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001138",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina",
+   "canonicalName": "Metformina Clorhidrato 850...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Metformina Clorhidrato 850...",
+     "channels": {
+      "store": 2490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=metformina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F104747-metformina-clorhidrato-850-mg-x-30-comp.html&cfmId=CFM-001141",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 2490,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "metformina|bio:unknown|brand:unknown",
+   "cfmId": "CFM-001141",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|750mg|30",
+   "canonicalName": "Metformina XR 750 mg x 30 comprimidos. (CuraeSpring)",
+   "laboratory": "MDC Health",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Metformina XR 750 mg x 30 comprimidos. (CuraeSpring)",
+     "channels": {
+      "store": 2500,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2500
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=metformina%7C750mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fmetformina-xr-750-mg-x-30-comprimidos-curaespring&cfmId=CFM-001138",
+     "imageUrl": "https://farmacia.araucomed.com/12475-home_default/metformina-xr-750-mg-x-30-comprimidos-curaespring.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 2500,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/12475-home_default/metformina-xr-750-mg-x-30-comprimidos-curaespring.jpg",
+   "presentationKey": "metformina|750mg|30|bio:unknown|brand:mdchealth|var:xr|form:solid-oral",
+   "cfmId": "CFM-001138",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|1000mg|30",
+   "canonicalName": "Metformina XR 1000 mg x 30 comprimidos. (CuraeSpring)",
+   "laboratory": "MDC Health",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Metformina XR 1000 mg x 30 comprimidos. (CuraeSpring)",
+     "channels": {
+      "store": 2990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 2990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=metformina%7C1000mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fmetformina-xr-1000-mg-x-30-comprimidos-curaespring&cfmId=CFM-000812",
+     "imageUrl": "https://farmacia.araucomed.com/12974-home_default/metformina-xr-1000-mg-x-30-comprimidos-curaespring.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 2990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/12974-home_default/metformina-xr-1000-mg-x-30-comprimidos-curaespring.jpg",
+   "presentationKey": "metformina|1000mg|30|bio:unknown|brand:mdchealth|var:xr|form:solid-oral",
+   "cfmId": "CFM-000812",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glimefor|500mg|30",
+   "canonicalName": "Glimefor XR metformina 500 mg 30 comprimidos de liberación prolongada",
+   "laboratory": "ASCEND",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Glimefor XR metformina 500 mg 30 comprimidos de liberación prolongada",
+     "channels": {
+      "store": 4400,
+      "online": 3300,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3300
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=glimefor%7C500mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fmetformina-500-mg-30-comp-recubiertos-liberacion-prolongada%2Fp&cfmId=CFM-000871",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160447/Ascend-BE0093-01.jpg?v=639066074555200000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 3300,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160447/Ascend-BE0093-01.jpg?v=639066074555200000",
+   "presentationKey": "glimefor|500mg|30|bio:true|brand:ascend|var:xr|form:solid-oral",
+   "cfmId": "CFM-000871",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glaupax|500mg|30",
+   "canonicalName": "Glaupax 500 metformina 500 mg 30 comprimidos recubiertos",
+   "laboratory": "PASTEUR",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Glaupax 500 metformina 500 mg 30 comprimidos recubiertos",
+     "channels": {
+      "store": 4480,
+      "online": 3360,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3360
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=glaupax%7C500mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fglaupax-500-metformina-500-mg-30-comprimidos%2Fp&cfmId=CFM-000865",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155614/BE0028-1.jpg?v=637964770609300000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 3360,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/155614/BE0028-1.jpg?v=637964770609300000",
+   "presentationKey": "glaupax|500mg|30|bio:true|brand:pasteur|form:solid-oral",
+   "cfmId": "CFM-000865",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|850mg|30",
+   "canonicalName": "Metformina 850 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Metformina 850 mg 30 Comprimidos",
+     "channels": {
+      "store": 3390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=metformina%7C850mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmetformina-850-mg-30-comprimidos%2F270506.html&cfmId=CFM-000800",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw83dcdc91/images/large/270506-1.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 3390,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw83dcdc91/images/large/270506-1.jpg",
+   "presentationKey": "metformina|850mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000800",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|850mg|30",
+   "canonicalName": "Metformina (B) 850mg 30 Comprimidos Recubiertos",
+   "laboratory": "Metformina",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Metformina (B) 850mg 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 3899,
+      "online": 3431,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3431
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=metformina%7C850mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmetformina-b-850mg-30-comprimidos-recubiertos%3Fdefault_sku%3D36054&cfmId=CFM-000800",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/98690/small/METFORMINA_850_30.jpg?1695233911",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 3431,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/98690/small/METFORMINA_850_30.jpg?1695233911",
+   "presentationKey": "metformina|850mg|30|bio:unknown|brand:metformina|form:solid-oral",
+   "cfmId": "CFM-000800",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|850mg|60",
+   "canonicalName": "Metformina 850 mg 60 comprimidos",
+   "laboratory": "TEVA",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Metformina 850 mg 60 comprimidos",
+     "channels": {
+      "store": 3529,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3529
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=metformina%7C850mg%7C60&url=https%3A%2F%2Fwww.drsimi.cl%2Fmetformina-850-mg-60-comprimidos-be0294%2Fp&cfmId=CFM-000838",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158669/FOTOS-WEB-ECOMMERCE_0278_BE0294-1.jpg?v=638682296629100000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 3529,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158669/FOTOS-WEB-ECOMMERCE_0278_BE0294-1.jpg?v=638682296629100000",
+   "presentationKey": "metformina|850mg|60|bio:true|brand:teva|form:solid-oral",
+   "cfmId": "CFM-000838",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glaupax|500mg|30",
+   "canonicalName": "Glaupax 500 mg x 30 comprimidos.",
+   "laboratory": "Pasteur",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Glaupax 500 mg x 30 comprimidos.",
+     "channels": {
+      "store": 3990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=glaupax%7C500mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fglaupax-500mg-x30com&cfmId=CFM-000865",
+     "imageUrl": "https://farmacia.araucomed.com/3445-home_default/glaupax-500mg-x30com.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 3990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/3445-home_default/glaupax-500mg-x30com.jpg",
+   "presentationKey": "glaupax|500mg|30|bio:unknown|brand:pasteur|form:solid-oral",
+   "cfmId": "CFM-000865",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "metformina",
+   "canonicalName": "Metformina Clorhidrato 850...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Metformina Clorhidrato 850...",
+     "channels": {
+      "store": 3990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 3990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=metformina&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F103319-metformina-clorhidrato-850-mg-60-comprimidos-andromaco.html&cfmId=CFM-001141",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 3990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "metformina|bio:unknown|brand:andromaco",
+   "cfmId": "CFM-001141",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glucosan|750mg|30",
+   "canonicalName": "Glucosan XR 750 mg x 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glucosan XR 750 mg x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 4499,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4499
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glucosan%7C750mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglucosan-xr-750-mg-x-30-comprimidos-recubiertos-88990.html&cfmId=CFM-001147",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw25745334/images/products/88990/88990.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 4499,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw25745334/images/products/88990/88990.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glucosan|750mg|30|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001147",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glucosan|750mg|30",
+   "canonicalName": "Glucosan XR 750 metformina 750 mg 30 comprimidos de liberación prolongada",
+   "laboratory": "SANITAS",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Glucosan XR 750 metformina 750 mg 30 comprimidos de liberación prolongada",
+     "channels": {
+      "store": 6000,
+      "online": 4500,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4500
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=glucosan%7C750mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fmetformina-750-mg-30-comprimidos-recubiertos-de-liberacion-prolongada-be0094-1%2Fp&cfmId=CFM-001147",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160887/BE0094-01-SANITAS.jpg?v=639165283562800000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 4500,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160887/BE0094-01-SANITAS.jpg?v=639165283562800000",
+   "presentationKey": "glucosan|750mg|30|bio:true|brand:sanitas|var:xr|form:solid-oral",
+   "cfmId": "CFM-001147",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glaupax|500mg|30",
+   "canonicalName": "Glaupax Xr (metformina) 500mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Glaupax Xr (metformina) 500mg 30 Comprimidos",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=glaupax%7C500mg%7C30&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D7773%26d_%3D1&cfmId=CFM-000865",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800068012303.jpg?v=6a96169cdd338",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    },
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glaupax XR 500 mg x 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 6779,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6779
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glaupax%7C500mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglaupax-xr-500-mg-x-30-comprimidos-de-liberacion-prolongada-86619.html&cfmId=CFM-000865",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwd655f763/images/products/86619/86619.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "sermecoop",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800068012303.jpg?v=6a96169cdd338",
+   "presentationKey": "glaupax|500mg|30|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-000865",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glimefor|500mg|30",
+   "canonicalName": "Glimefor XR Metformina 500 mg x 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Glimefor XR Metformina 500 mg x 30 Comprimidos",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glimefor%7C500mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fglimefor-xr-metformina-500-mg-x-30-comprimidos%2F&cfmId=CFM-000871",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/01/glimefor-xr-500.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/01/glimefor-xr-500.jpg",
+   "presentationKey": "glimefor|500mg|30|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-000871",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|500mg|30",
+   "canonicalName": "Metformina Lp 500 mg x 30 comprimidos",
+   "laboratory": "ASCEND",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Metformina Lp 500 mg x 30 comprimidos",
+     "channels": {
+      "store": 4990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=metformina%7C500mg%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmetformina-liberacion-prolongada-500-mg-x-30-comp-ascend%3F_pos%3D2%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001124",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metformina-liberacion-prolongada-500-mg-x-30-comp-ascend-ascend-500148.jpg?v=1692989434",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 4990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metformina-liberacion-prolongada-500-mg-x-30-comp-ascend-ascend-500148.jpg?v=1692989434",
+   "presentationKey": "metformina|500mg|30|bio:unknown|brand:ascend|var:lp|form:solid-oral",
+   "cfmId": "CFM-001124",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glicenex|500mg|30",
+   "canonicalName": "Glicenex 500 mg x 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glicenex 500 mg x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 4999,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 4999
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glicenex%7C500mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglicenex-500-mg-x-30-comprimidos-recubiertos-42616.html&cfmId=CFM-001120",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7cd1681d/images/products/42616/42616.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 4999,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7cd1681d/images/products/42616/42616.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glicenex|500mg|30|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001120",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "metformina|850mg|60",
+   "canonicalName": "Metformina (B) 850mg 60 Comprimidos",
+   "laboratory": "Metformina",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Metformina (B) 850mg 60 Comprimidos",
+     "channels": {
+      "store": 5999,
+      "online": 5279,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5279
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=metformina%7C850mg%7C60&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fmetformina-b-850mg-60-comprimidos%3Fdefault_sku%3D435930&cfmId=CFM-000838",
+     "imageUrl": "https://static.salcobrandonline.cl/spree/products/44211/small/7800007806208_1.jpg?1641476923",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 5279,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrandonline.cl/spree/products/44211/small/7800007806208_1.jpg?1641476923",
+   "presentationKey": "metformina|850mg|60|bio:unknown|brand:metformina|form:solid-oral",
+   "cfmId": "CFM-000838",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "hipoglucin|500mg|30",
+   "canonicalName": "Hipoglucin LP 500 mg x 30 comprimidos.",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Hipoglucin LP 500 mg x 30 comprimidos.",
+     "channels": {
+      "store": 5990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 5990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hipoglucin%7C500mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fhipoglucin-lp-500mg-x30com&cfmId=CFM-001136",
+     "imageUrl": "https://farmacia.araucomed.com/1134-home_default/hipoglucin-lp-500mg-x30com.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 5990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/1134-home_default/hipoglucin-lp-500mg-x30com.jpg",
+   "presentationKey": "hipoglucin|500mg|30|bio:unknown|brand:chile|var:lp|form:solid-oral",
+   "cfmId": "CFM-001136",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glimefor|850mg|30",
+   "canonicalName": "Glimefor 850 Metformina 850 mg 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glimefor 850 Metformina 850 mg 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 6390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glimefor%7C850mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglimefor-850-metformina-850-mg-30-comprimidos-recubiertos%2F298014.html&cfmId=CFM-001137",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe11309a1/images/large/298014-glimefor-850-metformina-850-mg-30-comprimidos-recubiertos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 6390,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe11309a1/images/large/298014-glimefor-850-metformina-850-mg-30-comprimidos-recubiertos.jpg",
+   "presentationKey": "glimefor|850mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001137",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glimefor|1000mg|30",
+   "canonicalName": "Glimefor 1000 Metformina 1000 mg x 30 Comp. (Cenabast)",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Glimefor 1000 Metformina 1000 mg x 30 Comp. (Cenabast)",
+     "channels": {
+      "store": 6460,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6460
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glimefor%7C1000mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fglimefor-1000-metformina-1000-mg-x-30-comp-cenabast%2F&cfmId=CFM-001171",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/glimefor-1000.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 6460,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/glimefor-1000.jpg",
+   "presentationKey": "glimefor|1000mg|30|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001171",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "hipoglucin|500mg|30",
+   "canonicalName": "Hipoglucin LP 500 mg x 30 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Hipoglucin LP 500 mg x 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 6462,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6462
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipoglucin%7C500mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoglucin-lp-500-mg-x-30-comprimidos-de-liberacion-prolongada-49758.html&cfmId=CFM-001136",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwab1ce46e/images/products/49758/49758.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 6462,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwab1ce46e/images/products/49758/49758.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "hipoglucin|500mg|30|bio:true|brand:unknown|var:lp|form:solid-oral",
+   "cfmId": "CFM-001136",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glicosol|1000mg|30",
+   "canonicalName": "Glicosol XR 1000 mg x 30 comprimidos.",
+   "laboratory": "Opko",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Glicosol XR 1000 mg x 30 comprimidos.",
+     "channels": {
+      "store": 6490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=glicosol%7C1000mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fglicosol-xr-1000mg-x30com&cfmId=CFM-001413",
+     "imageUrl": "https://farmacia.araucomed.com/9900-home_default/glicosol-xr-1000mg-x30com.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 6490,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/9900-home_default/glicosol-xr-1000mg-x30com.jpg",
+   "presentationKey": "glicosol|1000mg|30|bio:unknown|brand:opko|var:xr|form:solid-oral",
+   "cfmId": "CFM-001413",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glimefor|1000mg|30",
+   "canonicalName": "Glimefor XR metformina 1000 mg 30 comprimidos de liberación prolongada",
+   "laboratory": "ASCEND",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Glimefor XR metformina 1000 mg 30 comprimidos de liberación prolongada",
+     "channels": {
+      "store": 9000,
+      "online": 6750,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6750
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=glimefor%7C1000mg%7C30&url=https%3A%2F%2Fwww.drsimi.cl%2Fglimefor-xr-metformina-1000-mg-30-comprimidos-de-liberacion-prolongada%2Fp&cfmId=CFM-001171",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160413/Ascend-BE0088-01.jpg?v=639058102064170000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 6750,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160413/Ascend-BE0088-01.jpg?v=639058102064170000",
+   "presentationKey": "glimefor|1000mg|30|bio:true|brand:ascend|var:xr|form:solid-oral",
+   "cfmId": "CFM-001171",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|850mg|60",
+   "canonicalName": "Metformina 850 mg 60 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Metformina 850 mg 60 Comprimidos",
+     "channels": {
+      "store": 6990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=metformina%7C850mg%7C60&url=https%3A%2F%2Fwww.cruzverde.cl%2Fmetformina-850-mg-60-comprimidos%2F270505.html&cfmId=CFM-000838",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4ab08851/images/large/270505-1.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 6990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw4ab08851/images/large/270505-1.jpg",
+   "presentationKey": "metformina|850mg|60|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000838",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|1000mg|60",
+   "canonicalName": "Metformina XR 1000 mg x 60 comprimidos. Ascend (Cenabast)",
+   "laboratory": "Ascend",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Metformina XR 1000 mg x 60 comprimidos. Ascend (Cenabast)",
+     "channels": {
+      "store": 6990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 6990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=metformina%7C1000mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fmetformina-xr-1000-mg-x-60-comprimidos-ascend-cenabast&cfmId=CFM-000806",
+     "imageUrl": "https://farmacia.araucomed.com/11822-home_default/metformina-xr-1000-mg-x-60-comprimidos-ascend-cenabast.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 6990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/11822-home_default/metformina-xr-1000-mg-x-60-comprimidos-ascend-cenabast.jpg",
+   "presentationKey": "metformina|1000mg|60|bio:unknown|brand:ascend|var:xr|form:solid-oral",
+   "cfmId": "CFM-000806",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glicenex|500mg",
+   "canonicalName": "Glicenex Metformina 500 mg Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glicenex Metformina 500 mg Comprimidos Recubiertos",
+     "channels": {
+      "store": 8740,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8740
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glicenex%7C500mg&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglicenex-metformina-500-mg-comprimidos-recubiertos%2F253774.html&cfmId=CFM-001127",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw886d12ac/images/large/253774-glicenex-metformina-500-mg-comprimidos-recubiertos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 8740,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw886d12ac/images/large/253774-glicenex-metformina-500-mg-comprimidos-recubiertos.jpg",
+   "presentationKey": "glicenex|500mg|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001127",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "diametina|500mg|30",
+   "canonicalName": "Diametina XR (B) Metformina 500mg 30 Comprimidos Prolongados",
+   "laboratory": "Diametina XR",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Diametina XR (B) Metformina 500mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 10099,
+      "online": 8887,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8887
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=diametina%7C500mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fdiametina-xr-b-metformina-500mg-30-comprimidos-prolongados%3Fdefault_sku%3D589547&cfmId=CFM-001143",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/130638/small/589547.jpg?1734710000",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 8887,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/130638/small/589547.jpg?1734710000",
+   "presentationKey": "diametina|500mg|30|bio:unknown|brand:diametinaxr|var:xr|form:solid-oral",
+   "cfmId": "CFM-001143",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glaupax|30",
+   "canonicalName": "Glaupax 750 XR x 30 comprimidos",
+   "laboratory": "PASTEUR",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Glaupax 750 XR x 30 comprimidos",
+     "channels": {
+      "store": 8990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 8990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=glaupax%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fglaupax-750-xr-x-30-comp%3F_pos%3D5%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001659",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/glaupax-750-xr-x-30-comp-pasteur-349597.jpg?v=1692989429",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 8990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/glaupax-750-xr-x-30-comp-pasteur-349597.jpg?v=1692989429",
+   "presentationKey": "glaupax|30|bio:unknown|brand:pasteur|var:xr|form:solid-oral",
+   "cfmId": "CFM-001659",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "hipoglucin|850mg|30",
+   "canonicalName": "Hipoglucin 850 mg x 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Hipoglucin 850 mg x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 9264,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9264
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipoglucin%7C850mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoglucin-850-mg-x-30-comprimidos-recubiertos-11928.html&cfmId=CFM-001243",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb929c638/images/products/11928/11928.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 9264,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb929c638/images/products/11928/11928.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "hipoglucin|850mg|30|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001243",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glaupax|500mg|30",
+   "canonicalName": "Glaupax 500 Metformina 500 mg 30 Comprimidos Recubiertoss",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glaupax 500 Metformina 500 mg 30 Comprimidos Recubiertoss",
+     "channels": {
+      "store": 9480,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9480
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glaupax%7C500mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglaupax-500-metformina-500-mg-30-comprimidos-recubiertoss%2F272597.html&cfmId=CFM-000865",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1983cc79/images/large/272597-glaupax-500-metformina-500-mg-30-comprimidos-recubierto.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 9480,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1983cc79/images/large/272597-glaupax-500-metformina-500-mg-30-comprimidos-recubierto.jpg",
+   "presentationKey": "glaupax|500mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000865",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glifortex|750mg|30",
+   "canonicalName": "Glifortex XR 750 mg x 30 Comprimidos Recubiertos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glifortex XR 750 mg x 30 Comprimidos Recubiertos de Liberación Prolongada",
+     "channels": {
+      "store": 9649,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9649
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glifortex%7C750mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglifortex-xr-750-mg-x-30-comprimidos-recubiertos-de-liberacion-prolongada-76548.html&cfmId=CFM-000169",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5c02a663/images/products/76548/76548.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 9649,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw5c02a663/images/products/76548/76548.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glifortex|750mg|30|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-000169",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glaupax|750mg|30",
+   "canonicalName": "Glaupax XR 750 mg 30 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glaupax XR 750 mg 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 9979,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9979
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glaupax%7C750mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglaupax-xr-750-mg-30-comprimidos-de-liberacion-prolongada-86620.html&cfmId=CFM-001146",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb90079e3/images/products/86620/86620.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 9979,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwb90079e3/images/products/86620/86620.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glaupax|750mg|30|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001146",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glaupax|1000mg|30",
+   "canonicalName": "Glaupax Xr (metformina) 1000mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glaupax XR 1000 mg 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 9979,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9979
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glaupax%7C1000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglaupax-xr-1000-mg-30-comprimidos-de-liberacion-prolongada-86621.html&cfmId=CFM-001121",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw22558676/images/products/86621/86621.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    },
+    {
+     "pharmacySlug": "sermecoop",
+     "pharmacyName": "Sermecoop",
+     "productName": "Glaupax Xr (metformina) 1000mg 30 Comprimidos",
+     "channels": {
+      "store": 9990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=sermecoop&matchKey=glaupax%7C1000mg%7C30&url=https%3A%2F%2Fwww.farmaciasermecoop.cl%2Findex.php%2Fonline%2Fdetalleproducto%3Fp_%3D7774%26d_%3D1&cfmId=CFM-001121",
+     "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800068012327.jpg?v=6a96169cdd1f0",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 9979,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasermecoop.cl/themes/fscoop/images/medicamentos/7800068012327.jpg?v=6a96169cdd1f0",
+   "presentationKey": "glaupax|1000mg|30|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001121",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glucosan|750mg|60",
+   "canonicalName": "Glucosan XR Metformina Clorhidrato 750 mg x 60 Comp. Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Glucosan XR Metformina Clorhidrato 750 mg x 60 Comp. Recubiertos",
+     "channels": {
+      "store": 9980,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9980
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glucosan%7C750mg%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fglucosan-xr-metformina-clorhidrato-750-mg-x-60-comp-recubiertos%2F&cfmId=CFM-001135",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/glucosan-xr-750.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 9980,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/glucosan-xr-750.jpg",
+   "presentationKey": "glucosan|750mg|60|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001135",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glicenex|750mg|30",
+   "canonicalName": "Glicenex SR 750 mg x 30 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glicenex SR 750 mg x 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 9989,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9989
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glicenex%7C750mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglicenex-sr-750-mg-x-30-comprimidos-de-liberacion-prolongada-65291.html&cfmId=CFM-001159",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7e284555/images/products/65291/65291.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 9989,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7e284555/images/products/65291/65291.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glicenex|750mg|30|bio:true|brand:unknown|var:sr|form:solid-oral",
+   "cfmId": "CFM-001159",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "diametina|1000mg|30",
+   "canonicalName": "Diametina XR 1000 MG X 30...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Diametina XR 1000 MG X 30...",
+     "channels": {
+      "store": 9990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 9990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=diametina%7C1000mg%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105232-diametina-xr-1000-mg-x-30-comp-lp.html&cfmId=CFM-001129",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 9990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "diametina|1000mg|30|bio:unknown|brand:unknown|var:xr",
+   "cfmId": "CFM-001129",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glafornil|500mg|30",
+   "canonicalName": "Glafornil 500 mg x 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glafornil 500 mg x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 10097,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10097
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glafornil%7C500mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglafornil-500-mg-x-30-comprimidos-recubiertos-13740.html&cfmId=CFM-001150",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7cdf90e2/images/products/13740/13740.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 10097,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7cdf90e2/images/products/13740/13740.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glafornil|500mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001150",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glaupax|500mg|30",
+   "canonicalName": "Glaupax XR (B) Metformina 500mg 30 Comprimidos Prolongados",
+   "laboratory": "Glaupax",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glaupax XR (B) Metformina 500mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 12399,
+      "online": 10787,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10787
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glaupax%7C500mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglaupax-xr-b-metformina-500mg-30-comprimidos-prolongados%3Fdefault_sku%3D2501230&cfmId=CFM-000865",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/43476/small/7800068012303_1.jpg?1641476966",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 10787,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/43476/small/7800068012303_1.jpg?1641476966",
+   "presentationKey": "glaupax|500mg|30|bio:unknown|brand:glaupax|var:xr|form:solid-oral",
+   "cfmId": "CFM-000865",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "metformina|750mg|30",
+   "canonicalName": "Metformina Lp 750 mg x 30 comprimidos",
+   "laboratory": "ASCEND",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Metformina Lp 750 mg x 30 comprimidos",
+     "channels": {
+      "store": 10795,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10795
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=metformina%7C750mg%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fmetformina-750-mg-lp-x-30-comp%3F_pos%3D6%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001138",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metformina-750-mg-lp-x-30-comp-ascend-401536.jpg?v=1692989422",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 10795,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/metformina-750-mg-lp-x-30-comp-ascend-401536.jpg?v=1692989422",
+   "presentationKey": "metformina|750mg|30|bio:unknown|brand:ascend|var:lp|form:solid-oral",
+   "cfmId": "CFM-001138",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glifortex|1000mg|30",
+   "canonicalName": "Glifortex XR 1000 mg x 30 Comprimidos Recubiertos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glifortex XR 1000 mg x 30 Comprimidos Recubiertos de Liberación Prolongada",
+     "channels": {
+      "store": 10979,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10979
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glifortex%7C1000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglifortex-xr-1000-mg-x-30-comprimidos-recubiertos-de-liberacion-prolongada-76549.html&cfmId=CFM-000182",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwecda7279/images/products/76549/76549.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 10979,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwecda7279/images/products/76549/76549.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glifortex|1000mg|30|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-000182",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "hipoglucin|750mg|30",
+   "canonicalName": "Hipoglucin LP 750 mg x 30 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Hipoglucin LP 750 mg x 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 10979,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10979
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipoglucin%7C750mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoglucin-lp-750-mg-x-30-comprimidos-de-liberacion-prolongada-70199.html&cfmId=CFM-001114",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw78dce4dd/images/products/70199/70199.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 10979,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw78dce4dd/images/products/70199/70199.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "hipoglucin|750mg|30|bio:true|brand:unknown|var:lp|form:solid-oral",
+   "cfmId": "CFM-001114",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glucophage|500mg|30",
+   "canonicalName": "Glucophage Metformina 500 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glucophage Metformina 500 mg 30 Comprimidos",
+     "channels": {
+      "store": 10990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 10990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glucophage%7C500mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglucophage-metformina-500-mg-30-comprimidos%2F57206.html&cfmId=CFM-001142",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5c9c51bc/images/large/57206-glucophage-metformina-500-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 10990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5c9c51bc/images/large/57206-glucophage-metformina-500-mg-30-comprimidos.jpg",
+   "presentationKey": "glucophage|500mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001142",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|500mg|30",
+   "canonicalName": "Glafornil XR Metformina 500 mg x 30 comprimidos",
+   "laboratory": "MERCK",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Glafornil XR Metformina 500 mg x 30 comprimidos",
+     "channels": {
+      "store": 11490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=glafornil%7C500mg%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fglafornil-xr-500-mg-x-30-comprimidos%3F_pos%3D3%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001150",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/glafornil-xr-500-mg-x-30-comprimidos-merck-302206.jpg?v=1692989456",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 11490,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/glafornil-xr-500-mg-x-30-comprimidos-merck-302206.jpg?v=1692989456",
+   "presentationKey": "glafornil|500mg|30|bio:unknown|brand:merck|var:xr|form:solid-oral",
+   "cfmId": "CFM-001150",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "hipoglucin|850000mg|60",
+   "canonicalName": "Hipoglucin 850g metformina clorhidrato x 60 comp.Lab Chile DESCUENTO",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Hipoglucin 850g metformina clorhidrato x 60 comp.Lab Chile DESCUENTO",
+     "channels": {
+      "store": 11690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11690
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=hipoglucin%7C850000mg%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fhipoglucin-850g-metformina-clorhidrato-x-60-comprimidos-lab-chile-descuento%2F&cfmId=CFM-001134",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/1282-hipoglucin-comprimido-recubierto-60-unidades-metformina-850-mg-1.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 11690,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2022/03/1282-hipoglucin-comprimido-recubierto-60-unidades-metformina-850-mg-1.jpg",
+   "presentationKey": "hipoglucin|850000mg|60|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001134",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "hipoglucin|1000mg|30",
+   "canonicalName": "Hipoglucin LP 1000 mg x 30 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Hipoglucin LP 1000 mg x 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 11989,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11989
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipoglucin%7C1000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoglucin-lp-1000-mg-x-30-comprimidos-de-liberacion-prolongada-70217.html&cfmId=CFM-001163",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf512ce33/images/products/70217/70217.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 11989,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwf512ce33/images/products/70217/70217.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "hipoglucin|1000mg|30|bio:true|brand:unknown|var:lp|form:solid-oral",
+   "cfmId": "CFM-001163",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glucosan|1000mg|60",
+   "canonicalName": "Glucosan XR metformina clorhidrato 1000 mg x 60 comp. DESCUENTO",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Glucosan XR metformina clorhidrato 1000 mg x 60 comp. DESCUENTO",
+     "channels": {
+      "store": 11990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11990
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glucosan%7C1000mg%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fglucosan-xr-metformina-clorhidrato-1000-mg-x-60-comp-descuento%2F&cfmId=CFM-001157",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/glucosan-xr-1000.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 11990,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/06/glucosan-xr-1000.jpg",
+   "presentationKey": "glucosan|1000mg|60|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001157",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|30",
+   "canonicalName": "Glafornil 500 30 Comp Lab...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Glafornil 500 30 Comp Lab...",
+     "channels": {
+      "store": 11990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=glafornil%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25933-glafornil-500mg-x-30.html&cfmId=CFM-001140",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 11990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "glafornil|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001140",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glafornil|500mg",
+   "canonicalName": "Glafornil XR 500 mg 30...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Glafornil XR 500 mg 30...",
+     "channels": {
+      "store": 11990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 11990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=glafornil%7C500mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25944-glafornil-xr-500mg-x-30.html&cfmId=CFM-001160",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 11990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "glafornil|500mg|bio:unknown|brand:unknown|var:xr",
+   "cfmId": "CFM-001160",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "hipoglucin|500mg|30",
+   "canonicalName": "Hipoglucin 500 LP (B) Metformina 500mg 30 Comprimidos Prolongados",
+   "laboratory": "Hipoglucin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Hipoglucin 500 LP (B) Metformina 500mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 15099,
+      "online": 12079,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 12079
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hipoglucin%7C500mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhipoglucin-500-lp-b-metformina-500mg-30-comprimidos-prolongados%3Fdefault_sku%3D439566&cfmId=CFM-001136",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27789/small/439566.jpg?1641479711",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 12079,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27789/small/439566.jpg?1641479711",
+   "presentationKey": "hipoglucin|500mg|30|bio:unknown|brand:hipoglucin|var:lp|form:solid-oral",
+   "cfmId": "CFM-001136",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "hipoglucin|750mg|30",
+   "canonicalName": "Hipoglucin LP 750 mg x 30 comprimidos.",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Hipoglucin LP 750 mg x 30 comprimidos.",
+     "channels": {
+      "store": 12690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 12690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=hipoglucin%7C750mg%7C30&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fhipoglucin-lp-750mg-x30com&cfmId=CFM-001114",
+     "imageUrl": "https://farmacia.araucomed.com/1133-home_default/hipoglucin-lp-750mg-x30com.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 12690,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/1133-home_default/hipoglucin-lp-750mg-x30com.jpg",
+   "presentationKey": "hipoglucin|750mg|30|bio:unknown|brand:chile|var:lp|form:solid-oral",
+   "cfmId": "CFM-001114",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glifortex|850mg|60",
+   "canonicalName": "Glifortex Metformina 850 mg x 60 comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glifortex 850 mg x 60 Comprimidos Recubiertos",
+     "channels": {
+      "store": 13689,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13689
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glifortex%7C850mg%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglifortex-850-mg-x-60-comprimidos-recubiertos-23026.html&cfmId=CFM-001158",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw0fac6aa0/images/products/23026/23026.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    },
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Glifortex Metformina 850 mg x 60 comprimidos",
+     "channels": {
+      "store": 13690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glifortex%7C850mg%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fglifortex-metformina-850-mg-x-60-comprimidos%2F&cfmId=CFM-001158",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/12/glifortex-850-x-60.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 13689,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/12/glifortex-850-x-60.jpg",
+   "presentationKey": "glifortex|850mg|60|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001158",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glimefor|500mg|30",
+   "canonicalName": "Glimefor XR Metformina 500 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glimefor XR Metformina 500 mg 30 Comprimidos",
+     "channels": {
+      "store": 13790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glimefor%7C500mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglimefor-xr-metformina-500-mg-30-comprimidos%2F296291.html&cfmId=CFM-000871",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe1d3f25d/images/large/296291-glimefor-xr-metformina-500-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 13790,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe1d3f25d/images/large/296291-glimefor-xr-metformina-500-mg-30-comprimidos.jpg",
+   "presentationKey": "glimefor|500mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-000871",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "hipoglucin|850mg|60",
+   "canonicalName": "Hipoglucin 850 mg x 60 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Hipoglucin 850 mg x 60 Comprimidos Recubiertos",
+     "channels": {
+      "store": 13871,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13871
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipoglucin%7C850mg%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoglucin-850-mg-x-60-comprimidos-recubiertos-11941.html&cfmId=CFM-001207",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw554aeb9f/images/products/11941/11941.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 13871,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw554aeb9f/images/products/11941/11941.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "hipoglucin|850mg|60|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001207",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glafornil|850mg|30",
+   "canonicalName": "Glafornil 850 mg 30 comp....",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glafornil 850 mg x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 13979,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13979
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glafornil%7C850mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglafornil-850-mg-x-30-comprimidos-recubiertos-9272.html&cfmId=CFM-001152",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw83916c3f/images/products/9272/9272.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    },
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Glafornil 850 mg 30 comp....",
+     "channels": {
+      "store": 15990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=glafornil%7C850mg%7C30&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25931-glafornil-850mg-x-30.html&cfmId=CFM-001152",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 13979,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw83916c3f/images/products/9272/9272.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glafornil|850mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001152",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glimefor|1000mg|30",
+   "canonicalName": "Glimefor XR Metformina de Liberación Prolongada 1000 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glimefor XR Metformina de Liberación Prolongada 1000 mg 30 Comprimidos",
+     "channels": {
+      "store": 13990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 13990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glimefor%7C1000mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglimefor-xr-metformina-de-liberacion-prolongada-1000-mg-30-comprimidos%2F400036.html&cfmId=CFM-001171",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3f7f2915/images/large/400036-glimefor-xr-metformina-de-liberacion-prolongada-1000-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 13990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3f7f2915/images/large/400036-glimefor-xr-metformina-de-liberacion-prolongada-1000-mg-30-comprimidos.jpg",
+   "presentationKey": "glimefor|1000mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001171",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glicenex|1000mg|30",
+   "canonicalName": "Glicenex SR (B) Metformina 1000mg 30 Comprimidos Prolongados",
+   "laboratory": "Glicenex",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glicenex SR (B) Metformina 1000mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 15999,
+      "online": 14079,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14079
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glicenex%7C1000mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglicenex-sr-b-metformina-1000mg-30-comprimidos-prolongados%3Fdefault_sku%3D2590369&cfmId=CFM-001154",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/148960/small/2590369.jpg?1750359515",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 14079,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/148960/small/2590369.jpg?1750359515",
+   "presentationKey": "glicenex|1000mg|30|bio:unknown|brand:glicenex|var:sr|form:solid-oral",
+   "cfmId": "CFM-001154",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glaupax|500mg|30",
+   "canonicalName": "Glaupax XR Metformina 500 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glaupax XR Metformina 500 mg 30 Comprimidos",
+     "channels": {
+      "store": 14390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glaupax%7C500mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglaupax-xr-metformina-500-mg-30-comprimidos%2F288667.html&cfmId=CFM-000865",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd17e36bc/images/large/288667-glaupax-xr-metformina-500-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 14390,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd17e36bc/images/large/288667-glaupax-xr-metformina-500-mg-30-comprimidos.jpg",
+   "presentationKey": "glaupax|500mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-000865",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "hipoglucin|750mg|30",
+   "canonicalName": "Hipoglucin LP (B) Metformina 750mg 30 Comprimidos Prolongados",
+   "laboratory": "Hipoglucin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Hipoglucin LP (B) Metformina 750mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 18099,
+      "online": 14479,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14479
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hipoglucin%7C750mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhipoglucin-lp-b-metformina-750mg-30-comprimidos-prolongados%3Fdefault_sku%3D437151&cfmId=CFM-001114",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27723/small/437151.jpg?1641479716",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 14479,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27723/small/437151.jpg?1641479716",
+   "presentationKey": "hipoglucin|750mg|30|bio:unknown|brand:hipoglucin|var:lp|form:solid-oral",
+   "cfmId": "CFM-001114",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "vildagliptina|850mg|60",
+   "canonicalName": "Vildagliptina Metformina 50/850 mg. x 60 comprimidos. Seven Pharma (Cenabast)",
+   "laboratory": "Seven Pharma",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Vildagliptina Metformina 50/850 mg. x 60 comprimidos. Seven Pharma (Cenabast)",
+     "channels": {
+      "store": 14990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=vildagliptina%7C850mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fvildagliptina-metformina-50-850-mg-x-60-comprimidos-seven-pharmacenabast&cfmId=CFM-001149",
+     "imageUrl": "https://farmacia.araucomed.com/13925-home_default/vildagliptina-metformina-50-850-mg-x-60-comprimidos-seven-pharmacenabast.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 14990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13925-home_default/vildagliptina-metformina-50-850-mg-x-60-comprimidos-seven-pharmacenabast.jpg",
+   "presentationKey": "vildagliptina|850mg|60|bio:unknown|brand:sevenpharma|combo:metformina|form:solid-oral",
+   "cfmId": "CFM-001149",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "vidaron|1000mg|60",
+   "canonicalName": "Vidaron M 50/1000 mg. x 60 comprimidos. (Cenabast)",
+   "laboratory": "Seven Pharma",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Vidaron M 50/1000 mg. x 60 comprimidos. (Cenabast)",
+     "channels": {
+      "store": 14990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 14990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=vidaron%7C1000mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fvidaron-m-50-1000-mg-x-60-comprimidos-cenabast&cfmId=CFM-001123",
+     "imageUrl": "https://farmacia.araucomed.com/14692-home_default/vidaron-m-50-1000-mg-x-60-comprimidos-cenabast.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 14990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/14692-home_default/vidaron-m-50-1000-mg-x-60-comprimidos-cenabast.jpg",
+   "presentationKey": "vidaron|1000mg|60|bio:unknown|brand:sevenpharma|var:m|form:solid-oral",
+   "cfmId": "CFM-001123",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "hipoglucin|1000mg|30",
+   "canonicalName": "Hipoglucin 1000 mg x 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Hipoglucin 1000 mg x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 15063,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15063
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipoglucin%7C1000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoglucin-1000-mg-x-30-comprimidos-recubiertos-43447.html&cfmId=CFM-001163",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe678f139/images/products/43447/43447.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 15063,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwe678f139/images/products/43447/43447.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "hipoglucin|1000mg|30|bio:true|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001163",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glaupax|750mg|30",
+   "canonicalName": "Glaupax XR Metformina 750mg 30 Comprimidos ",
+   "laboratory": "Glaupax",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glaupax XR Metformina 750mg 30 Comprimidos ",
+     "channels": {
+      "store": 17199,
+      "online": 15135,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15135
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glaupax%7C750mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglaupax-xr-metformina-750mg-30-comprimidos%3Fdefault_sku%3D2501231&cfmId=CFM-001146",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/58223/small/2501231.jpg?1641329126",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 15135,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/58223/small/2501231.jpg?1641329126",
+   "presentationKey": "glaupax|750mg|30|bio:unknown|brand:glaupax|var:xr|form:solid-oral",
+   "cfmId": "CFM-001146",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glaupax|1000mg|30",
+   "canonicalName": "Glaupax XR (B) Metformina 1000mg 30 Comprimidos Prolongados",
+   "laboratory": "Glaupax",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glaupax XR (B) Metformina 1000mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 19199,
+      "online": 15743,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 15743
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glaupax%7C1000mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglaupax-xr-b-metformina-1000mg-30-comprimidos-prolongados%3Fdefault_sku%3D2501232&cfmId=CFM-001121",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/28031/small/2501232.jpg?1641479685",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 15743,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/28031/small/2501232.jpg?1641479685",
+   "presentationKey": "glaupax|1000mg|30|bio:unknown|brand:glaupax|var:xr|form:solid-oral",
+   "cfmId": "CFM-001121",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glaupax|750mg|30",
+   "canonicalName": "Glaupax XR Metformina 750 mg 30 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glaupax XR Metformina 750 mg 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 16240,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16240
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glaupax%7C750mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglaupax-xr-metformina-750-mg-30-comprimidos-de-liberacion-prolongada%2F288668.html&cfmId=CFM-001146",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8e94348d/images/large/288668-glaupax-xr-metformina-750-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 16240,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8e94348d/images/large/288668-glaupax-xr-metformina-750-mg-30-comprimidos.jpg",
+   "presentationKey": "glaupax|750mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001146",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glifortex|750mg|30",
+   "canonicalName": "Glifortex XR (B) Metformina 750mg 30 Comprimidos Prolongados",
+   "laboratory": "Glifortex",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glifortex XR (B) Metformina 750mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 18499,
+      "online": 16279,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16279
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glifortex%7C750mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglifortex-xr-b-metformina-750mg-30-comprimidos-prolongados%3Fdefault_sku%3D37913&cfmId=CFM-000169",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/76285/small/37913.jpg?1658796861",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 16279,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/76285/small/37913.jpg?1658796861",
+   "presentationKey": "glifortex|750mg|30|bio:unknown|brand:glifortex|var:xr|form:solid-oral",
+   "cfmId": "CFM-000169",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|500mg|30",
+   "canonicalName": "Glafornil XR (R) Metformina 500mg 30 Comprimidos Prolongados",
+   "laboratory": "Glafornil",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glafornil XR (R) Metformina 500mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 18699,
+      "online": 16455,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16455
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glafornil%7C500mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglafornil-xr-r-metformina-500mg-30-comprimidos-prolongados%3Fdefault_sku%3D2010524&cfmId=CFM-001150",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27922/small/2010524.jpg?1641479696",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 16455,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27922/small/2010524.jpg?1641479696",
+   "presentationKey": "glafornil|500mg|30|bio:unknown|brand:glafornil|var:xr|form:solid-oral",
+   "cfmId": "CFM-001150",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glicenex|1000mg|30",
+   "canonicalName": "Glicenex Sr Metformina 1000 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glicenex Sr Metformina 1000 mg 30 Comprimidos",
+     "channels": {
+      "store": 16540,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16540
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glicenex%7C1000mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglicenex-sr-metformina-1000-mg-30-comprimidos%2F294111.html&cfmId=CFM-001154",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9ac41c9f/images/large/294111-glicenex-sr-comprimido-liberacion-prolongada-30-unidades-metformina-1000-mg.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 16540,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw9ac41c9f/images/large/294111-glicenex-sr-comprimido-liberacion-prolongada-30-unidades-metformina-1000-mg.jpg",
+   "presentationKey": "glicenex|1000mg|30|bio:unknown|brand:unknown|var:sr|form:solid-oral",
+   "cfmId": "CFM-001154",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|750mg|30",
+   "canonicalName": "Glafornil XR 750 mg 30 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glafornil XR 750 mg 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 16989,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16989
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glafornil%7C750mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglafornil-xr-750-mg-30-comprimidos-de-liberacion-prolongada-49772.html&cfmId=CFM-001118",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc904cb6d/images/products/49772/49772.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 16989,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwc904cb6d/images/products/49772/49772.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glafornil|750mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001118",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "vildavitae|1000mg|60",
+   "canonicalName": "Vildavitae Plus 50/1000 mg. x 60 comprimidos.",
+   "laboratory": "Galenicum",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Vildavitae Plus 50/1000 mg. x 60 comprimidos.",
+     "channels": {
+      "store": 16990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 16990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=vildavitae%7C1000mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fvildavitae-plus-50-1000-mg-x-60-comprimidos&cfmId=CFM-001178",
+     "imageUrl": "https://farmacia.araucomed.com/14123-home_default/vildavitae-plus-50-1000-mg-x-60-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 16990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/14123-home_default/vildavitae-plus-50-1000-mg-x-60-comprimidos.jpg",
+   "presentationKey": "vildavitae|1000mg|60|bio:unknown|brand:galenicum|var:plus|form:solid-oral",
+   "cfmId": "CFM-001178",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "hipoglucin|1000mg|30",
+   "canonicalName": "Hipoglucin LP (B) Metformina 1000mg 30 Comprimidos Prolongados",
+   "laboratory": "Hipoglucin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Hipoglucin LP (B) Metformina 1000mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 21399,
+      "online": 17119,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 17119
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hipoglucin%7C1000mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhipoglucin-lp-b-metformina-1000mg-30-comprimidos-prolongados%3Fdefault_sku%3D437569&cfmId=CFM-001163",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27735/small/437569.jpg?1641479715",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 17119,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27735/small/437569.jpg?1641479715",
+   "presentationKey": "hipoglucin|1000mg|30|bio:unknown|brand:hipoglucin|var:lp|form:solid-oral",
+   "cfmId": "CFM-001163",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "sitareddys|50mg|56",
+   "canonicalName": "Sitareddys M sitagliptina 50 mg metformina 850 mg 56 comprimidos recubiertos",
+   "laboratory": "DR. REDDYS",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Sitareddys M sitagliptina 50 mg metformina 850 mg 56 comprimidos recubiertos",
+     "channels": {
+      "store": 24000,
+      "online": 18000,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 18000
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=sitareddys%7C50mg%7C56&url=https%3A%2F%2Fwww.drsimi.cl%2Fsitareddys-m-50-850-metformina-sitagliptina-56-comprimidos-recubiertos-be0308-1%2Fp&cfmId=CFM-001126",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159696/Sitareddys---M-85050-MetforminaSitagliptina---56-Comprimidos-Recubiertos-BE0308-1.jpg?v=638937065905330000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 18000,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/159696/Sitareddys---M-85050-MetforminaSitagliptina---56-Comprimidos-Recubiertos-BE0308-1.jpg?v=638937065905330000",
+   "presentationKey": "sitareddys|50mg|56|bio:true|brand:drreddys|var:m|form:solid-oral",
+   "cfmId": "CFM-001126",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glifortex|850mg|30",
+   "canonicalName": "Glifortex Metformina 850 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glifortex Metformina 850 mg 30 Comprimidos",
+     "channels": {
+      "store": 18190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 18190
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glifortex%7C850mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglifortex-metformina-850-mg-30-comprimidos%2F15401.html&cfmId=CFM-001145",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw908d93b2/images/large/15401-glifortex-metformina-850-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 18190,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw908d93b2/images/large/15401-glifortex-metformina-850-mg-30-comprimidos.jpg",
+   "presentationKey": "glifortex|850mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001145",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glimefor|1000mg|60",
+   "canonicalName": "Glimefor XR Metformina de Liberación Prolongada 1000 mg x 60 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Glimefor XR Metformina de Liberación Prolongada 1000 mg x 60 Comprimidos",
+     "channels": {
+      "store": 18990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 18990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glimefor%7C1000mg%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fglimefor-xr-metformina-de-liberacion-prolongada-1000-mg-x-60-comprimidos%2F&cfmId=CFM-001164",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/03/glimefor-xr-1000.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 18990,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2026/03/glimefor-xr-1000.jpg",
+   "presentationKey": "glimefor|1000mg|60|bio:true|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001164",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "vildagliptina|850mg|60",
+   "canonicalName": "Vildagliptina / Metformina (B) 50/850mg 60 Comprimidos Recubiertos - Cenabast",
+   "laboratory": "Vildagliptina / Metformina",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Vildagliptina / Metformina (B) 50/850mg 60 Comprimidos Recubiertos - Cenabast",
+     "channels": {
+      "store": 19030,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 19030
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=vildagliptina%7C850mg%7C60&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fvildagliptina-metformina-b-50-850mg-60-comprimidos-recubiertos%3Fdefault_sku%3D592454&cfmId=CFM-001149",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/151976/small/592454_-_Cenabast.jpg?1753712765",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 19030,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/151976/small/592454_-_Cenabast.jpg?1753712765",
+   "presentationKey": "vildagliptina|850mg|60|bio:unknown|brand:unknown|combo:metformina|form:solid-oral",
+   "cfmId": "CFM-001149",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "vildagliptina|60",
+   "canonicalName": "Vildagliptina/Metformina Clorhidrato 50/850 x 60 compr. (Cenabast)",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Vildagliptina/Metformina Clorhidrato 50/850 x 60 compr. (Cenabast)",
+     "channels": {
+      "store": 19030,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 19030
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=vildagliptina%7C60&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fvildagliptina-metformina-clorhidrato-50-850-x-60-compr-cenabast%2F&cfmId=CFM-001176",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/vildagliptina-metformina.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 19030,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2025/07/vildagliptina-metformina.jpg",
+   "presentationKey": "vildagliptina|60|bio:true|brand:unknown|combo:metformina",
+   "cfmId": "CFM-001176",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|850mg|30",
+   "canonicalName": "Glafornil XR Metformina 850mg x 30 comp. liberación prolongada DESCUENTO",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ecofarmacias",
+     "pharmacyName": "EcoFarmacias",
+     "productName": "Glafornil XR Metformina 850mg x 30 comp. liberación prolongada DESCUENTO",
+     "channels": {
+      "store": 19300,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 19300
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ecofarmacias&matchKey=glafornil%7C850mg%7C30&url=https%3A%2F%2Fwww.ecofarmacias.cl%2Fproducto%2Fglafornil-xr-metformina-850mg-x-30-comp-liberacion-prolongada-descuento%2F&cfmId=CFM-001152",
+     "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/09/glafornil-850-x-30.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 19300,
+   "bestPharmacy": "ecofarmacias",
+   "imageUrl": "https://www.ecofarmacias.cl/wp-content/uploads/2024/09/glafornil-850-x-30.jpg",
+   "presentationKey": "glafornil|850mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001152",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glifortex|1000mg|30",
+   "canonicalName": "Glifortex XR (B) Metformina 1000mg 30 Comprimidos Prolongados",
+   "laboratory": "Glifortex",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glifortex XR (B) Metformina 1000mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 21999,
+      "online": 19359,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 19359
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glifortex%7C1000mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglifortex-xr-b-metformina-1000mg-30-comprimidos-prolongados%3Fdefault_sku%3D37914&cfmId=CFM-000182",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/138955/small/37914.jpg?1743536810",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 19359,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/138955/small/37914.jpg?1743536810",
+   "presentationKey": "glifortex|1000mg|30|bio:unknown|brand:glifortex|var:xr|form:solid-oral",
+   "cfmId": "CFM-000182",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glaupax|1000mg|30",
+   "canonicalName": "Glaupax XR Metformina 1000 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glaupax XR Metformina 1000 mg 30 Comprimidos",
+     "channels": {
+      "store": 19390,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 19390
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glaupax%7C1000mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglaupax-xr-metformina-1000-mg-30-comprimidos%2F288669.html&cfmId=CFM-001121",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa1f6356a/images/large/288669-glaupax-xr-metformina-1000-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 19390,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa1f6356a/images/large/288669-glaupax-xr-metformina-1000-mg-30-comprimidos.jpg",
+   "presentationKey": "glaupax|1000mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001121",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|1000mg|30",
+   "canonicalName": "Glafornil 1000 mg x 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glafornil 1000 mg x 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 20121,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 20121
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glafornil%7C1000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglafornil-1000-mg-x-30-comprimidos-recubiertos-27809.html&cfmId=CFM-001119",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw40bfb690/images/products/27809/27809.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 20121,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw40bfb690/images/products/27809/27809.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glafornil|1000mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001119",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glucosan|750mg|60",
+   "canonicalName": "Glucosan XR Metformina Clorhidrato 750 mg 60 Comprimidos Recubiertos de Liberacion Prolongada",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glucosan XR Metformina Clorhidrato 750 mg 60 Comprimidos Recubiertos de Liberacion Prolongada",
+     "channels": {
+      "store": 20640,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 20640
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glucosan%7C750mg%7C60&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglucosan-xr-metformina-clorhidrato-750-mg-60-comprimidos-recubiertos-de-liberacion-prolongada%2F391789.html&cfmId=CFM-001135",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw75505a92/images/large/391789-glucosan-xr-metfornica-clorhidrato-750-mg-60-comprimidos-recubiertos-de-liberacion-prolongada.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 20640,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw75505a92/images/large/391789-glucosan-xr-metfornica-clorhidrato-750-mg-60-comprimidos-recubiertos-de-liberacion-prolongada.jpg",
+   "presentationKey": "glucosan|750mg|60|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001135",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "hipoglucin|1000mg|60",
+   "canonicalName": "Hipoglucin LP 1000 mg 60 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Hipoglucin LP 1000 mg 60 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 21027,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 21027
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=hipoglucin%7C1000mg%7C60&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fhipoglucin-lp-1000-mg-60-comprimidos-de-liberacion-prolongada-81918.html&cfmId=CFM-001133",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfb744f23/images/products/81918/81918.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 21027,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwfb744f23/images/products/81918/81918.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "hipoglucin|1000mg|60|bio:true|brand:unknown|var:lp|form:solid-oral",
+   "cfmId": "CFM-001133",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glicenex|750mg|30",
+   "canonicalName": "Glicenex SR  Metformina 750 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glicenex SR  Metformina 750 mg 30 Comprimidos",
+     "channels": {
+      "store": 21540,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 21540
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glicenex%7C750mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglicenex-sr-metformina-750-mg-30-comprimidos%2F260681.html&cfmId=CFM-001159",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8d72e20d/images/large/260681-glicenex-sr-comprimido-liberacion-prolongada-30-unidades-metformina-750-mg.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 21540,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8d72e20d/images/large/260681-glicenex-sr-comprimido-liberacion-prolongada-30-unidades-metformina-750-mg.jpg",
+   "presentationKey": "glicenex|750mg|30|bio:unknown|brand:unknown|var:sr|form:solid-oral",
+   "cfmId": "CFM-001159",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glucophage|850mg|30",
+   "canonicalName": "Glucophage Metformina 850 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glucophage Metformina 850 mg 30 Comprimidos",
+     "channels": {
+      "store": 21990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 21990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glucophage%7C850mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglucophage-metformina-850-mg-30-comprimidos%2F57169.html&cfmId=CFM-001172",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2b71bbe2/images/large/57169-glucophage-metformina-850-mg-30-comprimidos-recubiertos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 21990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2b71bbe2/images/large/57169-glucophage-metformina-850-mg-30-comprimidos-recubiertos.jpg",
+   "presentationKey": "glucophage|850mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001172",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|1000mg|30",
+   "canonicalName": "Glafornil 1000 mg x 30 comprimidos",
+   "laboratory": "MERCK",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Glafornil 1000 mg x 30 comprimidos",
+     "channels": {
+      "store": 21990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 21990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=glafornil%7C1000mg%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fgafornil-1000-mg-x-30-comp%3F_pos%3D7%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001119",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/glafornil-metformina-1000-mg-x-30-comprimidos-merck-387672.jpg?v=1692989461",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 21990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/glafornil-metformina-1000-mg-x-30-comprimidos-merck-387672.jpg?v=1692989461",
+   "presentationKey": "glafornil|1000mg|30|bio:unknown|brand:merck|form:solid-oral",
+   "cfmId": "CFM-001119",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "vildavitae|50mg|60",
+   "canonicalName": "Vildavitae plus vildagliptina 50 mg metformina 850 mg 60 comprimidos recubiertos",
+   "laboratory": "GALENICUM",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Vildavitae plus vildagliptina 50 mg metformina 850 mg 60 comprimidos recubiertos",
+     "channels": {
+      "store": 29400,
+      "online": 22050,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 22050
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=vildavitae%7C50mg%7C60&url=https%3A%2F%2Fwww.drsimi.cl%2Fvildavitae-plus-metformina-clorhidrato-vildagliptina-850mg-50mg-60comprimidos-be0299-1%2Fp&cfmId=CFM-001139",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158455/FOTOS-WEB-ECOMMERCE_0011_BE0299-1.png?v=638665096600600000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 22050,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/158455/FOTOS-WEB-ECOMMERCE_0011_BE0299-1.png?v=638665096600600000",
+   "presentationKey": "vildavitae|50mg|60|bio:true|brand:galenicum|var:plus|form:solid-oral",
+   "cfmId": "CFM-001139",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|1000mg|30",
+   "canonicalName": "Glafornil XR 1000 mg 30 Comprimidos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "ahumada",
+     "pharmacyName": "Farmacias Ahumada",
+     "productName": "Glafornil XR 1000 mg 30 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 22182,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 22182
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=ahumada&matchKey=glafornil%7C1000mg%7C30&url=https%3A%2F%2Fwww.farmaciasahumada.cl%2Fglafornil-xr-1000-mg-30-comprimidos-de-liberacion-prolongada-64772.html&cfmId=CFM-001119",
+     "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw93c7dce2/images/products/64772/64772.jpg?sw=247&amp;sh=247&amp;sm=fit",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 22182,
+   "bestPharmacy": "ahumada",
+   "imageUrl": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw93c7dce2/images/products/64772/64772.jpg?sw=247&amp;sh=247&amp;sm=fit",
+   "presentationKey": "glafornil|1000mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001119",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glafornil|850mg|30",
+   "canonicalName": "Glafornil XR 850mg x 30 Comprimidos de liberación prolongada",
+   "laboratory": "MERCK",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Glafornil XR 850mg x 30 Comprimidos de liberación prolongada",
+     "channels": {
+      "store": 22990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 22990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=glafornil%7C850mg%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fglafornil-xr-850mg-x-30-comprimidos-de-liberacion-prolongada%3F_pos%3D4%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001152",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/glafornil-xr-850mg-x-30-comprimidos-de-liberacion-prolongada-merck-402213.jpg?v=1745779322",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 22990,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/glafornil-xr-850mg-x-30-comprimidos-de-liberacion-prolongada-merck-402213.jpg?v=1745779322",
+   "presentationKey": "glafornil|850mg|30|bio:unknown|brand:merck|var:xr|form:solid-oral",
+   "cfmId": "CFM-001152",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glafornil|1000mg|30",
+   "canonicalName": "Glafornil XR 1000 mg x 30 comprimidos de Liberacion Prolongada",
+   "laboratory": "MERCK",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Glafornil XR 1000 mg x 30 comprimidos de Liberacion Prolongada",
+     "channels": {
+      "store": 23290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 23290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=glafornil%7C1000mg%7C30&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fglafornil-tabletas-xr-liberacion-prolongada-metformina-1000%3F_pos%3D1%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001119",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/glafornilr-xr-metformina1000-mg-x-30-comprimidos-de-liberacion-prolongada-merck-153274.jpg?v=1692989417",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 23290,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/glafornilr-xr-metformina1000-mg-x-30-comprimidos-de-liberacion-prolongada-merck-153274.jpg?v=1692989417",
+   "presentationKey": "glafornil|1000mg|30|bio:unknown|brand:merck|var:xr|form:solid-oral",
+   "cfmId": "CFM-001119",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glucosan|1000mg|30",
+   "canonicalName": "Glucosan XR Metformina Clorhidrato 1000mg 30 Comprimidos Recubiertos de Liberación Prolongada",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glucosan XR Metformina Clorhidrato 1000mg 30 Comprimidos Recubiertos de Liberación Prolongada",
+     "channels": {
+      "store": 23640,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 23640
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glucosan%7C1000mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglucosan-xr-metformina-clorhidrato-1000mg-30-comprimidos-recubiertos-de-liberacion-prolongada%2F392718.html&cfmId=CFM-001144",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwffc1f58c/images/large/392718-glucosan-xr-metformina-clorhidrato-1000mg-30-comprimidos-recubiertos-de-liberacion-prolongada.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 23640,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwffc1f58c/images/large/392718-glucosan-xr-metformina-clorhidrato-1000mg-30-comprimidos-recubiertos-de-liberacion-prolongada.jpg",
+   "presentationKey": "glucosan|1000mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001144",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "sitareddys|56",
+   "canonicalName": "Sitareddys M 50/850 x 56 comprimidos recubiertos.",
+   "laboratory": "Dr.Reddys",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Sitareddys M 50/850 x 56 comprimidos recubiertos.",
+     "channels": {
+      "store": 23990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 23990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=sitareddys%7C56&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fsitareddys-m-50-850-x-56-comprimidos-recubiertos&cfmId=CFM-001165",
+     "imageUrl": "https://farmacia.araucomed.com/14065-home_default/sitareddys-m-50-850-x-56-comprimidos-recubiertos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 23990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/14065-home_default/sitareddys-m-50-850-x-56-comprimidos-recubiertos.jpg",
+   "presentationKey": "sitareddys|56|bio:unknown|brand:drreddys|var:m|form:solid-oral",
+   "cfmId": "CFM-001165",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glimefor|850mg|60",
+   "canonicalName": "Glimefor 850 Metformina 850 mg 60 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glimefor 850 Metformina 850 mg 60 Comprimidos Recubiertos",
+     "channels": {
+      "store": 24690,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 24690
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glimefor%7C850mg%7C60&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglimefor-850-metformina-850-mg-60-comprimidos-recubiertos%2F298015.html&cfmId=CFM-001177",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw04202fc9/images/large/298015-glimefor-850-metformina-850-mg-60-comprimidos-recubiertos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 24690,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw04202fc9/images/large/298015-glimefor-850-metformina-850-mg-60-comprimidos-recubiertos.jpg",
+   "presentationKey": "glimefor|850mg|60|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001177",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glimefor|750mg|30",
+   "canonicalName": "Glimefor XR Metformina 750 mg 30 Comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glimefor XR Metformina 750 mg 30 Comprimidos",
+     "channels": {
+      "store": 24990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 24990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glimefor%7C750mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglimefor-xr-metformina-750-mg-30-comprimidos%2F296292.html&cfmId=CFM-001125",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw23048dca/images/large/296292-glimefor-xr-metformina-750-mg-30-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.386Z"
+    }
+   ],
+   "bestPrice": 24990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw23048dca/images/large/296292-glimefor-xr-metformina-750-mg-30-comprimidos.jpg",
+   "presentationKey": "glimefor|750mg|30|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001125",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "vidaron|50mg|60",
+   "canonicalName": "Vidaron M vildagliptina 50 mg metformina 1000 mg 60 comprimidos recubiertos",
+   "laboratory": "SEVEN PHARMA",
+   "isBioequivalent": true,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Vidaron M vildagliptina 50 mg metformina 1000 mg 60 comprimidos recubiertos",
+     "channels": {
+      "store": 34000,
+      "online": 25500,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 25500
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=vidaron%7C50mg%7C60&url=https%3A%2F%2Fwww.drsimi.cl%2Fvidaron-m-vildagliptina-50-mg-metformina-1000-mg-60-comprimidos-recubiertos%2Fp&cfmId=CFM-001148",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160394/ECOMMERCE_0004_BE0312-01.jpg?v=639051363448230000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 25500,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/160394/ECOMMERCE_0004_BE0312-01.jpg?v=639051363448230000",
+   "presentationKey": "vidaron|50mg|60|bio:true|brand:sevenpharma|var:m|form:solid-oral",
+   "cfmId": "CFM-001148",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|1000mg",
+   "canonicalName": "Glafornil XR 1000 mg 30...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Glafornil XR 1000 mg 30...",
+     "channels": {
+      "store": 25990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 25990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=glafornil%7C1000mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F25959-glafornil-xr-1000mg-x-30.html&cfmId=CFM-001161",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 25990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "glafornil|1000mg|bio:unknown|brand:unknown|var:xr",
+   "cfmId": "CFM-001161",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "hipoglucin|1000mg|60",
+   "canonicalName": "Hipoglucin LP Metformina 1000 mg x 60 Comprimidos de Liberación Prolongada",
+   "laboratory": "CHILE",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Hipoglucin LP Metformina 1000 mg x 60 Comprimidos de Liberación Prolongada",
+     "channels": {
+      "store": 26490,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 26490
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=hipoglucin%7C1000mg%7C60&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fhipoglucin-tabletas-liberacion-prolongada-metformina%3F_pos%3D9%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001133",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/hipoglucin-lp-1000-mg-x-60-comprimidos-de-liberacion-prolongada-chile-713847.jpg?v=1692989437",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 26490,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/products/hipoglucin-lp-1000-mg-x-60-comprimidos-de-liberacion-prolongada-chile-713847.jpg?v=1692989437",
+   "presentationKey": "hipoglucin|1000mg|60|bio:unknown|brand:chile|var:lp|form:solid-oral",
+   "cfmId": "CFM-001133",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "jovius|850mg|60",
+   "canonicalName": "Jovius Met 50/850 mg. x 60 comprimidos.",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Jovius Met 50/850 mg. x 60 comprimidos.",
+     "channels": {
+      "store": 26990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 26990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=jovius%7C850mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fjovius-met-50-850-mg-x-60-comprimidos&cfmId=CFM-001153",
+     "imageUrl": "https://farmacia.araucomed.com/13397-home_default/jovius-met-50-850-mg-x-60-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 26990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13397-home_default/jovius-met-50-850-mg-x-60-comprimidos.jpg",
+   "presentationKey": "jovius|850mg|60|bio:unknown|brand:chile|var:met|form:solid-oral",
+   "cfmId": "CFM-001153",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "hipoglucin|1000mg|60",
+   "canonicalName": "Hipoglucin LP (B) Metformina 1000mg 60 Comprimidos Prolongados",
+   "laboratory": "Hipoglucin",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Hipoglucin LP (B) Metformina 1000mg 60 Comprimidos Prolongados",
+     "channels": {
+      "store": 33799,
+      "online": 27039,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 27039
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=hipoglucin%7C1000mg%7C60&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fhipoglucin-lp-b-metformina-1000mg-60-comprimidos-prolongados%3Fdefault_sku%3D430244&cfmId=CFM-001133",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27535/small/430244.jpg?1641479731",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 27039,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27535/small/430244.jpg?1641479731",
+   "presentationKey": "hipoglucin|1000mg|60|bio:unknown|brand:hipoglucin|var:lp|form:solid-oral",
+   "cfmId": "CFM-001133",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|750mg|30",
+   "canonicalName": "Glafornil XR (R) Metformina 750mg 30 Comprimidos Prolongados",
+   "laboratory": "Glafornil",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glafornil XR (R) Metformina 750mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 32899,
+      "online": 28951,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 28951
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glafornil%7C750mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglafornil-xr-r-metformina-750mg-30-comprimidos-prolongados%3Fdefault_sku%3D2013001&cfmId=CFM-001118",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27926/small/2013001.jpg?1641479695",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 28951,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27926/small/2013001.jpg?1641479695",
+   "presentationKey": "glafornil|750mg|30|bio:unknown|brand:glafornil|var:xr|form:solid-oral",
+   "cfmId": "CFM-001118",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "vildavitae|60",
+   "canonicalName": "Vildavitae Plus (B)  Vildagliptina / Metformina  50/1000 60 Comprimidos Recubiertos",
+   "laboratory": "Vildavitea",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Vildavitae Plus (B)  Vildagliptina / Metformina  50/1000 60 Comprimidos Recubiertos",
+     "channels": {
+      "store": 44099,
+      "online": 30869,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 30869
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=vildavitae%7C60&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fvildavitae-plus-b-vildagliptina-metformina-50-1000-60-comprimidos-recubiertos%3Fdefault_sku%3D590735&cfmId=CFM-001174",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/141797/small/590735.jpg?1745961345",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 30869,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/141797/small/590735.jpg?1745961345",
+   "presentationKey": "vildavitae|60|bio:unknown|brand:vildavitea|combo:metformina|form:solid-oral",
+   "cfmId": "CFM-001174",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "vilzermet|1000mg|60",
+   "canonicalName": "Vilzermet 50/1000 mg. x 60 comprimidos.",
+   "laboratory": "Tecnofarma",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Vilzermet 50/1000 mg. x 60 comprimidos.",
+     "channels": {
+      "store": 31990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 31990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=vilzermet%7C1000mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fvilzermet-50-1000-mg-x-60-comprimidos&cfmId=CFM-001151",
+     "imageUrl": "https://farmacia.araucomed.com/13287-home_default/vilzermet-50-1000-mg-x-60-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 31990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13287-home_default/vilzermet-50-1000-mg-x-60-comprimidos.jpg",
+   "presentationKey": "vilzermet|1000mg|60|bio:unknown|brand:tecnofarma|form:solid-oral",
+   "cfmId": "CFM-001151",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "jovius|30",
+   "canonicalName": "Jovius Met (B) 1000/50 Metformina / Vildagliptina 30 Comprimidos Recubiertos",
+   "laboratory": "Jovius",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Jovius Met (B) 1000/50 Metformina / Vildagliptina 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 36999,
+      "online": 32559,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 32559
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=jovius%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fjovius-met-b-1000-50-metformina-vildagliptina-30-comprimidos-recubiertos%3Fdefault_sku%3D590676&cfmId=CFM-001166",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/138048/small/590676.jpg?1741882104",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 32559,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/138048/small/590676.jpg?1741882104",
+   "presentationKey": "jovius|30|bio:unknown|brand:jovius|combo:vildagliptina|form:solid-oral",
+   "cfmId": "CFM-001166",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glucosan|1000mg|60",
+   "canonicalName": "Glucosan XR Metformina Clorhidrato 1000 mg 60 Comprimidos Recubiertos de Liberacion Prolongada",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glucosan XR Metformina Clorhidrato 1000 mg 60 Comprimidos Recubiertos de Liberacion Prolongada",
+     "channels": {
+      "store": 32790,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 32790
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glucosan%7C1000mg%7C60&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglucosan-xr-metformina-clorhidrato-1000-mg-60-comprimidos-recubiertos-de-liberacion-prolongada%2F392720.html&cfmId=CFM-001157",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe0be232e/images/large/392720-glucosan-xr-metfornica-clorhidrato-1000-mg-60-comprimidos-recubiertos-de-liberacion-prolongada.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 32790,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe0be232e/images/large/392720-glucosan-xr-metfornica-clorhidrato-1000-mg-60-comprimidos-recubiertos-de-liberacion-prolongada.jpg",
+   "presentationKey": "glucosan|1000mg|60|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-001157",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glafornil|850mg|30",
+   "canonicalName": "Glafornil XR Metformina 850mg 30 Comprimidos Prolongados",
+   "laboratory": "Glafornil",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glafornil XR Metformina 850mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 37299,
+      "online": 32823,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 32823
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glafornil%7C850mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglafornil-xr-850-mg-30-comprimidos-prolongados%3Fdefault_sku%3D583218&cfmId=CFM-001152",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/87060/small/583218.jpg?1675655702",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 32823,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/87060/small/583218.jpg?1675655702",
+   "presentationKey": "glafornil|850mg|30|bio:unknown|brand:glafornil|var:xr|form:solid-oral",
+   "cfmId": "CFM-001152",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "glucovance|500mg|30",
+   "canonicalName": "Glucovance Metformina 500 mg 30 Comprimidos Recubiertos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Glucovance Metformina 500 mg 30 Comprimidos Recubiertos",
+     "channels": {
+      "store": 32990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 32990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=glucovance%7C500mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fglucovance-metformina-500-mg-30-comprimidos-recubiertos%2F11151.html&cfmId=CFM-001128",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw341b8b4a/images/large/11151-glucovance-comprimido-recubierto-30-unidades-metformina-500-mg.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 32990,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw341b8b4a/images/large/11151-glucovance-comprimido-recubierto-30-unidades-metformina-500-mg.jpg",
+   "presentationKey": "glucovance|500mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-001128",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "vilzermet|850mg|60",
+   "canonicalName": "Vilzermet 50/850 mg. x 60 comprimidos.",
+   "laboratory": "Tecnofarma",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Vilzermet 50/850 mg. x 60 comprimidos.",
+     "channels": {
+      "store": 32990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 32990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=vilzermet%7C850mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fvilzermet-50-850-mg-x-60-comprimidos&cfmId=CFM-001155",
+     "imageUrl": "https://farmacia.araucomed.com/13051-home_default/vilzermet-50-850-mg-x-60-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 32990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13051-home_default/vilzermet-50-850-mg-x-60-comprimidos.jpg",
+   "presentationKey": "vilzermet|850mg|60|bio:unknown|brand:tecnofarma|form:solid-oral",
+   "cfmId": "CFM-001155",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "glafornil|1000mg|30",
+   "canonicalName": "Glafornil XR (R) Metformina 1000mg 30 Comprimidos Prolongados",
+   "laboratory": "Glafornil",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Glafornil XR (R) Metformina 1000mg 30 Comprimidos Prolongados",
+     "channels": {
+      "store": 39599,
+      "online": 34847,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 34847
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=glafornil%7C1000mg%7C30&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fglafornil-xr-r-metformina-1000mg-30-comprimidos-prolongados%3Fdefault_sku%3D2015001&cfmId=CFM-001119",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/27939/small/2015001.jpg?1641479694",
+     "fetchedAt": "2026-09-01T00:04:45.388Z"
+    }
+   ],
+   "bestPrice": 34847,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/27939/small/2015001.jpg?1641479694",
+   "presentationKey": "glafornil|1000mg|30|bio:unknown|brand:glafornil|var:xr|form:solid-oral",
+   "cfmId": "CFM-001119",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "jovius|1000mg|60",
+   "canonicalName": "Jovius Met 50/1000 mg. x 60 comprimidos.",
+   "laboratory": "Laboratorio Chile",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Jovius Met 50/1000 mg. x 60 comprimidos.",
+     "channels": {
+      "store": 34990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 34990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=jovius%7C1000mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fjovius-met-50-1000-mg-x-60-comprimidos&cfmId=CFM-001167",
+     "imageUrl": "https://farmacia.araucomed.com/13288-home_default/jovius-met-50-1000-mg-x-60-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 34990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13288-home_default/jovius-met-50-1000-mg-x-60-comprimidos.jpg",
+   "presentationKey": "jovius|1000mg|60|bio:unknown|brand:chile|var:met|form:solid-oral",
+   "cfmId": "CFM-001167",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "enclyna|850mg|60",
+   "canonicalName": "Enclyna Duo 12,5/850 mg x 60 comprimidos.",
+   "laboratory": "Bagó",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Enclyna Duo 12,5/850 mg x 60 comprimidos.",
+     "channels": {
+      "store": 39990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 39990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=enclyna%7C850mg%7C60&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fenclyna-duo-125-850-mg-x-60-comprimidos&cfmId=CFM-001173",
+     "imageUrl": "https://farmacia.araucomed.com/13349-home_default/enclyna-duo-125-850-mg-x-60-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    },
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Enclyna Duo 12,5/850 mg x 60 comprimidos recubiertos",
+     "channels": {
+      "store": 39990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 39990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=enclyna%7C850mg%7C60&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fenclyna-duo-12-5-1000-mg-x-60-comprimidos-recubiertos%3F_pos%3D10%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001173",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/enclyna-duo-125850-mg-x-60-comprimidos-recubiertos-bago-185637.jpg?v=1740596728",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 39990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/13349-home_default/enclyna-duo-125-850-mg-x-60-comprimidos.jpg",
+   "presentationKey": "enclyna|850mg|60|bio:unknown|brand:bago|var:duo|form:solid-oral",
+   "cfmId": "CFM-001173",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "enclyna|1000mg|60",
+   "canonicalName": "Enclyna Duo 12,5/1000 mg x 60 comprimidos recubiertos",
+   "laboratory": "BAGO",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "farmex",
+     "pharmacyName": "Farmex",
+     "productName": "Enclyna Duo 12,5/1000 mg x 60 comprimidos recubiertos",
+     "channels": {
+      "store": 40290,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 40290
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=farmex&matchKey=enclyna%7C1000mg%7C60&url=https%3A%2F%2Ffarmex.cl%2Fproducts%2Fenclyna-duo-12-5-1000-mg-x-60-comprimidos-recubiertos-1%3F_pos%3D8%26_psq%3Dmetformina%26_psid%3D8d7bb88b1%26_ss%3De&cfmId=CFM-001180",
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/enclyna-duo-1251000-mg-x-60-comprimidos-recubiertos-bago-170207.jpg?v=1740596807",
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 40290,
+   "bestPharmacy": "farmex",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0024/6058/1940/files/enclyna-duo-1251000-mg-x-60-comprimidos-recubiertos-bago-170207.jpg?v=1740596807",
+   "presentationKey": "enclyna|1000mg|60|bio:unknown|brand:bago|var:duo|form:solid-oral",
+   "cfmId": "CFM-001180",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "jovius|1000mg|30",
+   "canonicalName": "Jovius Met (50/1000 mg) 30 comprimidos",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Jovius Met (50/1000 mg) 30 comprimidos",
+     "channels": {
+      "store": 41190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 41190
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=jovius%7C1000mg%7C30&url=https%3A%2F%2Fwww.cruzverde.cl%2Fjovius-met-50-1000-mg-30-comprimidos%2F572235.html&cfmId=CFM-001170",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw97f9fe48/images/large/572235.1.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 41190,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw97f9fe48/images/large/572235.1.jpg",
+   "presentationKey": "jovius|1000mg|30|bio:unknown|brand:unknown|var:met|form:solid-oral",
+   "cfmId": "CFM-001170",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "jovius|60",
+   "canonicalName": "Jovius Met (B) 850/50 Metformina / Vildagliptina 60 Comprimidos Recubiertos",
+   "laboratory": "Jovius",
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "salcobrand",
+     "pharmacyName": "Salcobrand",
+     "productName": "Jovius Met (B) 850/50 Metformina / Vildagliptina 60 Comprimidos Recubiertos",
+     "channels": {
+      "store": 47199,
+      "online": 41535,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 41535
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=salcobrand&matchKey=jovius%7C60&url=https%3A%2F%2Fsalcobrand.cl%2Fproducts%2Fjovius-met-b-850-50-metformina-vildagliptina-60-comprimidos-recubiertos%3Fdefault_sku%3D590655&cfmId=CFM-001162",
+     "imageUrl": "https://static.salcobrand.cl/spree/products/138036/small/590655.jpg?1741808313",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 41535,
+   "bestPharmacy": "salcobrand",
+   "imageUrl": "https://static.salcobrand.cl/spree/products/138036/small/590655.jpg?1741808313",
+   "presentationKey": "jovius|60|bio:unknown|brand:jovius|combo:vildagliptina|form:solid-oral",
+   "cfmId": "CFM-001162",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "janumet|56",
+   "canonicalName": "Janumet 50/850 x 56 comprimidos.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Janumet 50/850 x 56 comprimidos.",
+     "channels": {
+      "store": 42990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 42990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=janumet%7C56&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fjanumet-50-850-x-56-comprimidos&cfmId=CFM-000507",
+     "imageUrl": "https://farmacia.araucomed.com/12979-home_default/janumet-50-850-x-56-comprimidos.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 42990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/12979-home_default/janumet-50-850-x-56-comprimidos.jpg",
+   "presentationKey": "janumet|56|bio:unknown|brand:unknown|form:solid-oral",
+   "cfmId": "CFM-000507",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "enclyna|850mg",
+   "canonicalName": "Enclyna Duo 12.5/850 Mg 60...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Enclyna Duo 12.5/850 Mg 60...",
+     "channels": {
+      "store": 42990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 42990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=enclyna%7C850mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105245-enclyna-duo-125-850-mg-60-comp-recubiertos.html&cfmId=CFM-001156",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 42990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "enclyna|850mg|bio:unknown|brand:unknown|var:duo",
+   "cfmId": "CFM-001156",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "galvus|50mg|56",
+   "canonicalName": "Galvus Met 50/1000 vildagliptina 50 mg metformina 1000 mg 56 comprimidos recubiertos",
+   "laboratory": "NOVARTIS",
+   "isBioequivalent": false,
+   "prices": [
+    {
+     "pharmacySlug": "dr-simi",
+     "pharmacyName": "Dr. Simi",
+     "productName": "Galvus Met 50/1000 vildagliptina 50 mg metformina 1000 mg 56 comprimidos recubiertos",
+     "channels": {
+      "store": 57400,
+      "online": 43050,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 43050
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=dr-simi&matchKey=galvus%7C50mg%7C56&url=https%3A%2F%2Fwww.drsimi.cl%2Fgalvus-met-50-1000-56-comprimidos-recubiertos%2Fp&cfmId=CFM-001175",
+     "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156567/CH5926-1.jpg?v=637964773977230000",
+     "fetchedAt": "2026-09-01T00:04:45.389Z"
+    }
+   ],
+   "bestPrice": 43050,
+   "bestPharmacy": "dr-simi",
+   "imageUrl": "https://farmaciasdeldrsimicl.vteximg.com.br/arquivos/ids/156567/CH5926-1.jpg?v=637964773977230000",
+   "presentationKey": "galvus|50mg|56|bio:false|brand:novartis|var:met|form:solid-oral",
+   "cfmId": "CFM-001175",
+   "lexicalMatch": "exact"
+  },
+  {
+   "matchKey": "enclyna",
+   "canonicalName": "Enclyna Duo 12.5/1000 60...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Enclyna Duo 12.5/1000 60...",
+     "channels": {
+      "store": 43990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 43990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=enclyna&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F105246-enclyna-duo-125-1000-60-comp-recubiertos.html&cfmId=CFM-001179",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 43990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "enclyna|bio:unknown|brand:unknown|var:duo",
+   "cfmId": "CFM-001179",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "janumet|56",
+   "canonicalName": "Janumet XR 50/1000 x56com",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "araucomed",
+     "pharmacyName": "AraucoMed",
+     "productName": "Janumet XR 50/1000 x56com",
+     "channels": {
+      "store": 44990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 44990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=araucomed&matchKey=janumet%7C56&url=https%3A%2F%2Ffarmacia.araucomed.com%2Fhipoglicemiantes%2Fjanumet-xr-50-1000-x28com&cfmId=CFM-000507",
+     "imageUrl": "https://farmacia.araucomed.com/9893-home_default/janumet-xr-50-1000-x28com.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.390Z"
+    }
+   ],
+   "bestPrice": 44990,
+   "bestPharmacy": "araucomed",
+   "imageUrl": "https://farmacia.araucomed.com/9893-home_default/janumet-xr-50-1000-x28com.jpg",
+   "presentationKey": "janumet|56|bio:unknown|brand:unknown|var:xr|form:solid-oral",
+   "cfmId": "CFM-000507",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "sitareddys|50mg|56",
+   "canonicalName": "Sitareddys M 50Mg/850Mg X 56 Comp.",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "cruz-verde",
+     "pharmacyName": "Cruz Verde",
+     "productName": "Sitareddys M 50Mg/850Mg X 56 Comp.",
+     "channels": {
+      "store": 50190,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 50190
+     },
+     "hasStock": false,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=cruz-verde&matchKey=sitareddys%7C50mg%7C56&url=https%3A%2F%2Fwww.cruzverde.cl%2Fsitareddys-m-50mg-850mg-x-56-comp%2F576959.html&cfmId=CFM-001126",
+     "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe5f849d2/images/large/576959-1.jpg",
+     "fetchedAt": "2026-09-01T00:04:45.387Z"
+    }
+   ],
+   "bestPrice": 50190,
+   "bestPharmacy": "cruz-verde",
+   "imageUrl": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe5f849d2/images/large/576959-1.jpg",
+   "presentationKey": "sitareddys|50mg|56|bio:unknown|brand:unknown|var:m|form:solid-oral",
+   "cfmId": "CFM-001126",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "galvus|500mg",
+   "canonicalName": "Galvus Met 50/500 mg 56...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Galvus Met 50/500 mg 56...",
+     "channels": {
+      "store": 55990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 55990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=galvus%7C500mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102725-galvus-met-50-500-mg-56-comp.html&cfmId=CFM-014900",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 55990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "galvus|500mg|bio:unknown|brand:unknown|var:met",
+   "cfmId": "CFM-014900",
+   "lexicalMatch": "compatible"
+  },
+  {
+   "matchKey": "galvus|1000mg",
+   "canonicalName": "Galvus Met 50/1000 mg 56...",
+   "laboratory": null,
+   "isBioequivalent": null,
+   "prices": [
+    {
+     "pharmacySlug": "easyfarma",
+     "pharmacyName": "EasyFarma",
+     "productName": "Galvus Met 50/1000 mg 56...",
+     "channels": {
+      "store": 57990,
+      "online": null,
+      "cmr": null,
+      "sbpay": null,
+      "effective": 57990
+     },
+     "hasStock": true,
+     "hasOnlineDelivery": true,
+     "onlineUrl": "https://comparafarma-api.vercel.app/api/go?slug=easyfarma&matchKey=galvus%7C1000mg&url=https%3A%2F%2Fnuevo.easyfarma.cl%2F102726-galvus-met-50-1000-mg-56-comprimidos.html&cfmId=CFM-001169",
+     "imageUrl": null,
+     "fetchedAt": "2026-09-01T00:04:45.391Z"
+    }
+   ],
+   "bestPrice": 57990,
+   "bestPharmacy": "easyfarma",
+   "imageUrl": null,
+   "presentationKey": "galvus|1000mg|bio:unknown|brand:unknown|var:met",
+   "cfmId": "CFM-001169",
+   "lexicalMatch": "compatible"
+  }
+ ]
+}

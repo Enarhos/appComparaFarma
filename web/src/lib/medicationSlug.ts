@@ -175,13 +175,26 @@ export function slugifyText(text: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+/**
+ * Parte legible del slug de una tarjeta — `slugifyText(canonicalName)` con el
+ * mismo respaldo `"medicamento"` que usa `buildMedicationSlug`.
+ *
+ * CF-WEB-002 (2026-08-31): existe como función propia porque el resolver la
+ * necesita para DESEMPATAR, y comparar contra `slugifyText(canonicalName)` a
+ * secas no era equivalente: un `canonicalName` que se reduce a cadena vacía
+ * genera el slug `medicamento-<hash>`, pero se comparaba contra `""` y nunca
+ * podía empatar. Generación y resolución usan ahora exactamente la misma regla.
+ */
+export function medicationSlugHumanPart(medication: { canonicalName: string }): string {
+  return slugifyText(medication.canonicalName) || "medicamento";
+}
+
 export function buildMedicationSlug(medication: {
   canonicalName: string;
   matchKey: string;
   isBioequivalent?: boolean | null;
 }): string {
-  const human = slugifyText(medication.canonicalName) || "medicamento";
-  return `${human}-${medicationSlugHash(medication)}`;
+  return `${medicationSlugHumanPart(medication)}-${medicationSlugHash(medication)}`;
 }
 
 export interface ParsedMedicationSlug {

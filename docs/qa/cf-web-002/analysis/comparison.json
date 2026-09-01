@@ -1,0 +1,330 @@
+{
+ "baselineLabel": "baseline (origin/main 5a1e7e3)",
+ "fixedLabel": "fixed (fix/cf-web-002-detail-resolution)",
+ "sameCorpus": true,
+ "comparedURLs": 127,
+ "metrics": {
+  "generatedDetailURLs": {
+   "baseline": 128,
+   "fixed": 128,
+   "delta": 0
+  },
+  "resolvedExact": {
+   "baseline": 103,
+   "fixed": 127,
+   "delta": 24
+  },
+  "redirected": {
+   "baseline": 0,
+   "fixed": 0,
+   "delta": 0
+  },
+  "resolvedWrongProduct": {
+   "baseline": 3,
+   "fixed": 0,
+   "delta": -3
+  },
+  "ambiguous": {
+   "baseline": 6,
+   "fixed": 0,
+   "delta": -6
+  },
+  "notFound": {
+   "baseline": 16,
+   "fixed": 1,
+   "delta": -15
+  },
+  "error": {
+   "baseline": 0,
+   "fixed": 0,
+   "delta": 0
+  },
+  "resolutionRate": {
+   "baseline": 80.5,
+   "fixed": 99.2,
+   "delta": 18.7
+  },
+  "wrongProductRate": {
+   "baseline": 2.3,
+   "fixed": 0,
+   "delta": -2.3
+  },
+  "notFoundRate": {
+   "baseline": 17.2,
+   "fixed": 0.8,
+   "delta": -16.4
+  },
+  "staticCollisions": {
+   "baseline": 5,
+   "fixed": 5,
+   "delta": 0
+  },
+  "staticCollidingCards": {
+   "baseline": 10,
+   "fixed": 10,
+   "delta": 0
+  },
+  "legacyResolved": {
+   "baseline": 0,
+   "fixed": 7,
+   "delta": 7
+  }
+ },
+ "changedCount": {
+  "fixed": 24,
+  "regressed": 0,
+  "lateral": 1
+ },
+ "changed": [
+  {
+   "url": "/medicamento/tapsin-x-6-comprimidos-noche-maver-3a14ey6g56zgt",
+   "query": "tapsin",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Tapsin X 6 comprimidos Noche (Maver)",
+   "sourcePresentationKey": "tapsin|n|6|bio:unknown|brand:unknown|form:solid-oral",
+   "resolvedCanonicalName": "Tapsin X 6 comprimidos Noche (Maver)"
+  },
+  {
+   "url": "/medicamento/tapsin-x-6-comprimidos-maver-jfz5p0p85x6n",
+   "query": "tapsin",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Tapsin X 6 Comprimidos (Maver)",
+   "sourcePresentationKey": "tapsin|6|bio:unknown|brand:unknown|form:solid-oral",
+   "resolvedCanonicalName": "Tapsin X 6 Comprimidos (Maver)"
+  },
+  {
+   "url": "/medicamento/tapsin-forte-x-6-comprimidos-recubiertos-2tz36rk5hze2s",
+   "query": "tapsin",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Tapsin Forte X 6 comprimidos recubiertos",
+   "sourcePresentationKey": "tapsin|6|bio:unknown|brand:unknown|var:forte|form:solid-oral",
+   "resolvedCanonicalName": "Tapsin Forte X 6 comprimidos recubiertos"
+  },
+  {
+   "url": "/medicamento/ambroxol-30mg-5ml-jarabe-100ml-368kw3kmwe8r5",
+   "query": "ambroxol",
+   "from": "AMBIGUOUS",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Ambroxol 30mg/5ml Jarabe 100ml",
+   "sourcePresentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "resolvedCanonicalName": "Ambroxol 30mg/5ml Jarabe 100ml"
+  },
+  {
+   "url": "/medicamento/ambroxol-15-mg-5ml-jarabe-100-ml-368kw3kmwe8r5",
+   "query": "ambroxol",
+   "from": "AMBIGUOUS",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Ambroxol 15 mg/5mL Jarabe 100 mL",
+   "sourcePresentationKey": "ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "resolvedCanonicalName": "Ambroxol 15 mg/5mL Jarabe 100 mL"
+  },
+  {
+   "url": "/medicamento/ibuprofeno-200mg-5ml-jarabe-100ml-m4nvlyflclg",
+   "query": "ibuprofeno",
+   "from": "AMBIGUOUS",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Ibuprofeno 200mg/5ml Jarabe 100ml",
+   "sourcePresentationKey": "ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "resolvedCanonicalName": "Ibuprofeno 200mg/5ml Jarabe 100ml"
+  },
+  {
+   "url": "/medicamento/ibuprofeno-100-mg-5ml-suspension-100-ml-m4nvlyflclg",
+   "query": "ibuprofeno",
+   "from": "AMBIGUOUS",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Ibuprofeno 100 mg/5mL Suspensión 100 mL",
+   "sourcePresentationKey": "ibuprofeno|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "resolvedCanonicalName": "Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+  },
+  {
+   "url": "/medicamento/pyriped-ibuprofeno-100mg-5ml-jarabe-100ml-3c0qa7pxe6dpm",
+   "query": "ibuprofeno",
+   "from": "AMBIGUOUS",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+   "sourcePresentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "resolvedCanonicalName": "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml"
+  },
+  {
+   "url": "/medicamento/pyriped-ibuprofeno-suspension-oral-200mg-5ml-100ml-3c0qa7pxe6dpm",
+   "query": "ibuprofeno",
+   "from": "AMBIGUOUS",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml",
+   "sourcePresentationKey": "pyriped|100ml|bio:unknown|brand:unknown|form:fluid-oral",
+   "resolvedCanonicalName": "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml"
+  },
+  {
+   "url": "/medicamento/cam-jarabe-betametasona-0-25-mg-120-ml-lab-chile-3ga6d51u692vz",
+   "query": "betametasona",
+   "from": "RESOLVED_WRONG_PRODUCT",
+   "to": "NOT_FOUND",
+   "direction": "lateral",
+   "sourceCanonicalName": "Cam Jarabe Betametasona 0,25 mg 120 Ml (Lab Chile)",
+   "sourcePresentationKey": "cam|120ml|bio:unknown|brand:unknown|var:betametasona|form:fluid-oral",
+   "resolvedCanonicalName": null
+  },
+  {
+   "url": "/medicamento/betametasona-4-mg-ml-solucion-inyectable-x-1-ampolla-biosano-144ewvkka39oo",
+   "query": "betametasona",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Betametasona 4 mg/ml solucion inyectable x 1 ampolla. (Biosano)",
+   "sourcePresentationKey": "betametasona|4mg|bio:unknown|brand:biosano|form:injectable",
+   "resolvedCanonicalName": "Betametasona 4 mg/ml solucion inyectable x 1 ampolla. (Biosano)"
+  },
+  {
+   "url": "/medicamento/betametasona-0-05-ung-uuml-ento-topico-pomo-15-g-chile-y6p4hcbo3ye8",
+   "query": "betametasona",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Betametasona 0,05 % Ung&uuml;ento Tópico Pomo 15 g CHILE",
+   "sourcePresentationKey": "betametasona|15000mg|bio:unknown|brand:unknown|var:uuml|form:topical",
+   "resolvedCanonicalName": "Betametasona 0,05 % Ung&uuml;ento Tópico Pomo 15 g CHILE"
+  },
+  {
+   "url": "/medicamento/diclofenaco-retard-100-mg-x-8-capsulas-opko-1l4aourepmu3b",
+   "query": "diclofenaco",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Diclofenaco Retard 100 mg x 8 cápsulas Opko",
+   "sourcePresentationKey": "diclofenaco|100mg|8|bio:unknown|brand:unknown|var:retard|form:solid-oral",
+   "resolvedCanonicalName": "Diclofenaco Retard 100 mg x 8 cápsulas Opko"
+  },
+  {
+   "url": "/medicamento/omeprazol-20-mg-x-30-capsulas-opko-cenabast-descuento-3spaum39ayw3q",
+   "query": "omeprazol",
+   "from": "RESOLVED_WRONG_PRODUCT",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Omeprazol 20 mg x 30 Cápsulas Opko Cenabast DESCUENTO",
+   "sourcePresentationKey": "omeprazol|20mg|30|bio:true|brand:unknown|form:solid-oral",
+   "resolvedCanonicalName": "Omeprazol 20 mg x 30 Cápsulas Opko Cenabast DESCUENTO"
+  },
+  {
+   "url": "/medicamento/omeprazol-40-mg-10-ml-inyectable-x-1-frasco-ampolla-hospifarma-39s3e5t9i8dqo",
+   "query": "omeprazol",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Omeprazol 40 mg/10 ml. Inyectable x 1 Frasco Ampolla (Hospifarma)",
+   "sourcePresentationKey": "omeprazol|10ml|bio:unknown|brand:hospifarma|form:injectable",
+   "resolvedCanonicalName": "Omeprazol 40 mg/10 ml. Inyectable x 1 Frasco Ampolla (Hospifarma)"
+  },
+  {
+   "url": "/medicamento/metformina-1000mg-x-30-comp-de-liberacion-prolongada-descuento-1pnlt8zov822a",
+   "query": "metformina",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Metformina 1000mg x 30 Comp. de Liberación Prolongada DESCUENTO",
+   "sourcePresentationKey": "metformina|1000mg|30|bio:true|brand:unknown|form:solid-oral",
+   "resolvedCanonicalName": "Metformina 1000mg x 30 Comp. de Liberación Prolongada DESCUENTO"
+  },
+  {
+   "url": "/medicamento/metformina-clorhidrato-500-mg-x-30-comprimidos-cenabast-1r2bzkyi5j0fa",
+   "query": "metformina",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Metformina Clorhidrato 500 mg x 30 Comprimidos (cenabast)",
+   "sourcePresentationKey": "metformina|500mg|30|bio:true|brand:unknown|form:solid-oral",
+   "resolvedCanonicalName": "Metformina Clorhidrato 500 mg x 30 Comprimidos (cenabast)"
+  },
+  {
+   "url": "/medicamento/metformina-clorhidrato750-mg-x-30-comprimidos-cenabast-descuento-19yer1kn0gv9v",
+   "query": "metformina",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Metformina Clorhidrato750 mg x 30 Comprimidos (Cenabast) DESCUENTO",
+   "sourcePresentationKey": "metformina|750mg|30|bio:unknown|brand:unknown|form:solid-oral",
+   "resolvedCanonicalName": "Metformina Clorhidrato750 mg x 30 Comprimidos (Cenabast) DESCUENTO"
+  },
+  {
+   "url": "/medicamento/geniol-caliente-noche-sobre-5g-1xznbql1vz7n5",
+   "query": "clorfenamina",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Geniol Caliente noche sobre 5g",
+   "sourcePresentationKey": "geniol|5000mg|n|bio:unknown|brand:mintlab|var:caliente|form:fluid-oral",
+   "resolvedCanonicalName": "Geniol Caliente noche sobre 5g"
+  },
+  {
+   "url": "/medicamento/cetirizina-10-mg-x-30-comprimidos-curaespring-3lrdotee6go9",
+   "query": "cetirizina",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Cetirizina 10 mg x 30 comprimidos. (CuraeSpring)",
+   "sourcePresentationKey": "cetirizina|10mg|30|bio:unknown|brand:curaespring|form:solid-oral",
+   "resolvedCanonicalName": "Cetirizina 10 mg x 30 comprimidos. (CuraeSpring)"
+  },
+  {
+   "url": "/medicamento/loratadina-10-mg-por-30-comprimidos-descuento-q4x6ozinxr3z",
+   "query": "loratadina",
+   "from": "RESOLVED_WRONG_PRODUCT",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Loratadina 10 mg por 30 comprimidos DESCUENTO",
+   "sourcePresentationKey": "loratadina|10mg|30|bio:true|brand:unknown|form:solid-oral",
+   "resolvedCanonicalName": "Loratadina 10 mg por 30 comprimidos DESCUENTO"
+  },
+  {
+   "url": "/medicamento/clotrimazol-crema-topica-al-1-x-20-g-surfarma-23poitc26mv6o",
+   "query": "clotrimazol",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Clotrimazol Crema topica al 1% x 20 g  Surfarma",
+   "sourcePresentationKey": "clotrimazol|20000mg|20|bio:unknown|brand:unknown|var:al|form:topical",
+   "resolvedCanonicalName": "Clotrimazol Crema topica al 1% x 20 g  Surfarma"
+  },
+  {
+   "url": "/medicamento/clotrimazol-crema-topica-1-20g-ethon-cenabast-11k1hgfzyyees",
+   "query": "clotrimazol",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Clotrimazol Crema Tópica 1% 20g Ethon (Cenabast)",
+   "sourcePresentationKey": "clotrimazol|20000mg|bio:unknown|brand:unknown|form:topical",
+   "resolvedCanonicalName": "Clotrimazol Crema Tópica 1% 20g Ethon (Cenabast)"
+  },
+  {
+   "url": "/medicamento/ballerina-jabon-de-glicerina-750-ml-1gno4wnnjz0xe",
+   "query": "glicerina",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Ballerina Jabon de Glicerina 750 ML",
+   "sourcePresentationKey": "ballerina|750ml|bio:unknown|brand:unknown|var:jabon",
+   "resolvedCanonicalName": "Ballerina Jabon de Glicerina 750 ML"
+  },
+  {
+   "url": "/medicamento/babyland-jabon-de-glicerina-ph-neutro-750-ml-hcqa8ugs71j9",
+   "query": "glicerina",
+   "from": "NOT_FOUND",
+   "to": "RESOLVED_EXACT",
+   "direction": "fixed",
+   "sourceCanonicalName": "Babyland Jabon de Glicerina Ph Neutro 750 ML",
+   "sourcePresentationKey": "babyland|750ml|bio:unknown|brand:unknown|var:jabon",
+   "resolvedCanonicalName": "Babyland Jabon de Glicerina Ph Neutro 750 ML"
+  }
+ ]
+}
