@@ -28,11 +28,13 @@ export type {
   AdministrationRoute,
   AxisComparison,
   CanonicalAttributes,
+  CanonicalDosageForm,
   CanonicalGraph,
   CanonicalMedicationConcept,
   CanonicalOffer,
   CanonicalPresentation,
   CommercialMedicinalProduct,
+  ConceptIdentityStatus,
   ConcentrationEvidence,
   OfferProvenance,
   RawOfferInput,
@@ -40,7 +42,10 @@ export type {
   ResolutionKind,
   ResolutionTrace,
 } from "./canonicalTypes.js";
-export { ADMINISTRATION_ROUTE_BY_FORM } from "./canonicalTypes.js";
+export {
+  ADMINISTRATION_ROUTE_BY_CANONICAL_FORM,
+  ADMINISTRATION_ROUTE_BY_FORM,
+} from "./canonicalTypes.js";
 
 export {
   compareConcentration,
@@ -54,15 +59,18 @@ export {
   buildCanonicalName,
   canonicalizeOffer,
   readActiveIngredients,
+  readAdministrationRoute,
   readAdministrationTime,
+  readCanonicalDosageForm,
   readPackageType,
   readPackageVolume,
   readPharmaceuticalUnit,
+  readUnresolvedIdentityDiscriminator,
 } from "./canonicalAttributes.js";
 
 export {
   axisStrength,
-  canonicalId,
+  provisionalKey,
   resolveBySubsumption,
   signatureText,
   subsumes,

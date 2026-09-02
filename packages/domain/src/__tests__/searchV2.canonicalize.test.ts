@@ -38,9 +38,9 @@ const offer = (
 const find = (graph: CanonicalGraph, name: string) =>
   graph.offers.find((o) => o.rawName === name)!;
 const productsOf = (graph: CanonicalGraph, names: string[]) =>
-  new Set(names.map((n) => find(graph, n).productId));
+  new Set(names.map((n) => find(graph, n).provisionalProductKey));
 const conceptsOf = (graph: CanonicalGraph, names: string[]) =>
-  new Set(names.map((n) => find(graph, n).conceptId));
+  new Set(names.map((n) => find(graph, n).provisionalConceptKey));
 
 /**
  * Ejes en los que dos ofertas del mismo producto se contradirían. Es el mismo
@@ -60,7 +60,21 @@ function contradicts(a: string, b: string): boolean {
   ) {
     return true;
   }
-  if (x.dosageForm && y.dosageForm && x.dosageForm !== y.dosageForm) return true;
+  if (
+    x.canonicalDosageForm &&
+    y.canonicalDosageForm &&
+    x.canonicalDosageForm !== y.canonicalDosageForm
+  ) {
+    return true;
+  }
+  if (x.route && y.route && x.route !== y.route) return true;
+  if (
+    x.pharmaceuticalUnit &&
+    y.pharmaceuticalUnit &&
+    x.pharmaceuticalUnit !== y.pharmaceuticalUnit
+  ) {
+    return true;
+  }
   if (x.packageQuantity !== null && y.packageQuantity !== null && x.packageQuantity !== y.packageQuantity) {
     return true;
   }
@@ -100,19 +114,19 @@ describe("caso de control — Losartán 50 mg x 30 (§17)", () => {
     expect(productsOf(graph, GENERICS).size).toBe(1);
   });
 
-  it("las marcas conservan identidad propia: no se fuerza un solo productId", () => {
+  it("las marcas conservan identidad propia: no se fuerza un solo provisionalProductKey", () => {
     expect(productsOf(graph, BRANDED).size).toBe(3);
     expect(productsOf(graph, [...GENERICS, ...BRANDED]).size).toBe(4);
   });
 
   it("genéricos y marcas comparten concepto Y presentación — ahí aparece la comparación", () => {
     expect(conceptsOf(graph, [...GENERICS, ...BRANDED]).size).toBe(1);
-    expect(new Set([...GENERICS, ...BRANDED].map((n) => find(graph, n).presentationId)).size).toBe(1);
+    expect(new Set([...GENERICS, ...BRANDED].map((n) => find(graph, n).provisionalPresentationKey)).size).toBe(1);
   });
 
   it("la combinación NUNCA comparte concepto con el monofármaco", () => {
-    expect(find(graph, COMBINATION).conceptId).not.toBe(find(graph, GENERICS[0]!).conceptId);
-    const combo = graph.concepts.get(find(graph, COMBINATION).conceptId)!;
+    expect(find(graph, COMBINATION).provisionalConceptKey).not.toBe(find(graph, GENERICS[0]!).provisionalConceptKey);
+    const combo = graph.concepts.get(find(graph, COMBINATION).provisionalConceptKey)!;
     expect(combo.activeIngredients.map((i) => i.token)).toEqual(["hidroclorotiazida", "losartan"]);
   });
 
@@ -121,8 +135,8 @@ describe("caso de control — Losartán 50 mg x 30 (§17)", () => {
       offer("Losartan Potasico 50 mg x30com.", "araucomed", { structuredManufacturer: "Mintlab" }),
       offer("Losartan Potasico 50 mg x30com.", "farmex", { structuredManufacturer: "Opko" }),
     ]);
-    expect(new Set(withLabs.offers.map((o) => o.productId)).size).toBe(2);
-    expect(new Set(withLabs.offers.map((o) => o.presentationId)).size).toBe(1);
+    expect(new Set(withLabs.offers.map((o) => o.provisionalProductKey)).size).toBe(2);
+    expect(new Set(withLabs.offers.map((o) => o.provisionalPresentationKey)).size).toBe(1);
   });
 });
 
@@ -156,21 +170,21 @@ describe("caso de control — Ambroxol (§17)", () => {
   });
 
   it("30 mg/5 ml y 15 mg/5 ml NUNCA son el mismo concepto", () => {
-    expect(find(graph, ADULT_RATIO).conceptId).not.toBe(find(graph, PEDIATRIC).conceptId);
+    expect(find(graph, ADULT_RATIO).provisionalConceptKey).not.toBe(find(graph, PEDIATRIC).provisionalConceptKey);
   });
 
   it("las gotas de 7,5 mg/ml son un concepto distinto del jarabe de 15 mg/5 ml", () => {
-    expect(find(graph, DROPS).conceptId).not.toBe(find(graph, PEDIATRIC).conceptId);
+    expect(find(graph, DROPS).provisionalConceptKey).not.toBe(find(graph, PEDIATRIC).provisionalConceptKey);
   });
 
   it("el comprimido de 30 mg no es el jarabe de 30 mg/5 ml", () => {
-    expect(find(graph, TABLET).conceptId).not.toBe(find(graph, ADULT_RATIO).conceptId);
+    expect(find(graph, TABLET).provisionalConceptKey).not.toBe(find(graph, ADULT_RATIO).provisionalConceptKey);
   });
 
   it("Muxol comparte concepto con el genérico pero es un PRODUCTO distinto", () => {
-    expect(find(graph, MUXOL_SYRUP).conceptId).toBe(find(graph, ADULT_RATIO).conceptId);
-    expect(find(graph, MUXOL_SYRUP).productId).not.toBe(find(graph, ADULT_RATIO).productId);
-    expect(graph.products.get(find(graph, MUXOL_SYRUP).productId)!.brand).toBe("Muxol");
+    expect(find(graph, MUXOL_SYRUP).provisionalConceptKey).toBe(find(graph, ADULT_RATIO).provisionalConceptKey);
+    expect(find(graph, MUXOL_SYRUP).provisionalProductKey).not.toBe(find(graph, ADULT_RATIO).provisionalProductKey);
+    expect(graph.products.get(find(graph, MUXOL_SYRUP).provisionalProductKey)!.brand).toBe("Muxol");
   });
 
   it("'ambroxol' nunca se publica como variante comercial (65 ofertas de v1)", () => {
@@ -183,7 +197,7 @@ describe("caso de control — Ambroxol (§17)", () => {
     // "Amrodil" no se puede demostrar como marca; tampoco puede desaparecer
     // dentro de Muxol. Es la regla que evita comparar un genérico con una marca
     // como si fueran el mismo producto.
-    expect(find(graph, AMRODIL).productId).not.toBe(find(graph, MUXOL_SYRUP).productId);
+    expect(find(graph, AMRODIL).provisionalProductKey).not.toBe(find(graph, MUXOL_SYRUP).provisionalProductKey);
   });
 
   it("el jarabe de 60 ml y el de 100 ml son el mismo CONCEPTO y distinta PRESENTACIÓN", () => {
@@ -191,8 +205,8 @@ describe("caso de control — Ambroxol (§17)", () => {
       offer("Ambroxol 30 mg/5 mL Jarabe 100 mL", "cruz-verde"),
       offer("Ambroxol 30 mg/5 mL Jarabe 60 mL", "salcobrand"),
     ]);
-    expect(new Set(volumes.offers.map((o) => o.conceptId)).size).toBe(1);
-    expect(new Set(volumes.offers.map((o) => o.presentationId)).size).toBe(2);
+    expect(new Set(volumes.offers.map((o) => o.provisionalConceptKey)).size).toBe(1);
+    expect(new Set(volumes.offers.map((o) => o.provisionalPresentationKey)).size).toBe(2);
   });
 });
 
@@ -215,12 +229,12 @@ describe("caso de control — Tapsin: no se reintroducen los falsos merges de CF
     )
   );
 
-  it("cada variante comercial conserva su propio productId", () => {
+  it("cada variante comercial conserva su propio provisionalProductKey", () => {
     expect(productsOf(graph, VARIANTS).size).toBe(VARIANTS.length);
   });
 
   it("la AUSENCIA de variante también es identidad: 'Tapsin x 6' no es 'Tapsin Rojo x 6'", () => {
-    expect(find(graph, VARIANTS[0]!).productId).not.toBe(find(graph, VARIANTS[1]!).productId);
+    expect(find(graph, VARIANTS[0]!).provisionalProductKey).not.toBe(find(graph, VARIANTS[1]!).provisionalProductKey);
   });
 
   it("Día y Noche no se fusionan", () => {
@@ -228,7 +242,7 @@ describe("caso de control — Tapsin: no se reintroducen los falsos merges de CF
       offer("Tapsin Plus Día 16 Comprimidos", "cruz-verde"),
       offer("Tapsin Plus Noche 16 Comprimidos", "salcobrand"),
     ]);
-    expect(new Set(dayNight.offers.map((o) => o.productId)).size).toBe(2);
+    expect(new Set(dayNight.offers.map((o) => o.provisionalProductKey)).size).toBe(2);
   });
 
   it("una marca sin molécula demostrable NO se absorbe dentro del concepto del genérico", () => {
@@ -239,9 +253,14 @@ describe("caso de control — Tapsin: no se reintroducen los falsos merges de CF
       offer("Tapsin Forte x 30 comprimidos", "araucomed"),
       offer("Paracetamol 500 mg x 30 comprimidos", "cruz-verde"),
     ]);
-    expect(new Set(mixed.offers.map((o) => o.conceptId)).size).toBe(2);
-    const tapsin = mixed.concepts.get(find(mixed, "Tapsin Forte x 30 comprimidos").conceptId)!;
-    expect(tapsin.activeIngredients[0]!.evidence).toBe("unresolved-head");
+    expect(new Set(mixed.offers.map((o) => o.provisionalConceptKey)).size).toBe(2);
+    const tapsin = mixed.concepts.get(find(mixed, "Tapsin Forte x 30 comprimidos").provisionalConceptKey)!;
+    // El concepto NO afirma ningún principio activo: "Tapsin Forte" no demuestra
+    // que "tapsin" sea una molécula (revisión CTO PR #159, punto 2).
+    expect(tapsin.activeIngredients).toEqual([]);
+    expect(tapsin.identityStatus).toBe("unresolved-ingredient");
+    expect(tapsin.unresolvedIdentityDiscriminator).toBe("tapsin");
+    expect(tapsin.canonicalName).not.toContain("tapsin ");
   });
 
   it("un sobre suelto no comparte presentación con la caja de 6", () => {
@@ -249,7 +268,7 @@ describe("caso de control — Tapsin: no se reintroducen los falsos merges de CF
       offer("Tapsin Caliente Noche - Sabor Limón - Sobre de 5 g ( 1 sobre )", "farmex"),
       offer("Tapsin Caliente Noche 6 Sobres", "cruz-verde"),
     ]);
-    expect(new Set(packs.offers.map((o) => o.presentationId)).size).toBe(2);
+    expect(new Set(packs.offers.map((o) => o.provisionalPresentationKey)).size).toBe(2);
   });
 });
 
@@ -266,14 +285,14 @@ describe("caso de control — Ibuprofeno: concentraciones y formas (§17)", () =
   ]);
 
   it("400 mg y 600 mg son conceptos distintos", () => {
-    expect(find(graph, "Ibuprofeno 400 mg x 20 comprimidos").conceptId).not.toBe(
-      find(graph, "Ibuprofeno 600 mg x 20 Comprimidos Recubiertos").conceptId
+    expect(find(graph, "Ibuprofeno 400 mg x 20 comprimidos").provisionalConceptKey).not.toBe(
+      find(graph, "Ibuprofeno 600 mg x 20 Comprimidos Recubiertos").provisionalConceptKey
     );
   });
 
   it("200 mg/5 ml y 100 mg/5 ml son conceptos distintos — el par que colisionaba en el slug", () => {
-    expect(find(graph, "Ibuprofeno 200mg/5ml Jarabe 100ml").conceptId).not.toBe(
-      find(graph, "Ibuprofeno 100 mg/5mL Suspensión 100 mL").conceptId
+    expect(find(graph, "Ibuprofeno 200mg/5ml Jarabe 100ml").provisionalConceptKey).not.toBe(
+      find(graph, "Ibuprofeno 100 mg/5mL Suspensión 100 mL").provisionalConceptKey
     );
   });
 
@@ -282,12 +301,12 @@ describe("caso de control — Ibuprofeno: concentraciones y formas (§17)", () =
       offer("Ibuprofeno 100 mg/5 mL Jarabe 100 mL", "cruz-verde"),
       offer("Ibuprofeno 100 mg/5 mL Suspensión Oral 100 mL", "dr-simi"),
     ]);
-    expect(new Set(same.offers.map((o) => o.conceptId)).size).toBe(1);
+    expect(new Set(same.offers.map((o) => o.provisionalConceptKey)).size).toBe(1);
   });
 
   it("el comprimido y el jarabe nunca comparten concepto", () => {
-    expect(find(graph, "Ibuprofeno 400 mg x 20 comprimidos").conceptId).not.toBe(
-      find(graph, "Ibuprofeno 200mg/5ml Jarabe 100ml").conceptId
+    expect(find(graph, "Ibuprofeno 400 mg x 20 comprimidos").provisionalConceptKey).not.toBe(
+      find(graph, "Ibuprofeno 200mg/5ml Jarabe 100ml").provisionalConceptKey
     );
   });
 });
@@ -302,7 +321,7 @@ describe("caso de control — combinaciones farmacológicas (§17)", () => {
       offer("Amoxicilina 500 mg x 21 Cápsulas", "cruz-verde"),
       offer("Amoxicilina + Ácido Clavulánico 500 mg x 21 Cápsulas", "ahumada"),
     ]);
-    expect(new Set(graph.offers.map((o) => o.conceptId)).size).toBe(2);
+    expect(new Set(graph.offers.map((o) => o.provisionalConceptKey)).size).toBe(2);
   });
 
   it("el orden textual de la combinación no crea identidades distintas", () => {
@@ -310,7 +329,7 @@ describe("caso de control — combinaciones farmacológicas (§17)", () => {
       offer("Losartan Potásico + Hidroclorotiazida 50 mg/12.5 mg x 30 comp.", "ecofarmacias"),
       offer("Hidroclorotiazida + Losartan 50 mg/12.5 mg x 30 comp.", "farmex"),
     ]);
-    expect(new Set(graph.offers.map((o) => o.conceptId)).size).toBe(1);
+    expect(new Set(graph.offers.map((o) => o.provisionalConceptKey)).size).toBe(1);
   });
 
   it("la sal no se cuenta como segundo principio activo", () => {
@@ -318,7 +337,7 @@ describe("caso de control — combinaciones farmacológicas (§17)", () => {
       offer("Losartan Potásico 50 mg x 30 comprimidos", "cruz-verde"),
       offer("Losartan 50 mg x 30 comprimidos", "salcobrand"),
     ]);
-    expect(new Set(graph.offers.map((o) => o.conceptId)).size).toBe(1);
+    expect(new Set(graph.offers.map((o) => o.provisionalConceptKey)).size).toBe(1);
   });
 });
 
@@ -340,35 +359,35 @@ describe("garantías del grafo canónico", () => {
 
   it("TODA oferta de entrada produce exactamente una oferta canónica (Gate A)", () => {
     expect(graph.offers).toHaveLength(NAMES.length);
-    expect(new Set(graph.offers.map((o) => o.offerId)).size).toBe(NAMES.length);
+    expect(new Set(graph.offers.map((o) => o.provisionalOfferKey)).size).toBe(NAMES.length);
   });
 
   it("la cadena oferta → producto → presentación → concepto está siempre íntegra (Gate B)", () => {
     for (const canonical of graph.offers) {
-      const product = graph.products.get(canonical.productId);
-      const presentation = graph.presentations.get(canonical.presentationId);
-      const concept = graph.concepts.get(canonical.conceptId);
+      const product = graph.products.get(canonical.provisionalProductKey);
+      const presentation = graph.presentations.get(canonical.provisionalPresentationKey);
+      const concept = graph.concepts.get(canonical.provisionalConceptKey);
       expect(product).toBeDefined();
       expect(presentation).toBeDefined();
       expect(concept).toBeDefined();
-      expect(product!.presentationId).toBe(canonical.presentationId);
-      expect(presentation!.conceptId).toBe(canonical.conceptId);
-      expect(product!.conceptId).toBe(canonical.conceptId);
+      expect(product!.provisionalPresentationKey).toBe(canonical.provisionalPresentationKey);
+      expect(presentation!.provisionalConceptKey).toBe(canonical.provisionalConceptKey);
+      expect(product!.provisionalConceptKey).toBe(canonical.provisionalConceptKey);
     }
   });
 
   it("ninguna oferta con nombre truncado o sin evidencia se pierde", () => {
     const truncated = find(graph, "Omeprazol 20 mg x 60...");
-    expect(truncated.conceptId).toMatch(/^CFM-C-/);
-    expect(truncated.productId).toMatch(/^CFM-M-/);
+    expect(truncated.provisionalConceptKey).toMatch(/^PROV-C-/);
+    expect(truncated.provisionalProductKey).toMatch(/^PROV-M-/);
   });
 
   it("no hay falsos merges: ningún par del mismo producto se contradice (Gate C)", () => {
     const byProduct = new Map<string, string[]>();
     for (const canonical of graph.offers) {
-      const list = byProduct.get(canonical.productId) ?? [];
+      const list = byProduct.get(canonical.provisionalProductKey) ?? [];
       list.push(canonical.rawName);
-      byProduct.set(canonical.productId, list);
+      byProduct.set(canonical.provisionalProductKey, list);
     }
     for (const names of byProduct.values()) {
       for (let i = 0; i < names.length; i++) {
@@ -398,9 +417,12 @@ describe("garantías del grafo canónico", () => {
   });
 
   it("un concepto publica su vía y su nombre canónico construido", () => {
-    const concept = graph.concepts.get(find(graph, "Ambroxol 30mg/5ml Jarabe 100ml").conceptId)!;
+    const concept = graph.concepts.get(find(graph, "Ambroxol 30mg/5ml Jarabe 100ml").provisionalConceptKey)!;
     expect(concept.route).toBe("oral");
-    expect(concept.dosageForm).toBe("fluid-oral");
+    expect(concept.canonicalDosageForm).toBe("liquido-oral");
+    // La clase gruesa de v1 se publica como atributo de trazabilidad, no como eje.
+    expect(concept.dosageFormClass).toBe("fluid-oral");
+    expect(concept.identityStatus).toBe("resolved");
     expect(concept.canonicalName).not.toBe("Ambroxol 30mg/5ml Jarabe 100ml");
     expect(concept.atcCode).toBeNull();
   });

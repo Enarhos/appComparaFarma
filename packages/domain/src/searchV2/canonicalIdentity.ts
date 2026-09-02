@@ -3,13 +3,48 @@
  *
  * DOS PIEZAS, Y SOLO DOS:
  *
- *   1. `canonicalId()` — un identificador determinista derivado de una FIRMA
- *      textual. La firma se conserva íntegra junto al ID (`ResolutionTrace`),
- *      así que "¿por qué estas dos ofertas comparten `productId`?" se responde
- *      comparando dos cadenas legibles, no reejecutando heurísticas.
+ *   1. `provisionalKey()` — una clave determinista derivada de una FIRMA
+ *      textual. La firma se conserva íntegra junto a la clave
+ *      (`ResolutionTrace`), así que "¿por qué estas dos ofertas comparten
+ *      producto?" se responde comparando dos cadenas legibles, no reejecutando
+ *      heurísticas.
  *
  *   2. `resolveBySubsumption()` — el ÚNICO mecanismo de resolución del motor v2.
  *      Se aplica igual en los tres niveles (concepto, presentación, producto).
+ *
+ * ---------------------------------------------------------------------------
+ * TRES RESPONSABILIDADES DISTINTAS, Y ESTE MÓDULO SOLO IMPLEMENTA DOS
+ * ---------------------------------------------------------------------------
+ * La revisión CTO del PR #159 obliga a separarlas explícitamente, porque
+ * confundirlas es lo que convierte un mecanismo correcto en una identidad
+ * incorrecta:
+ *
+ *   CANONICALIZATION — texto libre → atributos tipados. Es PURA por oferta: no
+ *     mira ninguna otra oferta. Vive en `canonicalAttributes.ts`.
+ *
+ *   RESOLUTION — dado un conjunto de firmas conocidas, decidir a cuál pertenece
+ *     una observación incompleta. Es CONTEXTUAL por definición: su respuesta
+ *     depende de qué firmas conoce. Es `resolveBySubsumption()`, y es una buena
+ *     estrategia para esto (ver más abajo).
+ *
+ *   IDENTITY ASSIGNMENT — asignar el identificador PERMANENTE de la entidad. El
+ *     EDM exige que no cambie nunca. **Esto NO está implementado en S0** y no
+ *     puede estarlo: requiere el registro persistido de S1.
+ *
+ * `provisionalKey()` NO es identity assignment. Es una clave de contenido sobre
+ * la firma RESUELTA, y por lo tanto hereda la contextualidad de la resolución:
+ * si cambia el conjunto de firmas visibles, una observación parcial puede
+ * resolverse a otra anfitriona y su clave cambia. Medido sobre el corpus
+ * congelado de S0 y documentado en `docs/qa/cf-search-011/S0_METRICS.md`.
+ *
+ * CONSECUENCIA ARQUITECTÓNICA, ya aceptada: la subsunción es válida como
+ * RESOLUCIÓN CONTRA UN REGISTRO, y NO es válida para ACUÑAR identidad desde el
+ * corpus. En S1 el conjunto de anfitrionas debe ser el registro persistido —
+ * estable, independiente de la consulta y de qué farmacias respondieron— y el
+ * `CFM-CONCEPT-ID` permanente solo puede acuñarse desde una firma COMPLETA. Una
+ * observación parcial resuelve contra el registro o queda sin resolver; nunca
+ * acuña un ID permanente. Mientras eso no exista, estas claves son
+ * experimentales y no se persisten.
  *
  * ---------------------------------------------------------------------------
  * POR QUÉ LA SUBSUNCIÓN ES EL MECANISMO, Y NO OTRA HEURÍSTICA
@@ -56,7 +91,7 @@ import type {
 } from "./canonicalTypes.js";
 
 // ---------------------------------------------------------------------------
-// A. IDENTIFICADORES DETERMINISTAS
+// A. CLAVES PROVISIONALES DETERMINISTAS
 // ---------------------------------------------------------------------------
 
 /**
@@ -96,32 +131,36 @@ const OFFSET_A = 14695981039346656037n;
 const OFFSET_B = 9973n;
 
 /**
- * Identificador canónico determinista derivado de una firma.
+ * CLAVE PROVISIONAL determinista derivada de una firma.
  *
- *     `CFM-C-<26 chars base36>`   concepto
- *     `CFM-P-…`                    presentación
- *     `CFM-M-…`                    producto comercial
- *     `CFM-O-…`                    oferta
+ *     `PROV-C-<25 chars base36>`   concepto
+ *     `PROV-P-…`                    presentación
+ *     `PROV-M-…`                    producto comercial
+ *     `PROV-O-…`                    oferta
  *
- * NOTA DE MIGRACIÓN (no es una decisión de S0). El EDM prevé identificadores
- * PERSISTIDOS y asignados una sola vez (`CFM-C-000123`), no derivados del
- * contenido — es lo que permite que un concepto conserve su ID cuando se corrige
- * un atributo. S0 no tiene registro persistido, así que usa un ID
- * CONTENT-ADDRESSED sobre la firma: es determinista, reproducible y auditable
- * sin base de datos, que es lo que el gate necesita. Cuando S1 introduzca el
- * registro, la FIRMA pasa a ser la clave de búsqueda y el ID pasa a ser el
- * subrogado persistido; el resto del motor no cambia, porque nada depende de la
- * forma del ID.
+ * EL PREFIJO ES `PROV-`, NO `CFM-`, Y ES DELIBERADO (revisión CTO PR #159,
+ * punto 3). El EDM define identificadores PERSISTIDOS y asignados una sola vez
+ * (`CFM-C-000123`), que por contrato NUNCA cambian — es lo que permite que un
+ * concepto conserve su identidad cuando se corrige un atributo o se enriquece su
+ * evidencia. Una clave derivada del contenido hace exactamente lo contrario: si
+ * la firma cambia, la clave cambia. Las dos cosas no pueden compartir espacio de
+ * nombres sin que alguien acabe persistiendo un hash creyendo que es un ID.
+ *
+ * QUÉ ES ENTONCES ESTA CLAVE: el subrogado de una FIRMA. Es determinista,
+ * reproducible y auditable sin base de datos, que es lo único que los gates de
+ * S0 necesitan. En S1, la firma pasa a ser la CLAVE DE BÚSQUEDA contra el
+ * registro persistido y el `CFM-*` pasa a ser el subrogado almacenado; ningún
+ * consumidor debe haber persistido `PROV-*` antes de eso.
  */
-export function canonicalId(prefix: "C" | "P" | "M" | "O", signature: string): string {
+export function provisionalKey(prefix: "C" | "P" | "M" | "O", signature: string): string {
   // El prefijo entra en el texto hasheado, no solo en la cadena final: los
-  // cuatro espacios de identificadores del EDM quedan disjuntos incluso si dos
-  // niveles llegaran a producir la misma firma textual.
+  // cuatro espacios de claves quedan disjuntos incluso si dos niveles llegaran a
+  // producir la misma firma textual.
   const payload = `${prefix}:${signature}`;
   const high = fnv1a64(payload, OFFSET_A);
   const low = fnv1a64(payload, OFFSET_B);
   const combined = (high << 64n) | low;
-  return `CFM-${prefix}-${combined.toString(36).padStart(25, "0")}`;
+  return `PROV-${prefix}-${combined.toString(36).padStart(25, "0")}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -229,14 +268,17 @@ export interface ResolutionItem<T> {
 /** Resultado de resolver un elemento. */
 export interface ResolvedItem<T> {
   payload: T;
-  id: string;
+  /** Clave PROVISIONAL (`PROV-*`), no un identificador permanente del EDM. */
+  key: string;
   /** Firma bajo la que quedó registrado (la de la anfitriona si hubo subsunción). */
   resolvedSignature: Signature;
   trace: ResolutionTrace;
 }
 
 /**
- * Asigna un identificador canónico a cada elemento.
+ * Asigna una CLAVE PROVISIONAL a cada elemento resolviéndolo contra el conjunto
+ * de firmas recibido. Es RESOLUCIÓN, no acuñación de identidad permanente — ver
+ * la cabecera del módulo.
  *
  * ALGORITMO (tres pasos, sin estado mutable compartido entre iteraciones):
  *
@@ -257,12 +299,24 @@ export interface ResolvedItem<T> {
  * decidir nada y no se modifica durante la decisión. El resultado de una oferta
  * no depende de qué farmacia llegó primero, ni del precio, ni de la consulta.
  *
- * CONTEXTO DE RESOLUCIÓN. La decisión SÍ depende de qué firmas están presentes
- * en el conjunto que se resuelve: es la naturaleza de un registro. En S0 el
- * harness resuelve el corpus congelado COMPLETO de una vez, que es la simulación
- * fiel del registro persistido que S1 introducirá (`SEARCH_ENGINE_V2.md` etapa
- * 3: "¿la firma ya tiene conceptId? → recuperar"). La estabilidad entre
- * contextos se mide explícitamente y se reporta.
+ * CONTEXTO DE RESOLUCIÓN — LA FRONTERA QUE NO SE PUEDE CRUZAR EN S0.
+ *
+ * La decisión SÍ depende de qué firmas están presentes en el conjunto que se
+ * resuelve. Eso es correcto para un RESOLUTOR —un registro más rico resuelve
+ * mejor— y es exactamente por eso que la clave resultante NO puede ser una
+ * identidad permanente: si el conjunto cambia, la clave de una observación
+ * parcial cambia con él.
+ *
+ * En S0 el harness resuelve el corpus congelado COMPLETO de una vez, que es la
+ * simulación más fiel disponible del registro persistido de S1
+ * (`SEARCH_ENGINE_V2.md` etapa 3: "¿la firma ya tiene concepto? → recuperar").
+ * La estabilidad entre contextos se mide explícitamente, se reporta y se
+ * atribuye oferta por oferta en `docs/qa/cf-search-011/S0_METRICS.md`.
+ *
+ * Lo que SÍ es independiente del contexto, por construcción y verificado en el
+ * harness: la firma CRUDA (`rawSignature`) de cada oferta, que solo depende de
+ * su propio nombre. La canonicalización es pura; la contextualidad entra
+ * únicamente en este paso.
  */
 export function resolveBySubsumption<T>(
   prefix: "C" | "P" | "M" | "O",
@@ -307,7 +361,7 @@ export function resolveBySubsumption<T>(
     }
 
     const resolvedText = signatureText(target);
-    const id = canonicalId(prefix, resolvedText);
+    const key = provisionalKey(prefix, resolvedText);
     const trace: ResolutionTrace = {
       signature: resolvedText,
       rawSignature: rawText,
@@ -318,7 +372,7 @@ export function resolveBySubsumption<T>(
     };
 
     for (const item of bucket.items) {
-      resolved.push({ payload: item.payload, id, resolvedSignature: target, trace });
+      resolved.push({ payload: item.payload, key, resolvedSignature: target, trace });
     }
   }
 

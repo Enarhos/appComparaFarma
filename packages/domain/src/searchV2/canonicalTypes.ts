@@ -8,6 +8,26 @@
  *
  *     CFM-CONCEPT-ID → CFM-PRESENTATION-ID → CFM-PRODUCT-ID → CFM-OFFER-ID
  *
+ * ---------------------------------------------------------------------------
+ * ESTAS ENTIDADES NO LLEVAN IDENTIFICADORES CFM (revisión CTO PR #159, punto 3)
+ * ---------------------------------------------------------------------------
+ * El EDM exige que `CFM-CONCEPT-ID` sea PERMANENTE y no cambie nunca. S0 no
+ * tiene registro persistido: lo único que puede calcular es una CLAVE
+ * PROVISIONAL derivada del contenido de la firma resuelta. Por eso ningún campo
+ * de este módulo se llama `conceptId` ni emite el prefijo `CFM-`:
+ *
+ *     provisionalConceptKey       `PROV-C-…`
+ *     provisionalPresentationKey  `PROV-P-…`
+ *     provisionalProductKey       `PROV-M-…`
+ *     provisionalOfferKey         `PROV-O-…`
+ *
+ * Una clave provisional es la CLAVE DE BÚSQUEDA de una firma, no la identidad de
+ * la entidad. Rota cuando la firma cambia (por una corrección de atributo o por
+ * una subsunción distinta), y eso es exactamente lo que un `CFM-CONCEPT-ID` no
+ * puede hacer. La frontera con el registro persistido de S1 está documentada en
+ * `docs/qa/cf-search-011/CANONICAL_IDENTITY_IMPLEMENTATION.md` §"Provisional vs
+ * persistente". Ningún consumidor debe persistir estas claves ni exponerlas.
+ *
  * AISLAMIENTO (CF-SEARCH-011 §4, §22). Este árbol NO se exporta desde
  * `packages/domain/src/index.ts` y ningún módulo de v1 lo importa: v1 es
  * inmutable en S0 y el motor v2 corre exclusivamente en shadow mode, fuera del
@@ -16,11 +36,11 @@
  * patrón que ya usan los scripts de CF-SEARCH-003, CF-DATA-001 y CF-SEARCH-010.
  *
  * LAS CINCO INVARIANTES DE IDENTIDAD (CANONICAL_IDENTITY_MODEL §1):
- *   1. `conceptId` nunca depende de marca, laboratorio, farmacia ni precio.
- *   2. `presentationId` nunca depende de marca ni de laboratorio.
- *   3. `productId` es lo único que puede depender de marca y fabricante.
- *   4. `offerId` es lo único que puede depender de la farmacia.
- *   5. NINGUNO depende de la consulta del usuario ni del ranking.
+ *   1. la clave de concepto nunca depende de marca, laboratorio, farmacia ni precio.
+ *   2. la clave de presentación nunca depende de marca ni de laboratorio.
+ *   3. la clave de producto es la única que puede depender de marca y fabricante.
+ *   4. la clave de oferta es la única que puede depender de la farmacia.
+ *   5. NINGUNA depende de la consulta del usuario ni del ranking.
  *
  * REGLA DE HONESTIDAD: `UNKNOWN` es preferible a una identidad falsa. Ningún
  * atributo se rellena por inferencia cuando el nombre no lo declara.
@@ -35,9 +55,19 @@ import type { PharmacySlug, PriceChannels } from "../types.js";
 // ---------------------------------------------------------------------------
 
 /**
- * Vía de administración. Se DERIVA de `DosageFormClass` por una tabla explícita
- * (`ADMINISTRATION_ROUTE_BY_FORM`), nunca se lee del texto: ningún catálogo de
- * las 9 farmacias la declara (medido en CF-SEARCH-010: cobertura 0 %).
+ * Vía de administración (EDM-100, dimensión 4 del Concepto Farmacéutico).
+ *
+ * Se lee del texto cuando el nombre la DECLARA y, si no, se deriva de
+ * `CanonicalDosageForm` por la tabla explícita
+ * `ADMINISTRATION_ROUTE_BY_CANONICAL_FORM`. Ningún catálogo la entrega como
+ * campo estructurado (medido en CF-SEARCH-010: cobertura 0 %), pero varios la
+ * escriben dentro del nombre ("Solución **Oral**", "Gel **Dérmico**").
+ *
+ * `otic` y `vaginal` no existen en la tabla equivalente de v1 y son la razón
+ * medible por la que la vía es un eje propio y no un adorno: v1 clasifica el
+ * óvulo como `suppository` (⇒ rectal) y las gotas óticas como `ophthalmic`
+ * (⇒ oftálmica). Las dos son afirmaciones falsas sobre cómo se administra un
+ * medicamento.
  */
 export type AdministrationRoute =
   | "oral"
@@ -45,8 +75,68 @@ export type AdministrationRoute =
   | "parenteral"
   | "inhalation"
   | "ophthalmic"
+  | "otic"
+  | "nasal"
   | "rectal"
+  | "vaginal"
   | "transdermal";
+
+/**
+ * Forma Farmacéutica canónica (EDM-100, dimensión 3 del Concepto Farmacéutico).
+ *
+ * POR QUÉ EXISTE, Y POR QUÉ NO ES `DosageFormClass`
+ * -------------------------------------------------
+ * `dosageFormClass()` (v1, CF-SEARCH-001/003) es DELIBERADAMENTE gruesa: agrupa
+ * en `solid-oral` todo lo que se traga entero y en `topical` todo lo que se
+ * aplica sobre la piel. Sirve para lo que fue diseñada —evitar que un jarabe se
+ * compare con una crema— pero NO es la Forma Farmacéutica del EDM, que enumera
+ * literalmente "Comprimido, Cápsula, Jarabe, Suspensión, Crema, Solución,
+ * Ampolla" como valores distintos.
+ *
+ * Medido sobre el corpus congelado de S0 (1.633 ofertas, 303 conceptos): 45
+ * conceptos agrupaban más de una forma fina. La clasificación de esos 45 casos
+ * decide qué se separa y qué no, y es evidencia, no criterio:
+ *
+ *   SE SEPARA — no hay ninguna fuente que use los dos términos para el mismo
+ *   artículo, y el EDM los enumera por separado:
+ *     · comprimido vs cápsula ...... 13 conceptos
+ *     · crema vs gel ................ 3 conceptos
+ *
+ *   NO SE SEPARA — el corpus prueba que las farmacias usan los términos como
+ *   sinónimos para EL MISMO artículo, y separarlos sería un falso split masivo:
+ *     · jarabe / suspensión / solución / polvo para suspensión / gotas ... 28
+ *       conceptos. Caso literal: Amoxicilina 250 mg/5 mL 60 mL es "Jarabe" en
+ *       Salcobrand y Cruz Verde, "susp. Frasco" en Ahumada y "Polvo Para
+ *       Suspensión Oral" en Dr. Simi. Es un solo artículo descrito desde tres
+ *       ángulos. Lo mismo con "Solución Oral Para Gotas" vs "Oral Gotas"
+ *       (Rigotax 10 mg/mL 15 mL).
+ *
+ * Por eso `liquido-oral` es UNA forma canónica y no cuatro: la distinción que el
+ * EDM enumera entre jarabe, suspensión y solución no es observable en este
+ * catálogo, y afirmarla produciría identidades falsas por partición. La
+ * dimensión que sí separa un sobre de polvo de un frasco de jarabe es la UNIDAD
+ * FARMACÉUTICA (`sobre`), que es un eje propio de la firma — y es la dimensión
+ * que el EDM usa para eso.
+ *
+ * `polvo` y `sobre` NO son formas farmacéuticas del EDM: están enumerados bajo
+ * Unidad Farmacéutica. Ver `readPharmaceuticalUnit()`.
+ */
+export type CanonicalDosageForm =
+  | "comprimido"
+  | "capsula"
+  | "liquido-oral"
+  | "crema"
+  | "gel"
+  | "pomada"
+  | "locion"
+  | "shampoo"
+  | "inyectable"
+  | "inhalador"
+  | "colirio"
+  | "gotas-oticas"
+  | "supositorio"
+  | "ovulo"
+  | "parche";
 
 /**
  * Evidencia de concentración. Los tres estados son SEMÁNTICAMENTE DISTINTOS y
@@ -83,20 +173,41 @@ export type AxisComparison =
   /** A es más débil que B (desconocido o parcial) y B no lo contradice. */
   | "subsumable";
 
-/** Un principio activo reconocido, con la evidencia que lo respalda. */
+/**
+ * Un principio activo DEMOSTRADO, con la evidencia que lo respalda.
+ *
+ * Un `ActiveIngredient` es una afirmación farmacológica: "esta molécula está en
+ * este medicamento". Solo se construye cuando hay evidencia positiva:
+ *
+ *   `"vocabulary"`  — el token está en `COMPOSITION_VOCABULARY` (CF-DATA-001:
+ *                     34 moléculas derivadas de una medición reproducible sobre
+ *                     3.697 ofertas, no de criterio humano).
+ *   `"combination"` — el token participa de una combinación reconocida por
+ *                     `combinationKey()` (CF-SEARCH-001/S-1), cuya firma
+ *                     tipográfica ("Losartán / Hidroclorotiazida 50/12,5 mg")
+ *                     demuestra que ambos lados son principios activos.
+ *
+ * NO EXISTE una evidencia `"unresolved-head"` (revisión CTO PR #159, punto 2).
+ * Una cabecera textual no resuelta —"tapsin", "muxol"— NO es un principio
+ * activo y no puede entrar en este tipo: vive en
+ * `CanonicalAttributes.unresolvedIdentityDiscriminator`, que es un discriminante
+ * de seguridad y no conocimiento farmacológico. Ver `readActiveIngredients()`.
+ */
 export interface ActiveIngredient {
   /** Token normalizado, sin acentos y en minúscula (`"ambroxol"`). */
   token: string;
-  /**
-   * `"vocabulary"` — el token está en el vocabulario de moléculas medido
-   * (`COMPOSITION_VOCABULARY`, CF-DATA-001) o es el segundo principio activo de
-   * una combinación reconocida por `combinationKey` (CF-SEARCH-001/S-1).
-   * `"unresolved-head"` — NO se pudo demostrar ninguna molécula en el nombre; el
-   * token es la cabecera farmacológica y actúa como discriminante honesto, no
-   * como afirmación de que sea un principio activo.
-   */
-  evidence: "vocabulary" | "combination" | "unresolved-head";
+  evidence: "vocabulary" | "combination";
 }
+
+/**
+ * Estado de identidad farmacológica de un Concepto.
+ *
+ *   `"resolved"`              — se demostró al menos un principio activo.
+ *   `"unresolved-ingredient"` — NO se demostró ninguno. El concepto existe
+ *                               (ninguna oferta se pierde) pero NO afirma qué
+ *                               molécula contiene.
+ */
+export type ConceptIdentityStatus = "resolved" | "unresolved-ingredient";
 
 /** Confianza de una resolución de identidad. */
 export type ResolutionConfidence =
@@ -139,17 +250,43 @@ export interface ResolutionTrace {
  * al mercado"*: no depende de marca, laboratorio, farmacia, precio ni consulta.
  */
 export interface CanonicalMedicationConcept {
-  /** `CFM-C-<hash>` — determinista sobre la firma del concepto. */
-  conceptId: string;
-  /** Construido desde los atributos, NUNCA copiado del nombre de una farmacia. */
+  /**
+   * `PROV-C-<hash>` — CLAVE PROVISIONAL, no un `CFM-CONCEPT-ID`. Determinista
+   * sobre la firma resuelta del concepto; rota si la firma cambia. Ver la
+   * cabecera de este archivo.
+   */
+  provisionalConceptKey: string;
+  /**
+   * Construido desde los atributos, NUNCA copiado del nombre de una farmacia.
+   * Cuando `identityStatus` es `"unresolved-ingredient"`, este nombre NO
+   * presenta ningún token como principio activo.
+   */
   canonicalName: string;
-  /** Ordenado alfabéticamente: el orden textual del nombre no crea identidades distintas. */
+  /**
+   * Principios activos DEMOSTRADOS, ordenados alfabéticamente: el orden textual
+   * del nombre no crea identidades distintas. Puede estar vacío — y entonces
+   * `identityStatus` lo declara explícitamente.
+   */
   activeIngredients: ActiveIngredient[];
+  identityStatus: ConceptIdentityStatus;
+  /**
+   * Cabecera textual no resuelta ("tapsin"), o `null`. NO es un principio
+   * activo: es el discriminante que impide que una observación desconocida se
+   * fusione con un concepto conocido. Ver `CanonicalAttributes`.
+   */
+  unresolvedIdentityDiscriminator: string | null;
   concentration: ConcentrationEvidence;
-  dosageForm: DosageFormClass | null;
-  /** Derivada de `dosageForm` por tabla explícita. `null` si la forma es desconocida. */
+  /** EDM-100 · Forma Farmacéutica. Es el eje de identidad. */
+  canonicalDosageForm: CanonicalDosageForm | null;
+  /**
+   * Clase gruesa de v1 (`solid-oral`, …). Se publica como ATRIBUTO para
+   * trazabilidad y para los usos que ya la consumen; NO es el eje de identidad
+   * del concepto desde la revisión del PR #159.
+   */
+  dosageFormClass: DosageFormClass | null;
+  /** EDM-100 · Vía de Administración. Es el eje de identidad. */
   route: AdministrationRoute | null;
-  /** Unidad farmacéutica declarada en el nombre (`comprimido`, `sobre`), o `null`. */
+  /** EDM-100 · Unidad Farmacéutica (`comprimido`, `sobre`). Es el eje de identidad. */
   pharmaceuticalUnit: string | null;
   /** Fuera de alcance de S0 (CF-DATA-005/#156 es independiente). Siempre `null`. */
   atcCode: string | null;
@@ -167,9 +304,9 @@ export interface CanonicalMedicationConcept {
  *   4. unidad farmacéutica                → `Concept.pharmaceuticalUnit`
  */
 export interface CanonicalPresentation {
-  /** `CFM-P-<hash>`. */
-  presentationId: string;
-  conceptId: string;
+  /** `PROV-P-<hash>` — clave provisional, no un `CFM-PRESENTATION-ID`. */
+  provisionalPresentationKey: string;
+  provisionalConceptKey: string;
   /** Unidades por envase. NUNCA un volumen. `null` si el nombre no la declara. */
   packageQuantity: number | null;
   /** Unidad contada (`comprimido`, `sobre`), o `null`. */
@@ -188,10 +325,10 @@ export interface CanonicalPresentation {
  * es un valor LEGÍTIMO (un genérico no tiene marca), no un dato faltante.
  */
 export interface CommercialMedicinalProduct {
-  /** `CFM-M-<hash>`. */
-  productId: string;
-  conceptId: string;
-  presentationId: string;
+  /** `PROV-M-<hash>` — clave provisional, no un `CFM-PRODUCT-ID`. */
+  provisionalProductKey: string;
+  provisionalConceptKey: string;
+  provisionalPresentationKey: string;
   brand: string | null;
   /** Calificador comercial dentro de la familia de marca (`Forte`, `Rojo`), o `null`. */
   commercialVariant: string | null;
@@ -227,11 +364,17 @@ export interface CommercialMedicinalProduct {
  * El propio documento declara que los nombres "no son un contrato cerrado".
  */
 export interface CanonicalOffer {
-  /** `CFM-O-<hash>` — determinista sobre farmacia + referencia de origen. */
-  offerId: string;
-  productId: string;
-  presentationId: string;
-  conceptId: string;
+  /**
+   * `PROV-O-<hash>` — clave provisional determinista sobre farmacia +
+   * referencia de origen. Es la ÚNICA de las cuatro que no depende de ninguna
+   * resolución: la observación no cambia porque el motor aprenda a qué producto
+   * pertenece. Aun así se llama provisional porque el `CFM-OFFER-ID` del EDM lo
+   * asigna el registro persistido de S1, no un hash del contenido.
+   */
+  provisionalOfferKey: string;
+  provisionalProductKey: string;
+  provisionalPresentationKey: string;
+  provisionalConceptKey: string;
   pharmacy: PharmacySlug;
   /**
    * Identificador nativo de la farmacia. Hoy los adaptadores no lo emiten
@@ -299,10 +442,39 @@ export interface OfferProvenance {
  * concatenación de texto.
  */
 export interface CanonicalAttributes {
+  /** Principios activos DEMOSTRADOS. Vacío es un valor legítimo. */
   activeIngredients: ActiveIngredient[];
+  /**
+   * DISCRIMINANTE DE IDENTIDAD NO RESUELTA — la corrección del punto 2 de la
+   * revisión CTO del PR #159.
+   *
+   * Cuando no se pudo demostrar NINGÚN principio activo, este campo lleva la
+   * cabecera textual del nombre ("tapsin", "muxol", "broncot") y
+   * `activeIngredients` queda VACÍO. Los dos hechos se representan a la vez y
+   * sin mezclarse:
+   *
+   *   1. NO SE INVENTA CONOCIMIENTO — "Tapsin Forte" no demuestra que "tapsin"
+   *      sea una molécula, y por eso el token no aparece como
+   *      `ActiveIngredient` en ninguna parte, ni en `canonicalName`, ni en las
+   *      métricas de cobertura de principio activo.
+   *   2. NO SE FUSIONA LO DESCONOCIDO CON LO CONOCIDO — el discriminante SÍ
+   *      participa de la firma del concepto como eje propio (`disc`), así que
+   *      "Tapsin Forte x 30 comprimidos" no puede subsumirse dentro del
+   *      concepto "paracetamol 500 mg comprimido" por ausencia de evidencia, y
+   *      dos ofertas de Tapsin Forte de dos farmacias distintas siguen
+   *      agrupando entre sí.
+   *
+   * `UNKNOWN` sigue siendo conservador, pero `UNKNOWN != ACTIVE_INGREDIENT`.
+   */
+  unresolvedIdentityDiscriminator: string | null;
   concentration: ConcentrationEvidence;
-  dosageForm: DosageFormClass | null;
+  /** EDM-100 · Forma Farmacéutica. Eje de identidad del concepto. */
+  canonicalDosageForm: CanonicalDosageForm | null;
+  /** Clase gruesa de v1. Atributo de trazabilidad, NO eje de identidad. */
+  dosageFormClass: DosageFormClass | null;
+  /** EDM-100 · Vía de Administración. Eje de identidad del concepto. */
   route: AdministrationRoute | null;
+  /** EDM-100 · Unidad Farmacéutica. Eje de identidad del concepto. */
   pharmaceuticalUnit: string | null;
   packageQuantity: number | null;
   packageUnit: string | null;
@@ -354,16 +526,48 @@ export interface CanonicalGraph {
 }
 
 /**
- * Tabla explícita forma farmacéutica → vía de administración.
+ * Tabla explícita FORMA FARMACÉUTICA CANÓNICA → VÍA DE ADMINISTRACIÓN.
  *
- * Es una TABLA, no una heurística: ninguna vía se infiere del texto. Se declara
- * acá y no en `productIdentity.ts` porque la vía es un atributo del modelo v2 y
- * v1 no la conoce.
+ * Es una TABLA, no una heurística. Se usa como valor POR DEFECTO cuando el
+ * nombre no declara la vía; si el nombre la declara, gana el texto (ver
+ * `readAdministrationRoute()`).
  *
- * `ophthalmic` cubre también la vía ótica: la clase `DosageFormClass` de v1
- * agrupa colirio y gotas óticas en el mismo valor, y S0 no cambia la semántica
- * de v1 para beneficiar a v2 (CF-SEARCH-011 §4). Separarlas exige un lector de
- * forma propio de v2, registrado como deuda.
+ * Dos entradas corrigen afirmaciones falsas que la tabla equivalente sobre
+ * `DosageFormClass` no podía evitar, porque v1 no distingue esas formas:
+ *   · `ovulo` → `vaginal` (v1 lo clasifica como `suppository` ⇒ rectal);
+ *   · `gotas-oticas` → `otic` (v1 lo clasifica como `ophthalmic` ⇒ oftálmica).
+ *
+ * `inyectable` se mapea a `parenteral` y no a intravenosa/intramuscular: el EDM
+ * enumera las dos, pero ningún nombre del catálogo permite distinguirlas.
+ * Afirmar una sería inventar. `parenteral` es la granularidad sostenible con la
+ * evidencia disponible.
+ */
+export const ADMINISTRATION_ROUTE_BY_CANONICAL_FORM: Readonly<
+  Record<CanonicalDosageForm, AdministrationRoute>
+> = {
+  comprimido: "oral",
+  capsula: "oral",
+  "liquido-oral": "oral",
+  crema: "topical",
+  gel: "topical",
+  pomada: "topical",
+  locion: "topical",
+  shampoo: "topical",
+  inyectable: "parenteral",
+  inhalador: "inhalation",
+  colirio: "ophthalmic",
+  "gotas-oticas": "otic",
+  supositorio: "rectal",
+  ovulo: "vaginal",
+  parche: "transdermal",
+};
+
+/**
+ * Tabla equivalente sobre la clase gruesa de v1. Se conserva SOLO para
+ * trazabilidad y para poder demostrar, en la documentación de la revisión, que
+ * sobre `DosageFormClass` la vía era una función total —y por lo tanto un eje
+ * sin poder discriminante— antes de introducir `CanonicalDosageForm`.
+ * No se usa para construir identidad.
  */
 export const ADMINISTRATION_ROUTE_BY_FORM: Readonly<
   Record<DosageFormClass, AdministrationRoute>

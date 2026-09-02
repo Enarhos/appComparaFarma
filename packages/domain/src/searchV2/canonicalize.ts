@@ -31,14 +31,13 @@ import {
   formatConcentration,
 } from "./canonicalConcentration.js";
 import {
-  canonicalId,
+  provisionalKey,
   resolveBySubsumption,
   type ResolvedItem,
   type Signature,
   type SignatureAxis,
 } from "./canonicalIdentity.js";
 import {
-  ADMINISTRATION_ROUTE_BY_FORM,
   type CanonicalAttributes,
   type CanonicalGraph,
   type CanonicalMedicationConcept,
@@ -62,16 +61,57 @@ const UNKNOWN_SEGMENT = "?";
  * regla, porque un eje desconocido y un eje "sin volumen" se comportan igual
  * frente a una firma que tampoco declara volumen.
  */
-const FORMS_WITHOUT_PACKAGE_VOLUME = new Set(["solid-oral", "suppository", "patch"]);
+const FORMS_WITHOUT_PACKAGE_VOLUME: ReadonlySet<string> = new Set([
+  "comprimido",
+  "capsula",
+  "supositorio",
+  "ovulo",
+  "parche",
+]);
 
 // ---------------------------------------------------------------------------
 // ETAPA 3 — FIRMA DEL CONCEPTO FARMACÉUTICO
 // ---------------------------------------------------------------------------
 
 /**
- * Firma del Concepto Farmacéutico: principios activos + concentración + forma.
+ * Firma del Concepto Farmacéutico — LAS CINCO DIMENSIONES DEL EDM-100.
  *
- * QUÉ NO ESTÁ, Y POR QUÉ:
+ * El EDM define el Concepto Farmacéutico como la combinación única de Principio
+ * Activo + Concentración + Forma Farmacéutica + Vía de Administración + Unidad
+ * Farmacéutica. Las cinco están acá, más un sexto eje de seguridad:
+ *
+ *     ing   → Principio(s) Activo(s) DEMOSTRADOS  (desconocido si no hay ninguno)
+ *     disc  → discriminante de identidad no resuelta (NO es un principio activo)
+ *     conc  → Concentración, con sus tres niveles de evidencia
+ *     form  → Forma Farmacéutica canónica (`CanonicalDosageForm`)
+ *     route → Vía de Administración
+ *     unit  → Unidad Farmacéutica
+ *
+ * QUÉ CAMBIÓ EN LA REVISIÓN DEL PR #159, Y POR QUÉ NO FUE "SUMAR STRINGS":
+ *
+ *   1. `form` usaba `DosageFormClass`, la clase GRUESA de v1, que agrupa
+ *      comprimido con cápsula y crema con gel. El EDM enumera esas formas por
+ *      separado y ninguna fuente del corpus las usa como sinónimos: 16 de los 45
+ *      conceptos que mezclaban formas lo hacían por esta razón. Ahora el eje usa
+ *      `CanonicalDosageForm`. Los otros 29 casos —jarabe/suspensión/solución—
+ *      NO se separan, y el porqué (evidencia de sinonimia real en el catálogo)
+ *      está en `CanonicalDosageForm`.
+ *
+ *   2. `route` no estaba. Sobre la clase gruesa era una función total de la
+ *      forma, así que como eje habría tenido cero poder discriminante — ese
+ *      argumento era formalmente correcto pero describía una limitación del
+ *      modelo, no un contrato de dominio. Ver `readAdministrationRoute()`.
+ *
+ *   3. `unit` no estaba, por un argumento que razonaba con la aritmética de dos
+ *      estados de v1 dentro de un motor que tiene tres. Ver
+ *      `PHARMACEUTICAL_UNIT_BY_TOKEN`.
+ *
+ *   4. `disc` es nuevo y separa el DISCRIMINANTE DE SEGURIDAD del CONOCIMIENTO
+ *      FARMACOLÓGICO. Antes, una cabecera no resuelta viajaba dentro de `ing`
+ *      con `known=true`, o sea firmada como si fuera un principio activo. Ver
+ *      `readUnresolvedIdentityDiscriminator()`.
+ *
+ * QUÉ SIGUE SIN ESTAR, Y POR QUÉ:
  *
  *   - MARCA, LABORATORIO, FARMACIA, PRECIO: invariante 1 del modelo. *"El
  *     conocimiento antecede al mercado"* (EDM-100). Es el cambio de fondo
@@ -79,24 +119,16 @@ const FORMS_WITHOUT_PACKAGE_VOLUME = new Set(["solid-oral", "suppository", "patc
  *     identidad y por eso un genérico sin laboratorio declarado no puede
  *     compararse nunca con el mismo genérico de otra farmacia.
  *
- *   - VÍA DE ADMINISTRACIÓN: se DERIVA de la forma por tabla explícita
- *     (`ADMINISTRATION_ROUTE_BY_FORM`), así que como eje sería redundante —
- *     agregaría cero poder discriminante y duplicaría el peso de la forma.
- *     Se publica como atributo del concepto porque el EDM lo exige.
- *
- *   - UNIDAD FARMACÉUTICA: "comprimido" y "tableta" son la misma unidad escrita
- *     por dos farmacias distintas, y "Omeprazol 20 mg x 30" no la declara.
- *     Usarla como eje reintroduciría exactamente la fragmentación que v2 viene
- *     a eliminar. Se publica como atributo.
- *
  *   - CANTIDAD y VOLUMEN: pertenecen a la PRESENTACIÓN, no al concepto. Dos
  *     frascos de 60 ml y 100 ml de la misma concentración son el MISMO
  *     concepto. En v1 son el mismo `matchKey` solo si coincide el volumen — es
  *     decir, exactamente al revés.
+ *
+ *   - CLASE GRUESA (`dosageFormClass`): sería redundante con `form`, que es
+ *     estrictamente más fina. Se publica como atributo para trazabilidad.
  */
 export function conceptSignature(attributes: CanonicalAttributes): Signature {
   const tokens = attributes.activeIngredients.map((i) => i.token);
-  const ingredientSegment = tokens.length > 0 ? tokens.join("+") : UNKNOWN_SEGMENT;
 
   const concentration: ConcentrationAxis = {
     name: "conc",
@@ -119,20 +151,37 @@ export function conceptSignature(attributes: CanonicalAttributes): Signature {
   return {
     axes: [
       {
+        // Solo principios activos DEMOSTRADOS. Vacío ⇒ DESCONOCIDO, sin excusas:
+        // el motor no sabe qué molécula es y lo dice.
         name: "ing",
-        segment: ingredientSegment,
-        // Una cabecera no resuelta (`unresolved-head`) se declara CONOCIDA a
-        // propósito: es un discriminante, no un hueco. Si se declarara
-        // desconocida, "Tapsin Forte" podría subsumirse dentro del concepto
-        // "paracetamol 500 mg comprimido" por pura ausencia de evidencia — la
-        // identidad falsa que CF-SEARCH-011 §5 prohíbe explícitamente.
+        segment: tokens.length > 0 ? tokens.join("+") : UNKNOWN_SEGMENT,
         known: tokens.length > 0,
+      },
+      {
+        // Discriminante de identidad no resuelta. SIEMPRE DECLARADO —`none`
+        // cuando el concepto sí tiene principios activos demostrados— para que
+        // dos valores distintos sean INCOMPATIBLES y no meramente "distintos".
+        // Es lo que impide que "Tapsin Forte", con `ing` desconocido, se
+        // subsuma dentro de "paracetamol 500 mg comprimido".
+        name: "disc",
+        segment: attributes.unresolvedIdentityDiscriminator ?? "none",
+        known: true,
       },
       concentration,
       {
         name: "form",
-        segment: attributes.dosageForm ?? UNKNOWN_SEGMENT,
-        known: attributes.dosageForm !== null,
+        segment: attributes.canonicalDosageForm ?? UNKNOWN_SEGMENT,
+        known: attributes.canonicalDosageForm !== null,
+      },
+      {
+        name: "route",
+        segment: attributes.route ?? UNKNOWN_SEGMENT,
+        known: attributes.route !== null,
+      },
+      {
+        name: "unit",
+        segment: attributes.pharmaceuticalUnit ?? UNKNOWN_SEGMENT,
+        known: attributes.pharmaceuticalUnit !== null,
       },
     ],
   };
@@ -163,16 +212,17 @@ type ConcentrationAxis = SignatureAxis & {
  * y usarlo como eje sería un falso split garantizado — se publica como atributo.
  */
 export function presentationSignature(
-  conceptId: string,
+  conceptKey: string,
   attributes: CanonicalAttributes
 ): Signature {
   const volumeKnown =
     attributes.packageVolume !== null ||
-    (attributes.dosageForm !== null && FORMS_WITHOUT_PACKAGE_VOLUME.has(attributes.dosageForm));
+    (attributes.canonicalDosageForm !== null &&
+      FORMS_WITHOUT_PACKAGE_VOLUME.has(attributes.canonicalDosageForm));
 
   return {
     axes: [
-      { name: "concept", segment: conceptId, known: true },
+      { name: "concept", segment: conceptKey, known: true },
       {
         name: "qty",
         segment:
@@ -246,7 +296,7 @@ function volumeSegment(volume: Measurement): string {
  * cambio de datos y no de arquitectura.
  */
 export function productSignature(
-  presentationId: string,
+  presentationKey: string,
   attributes: CanonicalAttributes
 ): Signature {
   const brandToken = attributes.brand === null ? null : normalizeBrandToken(attributes.brand);
@@ -255,7 +305,7 @@ export function productSignature(
 
   return {
     axes: [
-      { name: "presentation", segment: presentationId, known: true },
+      { name: "presentation", segment: presentationKey, known: true },
       {
         name: "isp",
         segment: attributes.ispRegistration ?? UNKNOWN_SEGMENT,
@@ -293,8 +343,8 @@ export function productSignature(
 /**
  * Firma de la OBSERVACIÓN: farmacia + referencia de origen + nombre crudo.
  *
- * No incluye `productId`: una observación no deja de ser la misma observación
- * porque el motor aprenda a qué producto pertenece (ver `CanonicalOffer`).
+ * No incluye la clave de producto: una observación no deja de ser la misma
+ * observación porque el motor aprenda a qué producto pertenece (ver `CanonicalOffer`).
  * Tampoco incluye precio ni instante: el precio de una oferta cambia todos los
  * días y la oferta sigue siendo la misma.
  */
@@ -317,11 +367,11 @@ interface OfferSlot {
  * Construye el grafo canónico completo del conjunto de observaciones recibido.
  *
  * COBERTURA: toda observación de entrada produce EXACTAMENTE una
- * `CanonicalOffer` enlazada a un `productId`, un `presentationId` y un
- * `conceptId`. Ninguna se descarta, ni siquiera cuando no se pudo demostrar
- * ningún principio activo — en ese caso obtiene una identidad propia marcada
- * como no resuelta. Es la garantía que mide el Gate A de S0: el motor puede
- * declarar que no sabe, nunca puede perder una oferta.
+ * `CanonicalOffer` enlazada a una clave de producto, una de presentación y una
+ * de concepto. Ninguna se descarta, ni siquiera cuando no se pudo demostrar
+ * ningún principio activo — en ese caso obtiene un concepto propio con
+ * `identityStatus: "unresolved-ingredient"`. Es la garantía que mide el Gate A
+ * de S0: el motor puede declarar que no sabe, nunca puede perder una oferta.
  */
 export function canonicalize(offers: RawOfferInput[]): CanonicalGraph {
   const slots: OfferSlot[] = offers.map((offer, index) => ({
@@ -334,25 +384,25 @@ export function canonicalize(offers: RawOfferInput[]): CanonicalGraph {
     "C",
     slots.map((slot) => ({ signature: conceptSignature(slot.attributes), payload: slot }))
   );
-  const conceptById = indexBySlot(conceptResolution);
+  const conceptBySlot = indexBySlot(conceptResolution);
 
   const presentationResolution = resolveBySubsumption(
     "P",
     slots.map((slot) => ({
-      signature: presentationSignature(conceptById.get(slot.index)!.id, slot.attributes),
+      signature: presentationSignature(conceptBySlot.get(slot.index)!.key, slot.attributes),
       payload: slot,
     }))
   );
-  const presentationById = indexBySlot(presentationResolution);
+  const presentationBySlot = indexBySlot(presentationResolution);
 
   const productResolution = resolveBySubsumption(
     "M",
     slots.map((slot) => ({
-      signature: productSignature(presentationById.get(slot.index)!.id, slot.attributes),
+      signature: productSignature(presentationBySlot.get(slot.index)!.key, slot.attributes),
       payload: slot,
     }))
   );
-  const productById = indexBySlot(productResolution);
+  const productBySlot = indexBySlot(productResolution);
 
   const concepts = new Map<string, CanonicalMedicationConcept>();
   const presentations = new Map<string, CanonicalPresentation>();
@@ -361,31 +411,32 @@ export function canonicalize(offers: RawOfferInput[]): CanonicalGraph {
 
   for (const slot of slots) {
     const { attributes, offer } = slot;
-    const concept = conceptById.get(slot.index)!;
-    const presentation = presentationById.get(slot.index)!;
-    const product = productById.get(slot.index)!;
+    const concept = conceptBySlot.get(slot.index)!;
+    const presentation = presentationBySlot.get(slot.index)!;
+    const product = productBySlot.get(slot.index)!;
 
-    if (!concepts.has(concept.id)) {
-      concepts.set(concept.id, {
-        conceptId: concept.id,
+    if (!concepts.has(concept.key)) {
+      concepts.set(concept.key, {
+        provisionalConceptKey: concept.key,
         canonicalName: attributes.canonicalName,
         activeIngredients: attributes.activeIngredients,
+        identityStatus:
+          attributes.activeIngredients.length > 0 ? "resolved" : "unresolved-ingredient",
+        unresolvedIdentityDiscriminator: attributes.unresolvedIdentityDiscriminator,
         concentration: attributes.concentration,
-        dosageForm: attributes.dosageForm,
-        route:
-          attributes.dosageForm === null
-            ? null
-            : ADMINISTRATION_ROUTE_BY_FORM[attributes.dosageForm],
+        canonicalDosageForm: attributes.canonicalDosageForm,
+        dosageFormClass: attributes.dosageFormClass,
+        route: attributes.route,
         pharmaceuticalUnit: attributes.pharmaceuticalUnit,
         atcCode: null,
         resolution: concept.trace,
       });
     }
 
-    if (!presentations.has(presentation.id)) {
-      presentations.set(presentation.id, {
-        presentationId: presentation.id,
-        conceptId: concept.id,
+    if (!presentations.has(presentation.key)) {
+      presentations.set(presentation.key, {
+        provisionalPresentationKey: presentation.key,
+        provisionalConceptKey: concept.key,
         packageQuantity: attributes.packageQuantity,
         packageUnit: attributes.packageUnit,
         packageVolume: attributes.packageVolume,
@@ -394,11 +445,11 @@ export function canonicalize(offers: RawOfferInput[]): CanonicalGraph {
       });
     }
 
-    if (!products.has(product.id)) {
-      products.set(product.id, {
-        productId: product.id,
-        conceptId: concept.id,
-        presentationId: presentation.id,
+    if (!products.has(product.key)) {
+      products.set(product.key, {
+        provisionalProductKey: product.key,
+        provisionalConceptKey: concept.key,
+        provisionalPresentationKey: presentation.key,
         brand: attributes.brand,
         commercialVariant: attributes.commercialVariant,
         administrationTime: attributes.administrationTime,
@@ -409,10 +460,10 @@ export function canonicalize(offers: RawOfferInput[]): CanonicalGraph {
     }
 
     canonicalOffers.push({
-      offerId: canonicalId("O", offerSignature(offer)),
-      productId: product.id,
-      presentationId: presentation.id,
-      conceptId: concept.id,
+      provisionalOfferKey: provisionalKey("O", offerSignature(offer)),
+      provisionalProductKey: product.key,
+      provisionalPresentationKey: presentation.key,
+      provisionalConceptKey: concept.key,
       pharmacy: offer.pharmacy,
       sourceProductId: offer.sourceProductId ?? offer.url ?? offer.rawName,
       rawName: offer.rawName,
@@ -447,10 +498,10 @@ export function canonicalize(offers: RawOfferInput[]): CanonicalGraph {
 
 function indexBySlot(
   resolved: ResolvedItem<OfferSlot>[]
-): Map<number, { id: string; trace: ResolutionTrace }> {
-  const out = new Map<number, { id: string; trace: ResolutionTrace }>();
+): Map<number, { key: string; trace: ResolutionTrace }> {
+  const out = new Map<number, { key: string; trace: ResolutionTrace }>();
   for (const item of resolved) {
-    out.set(item.payload.index, { id: item.id, trace: item.trace });
+    out.set(item.payload.index, { key: item.key, trace: item.trace });
   }
   return out;
 }

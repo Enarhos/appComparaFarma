@@ -40,10 +40,11 @@ import {
 } from "../concentration.js";
 import { formatConcentration, readConcentrationEvidence } from "./canonicalConcentration.js";
 import {
-  ADMINISTRATION_ROUTE_BY_FORM,
+  ADMINISTRATION_ROUTE_BY_CANONICAL_FORM,
   type ActiveIngredient,
   type AdministrationRoute,
   type CanonicalAttributes,
+  type CanonicalDosageForm,
   type RawOfferInput,
 } from "./canonicalTypes.js";
 
@@ -81,10 +82,11 @@ const ION_AND_SALT_TOKENS: ReadonlySet<string> = new Set([
 ]);
 
 /**
- * Conjunto de principios activos declarados en el nombre, ordenado
- * alfabéticamente y sin duplicados.
+ * Conjunto de principios activos DEMOSTRADOS en el nombre, ordenado
+ * alfabéticamente y sin duplicados. Devuelve `[]` cuando no se puede demostrar
+ * ninguno — y `[]` es un resultado legítimo, no un fallo.
  *
- * TRES FUENTES DE EVIDENCIA, todas medidas, ninguna inventada:
+ * DOS FUENTES DE EVIDENCIA, las dos medidas, ninguna inventada:
  *
  *   1. VOCABULARIO — todo token del nombre que esté en `COMPOSITION_VOCABULARY`
  *      (CF-DATA-001: 34 moléculas derivadas de una medición reproducible sobre
@@ -100,19 +102,17 @@ const ION_AND_SALT_TOKENS: ReadonlySet<string> = new Set([
  *      separada la identidad de "Losartán 50 mg" y "Losartán 50 mg +
  *      Hidroclorotiazida 12,5 mg" (CF-SEARCH-011 §10).
  *
- *   3. CABECERA NO RESUELTA — si las dos anteriores no producen NADA, se devuelve
- *      la cabecera farmacológica (`brandHeadTokens`, el mismo token que
- *      `matchKey` usa) marcada como `unresolved-head`.
+ * NO HAY UNA TERCERA FUENTE (revisión CTO PR #159, punto 2). Hasta esta
+ * revisión, cuando las dos anteriores no producían nada esta función devolvía la
+ * CABECERA del nombre marcada como `unresolved-head` DENTRO del array de
+ * `ActiveIngredient[]`. Aunque la marca fuera honesta, el tipo afirmaba lo
+ * contrario: "Tapsin Forte" terminaba con `tapsin` tipado como principio activo,
+ * firmado como `ing=tapsin` con `known=true`, y llegando a `canonicalName`.
+ * "Tapsin Forte" no demuestra que "tapsin" sea una molécula.
  *
- * POR QUÉ LA CABECERA NO RESUELTA NO ES "INVENTAR UN PRINCIPIO ACTIVO":
- * el token NO se afirma como molécula — se marca explícitamente como no resuelto
- * y se cuenta en la métrica `identityUnknown`. Su función es ser un
- * DISCRIMINANTE HONESTO: sin él, "Tapsin Forte x 30 comprimidos" tendría un
- * conjunto de ingredientes vacío y podría absorberse dentro del concepto
- * "paracetamol 500 mg comprimido" por pura ausencia de evidencia — que es
- * exactamente la identidad falsa que CF-SEARCH-011 §5 prohíbe. Con él, Tapsin
- * Forte tiene identidad propia, las dos ofertas de Tapsin Forte de dos farmacias
- * distintas siguen agrupando entre sí, y ninguna se fusiona con un genérico.
+ * La cabecera sigue existiendo —hace falta, y por un motivo de seguridad real—
+ * pero como OTRA COSA: `readUnresolvedIdentityDiscriminator()`. Ver ahí por qué
+ * separar las dos responsabilidades no debilita la protección contra merges.
  *
  * El conjunto se ordena alfabéticamente: "Losartán + Hidroclorotiazida" y
  * "Hidroclorotiazida + Losartán" son la MISMA combinación farmacológica y no
@@ -133,26 +133,269 @@ export function readActiveIngredients(name: string): ActiveIngredient[] {
     found.set(second, "combination");
   }
 
-  // Una combinación reconocida por `combinationKey()` implica que la cabecera es
-  // el PRIMER principio activo, aunque no esté en el vocabulario: es la propia
-  // firma tipográfica de la combinación la que lo demuestra ("Losartán /
-  // Hidroclorotiazida 50/12,5 mg").
+  // La cabecera es el PRIMER principio activo de la combinación SOLO cuando la
+  // tipografía lo demuestra: cuando es el token que está inmediatamente a la
+  // IZQUIERDA del separador, espejo exacto de cómo `combinationKey()` toma el
+  // segundo por la derecha.
+  //
+  // Antes bastaba con que `combinationKey()` reconociera una combinación para
+  // que la cabecera entrara como principio activo, y eso convertía la MARCA en
+  // molécula en 31 de los 32 nombres del corpus que pasaban por esta rama:
+  // "Tapsin Duo (B) Paracetamol / Ibuprofeno" producía
+  // `ing=ibuprofeno+paracetamol+tapsin`. La combinación está entre paracetamol e
+  // ibuprofeno; "tapsin" solo estaba delante.
+  //
+  // La condición no se puede reemplazar por "no agregues nada si el vocabulario
+  // ya encontró algo": los otros 2 casos del corpus son
+  // "Tramadol Clorhidrato/Paracetamol" y "Lorsartán Potásico / Hidroclorotiazida",
+  // donde la cabecera SÍ es el primer principio activo —tramadol no está en el
+  // vocabulario, "Lorsartán" es un error tipográfico de la farmacia— y perderla
+  // dejaría `ing=paracetamol` e `ing=hidroclorotiazida`: una asociación
+  // indistinguible del monofármaco, que es un falso merge con riesgo clínico.
   if (second !== null) {
     const head = brandHeadTokens(tokens).join("");
-    if (head && !ION_AND_SALT_TOKENS.has(head) && !found.has(head)) {
+    if (
+      head &&
+      !ION_AND_SALT_TOKENS.has(head) &&
+      !found.has(head) &&
+      tokenBeforeCombination(tokens, second) === head
+    ) {
       found.set(head, "combination");
     }
   }
 
-  if (found.size > 0) {
-    return [...found.entries()]
-      .map(([token, evidence]) => ({ token, evidence }))
-      .sort((a, b) => (a.token < b.token ? -1 : a.token > b.token ? 1 : 0));
-  }
+  return [...found.entries()]
+    .map(([token, evidence]) => ({ token, evidence }))
+    .sort((a, b) => (a.token < b.token ? -1 : a.token > b.token ? 1 : 0));
+}
 
-  const head = brandHeadTokens(tokens).join("");
-  if (!head) return [];
-  return [{ token: head, evidence: "unresolved-head" }];
+/**
+ * Token que precede al segundo principio activo de una combinación, saltando lo
+ * que no puede ser una molécula: sales e iones ("Tramadol CLORHIDRATO /
+ * Paracetamol"), abreviaturas de dos letras o menos ("Zomel HP Triterapia") y
+ * cualquier token con dígitos.
+ *
+ * Devuelve `null` si no encuentra ninguno. Es la evidencia tipográfica de que un
+ * token es el PRIMER elemento de la combinación, no de que sea una molécula
+ * conocida: por eso solo se usa para CONFIRMAR la cabecera, nunca para promover
+ * un token cualquiera a principio activo.
+ */
+function tokenBeforeCombination(tokens: string[], second: string): string | null {
+  const index = tokens.indexOf(second);
+  if (index <= 0) return null;
+  for (let i = index - 1; i >= 0; i--) {
+    const token = tokens[i]!;
+    if (token.length <= 2) continue;
+    if (/\d/.test(token)) continue;
+    if (ION_AND_SALT_TOKENS.has(token)) continue;
+    return token;
+  }
+  return null;
+}
+
+/**
+ * Discriminante de identidad NO RESUELTA: la cabecera textual del nombre cuando
+ * no se pudo demostrar ningún principio activo. `null` en cualquier otro caso.
+ *
+ * QUÉ ES Y QUÉ NO ES
+ * ------------------
+ * NO es un principio activo, no se tipa como tal, no entra en `canonicalName`
+ * como composición y no cuenta en ninguna métrica de cobertura farmacológica.
+ * Es un HECHO TEXTUAL —"el nombre empieza por este token y no reconocimos
+ * ninguna molécula en él"— usado con un único fin: impedir fusiones inseguras.
+ *
+ * POR QUÉ HACE FALTA IGUAL
+ * ------------------------
+ * Sin discriminante, "Tapsin Forte x 30 comprimidos" tendría el conjunto de
+ * ingredientes vacío, su eje `ing` sería DESCONOCIDO, y una firma desconocida es
+ * subsumible: podría absorberse dentro del concepto "paracetamol 500 mg
+ * comprimido" por pura ausencia de evidencia. Eso es exactamente la identidad
+ * falsa que CF-SEARCH-011 §5 prohíbe.
+ *
+ * CÓMO SE PRESERVA LA PROTECCIÓN SIN AFIRMAR NADA
+ * -----------------------------------------------
+ * El discriminante es un EJE PROPIO de la firma del concepto (`disc`), siempre
+ * DECLARADO: vale la cabecera cuando hay una, y `none` cuando el concepto sí
+ * tiene principios activos demostrados. Dos valores declarados y distintos son
+ * incompatibles, así que:
+ *
+ *   · `disc=tapsin` vs `disc=none` → incompatible → Tapsin nunca se fusiona con
+ *     un concepto de principio activo conocido;
+ *   · `disc=tapsin` vs `disc=muxol` → incompatible → dos desconocidos distintos
+ *     tampoco se fusionan entre sí;
+ *   · `disc=tapsin` vs `disc=tapsin` → equal → las ofertas de Tapsin Forte de
+ *     dos farmacias distintas siguen agrupando.
+ *
+ * El eje `ing`, en cambio, queda honestamente en DESCONOCIDO. La seguridad la
+ * aporta `disc`; el conocimiento farmacológico lo aporta `ing`. Antes las dos
+ * cosas viajaban en el mismo eje y por eso el modelo afirmaba lo que no sabía.
+ */
+export function readUnresolvedIdentityDiscriminator(name: string): string | null {
+  if (readActiveIngredients(name).length > 0) return null;
+  const head = brandHeadTokens(normalizedWords(name)).join("");
+  return head.length > 0 ? head : null;
+}
+
+// ---------------------------------------------------------------------------
+// A-bis. FORMA FARMACÉUTICA CANÓNICA Y VÍA DE ADMINISTRACIÓN (EDM-100)
+// ---------------------------------------------------------------------------
+
+/**
+ * Token del nombre → Forma Farmacéutica canónica.
+ *
+ * El ORDEN de evaluación es el mismo que el de `DOSAGE_FORM_RULES` en v1 y por
+ * el mismo motivo medido: el envase manda sobre su contenido. "Omeprazol 20 mg
+ * x 30 cápsulas con gránulos con recubrimiento entérico" es una CÁPSULA, no un
+ * granulado; si `granulo` ganara, esa oferta dejaría de agrupar con "Omeprazol
+ * 20 mg x 30 cápsulas" de otra farmacia.
+ *
+ * Los submodificadores ("recubierto", "masticable", "dispersable",
+ * "efervescente", "blanda", "liberación prolongada") se ignoran, igual que en
+ * v1: cada farmacia los escribe o los omite a discreción y usarlos partiría
+ * artículos idénticos — la regresión que S-1 documentó con "Hyzaar …
+ * Comprimidos Recubiertos".
+ */
+const CANONICAL_FORM_RULES: ReadonlyArray<readonly [CanonicalDosageForm, ReadonlySet<string>]> = [
+  ["parche", new Set(["parche", "parches"])],
+  ["ovulo", new Set(["ovulo", "ovulos", "ovul"])],
+  ["supositorio", new Set(["supositorio", "supositorios", "suposit"])],
+  [
+    "inyectable",
+    new Set([
+      "inyectable", "inyectables", "iny", "ampolla", "ampollas", "ampolleta",
+      "ampolletas", "vial", "viales", "jeringa", "jeringas",
+    ]),
+  ],
+  [
+    "inhalador",
+    new Set([
+      "inhalador", "inhaladores", "inh", "aerosol", "inhalacion", "inhalaciones",
+      "puff", "puffs", "nebulizacion",
+    ]),
+  ],
+  ["gotas-oticas", new Set(["otico", "otica", "oticas", "oticos"])],
+  ["colirio", new Set(["colirio", "oftalmico", "oftalmica", "oftalmicas", "oft"])],
+  ["shampoo", new Set(["shampoo", "champu"])],
+  ["locion", new Set(["locion", "lociones"])],
+  ["pomada", new Set(["pomada", "pomadas", "pom", "unguento", "unguentos", "ung"])],
+  ["gel", new Set(["gel", "geles"])],
+  ["crema", new Set(["crema", "cremas", "crm"])],
+  [
+    "comprimido",
+    new Set([
+      "comprimido", "comprimidos", "comp", "comps",
+      "tableta", "tabletas", "tab", "tabs",
+      "gragea", "grageas", "pastilla", "pastillas",
+    ]),
+  ],
+  ["capsula", new Set(["capsula", "capsulas", "cap", "caps", "cps", "perla", "perlas"])],
+  [
+    "liquido-oral",
+    new Set([
+      "jarabe", "jbe", "suspension", "suspensiones", "susp", "sus",
+      "solucion", "soluciones", "sol", "elixir", "emulsion", "liq",
+      "gota", "gotas", "gts",
+      "polvo", "polvos", "sobre", "sobres", "sachet", "sachets",
+      "granulado", "granulados", "granulo", "granulos",
+    ]),
+  ],
+];
+
+/** Cantidad y forma pegadas en un solo token ("x80com", "100comp", "30caps"). */
+const GLUED_COMPRIMIDO_TOKEN = /^x?\d+(com|comp|comps|tab|tabs)$/;
+const GLUED_CAPSULA_TOKEN = /^x?\d+(cap|caps|cps)$/;
+
+/**
+ * Forma Farmacéutica canónica declarada en el nombre, o `null`.
+ *
+ * `null` NO significa "incompatible": una oferta que no declara forma es una
+ * lectura INCOMPLETA y el eje queda desconocido, así que puede subsumirse bajo
+ * una firma completa compatible. Es la misma política que v1 aplica con
+ * `dosageFormClass`, con el tercer estado explícito que v1 no tiene.
+ */
+export function readCanonicalDosageForm(name: string): CanonicalDosageForm | null {
+  const tokens = normalizedWords(withoutFormAnnotations(name));
+  const tokenSet = new Set(tokens);
+  for (const [form, words] of CANONICAL_FORM_RULES) {
+    for (const word of words) {
+      if (tokenSet.has(word)) return form;
+    }
+  }
+  if (tokens.some((token) => GLUED_COMPRIMIDO_TOKEN.test(token))) return "comprimido";
+  if (tokens.some((token) => GLUED_CAPSULA_TOKEN.test(token))) return "capsula";
+  return null;
+}
+
+/**
+ * Anotaciones entre paréntesis: las farmacias meten ahí el laboratorio y
+ * avisos ("(Mintlab)", "(Vence 30-07-2026)"), no la forma. Se recorta por el
+ * mismo motivo por el que `dosageFormClass` usa `withoutAnnotations`, pero con
+ * una implementación local: la de v1 es privada de `productIdentity.ts` y S0 no
+ * modifica v1 (CF-SEARCH-011 §4).
+ */
+function withoutFormAnnotations(name: string): string {
+  return name.replace(/\([^)]*\)/g, " ");
+}
+
+/**
+ * Vocabulario de vía DECLARADA en el texto. Solo entradas inequívocas: "oral"
+ * aparece en "solución oral" y en "polvo para suspensión oral", siempre con el
+ * mismo significado.
+ */
+const DECLARED_ROUTE_BY_TOKEN: ReadonlyMap<string, AdministrationRoute> = new Map([
+  ["oral", "oral"], ["orales", "oral"], ["bucal", "oral"], ["sublingual", "oral"],
+  ["topico", "topical"], ["topica", "topical"], ["topicas", "topical"], ["topicos", "topical"],
+  ["dermico", "topical"], ["dermica", "topical"], ["cutaneo", "topical"], ["cutanea", "topical"],
+  ["intramuscular", "parenteral"], ["endovenoso", "parenteral"], ["endovenosa", "parenteral"],
+  ["intravenoso", "parenteral"], ["intravenosa", "parenteral"], ["subcutanea", "parenteral"],
+  ["subcutaneo", "parenteral"], ["parenteral", "parenteral"],
+  ["inhalatoria", "inhalation"], ["inhalatorio", "inhalation"],
+  ["oftalmico", "ophthalmic"], ["oftalmica", "ophthalmic"],
+  ["otico", "otic"], ["otica", "otic"],
+  ["nasal", "nasal"], ["nasales", "nasal"],
+  ["rectal", "rectal"], ["rectales", "rectal"],
+  ["vaginal", "vaginal"], ["vaginales", "vaginal"],
+]);
+
+/**
+ * Vía de Administración (EDM-100, dimensión 4).
+ *
+ * POR QUÉ ES UN EJE Y NO UN ADORNO — respuesta al punto 1 de la revisión CTO.
+ *
+ * Sobre la clase gruesa de v1, la vía era una FUNCIÓN TOTAL de la forma
+ * (`ADMINISTRATION_ROUTE_BY_FORM` mapea las 8 clases a exactamente una vía), y
+ * por lo tanto añadirla a la firma habría tenido cero poder discriminante: la
+ * partición de conceptos habría sido idéntica. Ese era el argumento original, y
+ * era formalmente correcto PARA ESE MODELO.
+ *
+ * No es un contrato de dominio válido, y hay dos razones medibles:
+ *
+ *   1. Una misma forma SÍ admite más de una vía en la realidad. El propio EDM
+ *      enumera "Intravenosa" e "Intramuscular" como vías distintas y las dos se
+ *      administran por ampolla; una "solución" puede ser oral, tópica u
+ *      oftálmica.
+ *   2. La derivación de v1 produce afirmaciones FALSAS que solo se ven al mirar
+ *      la vía: un óvulo no se administra por vía rectal, y unas gotas óticas no
+ *      se administran por vía oftálmica. `CanonicalDosageForm` separa esas
+ *      formas y la tabla las manda a `vaginal` y `otic`.
+ *
+ * PRECEDENCIA — la vía DECLARADA en el texto gana sobre la derivada, pero solo
+ * se consulta cuando la forma no permite derivarla. Es la dirección
+ * conservadora: convertir un eje desconocido en conocido solo puede AÑADIR
+ * incompatibilidades (más splits), nunca habilitar una fusión nueva. Sustituir
+ * una vía ya derivada por una declarada sí podría hacerlo, y no hay ningún caso
+ * en el corpus congelado que lo justifique.
+ */
+export function readAdministrationRoute(
+  name: string,
+  form: CanonicalDosageForm | null
+): AdministrationRoute | null {
+  if (form !== null) return ADMINISTRATION_ROUTE_BY_CANONICAL_FORM[form];
+  for (const token of normalizedWords(withoutFormAnnotations(name))) {
+    const route = DECLARED_ROUTE_BY_TOKEN.get(token);
+    if (route) return route;
+  }
+  return null;
 }
 
 // ---------------------------------------------------------------------------
@@ -199,14 +442,27 @@ function volumeBaseValue(measurement: Measurement): number {
 }
 
 /**
- * Sustantivos de unidad farmacéutica reconocidos, mapeados a su forma singular
- * canónica. Es un vocabulario de LECTURA, no un eje de identidad: la unidad
- * farmacéutica NO entra en la firma del concepto ni en la de la presentación.
+ * Sustantivos de UNIDAD FARMACÉUTICA (EDM-100, dimensión 5) mapeados a su forma
+ * singular canónica.
  *
- * Motivo explícito: "comprimido" y "tableta" son la misma unidad escrita por dos
- * farmacias distintas, y usarla como eje reintroduciría exactamente la clase de
- * fragmentación que v2 viene a eliminar. Se publica como ATRIBUTO del concepto
- * (el EDM la exige) y se usa para construir `canonicalName`.
+ * SÍ ES UN EJE DE IDENTIDAD desde la revisión del PR #159. El argumento original
+ * para excluirla era que "comprimido" y "tableta" son la misma unidad escrita
+ * por dos farmacias distintas y que "Omeprazol 20 mg x 30" no la declara, así
+ * que usarla como eje reintroduciría fragmentación. Las dos observaciones son
+ * ciertas y ninguna de las dos sostiene la conclusión:
+ *
+ *   · la sinonimia la resuelve ESTA TABLA — `tableta`, `tab`, `gragea` y
+ *     `pastilla` ya normalizan a `comprimido`, y `perla` a `capsula`; el eje
+ *     compara unidades canónicas, no texto crudo;
+ *   · la ausencia la resuelve el TERCER ESTADO de la firma — un nombre que no
+ *     declara unidad tiene el eje DESCONOCIDO, y un eje desconocido es
+ *     subsumible bajo la única firma completa compatible. No parte nada.
+ *
+ * El argumento excluía la dimensión razonando con la aritmética de dos estados
+ * de v1, dentro de un motor que tiene tres. Es la dimensión que separa un sobre
+ * de polvo de un frasco de jarabe cuando la forma canónica (`liquido-oral`) no
+ * puede — y es justamente para eso que el EDM la enumera aparte de la Forma
+ * Farmacéutica.
  */
 const PHARMACEUTICAL_UNIT_BY_TOKEN: ReadonlyMap<string, string> = new Map([
   ["comprimido", "comprimido"], ["comprimidos", "comprimido"],
@@ -313,11 +569,20 @@ export function readAdministrationTime(name: string): "day" | "night" | null {
  * y de ahí salen el título de la tarjeta y la parte legible del slug — por eso
  * el título cambia según qué farmacia respondió. Acá no depende de ninguna.
  *
+ * EL NOMBRE NUNCA PRESENTA UNA CABECERA NO RESUELTA COMO PRINCIPIO ACTIVO
+ * (revisión CTO PR #159, punto 2). El discriminante no es un ingrediente y por
+ * eso no se concatena en la posición de la composición: cuando no hay ningún
+ * principio activo demostrado, la cabecera se usa como NOMBRE COMERCIAL —que es
+ * lo único que la evidencia respalda— y el concepto lo declara aparte con
+ * `identityStatus: "unresolved-ingredient"`. "Tapsin Forte x 30 comprimidos"
+ * produce "Tapsin Forte 500 mg comprimido", no "tapsin 500 mg comprimido".
+ *
  * El nombre crudo de cada fuente se conserva íntegro en `CanonicalOffer.rawName`
  * (linaje EDM-500) y se sigue mostrando por oferta.
  */
 export function buildCanonicalName(parts: {
   activeIngredients: ActiveIngredient[];
+  unresolvedIdentityDiscriminator: string | null;
   brand: string | null;
   commercialVariant: string | null;
   concentration: string | null;
@@ -326,10 +591,7 @@ export function buildCanonicalName(parts: {
   pharmaceuticalUnit: string | null;
   packageVolume: Measurement | null;
 }): string {
-  const ingredients = parts.activeIngredients
-    .filter((i) => i.evidence !== "unresolved-head")
-    .map((i) => i.token)
-    .join(" + ");
+  const ingredients = parts.activeIngredients.map((i) => i.token).join(" + ");
   const head =
     parts.brand !== null
       ? ingredients.length > 0
@@ -337,7 +599,7 @@ export function buildCanonicalName(parts: {
         : parts.brand
       : ingredients.length > 0
         ? ingredients
-        : (parts.activeIngredients[0]?.token ?? "");
+        : capitalize(parts.unresolvedIdentityDiscriminator ?? "");
 
   const quantity =
     parts.packageQuantity !== null
@@ -350,6 +612,14 @@ export function buildCanonicalName(parts: {
   return [head, parts.commercialVariant, parts.concentration, parts.dosageForm, quantity, volume]
     .filter((segment): segment is string => segment !== null && segment.length > 0)
     .join(" ");
+}
+
+/**
+ * Mayúscula inicial. Un discriminante no resuelto se muestra como nombre
+ * comercial, no como token de composición en minúscula.
+ */
+function capitalize(text: string): string {
+  return text.length === 0 ? text : text[0]!.toUpperCase() + text.slice(1);
 }
 
 // ---------------------------------------------------------------------------
@@ -373,10 +643,11 @@ export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
   const name = offer.rawName;
 
   const activeIngredients = readActiveIngredients(name);
+  const unresolvedIdentityDiscriminator = readUnresolvedIdentityDiscriminator(name);
   const concentration = readConcentrationEvidence(name);
-  const dosageForm = dosageFormClass(name);
-  const route: AdministrationRoute | null =
-    dosageForm === null ? null : ADMINISTRATION_ROUTE_BY_FORM[dosageForm];
+  const canonicalDosageForm: CanonicalDosageForm | null = readCanonicalDosageForm(name);
+  const coarseDosageForm = dosageFormClass(name);
+  const route: AdministrationRoute | null = readAdministrationRoute(name, canonicalDosageForm);
   const pharmaceuticalUnit = readPharmaceuticalUnit(name);
   const packageQuantity = unitCountKey(name);
   const packageVolume = readPackageVolume(name);
@@ -398,10 +669,11 @@ export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
 
   const canonicalName = buildCanonicalName({
     activeIngredients,
+    unresolvedIdentityDiscriminator,
     brand,
     commercialVariant,
     concentration: formatConcentration(concentration),
-    dosageForm,
+    dosageForm: canonicalDosageForm,
     packageQuantity,
     pharmaceuticalUnit,
     packageVolume,
@@ -409,8 +681,10 @@ export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
 
   return {
     activeIngredients,
+    unresolvedIdentityDiscriminator,
     concentration,
-    dosageForm,
+    canonicalDosageForm,
+    dosageFormClass: coarseDosageForm,
     route,
     pharmaceuticalUnit,
     packageQuantity,
@@ -425,8 +699,10 @@ export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
     canonicalName,
     inferredFields: {
       activeIngredients: activeIngredients.map((i) => `${i.token}:${i.evidence}`).join(",") || null,
+      unresolvedIdentityDiscriminator,
       concentration: formatConcentration(concentration),
-      dosageForm,
+      canonicalDosageForm,
+      dosageFormClass: coarseDosageForm,
       route,
       pharmaceuticalUnit,
       packageQuantity: packageQuantity === null ? null : String(packageQuantity),
