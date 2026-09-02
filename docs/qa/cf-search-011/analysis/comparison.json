@@ -1,0 +1,545 @@
+{
+  "corpusQueries": [
+    {
+      "id": "ambroxol-30mg-5ml",
+      "query": "ambroxol 30mg/5ml",
+      "capturedAt": "2026-09-02T00:55:59.238Z"
+    },
+    {
+      "id": "ambroxol-30mg",
+      "query": "ambroxol 30mg",
+      "capturedAt": "2026-09-02T00:55:57.546Z"
+    },
+    {
+      "id": "ambroxol-jarabe-100ml",
+      "query": "ambroxol 30mg/5ml jarabe 100ml",
+      "capturedAt": "2026-09-02T00:57:25.231Z"
+    },
+    {
+      "id": "ambroxol",
+      "query": "ambroxol",
+      "capturedAt": "2026-09-02T00:55:44.223Z"
+    },
+    {
+      "id": "amoxicilina-500mg",
+      "query": "amoxicilina 500mg",
+      "capturedAt": "2026-09-02T00:56:45.480Z"
+    },
+    {
+      "id": "cetirizina-10mg",
+      "query": "cetirizina 10mg",
+      "capturedAt": "2026-09-02T00:57:03.156Z"
+    },
+    {
+      "id": "diclofenaco-50mg",
+      "query": "diclofenaco 50mg",
+      "capturedAt": "2026-09-02T00:56:54.192Z"
+    },
+    {
+      "id": "ibuprofeno-400mg",
+      "query": "ibuprofeno 400mg",
+      "capturedAt": "2026-09-02T00:56:20.001Z"
+    },
+    {
+      "id": "ibuprofeno",
+      "query": "ibuprofeno",
+      "capturedAt": "2026-09-02T00:57:28.329Z"
+    },
+    {
+      "id": "losartan-50mg",
+      "query": "losartan 50mg",
+      "capturedAt": "2026-09-02T00:56:29.207Z"
+    },
+    {
+      "id": "losartan",
+      "query": "losartan",
+      "capturedAt": "2026-09-02T00:57:31.235Z"
+    },
+    {
+      "id": "omeprazol-20mg",
+      "query": "omeprazol 20mg",
+      "capturedAt": "2026-09-02T00:56:37.754Z"
+    },
+    {
+      "id": "omeprazol",
+      "query": "omeprazol",
+      "capturedAt": "2026-09-02T00:57:29.767Z"
+    },
+    {
+      "id": "paracetamol-500mg",
+      "query": "paracetamol 500mg",
+      "capturedAt": "2026-09-02T00:56:10.518Z"
+    },
+    {
+      "id": "paracetamol",
+      "query": "paracetamol",
+      "capturedAt": "2026-09-02T00:57:26.854Z"
+    },
+    {
+      "id": "tapsin",
+      "query": "tapsin",
+      "capturedAt": "2026-09-02T00:56:00.848Z"
+    }
+  ],
+  "comparableFragmentation": {
+    "denominatorPresentations": 414,
+    "v1PresentationsSplitAcrossCards": 298,
+    "v1FragmentationRate": 0.7198,
+    "v2PresentationsSplitAcrossCards": 149,
+    "v2FragmentationRate": 0.3599,
+    "v1CardsPerV2Concept": 4.78,
+    "v2CardsPerV2Concept": 2.49
+  },
+  "comparedPairs": 94869,
+  "classes": {
+    "UNCHANGED": 94062,
+    "MERGE_FIXED": 748,
+    "SPLIT_FIXED": 52,
+    "SPLIT_LOST": 0,
+    "MERGE_REGRESSION": 7,
+    "IDENTITY_UNKNOWN": 360
+  },
+  "disagreementRate": 0.008506,
+  "samples": {
+    "MERGE_FIXED": [
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "ecofarmacias",
+          "name": "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "sermecoop",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "ahumada",
+          "name": "Ambroxol 30mg./5ml. Jarabe Fco. 100ml"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Adulto 30mg/5ml jarabe 100 ml."
+        },
+        "b": {
+          "pharmacy": "ahumada",
+          "name": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "salcobrand",
+          "name": "Muxol Ambroxol 20 Comprimidos"
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Muxol Ambroxol 30 mg 20 Comprimidos"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml."
+        },
+        "b": {
+          "pharmacy": "ahumada",
+          "name": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Broncot 7,5mg/ml gotas x 30 ml."
+        },
+        "b": {
+          "pharmacy": "easyfarma",
+          "name": "Broncot Gotas 7,5 mg/ml x..."
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Broncot 7,5mg/ml gotas x 30 ml."
+        },
+        "b": {
+          "pharmacy": "ahumada",
+          "name": "Broncot 7.5 mg/ml Gotas Fco. 30ml"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "easyfarma",
+          "name": "Broncot Gotas 7,5 mg/ml x..."
+        },
+        "b": {
+          "pharmacy": "ahumada",
+          "name": "Broncot 7.5 mg/ml Gotas Fco. 30ml"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "salcobrand",
+          "name": "Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml"
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Broncot Ambroxol 7,5 mg/mL Gotas 30 mL"
+        }
+      },
+      {
+        "query": "ambroxol 30mg",
+        "a": {
+          "pharmacy": "cruz-verde",
+          "name": "Muxol Ambroxol 30 mg 20 Comprimidos"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Muxol Ambroxol 20 Comprimidos"
+        }
+      },
+      {
+        "query": "ambroxol 30mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml."
+        },
+        "b": {
+          "pharmacy": "ahumada",
+          "name": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe"
+        }
+      },
+      {
+        "query": "ambroxol 30mg",
+        "a": {
+          "pharmacy": "ecofarmacias",
+          "name": "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+        }
+      },
+      {
+        "query": "ambroxol 30mg",
+        "a": {
+          "pharmacy": "sermecoop",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+        }
+      },
+      {
+        "query": "ambroxol 30mg",
+        "a": {
+          "pharmacy": "ahumada",
+          "name": "Ambroxol 30mg./5ml. Jarabe Fco. 100ml"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Ambroxol 30mg/5ml Jarabe 100ml"
+        }
+      }
+    ],
+    "SPLIT_FIXED": [
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml."
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL"
+        }
+      },
+      {
+        "query": "ambroxol 30mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml."
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml jarabe 100ml",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml."
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL"
+        }
+      },
+      {
+        "query": "ambroxol",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Tocalm Infantil 15mg/5ml jarabe 100 ml."
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Amoval Duo 400mg/5ml solucion oral 70ml"
+        },
+        "b": {
+          "pharmacy": "sermecoop",
+          "name": "Amoval Duo 400 (amoxicilina) 400mg/5ml Susp Oral 70ml"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Amoval 250mg/5ml jarabe 100ml"
+        },
+        "b": {
+          "pharmacy": "sermecoop",
+          "name": "Amoval (amoxicilina) 250mg/5ml Suspensión Oral 100ml"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Amoval 1 gramo x 14 comprimidos dispersables."
+        },
+        "b": {
+          "pharmacy": "ecofarmacias",
+          "name": "Amoval Amoxicilina 1gr 14 Comprimidos Dispersables"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Amoval 1 gramo x 14 comprimidos dispersables."
+        },
+        "b": {
+          "pharmacy": "sermecoop",
+          "name": "Amoval (amoxicilina) 1gr 14 Comprimidos Dispersable"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "ecofarmacias",
+          "name": "Amoval Amoxicilina 250 mg/5ml Suspensión x 100 mL DESCUENTO"
+        },
+        "b": {
+          "pharmacy": "ahumada",
+          "name": "Amoval 250 mg/5 mL x 100 mL Polvo Para Suspensión Oral"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "sermecoop",
+          "name": "Amoval Duo (amoxicilina) 1000mg/5ml Jarabe X50 Ml"
+        },
+        "b": {
+          "pharmacy": "ahumada",
+          "name": "Amoval Duo 1000 mg/5 mL x 50 mL Polvo Para Suspensión Oral Con Solvente"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "ahumada",
+          "name": "Amobiotic 1 g x 14 Comprimidos Dispersables"
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Amobiotic Amoxicilina 1000 mg 14 Comprimidos"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Amoval 1 gramo x 20 comprimidos dispersables."
+        },
+        "b": {
+          "pharmacy": "ecofarmacias",
+          "name": "Amoval Amoxicilina 1gr 20 Comprimidos"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Amoval 1 gramo x 20 comprimidos dispersables."
+        },
+        "b": {
+          "pharmacy": "sermecoop",
+          "name": "Amoval (amoxicilina) 1gr 20 Comprimidos Dispersable"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
+          "pharmacy": "araucomed",
+          "name": "Clavinex Duo Forte 800/57 suspensión oral 70 ml."
+        },
+        "b": {
+          "pharmacy": "ecofarmacias",
+          "name": "Clavinex Duo Forte Amoxicilina 70ml susp oral DESCUENTO"
+        }
+      },
+      {
+        "query": "cetirizina 10mg",
+        "a": {
+          "pharmacy": "easyfarma",
+          "name": "Coolips 10 mg x 30 Comprimidos"
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Coolips Cetirizina 10 mg 30 Comprimidos"
+        }
+      }
+    ],
+    "SPLIT_LOST": [],
+    "MERGE_REGRESSION": [
+      {
+        "query": "ambroxol 30mg/5ml",
+        "a": {
+          "pharmacy": "ecofarmacias",
+          "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)"
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL"
+        }
+      },
+      {
+        "query": "ambroxol 30mg",
+        "a": {
+          "pharmacy": "ecofarmacias",
+          "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)"
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL"
+        }
+      },
+      {
+        "query": "ambroxol 30mg/5ml jarabe 100ml",
+        "a": {
+          "pharmacy": "ecofarmacias",
+          "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)"
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL"
+        }
+      },
+      {
+        "query": "ambroxol",
+        "a": {
+          "pharmacy": "ecofarmacias",
+          "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)"
+        },
+        "b": {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL"
+        }
+      },
+      {
+        "query": "paracetamol 500mg",
+        "a": {
+          "pharmacy": "cruz-verde",
+          "name": "Paracetamol 100 mg Gotas 15 mL"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Paracetamol Gotas 15ml"
+        }
+      },
+      {
+        "query": "paracetamol",
+        "a": {
+          "pharmacy": "cruz-verde",
+          "name": "Paracetamol 100 mg Gotas 15 mL"
+        },
+        "b": {
+          "pharmacy": "salcobrand",
+          "name": "Paracetamol Gotas 15ml"
+        }
+      },
+      {
+        "query": "tapsin",
+        "a": {
+          "pharmacy": "cruz-verde",
+          "name": "Tapsin  Infantil Suspensión  100Ml"
+        },
+        "b": {
+          "pharmacy": "ahumada",
+          "name": "Tapsin Infantil 120 mg/ 5 mL Suspensión Oral Sabor Frambuesa 100 mL"
+        }
+      }
+    ]
+  },
+  "unlinkedOffers": [],
+  "gates": {
+    "gateA": {
+      "name": "Offer Coverage",
+      "value": 1,
+      "formatted": "1633/1633 = 100.00 %",
+      "threshold": ">= 0.995",
+      "pass": true
+    },
+    "gateB": {
+      "name": "SPLIT_LOST",
+      "value": 0,
+      "formatted": "0 ofertas sin enlace canonico correcto",
+      "threshold": "= 0",
+      "pass": true,
+      "pairwiseFalseMergeSense": 0
+    },
+    "gateC": {
+      "name": "False Merge Rate",
+      "value": 0,
+      "formatted": "0/533 pares intra-producto",
+      "threshold": "= 0",
+      "pass": true
+    }
+  },
+  "finalVerdict": "PASS_S0"
+}

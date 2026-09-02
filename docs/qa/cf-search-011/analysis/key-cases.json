@@ -1,0 +1,1613 @@
+{
+  "losartan-50mg-x30": {
+    "offers": 52,
+    "v1Cards": 44,
+    "v1PresentationKeys": 22,
+    "v2Concepts": 3,
+    "v2Presentations": 3,
+    "v2Products": 16,
+    "pharmacies": 6,
+    "productBreakdown": [
+      {
+        "productId": "CFM-M-bgud4os4r5y07xkrc7bi38iki",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 12,
+        "pharmacies": [
+          "ecofarmacias",
+          "ahumada",
+          "farmex",
+          "araucomed",
+          "salcobrand",
+          "cruz-verde"
+        ],
+        "names": [
+          "Losartan 50 mg x 30 comprimidos (LCH) DESCUENTO",
+          "Losartan Potasico 50 mg x 30 Comprimidos Recubiertos",
+          "Losartan Potásico 50 mg x 30 comprimidos",
+          "Losartan Potasico 50 mg x 30 comprimidos. (Chile)",
+          "Losartan (B) 50mg 30 Comprimidos Recubiertos",
+          "Losartan Potasico 50 mg 30 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-1rfv678hki788l2s6rgys85b2",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "offers": 6,
+        "pharmacies": [
+          "ecofarmacias",
+          "ahumada"
+        ],
+        "names": [
+          "Losartan Potásico + Hidroclorotiazida 50 mg/12.5 mg x 30 comp.",
+          "Losartan/Hidroclorotiazida 50 mg/12.5 mg x 30 Comprimidos Recubiertos ASCEND",
+          "Losartan 50 mg / Hidroclorotiazida 12.5 mg x 30 Comp."
+        ]
+      },
+      {
+        "productId": "CFM-M-0dm3drhaaqucj87owgwo8n7qv",
+        "brand": "Cozaar",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "cruz-verde",
+          "salcobrand"
+        ],
+        "names": [
+          "Cozaar Losartan Potasico 50 mg 30 Comprimidos",
+          "Cozaar (R) Losartán 50mg 30 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-2krp52mswswpswmt5mgy3n17l",
+        "brand": "Corodin",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "salcobrand",
+          "cruz-verde"
+        ],
+        "names": [
+          "Corodin (B) Losartán Potásico 50mg 30 Comprimidos Recubiertos",
+          "Corodin Losartan Potasico 50 mg 30 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-0wl23ftdmf440wyyl8e6zeurq",
+        "brand": "Losapres",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "salcobrand",
+          "cruz-verde"
+        ],
+        "names": [
+          "Losapres (B) Losartán 50mg 30 Comprimidos Recubiertos",
+          "Losapres Losartán Potásico 50 mg 30 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-7fi86x5pc7c4jpattn1o75j6g",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Hospifarma",
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Losartan Potasico 50 mg x30com. (Hospifarma)"
+        ]
+      },
+      {
+        "productId": "CFM-M-5exdt6hncgkrlmp23p7yvd9u7",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Opko",
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Losartan Potasico 50 mg x 30 comprimidos. (Opko)"
+        ]
+      },
+      {
+        "productId": "CFM-M-3hqp91z2fx9xph530i4mfl2mt",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Mintlab",
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Losartan Potasico 50 mg x30com. (Mintlab)"
+        ]
+      },
+      {
+        "productId": "CFM-M-dfa4lzd70s93xqs5tsksmz9qo",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Seven Pharma",
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Losartan Potasico 50 mg x 30 comprimidos. (Seven Pharma)"
+        ]
+      },
+      {
+        "productId": "CFM-M-aryj6ptx025v8a04ez61j80n6",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Ascend",
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Losartan Potasico 50 mg x 30 comprimidos. (Ascend)"
+        ]
+      },
+      {
+        "productId": "CFM-M-d3o1vfhzgqvm1nub3fcppqnfc",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Eurofarma",
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Losartan Potasico 50 mg x30com. (Eurofarma)"
+        ]
+      },
+      {
+        "productId": "CFM-M-8vqzvpcrp7wxt6rq1xrume04e",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Ascend",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "farmex"
+        ],
+        "names": [
+          "Losartan Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-a4wsj2g3xngevhkz72ne5gnmr",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Opko",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "farmex"
+        ],
+        "names": [
+          "Losartán Potásico / Hidroclorotiazida 50 mg / 12,5 mg x 30 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-35oqxwnj5tp0c43gfmawyp8q9",
+        "brand": "Lopren",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Lopren Losartan Potasico 50 mg 30 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-d0wfu2fptebmnnex831jggnxc",
+        "brand": "SimpertenD",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Simperten-D Losartan 50 mg 30 Comprimidos Recubierto"
+        ]
+      },
+      {
+        "productId": "CFM-M-82t85zky79k6m1uf7lv5waz7i",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=hidroclorotiazida+hyzaar+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-7cqb5gck6ebybebyfbj2ocogy|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Hyzaar Losartan / Hidroclorotiazida 50 mg / 12,5 mg 30 Comprimidos"
+        ]
+      }
+    ]
+  },
+  "ambroxol": {
+    "offers": 154,
+    "v1Cards": 142,
+    "v1PresentationKeys": 34,
+    "v2Concepts": 9,
+    "v2Presentations": 13,
+    "v2Products": 33,
+    "pharmacies": 9,
+    "productBreakdown": [
+      {
+        "productId": "CFM-M-c8wrzukua8vdgv5pun7fmgt0c",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 16,
+        "pharmacies": [
+          "ecofarmacias",
+          "sermecoop",
+          "ahumada",
+          "salcobrand"
+        ],
+        "names": [
+          "Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO",
+          "Ambroxol 30mg/5ml Jarabe 100ml",
+          "Ambroxol 30mg./5ml. Jarabe Fco. 100ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-1yks35toa7zj5dsbqtszocyv6",
+        "brand": "Muxol",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:mass:30mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-edv9rq7avy4l4obla878xhbrm|qty=20|vol=none",
+        "offers": 8,
+        "pharmacies": [
+          "salcobrand",
+          "cruz-verde"
+        ],
+        "names": [
+          "Muxol Ambroxol 20 Comprimidos",
+          "Muxol Ambroxol 30 mg 20 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-erxl6zgxcyhuu18chjzrkqrd5",
+        "brand": "Broncot",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:7.5mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-87ngc3lwbnz83ogeoakpp6ktt|qty=?|vol=30ml",
+        "offers": 8,
+        "pharmacies": [
+          "salcobrand",
+          "cruz-verde"
+        ],
+        "names": [
+          "Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml",
+          "Broncot Ambroxol 7,5 mg/mL Gotas 30 mL"
+        ]
+      },
+      {
+        "productId": "CFM-M-cxkehjsjzexcf9ggq8ji8fkzv",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:3mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-5f6gp3nlqjpip7xexm12gzyge|qty=?|vol=100ml",
+        "offers": 6,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Ambroxol 15 mg/5mL Jarabe 100 mL"
+        ]
+      },
+      {
+        "productId": "CFM-M-c78sdwj7knskk27rk9cxcm1q4",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Ascend",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)"
+        ]
+      },
+      {
+        "productId": "CFM-M-6k29h6ndr85xhlnor3g2bsep0",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Andrómaco",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)"
+        ]
+      },
+      {
+        "productId": "CFM-M-3tirk0bnu028tei9iu6j079y6",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Seven Pharma",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)"
+        ]
+      },
+      {
+        "productId": "CFM-M-2forbmgc25ldsrc79knn1hrvq",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Hospifarma",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)"
+        ]
+      },
+      {
+        "productId": "CFM-M-b21lzq3vy2ra7fwq0s4z8siy3",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Mintlab",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)"
+        ]
+      },
+      {
+        "productId": "CFM-M-8dc6z4scpnj9q42c3waoj3mu9",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Opko",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)"
+        ]
+      },
+      {
+        "productId": "CFM-M-bgahslxz82gts5g5wmykgpxye",
+        "brand": "Pazbronq",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias"
+        ],
+        "names": [
+          "Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-6j8m7cg91lm7tv04vzl6cja0w",
+        "brand": "Mintamox",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL"
+        ]
+      },
+      {
+        "productId": "CFM-M-bvyogfni45f0ykshaa6d1aha8",
+        "brand": "Muxol",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=?",
+        "offers": 4,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-5zlvm6ars7vo2hznbhgd41oki",
+        "brand": "Muxol",
+        "variant": null,
+        "manufacturer": "Eurolab",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "farmex"
+        ],
+        "names": [
+          "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL"
+        ]
+      },
+      {
+        "productId": "CFM-M-91wmfjccu3tyhjx0k9pb8ckg1",
+        "brand": "Broncot",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=120ml",
+        "offers": 4,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Broncot Ambroxol 30mg/5ml 120ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-af1kp3i3bgg13wk0fd4eyq8a7",
+        "brand": "Tocalm",
+        "variant": "infantil",
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:3mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-5f6gp3nlqjpip7xexm12gzyge|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL"
+        ]
+      },
+      {
+        "productId": "CFM-M-4nxt8l175u4p2sutap43kqdx5",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Eurofarma",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:3mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-5f6gp3nlqjpip7xexm12gzyge|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)"
+        ]
+      },
+      {
+        "productId": "CFM-M-2y67rmv62cw2g17dflkdxkyd7",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:mass:30mg|form=?",
+        "presentationSignature": "concept=CFM-C-6wjej0obo7u6kl6v2393at1lp|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias"
+        ],
+        "names": [
+          "Ambroxol clorhidrato 30mg 100ml Ascend DESCUENTO"
+        ]
+      },
+      {
+        "productId": "CFM-M-8bvd62qdlcg7pdx0t0wy2gdkr",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Ascend",
+        "conceptSignature": "ing=ambroxol|conc=conc:ratio:3mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-5f6gp3nlqjpip7xexm12gzyge|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)"
+        ]
+      },
+      {
+        "productId": "CFM-M-29ms38cuna72ndwhe8rm5ey5d",
+        "brand": null,
+        "variant": "infantil",
+        "manufacturer": null,
+        "conceptSignature": "ing=ambroxol|conc=conc:?|form=?",
+        "presentationSignature": "concept=CFM-C-67ol0vro6xweabwt0izarde3h|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias"
+        ],
+        "names": [
+          "Ambroxol Infantil 100ml (Andromaco)"
+        ]
+      }
+    ]
+  },
+  "tapsin": {
+    "offers": 174,
+    "v1Cards": 163,
+    "v1PresentationKeys": 113,
+    "v2Concepts": 30,
+    "v2Presentations": 54,
+    "v2Products": 109,
+    "pharmacies": 8,
+    "productBreakdown": [
+      {
+        "productId": "CFM-M-ea44iw68uvhgar3vosar1l3il",
+        "brand": "Tapsin",
+        "variant": "puro",
+        "manufacturer": null,
+        "conceptSignature": "ing=paracetamol|conc=conc:mass:500mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-4cq5syvx92r4awzhdy9nk7b03|qty=16|vol=none",
+        "offers": 6,
+        "pharmacies": [
+          "cruz-verde",
+          "ecofarmacias"
+        ],
+        "names": [
+          "Tapsin Puro Sin Cafeina Paracetamol 500 mg 16 Comprimidos",
+          "Tapsin Puro Sin Cafeina Paracetamol 500 mg x 16 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-43gp3bfjyijaaibovkefh5m47",
+        "brand": null,
+        "variant": "duo",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=tapsin|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-59ew0lfqswh7d64yft50r9ro3|qty=12|vol=none",
+        "offers": 5,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Tapsin Duo x 12 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-2ni1q204h0vce8fma36vljeny",
+        "brand": "Tapsin",
+        "variant": "duo",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "offers": 5,
+        "pharmacies": [
+          "dr-simi"
+        ],
+        "names": [
+          "Tapsin Duo paracetamol 300 mg ibuprofeno 200 mg 12 comprimidos recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-6h1gv04mtfnmdnpth7r1vpydx",
+        "brand": "Tapsin",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=paracetamol|conc=conc:ratio:100mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-bdkq1g0daknvik51w9fn4a1xv|qty=?|vol=15ml",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias",
+          "cruz-verde"
+        ],
+        "names": [
+          "Tapsin Paracetamol 100 mg/ml Gotas x 15 mL",
+          "Tapsin Paracetamol 100 mg/ml Gotas 15 mL"
+        ]
+      },
+      {
+        "productId": "CFM-M-8sprb8xlszi5xknro2yu9laug",
+        "brand": "Tapsin",
+        "variant": "sc",
+        "manufacturer": null,
+        "conceptSignature": "ing=paracetamol|conc=conc:mass:1000mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-0sjer6rdikp53mjocbyyl2iaf|qty=20|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "cruz-verde",
+          "ecofarmacias"
+        ],
+        "names": [
+          "Tapsin 1000 SC Paracetamol 1000 mg 20 Comprimidos Recubiertos",
+          "Tapsin SC Paracetamol 1 gr x 20 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-9dymz498ax3867gpizgmzvpyj",
+        "brand": "Tapsin",
+        "variant": "infantil",
+        "manufacturer": null,
+        "conceptSignature": "ing=paracetamol|conc=conc:ratio:24mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4csvr21wbecx258298hthiyl0|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias",
+          "salcobrand"
+        ],
+        "names": [
+          "Tapsin infantil paracetamol 120mg/5ml jarabe 100ml",
+          "Tapsin Infantil Paracetamol 120mg/5ml Jarabe 100ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-2snbp8m8ppdqzff6h1fvxij89",
+        "brand": null,
+        "variant": "forte",
+        "manufacturer": null,
+        "conceptSignature": "ing=tapsin|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-59ew0lfqswh7d64yft50r9ro3|qty=20|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "araucomed",
+          "farmex",
+          "ecofarmacias",
+          "ahumada"
+        ],
+        "names": [
+          "Tapsin Forte x 20 comprimidos",
+          "Tapsin Forte X 20 comprimidos (Maver)",
+          "Tapsin Forte x 20 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-eno6mxwrsozwjkqq4rk2cfbr8",
+        "brand": "Tapsin",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+paracetamol+tapsin|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-5ajvneg5fjyvjh6zw2kbon0bx|qty=12|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-5doam7atn6bq6e4gj9dbyzyel",
+        "brand": "Tapsin",
+        "variant": "duo",
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Tapsin Duo Paracetamol Ibuprofeno 12 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-3lbwgyab3ssf3uo7yuews5hjt",
+        "brand": "Tapsin",
+        "variant": "instaflu",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=paracetamol+pseudoefedrina|conc=conc:mass:500mg|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-esqwm3kd5lkpanvl6ihr5j5y1|qty=1|vol=?",
+        "offers": 3,
+        "pharmacies": [
+          "dr-simi"
+        ],
+        "names": [
+          "Tapsin InstaFLU día paracetamol 500 mg pseudoefedrina 60 mg 1 sobre polvo para solución oral 5 g"
+        ]
+      },
+      {
+        "productId": "CFM-M-91dywxjpgnzkglya20zwgshy6",
+        "brand": "Tapsin",
+        "variant": "puro",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=paracetamol|conc=conc:mass:500mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-4cq5syvx92r4awzhdy9nk7b03|qty=16|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "farmex"
+        ],
+        "names": [
+          "Tapsin Puro Paracetamol 500 mg x 16 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-3ew1gd14605nt1n4s77yv5eqg",
+        "brand": "Tapsin",
+        "variant": null,
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=paracetamol|conc=conc:mass:500mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-4cq5syvx92r4awzhdy9nk7b03|qty=24|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "dr-simi"
+        ],
+        "names": [
+          "Tapsin paracetamol 500 mg 24 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-36kzy2xc6gry075wobox3filn",
+        "brand": null,
+        "variant": "puro",
+        "manufacturer": null,
+        "conceptSignature": "ing=tapsin|conc=conc:mass:500mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-eq8y39vf8w8ppriqsebyvu3dh|qty=24|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "ahumada"
+        ],
+        "names": [
+          "Tapsin Puro Sin Cafeina 500 mg x 24 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-dq2sa9ynwmakpv0vp5lp19r89",
+        "brand": null,
+        "variant": "forte",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=tapsin|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-59ew0lfqswh7d64yft50r9ro3|qty=30|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Tapsin Forte x 30 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-0g1xo2m9cfsk9ovga0rvb9b64",
+        "brand": "Tapsin Forte",
+        "variant": "forte",
+        "manufacturer": null,
+        "conceptSignature": "ing=paracetamol|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-57rr198m6w4pgnjtu2b8owsjp|qty=20|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Tapsin Forte (B) Paracetamol  20 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-8xgyczhjl1wwgsscejzv0s3ft",
+        "brand": "Tapsin",
+        "variant": "limonada",
+        "manufacturer": null,
+        "conceptSignature": "ing=paracetamol|conc=conc:mass:5000mg|form=?",
+        "presentationSignature": "concept=CFM-C-67tu8fmsxqmq5990zoss22m44|qty=?|vol=?",
+        "offers": 3,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Tapsin Limonada (B) Paracetamol Día 5g"
+        ]
+      },
+      {
+        "productId": "CFM-M-clrrmqpfo3intlwcedo5o59kv",
+        "brand": "Tapsin",
+        "variant": "infantil",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=paracetamol|conc=conc:mass:160mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bg65744nhsv5i3cai85iq82up|qty=16|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "dr-simi"
+        ],
+        "names": [
+          "Tapsin infantil paracetamol 160 mg 16 comprimidos masticables infantil"
+        ]
+      },
+      {
+        "productId": "CFM-M-ap884dmojwl1vsgmlwto3284n",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=tapsin|conc=conc:mass:160mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-5u92sucg978o3qr7bu47j5wyf|qty=16|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "ahumada"
+        ],
+        "names": [
+          "Tapsin 160 mg x 16 Comprimidos Masticables"
+        ]
+      },
+      {
+        "productId": "CFM-M-cxo3i6tkonvgcg9celp7y1gan",
+        "brand": "Tapsin",
+        "variant": "infantil",
+        "manufacturer": null,
+        "conceptSignature": "ing=paracetamol|conc=conc:?|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-6oner1my1t0etgjunuvccc7sy|qty=?|vol=15ml",
+        "offers": 3,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Tapsin Infantil Gotas (B) Paracetamol 15ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-0d95m5lzh2dpa7o0cmizxiqj6",
+        "brand": null,
+        "variant": "infantil",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=tapsin|conc=conc:ratio:24mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4a3h46vowz4ut986rota9h5ia|qty=?|vol=100ml",
+        "offers": 3,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Tapsin Infantil 120mg/5ml jarabe x 100 ml."
+        ]
+      }
+    ]
+  },
+  "ibuprofeno": {
+    "offers": 194,
+    "v1Cards": 166,
+    "v1PresentationKeys": 78,
+    "v2Concepts": 14,
+    "v2Presentations": 20,
+    "v2Products": 64,
+    "pharmacies": 9,
+    "productBreakdown": [
+      {
+        "productId": "CFM-M-e3b4mgdl12dglo4vzvon2g8on",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=20|vol=none",
+        "offers": 16,
+        "pharmacies": [
+          "farmex",
+          "easyfarma",
+          "cruz-verde",
+          "salcobrand",
+          "ecofarmacias",
+          "sermecoop",
+          "ahumada"
+        ],
+        "names": [
+          "Ibuprofeno 400 mg x 20 comprimidos.",
+          "Ibuprofeno 400 mg x 20 comp",
+          "Ibuprofeno 400 mg 20 Comprimidos",
+          "Ibuprofeno (B) 400mg 20 Comprimidos",
+          "Ibuprofeno 400 mg x 20 Comprimidos recubiertos",
+          "Ibuprofeno 400mg 20 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-30ox041m4okv5ufc5tz4ldoyq",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=20|vol=none",
+        "offers": 10,
+        "pharmacies": [
+          "easyfarma",
+          "ahumada",
+          "cruz-verde",
+          "salcobrand"
+        ],
+        "names": [
+          "Ibuprofeno 600 Mg 20 Comp....",
+          "Ibuprofeno 600 mg  x 20",
+          "Ibuprofeno 600 mg x 20 Comprimidos Recubiertos OPKO CHILE S.A.",
+          "Ibuprofeno 600 mg 20 Comprimidos",
+          "Ibuprofeno (B) 600mg 20 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-ek3dhvvkwczpjogqialgatk1j",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:200mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-3gchl0xnz92ft7phq58dp57du|qty=20|vol=none",
+        "offers": 8,
+        "pharmacies": [
+          "ahumada",
+          "ecofarmacias",
+          "cruz-verde",
+          "salcobrand"
+        ],
+        "names": [
+          "Ibuprofeno 200 mg x 20 Comprimidos Recubiertos",
+          "Ibuprofeno 200 mg X 20 comprimidos (Ascend)",
+          "Ibuprofeno 200 mg 20 Comprimidos",
+          "Ibuprofeno (B) 200mg 20 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-0zbfdv2i8qcir04hamztfobm3",
+        "brand": "Ibucalm",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=10|vol=none",
+        "offers": 6,
+        "pharmacies": [
+          "ahumada",
+          "ecofarmacias",
+          "cruz-verde"
+        ],
+        "names": [
+          "Ibucalm Ibuprofeno 400 Mg 10 Cap Blandas",
+          "Ibucalm Ibuprofeno 400 Mg X 10 Capsulas blandas (Opko)",
+          "Ibucalm Ibuprofeno 400 mg 10 Cápsulas blandas"
+        ]
+      },
+      {
+        "productId": "CFM-M-d7yhufxzrov1hzuu2eij9048u",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:ratio:40mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-ata3d2tejgj3ujxkntu2e7eco|qty=?|vol=100ml",
+        "offers": 6,
+        "pharmacies": [
+          "ecofarmacias",
+          "sermecoop",
+          "salcobrand"
+        ],
+        "names": [
+          "Ibuprofeno Suspensión Oral 200mg/5ml 100ml Ascend",
+          "Ibuprofeno 200mg/5ml Jarabe 100ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-44wyoks8ub2xgo276uvkw4mud",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:ratio:20mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-6xq5w6blzsfd9e1s21yyyhl0e|qty=?|vol=100ml",
+        "offers": 6,
+        "pharmacies": [
+          "ecofarmacias",
+          "ahumada",
+          "cruz-verde"
+        ],
+        "names": [
+          "Ibuprofeno Suspensión 100 mg/5ml x 100 ml (cenabast)",
+          "Ibuprofeno 100 mg/5 mL x 100 mL Suspensión Oral ETHON PHARMACEUTICALS S.P.A",
+          "Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+        ]
+      },
+      {
+        "productId": "CFM-M-c1sf3thtmc7zhng3wgi7yui6p",
+        "brand": "Ibucalm",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=10|vol=none",
+        "offers": 6,
+        "pharmacies": [
+          "ecofarmacias",
+          "ahumada",
+          "cruz-verde"
+        ],
+        "names": [
+          "Ibucalm Ibuprofeno 600mg x 10 Cápsulas blandas",
+          "Ibucalm Ibuprofeno 600 Mg 10 Cap Blandas",
+          "Ibucalm Ibuprofeno 600 mg 10 Cápsulas blandas"
+        ]
+      },
+      {
+        "productId": "CFM-M-2ni1q204h0vce8fma36vljeny",
+        "brand": "Tapsin",
+        "variant": "duo",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "offers": 5,
+        "pharmacies": [
+          "dr-simi"
+        ],
+        "names": [
+          "Tapsin Duo paracetamol 300 mg ibuprofeno 200 mg 12 comprimidos recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-45iqp1w2tpskz9xruqccot8dn",
+        "brand": "Actron",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=10|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "salcobrand",
+          "cruz-verde"
+        ],
+        "names": [
+          "Actron (R) Ibuprofeno 400mg 10 Cápsulas Blandas",
+          "Actron 400 Ibuprofeno 400 mg 10 Cápsulas Blandas"
+        ]
+      },
+      {
+        "productId": "CFM-M-3pw5zkavhdm1ql9zfb5xatxpn",
+        "brand": "Actron",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=20|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "salcobrand",
+          "cruz-verde"
+        ],
+        "names": [
+          "Actron (R) Ibuprofeno 400mg 20 Cápsulas Blandas",
+          "Actron Ibuprofeno 400 mg 20 Cápsulas Blandas"
+        ]
+      },
+      {
+        "productId": "CFM-M-529cilwv2gvd1ujx1ni2via1l",
+        "brand": "Kitadol Duo",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+kitadol+paracetamol|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bqp56y5oi96nxzsuii4kmxii4|qty=10|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Kitadol Duo Ibuprofeno / Paracetamol 10 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-3cx9yhgu6bz4k2xaw5sxphds7",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Ascend",
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:200mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-3gchl0xnz92ft7phq58dp57du|qty=20|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "dr-simi",
+          "farmex"
+        ],
+        "names": [
+          "Ibuprofeno 200 mg 20 comprimidos recubiertos",
+          "Ibuprofeno 200 mg x 20 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-4aab5mdzpxg3l2u9azh7dyjjr",
+        "brand": "Pyriped",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:ratio:20mg/ml|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-6xq5w6blzsfd9e1s21yyyhl0e|qty=?|vol=100ml",
+        "offers": 4,
+        "pharmacies": [
+          "sermecoop",
+          "cruz-verde"
+        ],
+        "names": [
+          "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+          "Pyriped Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+        ]
+      },
+      {
+        "productId": "CFM-M-be931kbqu9lbxn5ftmvrt3rbl",
+        "brand": "Actron",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=10|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias",
+          "salcobrand"
+        ],
+        "names": [
+          "Actron ibuprofeno 600mg por 10 caps. blandas DESCUENTO",
+          "Actron Ibuprofeno 600mg 10 Cápsulas Blandas"
+        ]
+      },
+      {
+        "productId": "CFM-M-eganbz4ikxhdr3zlclmxb5o1q",
+        "brand": "Ibupirac",
+        "variant": "lc",
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=10|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "sermecoop",
+          "cruz-verde"
+        ],
+        "names": [
+          "Ibupirac Lc (ibuprofeno) 600mg 10  Cápsulas Blandas",
+          "Ibupirac LC Ibuprofeno 600 mg 10 Cápsulas Blandas"
+        ]
+      },
+      {
+        "productId": "CFM-M-dik56097847kw9lf66szsofca",
+        "brand": "Dolorub",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:60000mg|form=topical",
+        "presentationSignature": "concept=CFM-C-ed2vdtasjhpvxc5txujpyoqui|qty=?|vol=?",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias",
+          "cruz-verde"
+        ],
+        "names": [
+          "Dolorub Ibuprofeno Gel 60g DESCUENTO",
+          "Dolorub Ibuprofeno 5% Crema Tópica 60 gr"
+        ]
+      },
+      {
+        "productId": "CFM-M-2ek6so0v6ode4px5nm2ueiz26",
+        "brand": "Ibucalm",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=20|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias",
+          "cruz-verde"
+        ],
+        "names": [
+          "Ibucalm Ibuprofeno 600 Mg X 20 Capsulas blandas (Opko)",
+          "Ibucalm Ibuprofeno 600 mg 20 Cápsulas blandas"
+        ]
+      },
+      {
+        "productId": "CFM-M-eno6mxwrsozwjkqq4rk2cfbr8",
+        "brand": "Tapsin",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+paracetamol+tapsin|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-5ajvneg5fjyvjh6zw2kbon0bx|qty=12|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-5doam7atn6bq6e4gj9dbyzyel",
+        "brand": "Tapsin",
+        "variant": "duo",
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Tapsin Duo Paracetamol Ibuprofeno 12 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-b8v2t2reu829yozc05tq9dqc2",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Laboratorio Chile",
+        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=20|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "araucomed"
+        ],
+        "names": [
+          "Ibuprofeno 400 mg x 20 comprimidos. (Chile)"
+        ]
+      }
+    ]
+  },
+  "combinations": {
+    "offers": 131,
+    "v1Cards": 125,
+    "v1PresentationKeys": 88,
+    "v2Concepts": 46,
+    "v2Presentations": 57,
+    "v2Products": 80,
+    "pharmacies": 9,
+    "productBreakdown": [
+      {
+        "productId": "CFM-M-1rfv678hki788l2s6rgys85b2",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "offers": 6,
+        "pharmacies": [
+          "ecofarmacias",
+          "ahumada"
+        ],
+        "names": [
+          "Losartan Potásico + Hidroclorotiazida 50 mg/12.5 mg x 30 comp.",
+          "Losartan/Hidroclorotiazida 50 mg/12.5 mg x 30 Comprimidos Recubiertos ASCEND",
+          "Losartan 50 mg / Hidroclorotiazida 12.5 mg x 30 Comp."
+        ]
+      },
+      {
+        "productId": "CFM-M-2ni1q204h0vce8fma36vljeny",
+        "brand": "Tapsin",
+        "variant": "duo",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "offers": 5,
+        "pharmacies": [
+          "dr-simi"
+        ],
+        "names": [
+          "Tapsin Duo paracetamol 300 mg ibuprofeno 200 mg 12 comprimidos recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-529cilwv2gvd1ujx1ni2via1l",
+        "brand": "Kitadol Duo",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+kitadol+paracetamol|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bqp56y5oi96nxzsuii4kmxii4|qty=10|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Kitadol Duo Ibuprofeno / Paracetamol 10 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-0nfgzxkimqwl77fs1pvdkstrq",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bhjashc16kd5bzfq0pz47z85q|qty=30|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "ecofarmacias",
+          "salcobrand"
+        ],
+        "names": [
+          "Losartan + Hidroclorotiazida 100/25 x 30 Comp Eurofarma",
+          "Losartan / Hidroclorotiazida (B) 50/12.5 30 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-2qzc80vwqmnl6x2t0n3iy86ge",
+        "brand": "Hyzaar",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=hidroclorotiazida+hyzaar+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-7cqb5gck6ebybebyfbj2ocogy|qty=30|vol=none",
+        "offers": 4,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Hyzaar Losartán Potásico / Hidroclorotiazida 30 Comprimidos Recubiertos",
+          "Hyzaar Forte Hidroclorotiazida / Losartán 30 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-3yfx5nolom2sh27wx6snvtstz",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=acido+amoxicilina+clavulanico|conc=conc:mass:57mg|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-4uh5yaxnety3ptc064t4ri00l|qty=?|vol=70ml",
+        "offers": 3,
+        "pharmacies": [
+          "ecofarmacias",
+          "sermecoop"
+        ],
+        "names": [
+          "Amoxicilina / Ácido Clavulánico 250/62,5 Polvo Para Suspensión Oral",
+          "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml",
+          "Amoxicilina/Ácido Clavulánico Suspension 400/57 Mg X 70 Ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-eno6mxwrsozwjkqq4rk2cfbr8",
+        "brand": "Tapsin",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+paracetamol+tapsin|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-5ajvneg5fjyvjh6zw2kbon0bx|qty=12|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-5doam7atn6bq6e4gj9dbyzyel",
+        "brand": "Tapsin",
+        "variant": "duo",
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "offers": 3,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Tapsin Duo Paracetamol Ibuprofeno 12 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-3lbwgyab3ssf3uo7yuews5hjt",
+        "brand": "Tapsin",
+        "variant": "instaflu",
+        "manufacturer": "Maver",
+        "conceptSignature": "ing=paracetamol+pseudoefedrina|conc=conc:mass:500mg|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-esqwm3kd5lkpanvl6ihr5j5y1|qty=1|vol=?",
+        "offers": 3,
+        "pharmacies": [
+          "dr-simi"
+        ],
+        "names": [
+          "Tapsin InstaFLU día paracetamol 500 mg pseudoefedrina 60 mg 1 sobre polvo para solución oral 5 g"
+        ]
+      },
+      {
+        "productId": "CFM-M-1hsxwwqtdckuoxdp5r4o1jnpx",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=paracetamol+tramadol|conc=conc:?|form=?",
+        "presentationSignature": "concept=CFM-C-c6o03cfc761uek7kak68gnmkt|qty=?|vol=?",
+        "offers": 3,
+        "pharmacies": [
+          "easyfarma"
+        ],
+        "names": [
+          "Paracetamol/Tramadol..."
+        ]
+      },
+      {
+        "productId": "CFM-M-adollp71houyc7o3vzj9uwy20",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=acido+amoxicilina+clavulanico|conc=conc:mass:500mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-5w3a3i37h4lsvx3epkseqk9ml|qty=20|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "sermecoop",
+          "cruz-verde"
+        ],
+        "names": [
+          "Amoxicilina 500mg/acido Clavulanico 125mg 20 Comprimidos Ethon",
+          "Amoxicilina 500 mg + Acido Clavulánico 125 mg 20 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-1m7p55pqstqhds2001tmnwtln",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=acido+amoxicilina+clavulanico|conc=conc:?|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-4n8a41o2cb7x7e75d8w4ktr3v|qty=20|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "ecofarmacias",
+          "salcobrand"
+        ],
+        "names": [
+          "Amoxicilina+Acido Clavulanico Clav 500/125  X 20 Comprimidos Recubiertos (Cenabast)",
+          "Amoxicilina / Acido Clavulánico (B) 500/125 20 Comprimidos Recubiertos"
+        ]
+      },
+      {
+        "productId": "CFM-M-7en42q1pc701uh1b8f0afvwg6",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=acido+amoxicilina|conc=conc:?|form=?",
+        "presentationSignature": "concept=CFM-C-a1ogqhgblbp5p8t85a22khh3g|qty=?|vol=?",
+        "offers": 2,
+        "pharmacies": [
+          "easyfarma"
+        ],
+        "names": [
+          "Amoxicilina/Acido...",
+          "Amoxicilina + Acido..."
+        ]
+      },
+      {
+        "productId": "CFM-M-bo3bn193zd8s83pgqyznn0pvg",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=acido+amoxicilina+clavulanico|conc=conc:mass:875mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-2iuoo0y6slpo695x2xkvrjwoy|qty=20|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "ecofarmacias",
+          "sermecoop"
+        ],
+        "names": [
+          "Amoxicilina+ácido Clavulánico 875mg 125mg por 20 comprimidos Ascend (Cenabast)",
+          "Amoxicilina 875mg/acido Clavulanico 125mg 20 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-dv16nc86trev9fosvqtsaiich",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=diclofenaco+dolodrin+tramadol|conc=conc:mass:25mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-98hgv5tzgem3h0cq9m3wwy1mm|qty=10|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "ecofarmacias",
+          "cruz-verde"
+        ],
+        "names": [
+          "Dolodrin Diclofenaco 25 Mg / Tramadol 25 Mg x 10 Comprimidos",
+          "Dolodrin Diclofenaco 25 Mg / Tramadol 25 Mg 10 Comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-2whre6007bqn9dea6fzs2591a",
+        "brand": "Pro-Lertus",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=colestiramina+diclofenaco|conc=conc:mass:140mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-349wt0fatlvkbk9tlsazbpq5d|qty=10|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "salcobrand",
+          "cruz-verde"
+        ],
+        "names": [
+          "Pro-Lertus Diclofenaco Colestiramina 140mg 10 Cápsulas Prolongadas",
+          "Pro-Lertus Diclofenaco Colestiramina 140 mg 10 Cápsulas"
+        ]
+      },
+      {
+        "productId": "CFM-M-52mz6wq6mnlebwqz96yom36wy",
+        "brand": "Pironal",
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno+pironal+pseudoefedrina|conc=conc:?|form=fluid-oral",
+        "presentationSignature": "concept=CFM-C-8z2vuls3skwjpwbp0fort2unp|qty=?|vol=100ml",
+        "offers": 2,
+        "pharmacies": [
+          "salcobrand"
+        ],
+        "names": [
+          "Pironal Flu Forte Ibuprofeno / Pseudoefedrina Jarabe 100ml"
+        ]
+      },
+      {
+        "productId": "CFM-M-8vqzvpcrp7wxt6rq1xrume04e",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Ascend",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "farmex"
+        ],
+        "names": [
+          "Losartan Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-a4wsj2g3xngevhkz72ne5gnmr",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Opko",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "farmex"
+        ],
+        "names": [
+          "Losartán Potásico / Hidroclorotiazida 50 mg / 12,5 mg x 30 comprimidos"
+        ]
+      },
+      {
+        "productId": "CFM-M-82t85zky79k6m1uf7lv5waz7i",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=hidroclorotiazida+hyzaar+losartan|conc=conc:mass:50mg|form=solid-oral",
+        "presentationSignature": "concept=CFM-C-7cqb5gck6ebybebyfbj2ocogy|qty=30|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "cruz-verde"
+        ],
+        "names": [
+          "Hyzaar Losartan / Hidroclorotiazida 50 mg / 12,5 mg 30 Comprimidos"
+        ]
+      }
+    ]
+  }
+}
