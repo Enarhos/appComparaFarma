@@ -3,18 +3,18 @@
     "offers": 52,
     "v1Cards": 44,
     "v1PresentationKeys": 22,
-    "v2Concepts": 3,
-    "v2Presentations": 3,
-    "v2Products": 16,
+    "v2Concepts": 2,
+    "v2Presentations": 2,
+    "v2Products": 15,
     "pharmacies": 6,
     "productBreakdown": [
       {
-        "productId": "CFM-M-bgud4os4r5y07xkrc7bi38iki",
+        "provisionalProductKey": "PROV-M-6o4q5jbpvlstxvpn6ebux8exn",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 12,
         "pharmacies": [
           "ecofarmacias",
@@ -34,30 +34,32 @@
         ]
       },
       {
-        "productId": "CFM-M-1rfv678hki788l2s6rgys85b2",
+        "provisionalProductKey": "PROV-M-6rr0pxhvllx4e14qpcyowwvih",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
-        "offers": 6,
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-emaxo0srf9djkdgyc7hcavltl|qty=30|vol=none",
+        "offers": 8,
         "pharmacies": [
           "ecofarmacias",
-          "ahumada"
+          "ahumada",
+          "cruz-verde"
         ],
         "names": [
           "Losartan Potásico + Hidroclorotiazida 50 mg/12.5 mg x 30 comp.",
           "Losartan/Hidroclorotiazida 50 mg/12.5 mg x 30 Comprimidos Recubiertos ASCEND",
-          "Losartan 50 mg / Hidroclorotiazida 12.5 mg x 30 Comp."
+          "Losartan 50 mg / Hidroclorotiazida 12.5 mg x 30 Comp.",
+          "Hyzaar Losartan / Hidroclorotiazida 50 mg / 12,5 mg 30 Comprimidos"
         ]
       },
       {
-        "productId": "CFM-M-0dm3drhaaqucj87owgwo8n7qv",
+        "provisionalProductKey": "PROV-M-b1z8gydam58ietlkt3elxss3a",
         "brand": "Cozaar",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 4,
         "pharmacies": [
           "cruz-verde",
@@ -69,12 +71,12 @@
         ]
       },
       {
-        "productId": "CFM-M-2krp52mswswpswmt5mgy3n17l",
+        "provisionalProductKey": "PROV-M-3z8jwo850wrc75k408yx43ymw",
         "brand": "Corodin",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 4,
         "pharmacies": [
           "salcobrand",
@@ -86,12 +88,12 @@
         ]
       },
       {
-        "productId": "CFM-M-0wl23ftdmf440wyyl8e6zeurq",
+        "provisionalProductKey": "PROV-M-8yyhm06tehkjyl0ra9js7zzjr",
         "brand": "Losapres",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 4,
         "pharmacies": [
           "salcobrand",
@@ -103,12 +105,12 @@
         ]
       },
       {
-        "productId": "CFM-M-7fi86x5pc7c4jpattn1o75j6g",
+        "provisionalProductKey": "PROV-M-brzzj7n0gwpz2rutagd80n7up",
         "brand": null,
         "variant": null,
         "manufacturer": "Hospifarma",
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "araucomed"
@@ -118,12 +120,12 @@
         ]
       },
       {
-        "productId": "CFM-M-5exdt6hncgkrlmp23p7yvd9u7",
+        "provisionalProductKey": "PROV-M-1pweskmrp9hyp1gs3dsv6bsyu",
         "brand": null,
         "variant": null,
         "manufacturer": "Opko",
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "araucomed"
@@ -133,12 +135,12 @@
         ]
       },
       {
-        "productId": "CFM-M-3hqp91z2fx9xph530i4mfl2mt",
+        "provisionalProductKey": "PROV-M-c1x70vtw77b55qtzrysfnvz78",
         "brand": null,
         "variant": null,
         "manufacturer": "Mintlab",
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "araucomed"
@@ -148,12 +150,12 @@
         ]
       },
       {
-        "productId": "CFM-M-dfa4lzd70s93xqs5tsksmz9qo",
+        "provisionalProductKey": "PROV-M-df7fqpl010y140u4e7lq61oy9",
         "brand": null,
         "variant": null,
         "manufacturer": "Seven Pharma",
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "araucomed"
@@ -163,12 +165,12 @@
         ]
       },
       {
-        "productId": "CFM-M-aryj6ptx025v8a04ez61j80n6",
+        "provisionalProductKey": "PROV-M-d2szzvn1njkng10zqc2an2trf",
         "brand": null,
         "variant": null,
         "manufacturer": "Ascend",
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "araucomed"
@@ -178,12 +180,12 @@
         ]
       },
       {
-        "productId": "CFM-M-d3o1vfhzgqvm1nub3fcppqnfc",
+        "provisionalProductKey": "PROV-M-7wp5fu1mzgmrzj8rj9u98e7e1",
         "brand": null,
         "variant": null,
         "manufacturer": "Eurofarma",
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "araucomed"
@@ -193,12 +195,12 @@
         ]
       },
       {
-        "productId": "CFM-M-8vqzvpcrp7wxt6rq1xrume04e",
+        "provisionalProductKey": "PROV-M-bzqwlnafpn7sdo6ezh396l49l",
         "brand": null,
         "variant": null,
         "manufacturer": "Ascend",
-        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-emaxo0srf9djkdgyc7hcavltl|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "farmex"
@@ -208,12 +210,12 @@
         ]
       },
       {
-        "productId": "CFM-M-a4wsj2g3xngevhkz72ne5gnmr",
+        "provisionalProductKey": "PROV-M-dpo59yq60iqrkpq9ypfzl459w",
         "brand": null,
         "variant": null,
         "manufacturer": "Opko",
-        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-emaxo0srf9djkdgyc7hcavltl|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "farmex"
@@ -223,12 +225,12 @@
         ]
       },
       {
-        "productId": "CFM-M-35oqxwnj5tp0c43gfmawyp8q9",
+        "provisionalProductKey": "PROV-M-b3xdt3qnllda3q483x7mfmjnk",
         "brand": "Lopren",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "cruz-verde"
@@ -238,33 +240,18 @@
         ]
       },
       {
-        "productId": "CFM-M-d0wfu2fptebmnnex831jggnxc",
+        "provisionalProductKey": "PROV-M-drh1mf9qd4gfzuwp82vtiq0zl",
         "brand": "SimpertenD",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dqekzzhqtzuat9ynn3bcfw2l8|qty=30|vol=none",
+        "conceptSignature": "ing=losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5bobsq4vblfapx0cobcdoxvzh|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "cruz-verde"
         ],
         "names": [
           "Simperten-D Losartan 50 mg 30 Comprimidos Recubierto"
-        ]
-      },
-      {
-        "productId": "CFM-M-82t85zky79k6m1uf7lv5waz7i",
-        "brand": null,
-        "variant": null,
-        "manufacturer": null,
-        "conceptSignature": "ing=hidroclorotiazida+hyzaar+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-7cqb5gck6ebybebyfbj2ocogy|qty=30|vol=none",
-        "offers": 2,
-        "pharmacies": [
-          "cruz-verde"
-        ],
-        "names": [
-          "Hyzaar Losartan / Hidroclorotiazida 50 mg / 12,5 mg 30 Comprimidos"
         ]
       }
     ]
@@ -279,12 +266,12 @@
     "pharmacies": 9,
     "productBreakdown": [
       {
-        "productId": "CFM-M-c8wrzukua8vdgv5pun7fmgt0c",
+        "provisionalProductKey": "PROV-M-607mf03zfd6w8t39syzf2a5ui",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 16,
         "pharmacies": [
           "ecofarmacias",
@@ -299,12 +286,12 @@
         ]
       },
       {
-        "productId": "CFM-M-1yks35toa7zj5dsbqtszocyv6",
+        "provisionalProductKey": "PROV-M-4am0pptffy338pfokfihd4gtz",
         "brand": "Muxol",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:mass:30mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-edv9rq7avy4l4obla878xhbrm|qty=20|vol=none",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:mass:30mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-1p5t8f8ivfn295fh30wgqi5wj|qty=20|vol=none",
         "offers": 8,
         "pharmacies": [
           "salcobrand",
@@ -316,12 +303,12 @@
         ]
       },
       {
-        "productId": "CFM-M-erxl6zgxcyhuu18chjzrkqrd5",
+        "provisionalProductKey": "PROV-M-51izp8pin9w0xwptd1ftpxnr6",
         "brand": "Broncot",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:7.5mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-87ngc3lwbnz83ogeoakpp6ktt|qty=?|vol=30ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:7.5mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-9ecfyz9nwiyellxdl4px7j4nq|qty=?|vol=30ml",
         "offers": 8,
         "pharmacies": [
           "salcobrand",
@@ -333,12 +320,12 @@
         ]
       },
       {
-        "productId": "CFM-M-cxkehjsjzexcf9ggq8ji8fkzv",
+        "provisionalProductKey": "PROV-M-chnw6ngo6pju8whaa7n1e5fon",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:3mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-5f6gp3nlqjpip7xexm12gzyge|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:3mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-6f4bbwj7000u0xdt17rmsc0ah|qty=?|vol=100ml",
         "offers": 6,
         "pharmacies": [
           "cruz-verde"
@@ -348,12 +335,12 @@
         ]
       },
       {
-        "productId": "CFM-M-c78sdwj7knskk27rk9cxcm1q4",
+        "provisionalProductKey": "PROV-M-1zu0fbqa1qvpy2hra5shxt2l6",
         "brand": null,
         "variant": null,
         "manufacturer": "Ascend",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "araucomed"
@@ -363,12 +350,12 @@
         ]
       },
       {
-        "productId": "CFM-M-6k29h6ndr85xhlnor3g2bsep0",
+        "provisionalProductKey": "PROV-M-ceozhm7sftlejyz5jabs8buxe",
         "brand": null,
         "variant": null,
         "manufacturer": "Andrómaco",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "araucomed"
@@ -378,12 +365,12 @@
         ]
       },
       {
-        "productId": "CFM-M-3tirk0bnu028tei9iu6j079y6",
+        "provisionalProductKey": "PROV-M-9twd69cnlt7tp7mxd31reahyg",
         "brand": null,
         "variant": null,
         "manufacturer": "Seven Pharma",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "araucomed"
@@ -393,12 +380,12 @@
         ]
       },
       {
-        "productId": "CFM-M-2forbmgc25ldsrc79knn1hrvq",
+        "provisionalProductKey": "PROV-M-9ftzvko7l4kf1z9g2i245hkgw",
         "brand": null,
         "variant": null,
         "manufacturer": "Hospifarma",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "araucomed"
@@ -408,12 +395,12 @@
         ]
       },
       {
-        "productId": "CFM-M-b21lzq3vy2ra7fwq0s4z8siy3",
+        "provisionalProductKey": "PROV-M-cpleryjmnap19hgqnipmbyaf1",
         "brand": null,
         "variant": null,
         "manufacturer": "Mintlab",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "araucomed"
@@ -423,12 +410,12 @@
         ]
       },
       {
-        "productId": "CFM-M-8dc6z4scpnj9q42c3waoj3mu9",
+        "provisionalProductKey": "PROV-M-04s4z1mz66mbicfyze8el6xev",
         "brand": null,
         "variant": null,
         "manufacturer": "Opko",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "araucomed"
@@ -438,12 +425,12 @@
         ]
       },
       {
-        "productId": "CFM-M-bgahslxz82gts5g5wmykgpxye",
+        "provisionalProductKey": "PROV-M-0tiisj3qimg3hcfflsuowqbn4",
         "brand": "Pazbronq",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "ecofarmacias"
@@ -453,12 +440,12 @@
         ]
       },
       {
-        "productId": "CFM-M-6j8m7cg91lm7tv04vzl6cja0w",
+        "provisionalProductKey": "PROV-M-b6ezxo1vagin1711s6mbvoz6e",
         "brand": "Mintamox",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "cruz-verde"
@@ -468,12 +455,12 @@
         ]
       },
       {
-        "productId": "CFM-M-bvyogfni45f0ykshaa6d1aha8",
+        "provisionalProductKey": "PROV-M-4avjruhejazcp5b1mr111brhr",
         "brand": "Muxol",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=?",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=?",
         "offers": 4,
         "pharmacies": [
           "cruz-verde"
@@ -483,12 +470,12 @@
         ]
       },
       {
-        "productId": "CFM-M-5zlvm6ars7vo2hznbhgd41oki",
+        "provisionalProductKey": "PROV-M-3ipjwsxenezajvt2bzu44440k",
         "brand": "Muxol",
         "variant": null,
         "manufacturer": "Eurolab",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "farmex"
@@ -498,12 +485,12 @@
         ]
       },
       {
-        "productId": "CFM-M-91wmfjccu3tyhjx0k9pb8ckg1",
+        "provisionalProductKey": "PROV-M-9lbg75sm4d0aai23zs5jnfftz",
         "brand": "Broncot",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:6mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4jvkswt6m63yt1dit72m2vvzf|qty=?|vol=120ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:6mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4m1ctryale2owt01jzkwox298|qty=?|vol=120ml",
         "offers": 4,
         "pharmacies": [
           "salcobrand"
@@ -513,12 +500,12 @@
         ]
       },
       {
-        "productId": "CFM-M-af1kp3i3bgg13wk0fd4eyq8a7",
+        "provisionalProductKey": "PROV-M-dfhbguznin0t1z77vqqsd3f8z",
         "brand": "Tocalm",
         "variant": "infantil",
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:3mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-5f6gp3nlqjpip7xexm12gzyge|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:3mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-6f4bbwj7000u0xdt17rmsc0ah|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "cruz-verde"
@@ -528,12 +515,12 @@
         ]
       },
       {
-        "productId": "CFM-M-4nxt8l175u4p2sutap43kqdx5",
+        "provisionalProductKey": "PROV-M-ae76ielzi9v98fmvhkgerp75x",
         "brand": null,
         "variant": null,
         "manufacturer": "Eurofarma",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:3mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-5f6gp3nlqjpip7xexm12gzyge|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:3mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-6f4bbwj7000u0xdt17rmsc0ah|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "araucomed"
@@ -543,12 +530,12 @@
         ]
       },
       {
-        "productId": "CFM-M-2y67rmv62cw2g17dflkdxkyd7",
+        "provisionalProductKey": "PROV-M-awqea2zzbtkua5l8x4rph4o9n",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:mass:30mg|form=?",
-        "presentationSignature": "concept=CFM-C-6wjej0obo7u6kl6v2393at1lp|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:mass:30mg|form=?|route=?|unit=?",
+        "presentationSignature": "concept=PROV-C-7rearyk6f5iivzra66i8vcjes|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "ecofarmacias"
@@ -558,12 +545,12 @@
         ]
       },
       {
-        "productId": "CFM-M-8bvd62qdlcg7pdx0t0wy2gdkr",
+        "provisionalProductKey": "PROV-M-03f61jeinxxf70586jtwrf0rb",
         "brand": null,
         "variant": null,
         "manufacturer": "Ascend",
-        "conceptSignature": "ing=ambroxol|conc=conc:ratio:3mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-5f6gp3nlqjpip7xexm12gzyge|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:ratio:3mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-6f4bbwj7000u0xdt17rmsc0ah|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "araucomed"
@@ -573,12 +560,12 @@
         ]
       },
       {
-        "productId": "CFM-M-29ms38cuna72ndwhe8rm5ey5d",
+        "provisionalProductKey": "PROV-M-93qypofdk5kaom1ogbnm7gptc",
         "brand": null,
         "variant": "infantil",
         "manufacturer": null,
-        "conceptSignature": "ing=ambroxol|conc=conc:?|form=?",
-        "presentationSignature": "concept=CFM-C-67ol0vro6xweabwt0izarde3h|qty=?|vol=100ml",
+        "conceptSignature": "ing=ambroxol|disc=none|conc=conc:?|form=?|route=?|unit=?",
+        "presentationSignature": "concept=PROV-C-6rc0o4e4inw81357d00n6geh0|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "ecofarmacias"
@@ -593,18 +580,18 @@
     "offers": 174,
     "v1Cards": 163,
     "v1PresentationKeys": 113,
-    "v2Concepts": 30,
-    "v2Presentations": 54,
-    "v2Products": 109,
+    "v2Concepts": 33,
+    "v2Presentations": 55,
+    "v2Products": 111,
     "pharmacies": 8,
     "productBreakdown": [
       {
-        "productId": "CFM-M-ea44iw68uvhgar3vosar1l3il",
+        "provisionalProductKey": "PROV-M-1bqrssij2zkdrn9mf7owp5bq4",
         "brand": "Tapsin",
         "variant": "puro",
         "manufacturer": null,
-        "conceptSignature": "ing=paracetamol|conc=conc:mass:500mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-4cq5syvx92r4awzhdy9nk7b03|qty=16|vol=none",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:mass:500mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-dbss9ahxw9lb46oqoyy9zpq0q|qty=16|vol=none",
         "offers": 6,
         "pharmacies": [
           "cruz-verde",
@@ -616,12 +603,12 @@
         ]
       },
       {
-        "productId": "CFM-M-43gp3bfjyijaaibovkefh5m47",
+        "provisionalProductKey": "PROV-M-4hqrjnjgex28t21i2pb89aayr",
         "brand": null,
         "variant": "duo",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=tapsin|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-59ew0lfqswh7d64yft50r9ro3|qty=12|vol=none",
+        "conceptSignature": "ing=?|disc=tapsin|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-19s9kx9t81e4mquy1yyfy3etj|qty=12|vol=none",
         "offers": 5,
         "pharmacies": [
           "araucomed"
@@ -631,12 +618,12 @@
         ]
       },
       {
-        "productId": "CFM-M-2ni1q204h0vce8fma36vljeny",
+        "provisionalProductKey": "PROV-M-elss254vodl3l16riqmxtk0oe",
         "brand": "Tapsin",
         "variant": "duo",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 5,
         "pharmacies": [
           "dr-simi"
@@ -646,12 +633,12 @@
         ]
       },
       {
-        "productId": "CFM-M-6h1gv04mtfnmdnpth7r1vpydx",
+        "provisionalProductKey": "PROV-M-141nm52hyra1yf2uu0amg10qk",
         "brand": "Tapsin",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=paracetamol|conc=conc:ratio:100mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-bdkq1g0daknvik51w9fn4a1xv|qty=?|vol=15ml",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:ratio:100mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-4h0rjlrb29n4y1j9yj00teakk|qty=?|vol=15ml",
         "offers": 4,
         "pharmacies": [
           "ecofarmacias",
@@ -663,12 +650,12 @@
         ]
       },
       {
-        "productId": "CFM-M-8sprb8xlszi5xknro2yu9laug",
+        "provisionalProductKey": "PROV-M-5zefuf1f3qme26vbv986t1y41",
         "brand": "Tapsin",
         "variant": "sc",
         "manufacturer": null,
-        "conceptSignature": "ing=paracetamol|conc=conc:mass:1000mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-0sjer6rdikp53mjocbyyl2iaf|qty=20|vol=none",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:mass:1000mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-1qyrj4czy3zqo668u8dnab5vy|qty=20|vol=none",
         "offers": 4,
         "pharmacies": [
           "cruz-verde",
@@ -680,12 +667,12 @@
         ]
       },
       {
-        "productId": "CFM-M-9dymz498ax3867gpizgmzvpyj",
+        "provisionalProductKey": "PROV-M-cljpdb3pmuw6mdvpcc04cf5rl",
         "brand": "Tapsin",
         "variant": "infantil",
         "manufacturer": null,
-        "conceptSignature": "ing=paracetamol|conc=conc:ratio:24mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4csvr21wbecx258298hthiyl0|qty=?|vol=100ml",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:ratio:24mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-ep6y08uez1i3er1yyv9ypg1hf|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "ecofarmacias",
@@ -697,12 +684,12 @@
         ]
       },
       {
-        "productId": "CFM-M-2snbp8m8ppdqzff6h1fvxij89",
+        "provisionalProductKey": "PROV-M-0f9r3hjsw4q3cmtcx4rxc0xz2",
         "brand": null,
         "variant": "forte",
         "manufacturer": null,
-        "conceptSignature": "ing=tapsin|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-59ew0lfqswh7d64yft50r9ro3|qty=20|vol=none",
+        "conceptSignature": "ing=?|disc=tapsin|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-19s9kx9t81e4mquy1yyfy3etj|qty=20|vol=none",
         "offers": 4,
         "pharmacies": [
           "araucomed",
@@ -717,12 +704,12 @@
         ]
       },
       {
-        "productId": "CFM-M-eno6mxwrsozwjkqq4rk2cfbr8",
+        "provisionalProductKey": "PROV-M-50sx8psg05owklpelf2gk7mu1",
         "brand": "Tapsin",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+paracetamol+tapsin|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-5ajvneg5fjyvjh6zw2kbon0bx|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 3,
         "pharmacies": [
           "salcobrand"
@@ -732,12 +719,12 @@
         ]
       },
       {
-        "productId": "CFM-M-5doam7atn6bq6e4gj9dbyzyel",
+        "provisionalProductKey": "PROV-M-903kdbs207d5rqappt316e2l9",
         "brand": "Tapsin",
         "variant": "duo",
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 3,
         "pharmacies": [
           "cruz-verde"
@@ -747,12 +734,12 @@
         ]
       },
       {
-        "productId": "CFM-M-3lbwgyab3ssf3uo7yuews5hjt",
+        "provisionalProductKey": "PROV-M-4w88394ptqr5fwxuv5yzud3tj",
         "brand": "Tapsin",
         "variant": "instaflu",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=paracetamol+pseudoefedrina|conc=conc:mass:500mg|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-esqwm3kd5lkpanvl6ihr5j5y1|qty=1|vol=?",
+        "conceptSignature": "ing=paracetamol+pseudoefedrina|disc=none|conc=conc:mass:500mg|form=liquido-oral|route=oral|unit=sobre",
+        "presentationSignature": "concept=PROV-C-09nhvhepdya0ze9vs7zfl7174|qty=1|vol=?",
         "offers": 3,
         "pharmacies": [
           "dr-simi"
@@ -762,12 +749,12 @@
         ]
       },
       {
-        "productId": "CFM-M-91dywxjpgnzkglya20zwgshy6",
+        "provisionalProductKey": "PROV-M-8slq2y38f3trneah9vh7fv0lz",
         "brand": "Tapsin",
         "variant": "puro",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=paracetamol|conc=conc:mass:500mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-4cq5syvx92r4awzhdy9nk7b03|qty=16|vol=none",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:mass:500mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-dbss9ahxw9lb46oqoyy9zpq0q|qty=16|vol=none",
         "offers": 3,
         "pharmacies": [
           "farmex"
@@ -777,12 +764,12 @@
         ]
       },
       {
-        "productId": "CFM-M-3ew1gd14605nt1n4s77yv5eqg",
+        "provisionalProductKey": "PROV-M-553ui7yeddo0jl9d80bhewcy2",
         "brand": "Tapsin",
         "variant": null,
         "manufacturer": "Maver",
-        "conceptSignature": "ing=paracetamol|conc=conc:mass:500mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-4cq5syvx92r4awzhdy9nk7b03|qty=24|vol=none",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:mass:500mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-dbss9ahxw9lb46oqoyy9zpq0q|qty=24|vol=none",
         "offers": 3,
         "pharmacies": [
           "dr-simi"
@@ -792,12 +779,12 @@
         ]
       },
       {
-        "productId": "CFM-M-36kzy2xc6gry075wobox3filn",
+        "provisionalProductKey": "PROV-M-2pbfegkd1nbg25rtvatc6nsa4",
         "brand": null,
         "variant": "puro",
         "manufacturer": null,
-        "conceptSignature": "ing=tapsin|conc=conc:mass:500mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-eq8y39vf8w8ppriqsebyvu3dh|qty=24|vol=none",
+        "conceptSignature": "ing=?|disc=tapsin|conc=conc:mass:500mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-d6ktlkngwdzqxlefsj7mlgibd|qty=24|vol=none",
         "offers": 3,
         "pharmacies": [
           "ahumada"
@@ -807,12 +794,12 @@
         ]
       },
       {
-        "productId": "CFM-M-dq2sa9ynwmakpv0vp5lp19r89",
+        "provisionalProductKey": "PROV-M-6p6lfp4b9rqp8pkyvveu1c40v",
         "brand": null,
         "variant": "forte",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=tapsin|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-59ew0lfqswh7d64yft50r9ro3|qty=30|vol=none",
+        "conceptSignature": "ing=?|disc=tapsin|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-19s9kx9t81e4mquy1yyfy3etj|qty=30|vol=none",
         "offers": 3,
         "pharmacies": [
           "araucomed"
@@ -822,12 +809,12 @@
         ]
       },
       {
-        "productId": "CFM-M-0g1xo2m9cfsk9ovga0rvb9b64",
+        "provisionalProductKey": "PROV-M-b2y3ms4pdkbbzulv3e2x52ci9",
         "brand": "Tapsin Forte",
         "variant": "forte",
         "manufacturer": null,
-        "conceptSignature": "ing=paracetamol|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-57rr198m6w4pgnjtu2b8owsjp|qty=20|vol=none",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-1byjldr0m32sje9tr01rfw98s|qty=20|vol=none",
         "offers": 3,
         "pharmacies": [
           "salcobrand"
@@ -837,12 +824,12 @@
         ]
       },
       {
-        "productId": "CFM-M-8xgyczhjl1wwgsscejzv0s3ft",
+        "provisionalProductKey": "PROV-M-6lw76cvmcewc61dgqj0iaajdn",
         "brand": "Tapsin",
         "variant": "limonada",
         "manufacturer": null,
-        "conceptSignature": "ing=paracetamol|conc=conc:mass:5000mg|form=?",
-        "presentationSignature": "concept=CFM-C-67tu8fmsxqmq5990zoss22m44|qty=?|vol=?",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:mass:5000mg|form=?|route=?|unit=?",
+        "presentationSignature": "concept=PROV-C-1qzdfsp5d4gw8i2ss6cpgffxh|qty=?|vol=?",
         "offers": 3,
         "pharmacies": [
           "salcobrand"
@@ -852,12 +839,12 @@
         ]
       },
       {
-        "productId": "CFM-M-clrrmqpfo3intlwcedo5o59kv",
+        "provisionalProductKey": "PROV-M-35v4o35qm9lq3kes4pqemks5u",
         "brand": "Tapsin",
         "variant": "infantil",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=paracetamol|conc=conc:mass:160mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bg65744nhsv5i3cai85iq82up|qty=16|vol=none",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:mass:160mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-69epma2srhpi1m3r15iajcfpk|qty=16|vol=none",
         "offers": 3,
         "pharmacies": [
           "dr-simi"
@@ -867,12 +854,12 @@
         ]
       },
       {
-        "productId": "CFM-M-ap884dmojwl1vsgmlwto3284n",
+        "provisionalProductKey": "PROV-M-08i7dmr0f199qcaf9cfv9eqve",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=tapsin|conc=conc:mass:160mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-5u92sucg978o3qr7bu47j5wyf|qty=16|vol=none",
+        "conceptSignature": "ing=?|disc=tapsin|conc=conc:mass:160mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-ey3mwk672q9flwii2dbouo2y3|qty=16|vol=none",
         "offers": 3,
         "pharmacies": [
           "ahumada"
@@ -882,12 +869,12 @@
         ]
       },
       {
-        "productId": "CFM-M-cxo3i6tkonvgcg9celp7y1gan",
+        "provisionalProductKey": "PROV-M-1g0ts49tf6od1ocq4xok6cuzx",
         "brand": "Tapsin",
         "variant": "infantil",
         "manufacturer": null,
-        "conceptSignature": "ing=paracetamol|conc=conc:?|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-6oner1my1t0etgjunuvccc7sy|qty=?|vol=15ml",
+        "conceptSignature": "ing=paracetamol|disc=none|conc=conc:?|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-a02khzvmfowpn9rws3nkryrx1|qty=?|vol=15ml",
         "offers": 3,
         "pharmacies": [
           "salcobrand"
@@ -897,12 +884,12 @@
         ]
       },
       {
-        "productId": "CFM-M-0d95m5lzh2dpa7o0cmizxiqj6",
+        "provisionalProductKey": "PROV-M-4ycgi9ioc2vgq2eqc7u4y4tax",
         "brand": null,
         "variant": "infantil",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=tapsin|conc=conc:ratio:24mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4a3h46vowz4ut986rota9h5ia|qty=?|vol=100ml",
+        "conceptSignature": "ing=?|disc=tapsin|conc=conc:ratio:24mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-3p6v8kx5rou7jhotqbj6eiats|qty=?|vol=100ml",
         "offers": 3,
         "pharmacies": [
           "araucomed"
@@ -917,19 +904,19 @@
     "offers": 194,
     "v1Cards": 166,
     "v1PresentationKeys": 78,
-    "v2Concepts": 14,
-    "v2Presentations": 20,
-    "v2Products": 64,
+    "v2Concepts": 18,
+    "v2Presentations": 25,
+    "v2Products": 67,
     "pharmacies": 9,
     "productBreakdown": [
       {
-        "productId": "CFM-M-e3b4mgdl12dglo4vzvon2g8on",
+        "provisionalProductKey": "PROV-M-0ed0x8j0hcvhpshpbsh0k05og",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=20|vol=none",
-        "offers": 16,
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:400mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-cql9kxd6aacgio4ukgq8v4ldh|qty=20|vol=none",
+        "offers": 14,
         "pharmacies": [
           "farmex",
           "easyfarma",
@@ -949,13 +936,13 @@
         ]
       },
       {
-        "productId": "CFM-M-30ox041m4okv5ufc5tz4ldoyq",
+        "provisionalProductKey": "PROV-M-9s59bbw6xtejurv9st123aktn",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=20|vol=none",
-        "offers": 10,
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:600mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-60b6f875qma74u8plwmbypgrb|qty=20|vol=none",
+        "offers": 8,
         "pharmacies": [
           "easyfarma",
           "ahumada",
@@ -964,19 +951,18 @@
         ],
         "names": [
           "Ibuprofeno 600 Mg 20 Comp....",
-          "Ibuprofeno 600 mg  x 20",
           "Ibuprofeno 600 mg x 20 Comprimidos Recubiertos OPKO CHILE S.A.",
           "Ibuprofeno 600 mg 20 Comprimidos",
           "Ibuprofeno (B) 600mg 20 Comprimidos"
         ]
       },
       {
-        "productId": "CFM-M-ek3dhvvkwczpjogqialgatk1j",
+        "provisionalProductKey": "PROV-M-c5p9fkfg7jxej56aye3z2li8w",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:200mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-3gchl0xnz92ft7phq58dp57du|qty=20|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:200mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-bgcl9bzaooovizlombt3a20er|qty=20|vol=none",
         "offers": 8,
         "pharmacies": [
           "ahumada",
@@ -992,12 +978,12 @@
         ]
       },
       {
-        "productId": "CFM-M-0zbfdv2i8qcir04hamztfobm3",
+        "provisionalProductKey": "PROV-M-ek33hc9o88xhbs9u3pxmku20u",
         "brand": "Ibucalm",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=10|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:400mg|form=capsula|route=oral|unit=capsula",
+        "presentationSignature": "concept=PROV-C-dd5lh8bhy044yy0nhkfs00mad|qty=10|vol=none",
         "offers": 6,
         "pharmacies": [
           "ahumada",
@@ -1011,12 +997,12 @@
         ]
       },
       {
-        "productId": "CFM-M-d7yhufxzrov1hzuu2eij9048u",
+        "provisionalProductKey": "PROV-M-ebpw1byae978l1vjxayi1w30f",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:ratio:40mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-ata3d2tejgj3ujxkntu2e7eco|qty=?|vol=100ml",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:ratio:40mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-78499ni4gsu6lpbjk7yfyy1en|qty=?|vol=100ml",
         "offers": 6,
         "pharmacies": [
           "ecofarmacias",
@@ -1029,12 +1015,12 @@
         ]
       },
       {
-        "productId": "CFM-M-44wyoks8ub2xgo276uvkw4mud",
+        "provisionalProductKey": "PROV-M-08zsheyc45v7039zl0mxkhtiz",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:ratio:20mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-6xq5w6blzsfd9e1s21yyyhl0e|qty=?|vol=100ml",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:ratio:20mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-1h9vydq0du16lhd9czt9ee3l5|qty=?|vol=100ml",
         "offers": 6,
         "pharmacies": [
           "ecofarmacias",
@@ -1048,12 +1034,12 @@
         ]
       },
       {
-        "productId": "CFM-M-c1sf3thtmc7zhng3wgi7yui6p",
+        "provisionalProductKey": "PROV-M-9dhxugnyzxuzf6lbw2ek4u8ho",
         "brand": "Ibucalm",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=10|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:600mg|form=capsula|route=oral|unit=capsula",
+        "presentationSignature": "concept=PROV-C-8mm22okbjtd0fcmch9mysyxvb|qty=10|vol=none",
         "offers": 6,
         "pharmacies": [
           "ecofarmacias",
@@ -1067,12 +1053,12 @@
         ]
       },
       {
-        "productId": "CFM-M-2ni1q204h0vce8fma36vljeny",
+        "provisionalProductKey": "PROV-M-elss254vodl3l16riqmxtk0oe",
         "brand": "Tapsin",
         "variant": "duo",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 5,
         "pharmacies": [
           "dr-simi"
@@ -1082,12 +1068,12 @@
         ]
       },
       {
-        "productId": "CFM-M-45iqp1w2tpskz9xruqccot8dn",
+        "provisionalProductKey": "PROV-M-e79vhzex972dthnbx2mnc70ly",
         "brand": "Actron",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=10|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:400mg|form=capsula|route=oral|unit=capsula",
+        "presentationSignature": "concept=PROV-C-dd5lh8bhy044yy0nhkfs00mad|qty=10|vol=none",
         "offers": 4,
         "pharmacies": [
           "salcobrand",
@@ -1099,12 +1085,12 @@
         ]
       },
       {
-        "productId": "CFM-M-3pw5zkavhdm1ql9zfb5xatxpn",
+        "provisionalProductKey": "PROV-M-e78b2jgnrhxd1vpawpa8ttk3c",
         "brand": "Actron",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=20|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:400mg|form=capsula|route=oral|unit=capsula",
+        "presentationSignature": "concept=PROV-C-dd5lh8bhy044yy0nhkfs00mad|qty=20|vol=none",
         "offers": 4,
         "pharmacies": [
           "salcobrand",
@@ -1116,12 +1102,12 @@
         ]
       },
       {
-        "productId": "CFM-M-529cilwv2gvd1ujx1ni2via1l",
+        "provisionalProductKey": "PROV-M-5b7fmnw3a7wq5k4l2nti7fyri",
         "brand": "Kitadol Duo",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+kitadol+paracetamol|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bqp56y5oi96nxzsuii4kmxii4|qty=10|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=10|vol=none",
         "offers": 4,
         "pharmacies": [
           "salcobrand"
@@ -1131,12 +1117,12 @@
         ]
       },
       {
-        "productId": "CFM-M-3cx9yhgu6bz4k2xaw5sxphds7",
+        "provisionalProductKey": "PROV-M-9r0bswcu9w1tr8y7w18cbzim8",
         "brand": null,
         "variant": null,
         "manufacturer": "Ascend",
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:200mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-3gchl0xnz92ft7phq58dp57du|qty=20|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:200mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-bgcl9bzaooovizlombt3a20er|qty=20|vol=none",
         "offers": 4,
         "pharmacies": [
           "dr-simi",
@@ -1148,12 +1134,12 @@
         ]
       },
       {
-        "productId": "CFM-M-4aab5mdzpxg3l2u9azh7dyjjr",
+        "provisionalProductKey": "PROV-M-9jj4o765ixd3ruydp0zp2ay5l",
         "brand": "Pyriped",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:ratio:20mg/ml|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-6xq5w6blzsfd9e1s21yyyhl0e|qty=?|vol=100ml",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:ratio:20mg/ml|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-1h9vydq0du16lhd9czt9ee3l5|qty=?|vol=100ml",
         "offers": 4,
         "pharmacies": [
           "sermecoop",
@@ -1165,12 +1151,12 @@
         ]
       },
       {
-        "productId": "CFM-M-be931kbqu9lbxn5ftmvrt3rbl",
+        "provisionalProductKey": "PROV-M-2bnzy3mz8xqla0e02g0dc80pw",
         "brand": "Actron",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=10|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:600mg|form=capsula|route=oral|unit=capsula",
+        "presentationSignature": "concept=PROV-C-8mm22okbjtd0fcmch9mysyxvb|qty=10|vol=none",
         "offers": 4,
         "pharmacies": [
           "ecofarmacias",
@@ -1182,12 +1168,12 @@
         ]
       },
       {
-        "productId": "CFM-M-eganbz4ikxhdr3zlclmxb5o1q",
+        "provisionalProductKey": "PROV-M-1mzdgzonrdlh2x7hxdppmujbv",
         "brand": "Ibupirac",
         "variant": "lc",
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=10|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:600mg|form=capsula|route=oral|unit=capsula",
+        "presentationSignature": "concept=PROV-C-8mm22okbjtd0fcmch9mysyxvb|qty=10|vol=none",
         "offers": 4,
         "pharmacies": [
           "sermecoop",
@@ -1199,29 +1185,12 @@
         ]
       },
       {
-        "productId": "CFM-M-dik56097847kw9lf66szsofca",
-        "brand": "Dolorub",
-        "variant": null,
-        "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:60000mg|form=topical",
-        "presentationSignature": "concept=CFM-C-ed2vdtasjhpvxc5txujpyoqui|qty=?|vol=?",
-        "offers": 4,
-        "pharmacies": [
-          "ecofarmacias",
-          "cruz-verde"
-        ],
-        "names": [
-          "Dolorub Ibuprofeno Gel 60g DESCUENTO",
-          "Dolorub Ibuprofeno 5% Crema Tópica 60 gr"
-        ]
-      },
-      {
-        "productId": "CFM-M-2ek6so0v6ode4px5nm2ueiz26",
+        "provisionalProductKey": "PROV-M-8hg7n0yr2srpirxces5lmwmju",
         "brand": "Ibucalm",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:600mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-dbkvfo2hva99zelt94br9gg3q|qty=20|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:600mg|form=capsula|route=oral|unit=capsula",
+        "presentationSignature": "concept=PROV-C-8mm22okbjtd0fcmch9mysyxvb|qty=20|vol=none",
         "offers": 4,
         "pharmacies": [
           "ecofarmacias",
@@ -1233,12 +1202,12 @@
         ]
       },
       {
-        "productId": "CFM-M-eno6mxwrsozwjkqq4rk2cfbr8",
+        "provisionalProductKey": "PROV-M-50sx8psg05owklpelf2gk7mu1",
         "brand": "Tapsin",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+paracetamol+tapsin|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-5ajvneg5fjyvjh6zw2kbon0bx|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 3,
         "pharmacies": [
           "salcobrand"
@@ -1248,12 +1217,12 @@
         ]
       },
       {
-        "productId": "CFM-M-5doam7atn6bq6e4gj9dbyzyel",
+        "provisionalProductKey": "PROV-M-903kdbs207d5rqappt316e2l9",
         "brand": "Tapsin",
         "variant": "duo",
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 3,
         "pharmacies": [
           "cruz-verde"
@@ -1263,18 +1232,33 @@
         ]
       },
       {
-        "productId": "CFM-M-b8v2t2reu829yozc05tq9dqc2",
+        "provisionalProductKey": "PROV-M-d5i46chw1jn00mp4hs4lnshgd",
         "brand": null,
         "variant": null,
         "manufacturer": "Laboratorio Chile",
-        "conceptSignature": "ing=ibuprofeno|conc=conc:mass:400mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-f1549tln2sz07iuqc3gudnrhw|qty=20|vol=none",
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:400mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-cql9kxd6aacgio4ukgq8v4ldh|qty=20|vol=none",
         "offers": 2,
         "pharmacies": [
           "araucomed"
         ],
         "names": [
           "Ibuprofeno 400 mg x 20 comprimidos. (Chile)"
+        ]
+      },
+      {
+        "provisionalProductKey": "PROV-M-b80f7f1zwi6fufat4foqgx22l",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:400mg|form=?|route=?|unit=?",
+        "presentationSignature": "concept=PROV-C-8a7ja9df2ckfi1xoforzz6coy|qty=20|vol=?",
+        "offers": 2,
+        "pharmacies": [
+          "easyfarma"
+        ],
+        "names": [
+          "Ibuprofeno 400 mg x 20"
         ]
       }
     ]
@@ -1283,36 +1267,38 @@
     "offers": 131,
     "v1Cards": 125,
     "v1PresentationKeys": 88,
-    "v2Concepts": 46,
-    "v2Presentations": 57,
-    "v2Products": 80,
+    "v2Concepts": 35,
+    "v2Presentations": 49,
+    "v2Products": 79,
     "pharmacies": 9,
     "productBreakdown": [
       {
-        "productId": "CFM-M-1rfv678hki788l2s6rgys85b2",
+        "provisionalProductKey": "PROV-M-6rr0pxhvllx4e14qpcyowwvih",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
-        "offers": 6,
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-emaxo0srf9djkdgyc7hcavltl|qty=30|vol=none",
+        "offers": 8,
         "pharmacies": [
           "ecofarmacias",
-          "ahumada"
+          "ahumada",
+          "cruz-verde"
         ],
         "names": [
           "Losartan Potásico + Hidroclorotiazida 50 mg/12.5 mg x 30 comp.",
           "Losartan/Hidroclorotiazida 50 mg/12.5 mg x 30 Comprimidos Recubiertos ASCEND",
-          "Losartan 50 mg / Hidroclorotiazida 12.5 mg x 30 Comp."
+          "Losartan 50 mg / Hidroclorotiazida 12.5 mg x 30 Comp.",
+          "Hyzaar Losartan / Hidroclorotiazida 50 mg / 12,5 mg 30 Comprimidos"
         ]
       },
       {
-        "productId": "CFM-M-2ni1q204h0vce8fma36vljeny",
+        "provisionalProductKey": "PROV-M-elss254vodl3l16riqmxtk0oe",
         "brand": "Tapsin",
         "variant": "duo",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 5,
         "pharmacies": [
           "dr-simi"
@@ -1322,12 +1308,12 @@
         ]
       },
       {
-        "productId": "CFM-M-529cilwv2gvd1ujx1ni2via1l",
+        "provisionalProductKey": "PROV-M-5b7fmnw3a7wq5k4l2nti7fyri",
         "brand": "Kitadol Duo",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+kitadol+paracetamol|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bqp56y5oi96nxzsuii4kmxii4|qty=10|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=10|vol=none",
         "offers": 4,
         "pharmacies": [
           "salcobrand"
@@ -1337,12 +1323,12 @@
         ]
       },
       {
-        "productId": "CFM-M-0nfgzxkimqwl77fs1pvdkstrq",
+        "provisionalProductKey": "PROV-M-1i6yqkjwd58822qwp27x8py7v",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bhjashc16kd5bzfq0pz47z85q|qty=30|vol=none",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-58l6f9e88ngz36hdvg4enj7sf|qty=30|vol=none",
         "offers": 4,
         "pharmacies": [
           "ecofarmacias",
@@ -1354,12 +1340,12 @@
         ]
       },
       {
-        "productId": "CFM-M-2qzc80vwqmnl6x2t0n3iy86ge",
+        "provisionalProductKey": "PROV-M-7ynihycqmt01ifvebsvd5365f",
         "brand": "Hyzaar",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=hidroclorotiazida+hyzaar+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-7cqb5gck6ebybebyfbj2ocogy|qty=30|vol=none",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-58l6f9e88ngz36hdvg4enj7sf|qty=30|vol=none",
         "offers": 4,
         "pharmacies": [
           "salcobrand"
@@ -1370,30 +1356,30 @@
         ]
       },
       {
-        "productId": "CFM-M-3yfx5nolom2sh27wx6snvtstz",
+        "provisionalProductKey": "PROV-M-55v5nvlxbmnr87apzmoy5x2u4",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina+clavulanico|conc=conc:mass:57mg|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-4uh5yaxnety3ptc064t4ri00l|qty=?|vol=70ml",
+        "conceptSignature": "ing=diclofenaco+tramadol|disc=none|conc=conc:mass:25mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-7w1hzdjfpvjjozwjs7r1yhesl|qty=10|vol=none",
         "offers": 3,
         "pharmacies": [
           "ecofarmacias",
-          "sermecoop"
+          "cruz-verde"
         ],
         "names": [
-          "Amoxicilina / Ácido Clavulánico 250/62,5 Polvo Para Suspensión Oral",
-          "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml",
-          "Amoxicilina/Ácido Clavulánico Suspension 400/57 Mg X 70 Ml"
+          "Adorlan 25/25 x 10 Comprimidos (Diclofenaco/Tramadol)",
+          "Dolodrin Diclofenaco 25 Mg / Tramadol 25 Mg x 10 Comprimidos",
+          "Dolodrin Diclofenaco 25 Mg / Tramadol 25 Mg 10 Comprimidos"
         ]
       },
       {
-        "productId": "CFM-M-eno6mxwrsozwjkqq4rk2cfbr8",
+        "provisionalProductKey": "PROV-M-50sx8psg05owklpelf2gk7mu1",
         "brand": "Tapsin",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+paracetamol+tapsin|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-5ajvneg5fjyvjh6zw2kbon0bx|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 3,
         "pharmacies": [
           "salcobrand"
@@ -1403,12 +1389,12 @@
         ]
       },
       {
-        "productId": "CFM-M-5doam7atn6bq6e4gj9dbyzyel",
+        "provisionalProductKey": "PROV-M-903kdbs207d5rqappt316e2l9",
         "brand": "Tapsin",
         "variant": "duo",
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+paracetamol|conc=conc:mass:300mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-bveanpvyhh5vjlxlp4sto1127|qty=12|vol=none",
+        "conceptSignature": "ing=ibuprofeno+paracetamol|disc=none|conc=conc:mass:300mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-78xep6z8ijde04ygqzc73lzue|qty=12|vol=none",
         "offers": 3,
         "pharmacies": [
           "cruz-verde"
@@ -1418,12 +1404,12 @@
         ]
       },
       {
-        "productId": "CFM-M-3lbwgyab3ssf3uo7yuews5hjt",
+        "provisionalProductKey": "PROV-M-4w88394ptqr5fwxuv5yzud3tj",
         "brand": "Tapsin",
         "variant": "instaflu",
         "manufacturer": "Maver",
-        "conceptSignature": "ing=paracetamol+pseudoefedrina|conc=conc:mass:500mg|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-esqwm3kd5lkpanvl6ihr5j5y1|qty=1|vol=?",
+        "conceptSignature": "ing=paracetamol+pseudoefedrina|disc=none|conc=conc:mass:500mg|form=liquido-oral|route=oral|unit=sobre",
+        "presentationSignature": "concept=PROV-C-09nhvhepdya0ze9vs7zfl7174|qty=1|vol=?",
         "offers": 3,
         "pharmacies": [
           "dr-simi"
@@ -1433,12 +1419,12 @@
         ]
       },
       {
-        "productId": "CFM-M-1hsxwwqtdckuoxdp5r4o1jnpx",
+        "provisionalProductKey": "PROV-M-3id6r8jxbs402kb4vlhisp6yy",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=paracetamol+tramadol|conc=conc:?|form=?",
-        "presentationSignature": "concept=CFM-C-c6o03cfc761uek7kak68gnmkt|qty=?|vol=?",
+        "conceptSignature": "ing=paracetamol+tramadol|disc=none|conc=conc:?|form=?|route=?|unit=?",
+        "presentationSignature": "concept=PROV-C-epfixbpw74i76v563i8rfyf5g|qty=?|vol=?",
         "offers": 3,
         "pharmacies": [
           "easyfarma"
@@ -1448,12 +1434,12 @@
         ]
       },
       {
-        "productId": "CFM-M-adollp71houyc7o3vzj9uwy20",
+        "provisionalProductKey": "PROV-M-b2anux9ic9nnoscgn50hnfr58",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina+clavulanico|conc=conc:mass:500mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-5w3a3i37h4lsvx3epkseqk9ml|qty=20|vol=none",
+        "conceptSignature": "ing=acido+amoxicilina+clavulanico|disc=none|conc=conc:mass:500mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-4tx0u9ydjkfrn78ts9ze6o6hw|qty=20|vol=none",
         "offers": 2,
         "pharmacies": [
           "sermecoop",
@@ -1465,12 +1451,12 @@
         ]
       },
       {
-        "productId": "CFM-M-1m7p55pqstqhds2001tmnwtln",
+        "provisionalProductKey": "PROV-M-bdqzxojmmutqtsn0tzci03l4y",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina+clavulanico|conc=conc:?|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-4n8a41o2cb7x7e75d8w4ktr3v|qty=20|vol=none",
+        "conceptSignature": "ing=acido+amoxicilina+clavulanico|disc=none|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-8ki0xt0xqiaiu3lith53oc3z6|qty=20|vol=none",
         "offers": 2,
         "pharmacies": [
           "ecofarmacias",
@@ -1482,12 +1468,12 @@
         ]
       },
       {
-        "productId": "CFM-M-7en42q1pc701uh1b8f0afvwg6",
+        "provisionalProductKey": "PROV-M-9lpdzy54grjkpp1w8dozp3zg3",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina|conc=conc:?|form=?",
-        "presentationSignature": "concept=CFM-C-a1ogqhgblbp5p8t85a22khh3g|qty=?|vol=?",
+        "conceptSignature": "ing=acido+amoxicilina|disc=none|conc=conc:?|form=?|route=?|unit=?",
+        "presentationSignature": "concept=PROV-C-6e48rb3k7vjm10k3sq8edo7yl|qty=?|vol=?",
         "offers": 2,
         "pharmacies": [
           "easyfarma"
@@ -1498,12 +1484,29 @@
         ]
       },
       {
-        "productId": "CFM-M-bo3bn193zd8s83pgqyznn0pvg",
+        "provisionalProductKey": "PROV-M-890wp6g6fto47vi7ozhj2wnnu",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina+clavulanico|conc=conc:mass:875mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-2iuoo0y6slpo695x2xkvrjwoy|qty=20|vol=none",
+        "conceptSignature": "ing=acido+amoxicilina+clavulanico|disc=none|conc=conc:mass:57mg|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-9nbxkaprq7tc8f95t36jb5q5u|qty=?|vol=70ml",
+        "offers": 2,
+        "pharmacies": [
+          "ecofarmacias",
+          "sermecoop"
+        ],
+        "names": [
+          "Amoxicilina Acido Clavulanico 400/57mg Suspensión oral 70ml",
+          "Amoxicilina/Ácido Clavulánico Suspension 400/57 Mg X 70 Ml"
+        ]
+      },
+      {
+        "provisionalProductKey": "PROV-M-7l1nk7zc13wo91ry0btf8ba2f",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=acido+amoxicilina+clavulanico|disc=none|conc=conc:mass:875mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5qexccbd65ccv5k291fc81lsj|qty=20|vol=none",
         "offers": 2,
         "pharmacies": [
           "ecofarmacias",
@@ -1515,29 +1518,12 @@
         ]
       },
       {
-        "productId": "CFM-M-dv16nc86trev9fosvqtsaiich",
-        "brand": null,
-        "variant": null,
-        "manufacturer": null,
-        "conceptSignature": "ing=diclofenaco+dolodrin+tramadol|conc=conc:mass:25mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-98hgv5tzgem3h0cq9m3wwy1mm|qty=10|vol=none",
-        "offers": 2,
-        "pharmacies": [
-          "ecofarmacias",
-          "cruz-verde"
-        ],
-        "names": [
-          "Dolodrin Diclofenaco 25 Mg / Tramadol 25 Mg x 10 Comprimidos",
-          "Dolodrin Diclofenaco 25 Mg / Tramadol 25 Mg 10 Comprimidos"
-        ]
-      },
-      {
-        "productId": "CFM-M-2whre6007bqn9dea6fzs2591a",
+        "provisionalProductKey": "PROV-M-0teej9onswiytqcm6zoca5d78",
         "brand": "Pro-Lertus",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=colestiramina+diclofenaco|conc=conc:mass:140mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-349wt0fatlvkbk9tlsazbpq5d|qty=10|vol=none",
+        "conceptSignature": "ing=colestiramina+diclofenaco|disc=none|conc=conc:mass:140mg|form=capsula|route=oral|unit=capsula",
+        "presentationSignature": "concept=PROV-C-1is6rxd2ls274waktldm6pizc|qty=10|vol=none",
         "offers": 2,
         "pharmacies": [
           "salcobrand",
@@ -1549,12 +1535,12 @@
         ]
       },
       {
-        "productId": "CFM-M-52mz6wq6mnlebwqz96yom36wy",
+        "provisionalProductKey": "PROV-M-2um9vglql638ybibivnn91eon",
         "brand": "Pironal",
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=ibuprofeno+pironal+pseudoefedrina|conc=conc:?|form=fluid-oral",
-        "presentationSignature": "concept=CFM-C-8z2vuls3skwjpwbp0fort2unp|qty=?|vol=100ml",
+        "conceptSignature": "ing=ibuprofeno+pseudoefedrina|disc=none|conc=conc:?|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-0ddn960141dukez34ocxbmaji|qty=?|vol=100ml",
         "offers": 2,
         "pharmacies": [
           "salcobrand"
@@ -1564,12 +1550,12 @@
         ]
       },
       {
-        "productId": "CFM-M-8vqzvpcrp7wxt6rq1xrume04e",
+        "provisionalProductKey": "PROV-M-bzqwlnafpn7sdo6ezh396l49l",
         "brand": null,
         "variant": null,
         "manufacturer": "Ascend",
-        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-emaxo0srf9djkdgyc7hcavltl|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "farmex"
@@ -1579,12 +1565,12 @@
         ]
       },
       {
-        "productId": "CFM-M-a4wsj2g3xngevhkz72ne5gnmr",
+        "provisionalProductKey": "PROV-M-dpo59yq60iqrkpq9ypfzl459w",
         "brand": null,
         "variant": null,
         "manufacturer": "Opko",
-        "conceptSignature": "ing=hidroclorotiazida+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-0bz1opxl1llzhebwkany2tp48|qty=30|vol=none",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-emaxo0srf9djkdgyc7hcavltl|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
           "farmex"
@@ -1594,18 +1580,18 @@
         ]
       },
       {
-        "productId": "CFM-M-82t85zky79k6m1uf7lv5waz7i",
+        "provisionalProductKey": "PROV-M-cuhujn9f6x04ndnrmd2tzts3d",
         "brand": null,
         "variant": null,
-        "manufacturer": null,
-        "conceptSignature": "ing=hidroclorotiazida+hyzaar+losartan|conc=conc:mass:50mg|form=solid-oral",
-        "presentationSignature": "concept=CFM-C-7cqb5gck6ebybebyfbj2ocogy|qty=30|vol=none",
+        "manufacturer": "Eurofarma",
+        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:?|form=comprimido|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-ectq41uhjcdiu7wvctd7sdd1p|qty=30|vol=none",
         "offers": 2,
         "pharmacies": [
-          "cruz-verde"
+          "araucomed"
         ],
         "names": [
-          "Hyzaar Losartan / Hidroclorotiazida 50 mg / 12,5 mg 30 Comprimidos"
+          "Losartan Hidroclorotiazida 50/12,5 x30com (Eurofarma)"
         ]
       }
     ]

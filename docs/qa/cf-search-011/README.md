@@ -45,7 +45,17 @@ comportamiento. Se verifica con los 379 tests preexistentes de
 | `V1_V2_COMPARISON.md` | Clasificación de las diferencias v1↔v2 y los cinco casos de control |
 | `S0_METRICS.md` | Todas las métricas exigidas por §20 del ticket |
 | `S0_FAILURES.md` | Los defectos que S0 encontró — incluidos los que S0 no puede resolver |
-| `DECISION.md` | Los tres gates y el veredicto, sin ambigüedad |
+| `DECISION.md` | Los tres gates, los 4 puntos de contrato semántico, y el veredicto, sin ambigüedad |
+
+**Revisión CTO del PR #159 (2026-09-02).** S0 se reejecutó ENTERO —corpus,
+gates y casos de control— después de corregir los tres bloqueantes de contrato
+semántico: granularidad de la Forma Farmacéutica y ausencia de Vía y Unidad en la
+firma del concepto (`S0_FAILURES.md` §7), cabecera no resuelta tipada como
+principio activo (§8) y claves de S0 ocupando el espacio de nombres `CFM-` (§9).
+Ninguna métrica se reutiliza de la entrega anterior; donde una cifra cambió, los
+documentos muestran OLD → NEW → POR QUÉ. La investigación de estabilidad
+contextual que la revisión exigió está en `S0_METRICS.md` §8, con la evidencia
+oferta por oferta en `analysis/context-stability.json`.
 
 ---
 

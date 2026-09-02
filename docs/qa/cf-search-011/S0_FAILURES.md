@@ -8,6 +8,10 @@ Los dos primeros son defectos **del motor v2** que el corpus destapó y que se
 corrigieron estructuralmente. Los dos siguientes son **limitaciones que S0 no
 resuelve** y que quedan medidas.
 
+Los §7 a §9 son los **tres defectos de contrato semántico** que la revisión CTO
+del PR #159 identificó, con su corrección y la evidencia sobre el corpus. El §10
+es un defecto residual que la reejecución destapó y que **no** se corrige en S0.
+
 ---
 
 ## 1. Un genérico absorbido dentro de una marca — CORREGIDO
@@ -164,11 +168,12 @@ El desempate natural —"adulto" vs "pediátrico"— no está disponible: `adult
 (§4 del ticket). Y aunque pudiera, la variante comercial no participa —ni debe—
 de la identidad del CONCEPTO (invariante 1).
 
-**Impacto medido:** 3 pares distintos (7 instancias consulta×par) contra 748
-`MERGE_FIXED`. Relación 107 a 1.
+**Impacto medido:** 3 pares distintos (7 instancias consulta×par) contra 639
+`MERGE_FIXED`. Relación 91 a 1. (Antes de la revisión: 7 contra 748, 107 a 1.)
 
-**Alcance real del fenómeno:** 212 ofertas (13,0 %) resuelven su concepto como
-`ambiguous`. Es la métrica que hay que vigilar en S1.
+**Alcance real del fenómeno:** 240 ofertas (14,7 %) resuelven su concepto como
+`ambiguous` — antes 212 (13,0 %). Sube porque la firma tiene más ejes y por lo
+tanto más lecturas resultan incompletas. Es la métrica que hay que vigilar en S1.
 
 **FOLLOW_UP:** es exactamente lo que resuelve el registro persistido — la
 asignación se decide una vez y se recupera, en vez de recalcularse sin evidencia
@@ -180,7 +185,9 @@ registro dispone"*).
 ## 5. Techo de calidad: el vocabulario de moléculas
 
 **598 ofertas (36,6 %) no tienen ningún principio activo demostrable** y resuelven
-su concepto con una cabecera `unresolved-head`.
+su concepto con un `unresolvedIdentityDiscriminator` — sin cambios respecto de la
+entrega anterior: el vocabulario de moléculas no se tocó. Lo que sí cambió es que
+ese token ya **no** se publica como principio activo (§8).
 
 Causa única: `COMPOSITION_VOCABULARY` (CF-DATA-001) cubre **34 moléculas**
 derivadas de una medición reproducible, no la farmacopea chilena. Una molécula
@@ -204,11 +211,135 @@ identidad científica.
 
 | # | Deuda | Impacto hoy | Dónde se resuelve |
 |---|---|---|---|
-| D1 | Sin registro persistido: la resolución depende del conjunto presente | 0,12 % de los `conceptId` cambian entre contexto corpus y contexto consulta | S1 |
-| D2 | Resolución O(n²) sobre firmas distintas | 11,3 ms p95 — irrelevante hoy | S1 (consulta indexada) |
+| D1 | Sin registro persistido: la resolución depende del conjunto presente | 0,1225 % de las claves de concepto cambian entre contexto corpus y contexto consulta (2 ofertas, atribuidas una por una en `S0_METRICS.md` §8). La firma CRUDA es 100 % estable | S1 |
+| D2 | Resolución O(n²) sobre firmas distintas | 12,5 ms p95 — irrelevante hoy | S1 (consulta indexada) |
 | D3 | No hay subsunción encadenada entre firmas parciales | conservador: como mucho un split de más | S1 |
 | D4 | La concentración de una combinación es la del primer principio activo (`ing=hidroclorotiazida+losartan\|conc=mass:50mg`) | no separa dos combinaciones que difieren solo en el segundo componente | S1 — concentración por ingrediente |
-| D5 | `ophthalmic` agrupa colirio y gotas óticas (heredado de `dosageFormClass` de v1) | sin casos en el corpus | lector de forma propio de v2 |
+| D5 | ~~`ophthalmic` agrupa colirio y gotas óticas~~ | **RESUELTO** por el lector de forma canónica de v2 (`colirio` vs `gotas-oticas`, `supositorio` vs `ovulo`) | — |
 | D6 | El fabricante solo se atribuye a la oferta cuando la tarjeta v1 tiene una sola oferta | subestima la cobertura de laboratorio | S1 — el retrieval entrega el campo por oferta |
-| D7 | `sourceProductId` no lo emite ningún adaptador; se usa la URL como referencia | ninguno medido: 987 observaciones, 987 `offerId` | S1 — campo aditivo en los 9 adaptadores |
+| D7 | `sourceProductId` no lo emite ningún adaptador; se usa la URL como referencia | ninguno medido: 987 observaciones, 987 claves de oferta | S1 — campo aditivo en los 9 adaptadores |
 | D8 | Registro ISP con cobertura 0 % | el eje E1 no discrimina | CF-DATA-005 (#156), independiente |
+
+---
+
+## 7. La firma del concepto no implementaba las 5 dimensiones del EDM — CORREGIDO
+
+**Cómo apareció.** Revisión CTO del PR #159, punto 1.
+
+**Qué producía sobre el corpus.** La firma usaba `ing + conc + form`, con `form`
+tomando la clase gruesa de v1. Vía y Unidad Farmacéutica quedaban como atributos
+publicados, fuera de la identidad. Resultado medido: **45 de 303 conceptos
+agrupaban más de una forma farmacéutica fina** y **13 mezclaban más de una unidad
+farmacéutica**.
+
+```
+ing=amoxicilina|conc=conc:mass:500mg|form=solid-oral
+   araucomed    "Amoxicilina 500 mg x 21 cápsulas. (Mintlab)"
+   cruz-verde   "Amoxicilina 500 mg 21 Cápsulas"
+   sermecoop    "Amoxicilina 500mg 21 Comprimidos"      ← comprimido, no cápsula
+```
+
+El EDM enumera Comprimido y Cápsula como Formas Farmacéuticas distintas. Lo mismo
+con Dolorub 5 % crema y Dolorub 5 % gel dérmico.
+
+**Corrección.** `CanonicalDosageForm` (más fina que `dosageFormClass`, que no se
+tocó), más `route` y `unit` como ejes propios de `conceptSignature()`. Qué se
+separa y qué no está decidido con evidencia del corpus, no por aplicar la
+enumeración del EDM al pie de la letra: separar jarabe de suspensión y de
+solución habría partido 29 conceptos donde las farmacias usan los tres términos
+para el mismo artículo. Detalle completo en
+`CANONICAL_IDENTITY_IMPLEMENTATION.md` §1.1.
+
+**Resultado medido.** comprimido/cápsula **13 → 0**, crema/gel **3 → 0**,
+unidades mezcladas **13 → 0**. Conceptos 303 → 316. Gates A/B/C sin cambio.
+
+---
+
+## 8. La cabecera no resuelta estaba tipada como principio activo — CORREGIDO
+
+**Cómo apareció.** Revisión CTO del PR #159, punto 2.
+
+**Qué producía.** `readActiveIngredients()` devolvía la cabecera dentro de
+`ActiveIngredient[]` con evidencia `"unresolved-head"`, y la firma la usaba como
+`ing=tapsin` con `known=true`. "Tapsin Forte" no demuestra que "tapsin" sea una
+molécula, pero el tipo lo afirmaba y el token llegaba a `canonicalName`.
+
+**Segundo camino, el mismo defecto.** La cabecera también entraba con evidencia
+`"combination"` cada vez que `combinationKey()` reconocía una asociación. Sobre
+el corpus eso convertía la MARCA en molécula en **31 de los 32 nombres** que
+pasaban por esa rama:
+
+```
+"Tapsin Duo (B) Paracetamol / Ibuprofeno 12 Comprimidos"
+   ANTES  ing=ibuprofeno+paracetamol+tapsin
+   AHORA  ing=ibuprofeno+paracetamol
+```
+
+Afectaba también a Hyzaar, Losapres, Simperten-D, Ambilan, Clavinex, Adorlan,
+Dicasen, Dolodrin, Kitadol, Pironal, Rigotax-D y Remitex-D.
+
+**Corrección.** `ActiveIngredient.evidence` ya no admite `"unresolved-head"`; la
+cabecera vive en `unresolvedIdentityDiscriminator` y firma en un eje propio
+(`disc`), siempre declarado. Para la rama de combinación, la cabecera solo se
+acepta cuando la tipografía la coloca inmediatamente a la izquierda del
+separador. Los 2 casos donde la cabecera SÍ es el primer principio activo
+—`Tramadol Clorhidrato/Paracetamol` y `Lorsartán Potásico / Hidroclorotiazida`—
+se conservan: perderlos habría dejado una asociación indistinguible del
+monofármaco, un falso merge con riesgo clínico.
+
+**Resultado medido.** 0 de 316 conceptos afirman un principio activo y un
+discriminante a la vez. 175 conceptos declaran
+`identityStatus: "unresolved-ingredient"`. 0 nombres canónicos presentan el
+discriminante en la posición de la composición. Las protecciones de
+CF-SEARCH-001 sobre Tapsin siguen verdes.
+
+---
+
+## 9. Las claves de S0 ocupaban el espacio de nombres `CFM-` — CORREGIDO
+
+**Cómo apareció.** Revisión CTO del PR #159, punto 3.
+
+**Qué producía.** Los identificadores se emitían como `CFM-C-…`, `CFM-P-…`,
+`CFM-M-…`, `CFM-O-…` y los campos se llamaban `conceptId`, `presentationId`,
+`productId`, `offerId` — indistinguibles de los identificadores PERMANENTES que
+el EDM define. Pero son *content-addressed* sobre la firma resuelta: rotan cuando
+la firma cambia, que es exactamente lo que un `CFM-CONCEPT-ID` no puede hacer.
+
+**Corrección.** Prefijo `PROV-`, campos `provisional*Key`, función
+`provisionalKey()`. La frontera con el registro persistido de S1 está tabulada en
+`CANONICAL_IDENTITY_IMPLEMENTATION.md` §2.
+
+**Resultado medido.** 0 claves con prefijo `CFM-` emitidas por el motor.
+
+---
+
+## 10. Una asociación comparte concepto con el monofármaco — RESIDUAL, NO CORREGIDO
+
+**Cómo apareció.** Al reejecutar el corpus tras las correcciones anteriores.
+
+**Qué produce.**
+
+```
+PROV-C-7rofi0lnpsaix7r5mk5lu9rbe   ing=diclofenaco|conc=mass:25mg|form=comprimido
+   dr-simi     "Adorlan 25/25 diclofenaco 25 mg tramadol 25 mg 10 comprimidos"  ← ASOCIACIÓN
+   cruz-verde  "Lertus Diclofenaco Sodico 25 mg 20 Comprimidos"                 ← MONOFÁRMACO
+   dr-simi     "Lertus diclofenaco 25 mg 20 comprimidos con recubrimiento entérico"
+```
+
+**Causa raíz.** `combinationKey()` (v1) solo reconoce una asociación por
+adyacencia a un separador o por una razón de dosis masa/masa. "diclofenaco 25 mg
+tramadol 25 mg" no tiene ninguna de las dos, así que tramadol nunca se extrae y
+la oferta queda con `ing=diclofenaco`.
+
+**Por qué no se corrige en S0.** `combinationKey()` es v1, su valor alimenta
+`presentationKey` y los slugs de Web, y v1 es inmutable en S0 (§4 del ticket).
+Corregirlo requiere un lector de combinaciones propio de v2.
+
+**Alcance y severidad.** Es un falso merge a nivel de **CONCEPTO**, no de
+producto: la marca separa los productos (`Adorlan` vs `Lertus`), así que ninguna
+comparación de precios visible al usuario fusiona los dos. Gate C, que mide
+contradicciones intra-producto, sigue en 0. **No es una regresión de esta
+revisión**: existía igual en la entrega anterior.
+
+**FOLLOW_UP:** lector de combinaciones propio de v2, sin adyacencia obligatoria
+al separador, para S1.

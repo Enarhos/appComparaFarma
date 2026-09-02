@@ -317,9 +317,29 @@ function contradictionAxes(a, b, mode = "baseline") {
     axes.push("concentration");
   }
 
-  const formA = a.attributes.dosageForm;
-  const formB = b.attributes.dosageForm;
-  if (formA !== null && formB !== null && formA !== formB) axes.push("dosageForm");
+  // Forma Farmacéutica CANÓNICA, no la clase gruesa: si la identidad se decide
+  // con `CanonicalDosageForm`, el detector del gate tiene que mirar lo mismo o
+  // estaria midiendo con una regla mas debil que la que asigna identidad.
+  const formA = a.attributes.canonicalDosageForm;
+  const formB = b.attributes.canonicalDosageForm;
+  if (formA !== null && formB !== null && formA !== formB) axes.push("canonicalDosageForm");
+
+  const routeA = a.attributes.route;
+  const routeB = b.attributes.route;
+  if (routeA !== null && routeB !== null && routeA !== routeB) axes.push("route");
+
+  const unitA = a.attributes.pharmaceuticalUnit;
+  const unitB = b.attributes.pharmaceuticalUnit;
+  if (unitA !== null && unitB !== null && unitA !== unitB) axes.push("pharmaceuticalUnit");
+
+  // Discriminante de identidad no resuelta: `tapsin` contra `null` significa que
+  // una observacion desconocida quedo junto a un concepto con principio activo
+  // demostrado. Es exactamente el merge inseguro que el eje `disc` impide.
+  const discA = a.attributes.unresolvedIdentityDiscriminator;
+  const discB = b.attributes.unresolvedIdentityDiscriminator;
+  if ((discA !== null || discB !== null) && discA !== discB) {
+    axes.push("unresolvedIdentityDiscriminator");
+  }
 
   const qtyA = a.attributes.packageQuantity;
   const qtyB = b.attributes.packageQuantity;
@@ -415,12 +435,12 @@ async function main() {
     const attributes = canonicalizeOffer(input);
     const chainOk =
       canonical !== undefined &&
-      typeof canonical.offerId === "string" && canonical.offerId.length > 0 &&
-      graph.products.has(canonical.productId) &&
-      graph.presentations.has(canonical.presentationId) &&
-      graph.concepts.has(canonical.conceptId) &&
-      graph.products.get(canonical.productId).presentationId === canonical.presentationId &&
-      graph.presentations.get(canonical.presentationId).conceptId === canonical.conceptId;
+      typeof canonical.provisionalOfferKey === "string" && canonical.provisionalOfferKey.length > 0 &&
+      graph.products.has(canonical.provisionalProductKey) &&
+      graph.presentations.has(canonical.provisionalPresentationKey) &&
+      graph.concepts.has(canonical.provisionalConceptKey) &&
+      graph.products.get(canonical.provisionalProductKey).provisionalPresentationKey === canonical.provisionalPresentationKey &&
+      graph.presentations.get(canonical.provisionalPresentationKey).provisionalConceptKey === canonical.provisionalConceptKey;
     if (chainOk) linked.push({ row, canonical, attributes });
     else unlinked.push({ row, reason: canonical === undefined ? "no-canonical-offer" : "broken-chain" });
   }
@@ -430,9 +450,9 @@ async function main() {
   // ---- Cardinalidad y agrupacion v2
   const productsPerPresentation = new Map();
   for (const product of graph.products.values()) {
-    const list = productsPerPresentation.get(product.presentationId) ?? [];
-    list.push(product.productId);
-    productsPerPresentation.set(product.presentationId, list);
+    const list = productsPerPresentation.get(product.provisionalPresentationKey) ?? [];
+    list.push(product.provisionalProductKey);
+    productsPerPresentation.set(product.provisionalPresentationKey, list);
   }
 
   const pharmaciesByProduct = new Map();
@@ -440,20 +460,20 @@ async function main() {
   const offersByProduct = new Map();
   for (const item of linked) {
     const { canonical } = item;
-    if (!pharmaciesByProduct.has(canonical.productId)) pharmaciesByProduct.set(canonical.productId, new Set());
-    pharmaciesByProduct.get(canonical.productId).add(canonical.pharmacy);
-    if (!pharmaciesByPresentation.has(canonical.presentationId)) {
-      pharmaciesByPresentation.set(canonical.presentationId, new Set());
+    if (!pharmaciesByProduct.has(canonical.provisionalProductKey)) pharmaciesByProduct.set(canonical.provisionalProductKey, new Set());
+    pharmaciesByProduct.get(canonical.provisionalProductKey).add(canonical.pharmacy);
+    if (!pharmaciesByPresentation.has(canonical.provisionalPresentationKey)) {
+      pharmaciesByPresentation.set(canonical.provisionalPresentationKey, new Set());
     }
-    pharmaciesByPresentation.get(canonical.presentationId).add(canonical.pharmacy);
-    if (!offersByProduct.has(canonical.productId)) offersByProduct.set(canonical.productId, []);
-    offersByProduct.get(canonical.productId).push(item);
+    pharmaciesByPresentation.get(canonical.provisionalPresentationKey).add(canonical.pharmacy);
+    if (!offersByProduct.has(canonical.provisionalProductKey)) offersByProduct.set(canonical.provisionalProductKey, []);
+    offersByProduct.get(canonical.provisionalProductKey).push(item);
   }
 
   const productCards = [...pharmaciesByProduct.values()];
   const presentationGroups = [...pharmaciesByPresentation.values()];
 
-  // ---- Gate C: falsos merges de v2 (contradiccion dentro de un mismo productId).
+  // ---- Gate C: falsos merges de v2 (contradiccion dentro de un mismo provisionalProductKey).
   // Se cuenta sobre OBSERVACIONES UNICAS, no sobre filas upstream: la misma
   // oferta aparece en varias consultas del corpus (`ambroxol`, `ambroxol 30mg` y
   // `ambroxol 30mg/5ml` devuelven el mismo conjunto) y contarla varias veces
@@ -461,10 +481,10 @@ async function main() {
   const v2FalseMerges = [];
   const v2FalseMergesStrict = [];
   let v2Pairs = 0;
-  for (const [productId, allItems] of offersByProduct) {
+  for (const [provisionalProductKey, allItems] of offersByProduct) {
     const seen = new Set();
     const items = allItems.filter((item) => {
-      const key = item.canonical.offerId;
+      const key = item.canonical.provisionalOfferKey;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -473,7 +493,7 @@ async function main() {
       for (let j = i + 1; j < items.length; j++) {
         v2Pairs++;
         const record = {
-          productId,
+          provisionalProductKey,
           a: { pharmacy: items[i].row.pharmacy, name: items[i].row.rawName },
           b: { pharmacy: items[j].row.pharmacy, name: items[j].row.rawName },
         };
@@ -493,11 +513,11 @@ async function main() {
   const v2ProductsByPresentation = new Map();
   const pharmaciesByPresentationForFrag = new Map();
   for (const item of linked) {
-    const key = item.canonical.presentationId;
+    const key = item.canonical.provisionalPresentationKey;
     if (!v1CardsByPresentation.has(key)) v1CardsByPresentation.set(key, new Set());
     v1CardsByPresentation.get(key).add(item.row.v1CardKey);
     if (!v2ProductsByPresentation.has(key)) v2ProductsByPresentation.set(key, new Set());
-    v2ProductsByPresentation.get(key).add(item.canonical.productId);
+    v2ProductsByPresentation.get(key).add(item.canonical.provisionalProductKey);
     if (!pharmaciesByPresentationForFrag.has(key)) pharmaciesByPresentationForFrag.set(key, new Set());
     pharmaciesByPresentationForFrag.get(key).add(item.row.pharmacy);
   }
@@ -530,15 +550,15 @@ async function main() {
         const a = items[i];
         const b = items[j];
         const v1Together = a.row.v1CardKey === b.row.v1CardKey;
-        const v2Together = a.canonical.productId === b.canonical.productId;
+        const v2Together = a.canonical.provisionalProductKey === b.canonical.provisionalProductKey;
         if (v1Together === v2Together) {
           classes.UNCHANGED++;
           continue;
         }
         const contradicts = contradictionAxes(a, b).length > 0;
         const unresolved =
-          a.attributes.activeIngredients.some((x) => x.evidence === "unresolved-head") ||
-          b.attributes.activeIngredients.some((x) => x.evidence === "unresolved-head") ||
+          a.attributes.unresolvedIdentityDiscriminator !== null ||
+          b.attributes.unresolvedIdentityDiscriminator !== null ||
           a.canonical.provenance.resolution.product.kind === "ambiguous" ||
           b.canonical.provenance.resolution.product.kind === "ambiguous";
 
@@ -580,22 +600,32 @@ async function main() {
   let structuredEvidence = 0;
   for (const item of linked) {
     resolutionKinds[item.canonical.provenance.resolution.concept.kind]++;
-    if (item.attributes.activeIngredients.some((x) => x.evidence === "unresolved-head")) {
-      unresolvedIngredient++;
-    }
+    if (item.attributes.unresolvedIdentityDiscriminator !== null) unresolvedIngredient++;
     if (
       item.attributes.concentration.kind !== "absent" &&
-      item.attributes.dosageForm !== null
+      item.attributes.canonicalDosageForm !== null
     ) {
       structuredEvidence++;
     }
   }
 
-  // ---- Estabilidad de identidad entre contextos de resolucion
-  // (corpus completo vs una sola consulta): mide cuanto depende el ID del
-  // conjunto presente, que es la diferencia entre S0 sin registro y S1 con el.
+  // ---- ESTABILIDAD ENTRE CONTEXTOS DE RESOLUCION (revision CTO PR #159, punto 3)
+  //
+  // Se miden DOS cosas distintas, y separarlas es el resultado que importa:
+  //
+  //   1. FIRMA CRUDA (`rawSignature`) — solo depende del nombre de la oferta.
+  //      Debe ser 100 % estable por construccion: la canonicalizacion es pura.
+  //      Si esto bajara de 100 %, habria un defecto de algoritmo.
+  //
+  //   2. CLAVE RESUELTA (`provisionalConceptKey`) — depende de que otras firmas
+  //      son visibles, porque la subsuncion resuelve contra el conjunto
+  //      presente. Toda diferencia se atribuye oferta por oferta, con el tipo de
+  //      resolucion en cada contexto, para poder decir si es subsuncion correcta
+  //      o un defecto.
   let contextStable = 0;
   let contextTotal = 0;
+  let rawSignatureStable = 0;
+  const contextDependent = [];
   const perQueryDurations = [];
   for (const [queryId, items] of byQuery) {
     const queryInputs = items.map((item) => toRawOfferInput(item.row));
@@ -612,7 +642,35 @@ async function main() {
     for (const item of items) {
       const local = bySig.get(offerSignature(toRawOfferInput(item.row)));
       contextTotal++;
-      if (local && local.conceptId === item.canonical.conceptId) contextStable++;
+      const fullTrace = item.canonical.provenance.resolution.concept;
+      const localTrace = local?.provenance.resolution.concept;
+      if (localTrace && localTrace.rawSignature === fullTrace.rawSignature) rawSignatureStable++;
+      if (local && local.provisionalConceptKey === item.canonical.provisionalConceptKey) {
+        contextStable++;
+        continue;
+      }
+      contextDependent.push({
+        query: item.row.query,
+        pharmacy: item.row.pharmacy,
+        rawName: item.row.rawName,
+        rawSignature: fullTrace.rawSignature,
+        fullCorpus: {
+          key: item.canonical.provisionalConceptKey,
+          resolvedSignature: fullTrace.signature,
+          kind: fullTrace.kind,
+          candidateCount: fullTrace.candidateCount,
+        },
+        isolatedQuery: {
+          key: local?.provisionalConceptKey ?? null,
+          resolvedSignature: localTrace?.signature ?? null,
+          kind: localTrace?.kind ?? null,
+          candidateCount: localTrace?.candidateCount ?? null,
+        },
+        reason:
+          localTrace && localTrace.rawSignature !== fullTrace.rawSignature
+            ? "canonicalization-differs (DEFECTO: la lectura del nombre no puede depender del contexto)"
+            : `subsumption-host-availability: la firma parcial encuentra ${fullTrace.candidateCount} anfitriona(s) en el corpus completo y ${localTrace?.candidateCount ?? 0} en la consulta aislada`,
+      });
     }
     void queryId;
   }
@@ -638,7 +696,7 @@ async function main() {
     concepts: graph.concepts.size,
     presentations: graph.presentations.size,
     products: graph.products.size,
-    offerIds: uniq(graph.offers.map((o) => o.offerId)).length,
+    offerIds: uniq(graph.offers.map((o) => o.provisionalOfferKey)).length,
     identifierCollisions: idCollisions,
     estimatedCards: graph.products.size,
     presentationGroups: graph.presentations.size,
@@ -677,9 +735,22 @@ async function main() {
       ? +(resolutionKinds.subsumed / linked.length).toFixed(4)
       : 0,
     structuredEvidenceRate: linked.length ? +(structuredEvidence / linked.length).toFixed(4) : 0,
-    conceptIdStabilityAcrossContexts: contextTotal
-      ? +(contextStable / contextTotal).toFixed(4)
+    // Estabilidad de la LECTURA del nombre. Debe ser 1: la canonicalizacion no
+    // mira ninguna otra oferta.
+    rawSignatureStabilityAcrossContexts: contextTotal
+      ? +(rawSignatureStable / contextTotal).toFixed(6)
       : 0,
+    // Estabilidad de la CLAVE RESUELTA. No puede ser 1 mientras la resolucion se
+    // haga contra el corpus visible y no contra un registro persistido.
+    conceptKeyStabilityAcrossContexts: contextTotal
+      ? +(contextStable / contextTotal).toFixed(6)
+      : 0,
+    contextDependentIdentities: contextDependent.length,
+    contextDependentIdentityRate: contextTotal
+      ? +(contextDependent.length / contextTotal).toFixed(6)
+      : 0,
+    contextDependentOffers: uniq(contextDependent.map((d) => `${d.pharmacy}::${d.rawName}`)).length,
+    contextDependentDetail: contextDependent,
     performance: {
       corpusRunMs: +corpusDurationMs.toFixed(3),
       perQueryP50Ms: percentile(perQueryDurations, 50),
@@ -751,6 +822,23 @@ async function main() {
   await writeFile(resolve(OUT_DIR, "v2-metrics.json"), JSON.stringify(v2, null, 2), "utf8");
   await writeFile(resolve(OUT_DIR, "comparison.json"), JSON.stringify(comparison, null, 2), "utf8");
   await writeFile(resolve(OUT_DIR, "key-cases.json"), JSON.stringify(keyCases, null, 2), "utf8");
+  await writeFile(
+    resolve(OUT_DIR, "context-stability.json"),
+    JSON.stringify(
+      {
+        offersEvaluated: contextTotal,
+        rawSignatureStable,
+        rawSignatureStabilityRate: v2.rawSignatureStabilityAcrossContexts,
+        resolvedKeyStable: contextStable,
+        resolvedKeyStabilityRate: v2.conceptKeyStabilityAcrossContexts,
+        contextDependentIdentities: contextDependent.length,
+        detail: contextDependent,
+      },
+      null,
+      2
+    ),
+    "utf8"
+  );
 
   // La tabla completa (1.633 filas) es un dump REGENERABLE: se escribe para
   // inspeccion local y queda excluida del repositorio por `.gitignore`. Lo que
@@ -784,7 +872,7 @@ function buildKeyCases(linked, graph) {
     const items = linked.filter(predicate);
     const products = new Map();
     for (const item of items) {
-      const key = item.canonical.productId;
+      const key = item.canonical.provisionalProductKey;
       if (!products.has(key)) products.set(key, []);
       products.get(key).push(item);
     }
@@ -792,20 +880,20 @@ function buildKeyCases(linked, graph) {
       offers: items.length,
       v1Cards: uniq(items.map((i) => i.row.v1CardKey)).length,
       v1PresentationKeys: uniq(items.map((i) => i.row.legacyPresentationKey)).length,
-      v2Concepts: uniq(items.map((i) => i.canonical.conceptId)).length,
-      v2Presentations: uniq(items.map((i) => i.canonical.presentationId)).length,
-      v2Products: uniq(items.map((i) => i.canonical.productId)).length,
+      v2Concepts: uniq(items.map((i) => i.canonical.provisionalConceptKey)).length,
+      v2Presentations: uniq(items.map((i) => i.canonical.provisionalPresentationKey)).length,
+      v2Products: uniq(items.map((i) => i.canonical.provisionalProductKey)).length,
       pharmacies: uniq(items.map((i) => i.row.pharmacy)).length,
       // Se recortan los nombres y el numero de productos listados: la evidencia
       // que se versiona es la que se revisa a ojo, no un dump regenerable.
       productBreakdown: [...products.entries()]
-        .map(([productId, group]) => ({
-          productId,
-          brand: graph.products.get(productId)?.brand ?? null,
-          variant: graph.products.get(productId)?.commercialVariant ?? null,
-          manufacturer: graph.products.get(productId)?.manufacturer ?? null,
-          conceptSignature: graph.concepts.get(group[0].canonical.conceptId)?.resolution.signature,
-          presentationSignature: graph.presentations.get(group[0].canonical.presentationId)
+        .map(([provisionalProductKey, group]) => ({
+          provisionalProductKey,
+          brand: graph.products.get(provisionalProductKey)?.brand ?? null,
+          variant: graph.products.get(provisionalProductKey)?.commercialVariant ?? null,
+          manufacturer: graph.products.get(provisionalProductKey)?.manufacturer ?? null,
+          conceptSignature: graph.concepts.get(group[0].canonical.provisionalConceptKey)?.resolution.signature,
+          presentationSignature: graph.presentations.get(group[0].canonical.provisionalPresentationKey)
             ?.resolution.signature,
           offers: group.length,
           pharmacies: uniq(group.map((g) => g.row.pharmacy)),
@@ -841,10 +929,10 @@ function toCsv(linked) {
     legacyMatchKey: row.legacyMatchKey,
     legacyPresentationKey: row.legacyPresentationKey,
     v1CardKey: row.v1CardKey,
-    conceptId: canonical.conceptId,
-    presentationId: canonical.presentationId,
-    productId: canonical.productId,
-    offerId: canonical.offerId,
+    provisionalConceptKey: canonical.provisionalConceptKey,
+    provisionalPresentationKey: canonical.provisionalPresentationKey,
+    provisionalProductKey: canonical.provisionalProductKey,
+    provisionalOfferKey: canonical.provisionalOfferKey,
     activeIngredients: attributes.activeIngredients.map((i) => i.token).join("+"),
     ingredientEvidence: uniq(attributes.activeIngredients.map((i) => i.evidence)).join("+"),
     concentration: concentrationSignature(attributes.concentration),

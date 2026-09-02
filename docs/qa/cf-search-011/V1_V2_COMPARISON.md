@@ -6,6 +6,9 @@ Fuente: `analysis/comparison.json` y `analysis/key-cases.json`, producidos por
 **Los dos motores procesan exactamente las mismas ofertas**, leídas del mismo
 sobre. V1 sigue siendo la respuesta al usuario; V2 solo calcula identidad.
 
+**Reejecutado entero tras la revisión CTO del PR #159.** Las cifras anteriores se
+conservan como OLD.
+
 ---
 
 ## 1. Unidad de comparación
@@ -13,7 +16,7 @@ sobre. V1 sigue siendo la respuesta al usuario; V2 solo calcula identidad.
 Se compara **par de ofertas dentro de una misma consulta**. Para cada par:
 
 - `v1Together` — las dos ofertas están en la misma tarjeta de v1;
-- `v2Together` — las dos ofertas están en el mismo `productId` de v2;
+- `v2Together` — las dos ofertas están en la misma `provisionalProductKey` de v2;
 - `contradicts` — las dos ofertas se contradicen en algún eje (ver §3).
 
 Es la misma unidad que usó CF-SEARCH-010 para medir el false merge de v1, así que
@@ -58,6 +61,16 @@ contradicción; dos valores **declarados** y distintos, sí.
 | **laboratorio** | parcialmente, vía `brand:` | **sí** |
 | **momento de administración** | escondido en `matchKey` | **sí** |
 | **registro ISP** | **no** | **sí** (siempre `UNKNOWN` en S0) |
+| **vía de administración** | **no** | **sí** (nuevo tras el PR #159) |
+| **unidad farmacéutica** | **no** | **sí** (nuevo tras el PR #159) |
+| **discriminante de identidad no resuelta** | **no** | **sí** (nuevo tras el PR #159) |
+
+Tras la revisión, el eje de forma compara la **Forma Farmacéutica canónica**
+(`comprimido` ≠ `capsula`, `crema` ≠ `gel`) y no la clase gruesa de v1. Es
+deliberado: si la identidad se decide con `CanonicalDosageForm`, el detector del
+gate tiene que mirar lo mismo, o estaría midiendo el gate con una regla más débil
+que la que asigna identidad. El detector es ahora un superconjunto estricto tanto
+del de v1 como del de la entrega anterior, y sigue dando **0**.
 
 Para la concentración, el detector usa **la misma semántica que
 `isCompatibleConcentration()` de v1** —dos niveles de evidencia distintos no son
@@ -75,9 +88,9 @@ masa coincida con el numerador de la razón) se calcula y se reporta aparte:
 
 | Categoría | Pares | % |
 |---|---:|---:|
-| `UNCHANGED` | 94.062 | 99,15 % |
-| `MERGE_FIXED` | **748** | 0,79 % |
-| `SPLIT_FIXED` | **52** | 0,05 % |
+| `UNCHANGED` | 94.165 (antes 94.062) | 99,26 % |
+| `MERGE_FIXED` | **639** (antes 748) | 0,67 % |
+| `SPLIT_FIXED` | **58** (antes 52) | 0,06 % |
 | `MERGE_REGRESSION` | **7** | 0,007 % |
 | **`SPLIT_LOST`** | **0** | **0 %** |
 | `IDENTITY_UNKNOWN` | 360 | 0,38 % |
@@ -142,7 +155,7 @@ consultas de losartán), **6 farmacias**.
 v1 reparte en tarjetas separadas porque cada farmacia declara (o no) un
 laboratorio distinto— quedan en **un solo producto comparable**. Y los seis
 laboratorios estructurados distintos (Hospifarma, Opko, Mintlab, Seven Pharma,
-Ascend, Eurofarma) **siguen separados**: no se forzó un solo `productId` donde
+Ascend, Eurofarma) **siguen separados**: no se forzó un solo producto donde
 realmente hay laboratorios distintos. El objetivo es identidad correcta, no
 "menos tarjetas".
 
@@ -184,16 +197,23 @@ correcta.
 ### Tapsin — protección de CF-SEARCH-001
 
 174 filas upstream, 163 tarjetas v1, 113 `presentationKey` distintas →
-**30 conceptos, 54 presentaciones, 109 productos**.
+**34 conceptos, 56 presentaciones, 111 productos** (antes 30 / 54 / 109; sube
+por la separación comprimido/cápsula y por la unidad farmacéutica como eje).
 
 `Puro`, `Duo`, `Forte`, `SC`, `Infantil`, `InstaFLU`, `Día`, `Noche` conservan
-cada uno su `productId`. La **ausencia** de variante también es identidad:
+cada uno su producto. La **ausencia** de variante también es identidad:
 "Tapsin x 6 comprimidos" no comparte producto con "Tapsin Rojo Dolor de Cabeza
 Tira x 6".
 
 Verificado además que "Tapsin Forte x 30" **no** se absorbe dentro del concepto
-"paracetamol 500 mg comprimido" (su cabecera queda marcada `unresolved-head`), y
-que un sobre suelto no comparte presentación con la caja de 6.
+"paracetamol 500 mg comprimido" —su firma es
+`ing=?|disc=tapsin|conc=conc:?|form=comprimido|route=oral|unit=comprimido`, con el
+principio activo honestamente DESCONOCIDO y el discriminante bloqueando la
+fusión— y que un sobre suelto no comparte presentación con la caja de 6.
+
+Y el caso inverso: cuando el nombre SÍ nombra las moléculas, la marca no se
+cuela en la composición. `Tapsin Duo (B) Paracetamol / Ibuprofeno` firma
+`ing=ibuprofeno+paracetamol`, no `ing=ibuprofeno+paracetamol+tapsin`.
 
 **Día vs Noche fue el caso que detectó un defecto real de v2** — ver
 `S0_FAILURES.md` §2.
@@ -228,14 +248,19 @@ v1 fusionaba pese a contradecirse (`Amoval Duo 400mg/5ml` vs `Amoval 250mg/5ml`,
 
 Comparar "fragmentación de v1" contra "fragmentación de v2" con denominadores
 distintos no dice nada. Acá el denominador es el mismo para los dos motores: las
-**414 presentaciones canónicas v2**, y se cuenta en cuántas de ellas las ofertas
+**429 presentaciones canónicas v2**, y se cuenta en cuántas de ellas las ofertas
 quedan repartidas en más de una tarjeta del motor evaluado.
 
 | Métrica | V1 | V2 |
 |---|---:|---:|
-| Presentaciones repartidas en más de una tarjeta | **298 / 414** | **149 / 414** |
-| **Tasa de fragmentación** | **72,0 %** | **36,0 %** |
-| Tarjetas por concepto v2 | **4,78** | **2,49** |
+| Presentaciones repartidas en más de una tarjeta | **311 / 429** | **149 / 429** |
+| **Tasa de fragmentación** | **72,5 %** | **34,7 %** |
+| Tarjetas por concepto v2 | **4,58** | **2,43** |
+
+Cifras de la entrega anterior, con su propio denominador de 414 presentaciones:
+298 / 414 = 72,0 % en v1 y 149 / 414 = 36,0 % en v2. **La fragmentación no se
+optimizó**: primero se corrigió el contrato semántico y después se volvió a
+medir, como exige la revisión CTO. Que además haya bajado es una consecuencia.
 
 **La fragmentación se reduce a la mitad y las tarjetas por concepto casi también,
 con `SPLIT_LOST = 0` y `false merge = 0`.**

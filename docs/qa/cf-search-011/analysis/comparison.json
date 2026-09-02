@@ -82,24 +82,24 @@
     }
   ],
   "comparableFragmentation": {
-    "denominatorPresentations": 414,
-    "v1PresentationsSplitAcrossCards": 298,
-    "v1FragmentationRate": 0.7198,
+    "denominatorPresentations": 429,
+    "v1PresentationsSplitAcrossCards": 311,
+    "v1FragmentationRate": 0.7249,
     "v2PresentationsSplitAcrossCards": 149,
-    "v2FragmentationRate": 0.3599,
-    "v1CardsPerV2Concept": 4.78,
-    "v2CardsPerV2Concept": 2.49
+    "v2FragmentationRate": 0.3473,
+    "v1CardsPerV2Concept": 4.58,
+    "v2CardsPerV2Concept": 2.43
   },
   "comparedPairs": 94869,
   "classes": {
-    "UNCHANGED": 94062,
-    "MERGE_FIXED": 748,
-    "SPLIT_FIXED": 52,
+    "UNCHANGED": 94165,
+    "MERGE_FIXED": 639,
+    "SPLIT_FIXED": 58,
     "SPLIT_LOST": 0,
     "MERGE_REGRESSION": 7,
-    "IDENTITY_UNKNOWN": 360
+    "IDENTITY_UNKNOWN": 278
   },
-  "disagreementRate": 0.008506,
+  "disagreementRate": 0.007421,
   "samples": {
     "MERGE_FIXED": [
       {
@@ -316,6 +316,17 @@
       {
         "query": "amoxicilina 500mg",
         "a": {
+          "pharmacy": "ecofarmacias",
+          "name": "Amoxicilina 500 mg x 21 cápsulas (DFM) CENABAST"
+        },
+        "b": {
+          "pharmacy": "sermecoop",
+          "name": "Amoxicilina 500mg 21 Comprimidos"
+        }
+      },
+      {
+        "query": "amoxicilina 500mg",
+        "a": {
           "pharmacy": "araucomed",
           "name": "Amoval Duo 400mg/5ml solucion oral 70ml"
         },
@@ -422,17 +433,6 @@
           "pharmacy": "ecofarmacias",
           "name": "Clavinex Duo Forte Amoxicilina 70ml susp oral DESCUENTO"
         }
-      },
-      {
-        "query": "cetirizina 10mg",
-        "a": {
-          "pharmacy": "easyfarma",
-          "name": "Coolips 10 mg x 30 Comprimidos"
-        },
-        "b": {
-          "pharmacy": "cruz-verde",
-          "name": "Coolips Cetirizina 10 mg 30 Comprimidos"
-        }
       }
     ],
     "SPLIT_LOST": [],
@@ -536,7 +536,7 @@
     "gateC": {
       "name": "False Merge Rate",
       "value": 0,
-      "formatted": "0/533 pares intra-producto",
+      "formatted": "0/469 pares intra-producto",
       "threshold": "= 0",
       "pass": true
     }

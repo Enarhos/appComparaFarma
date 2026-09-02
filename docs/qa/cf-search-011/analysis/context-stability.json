@@ -1,46 +1,11 @@
 {
-  "processedOffers": 1633,
-  "upstreamOffers": 1633,
-  "uniqueObservations": 987,
-  "offerCoverage": 1,
-  "concepts": 316,
-  "presentations": 429,
-  "products": 767,
-  "offerIds": 987,
-  "identifierCollisions": 0,
-  "estimatedCards": 767,
-  "presentationGroups": 429,
-  "multiPharmacyCards": 116,
-  "singlePharmacyCards": 651,
-  "singlePharmacyCardRate": 0.8488,
-  "multiPharmacyPresentationGroups": 160,
-  "singlePharmacyPresentationGroups": 269,
-  "singlePharmacyPresentationRate": 0.627,
-  "fragmentedPresentations": 149,
-  "fragmentationRate": 0.3473,
-  "cardsPerConcept": 2.43,
-  "intraProductPairs": 469,
-  "falseMerges": 0,
-  "falseMergeRate": 0,
-  "falseMergeSamples": [],
-  "falseMergesStrictConcentration": 0,
-  "falseMergesStrictSamples": [],
-  "conceptResolution": {
-    "complete": 510,
-    "subsumed": 142,
-    "isolated": 741,
-    "ambiguous": 240
-  },
-  "offersWithUnresolvedIngredient": 598,
-  "identityUnknownRate": 0.3662,
-  "inferredIdentityRate": 0.087,
-  "structuredEvidenceRate": 0.7397,
-  "rawSignatureStabilityAcrossContexts": 1,
-  "conceptKeyStabilityAcrossContexts": 0.998775,
+  "offersEvaluated": 1633,
+  "rawSignatureStable": 1633,
+  "rawSignatureStabilityRate": 1,
+  "resolvedKeyStable": 1631,
+  "resolvedKeyStabilityRate": 0.998775,
   "contextDependentIdentities": 2,
-  "contextDependentIdentityRate": 0.001225,
-  "contextDependentOffers": 2,
-  "contextDependentDetail": [
+  "detail": [
     {
       "query": "tapsin",
       "pharmacy": "easyfarma",
@@ -79,11 +44,5 @@
       },
       "reason": "subsumption-host-availability: la firma parcial encuentra 1 anfitriona(s) en el corpus completo y 0 en la consulta aislada"
     }
-  ],
-  "performance": {
-    "corpusRunMs": 100.171,
-    "perQueryP50Ms": 8.693,
-    "perQueryP95Ms": 19.918,
-    "queriesMeasured": 16
-  }
+  ]
 }
