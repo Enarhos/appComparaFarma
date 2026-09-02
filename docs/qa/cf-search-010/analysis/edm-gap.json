@@ -1,0 +1,479 @@
+{
+  "corpus": {
+    "queries": 16,
+    "cards": 1447,
+    "offers": 1634
+  },
+  "edmCardinality": {
+    "conceptApprox": 292,
+    "presentationApprox": 369,
+    "matchKey": 440,
+    "presentationKey": 874,
+    "cards": 1447
+  },
+  "fragmentation": {
+    "presentationsSplitAcrossCards": 280,
+    "cardsInvolved": 1070,
+    "worst": [
+      {
+        "key": "losartan 50mg::losartan~-~solid-oral~-~30~-",
+        "cards": 17,
+        "distinctPresentationKeys": 17,
+        "pharmacies": 7,
+        "minPrice": 490,
+        "maxPrice": 3490
+      },
+      {
+        "key": "losartan::losartan~-~solid-oral~-~30~-",
+        "cards": 17,
+        "distinctPresentationKeys": 17,
+        "pharmacies": 7,
+        "minPrice": 490,
+        "maxPrice": 3490
+      },
+      {
+        "key": "tapsin::tapsin~-~fluid-oral~-~1~-",
+        "cards": 16,
+        "distinctPresentationKeys": 16,
+        "pharmacies": 7,
+        "minPrice": 590,
+        "maxPrice": 5790
+      },
+      {
+        "key": "ibuprofeno 400mg::ibuprofeno~-~solid-oral~-~20~-",
+        "cards": 15,
+        "distinctPresentationKeys": 15,
+        "pharmacies": 9,
+        "minPrice": 642,
+        "maxPrice": 2090
+      },
+      {
+        "key": "ibuprofeno::ibuprofeno~-~solid-oral~-~20~-",
+        "cards": 15,
+        "distinctPresentationKeys": 15,
+        "pharmacies": 9,
+        "minPrice": 642,
+        "maxPrice": 2090
+      },
+      {
+        "key": "tapsin::tapsin~-~solid-oral~-~12~-",
+        "cards": 15,
+        "distinctPresentationKeys": 15,
+        "pharmacies": 7,
+        "minPrice": 1290,
+        "maxPrice": 5599
+      },
+      {
+        "key": "diclofenaco 50mg::diclofenaco~-~topical~-~-~-",
+        "cards": 13,
+        "distinctPresentationKeys": 13,
+        "pharmacies": 7,
+        "minPrice": 800,
+        "maxPrice": 2815
+      },
+      {
+        "key": "diclofenaco 50mg::diclofenaco~-~suppository~-~5~-",
+        "cards": 12,
+        "distinctPresentationKeys": 12,
+        "pharmacies": 5,
+        "minPrice": 839,
+        "maxPrice": 3343
+      },
+      {
+        "key": "tapsin::tapsin~-~solid-oral~-~30~-",
+        "cards": 11,
+        "distinctPresentationKeys": 11,
+        "pharmacies": 5,
+        "minPrice": 2890,
+        "maxPrice": 6599
+      },
+      {
+        "key": "amoxicilina 500mg::amoxicilina~-~solid-oral~acido~20~-",
+        "cards": 10,
+        "distinctPresentationKeys": 10,
+        "pharmacies": 6,
+        "minPrice": 4980,
+        "maxPrice": 11527
+      },
+      {
+        "key": "tapsin::tapsin~-~solid-oral~-~20~-",
+        "cards": 10,
+        "distinctPresentationKeys": 10,
+        "pharmacies": 6,
+        "minPrice": 1990,
+        "maxPrice": 7552
+      },
+      {
+        "key": "tapsin::tapsin~-~solid-oral~-~18~-",
+        "cards": 10,
+        "distinctPresentationKeys": 10,
+        "pharmacies": 7,
+        "minPrice": 1990,
+        "maxPrice": 4190
+      },
+      {
+        "key": "losartan 50mg::losartan~-~solid-oral~hidroclorotiazida~30~-",
+        "cards": 9,
+        "distinctPresentationKeys": 9,
+        "pharmacies": 6,
+        "minPrice": 1690,
+        "maxPrice": 3990
+      },
+      {
+        "key": "losartan::losartan~-~solid-oral~hidroclorotiazida~30~-",
+        "cards": 9,
+        "distinctPresentationKeys": 9,
+        "pharmacies": 6,
+        "minPrice": 1690,
+        "maxPrice": 3990
+      },
+      {
+        "key": "omeprazol 20mg::esomeprazol~-~solid-oral~-~30~-",
+        "cards": 9,
+        "distinctPresentationKeys": 9,
+        "pharmacies": 4,
+        "minPrice": 2520,
+        "maxPrice": 5990
+      }
+    ]
+  },
+  "defects": {
+    "packageVolumeReadAsUnitCountByMatchKey": {
+      "offers": 141,
+      "distinctNames": 78,
+      "samples": [
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)",
+          "matchKey": "ambroxol|100ml|100",
+          "readAs": 100
+        },
+        {
+          "pharmacy": "ahumada",
+          "name": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+          "matchKey": "tocalm|100ml|100",
+          "readAs": 100
+        },
+        {
+          "pharmacy": "farmex",
+          "name": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+          "matchKey": "muxol|100ml|100",
+          "readAs": 100
+        },
+        {
+          "pharmacy": "farmex",
+          "name": "Broncot Forte G.T.F. Jarabe 30 mg / 5 mL x 120 mL",
+          "matchKey": "broncot|120ml|120",
+          "readAs": 120
+        },
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)",
+          "matchKey": "ambroxol|100ml|100",
+          "readAs": 100
+        },
+        {
+          "pharmacy": "araucomed",
+          "name": "Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Mintlab)",
+          "matchKey": "ambroxol|100ml|100",
+          "readAs": 100
+        },
+        {
+          "pharmacy": "farmex",
+          "name": "Mintamox 15 mg / 5 mL x 100 mL",
+          "matchKey": "mintamox|100ml|100",
+          "readAs": 100
+        },
+        {
+          "pharmacy": "araucomed",
+          "name": "Muxol Pediátrico 15mg/5ml jarabe x 100 ml.",
+          "matchKey": "muxol|100ml|100",
+          "readAs": 100
+        },
+        {
+          "pharmacy": "ahumada",
+          "name": "Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe",
+          "matchKey": "tocalm|100ml|100",
+          "readAs": 100
+        },
+        {
+          "pharmacy": "araucomed",
+          "name": "Broncot 15mg/5ml Jarabe x 120 ml.",
+          "matchKey": "broncot|120ml|120",
+          "readAs": 120
+        },
+        {
+          "pharmacy": "araucomed",
+          "name": "Broncot 7,5mg/ml gotas x 30 ml.",
+          "matchKey": "broncot|30ml|30",
+          "readAs": 30
+        },
+        {
+          "pharmacy": "ahumada",
+          "name": "Broncot GFT 15 mg/5 mL x 120 mL Jarabe",
+          "matchKey": "broncot|120ml|120",
+          "readAs": 120
+        }
+      ]
+    },
+    "activeIngredientReadAsCommercialVariant": {
+      "offers": 65,
+      "distinctNames": 23,
+      "samples": [
+        {
+          "pharmacy": "ecofarmacias",
+          "name": "Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "farmex",
+          "name": "Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "salcobrand",
+          "name": "Broncot Ambroxol 30mg/5ml 120ml",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "salcobrand",
+          "name": "Muxol Ambroxol 20 Comprimidos",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "dr-simi",
+          "name": "Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "ecofarmacias",
+          "name": "Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "salcobrand",
+          "name": "Muxol Adulto Ambroxol Jarabe 100ml",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "ahumada",
+          "name": "MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml",
+          "variant": "ambroxol"
+        },
+        {
+          "pharmacy": "cruz-verde",
+          "name": "Muxol Ambroxol 30 mg 20 Comprimidos",
+          "variant": "ambroxol"
+        }
+      ]
+    },
+    "absoluteMassQueryDemotesRatioProducts": {
+      "cards": 32,
+      "samples": [
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Mintamox Adulto 30mg/5ml jarabe 100ml",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Tocalm Adulto 30mg/5ml jarabe 100 ml.",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Amrodil 30 Mg/5ml 100 Ml",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        },
+        {
+          "query": "ambroxol 30mg",
+          "canonicalName": "Ambroxol 30mg/5ml Jarabe 100ml",
+          "declared": "30mg/5ml",
+          "cohort": "other"
+        }
+      ]
+    },
+    "slugHashCollisionsWithinQuery": {
+      "count": 12,
+      "samples": [
+        {
+          "query": "ambroxol 30mg/5ml",
+          "hash": "368kw3kmwe8r5",
+          "cards": [
+            "Ambroxol 30mg/5ml Jarabe 100ml",
+            "Ambroxol 15 mg/5mL Jarabe 100 mL"
+          ]
+        },
+        {
+          "query": "ambroxol 30mg/5ml",
+          "hash": "ouqw7x1crum0",
+          "cards": [
+            "Muxol Adulto 30mg/5ml jarabe 100ml",
+            "Muxol (ambroxol) 15mg/5ml Jarabe 100ml"
+          ]
+        },
+        {
+          "query": "ambroxol 30mg",
+          "hash": "368kw3kmwe8r5",
+          "cards": [
+            "Ambroxol 30mg/5ml Jarabe 100ml",
+            "Ambroxol 15 mg/5mL Jarabe 100 mL"
+          ]
+        },
+        {
+          "query": "ambroxol 30mg",
+          "hash": "ouqw7x1crum0",
+          "cards": [
+            "Muxol Adulto 30mg/5ml jarabe 100ml",
+            "Muxol (ambroxol) 15mg/5ml Jarabe 100ml"
+          ]
+        },
+        {
+          "query": "ambroxol 30mg/5ml jarabe 100ml",
+          "hash": "368kw3kmwe8r5",
+          "cards": [
+            "Ambroxol 30mg/5ml Jarabe 100ml",
+            "Ambroxol 15 mg/5mL Jarabe 100 mL"
+          ]
+        },
+        {
+          "query": "ambroxol 30mg/5ml jarabe 100ml",
+          "hash": "ouqw7x1crum0",
+          "cards": [
+            "Muxol Adulto 30mg/5ml jarabe 100ml",
+            "Muxol (ambroxol) 15mg/5ml Jarabe 100ml"
+          ]
+        },
+        {
+          "query": "ambroxol",
+          "hash": "368kw3kmwe8r5",
+          "cards": [
+            "Ambroxol 30mg/5ml Jarabe 100ml",
+            "Ambroxol 15 mg/5mL Jarabe 100 mL"
+          ]
+        },
+        {
+          "query": "ambroxol",
+          "hash": "ouqw7x1crum0",
+          "cards": [
+            "Muxol Adulto 30mg/5ml jarabe 100ml",
+            "Muxol (ambroxol) 15mg/5ml Jarabe 100ml"
+          ]
+        },
+        {
+          "query": "ibuprofeno 400mg",
+          "hash": "m4nvlyflclg",
+          "cards": [
+            "Ibuprofeno 200mg/5ml Jarabe 100ml",
+            "Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+          ]
+        },
+        {
+          "query": "ibuprofeno 400mg",
+          "hash": "3c0qa7pxe6dpm",
+          "cards": [
+            "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+            "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml"
+          ]
+        },
+        {
+          "query": "ibuprofeno",
+          "hash": "m4nvlyflclg",
+          "cards": [
+            "Ibuprofeno 200mg/5ml Jarabe 100ml",
+            "Ibuprofeno 100 mg/5mL Suspensión 100 mL"
+          ]
+        },
+        {
+          "query": "ibuprofeno",
+          "hash": "3c0qa7pxe6dpm",
+          "cards": [
+            "Pyriped (ibuprofeno) 100mg/5ml Jarabe 100ml",
+            "Pyriped Ibuprofeno Suspension Oral 200mg/5ml 100ml"
+          ]
+        }
+      ]
+    }
+  },
+  "structuredAttributeCoverageByCard": {
+    "brand": 529,
+    "manufacturer": 422,
+    "activeIngredient": 823,
+    "bioTrue": 187,
+    "bioFalse": 67,
+    "bioNull": 1193
+  },
+  "freeTextReadabilityByOffer": {
+    "concept": 1634,
+    "concentration": 434,
+    "dosageForm": 1483,
+    "unitCount": 993,
+    "packageVolume": 489
+  }
+}

@@ -1,0 +1,361 @@
+QUERY            : "ambroxol 30mg"
+retrievalQuery   : "ambroxol"
+intent.concentration: 30mg
+intent.quantity  : null
+intent.dosageForm: null
+tarjetas         : 57
+
+#  1 [exact/exact] $1100  ecofarmacias
+      name : Ambroxol clorhidrato 30mg 100ml Ascend DESCUENTO
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:unknown
+      slug : ambroxol-clorhidrato-30mg-100ml-ascend-descuento-2eu6hvxg2sqa
+      · ecofarmacias  conc=30mg         form=null        qty=null  var=null         | Ambroxol clorhidrato 30mg 100ml Ascend DESCUENTO
+#  2 [exact/compatible] $6877  farmex
+      name : Muxol 30 mg x 20 comprimidos
+      mk   : muxol|30mg|20
+      pk   : muxol|30mg|20|bio:unknown|brand:unknown|form:solid-oral
+      slug : muxol-30-mg-x-20-comprimidos-1sj2lktyo95uo
+      · farmex        conc=null         form=solid-oral  qty=20    var=null         | Muxol 30 mg x 20 comprimidos
+#  3 [exact/exact] $11190  cruz-verde
+      name : Muxol Ambroxol 30 mg 20 Comprimidos
+      mk   : muxol|30mg|20
+      pk   : muxol|30mg|20|bio:unknown|brand:unknown|var:ambroxol|form:solid-oral
+      slug : muxol-ambroxol-30-mg-20-comprimidos-30vyetomqan8v
+      · cruz-verde    conc=null         form=solid-oral  qty=20    var=ambroxol     | Muxol Ambroxol 30 mg 20 Comprimidos
+#  4 [unknown/compatible] $5490  easyfarma
+      name : Muxol Adulto Jarabe...
+      mk   : muxol
+      pk   : muxol|bio:unknown|brand:unknown|form:fluid-oral
+      slug : muxol-adulto-jarabe-1t2w7ypfbikl6
+      · easyfarma     conc=null         form=fluid-oral  qty=null  var=null         | Muxol Adulto Jarabe...
+#  5 [unknown/compatible] $5490  easyfarma
+      name : Muxol Pediatrico Jarabe x...
+      mk   : muxol
+      pk   : muxol|bio:unknown|brand:unknown|var:infantil|form:fluid-oral
+      slug : muxol-pediatrico-jarabe-x-37ov3va39ub5o
+      · easyfarma     conc=null         form=fluid-oral  qty=null  var=infantil     | Muxol Pediatrico Jarabe x...
+#  6 [unknown/compatible] $8990  easyfarma
+      name : Broncot Pediatrico GFT...
+      mk   : broncot
+      pk   : broncot|bio:unknown|brand:unknown|var:infantil
+      slug : broncot-pediatrico-gft-lde7lxmnlyor
+      · easyfarma     conc=null         form=null        qty=null  var=infantil     | Broncot Pediatrico GFT...
+#  7 [unknown/exact] $10031  salcobrand
+      name : Muxol Ambroxol 20 Comprimidos
+      mk   : muxol|20
+      pk   : muxol|20|bio:unknown|brand:muxol|var:ambroxol|form:solid-oral
+      slug : muxol-ambroxol-20-comprimidos-31nut2bf4asj5
+      · salcobrand    conc=null         form=solid-oral  qty=20    var=ambroxol     | Muxol Ambroxol 20 Comprimidos
+#  8 [other/exact] $790  araucomed+cruz-verde
+      name : Tocalm Infantil 15mg/5ml jarabe 100 ml.
+      mk   : tocalm|100ml
+      pk   : tocalm|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral
+      slug : tocalm-infantil-15mg-5ml-jarabe-100-ml-2i7n8kpu9ov4x
+      · araucomed     conc=15mg/5ml     form=fluid-oral  qty=null  var=infantil     | Tocalm Infantil 15mg/5ml jarabe 100 ml.
+      · cruz-verde    conc=15mg/5ml     form=fluid-oral  qty=null  var=infantil     | Tocalm Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL
+#  9 [other/exact] $790  araucomed
+      name : Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:ascend|form:fluid-oral
+      slug : ambroxol-30mg-5ml-jarabe-adulto-100-ml-ascend-3mqgnluijnzbx
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg/5ml jarabe adulto 100 ml. (Ascend)
+# 10 [other/exact] $800  araucomed
+      name : Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:andromaco|form:fluid-oral
+      slug : ambroxol-30mg-5ml-jarabe-adulto-100ml-andromaco-2hv956i1zu4np
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)
+# 11 [other/exact] $900  araucomed
+      name : Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:eurofarma|form:fluid-oral
+      slug : ambroxol-15mg-5ml-jarabe-100ml-eurofarma-2jl2o7cp50jkf
+      · araucomed     conc=15mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 15mg/5ml jarabe 100ml (Eurofarma)
+# 12 [other/exact] $990  ecofarmacias+sermecoop+ahumada
+      name : Ambroxol 30mg/5ml Jarabe 100ml
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral
+      slug : ambroxol-30mg-5ml-jarabe-100ml-368kw3kmwe8r5
+      · ecofarmacias  conc=30mg         form=fluid-oral  qty=null  var=null         | Jarabe Ambroxol clorhidrato 30mg5ml 100ml (Hospifarma) DESCUENTO
+      · sermecoop     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg/5ml Jarabe 100ml
+      · ahumada       conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg./5ml. Jarabe Fco. 100ml
+# 13 [other/exact] $1200  araucomed
+      name : Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:sevenpharma|form:fluid-oral
+      slug : ambroxol-30mg-5ml-jarabe-adulto-100ml-seven-pharma-1zj6o2kqvek4v
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg/5ml Jarabe Adulto 100ml (Seven Pharma)
+# 14 [other/exact] $1490  araucomed
+      name : Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)
+      mk   : ambroxol|100ml|100
+      pk   : ambroxol|100ml|100|bio:unknown|brand:ascend|form:fluid-oral
+      slug : ambroxol-15mg-5ml-jarabe-infantil-x-100-ml-ascend-3e21lnv7p7its
+      · araucomed     conc=15mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Ascend)
+# 15 [other/exact] $1490  araucomed
+      name : Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)
+      mk   : ambroxol|100ml|100
+      pk   : ambroxol|100ml|100|bio:unknown|brand:hospifarma|form:fluid-oral
+      slug : ambroxol-30mg-5ml-jarabe-adulto-x-100-ml-hospifarma-1pjpftt38re8e
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg/5ml Jarabe Adulto x 100 ml. (Hospifarma)
+# 16 [other/exact] $1890  ecofarmacias
+      name : Ambroxol Infantil 100ml (Andromaco)
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:unknown|var:infantil
+      slug : ambroxol-infantil-100ml-andromaco-tthyx3lnma5e
+      · ecofarmacias  conc=null         form=null        qty=null  var=infantil     | Ambroxol Infantil 100ml (Andromaco)
+# 17 [other/exact] $1990  araucomed
+      name : Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:mintlab|form:fluid-oral
+      slug : ambroxol-30mg-5ml-jarabe-adulto-100-ml-mintlab-2lldnr57yv6w4
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg/5ml Jarabe Adulto 100 ml. (Mintlab)
+# 18 [other/exact] $1990  araucomed
+      name : Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:opko|form:fluid-oral
+      slug : ambroxol-30mg-5ml-jarabe-adulto-100ml-opko-uj2qzkb5vhmq
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg/5ml Jarabe Adulto 100ml (Opko)
+# 19 [other/exact] $1990  araucomed
+      name : Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Mintlab)
+      mk   : ambroxol|100ml|100
+      pk   : ambroxol|100ml|100|bio:unknown|brand:mintlab|form:fluid-oral
+      slug : ambroxol-15mg-5ml-jarabe-infantil-x-100-ml-mintlab-1jbs21biw9p4n
+      · araucomed     conc=15mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 15mg/5ml jarabe infantil x 100 ml. (Mintlab)
+# 20 [other/compatible] $2490  araucomed
+      name : Mintamox Adulto 30mg/5ml jarabe 100ml
+      mk   : mintamox|100ml
+      pk   : mintamox|100ml|bio:unknown|brand:mintlab|form:fluid-oral
+      slug : mintamox-adulto-30mg-5ml-jarabe-100ml-3plikh01rfm37
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Mintamox Adulto 30mg/5ml jarabe 100ml
+# 21 [other/compatible] $2490  araucomed
+      name : Mintamox Infantil 15mg/5ml jarabe 100ml
+      mk   : mintamox|100ml
+      pk   : mintamox|100ml|bio:unknown|brand:mintlab|var:infantil|form:fluid-oral
+      slug : mintamox-infantil-15mg-5ml-jarabe-100ml-1x37maeg4ytfz
+      · araucomed     conc=15mg/5ml     form=fluid-oral  qty=null  var=infantil     | Mintamox Infantil 15mg/5ml jarabe 100ml
+# 22 [other/compatible] $2549  ahumada
+      name : Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe
+      mk   : tocalm|100ml|100
+      pk   : tocalm|100ml|100|bio:true|brand:unknown|form:fluid-oral
+      slug : tocalm-adulto-30-mg-5-ml-x-100-ml-jarabe-2u1lfrp6e61xs
+      · ahumada       conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe
+# 23 [other/exact] $2550  dr-simi
+      name : Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL
+      mk   : tocalm|100ml
+      pk   : tocalm|100ml|bio:true|brand:prater|var:ambroxol|form:fluid-oral
+      slug : tocalm-ambroxol-15-mg-5-ml-jarabe-pediatrico-100-ml-zrgrm5q0039s
+      · dr-simi       conc=15mg/5ml     form=fluid-oral  qty=null  var=ambroxol     | Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL
+# 24 [other/compatible] $2690  farmex
+      name : Mintamox 15 mg / 5 mL x 100 mL
+      mk   : mintamox|100ml|100
+      pk   : mintamox|100ml|100|bio:unknown|brand:mintlab
+      slug : mintamox-15-mg-5-ml-x-100-ml-fppfm9n7swln
+      · farmex        conc=15mg/5ml     form=null        qty=null  var=null         | Mintamox 15 mg / 5 mL x 100 mL
+# 25 [other/exact] $2980  ecofarmacias+cruz-verde
+      name : Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)
+      mk   : tocalm|100ml
+      pk   : tocalm|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral
+      slug : tocalm-ambroxol-jarabe-adulto-100-ml-prater-1q7q94mtdj0v6
+      · ecofarmacias  conc=null         form=fluid-oral  qty=null  var=ambroxol     | Tocalm Ambroxol Jarabe Adulto 100 mL (Prater)
+      · cruz-verde    conc=30mg/5ml     form=fluid-oral  qty=null  var=ambroxol     | Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL
+# 26 [other/compatible] $2990  araucomed
+      name : Tocalm Adulto 30mg/5ml jarabe 100 ml.
+      mk   : tocalm|100ml
+      pk   : tocalm|100ml|bio:unknown|brand:unknown|form:fluid-oral
+      slug : tocalm-adulto-30mg-5ml-jarabe-100-ml-2y8m4vyd1u39t
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Tocalm Adulto 30mg/5ml jarabe 100 ml.
+# 27 [other/exact] $2990  ecofarmacias
+      name : Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml
+      mk   : pazbronq|100ml
+      pk   : pazbronq|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral
+      slug : pazbronq-ambroxol-clorhidrato-30-mg-5-ml-jarabe-100-ml-3g87yvmzhkiq3
+      · ecofarmacias  conc=30mg/5ml     form=fluid-oral  qty=null  var=ambroxol     | Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml
+# 28 [other/exact] $2990  easyfarma
+      name : Ambroxol Pediatrico 15mg/5...
+      mk   : ambroxol|15mg
+      pk   : ambroxol|15mg|bio:unknown|brand:ascend|var:infantil
+      slug : ambroxol-pediatrico-15mg-5-2c0taqs5f43w8
+      · easyfarma     conc=null         form=null        qty=null  var=infantil     | Ambroxol Pediatrico 15mg/5...
+# 29 [other/compatible] $2990  easyfarma
+      name : Amrodil 30 Mg/5ml 100 Ml
+      mk   : amrodil|100ml
+      pk   : amrodil|100ml|bio:unknown|brand:unknown
+      slug : amrodil-30-mg-5ml-100-ml-c0kxdm15pmxw
+      · easyfarma     conc=30mg/5ml     form=null        qty=null  var=null         | Amrodil 30 Mg/5ml 100 Ml
+# 30 [other/exact] $3255  salcobrand
+      name : Ambroxol 30mg/5ml Jarabe 100ml
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:ambroxol|form:fluid-oral
+      slug : ambroxol-30mg-5ml-jarabe-100ml-z39fzv5pa8rd
+      · salcobrand    conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 30mg/5ml Jarabe 100ml
+# 31 [other/compatible] $3490  araucomed
+      name : Muxol Pediátrico 15mg/5ml jarabe x 100 ml.
+      mk   : muxol|100ml|100
+      pk   : muxol|100ml|100|bio:unknown|brand:unknown|var:infantil|form:fluid-oral
+      slug : muxol-pediatrico-15mg-5ml-jarabe-x-100-ml-1ls9fk4mchxkf
+      · araucomed     conc=15mg/5ml     form=fluid-oral  qty=null  var=infantil     | Muxol Pediátrico 15mg/5ml jarabe x 100 ml.
+# 32 [other/exact] $3690  cruz-verde
+      name : Mintamox Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL
+      mk   : mintamox|100ml
+      pk   : mintamox|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral
+      slug : mintamox-pediatrico-ambroxol-15-mg-5ml-jarabe-100-ml-2st6sm79gxbwc
+      · cruz-verde    conc=15mg/5ml     form=fluid-oral  qty=null  var=infantil     | Mintamox Pediatrico Ambroxol 15 mg/5mL Jarabe 100 mL
+# 33 [other/compatible] $3787  ahumada
+      name : Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe
+      mk   : tocalm|100ml|100
+      pk   : tocalm|100ml|100|bio:true|brand:unknown|var:infantil|form:fluid-oral
+      slug : tocalm-pediatrico-15-mg-5-ml-x-100-ml-jarabe-253tfkyppy9wu
+      · ahumada       conc=15mg/5ml     form=fluid-oral  qty=null  var=infantil     | Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe
+# 34 [other/exact] $3790  cruz-verde
+      name : Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL
+      mk   : mintamox|100ml
+      pk   : mintamox|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral
+      slug : mintamox-adulto-ambroxol-30-mg-5-ml-jarabe-100-ml-1sfw6tf21rph3
+      · cruz-verde    conc=30mg/5ml     form=fluid-oral  qty=null  var=ambroxol     | Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL
+# 35 [other/exact] $3921  salcobrand
+      name : Muxol Adulto Ambroxol Jarabe 100ml
+      mk   : muxol|100ml
+      pk   : muxol|100ml|bio:unknown|brand:muxol|var:ambroxol|form:fluid-oral
+      slug : muxol-adulto-ambroxol-jarabe-100ml-v9hsg5qvdwrk
+      · salcobrand    conc=null         form=fluid-oral  qty=null  var=ambroxol     | Muxol Adulto Ambroxol Jarabe 100ml
+# 36 [other/compatible] $3990  araucomed
+      name : Muxol Adulto 30mg/5ml jarabe 100ml
+      mk   : muxol|100ml
+      pk   : muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral
+      slug : muxol-adulto-30mg-5ml-jarabe-100ml-ouqw7x1crum0
+      · araucomed     conc=30mg/5ml     form=fluid-oral  qty=null  var=null         | Muxol Adulto 30mg/5ml jarabe 100ml
+# 37 [other/exact] $4590  cruz-verde
+      name : Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml
+      mk   : muxol|100ml
+      pk   : muxol|100ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral
+      slug : muxol-jarabe-adulto-ambroxol-600-mg-100-ml-141k4oml9gm7x
+      · cruz-verde    conc=600mg/100ml  form=fluid-oral  qty=null  var=ambroxol     | Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml
+# 38 [other/exact] $4590  ahumada
+      name : MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml
+      mk   : muxol|100ml
+      pk   : muxol|100ml|bio:true|brand:unknown|var:ambroxol|form:fluid-oral
+      slug : muxol-jarabe-adulto-ambroxol-clorhidrato-600-mg-100-ml-3k6o8sihfbaz3
+      · ahumada       conc=600mg        form=fluid-oral  qty=null  var=ambroxol     | MUXOL JARABE ADULTO Ambroxol Clorhidrato 600 mg 100 ml
+# 39 [other/exact] $4890  sermecoop
+      name : Muxol (ambroxol) 15mg/5ml Jarabe 100ml
+      mk   : muxol|100ml
+      pk   : muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral
+      slug : muxol-ambroxol-15mg-5ml-jarabe-100ml-ouqw7x1crum0
+      · sermecoop     conc=15mg/5ml     form=fluid-oral  qty=null  var=null         | Muxol (ambroxol) 15mg/5ml Jarabe 100ml
+# 40 [other/compatible] $4990  araucomed
+      name : Broncot 15mg/5ml Jarabe x 120 ml.
+      mk   : broncot|120ml|120
+      pk   : broncot|120ml|120|bio:unknown|brand:unknown|form:fluid-oral
+      slug : broncot-15mg-5ml-jarabe-x-120-ml-13vd75vgd9gxf
+      · araucomed     conc=15mg/5ml     form=fluid-oral  qty=null  var=null         | Broncot 15mg/5ml Jarabe x 120 ml.
+# 41 [other/exact] $5190  farmex
+      name : Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL
+      mk   : muxol|100ml|100
+      pk   : muxol|100ml|100|bio:unknown|brand:eurolab|var:ambroxol|form:fluid-oral
+      slug : muxol-jarabe-adulto-ambroxol-30-mg-5-ml-x-100-ml-gjpn5yhpsife
+      · farmex        conc=30mg/5ml     form=fluid-oral  qty=null  var=ambroxol     | Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL
+# 42 [other/exact] $5490  cruz-verde
+      name : Ambroxol 15 mg/5mL Jarabe 100 mL
+      mk   : ambroxol|100ml
+      pk   : ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral
+      slug : ambroxol-15-mg-5ml-jarabe-100-ml-368kw3kmwe8r5
+      · cruz-verde    conc=15mg/5ml     form=fluid-oral  qty=null  var=null         | Ambroxol 15 mg/5mL Jarabe 100 mL
+# 43 [other/exact] $5829  salcobrand
+      name : Muxol Pediátrico Ambroxol Jarabe 100ml
+      mk   : muxol|100ml
+      pk   : muxol|100ml|bio:unknown|brand:muxolpediatrico|var:infantil|form:fluid-oral
+      slug : muxol-pediatrico-ambroxol-jarabe-100ml-w2nkt0oostex
+      · salcobrand    conc=null         form=fluid-oral  qty=null  var=infantil     | Muxol Pediátrico Ambroxol Jarabe 100ml
+# 44 [other/compatible] $5990  araucomed
+      name : Broncot Forte 30mg/5ml sin azucar 120 ml.
+      mk   : broncot|120ml
+      pk   : broncot|120ml|bio:unknown|brand:unknown|var:forte
+      slug : broncot-forte-30mg-5ml-sin-azucar-120-ml-2a5u69y15itf6
+      · araucomed     conc=30mg/5ml     form=null        qty=null  var=forte        | Broncot Forte 30mg/5ml sin azucar 120 ml.
+# 45 [other/exact] $6190  cruz-verde
+      name : Muxol Jarabe Pediátrico Ambroxol 300 mg / 100 ml
+      mk   : muxol|100ml
+      pk   : muxol|100ml|bio:unknown|brand:unknown|var:infantil|form:fluid-oral
+      slug : muxol-jarabe-pediatrico-ambroxol-300-mg-100-ml-1acaqqjc9k5ee
+      · cruz-verde    conc=300mg/100ml  form=fluid-oral  qty=null  var=infantil     | Muxol Jarabe Pediátrico Ambroxol 300 mg / 100 ml
+# 46 [other/exact] $6190  ahumada
+      name : Muxol Jarabe Pediátrico Ambroxol Clorhidrato 300 mg 100 ml
+      mk   : muxol|100ml
+      pk   : muxol|100ml|bio:true|brand:unknown|var:infantil|form:fluid-oral
+      slug : muxol-jarabe-pediatrico-ambroxol-clorhidrato-300-mg-100-ml-2qpxe9pfycql0
+      · ahumada       conc=300mg        form=fluid-oral  qty=null  var=infantil     | Muxol Jarabe Pediátrico Ambroxol Clorhidrato 300 mg 100 ml
+# 47 [other/compatible] $6490  araucomed
+      name : Broncot 7,5mg/ml gotas x 30 ml.
+      mk   : broncot|30ml|30
+      pk   : broncot|30ml|30|bio:unknown|brand:unknown|form:fluid-oral
+      slug : broncot-7-5mg-ml-gotas-x-30-ml-3ljl5zg40seef
+      · araucomed     conc=7.5mg/1ml    form=fluid-oral  qty=null  var=null         | Broncot 7,5mg/ml gotas x 30 ml.
+# 48 [other/compatible] $6990  farmex
+      name : Broncot Forte G.T.F. Jarabe 30 mg / 5 mL x 120 mL
+      mk   : broncot|120ml|120
+      pk   : broncot|120ml|120|bio:unknown|brand:abbott|var:forte|form:fluid-oral
+      slug : broncot-forte-g-t-f-jarabe-30-mg-5-ml-x-120-ml-1favj838sgruu
+      · farmex        conc=30mg/5ml     form=fluid-oral  qty=null  var=forte        | Broncot Forte G.T.F. Jarabe 30 mg / 5 mL x 120 mL
+# 49 [other/compatible] $7807  ahumada
+      name : Broncot Fte G.F.T. S/Azu. 30mg/5ml 120ml
+      mk   : broncot|120ml
+      pk   : broncot|120ml|bio:unknown|brand:unknown|var:fte
+      slug : broncot-fte-g-f-t-s-azu-30mg-5ml-120ml-1v5y57nioo3ir
+      · ahumada       conc=30mg/5ml     form=null        qty=null  var=fte          | Broncot Fte G.F.T. S/Azu. 30mg/5ml 120ml
+# 50 [other/compatible] $7990  easyfarma
+      name : Broncot Gotas 7,5 mg/ml x...
+      mk   : broncot|7.5mg
+      pk   : broncot|7.5mg|bio:unknown|brand:unknown|form:fluid-oral
+      slug : broncot-gotas-7-5-mg-ml-x-3qjm7adtuxjte
+      · easyfarma     conc=7.5mg/1ml    form=fluid-oral  qty=null  var=null         | Broncot Gotas 7,5 mg/ml x...
+# 51 [other/exact] $8095  salcobrand
+      name : Broncot Ambroxol 30mg/5ml 120ml
+      mk   : broncot|120ml
+      pk   : broncot|120ml|bio:unknown|brand:broncot|var:ambroxol
+      slug : broncot-ambroxol-30mg-5ml-120ml-v1dkbyxkecod
+      · salcobrand    conc=30mg/5ml     form=null        qty=null  var=ambroxol     | Broncot Ambroxol 30mg/5ml 120ml
+# 52 [other/compatible] $8290  cruz-verde
+      name : Mucosolvan-Dual Infantil 120Ml
+      mk   : mucosolvandual|120ml
+      pk   : mucosolvandual|120ml|bio:unknown|brand:unknown|var:infantil
+      slug : mucosolvan-dual-infantil-120ml-2th8dl3p0jtit
+      · cruz-verde    conc=null         form=null        qty=null  var=infantil     | Mucosolvan-Dual Infantil 120Ml
+# 53 [other/compatible] $9427  ahumada
+      name : Broncot GFT 15 mg/5 mL x 120 mL Jarabe
+      mk   : broncot|120ml|120
+      pk   : broncot|120ml|120|bio:unknown|brand:unknown|var:gft|form:fluid-oral
+      slug : broncot-gft-15-mg-5-ml-x-120-ml-jarabe-1s18o538zsjkv
+      · ahumada       conc=15mg/5ml     form=fluid-oral  qty=null  var=gft          | Broncot GFT 15 mg/5 mL x 120 mL Jarabe
+# 54 [other/compatible] $13402  ahumada
+      name : Broncot 7.5 mg/ml Gotas Fco. 30ml
+      mk   : broncot|30ml
+      pk   : broncot|30ml|bio:unknown|brand:unknown|form:fluid-oral
+      slug : broncot-7-5-mg-ml-gotas-fco-30ml-1tcel2ll3u3yk
+      · ahumada       conc=7.5mg/1ml    form=fluid-oral  qty=null  var=null         | Broncot 7.5 mg/ml Gotas Fco. 30ml
+# 55 [other/exact] $13540  cruz-verde
+      name : Broncot GFT Pediatrico Ambroxol 15 mg/5mL Jarabe 120 mL
+      mk   : broncot|120ml
+      pk   : broncot|120ml|bio:unknown|brand:unknown|var:gft|form:fluid-oral
+      slug : broncot-gft-pediatrico-ambroxol-15-mg-5ml-jarabe-120-ml-ptpbwfrl19ci
+      · cruz-verde    conc=15mg/5ml     form=fluid-oral  qty=null  var=gft          | Broncot GFT Pediatrico Ambroxol 15 mg/5mL Jarabe 120 mL
+# 56 [other/exact] $15311  salcobrand
+      name : Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml
+      mk   : broncot|30ml
+      pk   : broncot|30ml|bio:unknown|brand:broncot|var:ambroxol|form:fluid-oral
+      slug : broncot-ambroxol-clorhidrato-7-5mg-ml-gotas-30ml-24ic16aauheek
+      · salcobrand    conc=7.5mg/1ml    form=fluid-oral  qty=null  var=ambroxol     | Broncot Ambroxol Clorhidrato 7.5mg/ml Gotas 30ml
+# 57 [other/exact] $16990  cruz-verde
+      name : Broncot Ambroxol 7,5 mg/mL Gotas 30 mL
+      mk   : broncot|30ml
+      pk   : broncot|30ml|bio:unknown|brand:unknown|var:ambroxol|form:fluid-oral
+      slug : broncot-ambroxol-7-5-mg-ml-gotas-30-ml-3vz8myj36ur6h
+      · cruz-verde    conc=7.5mg/1ml    form=fluid-oral  qty=null  var=ambroxol     | Broncot Ambroxol 7,5 mg/mL Gotas 30 mL
+
+COLISIONES DE HASH DE SLUG: 2
+  hash 368kw3kmwe8r5:
+    - Ambroxol 30mg/5ml Jarabe 100ml  (pk ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral)
+    - Ambroxol 15 mg/5mL Jarabe 100 mL  (pk ambroxol|100ml|bio:unknown|brand:unknown|form:fluid-oral)
+  hash ouqw7x1crum0:
+    - Muxol Adulto 30mg/5ml jarabe 100ml  (pk muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral)
+    - Muxol (ambroxol) 15mg/5ml Jarabe 100ml  (pk muxol|100ml|bio:unknown|brand:unknown|form:fluid-oral)
