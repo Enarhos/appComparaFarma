@@ -580,8 +580,8 @@
     "offers": 174,
     "v1Cards": 163,
     "v1PresentationKeys": 113,
-    "v2Concepts": 33,
-    "v2Presentations": 55,
+    "v2Concepts": 35,
+    "v2Presentations": 57,
     "v2Products": 111,
     "pharmacies": 8,
     "productBreakdown": [
@@ -1264,12 +1264,12 @@
     ]
   },
   "combinations": {
-    "offers": 131,
-    "v1Cards": 125,
-    "v1PresentationKeys": 88,
-    "v2Concepts": 35,
-    "v2Presentations": 49,
-    "v2Products": 79,
+    "offers": 145,
+    "v1Cards": 139,
+    "v1PresentationKeys": 95,
+    "v2Concepts": 33,
+    "v2Presentations": 47,
+    "v2Products": 84,
     "pharmacies": 9,
     "productBreakdown": [
       {
@@ -1434,12 +1434,29 @@
         ]
       },
       {
-        "provisionalProductKey": "PROV-M-b2anux9ic9nnoscgn50hnfr58",
+        "provisionalProductKey": "PROV-M-9p5av65wkaz5kc8rp2x7h8xou",
+        "brand": null,
+        "variant": null,
+        "manufacturer": "Ascend",
+        "conceptSignature": "ing=amoxicilina+clavulanico|disc=none|conc=conc:mass:500mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-cncdizw43d0avblvh3j8jlvh3|qty=20|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "farmex",
+          "dr-simi"
+        ],
+        "names": [
+          "Amoxicilina + Ácido Clavulánico 500 mg / 125 mg x 20 comprimidos",
+          "Amoxicilina 500 mg ácido clavulánico 125 mg 20 comprimidos recubiertos"
+        ]
+      },
+      {
+        "provisionalProductKey": "PROV-M-7fc915ubytggecd36e3zrrgvi",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina+clavulanico|disc=none|conc=conc:mass:500mg|form=comprimido|route=oral|unit=comprimido",
-        "presentationSignature": "concept=PROV-C-4tx0u9ydjkfrn78ts9ze6o6hw|qty=20|vol=none",
+        "conceptSignature": "ing=amoxicilina+clavulanico|disc=none|conc=conc:mass:500mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-cncdizw43d0avblvh3j8jlvh3|qty=20|vol=none",
         "offers": 2,
         "pharmacies": [
           "sermecoop",
@@ -1451,12 +1468,12 @@
         ]
       },
       {
-        "provisionalProductKey": "PROV-M-bdqzxojmmutqtsn0tzci03l4y",
+        "provisionalProductKey": "PROV-M-1ssi6bu7tbgk3k6k0mcwr1x97",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina+clavulanico|disc=none|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
-        "presentationSignature": "concept=PROV-C-8ki0xt0xqiaiu3lith53oc3z6|qty=20|vol=none",
+        "conceptSignature": "ing=amoxicilina+clavulanico|disc=none|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-adhzrr7mu44qzi41oq7o2qgsp|qty=20|vol=none",
         "offers": 2,
         "pharmacies": [
           "ecofarmacias",
@@ -1468,28 +1485,12 @@
         ]
       },
       {
-        "provisionalProductKey": "PROV-M-9lpdzy54grjkpp1w8dozp3zg3",
+        "provisionalProductKey": "PROV-M-9og87ijpi0jhxri81kq8f23wc",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina|disc=none|conc=conc:?|form=?|route=?|unit=?",
-        "presentationSignature": "concept=PROV-C-6e48rb3k7vjm10k3sq8edo7yl|qty=?|vol=?",
-        "offers": 2,
-        "pharmacies": [
-          "easyfarma"
-        ],
-        "names": [
-          "Amoxicilina/Acido...",
-          "Amoxicilina + Acido..."
-        ]
-      },
-      {
-        "provisionalProductKey": "PROV-M-890wp6g6fto47vi7ozhj2wnnu",
-        "brand": null,
-        "variant": null,
-        "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina+clavulanico|disc=none|conc=conc:mass:57mg|form=liquido-oral|route=oral|unit=?",
-        "presentationSignature": "concept=PROV-C-9nbxkaprq7tc8f95t36jb5q5u|qty=?|vol=70ml",
+        "conceptSignature": "ing=amoxicilina+clavulanico|disc=none|conc=conc:mass:57mg|form=liquido-oral|route=oral|unit=?",
+        "presentationSignature": "concept=PROV-C-16lf5jaidkhaig5e2ljh1pt35|qty=?|vol=70ml",
         "offers": 2,
         "pharmacies": [
           "ecofarmacias",
@@ -1501,12 +1502,12 @@
         ]
       },
       {
-        "provisionalProductKey": "PROV-M-7l1nk7zc13wo91ry0btf8ba2f",
+        "provisionalProductKey": "PROV-M-akqm93cl7uto4fifypslz7kt6",
         "brand": null,
         "variant": null,
         "manufacturer": null,
-        "conceptSignature": "ing=acido+amoxicilina+clavulanico|disc=none|conc=conc:mass:875mg|form=comprimido|route=oral|unit=comprimido",
-        "presentationSignature": "concept=PROV-C-5qexccbd65ccv5k291fc81lsj|qty=20|vol=none",
+        "conceptSignature": "ing=amoxicilina+clavulanico|disc=none|conc=conc:mass:875mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-5gigo1f2arl48alnsdx4jtws0|qty=20|vol=none",
         "offers": 2,
         "pharmacies": [
           "ecofarmacias",
@@ -1515,6 +1516,38 @@
         "names": [
           "Amoxicilina+ácido Clavulánico 875mg 125mg por 20 comprimidos Ascend (Cenabast)",
           "Amoxicilina 875mg/acido Clavulanico 125mg 20 Comprimidos"
+        ]
+      },
+      {
+        "provisionalProductKey": "PROV-M-1v2yyh7519pq1t0rge6rei91l",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=amoxicilina+clavulanico|disc=none|conc=conc:mass:125mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-1j21zvisiaofttcavdgtulmec|qty=14|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "sermecoop"
+        ],
+        "names": [
+          "Amoxicilina/Ácido Clavulánico 875/125 Mg X 14 Comprimidos Recubiertos",
+          "Ambilan Bid (amoxicilina/clavulanico) 875/125mg 14 Comprimidos"
+        ]
+      },
+      {
+        "provisionalProductKey": "PROV-M-31a6ogvt1bw19yqsl0xgeo80r",
+        "brand": null,
+        "variant": null,
+        "manufacturer": null,
+        "conceptSignature": "ing=amoxicilina+clavulanico|disc=none|conc=conc:mass:125mg|form=comprimido|route=oral|unit=comprimido",
+        "presentationSignature": "concept=PROV-C-1j21zvisiaofttcavdgtulmec|qty=20|vol=none",
+        "offers": 2,
+        "pharmacies": [
+          "sermecoop"
+        ],
+        "names": [
+          "Amoxicilina/Ácido Clavulánico 875/125 Mg X 20 Comprimidos Recubiertos",
+          "Ambilan Bid (amoxicilina/clavulanico) 875/125mg 20 Comprimidos"
         ]
       },
       {
@@ -1562,36 +1595,6 @@
         ],
         "names": [
           "Losartan Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos"
-        ]
-      },
-      {
-        "provisionalProductKey": "PROV-M-dpo59yq60iqrkpq9ypfzl459w",
-        "brand": null,
-        "variant": null,
-        "manufacturer": "Opko",
-        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:mass:50mg|form=comprimido|route=oral|unit=comprimido",
-        "presentationSignature": "concept=PROV-C-emaxo0srf9djkdgyc7hcavltl|qty=30|vol=none",
-        "offers": 2,
-        "pharmacies": [
-          "farmex"
-        ],
-        "names": [
-          "Losartán Potásico / Hidroclorotiazida 50 mg / 12,5 mg x 30 comprimidos"
-        ]
-      },
-      {
-        "provisionalProductKey": "PROV-M-cuhujn9f6x04ndnrmd2tzts3d",
-        "brand": null,
-        "variant": null,
-        "manufacturer": "Eurofarma",
-        "conceptSignature": "ing=hidroclorotiazida+losartan|disc=none|conc=conc:?|form=comprimido|route=oral|unit=?",
-        "presentationSignature": "concept=PROV-C-ectq41uhjcdiu7wvctd7sdd1p|qty=30|vol=none",
-        "offers": 2,
-        "pharmacies": [
-          "araucomed"
-        ],
-        "names": [
-          "Losartan Hidroclorotiazida 50/12,5 x30com (Eurofarma)"
         ]
       }
     ]

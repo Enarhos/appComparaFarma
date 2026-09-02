@@ -49,6 +49,7 @@ const {
   brandHeadTokens,
   parseMeasurements,
   isVolumeUnit,
+  COMPOSITION_VOCABULARY,
 } = await import(pathToFileURL(DOMAIN_DIST).href);
 
 const {
@@ -57,6 +58,7 @@ const {
   compareConcentration,
   concentrationSignature,
   offerSignature,
+  V2_MOLECULE_VOCABULARY,
 } = await import(pathToFileURL(DOMAIN_V2_DIST).href);
 
 // ---------------------------------------------------------------------------
@@ -131,6 +133,7 @@ function toRawOfferInput(row) {
 // ---------------------------------------------------------------------------
 
 const uniq = (xs) => [...new Set(xs)];
+const uniqBy = (xs, key) => [...new Map(xs.map((x) => [key(x), x])).values()];
 
 function v1Baseline(envelopes, rows) {
   const cards = envelopes.flatMap((e) =>
@@ -370,6 +373,169 @@ function contradictionAxes(a, b, mode = "baseline") {
   if (ispA && ispB && ispA !== ispB) axes.push("ispRegistration");
 
   return axes;
+}
+
+// ---------------------------------------------------------------------------
+// 3-bis. CLASIFICADOR INDEPENDIENTE MONOFARMACO / ASOCIACION
+//
+// Alimenta la metrica `monotherapyAssociationCollisions` y el `Concept Semantic
+// Collision Rate`. ESTA IMPLEMENTADO APARTE A PROPOSITO: si la metrica usara el
+// mismo lector que asigna identidad (`readIngredientComposition`), mediria su
+// propia coherencia y daria 0 por construccion. Aca la evidencia se vuelve a
+// derivar del NOMBRE con codigo distinto, y despues se pregunta si el motor
+// junto dos nombres que se contradicen.
+//
+// Solo usa senales INTRINSECAS del nombre:
+//   1. `combinationKey()` de v1 (funcion no modificada) devuelve un token;
+//   2. una razon de dosis masa/masa ("875/125", "25 mg/25 mg");
+//   3. dos o mas ocurrencias del patron `<molecula> <masa>`.
+// El vocabulario de corroboracion no es lo que esta bajo prueba (es un dato),
+// asi que se reutiliza.
+// ---------------------------------------------------------------------------
+
+const MOLECULE_VOCABULARY = new Set([...COMPOSITION_VOCABULARY, ...V2_MOLECULE_VOCABULARY]);
+// Calificadores quimicos y sales que nunca son un componente propio.
+const QUALIFIERS = new Set([
+  "acido", "acida", "acidos", "sodio", "sodico", "sodica", "potasio", "potasico",
+  "potasica", "calcio", "calcico", "calcica", "magnesio", "magnesico", "magnesica",
+  "clorhidrato", "diclorhidrato", "dihidrocloruro", "cloruro", "hidrocloruro",
+  "bromhidrato", "sulfato", "fosfato", "nitrato", "acetato", "maleato", "mesilato",
+  "besilato", "tartrato", "succinato", "fumarato", "citrato", "estearato",
+  "monohidrato", "dihidratado", "trihidratado", "hemihidrato", "anhidro", "micronizado",
+]);
+
+const stripLower = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+/** Razon de dosis masa/masa: cuantos componentes declara la tipografia (0 si ninguna). */
+function doseRatioArity(name) {
+  const text = stripLower(name).replace(/(\w)-(\w)/g, "$1$2");
+  const U = "mgs|mcg|mls|grs|ug|mg|gr|ml|cc|lt|ui|iu|g|l";
+  const RUN = new RegExp(
+    `(\\d+(?:[.,]\\d+)?)(?:\\s*(${U})(?![a-z]))?(?:\\s*\\/\\s*(\\d+(?:[.,]\\d+)?)(?:\\s*(${U})(?![a-z]))?)+`,
+    "g"
+  );
+  const EL = new RegExp(`(\\d+(?:[.,]\\d+)?)(?:\\s*(${U})(?![a-z]))?`, "g");
+  const MASS = new Set(["mg", "mgs", "mcg", "ug", "g", "gr", "grs"]);
+  const VOL = new Set(["ml", "mls", "cc", "l", "lt"]);
+  let best = 0;
+  for (const run of text.matchAll(RUN)) {
+    let units = [...run[0].matchAll(EL)].map((e) => e[2] ?? null);
+    const volAt = units.findIndex((u) => u !== null && VOL.has(u));
+    if (volAt !== -1) units = units.slice(0, volAt);
+    if (units.length < 2) continue;
+    const last = units[units.length - 1];
+    if ((last !== null && MASS.has(last)) || units.every((u) => u === null)) {
+      best = Math.max(best, units.length);
+    }
+  }
+  return best;
+}
+
+/** Ocurrencias del patron `<palabra> <masa>`, saltando sales y conectores. */
+function doseAnnotatedWords(name) {
+  const text = stripLower(name).replace(/(\w)-(\w)/g, "$1$2");
+  const U = "mgs|mcg|mls|grs|ug|mg|gr|ml|cc|lt|ui|iu|g|l";
+  const SCAN = new RegExp(`(\\d+(?:[.,]\\d+)?)(?:\\s*(${U})(?![a-z]))?|([a-z]+)`, "g");
+  const MASS = new Set(["mg", "mgs", "mcg", "ug", "g", "gr", "grs"]);
+  const toks = [...text.matchAll(SCAN)].map((m) =>
+    m[3] !== undefined ? { w: m[3] } : { unit: m[2] ?? null }
+  );
+  const out = [];
+  for (let i = 0; i < toks.length; i++) {
+    const w = toks[i].w;
+    if (w === undefined || w.length < 4 || QUALIFIERS.has(w)) continue;
+    for (let j = i + 1; j < toks.length; j++) {
+      const t = toks[j];
+      if (t.w !== undefined) {
+        if (QUALIFIERS.has(t.w) || ["de", "del", "y", "e", "con"].includes(t.w)) continue;
+        break;
+      }
+      if (t.unit !== null && MASS.has(t.unit)) out.push(w);
+      break;
+    }
+  }
+  return out;
+}
+
+/**
+ * Nombre CORTADO POR LA FUENTE ("Amoxicilina + Ac...", "Ambroxol Pediatrico
+ * 15mg/5..."). Son 56 nombres unicos del corpus, todos de EasyFarma, cuyo
+ * scraping WordPress trunca el titulo (CLAUDE.md §11, scrapers fragiles).
+ */
+const TRUNCATED_NAME_RE = /(\.\.\.|…)\s*$/;
+
+function isTruncatedName(name) {
+  return TRUNCATED_NAME_RE.test(name.trim());
+}
+
+/**
+ * Que declara el NOMBRE: `association` (mas de un componente activo),
+ * `monotherapy` (exactamente uno) o `unknown` (no declara composicion).
+ *
+ * UN NOMBRE TRUNCADO NUNCA DECLARA MONOFARMACO. La primera ejecucion de esta
+ * metrica dio 1 colision, y al abrirla resulto ser un ERROR DE LA PROPIA
+ * METRICA, no del motor: el concepto `ing=amoxicilina` con todo lo demas
+ * desconocido agrupa TRES ofertas de EasyFarma —"Amoxicilina/Acido...",
+ * "Amoxicilina + Acido..." y "Amoxicilina + Ac..."— que son el MISMO
+ * medicamento (amoxicilina + acido clavulanico) truncado a tres largos
+ * distintos. Agruparlas es correcto. La metrica marcaba colision solo porque
+ * en "Amoxicilina + Ac..." el corte se llevo la evidencia y el clasificador
+ * leia un monofarmaco donde no lo hay.
+ *
+ * Afirmar "este nombre declara exactamente un componente activo" sobre un texto
+ * al que le falta el final no es una afirmacion sostenible: es ausencia de
+ * evidencia, no evidencia de ausencia. La asercion de ASOCIACION si se conserva
+ * —la evidencia que sobrevivio al corte sigue siendo evidencia positiva— y las
+ * ofertas truncadas se cuentan y se reportan aparte para que el riesgo residual
+ * quede visible en vez de disuelto en un promedio.
+ *
+ * UNA MOLECULA NEGADA NO CUENTA. "Tapsin Puro SIN Cafeina 500 mg" nombra la
+ * cafeina para decir que NO esta. Se implementa aparte del lector del motor —
+ * como todo este clasificador— pero la regla es la misma: nombrar no es afirmar
+ * presencia.
+ */
+function negatedWords(name) {
+  const words = normalizedWords(name);
+  const out = new Set();
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] !== "sin" && words[i] !== "libre") continue;
+    let expecting = true;
+    for (let j = i + 1; j < words.length; j++) {
+      const w = words[j];
+      if (QUALIFIERS.has(w) || ["de", "del", "y", "e", "con"].includes(w)) continue;
+      if (w === "ni") { expecting = true; continue; }
+      if (!expecting) break;
+      if (w.length < 4 || /\d/.test(w)) break;
+      out.add(w);
+      expecting = false;
+    }
+  }
+  return out;
+}
+
+function declaredComposition(name) {
+  const words = normalizedWords(name);
+  const negated = negatedWords(name);
+  const molecules = uniq(
+    words.filter((w) => MOLECULE_VOCABULARY.has(w) && !QUALIFIERS.has(w) && !negated.has(w))
+  );
+  const annotated = doseAnnotatedWords(name).filter((w) => !negated.has(w));
+  const annotatedCorroborated = annotated.filter((w) => MOLECULE_VOCABULARY.has(w));
+
+  const signals = [];
+  if (combinationKey(name) !== null) signals.push("v1-combination-key");
+  if (doseRatioArity(name) >= 2) signals.push("mass-mass-dose-ratio");
+  if (uniq(annotated).length >= 2 && annotatedCorroborated.length >= 1) {
+    signals.push("repeated-molecule-dose-pattern");
+  }
+  if (molecules.length >= 2) signals.push("multiple-vocabulary-molecules");
+
+  const truncated = isTruncatedName(name);
+  if (signals.length > 0) return { kind: "association", molecules, signals, truncated };
+  if (molecules.length === 1 && !truncated) {
+    return { kind: "monotherapy", molecules, signals, truncated };
+  }
+  return { kind: "unknown", molecules, signals, truncated };
 }
 
 // ---------------------------------------------------------------------------
@@ -676,6 +842,137 @@ async function main() {
   }
   perQueryDurations.sort((a, b) => a - b);
 
+  // ---- COLISION SEMANTICA DE CONCEPTO (metrica nueva de esta iteracion)
+  //
+  // Un concepto colisiona cuando agrupa una oferta cuyo NOMBRE declara una
+  // asociacion junto a otra cuyo NOMBRE declara un monofarmaco. Es la clase de
+  // defecto que el Gate C no podia ver: Gate C mira contradicciones dentro de un
+  // mismo PRODUCTO, y el falso merge de Adorlan ocurria un nivel mas arriba, en
+  // el CONCEPTO, entre presentaciones distintas (10 vs 20 comprimidos).
+  const compositionByOffer = new Map();
+  const offersByConcept = new Map();
+  const seenPerConcept = new Map();
+  for (const item of linked) {
+    const key = item.canonical.provisionalConceptKey;
+    const offerKey = item.canonical.provisionalOfferKey;
+    if (!seenPerConcept.has(key)) seenPerConcept.set(key, new Set());
+    if (seenPerConcept.get(key).has(offerKey)) continue;
+    seenPerConcept.get(key).add(offerKey);
+    const declared = declaredComposition(item.row.rawName);
+    compositionByOffer.set(offerKey, declared);
+    if (!offersByConcept.has(key)) offersByConcept.set(key, []);
+    offersByConcept.get(key).push({ item, declared });
+  }
+
+  // Riesgo residual de los nombres truncados: cuales de ellos NO conservaron su
+  // propia firma sino que se resolvieron dentro de otra. Es el unico camino por
+  // el que un nombre cortado podria terminar en un concepto que no le
+  // corresponde, asi que se lista entero en vez de resumirse en un porcentaje.
+  const truncatedResolutionKinds = { complete: 0, subsumed: 0, isolated: 0, ambiguous: 0 };
+  const truncatedSubsumed = [];
+  for (const item of linked) {
+    if (!isTruncatedName(item.row.rawName)) continue;
+    const trace = item.canonical.provenance.resolution.concept;
+    truncatedResolutionKinds[trace.kind]++;
+    if (trace.kind === "subsumed" && trace.signature !== trace.rawSignature) {
+      truncatedSubsumed.push({
+        pharmacy: item.row.pharmacy,
+        name: item.row.rawName,
+        rawSignature: trace.rawSignature,
+        resolvedSignature: trace.signature,
+      });
+    }
+  }
+
+  const semanticCollisions = [];
+  let associationConcepts = 0;
+  let monotherapyConcepts = 0;
+  for (const [conceptKey, group] of offersByConcept) {
+    const associations = group.filter((g) => g.declared.kind === "association");
+    const monotherapies = group.filter((g) => g.declared.kind === "monotherapy");
+    if (associations.length > 0) associationConcepts++;
+    else if (monotherapies.length > 0) monotherapyConcepts++;
+    if (associations.length > 0 && monotherapies.length > 0) {
+      semanticCollisions.push({
+        provisionalConceptKey: conceptKey,
+        conceptSignature: graph.concepts.get(conceptKey)?.resolution.signature ?? null,
+        association: {
+          pharmacy: associations[0].item.row.pharmacy,
+          name: associations[0].item.row.rawName,
+          signals: associations[0].declared.signals,
+        },
+        monotherapy: {
+          pharmacy: monotherapies[0].item.row.pharmacy,
+          name: monotherapies[0].item.row.rawName,
+          molecules: monotherapies[0].declared.molecules,
+        },
+      });
+    }
+  }
+
+  // ---- Contradiccion de COMPOSICION dentro de un concepto (segunda mitad de la
+  // metrica semantica).
+  //
+  // La colision monofarmaco/asociacion mide contradicciones de CARDINALIDAD. No
+  // ve las contradicciones de IDENTIDAD de la molecula, y eso no es teorico: es
+  // el defecto de negacion que esta reejecucion destapo. "Tapsin Puro SIN
+  // Cafeina" y "Tapsin Dolor de Cabeza CON cafeina" son los dos monofarmacos
+  // segun el clasificador de cardinalidad, asi que la primera metrica los daba
+  // por buenos mientras compartian concepto.
+  //
+  // Aca se comparan los CONJUNTOS de moleculas de dos ofertas del mismo concepto,
+  // y solo hay contradiccion cuando NINGUNO CONTIENE AL OTRO. Un conjunto que es
+  // subconjunto del otro es una LECTURA INCOMPLETA del mismo medicamento —
+  // "Zolimax Duo 875/125 Amoxicilina 875 mg" nombra una de las dos moleculas de
+  // "Amoxicilina + Acido Clavulanico 875/125"— y agruparlos es correcto: esa es
+  // la subsuncion que el modelo hace a proposito. Lo que no puede pasar es que
+  // dos ofertas del mismo concepto declaren moleculas que se contradicen.
+  const ingredientContradictions = [];
+  for (const [conceptKey, group] of offersByConcept) {
+    const declaring = group.filter((g) => g.declared.molecules.length > 0);
+    let found = false;
+    for (let i = 0; i < declaring.length && !found; i++) {
+      for (let j = i + 1; j < declaring.length && !found; j++) {
+        const a = new Set(declaring[i].declared.molecules);
+        const b = new Set(declaring[j].declared.molecules);
+        const aInB = [...a].every((m) => b.has(m));
+        const bInA = [...b].every((m) => a.has(m));
+        if (aInB || bInA) continue;
+        found = true;
+        ingredientContradictions.push({
+          provisionalConceptKey: conceptKey,
+          conceptSignature: graph.concepts.get(conceptKey)?.resolution.signature ?? null,
+          a: { pharmacy: declaring[i].item.row.pharmacy, name: declaring[i].item.row.rawName, molecules: [...a].sort().join("+") },
+          b: { pharmacy: declaring[j].item.row.pharmacy, name: declaring[j].item.row.rawName, molecules: [...b].sort().join("+") },
+        });
+      }
+    }
+  }
+
+  // ---- Molecula NEGADA por el nombre y afirmada igual por el motor.
+  //
+  // Tercera mitad de la metrica semantica, y la que habria detectado sola el
+  // defecto de negacion: ninguna de las dos anteriores lo ve, porque "Tapsin Puro
+  // SIN Cafeina" y "Tapsin CON cafeina" declaran el MISMO conjunto de moleculas
+  // segun un clasificador que ignore la negacion. Esta comprobacion no compara
+  // ofertas entre si: compara lo que el motor afirma contra lo que el nombre dice.
+  const negatedAssertions = [];
+  for (const item of linked) {
+    const negated = negatedWords(item.row.rawName);
+    if (negated.size === 0) continue;
+    const asserted = item.attributes.activeIngredients
+      .map((i) => i.token)
+      .filter((t) => negated.has(t));
+    if (asserted.length === 0) continue;
+    negatedAssertions.push({
+      pharmacy: item.row.pharmacy,
+      name: item.row.rawName,
+      negated: [...negated],
+      assertedAnyway: asserted,
+    });
+  }
+  const negatedAssertionOffers = uniq(negatedAssertions.map((n) => `${n.pharmacy}|${n.name}`)).length;
+
   // ---- Colisiones de identificador: dos firmas distintas con el mismo ID
   const signatureById = new Map();
   let idCollisions = 0;
@@ -728,6 +1025,41 @@ async function main() {
     falseMergeSamples: v2FalseMerges.slice(0, 20),
     falseMergesStrictConcentration: v2FalseMergesStrict.length,
     falseMergesStrictSamples: v2FalseMergesStrict.slice(0, 20),
+    // --- Semantica de asociaciones (iteracion de asociaciones, PR #159)
+    associationConcepts,
+    monotherapyConcepts,
+    // Nombres cortados por la fuente (EasyFarma). Se reportan aparte porque son
+    // el unico grupo sobre el que la metrica de colision no puede pronunciarse:
+    // sin el final del nombre no hay evidencia de composicion que medir.
+    truncatedNameOffers: [...compositionByOffer.values()].filter((c) => c.truncated).length,
+    truncatedNameResolutionKinds: truncatedResolutionKinds,
+    truncatedNamesSubsumedIntoOtherSignature: truncatedSubsumed.length,
+    truncatedNamesSubsumedSamples: truncatedSubsumed.slice(0, 10),
+    monotherapyAssociationCollisions: semanticCollisions.length,
+    conceptIngredientContradictions: ingredientContradictions.length,
+    conceptIngredientContradictionSamples: ingredientContradictions.slice(0, 20),
+    negatedIngredientAssertions: negatedAssertionOffers,
+    negatedIngredientAssertionSamples: uniqBy(negatedAssertions, (n) => n.name).slice(0, 20),
+    // El rate agrega las DOS mitades de la contradiccion semantica —cardinalidad
+    // e identidad de la molecula— sobre el total de conceptos, contando una sola
+    // vez el concepto que cae en las dos.
+    conceptSemanticCollisionRate: graph.concepts.size
+      ? +(
+          (new Set([
+            ...semanticCollisions.map((c) => c.provisionalConceptKey),
+            ...ingredientContradictions.map((c) => c.provisionalConceptKey),
+          ]).size +
+            negatedAssertionOffers) /
+          graph.concepts.size
+        ).toFixed(6)
+      : 0,
+    monotherapyAssociationCollisionSamples: semanticCollisions.slice(0, 20),
+    offersDeclaringAssociation: [...compositionByOffer.values()].filter(
+      (c) => c.kind === "association"
+    ).length,
+    offersWithPartialComposition: linked.filter(
+      (i) => i.attributes.declaredComponentCount > i.attributes.activeIngredients.length
+    ).length,
     conceptResolution: resolutionKinds,
     offersWithUnresolvedIngredient: unresolvedIngredient,
     identityUnknownRate: linked.length ? +(unresolvedIngredient / linked.length).toFixed(4) : 0,
@@ -783,6 +1115,37 @@ async function main() {
       pass: v2FalseMerges.length === 0,
     },
   };
+
+  // METRICA DE SEGURIDAD NUEVA, REPORTADA APARTE DE LOS TRES GATES.
+  //
+  // No se agrega a `finalVerdict` por decision explicita: convertir una metrica
+  // en gate de S0 es una decision de direccion CTO/Product, no del harness
+  // (CF-SEARCH-011 §16 fija los tres gates). Se mide, se publica y se propone
+  // como gate de S1 en `S0_FAILURES.md`. Su valor medido se reporta siempre.
+  const semanticCollisionTotal =
+    v2.monotherapyAssociationCollisions +
+    v2.conceptIngredientContradictions +
+    v2.negatedIngredientAssertions;
+  const conceptSemanticCollision = {
+    name: "Concept Semantic Collision Rate",
+    status: "REPORTED_NOT_GATED",
+    value: v2.conceptSemanticCollisionRate,
+    collisions: semanticCollisionTotal,
+    components: {
+      monotherapyAssociationCollisions: v2.monotherapyAssociationCollisions,
+      conceptIngredientContradictions: v2.conceptIngredientContradictions,
+      negatedIngredientAssertions: v2.negatedIngredientAssertions,
+    },
+    formatted: `${semanticCollisionTotal}/${v2.concepts} conceptos`,
+    proposedThresholdForS1: "= 0",
+    wouldPass: semanticCollisionTotal === 0,
+    samples: [
+      ...v2.monotherapyAssociationCollisionSamples,
+      ...v2.conceptIngredientContradictionSamples,
+      ...v2.negatedIngredientAssertionSamples,
+    ],
+  };
+
   const finalVerdict =
     gates.gateA.pass && gates.gateB.pass && gates.gateC.pass && classes.SPLIT_LOST === 0
       ? "PASS_S0"
@@ -811,6 +1174,7 @@ async function main() {
     samples,
     unlinkedOffers: unlinked.slice(0, 20),
     gates,
+    conceptSemanticCollision,
     finalVerdict,
   };
 
@@ -935,9 +1299,20 @@ function toCsv(linked) {
     provisionalOfferKey: canonical.provisionalOfferKey,
     activeIngredients: attributes.activeIngredients.map((i) => i.token).join("+"),
     ingredientEvidence: uniq(attributes.activeIngredients.map((i) => i.evidence)).join("+"),
+    // Cardinalidad declarada por el nombre: cuando supera al numero de moleculas
+    // nombradas, el nombre declara una asociacion que no se pudo leer entera.
+    declaredComponentCount: attributes.declaredComponentCount,
+    ingredientStrengths: attributes.ingredientStrengths
+      .filter((s) => s.strength !== null)
+      .map((s) => `${s.token}:${s.strength.value}${s.strength.unit}`)
+      .join("|"),
+    declaredCompositionKind: declaredComposition(row.rawName).kind,
     concentration: concentrationSignature(attributes.concentration),
     concentrationKind: attributes.concentration.kind,
-    dosageForm: attributes.dosageForm,
+    // Era `attributes.dosageForm`, que no existe en `CanonicalAttributes` (el
+    // campo se llama `canonicalDosageForm` desde la revision del PR #159): la
+    // columna salia vacia en las 1.633 filas.
+    dosageForm: attributes.canonicalDosageForm,
     route: attributes.route,
     packageQuantity: attributes.packageQuantity,
     packageVolume: attributes.packageVolume

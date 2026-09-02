@@ -56,31 +56,34 @@ CF-SEARCH-010 midió "false merges = 0" en v1.
 
 | Pregunta | Respuesta medida |
 |---|---:|
-| ¿Se puede construir identidad canónica v2 sobre ofertas reales? | Sí — 316 conceptos, 429 presentaciones, 767 productos, 987 ofertas |
+| ¿Se puede construir identidad canónica v2 sobre ofertas reales? | Sí — 312 conceptos, 421 presentaciones, 764 productos, 987 ofertas |
 | ¿Sin perder ninguna oferta? | Sí — cobertura 100,0000 % |
 | ¿Sin introducir falsos merges? | Sí — 0, con detector más estricto que el de v1 y que el de la entrega anterior |
-| ¿Reduce la fragmentación? | Sí — 72,5 % → 34,7 % con el mismo denominador |
+| ¿Reduce la fragmentación? | Sí — 72,9 % → 35,4 % con el mismo denominador |
 | ¿Sin colisiones de identificador? | Sí — 0 (v1 tiene 4 pares con hash de slug compartido) |
 | ¿Los identificadores son deterministas e independientes? | Sí — verificado con tests de orden, farmacia, precio, stock y consulta |
 | ¿Respeta las 5 dimensiones del Concepto Farmacéutico del EDM-100? | Sí — las 5 son ejes de la firma (antes 3) |
 | ¿Una cabecera no resuelta puede llegar a ser principio activo? | No — 0 conceptos afirman ingrediente y discriminante a la vez |
 | ¿Se pueden confundir las claves de S0 con IDs CFM permanentes? | No — prefijo `PROV-`, 0 claves `CFM-` emitidas |
-| ¿Sin cambiar el comportamiento de v1? | Sí — 379 tests preexistentes verdes, ninguno modificado |
+| ¿Una asociación puede compartir concepto con un monofármaco? | No — 0 colisiones monofármaco/asociación sobre 312 conceptos |
+| ¿Sin cambiar el comportamiento de v1? | Sí — 496 tests preexistentes verdes, ninguno modificado |
 
 ### Cambios de cardinalidad respecto de la entrega anterior
 
-| Métrica | OLD | NEW | Por qué |
+| Métrica | PR #159 | NEW (asociaciones) | Por qué |
 |---|---:|---:|---|
-| Conceptos | 303 | **316** | La firma respeta las 5 dimensiones del EDM. Se separaron 13 conceptos que mezclaban comprimido con cápsula y 3 que mezclaban crema con gel |
-| Presentaciones | 414 | **429** | Consecuencia directa de lo anterior |
-| Productos | 755 | **767** | Consecuencia directa de lo anterior |
-| Fragmentación | 36,0 % | **34,7 %** | Baja aunque haya más conceptos: la unidad farmacéutica como eje resuelve por subsunción casos que antes quedaban ambiguos |
-| Ofertas sin principio activo demostrable | 598 (36,6 %) | 598 (36,6 %) | Sin cambio — el vocabulario de moléculas no se tocó |
-| `complete` / `subsumed` / `isolated` / `ambiguous` | 1185 / 131 / 105 / 212 | **510 / 142 / 741 / 240** | Con 6 ejes, muchas menos ofertas declaran TODO. No es una regresión: es dejar de llamar "completa" a una lectura que no lo era |
+| Conceptos | 316 | **312** | El lector de asociaciones unifica escrituras de una misma asociación (las 3 de Adorlan, con `/` y sin separador; las 4 de amoxicilina + ácido clavulánico) y separa la asociación del monofármaco. Neto −4 |
+| Presentaciones | 429 | **421** | Consecuencia directa de lo anterior |
+| Productos | 767 | **764** | Consecuencia directa de lo anterior |
+| Fragmentación | 34,7 % | **35,4 %** | Sube 0,7 pp: separar Adorlan de Lertus, y Zolimax Duo del monofármaco de amoxicilina, cuesta fragmentación. Es el precio correcto |
+| Ofertas sin principio activo demostrable | 598 (36,6 %) | **596 (36,5 %)** | Baja por las escrituras que ahora sí resuelven composición; sube por las que dejaron de afirmar una molécula que no podían demostrar (`zomel`, `limon`, `miel`, `triterapia`) |
+| `complete` / `subsumed` / `isolated` / `ambiguous` | 510 / 142 / 741 / 240 | **506 / 145 / 738 / 244** | Movimiento menor, mismo perfil |
+| Colisiones monofármaco/asociación | no medido | **0** | Métrica nueva de esta iteración (`S0_FAILURES.md` §12) |
 
-La fragmentación **no se optimizó**. Se corrigió el contrato semántico primero y
-se volvió a medir después, como exige la revisión. Que además haya bajado es una
-consecuencia, no un objetivo.
+La fragmentación **no se optimizó** en ninguna de las dos iteraciones. Se corrige
+el contrato semántico primero y se vuelve a medir después. En esta iteración la
+fragmentación **subió** 0,7 pp y se deja así: bajarla habría significado no
+separar una asociación de su monofármaco.
 
 **El caso que motivó la iniciativa:** las 6 ofertas genéricas de losartán 50 mg
 × 30 de **6 farmacias distintas**, que v1 reparte en tarjetas separadas, quedan en
@@ -95,10 +98,10 @@ ni Simperten-D, y sin fusionar los seis laboratorios estructurados distintos
 
 - **No demostró que v2 sea mejor para el usuario.** Midió identidad y
   agrupamiento, no relevancia, ranking ni satisfacción. Eso es S1/S2.
-- **No demostró que v2 aguante producción.** 11,3 ms p95 es una medición offline
+- **No demostró que v2 aguante producción.** 13,0 ms p95 es una medición offline
   sobre datos en memoria, sin retrieval, sin serialización y sin arranque en frío
   de una función serverless.
-- **No resolvió la calidad del dato.** 36,6 % de las ofertas siguen sin principio
+- **No resolvió la calidad del dato.** 36,5 % de las ofertas siguen sin principio
   activo demostrable, por el tamaño del vocabulario de moléculas
   (`S0_FAILURES.md` §5).
 - **No cubrió la identidad regulatoria.** Registro ISP con cobertura 0 %, por
@@ -110,12 +113,12 @@ ni Simperten-D, y sin fusionar los seis laboratorios estructurados distintos
 
 | Categoría | Pares |
 |---|---:|
-| `MERGE_FIXED` (v2 une lo que v1 fragmentaba) | 639 (antes 748) |
-| `SPLIT_FIXED` (v2 separa lo que v1 fusionaba mal) | 58 (antes 52) |
+| `MERGE_FIXED` (v2 une lo que v1 fragmentaba) | 642 (antes 639) |
+| `SPLIT_FIXED` (v2 separa lo que v1 fusionaba mal) | 58 (sin cambio) |
 | `MERGE_REGRESSION` (v2 separa de más) | **7** (sin cambio) |
 | `SPLIT_LOST` | **0** (sin cambio) |
 
-**100 pares corregidos por cada regresión** (antes 114). Las 7 regresiones son 3 pares
+**100 pares corregidos por cada regresión** (sin cambio). Las 7 regresiones son 3 pares
 distintos, todos la misma causa: v2 se niega a elegir entre dos potencias
 candidatas cuando una farmacia omite la concentración (`S0_FAILURES.md` §4). Es
 la dirección conservadora del proyecto, y es exactamente lo que el registro
@@ -128,7 +131,7 @@ persistido de S1 resuelve.
 | # | Punto | Estado | Evidencia |
 |---|---|---|---|
 | 1 | Contrato semántico del EDM respetado | **DEMOSTRADO** | Las 5 dimensiones de EDM-100 son ejes de `conceptSignature()`. Conceptos que mezclan comprimido/cápsula: 13 → **0**. Crema/gel: 3 → **0**. Unidades farmacéuticas mezcladas: 13 → **0** |
-| 2 | Identidad textual no resuelta NO se representa como principio activo | **DEMOSTRADO** | `ActiveIngredient.evidence` ya no admite `"unresolved-head"`. 0 de 316 conceptos afirman ingrediente y discriminante a la vez. `Tapsin Duo (B) Paracetamol / Ibuprofeno` pasó de `ing=ibuprofeno+paracetamol+tapsin` a `ing=ibuprofeno+paracetamol` |
+| 2 | Identidad textual no resuelta NO se representa como principio activo | **DEMOSTRADO** | `ActiveIngredient.evidence` ya no admite `"unresolved-head"`. 0 de 312 conceptos afirman ingrediente y discriminante a la vez. `Tapsin Duo (B) Paracetamol / Ibuprofeno` pasó de `ing=ibuprofeno+paracetamol+tapsin` a `ing=ibuprofeno+paracetamol` |
 | 3 | Claves provisionales separadas de los futuros IDs CFM persistentes | **DEMOSTRADO** | Prefijo `PROV-`, campos `provisional*Key`, 0 claves con prefijo `CFM-` emitidas por el motor |
 | 4 | Comportamiento de resolución contextual entendido y acotado | **DEMOSTRADO** | 2 ofertas de 1.633 (0,1225 %), atribuidas una por una en `analysis/context-stability.json`; estabilidad de la firma cruda = **100,0000 %** (`S0_METRICS.md` §8) |
 
@@ -141,11 +144,11 @@ Los 4 son demostrables ⇒ el veredicto se mantiene en `PASS_S0`.
 **Continuar a S1** (shadow productivo con muestreo, `waitUntil`, apagado por
 defecto), con dos condiciones que salen de la evidencia, no del entusiasmo:
 
-1. **Ampliar `COMPOSITION_VOCABULARY` antes que refinar el motor.** Con 36,6 % de
+1. **Ampliar `COMPOSITION_VOCABULARY` antes que refinar el motor.** Con 36,5 % de
    ofertas sin molécula demostrable, cualquier mejora del algoritmo tiene un techo
    duro. El script que derivó el vocabulario ya está en el repositorio.
-2. **Implementar el registro persistido en S1, no después.** Las 240 ofertas
-   `ambiguous` (14,7 %), las 3 regresiones y las 2 identidades dependientes del
+2. **Implementar el registro persistido en S1, no después.** Las 244 ofertas
+   `ambiguous` (14,9 %), las 3 regresiones y las 2 identidades dependientes del
    contexto son el mismo problema: hoy la asignación se recalcula contra el
    corpus visible en vez de resolverse contra un registro estable.
 3. **El registro de S1 debe acuñar el `CFM-CONCEPT-ID` solo desde una firma

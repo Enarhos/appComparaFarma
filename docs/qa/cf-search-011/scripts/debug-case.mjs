@@ -33,24 +33,45 @@ const inputs = names.map((rawName, i) => ({
 
 const graph = V2.canonicalize(inputs);
 
+// Los nombres de campo siguen a `CanonicalOffer`/`CanonicalAttributes` tras la
+// revision del PR #159 (`provisionalConceptKey`, no `conceptId`;
+// `canonicalDosageForm`, no `dosageForm`): el script quedo desincronizado en esa
+// revision e imprimia `undefined` en las tres claves y en la forma farmaceutica.
 for (const offer of graph.offers) {
   const attributes = V2.canonicalizeOffer(
     inputs.find((i) => i.rawName === offer.rawName)
   );
+  const composition = V2.readIngredientComposition(offer.rawName);
   console.log("-".repeat(78));
   console.log(offer.rawName);
   console.log("  ingredients :", attributes.activeIngredients.map((x) => `${x.token}(${x.evidence})`).join(", ") || "-");
+  console.log("  strengths   :", composition.components.map((c) => `${c.token}=${c.strength ? `${c.strength.value}${c.strength.unit}` : "-"}`).join(", ") || "-");
+  console.log("  components  :", `declarados=${composition.declaredComponentCount} leidos=${composition.components.length}`, composition.isAssociation ? "ASOCIACION" : "monofarmaco", composition.isComplete ? "(completa)" : "(PARCIAL)");
+  console.log("  discriminant:", attributes.unresolvedIdentityDiscriminator ?? "-");
   console.log("  concentration:", attributes.concentration.kind, V2.concentrationSignature(attributes.concentration));
-  console.log("  form/route  :", attributes.dosageForm, "/", attributes.route);
+  console.log("  form/route  :", attributes.canonicalDosageForm, "/", attributes.route, "/ unit:", attributes.pharmaceuticalUnit);
   console.log("  qty / volume:", attributes.packageQuantity, "/", attributes.packageVolume ? `${attributes.packageVolume.value}${attributes.packageVolume.unit}` : "-");
   console.log("  brand/var/mfr:", attributes.brand, "/", attributes.commercialVariant, "/", attributes.manufacturer);
-  console.log("  conceptId   :", offer.conceptId, "|", offer.provenance.resolution.concept.kind);
+  console.log("  conceptKey  :", offer.provisionalConceptKey, "|", offer.provenance.resolution.concept.kind);
   console.log("    signature :", offer.provenance.resolution.concept.signature);
   console.log("    raw       :", offer.provenance.resolution.concept.rawSignature);
-  console.log("  presentation:", offer.presentationId, "|", offer.provenance.resolution.presentation.kind);
+  console.log("  presentation:", offer.provisionalPresentationKey, "|", offer.provenance.resolution.presentation.kind);
   console.log("    signature :", offer.provenance.resolution.presentation.signature);
-  console.log("  productId   :", offer.productId, "|", offer.provenance.resolution.product.kind);
+  console.log("  productKey  :", offer.provisionalProductKey, "|", offer.provenance.resolution.product.kind);
   console.log("    signature :", offer.provenance.resolution.product.signature);
+}
+
+// Agrupamiento resultante: la pregunta que este script existe para responder.
+console.log("-".repeat(78));
+const byConcept = new Map();
+for (const offer of graph.offers) {
+  if (!byConcept.has(offer.provisionalConceptKey)) byConcept.set(offer.provisionalConceptKey, []);
+  byConcept.get(offer.provisionalConceptKey).push(offer.rawName);
+}
+console.log(`CONCEPTOS: ${byConcept.size}`);
+for (const [key, names] of byConcept) {
+  console.log(`  ${key}`);
+  for (const name of names) console.log(`     · ${name}`);
 }
 
 console.log("-".repeat(78));

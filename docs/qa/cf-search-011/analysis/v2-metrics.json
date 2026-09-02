@@ -3,37 +3,118 @@
   "upstreamOffers": 1633,
   "uniqueObservations": 987,
   "offerCoverage": 1,
-  "concepts": 316,
-  "presentations": 429,
-  "products": 767,
+  "concepts": 312,
+  "presentations": 421,
+  "products": 764,
   "offerIds": 987,
   "identifierCollisions": 0,
-  "estimatedCards": 767,
-  "presentationGroups": 429,
-  "multiPharmacyCards": 116,
-  "singlePharmacyCards": 651,
-  "singlePharmacyCardRate": 0.8488,
-  "multiPharmacyPresentationGroups": 160,
-  "singlePharmacyPresentationGroups": 269,
-  "singlePharmacyPresentationRate": 0.627,
+  "estimatedCards": 764,
+  "presentationGroups": 421,
+  "multiPharmacyCards": 117,
+  "singlePharmacyCards": 647,
+  "singlePharmacyCardRate": 0.8469,
+  "multiPharmacyPresentationGroups": 161,
+  "singlePharmacyPresentationGroups": 260,
+  "singlePharmacyPresentationRate": 0.6176,
   "fragmentedPresentations": 149,
-  "fragmentationRate": 0.3473,
-  "cardsPerConcept": 2.43,
-  "intraProductPairs": 469,
+  "fragmentationRate": 0.3539,
+  "cardsPerConcept": 2.45,
+  "intraProductPairs": 472,
   "falseMerges": 0,
   "falseMergeRate": 0,
   "falseMergeSamples": [],
   "falseMergesStrictConcentration": 0,
   "falseMergesStrictSamples": [],
-  "conceptResolution": {
-    "complete": 510,
-    "subsumed": 142,
-    "isolated": 741,
-    "ambiguous": 240
+  "associationConcepts": 61,
+  "monotherapyConcepts": 96,
+  "truncatedNameOffers": 63,
+  "truncatedNameResolutionKinds": {
+    "complete": 8,
+    "subsumed": 22,
+    "isolated": 29,
+    "ambiguous": 57
   },
-  "offersWithUnresolvedIngredient": 598,
-  "identityUnknownRate": 0.3662,
-  "inferredIdentityRate": 0.087,
+  "truncatedNamesSubsumedIntoOtherSignature": 22,
+  "truncatedNamesSubsumedSamples": [
+    {
+      "pharmacy": "easyfarma",
+      "name": "Ambroxol Pediatrico 15mg/5...",
+      "rawSignature": "ing=ambroxol|disc=none|conc=conc:mass:15mg|form=?|route=?|unit=?",
+      "resolvedSignature": "ing=ambroxol|disc=none|conc=conc:ratio:3mg/ml|form=liquido-oral|route=oral|unit=?"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Ambroxol Pediatrico 15mg/5...",
+      "rawSignature": "ing=ambroxol|disc=none|conc=conc:mass:15mg|form=?|route=?|unit=?",
+      "resolvedSignature": "ing=ambroxol|disc=none|conc=conc:ratio:3mg/ml|form=liquido-oral|route=oral|unit=?"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Ambroxol Pediatrico 15mg/5...",
+      "rawSignature": "ing=ambroxol|disc=none|conc=conc:mass:15mg|form=?|route=?|unit=?",
+      "resolvedSignature": "ing=ambroxol|disc=none|conc=conc:ratio:3mg/ml|form=liquido-oral|route=oral|unit=?"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Ambroxol Pediatrico 15mg/5...",
+      "rawSignature": "ing=ambroxol|disc=none|conc=conc:mass:15mg|form=?|route=?|unit=?",
+      "resolvedSignature": "ing=ambroxol|disc=none|conc=conc:ratio:3mg/ml|form=liquido-oral|route=oral|unit=?"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Amoxicilina 250 mg/5ml 60...",
+      "rawSignature": "ing=amoxicilina|disc=none|conc=conc:ratio:50mg/ml|form=?|route=?|unit=?",
+      "resolvedSignature": "ing=amoxicilina|disc=none|conc=conc:ratio:50mg/ml|form=liquido-oral|route=oral|unit=?"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Amoxicilina 500 mg/5mL...",
+      "rawSignature": "ing=amoxicilina|disc=none|conc=conc:ratio:100mg/ml|form=?|route=?|unit=?",
+      "resolvedSignature": "ing=amoxicilina|disc=none|conc=conc:ratio:100mg/ml|form=liquido-oral|route=oral|unit=?"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Amoxicilina 500mg/5ml 60 Ml...",
+      "rawSignature": "ing=amoxicilina|disc=none|conc=conc:ratio:100mg/ml|form=?|route=?|unit=?",
+      "resolvedSignature": "ing=amoxicilina|disc=none|conc=conc:ratio:100mg/ml|form=liquido-oral|route=oral|unit=?"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Cetirizina 5 mg/5ml 60 ml...",
+      "rawSignature": "ing=cetirizina|disc=none|conc=conc:ratio:1mg/ml|form=?|route=?|unit=?",
+      "resolvedSignature": "ing=cetirizina|disc=none|conc=conc:ratio:1mg/ml|form=liquido-oral|route=oral|unit=?"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Levocetirizina comprimidos...",
+      "rawSignature": "ing=levocetirizina|disc=none|conc=conc:?|form=comprimido|route=oral|unit=comprimido",
+      "resolvedSignature": "ing=levocetirizina|disc=none|conc=conc:mass:5mg|form=comprimido|route=oral|unit=comprimido"
+    },
+    {
+      "pharmacy": "easyfarma",
+      "name": "Ibuprofeno Jarabe 200 mg /...",
+      "rawSignature": "ing=ibuprofeno|disc=none|conc=conc:mass:200mg|form=liquido-oral|route=oral|unit=?",
+      "resolvedSignature": "ing=ibuprofeno|disc=none|conc=conc:ratio:40mg/ml|form=liquido-oral|route=oral|unit=?"
+    }
+  ],
+  "monotherapyAssociationCollisions": 0,
+  "conceptIngredientContradictions": 0,
+  "conceptIngredientContradictionSamples": [],
+  "negatedIngredientAssertions": 0,
+  "negatedIngredientAssertionSamples": [],
+  "conceptSemanticCollisionRate": 0,
+  "monotherapyAssociationCollisionSamples": [],
+  "offersDeclaringAssociation": 137,
+  "offersWithPartialComposition": 54,
+  "conceptResolution": {
+    "complete": 506,
+    "subsumed": 145,
+    "isolated": 738,
+    "ambiguous": 244
+  },
+  "offersWithUnresolvedIngredient": 596,
+  "identityUnknownRate": 0.365,
+  "inferredIdentityRate": 0.0888,
   "structuredEvidenceRate": 0.7397,
   "rawSignatureStabilityAcrossContexts": 1,
   "conceptKeyStabilityAcrossContexts": 0.998775,
@@ -81,9 +162,9 @@
     }
   ],
   "performance": {
-    "corpusRunMs": 100.171,
-    "perQueryP50Ms": 8.693,
-    "perQueryP95Ms": 19.918,
+    "corpusRunMs": 108.904,
+    "perQueryP50Ms": 7.218,
+    "perQueryP95Ms": 13.021,
     "queriesMeasured": 16
   }
 }

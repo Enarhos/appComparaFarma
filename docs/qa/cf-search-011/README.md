@@ -28,9 +28,9 @@ mode sobre el corpus congelado, y compara oferta por oferta contra v1.
 tocar UI, slugs, `price_history`, alertas, clicks, favoritos o `mobile/`,
 implementar el registro persistido, integrar ISP, ni iniciar S1.
 
-**v1 es inmutable en S0.** `matchKey`, `presentationKey`, `mergeDuplicates`,
-`queryIntent`, el ranking y la salida de `searchService` no cambian de
-comportamiento. Se verifica con los 379 tests preexistentes de
+**v1 es inmutable en S0.** `matchKey`, `presentationKey`, `combinationKey`,
+`mergeDuplicates`, `queryIntent`, el ranking y la salida de `searchService` no
+cambian de comportamiento. Se verifica con los 496 tests preexistentes de
 `@comparafarma/domain`, que siguen verdes sin modificar ni uno.
 
 ---
@@ -56,6 +56,19 @@ Ninguna métrica se reutiliza de la entrega anterior; donde una cifra cambió, l
 documentos muestran OLD → NEW → POR QUÉ. La investigación de estabilidad
 contextual que la revisión exigió está en `S0_METRICS.md` §8, con la evidencia
 oferta por oferta en `analysis/context-stability.json`.
+
+**Iteración del lector de asociaciones (2026-09-02).** Esa reejecución destapó un
+**falso merge semántico a nivel de CONCEPTO**: la asociación diclofenaco+tramadol
+de Adorlan compartía Concepto Farmacéutico con el monofármaco de diclofenaco de
+Lertus, con resolución `complete` y confianza `high`, **mientras los tres gates
+seguían en verde** — Gate C mide contradicciones intra-producto y este defecto
+vivía un nivel más arriba. Se corrigió dentro de v2 con un lector de composición
+propio (`packages/domain/src/searchV2/compositionReader.ts`), sin tocar
+`combinationKey()` ni ninguna clave persistida, y S0 se volvió a correr entero.
+El defecto, los dos que aparecieron al revisarlo (`SIN cafeína` leído como
+cafeína presente; un separador tratado como prueba de que los dos lados son
+moléculas) y la métrica de seguridad que se propone para S1 están en
+`S0_FAILURES.md` §10 a §13.
 
 ---
 

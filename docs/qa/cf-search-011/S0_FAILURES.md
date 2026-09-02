@@ -9,8 +9,15 @@ corrigieron estructuralmente. Los dos siguientes son **limitaciones que S0 no
 resuelve** y que quedan medidas.
 
 Los §7 a §9 son los **tres defectos de contrato semántico** que la revisión CTO
-del PR #159 identificó, con su corrección y la evidencia sobre el corpus. El §10
-es un defecto residual que la reejecución destapó y que **no** se corrige en S0.
+del PR #159 identificó, con su corrección y la evidencia sobre el corpus.
+
+Los §10 y §11 son los **falsos merges semánticos a nivel de CONCEPTO** que
+destapó la reejecución: una asociación declarada como el mismo Concepto
+Farmacéutico que un monofármaco, y una molécula que el nombre niega afirmada como
+presente. Los dos están corregidos en esta iteración, dentro de v2 y sin tocar
+v1. El §12 es la consecuencia de gobierno —los tres gates de S0 no podían ver
+esta clase de defecto— con la métrica de seguridad que se propone para S1. El §13
+es la deuda que esta iteración deja abierta a propósito.
 
 ---
 
@@ -313,33 +320,261 @@ la firma cambia, que es exactamente lo que un `CFM-CONCEPT-ID` no puede hacer.
 
 ---
 
-## 10. Una asociación comparte concepto con el monofármaco — RESIDUAL, NO CORREGIDO
+## 10. Una asociación comparte concepto con el monofármaco — CORREGIDO
 
-**Cómo apareció.** Al reejecutar el corpus tras las correcciones anteriores.
+**Clasificación: `SEMANTIC_FALSE_MERGE_AT_CONCEPT_LEVEL`.**
 
-**Qué produce.**
+**Cómo apareció.** Al reejecutar el corpus tras las correcciones de §7 a §9.
+
+### Reproducción sobre el corpus congelado
+
+Tres ofertas reales, dos farmacias, un solo Concepto Farmacéutico:
 
 ```
-PROV-C-7rofi0lnpsaix7r5mk5lu9rbe   ing=diclofenaco|conc=mass:25mg|form=comprimido
-   dr-simi     "Adorlan 25/25 diclofenaco 25 mg tramadol 25 mg 10 comprimidos"  ← ASOCIACIÓN
-   cruz-verde  "Lertus Diclofenaco Sodico 25 mg 20 Comprimidos"                 ← MONOFÁRMACO
-   dr-simi     "Lertus diclofenaco 25 mg 20 comprimidos con recubrimiento entérico"
+PROV-C-7rofi0lnpsaix7r5mk5lu9rbe
+  ing=diclofenaco | disc=none | conc=conc:mass:25mg | form=comprimido | route=oral | unit=comprimido
+  resolución: complete   ·   confianza: high
+
+   dr-simi     "Adorlan 25/25 diclofenaco 25 mg tramadol 25 mg 10 comprimidos"     ← ASOCIACIÓN
+   dr-simi     "Lertus diclofenaco 25 mg 20 comprimidos con recubrimiento entérico" ← MONOFÁRMACO
+   cruz-verde  "Lertus Diclofenaco Sodico 25 mg 20 Comprimidos"                     ← MONOFÁRMACO
 ```
 
-**Causa raíz.** `combinationKey()` (v1) solo reconoce una asociación por
-adyacencia a un separador o por una razón de dosis masa/masa. "diclofenaco 25 mg
-tramadol 25 mg" no tiene ninguna de las dos, así que tramadol nunca se extrae y
-la oferta queda con `ing=diclofenaco`.
+Lectura del nombre de Adorlan **antes** de la corrección, eje por eje:
 
-**Por qué no se corrige en S0.** `combinationKey()` es v1, su valor alimenta
-`presentationKey` y los slugs de Web, y v1 es inmutable en S0 (§4 del ticket).
-Corregirlo requiere un lector de combinaciones propio de v2.
+| Atributo | Valor leído | Correcto |
+|---|---|:-:|
+| `rawName` | `Adorlan 25/25 diclofenaco 25 mg tramadol 25 mg 10 comprimidos` | — |
+| `activeIngredients` | `[diclofenaco:vocabulary]` | **NO** — falta tramadol |
+| `unresolvedIdentityDiscriminator` | `null` | sí (hay ingrediente demostrado) |
+| `concentration` | `mass-only conc:mass:25mg` | parcial (ver D4) |
+| `canonicalDosageForm` | `comprimido` | sí |
+| `route` | `oral` | sí |
+| unidad farmacéutica | `comprimido` | sí |
+| firma CRUDA | `ing=diclofenaco\|disc=none\|conc=conc:mass:25mg\|form=comprimido\|route=oral\|unit=comprimido` | **NO** |
+| clave provisional resuelta | `PROV-C-7rofi0lnpsaix7r5mk5lu9rbe` (compartida con Lertus) | **NO** |
 
-**Alcance y severidad.** Es un falso merge a nivel de **CONCEPTO**, no de
-producto: la marca separa los productos (`Adorlan` vs `Lertus`), así que ninguna
-comparación de precios visible al usuario fusiona los dos. Gate C, que mide
-contradicciones intra-producto, sigue en 0. **No es una regresión de esta
-revisión**: existía igual en la entrega anterior.
+El monofármaco con el que colisionaba es **Lertus 25 mg comprimidos**, de Dr. Simi
+y Cruz Verde: la misma clave, la misma firma, resolución `complete` y confianza
+`high`. Una asociación con **tramadol —un opioide—** declarada como el mismo
+Concepto Farmacéutico que un AINE solo, con la máxima confianza que el modelo
+puede emitir.
 
-**FOLLOW_UP:** lector de combinaciones propio de v2, sin adyacencia obligatoria
-al separador, para S1.
+### Causa raíz — tres eslabones, ninguno un descuido de código
+
+1. `tramadol` no está en `COMPOSITION_VOCABULARY` (las 34 moléculas de
+   CF-DATA-001, derivadas por frecuencia sobre 3.697 ofertas).
+2. `combinationKey()` (v1) devuelve `null`: exige un separador `+`/`/`
+   inmediatamente seguido de letras —"25/25" tiene un dígito a la derecha— o una
+   razón masa/masa con unidad en el denominador —"25/25 diclofenaco" no la
+   tiene—. Las dos restricciones son correctas y están justificadas contra datos
+   reales en `matching.ts`; esta escritura simplemente no cae en ninguna.
+3. **El defecto de modelo.** Al fallar las dos únicas fuentes de evidencia, el
+   conjunto quedaba en `{diclofenaco}` — y el eje `ing` tenía solo dos estados,
+   conocido o desconocido. Con dos estados, **un conjunto INCOMPLETO es
+   literalmente indistinguible de un conjunto COMPLETO de un elemento**. El motor
+   no tenía forma de representar *"sé que hay más de un componente activo, pero
+   no sé nombrarlos todos"*.
+
+### Corrección
+
+`packages/domain/src/searchV2/compositionReader.ts`, un **lector de composición
+propio de v2** que responde, sobre el texto de un nombre y sin mirar ninguna otra
+oferta, qué moléculas declara y cuántos componentes afirma tener. Cuatro fuentes
+de evidencia acumulativas, ninguna capaz de inventar una molécula sola:
+vocabulario, `combinationKey()` de v1 sin modificar, **posición estructural**
+(el patrón `<molécula> <dosis>` repetido, que es lo que hace legible "diclofenaco
+25 mg tramadol 25 mg" sin un solo separador) y **aridad tipográfica** (una razón
+de dosis masa/masa declara cuántos componentes hay sin nombrar ninguno).
+
+El eje `ing` pasa de dos estados a tres —COMPLETO, PARCIAL, DESCONOCIDO— con un
+comparador propio (`compareIngredients`) que impide que un conjunto parcial se
+subsuma dentro de un conjunto completo más chico.
+
+**`combinationKey()` no se tocó.** Alimenta `presentationKey` y, por su
+intermedio, los slugs de Web: cambiarlo movería identidad de v1 en producción,
+inmutable en S0 (§4 del ticket). Además devuelve UN token, y este problema
+necesita el CONJUNTO y su CARDINALIDAD.
+
+### Resultado medido
+
+```
+PROV-C-7w1hzdjfpvjjozwjs7r1yhesl   ing=diclofenaco+tramadol|…   ← Adorlan (3 escrituras, 3 farmacias)
+PROV-C-7rofi0lnpsaix7r5mk5lu9rbe   ing=diclofenaco|…            ← Lertus  (2 farmacias)
+```
+
+- **Colisiones monofármaco/asociación: 0** sobre 312 conceptos.
+- Las tres escrituras de Adorlan que declaran composición —Dr. Simi sin
+  separador, Salcobrand y EcoFarmacias con `/`— convergen ahora en **un solo
+  concepto**, que antes eran dos.
+- Los dos Lertus monofármaco siguen agrupando entre sí, con su clave intacta.
+- 61 conceptos del corpus declaran asociación; 137 ofertas; 54 con lectura
+  parcial (el nombre declara más componentes de los que se pudieron nombrar).
+- Gates A/B/C sin cambio: 100 % / 0 / 0.
+
+**Tests que lo fijan:** `searchV2.compositionReader.test.ts`, 55 casos.
+
+---
+
+## 11. Una molécula NEGADA por el nombre, afirmada como presente — CORREGIDO
+
+**Clasificación: `SEMANTIC_FALSE_MERGE_AT_CONCEPT_LEVEL`** (misma clase que §10,
+leída al revés).
+
+**Cómo apareció.** Al reejecutar el corpus con `cafeina` incorporada al
+vocabulario de moléculas de v2. **No lo detectó ninguna métrica**: lo destapó la
+revisión manual de los conceptos que declaran asociación. Ver §12, que es
+exactamente la consecuencia que se saca de eso.
+
+**Qué producía.**
+
+```
+ing=cafeina | disc=none | conc=conc:mass:500mg | form=comprimido | …
+   ahumada    "Tapsin Puro SIN Cafeina 500 mg x 24 Comprimidos"      ← SIN cafeína
+   araucomed  "Tapsin Dolor de Cabeza CON cafeína x 12 comprimidos"  ← CON cafeína
+```
+
+Y, peor todavía, `"Tapsin Puro Sin Cafeina Paracetamol 500 mg 16 Comprimidos"` se
+leía como la **asociación paracetamol+cafeína**, que es lo contrario de lo que el
+nombre dice.
+
+**Causa raíz.** La regla de honestidad estaba escrita en una sola dirección
+—"no inventes una molécula que el nombre no nombra"— y le faltaba su recíproca:
+**nombrar una molécula no demuestra que esté**. Un nombre puede nombrarla
+justamente para decir que NO está.
+
+**Corrección.** `negatedMolecules()` en `compositionReader.ts`: la gramática de
+la negación (`sin`, `libre de`) se resuelve ANTES que las cuatro fuentes de
+evidencia, y ninguna puede afirmar una molécula negada. Alcance deliberadamente
+corto para no negar de más: la primera molécula tras el marcador, más las
+encadenadas con coordinación negativa explícita (`ni`). La yuxtaposición no
+extiende la negación — "sin cafeína **paracetamol** 500 mg" niega `cafeina`,
+nunca `paracetamol`.
+
+**Resultado medido.** `negatedIngredientAssertions` **0/1.633 ofertas**.
+`Tapsin Puro Sin Cafeina Paracetamol 500 mg` → `ing=paracetamol`, y agrupa con
+los demás paracetamol 500 mg. `Tapsin Puro Sin Cafeina 500 mg x 24` → sin
+ingrediente demostrado, resuelve por `disc=tapsin`, que es lo conservador.
+
+### 11-bis. Un separador no demuestra que los dos lados sean moléculas — CORREGIDO
+
+Mismo hallazgo, misma revisión manual. `combinationKey()` reconoce coordinación
+tipográfica, no farmacología, y sobre el corpus eso producía:
+
+```
+"…Polvo para Soluc.Oral 1 Sobre Sabor Limón / Miel / Jengibre"  → ing=…+limon+miel
+"Zomel HP Triterapia"                                            → ing=zomel+triterapia
+```
+
+`limón` y `miel` son saborizantes, `triterapia` es un régimen posológico y
+**`zomel` es una MARCA dentro de `ActiveIngredient[]`** — exactamente el defecto
+que §8 corrigió para `tapsin`, por otro camino.
+
+**Corrección.** La rama de combinación exige ahora **corroboración del hermano**,
+la misma regla que ya gobernaba la promoción por posición estructural: el par se
+acepta solo si al menos uno de sus dos miembros está en un vocabulario de
+moléculas. Los pares legítimos se conservan enteros porque en todos hay un lado
+demostrado (`paracetamol` sostiene a `tramadol`, `hidroclorotiazida` sostiene a
+`lorsartan` —error tipográfico de la farmacia—, `clavulanico` sostiene a
+`amoxicilina`).
+
+**Resultado medido.** El censo de tokens afirmados como principio activo sobre
+las 1.633 ofertas pasa de 26 tokens distintos a **22, y los 22 son moléculas
+reales**. Desaparecen `limon`, `miel`, `triterapia` y `zomel`; no se pierde
+ninguna molécula legítima.
+
+---
+
+## 12. Lo que el Gate C no puede ver — métrica propuesta para S1
+
+**El hallazgo de gobierno de esta iteración, y es más importante que cualquiera
+de los defectos de arriba.**
+
+Durante todo el tiempo en que Adorlan compartió concepto con Lertus, **el Gate C
+de producto estuvo en 0**. No por casualidad ni por un error de medición: Gate C
+mide contradicciones **intra-producto**, y el falso merge vivía un nivel más
+arriba, en el **concepto**, entre productos comerciales distintos (`Adorlan` vs
+`Lertus`) y presentaciones distintas (10 vs 20 comprimidos). La marca separaba
+los productos, así que ninguna comparación de precios visible al usuario los
+fusionaba — y los tres gates de S0 seguían verdes mientras el concepto
+farmacológico era incorrecto.
+
+> **Los tres gates de S0 son necesarios y no son suficientes: ninguno mira la
+> coherencia SEMÁNTICA de un concepto.**
+
+### Métrica propuesta: `Concept Semantic Collision Rate`
+
+Implementada, medida y publicada en esta entrega con estado
+**`REPORTED_NOT_GATED`**. No se agregó a `finalVerdict`: convertir una métrica en
+gate de S0 es una decisión de dirección CTO/Product, no del harness — §16 del
+ticket fija tres gates y esta entrega no los cambia unilateralmente.
+
+Cuenta un concepto como colisión cuando agrupa ofertas cuyos NOMBRES se
+contradicen. Tres componentes, y hacen falta los tres porque cada uno ve algo que
+los otros dos no:
+
+| Componente | Qué detecta | Valor medido |
+|---|---|---:|
+| `monotherapyAssociationCollisions` | contradicción de **cardinalidad**: una oferta declara asociación y otra monofármaco en el mismo concepto | **0** |
+| `conceptIngredientContradictions` | contradicción de **identidad**: dos ofertas del mismo concepto declaran moléculas donde ninguna es subconjunto de la otra | **0** |
+| `negatedIngredientAssertions` | el motor afirma una molécula que el propio nombre **niega** | **0** |
+
+```
+Concept Semantic Collision Rate = 0/312 conceptos = 0,000000
+Umbral propuesto para S1: = 0
+```
+
+**El clasificador que alimenta la métrica está implementado APARTE del lector que
+asigna identidad**, con código distinto y derivando la evidencia otra vez desde
+el nombre. Si usara `readIngredientComposition()` mediría su propia coherencia y
+daría 0 por construcción.
+
+**Y aun así no basta, y eso hay que decirlo.** Los defectos de §11 fueron
+encontrados por revisión manual, no por la métrica: la primera versión solo medía
+cardinalidad, y "SIN cafeína" y "CON cafeína" declaran el mismo conjunto de
+moléculas para cualquier clasificador que ignore la negación. Los otros dos
+componentes se agregaron **después** de ese hallazgo, y por eso están. La lección
+es la que justifica la métrica entera: una clase de defecto que ninguna métrica
+mira puede convivir indefinidamente con todos los gates en verde.
+
+**FOLLOW_UP para dirección CTO/Product:** decidir si `Concept Semantic Collision
+Rate = 0` se adopta como cuarto gate en S1. Recomendación técnica: sí, con los
+tres componentes, y con la regla de que cada defecto semántico nuevo que se
+encuentre por revisión manual agregue su propio componente en vez de quedar como
+caso suelto en un test.
+
+**Nombres truncados — riesgo residual explícito.** 63 ofertas del corpus (todas
+de EasyFarma, cuyo scraping WordPress corta el título) llegan con el nombre
+incompleto. La métrica **no puede pronunciarse** sobre ellas: sin el final del
+nombre no hay evidencia de composición que medir, así que un nombre truncado
+nunca declara monofármaco (ausencia de evidencia no es evidencia de ausencia) y
+se cuentan aparte. 22 de esas filas se resuelven por subsunción dentro de otra
+firma: es el único camino por el que un nombre cortado podría caer en un concepto
+que no le corresponde, y por eso se listan enteras en `analysis/v2-metrics.json`
+(`truncatedNamesSubsumedSamples`) en vez de resumirse en un porcentaje.
+
+---
+
+## 13. Deuda residual de esta iteración
+
+**La concentración de una asociación sigue siendo la del primer componente
+escrito** (deuda D4 de §6, sin cambio). `CanonicalMedicationConcept.concentration`
+admite UNA evidencia, y "Diclofenaco 25 mg + Tramadol 25 mg" tiene dos potencias.
+Modelar bien la concentración de una asociación es un cambio del EDM y **no se
+hace en S0**.
+
+Lo que sí se hizo, sin romper el contrato existente:
+
+- `concentration` conserva exactamente la semántica que ya tenía;
+- se agrega `ingredientStrengths: IngredientStrength[]` —**campo aditivo**— que
+  preserva la dosis por componente para el análisis de S1;
+- **la seguridad no depende de ninguno de los dos**: lo que impide que una
+  asociación se confunda con un monofármaco es el CONJUNTO de principios activos
+  y su CARDINALIDAD DECLARADA en el eje `ing`, no la concentración.
+
+`ingredientStrengths` **no participa de ninguna firma de identidad**. Es
+evidencia conservada, no un eje.
+
+**FOLLOW_UP para S1:** concentración por ingrediente en el EDM, que cierra D4 y
+permite distinguir dos asociaciones que difieren solo en la dosis del segundo
+componente.

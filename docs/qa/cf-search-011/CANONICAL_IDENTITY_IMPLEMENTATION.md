@@ -329,17 +329,53 @@ observación parcial resuelve contra el registro o queda sin resolver.
 
 ## 4. Los ejes, nivel por nivel
 
-### Concepto — `ing`, `conc`, `form`
+### Concepto — `ing`, `disc`, `conc`, `form`, `route`, `unit`
 
 **`ing` — principios activos.** Conjunto ordenado alfabéticamente (el orden
-textual no crea identidades distintas). Tres fuentes de evidencia:
+textual no crea identidades distintas). Lo produce `readIngredientComposition()`
+(`searchV2/compositionReader.ts`) con **cuatro fuentes de evidencia
+acumulativas**, ninguna capaz de afirmar una molécula por sí sola:
 
 1. **vocabulario** — tokens de `COMPOSITION_VOCABULARY` (CF-DATA-001: 34
-   moléculas derivadas de una medición reproducible sobre 3.697 ofertas), menos
-   iones y sales;
-2. **combinación** — el segundo principio activo que `combinationKey()` extrae, y
-   la cabecera cuando la firma tipográfica de la combinación la demuestra;
-3. **cabecera no resuelta** — cuando las dos anteriores no producen nada.
+   moléculas derivadas de una medición reproducible sobre 3.697 ofertas) o de
+   `V2_MOLECULE_VOCABULARY` (mismo criterio, derivado del corpus congelado),
+   menos iones, sales y calificadores químicos;
+2. **combinación** — el segundo principio activo que `combinationKey()` (v1, sin
+   modificar) extrae del separador explícito, más la cabecera cuando la
+   tipografía la coloca como primer miembro, y **solo si al menos uno de los dos
+   está en un vocabulario de moléculas**. Un separador demuestra coordinación,
+   no farmacología: "Sabor Limón / Miel" no es una combinación de principios
+   activos;
+3. **posición estructural** — un token con forma de molécula que lleva su propia
+   dosis se promueve solo si hay al menos DOS así en el nombre y AL MENOS UNO
+   está corroborado por vocabulario. Es lo que hace legible "diclofenaco 25 mg
+   tramadol 25 mg" sin un solo separador, y sin un patrón por producto;
+4. **aridad tipográfica** — una razón de dosis masa/masa ("875/125", "25/25")
+   declara CUÁNTOS componentes hay sin nombrar ninguno. No agrega moléculas:
+   agrega el hecho de que faltan.
+
+Antes que las cuatro se aplica la **negación**: una molécula que el nombre
+declara ausente ("Tapsin Puro **Sin** Cafeína") no la puede afirmar ninguna
+fuente. Nombrar no es afirmar presencia.
+
+**El eje tiene TRES estados, no dos.** Con dos —conocido / desconocido— un
+conjunto incompleto es indistinguible de un conjunto completo de un elemento, y
+eso produjo un falso merge medido sobre el corpus (`S0_FAILURES.md` §10):
+
+| Estado | Segmento | Fuerza | Qué afirma |
+|---|---|:-:|---|
+| COMPLETO | `diclofenaco+tramadol` | 2 | se nombraron todos los componentes declarados |
+| PARCIAL | `amoxicilina+?2` | 1 | "hay 2 componentes y solo pude nombrar 1" |
+| DESCONOCIDO | `?` | 0 | el nombre no declara composición alguna |
+
+`compareIngredients()` impide que un conjunto PARCIAL se subsuma dentro de un
+conjunto COMPLETO más chico: `{amoxicilina}` declarando 2 componentes **no** es
+una lectura incompleta del monofármaco de amoxicilina.
+
+**`ingredientStrengths`** conserva la dosis por componente. Es evidencia
+publicada, **no un eje**: no participa de ninguna firma de identidad. La
+concentración de una asociación sigue siendo la del primer componente escrito
+(deuda D4), y modelarla bien es un cambio del EDM que S0 no hace.
 
 El eje `ing` queda DESCONOCIDO cuando no se demuestra ninguna molécula, y la
 protección la aporta el eje `disc`, que está **siempre declarado** y por lo tanto

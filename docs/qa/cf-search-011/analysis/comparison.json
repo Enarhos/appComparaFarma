@@ -82,24 +82,24 @@
     }
   ],
   "comparableFragmentation": {
-    "denominatorPresentations": 429,
-    "v1PresentationsSplitAcrossCards": 311,
-    "v1FragmentationRate": 0.7249,
+    "denominatorPresentations": 421,
+    "v1PresentationsSplitAcrossCards": 307,
+    "v1FragmentationRate": 0.7292,
     "v2PresentationsSplitAcrossCards": 149,
-    "v2FragmentationRate": 0.3473,
-    "v1CardsPerV2Concept": 4.58,
-    "v2CardsPerV2Concept": 2.43
+    "v2FragmentationRate": 0.3539,
+    "v1CardsPerV2Concept": 4.64,
+    "v2CardsPerV2Concept": 2.45
   },
   "comparedPairs": 94869,
   "classes": {
-    "UNCHANGED": 94165,
-    "MERGE_FIXED": 639,
+    "UNCHANGED": 94162,
+    "MERGE_FIXED": 642,
     "SPLIT_FIXED": 58,
     "SPLIT_LOST": 0,
     "MERGE_REGRESSION": 7,
     "IDENTITY_UNKNOWN": 278
   },
-  "disagreementRate": 0.007421,
+  "disagreementRate": 0.007452,
   "samples": {
     "MERGE_FIXED": [
       {
@@ -536,10 +536,25 @@
     "gateC": {
       "name": "False Merge Rate",
       "value": 0,
-      "formatted": "0/469 pares intra-producto",
+      "formatted": "0/472 pares intra-producto",
       "threshold": "= 0",
       "pass": true
     }
+  },
+  "conceptSemanticCollision": {
+    "name": "Concept Semantic Collision Rate",
+    "status": "REPORTED_NOT_GATED",
+    "value": 0,
+    "collisions": 0,
+    "components": {
+      "monotherapyAssociationCollisions": 0,
+      "conceptIngredientContradictions": 0,
+      "negatedIngredientAssertions": 0
+    },
+    "formatted": "0/312 conceptos",
+    "proposedThresholdForS1": "= 0",
+    "wouldPass": true,
+    "samples": []
   },
   "finalVerdict": "PASS_S0"
 }

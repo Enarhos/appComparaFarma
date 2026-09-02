@@ -88,14 +88,14 @@ masa coincida con el numerador de la razón) se calcula y se reporta aparte:
 
 | Categoría | Pares | % |
 |---|---:|---:|
-| `UNCHANGED` | 94.165 (antes 94.062) | 99,26 % |
-| `MERGE_FIXED` | **639** (antes 748) | 0,67 % |
-| `SPLIT_FIXED` | **58** (antes 52) | 0,06 % |
+| `UNCHANGED` | 94.162 (antes 94.165) | 99,25 % |
+| `MERGE_FIXED` | **642** (antes 639) | 0,68 % |
+| `SPLIT_FIXED` | **58** (sin cambio) | 0,06 % |
 | `MERGE_REGRESSION` | **7** | 0,007 % |
 | **`SPLIT_LOST`** | **0** | **0 %** |
-| `IDENTITY_UNKNOWN` | 360 | 0,38 % |
+| `IDENTITY_UNKNOWN` | 278 | 0,29 % |
 
-**Disagreement rate: 0,85 %.**
+**Disagreement rate: 0,75 %.**
 
 Lectura: por cada par que v2 separa y v1 unía sin motivo (`MERGE_REGRESSION`),
 hay **107 pares** que v2 une correctamente y v1 fragmentaba (`MERGE_FIXED`).
@@ -248,19 +248,20 @@ v1 fusionaba pese a contradecirse (`Amoval Duo 400mg/5ml` vs `Amoval 250mg/5ml`,
 
 Comparar "fragmentación de v1" contra "fragmentación de v2" con denominadores
 distintos no dice nada. Acá el denominador es el mismo para los dos motores: las
-**429 presentaciones canónicas v2**, y se cuenta en cuántas de ellas las ofertas
+**421 presentaciones canónicas v2**, y se cuenta en cuántas de ellas las ofertas
 quedan repartidas en más de una tarjeta del motor evaluado.
 
 | Métrica | V1 | V2 |
 |---|---:|---:|
-| Presentaciones repartidas en más de una tarjeta | **311 / 429** | **149 / 429** |
-| **Tasa de fragmentación** | **72,5 %** | **34,7 %** |
-| Tarjetas por concepto v2 | **4,58** | **2,43** |
+| Presentaciones repartidas en más de una tarjeta | **307 / 421** | **149 / 421** |
+| **Tasa de fragmentación** | **72,9 %** | **35,4 %** |
+| Tarjetas por concepto v2 | **4,64** | **2,45** |
 
-Cifras de la entrega anterior, con su propio denominador de 414 presentaciones:
-298 / 414 = 72,0 % en v1 y 149 / 414 = 36,0 % en v2. **La fragmentación no se
-optimizó**: primero se corrigió el contrato semántico y después se volvió a
-medir, como exige la revisión CTO. Que además haya bajado es una consecuencia.
+Cifras de la entrega anterior, con su propio denominador de 429 presentaciones:
+311 / 429 = 72,5 % en v1 y 149 / 429 = 34,7 % en v2. **La fragmentación no se
+optimiza**: primero se corrige el contrato semántico y después se vuelve a medir.
+En esta iteración subió 0,7 pp y se deja así — bajarla habría significado no
+separar una asociación de su monofármaco.
 
 **La fragmentación se reduce a la mitad y las tarjetas por concepto casi también,
 con `SPLIT_LOST = 0` y `false merge = 0`.**
