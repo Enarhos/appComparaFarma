@@ -24,13 +24,9 @@
  *     `x 100 ml` (CF-SEARCH-011 §8). En v2 es una dimensión propia.
  */
 
-import {
-  brandHeadTokens,
-  combinationKey,
-  normalizedWords,
-  SALT_QUALIFIER_WORDS,
-} from "../matching.js";
-import { brandFromName, COMPOSITION_VOCABULARY } from "../brandIdentity.js";
+import { brandHeadTokens, normalizedWords } from "../matching.js";
+import { brandFromName } from "../brandIdentity.js";
+import { ION_AND_SALT_TOKENS, readIngredientComposition } from "./compositionReader.js";
 import { commercialVariantKey, dosageFormClass, unitCountKey } from "../productIdentity.js";
 import {
   concentrationRatio,
@@ -53,144 +49,24 @@ import {
 // ---------------------------------------------------------------------------
 
 /**
- * Iones, sales y ésteres que acompañan a un principio activo sin ser uno.
- *
- * Extiende `SALT_QUALIFIER_WORDS` (matching.ts) con las entradas que están en
- * `COMPOSITION_VOCABULARY` y que, leídas como molécula, producirían un principio
- * activo falso: "Cetirizina **Diclorhidrato** 10 mg" no es una combinación de
- * cetirizina con diclorhidrato, y "Naproxeno **Sodio**" no es una combinación
- * con sodio.
- *
- * Vive en la capa v2 y no en `matching.ts` a propósito: agregar entradas a
- * `SALT_QUALIFIER_WORDS` cambiaría `combinationKey()` y, por su intermedio,
- * `presentationKey` y los slugs de Web — es decir, comportamiento de v1, que en
- * S0 es inmutable (CF-SEARCH-011 §4).
- *
- * Es una categoría acotada y explícita, no un intento de enumerar la química
- * farmacéutica: cada entrada está en `COMPOSITION_VOCABULARY` y es un ion o una
- * sal, no una molécula con efecto terapéutico propio en este contexto.
- */
-const ION_AND_SALT_TOKENS: ReadonlySet<string> = new Set([
-  ...SALT_QUALIFIER_WORDS,
-  "sodio",
-  "calcio",
-  "potasio",
-  "magnesio",
-  "diclorhidrato",
-  "dihidrocloruro",
-  "cloruro",
-]);
-
-/**
  * Conjunto de principios activos DEMOSTRADOS en el nombre, ordenado
  * alfabéticamente y sin duplicados. Devuelve `[]` cuando no se puede demostrar
  * ninguno — y `[]` es un resultado legítimo, no un fallo.
  *
- * DOS FUENTES DE EVIDENCIA, las dos medidas, ninguna inventada:
+ * Es la proyección de `readIngredientComposition()` sobre el tipo que ya
+ * consumían las firmas. Toda la lógica de evidencia —vocabulario, combinación
+ * por separador, promoción por posición estructural, calificadores químicos y
+ * aridad tipográfica— vive en `compositionReader.ts`; acá no se decide nada.
  *
- *   1. VOCABULARIO — todo token del nombre que esté en `COMPOSITION_VOCABULARY`
- *      (CF-DATA-001: 34 moléculas derivadas de una medición reproducible sobre
- *      3.697 ofertas, no de criterio humano) y no sea un ion o una sal.
- *      Es lo que resuelve estructuralmente el defecto de las 65 ofertas donde
- *      "ambroxol" se leía como variante comercial (CF-SEARCH-011 §9): acá
- *      `ambroxol` es un PRINCIPIO ACTIVO por vocabulario, y la variante
- *      comercial se lee después y nunca puede reclamarlo.
- *
- *   2. COMBINACIÓN — el segundo principio activo que `combinationKey()`
- *      (CF-SEARCH-001/S-1) extrae de "Losartán + Hidroclorotiazida", incluso
- *      cuando ese token no está en el vocabulario. Es la evidencia que mantiene
- *      separada la identidad de "Losartán 50 mg" y "Losartán 50 mg +
- *      Hidroclorotiazida 12,5 mg" (CF-SEARCH-011 §10).
- *
- * NO HAY UNA TERCERA FUENTE (revisión CTO PR #159, punto 2). Hasta esta
- * revisión, cuando las dos anteriores no producían nada esta función devolvía la
- * CABECERA del nombre marcada como `unresolved-head` DENTRO del array de
- * `ActiveIngredient[]`. Aunque la marca fuera honesta, el tipo afirmaba lo
- * contrario: "Tapsin Forte" terminaba con `tapsin` tipado como principio activo,
- * firmado como `ing=tapsin` con `known=true`, y llegando a `canonicalName`.
- * "Tapsin Forte" no demuestra que "tapsin" sea una molécula.
- *
- * La cabecera sigue existiendo —hace falta, y por un motivo de seguridad real—
- * pero como OTRA COSA: `readUnresolvedIdentityDiscriminator()`. Ver ahí por qué
- * separar las dos responsabilidades no debilita la protección contra merges.
- *
- * El conjunto se ordena alfabéticamente: "Losartán + Hidroclorotiazida" y
- * "Hidroclorotiazida + Losartán" son la MISMA combinación farmacológica y no
- * pueden derivar identidades distintas (CF-SEARCH-011 §10).
+ * SE MANTIENE COMO FUNCIÓN PROPIA porque el conjunto de moléculas y la
+ * CARDINALIDAD DECLARADA son dos hechos distintos y no todos los consumidores
+ * necesitan el segundo. Quien construye identidad usa la composición completa.
  */
 export function readActiveIngredients(name: string): ActiveIngredient[] {
-  const tokens = normalizedWords(name);
-  const found = new Map<string, ActiveIngredient["evidence"]>();
-
-  for (const token of tokens) {
-    if (!COMPOSITION_VOCABULARY.has(token)) continue;
-    if (ION_AND_SALT_TOKENS.has(token)) continue;
-    found.set(token, "vocabulary");
-  }
-
-  const second = combinationKey(name);
-  if (second !== null && !ION_AND_SALT_TOKENS.has(second) && !found.has(second)) {
-    found.set(second, "combination");
-  }
-
-  // La cabecera es el PRIMER principio activo de la combinación SOLO cuando la
-  // tipografía lo demuestra: cuando es el token que está inmediatamente a la
-  // IZQUIERDA del separador, espejo exacto de cómo `combinationKey()` toma el
-  // segundo por la derecha.
-  //
-  // Antes bastaba con que `combinationKey()` reconociera una combinación para
-  // que la cabecera entrara como principio activo, y eso convertía la MARCA en
-  // molécula en 31 de los 32 nombres del corpus que pasaban por esta rama:
-  // "Tapsin Duo (B) Paracetamol / Ibuprofeno" producía
-  // `ing=ibuprofeno+paracetamol+tapsin`. La combinación está entre paracetamol e
-  // ibuprofeno; "tapsin" solo estaba delante.
-  //
-  // La condición no se puede reemplazar por "no agregues nada si el vocabulario
-  // ya encontró algo": los otros 2 casos del corpus son
-  // "Tramadol Clorhidrato/Paracetamol" y "Lorsartán Potásico / Hidroclorotiazida",
-  // donde la cabecera SÍ es el primer principio activo —tramadol no está en el
-  // vocabulario, "Lorsartán" es un error tipográfico de la farmacia— y perderla
-  // dejaría `ing=paracetamol` e `ing=hidroclorotiazida`: una asociación
-  // indistinguible del monofármaco, que es un falso merge con riesgo clínico.
-  if (second !== null) {
-    const head = brandHeadTokens(tokens).join("");
-    if (
-      head &&
-      !ION_AND_SALT_TOKENS.has(head) &&
-      !found.has(head) &&
-      tokenBeforeCombination(tokens, second) === head
-    ) {
-      found.set(head, "combination");
-    }
-  }
-
-  return [...found.entries()]
-    .map(([token, evidence]) => ({ token, evidence }))
-    .sort((a, b) => (a.token < b.token ? -1 : a.token > b.token ? 1 : 0));
-}
-
-/**
- * Token que precede al segundo principio activo de una combinación, saltando lo
- * que no puede ser una molécula: sales e iones ("Tramadol CLORHIDRATO /
- * Paracetamol"), abreviaturas de dos letras o menos ("Zomel HP Triterapia") y
- * cualquier token con dígitos.
- *
- * Devuelve `null` si no encuentra ninguno. Es la evidencia tipográfica de que un
- * token es el PRIMER elemento de la combinación, no de que sea una molécula
- * conocida: por eso solo se usa para CONFIRMAR la cabecera, nunca para promover
- * un token cualquiera a principio activo.
- */
-function tokenBeforeCombination(tokens: string[], second: string): string | null {
-  const index = tokens.indexOf(second);
-  if (index <= 0) return null;
-  for (let i = index - 1; i >= 0; i--) {
-    const token = tokens[i]!;
-    if (token.length <= 2) continue;
-    if (/\d/.test(token)) continue;
-    if (ION_AND_SALT_TOKENS.has(token)) continue;
-    return token;
-  }
-  return null;
+  return readIngredientComposition(name).components.map(({ token, evidence }) => ({
+    token,
+    evidence,
+  }));
 }
 
 /**
@@ -642,7 +518,10 @@ function capitalize(text: string): string {
 export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
   const name = offer.rawName;
 
-  const activeIngredients = readActiveIngredients(name);
+  const composition = readIngredientComposition(name);
+  const activeIngredients: ActiveIngredient[] = composition.components.map(
+    ({ token, evidence }) => ({ token, evidence })
+  );
   const unresolvedIdentityDiscriminator = readUnresolvedIdentityDiscriminator(name);
   const concentration = readConcentrationEvidence(name);
   const canonicalDosageForm: CanonicalDosageForm | null = readCanonicalDosageForm(name);
@@ -681,6 +560,11 @@ export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
 
   return {
     activeIngredients,
+    declaredComponentCount: composition.declaredComponentCount,
+    ingredientStrengths: composition.components.map(({ token, strength }) => ({
+      token,
+      strength,
+    })),
     unresolvedIdentityDiscriminator,
     concentration,
     canonicalDosageForm,
@@ -699,6 +583,15 @@ export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
     canonicalName,
     inferredFields: {
       activeIngredients: activeIngredients.map((i) => `${i.token}:${i.evidence}`).join(",") || null,
+      // Cardinalidad declarada frente a moléculas nombradas. Cuando difieren, el
+      // nombre declara una asociación que no se pudo nombrar entera — el hecho
+      // que hace auditable la decisión de no fusionarla con un monofármaco.
+      declaredComponentCount: String(composition.declaredComponentCount),
+      ingredientStrengths:
+        composition.components
+          .filter((c) => c.strength !== null)
+          .map((c) => `${c.token}:${c.strength!.value}${c.strength!.unit}`)
+          .join(",") || null,
       unresolvedIdentityDiscriminator,
       concentration: formatConcentration(concentration),
       canonicalDosageForm,

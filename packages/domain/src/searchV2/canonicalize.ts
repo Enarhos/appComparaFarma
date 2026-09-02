@@ -31,6 +31,7 @@ import {
   formatConcentration,
 } from "./canonicalConcentration.js";
 import {
+  axisStrength,
   provisionalKey,
   resolveBySubsumption,
   type ResolvedItem,
@@ -38,6 +39,7 @@ import {
   type SignatureAxis,
 } from "./canonicalIdentity.js";
 import {
+  type AxisComparison,
   type CanonicalAttributes,
   type CanonicalGraph,
   type CanonicalMedicationConcept,
@@ -128,7 +130,7 @@ const FORMS_WITHOUT_PACKAGE_VOLUME: ReadonlySet<string> = new Set([
  *     estrictamente más fina. Se publica como atributo para trazabilidad.
  */
 export function conceptSignature(attributes: CanonicalAttributes): Signature {
-  const tokens = attributes.activeIngredients.map((i) => i.token);
+  const ingredients = ingredientAxis(attributes);
 
   const concentration: ConcentrationAxis = {
     name: "conc",
@@ -150,13 +152,7 @@ export function conceptSignature(attributes: CanonicalAttributes): Signature {
 
   return {
     axes: [
-      {
-        // Solo principios activos DEMOSTRADOS. Vacío ⇒ DESCONOCIDO, sin excusas:
-        // el motor no sabe qué molécula es y lo dice.
-        name: "ing",
-        segment: tokens.length > 0 ? tokens.join("+") : UNKNOWN_SEGMENT,
-        known: tokens.length > 0,
-      },
+      ingredients,
       {
         // Discriminante de identidad no resuelta. SIEMPRE DECLARADO —`none`
         // cuando el concepto sí tiene principios activos demostrados— para que
@@ -191,6 +187,131 @@ export function conceptSignature(attributes: CanonicalAttributes): Signature {
 type ConcentrationAxis = SignatureAxis & {
   evidence?: CanonicalAttributes["concentration"];
 };
+
+/** Eje de principios activos con su composición adjunta, para el comparador propio. */
+type IngredientAxis = SignatureAxis & {
+  tokens?: string[];
+  declaredComponentCount?: number;
+};
+
+/**
+ * Eje `ing` — EL CONJUNTO DE PRINCIPIOS ACTIVOS Y SU CARDINALIDAD DECLARADA.
+ *
+ * POR QUÉ NO ALCANZA CON CONCATENAR LOS TOKENS
+ * --------------------------------------------
+ * Hasta esta iteración el eje era `tokens.join("+")`, conocido si había al menos
+ * uno. Con dos estados —conocido o desconocido— un conjunto INCOMPLETO es
+ * literalmente indistinguible de un conjunto COMPLETO de un elemento, y ese es
+ * el defecto que produjo el falso merge medido sobre el corpus congelado:
+ *
+ *     "Adorlan 25/25 diclofenaco 25 mg tramadol 25 mg 10 comprimidos"  (dr-simi)
+ *     "Lertus diclofenaco 25 mg 20 comprimidos con recubrimiento entérico"
+ *     "Lertus Diclofenaco Sodico 25 mg 20 Comprimidos"                 (cruz-verde)
+ *
+ * compartían concepto con `ing=diclofenaco`, resolución `complete` y confianza
+ * `high`. Una asociación con TRAMADOL declarada como el mismo Concepto
+ * Farmacéutico que un monofármaco de diclofenaco.
+ *
+ * LOS TRES ESTADOS DEL EJE, y qué afirma cada uno:
+ *
+ *   COMPLETO   — se nombraron todos los componentes que el nombre declara.
+ *                Segmento `diclofenaco+tramadol`. Fuerza 2.
+ *   PARCIAL    — el nombre declara N componentes y solo se nombraron M < N.
+ *                Segmento `diclofenaco+?2` (las moléculas conocidas, más la
+ *                cardinalidad declarada). Fuerza 1. Afirma "hay más de los que
+ *                puedo nombrar", que es distinto de "no sé nada".
+ *   DESCONOCIDO— el nombre no declara composición alguna. Segmento `?`. Fuerza 0.
+ *                Es el estado de "Tapsin Forte", y su protección contra fusiones
+ *                la sigue aportando el eje `disc`, no este.
+ *
+ * La comparación la hace `compareIngredients()`, que es lo que impide que un
+ * conjunto parcial se subsuma dentro de un conjunto completo demasiado pequeño.
+ */
+function ingredientAxis(attributes: CanonicalAttributes): IngredientAxis {
+  const tokens = attributes.activeIngredients.map((i) => i.token);
+  const declared = Math.max(attributes.declaredComponentCount, tokens.length);
+  const complete = tokens.length > 0 && tokens.length >= declared;
+
+  const segment =
+    tokens.length === 0
+      ? declared > 1
+        ? `${UNKNOWN_SEGMENT}${declared}`
+        : UNKNOWN_SEGMENT
+      : complete
+        ? tokens.join("+")
+        : `${tokens.join("+")}+${UNKNOWN_SEGMENT}${declared}`;
+
+  const axis: IngredientAxis = {
+    name: "ing",
+    segment,
+    known: complete,
+    strength: complete ? 2 : tokens.length > 0 || declared > 1 ? 1 : 0,
+    tokens,
+    declaredComponentCount: declared,
+  };
+  axis.compare = (other) => compareIngredients(axis, other as IngredientAxis);
+  return axis;
+}
+
+/**
+ * Compara dos ejes de principio activo tratando el conjunto como un CONJUNTO y
+ * la cardinalidad declarada como una AFIRMACIÓN, no como un detalle.
+ *
+ * REGLAS, en el orden en que se aplican:
+ *
+ *   1. DOS COMPLETOS — iguales si son el mismo conjunto, `incompatible` si no.
+ *      Es lo que separa `{diclofenaco, tramadol}` de `{diclofenaco}`, y la
+ *      corrección directa del falso merge de Adorlan.
+ *
+ *   2. DESCONOCIDO PURO (sin moléculas y sin cardinalidad declarada) contra
+ *      cualquier cosa — `subsumable`. Conserva EXACTAMENTE el comportamiento
+ *      anterior para los nombres que no declaran nada: la seguridad de "Tapsin
+ *      Forte" la aporta el eje `disc`, que no cambia.
+ *
+ *   3. PARCIAL contra el otro — `subsumable` SOLO SI las dos condiciones se
+ *      cumplen a la vez:
+ *        (a) las moléculas del parcial están CONTENIDAS en las del otro — un
+ *            conjunto no puede ser lectura incompleta de otro que lo contradice;
+ *        (b) el otro tiene AL MENOS tantos componentes como el parcial DECLARA —
+ *            "Zolimax Duo **875/125** Amoxicilina 875 mg" declara 2 componentes y
+ *            por lo tanto NO puede ser una lectura incompleta de un monofármaco
+ *            de amoxicilina, por más que `{amoxicilina} ⊆ {amoxicilina}`.
+ *      Si alguna falla → `incompatible`. Nunca se adivina.
+ *
+ * La relación es simétrica por construcción: el lado más débil se elige por
+ * fuerza, no por el orden de los argumentos, y `subsumes()` verifica aparte la
+ * dirección con `axisStrength`.
+ */
+function compareIngredients(a: IngredientAxis, b: IngredientAxis): AxisComparison {
+  const aTokens = a.tokens ?? [];
+  const bTokens = b.tokens ?? [];
+  const aDeclared = a.declaredComponentCount ?? aTokens.length;
+  const bDeclared = b.declaredComponentCount ?? bTokens.length;
+  const aComplete = a.known;
+  const bComplete = b.known;
+
+  if (aComplete && bComplete) {
+    return a.segment === b.segment ? "equal" : "incompatible";
+  }
+
+  const aPureUnknown = aTokens.length === 0 && aDeclared <= 1;
+  const bPureUnknown = bTokens.length === 0 && bDeclared <= 1;
+  if (aPureUnknown && bPureUnknown) return "equal";
+  if (aPureUnknown || bPureUnknown) return "subsumable";
+
+  // A partir de acá al menos uno es PARCIAL y ninguno es desconocido puro.
+  const [weak, strong] =
+    axisStrength(a) <= axisStrength(b)
+      ? [{ tokens: aTokens, declared: aDeclared }, { tokens: bTokens, declared: bDeclared }]
+      : [{ tokens: bTokens, declared: bDeclared }, { tokens: aTokens, declared: aDeclared }];
+
+  const strongSet = new Set(strong.tokens);
+  const contained = weak.tokens.every((token) => strongSet.has(token));
+  if (!contained) return "incompatible";
+  if (Math.max(strong.tokens.length, strong.declared) < weak.declared) return "incompatible";
+
+  return a.segment === b.segment ? "equal" : "subsumable";
+}
 
 // ---------------------------------------------------------------------------
 // ETAPA 4 — FIRMA DE LA PRESENTACIÓN FARMACÉUTICA
@@ -420,6 +541,8 @@ export function canonicalize(offers: RawOfferInput[]): CanonicalGraph {
         provisionalConceptKey: concept.key,
         canonicalName: attributes.canonicalName,
         activeIngredients: attributes.activeIngredients,
+        declaredComponentCount: attributes.declaredComponentCount,
+        ingredientStrengths: attributes.ingredientStrengths,
         identityStatus:
           attributes.activeIngredients.length > 0 ? "resolved" : "unresolved-ingredient",
         unresolvedIdentityDiscriminator: attributes.unresolvedIdentityDiscriminator,

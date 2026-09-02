@@ -36,6 +36,7 @@ export type {
   CommercialMedicinalProduct,
   ConceptIdentityStatus,
   ConcentrationEvidence,
+  IngredientStrength,
   OfferProvenance,
   RawOfferInput,
   ResolutionConfidence,
@@ -54,6 +55,15 @@ export {
   isWeakerConcentration,
   readConcentrationEvidence,
 } from "./canonicalConcentration.js";
+
+export {
+  declaredArityFromDoseRatio,
+  ION_AND_SALT_TOKENS,
+  readIngredientComposition,
+  V2_MOLECULE_VOCABULARY,
+  type IngredientComponent,
+  type IngredientComposition,
+} from "./compositionReader.js";
 
 export {
   buildCanonicalName,

@@ -179,13 +179,20 @@ export type AxisComparison =
  * Un `ActiveIngredient` es una afirmación farmacológica: "esta molécula está en
  * este medicamento". Solo se construye cuando hay evidencia positiva:
  *
- *   `"vocabulary"`  — el token está en `COMPOSITION_VOCABULARY` (CF-DATA-001:
- *                     34 moléculas derivadas de una medición reproducible sobre
- *                     3.697 ofertas, no de criterio humano).
- *   `"combination"` — el token participa de una combinación reconocida por
- *                     `combinationKey()` (CF-SEARCH-001/S-1), cuya firma
- *                     tipográfica ("Losartán / Hidroclorotiazida 50/12,5 mg")
- *                     demuestra que ambos lados son principios activos.
+ *   `"vocabulary"`     — el token está en `COMPOSITION_VOCABULARY` (CF-DATA-001:
+ *                        34 moléculas derivadas de una medición reproducible
+ *                        sobre 3.697 ofertas, no de criterio humano) o en
+ *                        `V2_MOLECULE_VOCABULARY` (derivado del corpus congelado
+ *                        con el mismo criterio, ver `compositionReader.ts`).
+ *   `"combination"`    — el token participa de una combinación reconocida por
+ *                        `combinationKey()` (CF-SEARCH-001/S-1), cuya firma
+ *                        tipográfica ("Losartán / Hidroclorotiazida 50/12,5 mg")
+ *                        demuestra que ambos lados son principios activos.
+ *   `"dose-annotated"` — el token lleva SU PROPIA dosis en el texto
+ *                        ("diclofenaco 25 mg **tramadol 25 mg**") y comparte esa
+ *                        estructura con al menos un hermano ya corroborado. Es
+ *                        la evidencia que agrega el lector de asociaciones de v2
+ *                        y la que corrige el falso merge de Adorlan.
  *
  * NO EXISTE una evidencia `"unresolved-head"` (revisión CTO PR #159, punto 2).
  * Una cabecera textual no resuelta —"tapsin", "muxol"— NO es un principio
@@ -196,7 +203,35 @@ export type AxisComparison =
 export interface ActiveIngredient {
   /** Token normalizado, sin acentos y en minúscula (`"ambroxol"`). */
   token: string;
-  evidence: "vocabulary" | "combination";
+  evidence: "vocabulary" | "combination" | "dose-annotated";
+}
+
+/**
+ * Dosis DE UN COMPONENTE dentro de una asociación, conservada aparte de
+ * `CanonicalMedicationConcept.concentration`.
+ *
+ * POR QUÉ ES UN CAMPO NUEVO Y NO UN REEMPLAZO (CF-SEARCH-011, iteración de
+ * asociaciones). `concentration` admite UNA sola evidencia, y para una asociación
+ * eso es estructuralmente insuficiente: "Diclofenaco 25 mg + Tramadol 25 mg" tiene
+ * dos potencias, no una. Modelar bien la concentración de una asociación es un
+ * cambio del EDM y NO se hace en S0.
+ *
+ * Lo que sí se hace es no PERDER el dato y no AFIRMAR de más:
+ *   · `concentration` conserva la semántica que ya tenía —la primera magnitud de
+ *     masa del nombre, es decir la del primer componente escrito— y eso queda
+ *     documentado como limitación conocida, no como el modelo final;
+ *   · `ingredientStrengths` preserva la dosis por componente para el análisis de
+ *     S1, con el conjunto completo de moléculas;
+ *   · la SEGURIDAD no depende de ninguno de los dos: lo que impide que una
+ *     asociación se confunda con un monofármaco es el CONJUNTO de principios
+ *     activos y su CARDINALIDAD DECLARADA en el eje `ing` de la firma.
+ *
+ * NO PARTICIPA DE NINGUNA FIRMA DE IDENTIDAD. Es evidencia conservada, no un eje.
+ */
+export interface IngredientStrength {
+  token: string;
+  /** Dosis declarada para ese componente, o `null` si el nombre no la da. */
+  strength: Measurement | null;
 }
 
 /**
@@ -268,6 +303,15 @@ export interface CanonicalMedicationConcept {
    * `identityStatus` lo declara explícitamente.
    */
   activeIngredients: ActiveIngredient[];
+  /**
+   * Cantidad MÍNIMA de componentes activos que el nombre declara tener. Puede
+   * ser MAYOR que `activeIngredients.length`: significa "el nombre afirma que
+   * hay N componentes y solo se pudieron nombrar M". Ver
+   * `IngredientComposition.declaredComponentCount`.
+   */
+  declaredComponentCount: number;
+  /** Dosis por componente. Evidencia conservada, nunca un eje de identidad. */
+  ingredientStrengths: IngredientStrength[];
   identityStatus: ConceptIdentityStatus;
   /**
    * Cabecera textual no resuelta ("tapsin"), o `null`. NO es un principio
@@ -444,6 +488,15 @@ export interface OfferProvenance {
 export interface CanonicalAttributes {
   /** Principios activos DEMOSTRADOS. Vacío es un valor legítimo. */
   activeIngredients: ActiveIngredient[];
+  /**
+   * Cantidad MÍNIMA de componentes activos declarada por el nombre. Cuando supera
+   * a `activeIngredients.length`, el nombre declara una ASOCIACIÓN cuyos
+   * componentes no se pudieron nombrar por completo — y el eje `ing` de la firma
+   * lo representa explícitamente en vez de hacerla pasar por un monofármaco.
+   */
+  declaredComponentCount: number;
+  /** Dosis por componente. Evidencia conservada, nunca un eje de identidad. */
+  ingredientStrengths: IngredientStrength[];
   /**
    * DISCRIMINANTE DE IDENTIDAD NO RESUELTA — la corrección del punto 2 de la
    * revisión CTO del PR #159.
