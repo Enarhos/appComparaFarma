@@ -469,3 +469,288 @@ revoke all on sequence public.account_deletion_requests_id_seq from authenticate
 grant usage, select on sequence public.account_deletion_requests_id_seq to service_role;
 
 commit;
+
+-- ============================================================
+-- Search Engine v2 — S1: Registro Canónico Persistente
+-- (2026-09-03) — CF-SEARCH-012 / issue #163 / ADR-0005.
+-- docs/qa/cf-search-012/SCHEMA.md · docs/qa/cf-search-012/ROLLBACK.md
+--
+-- ⚠️ NO EJECUTADO TODAVÍA EN PRODUCCIÓN. Es CODE_READY, no CONFIG_READY ni
+-- DEPLOYED (CLAUDE.md §6). El shadow de v2 arranca APAGADO
+-- (SEARCH_V2_SHADOW_ENABLED ausente ⇒ enabled=false), así que desplegar el
+-- código SIN correr este bloque no rompe nada: el repositorio degrada a
+-- "no hay candidatos / no se pudo acuñar" y la búsqueda v1 sigue idéntica.
+--
+-- ADITIVO Y REVERSIBLE. Siete tablas NUEVAS con prefijo `canonical_`. No
+-- altera, no renombra y no borra ninguna tabla existente. No toca
+-- price_history, pharmacy_clicks, email_alerts, medications,
+-- medication_match_key_aliases, profiles, subscriptions ni app_config
+-- (salvo insertar una fila de configuración nueva). No hay ALTER sobre
+-- tablas legacy, así que no toma locks sobre nada que /api/search use:
+-- correrlo no bloquea tráfico. Rollback en docs/qa/cf-search-012/ROLLBACK.md.
+--
+-- POR QUÉ UN REGISTRO NUEVO Y NO `medications`. `medications` (RFC-002)
+-- traduce match_key -> CFM-###### y su identidad ES matchKey, que ya cambió
+-- 10 veces. v2 no puede construirse sobre eso sin heredar el acoplamiento
+-- que ADR-0005 identificó como la restricción estructural. Las dos
+-- conviven: `medications` sigue siendo la identidad legacy de v1 y este
+-- registro es la identidad canónica de v2. Ninguna FK las une.
+--
+-- CARDINALIDADES (validadas contra docs/enterprise/ENTERPRISE_DATA_MODEL.md,
+-- EDM-100/EDM-200 — NO es una cadena lineal de FKs):
+--   concepto  1 --- N  presentación   (la presentación declara su concepto)
+--   concepto  1 --- N  producto       (el producto declara su concepto; el
+--                                      EDM NO lista Presentación entre las
+--                                      propiedades del Producto Medicinal
+--                                      Comercial, y sí declara que un
+--                                      Concepto se relaciona con "múltiples
+--                                      Productos Medicinales Comerciales")
+--   producto  N --- M  presentación   (canonical_product_presentations: el
+--                                      mismo producto comercial se vende en
+--                                      caja de 16 y en caja de 30)
+--   oferta    N --- 1  producto / presentación / concepto, las tres
+--                      nullable: una observación puede estar resuelta a
+--                      nivel de concepto y sin resolver a nivel de producto.
+--
+-- IDENTIFICADORES. Secuencia + lpad(6), la misma mecánica que
+-- `medications.cfm_id`, con el segmento de entidad que el EDM nombra
+-- (CFM-CONCEPT-ID, CFM-PRESENTATION-ID, CFM-PRODUCT-ID, CFM-OFFER-ID). El
+-- segmento evita que `CFM-000123` sea ambiguo entre dos modelos de
+-- identidad. NUNCA content-addressed: un ID derivado del contenido rotaría
+-- al mejorar el canonicalizador, y la propiedad central de S1 es
+-- persistent ID stability = 100%.
+--
+-- RLS habilitado sin policies permisivas, mismo patrón que
+-- subscriptions/flow_customers: solo api/ (SUPABASE_SECRET_KEY ->
+-- service_role) lee y escribe. Ningún cliente accede directo.
+--
+-- COSTO MEDIDO sobre el corpus congelado de S1 (16 consultas, 1.364 ofertas,
+-- 8 farmacias respondiendo — cifras exactas en
+-- docs/qa/cf-search-012/S1_METRICS.md): órdenes de magnitud por debajo de
+-- price_history, que ya escribe una fila por (match_key, farmacia, día).
+-- ============================================================
+
+create sequence if not exists canonical_concept_seq;
+create sequence if not exists canonical_presentation_seq;
+create sequence if not exists canonical_product_seq;
+create sequence if not exists canonical_offer_seq;
+
+-- EDM-100 · Concepto Farmacéutico — aggregate root del conocimiento.
+-- `canonical_signature` es UNIQUE: es la restricción que hace imposible que
+-- dos requests simultáneos con la misma firma completa acuñen dos IDs.
+-- La firma puede EVOLUCIONAR (update); el `id` no la sigue nunca.
+create table if not exists canonical_concepts (
+  id text primary key
+    default ('CFM-CONCEPT-' || lpad(nextval('canonical_concept_seq')::text, 6, '0')),
+  canonical_signature text not null unique,
+  signature_version integer not null default 1,
+  canonicalizer_version text not null,
+  resolver_version text not null,
+  canonical_name text not null,
+  active_ingredients text[] not null default '{}',
+  declared_component_count integer not null default 0,
+  identity_status text not null default 'resolved',   -- 'resolved' | 'unresolved-ingredient'
+  unresolved_identity_discriminator text,
+  concentration text not null default '?',
+  canonical_dosage_form text,
+  route text,
+  pharmaceutical_unit text,
+  atc_code text,
+  status text not null default 'active',              -- 'active' | 'merged' | 'deprecated'
+  merged_into_id text references canonical_concepts(id),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+alter table canonical_concepts enable row level security;
+
+-- EDM-100 · Presentación Farmacéutica. Pertenece a UN concepto.
+create table if not exists canonical_presentations (
+  id text primary key
+    default ('CFM-PRESENTATION-' || lpad(nextval('canonical_presentation_seq')::text, 6, '0')),
+  canonical_signature text not null unique,
+  signature_version integer not null default 1,
+  canonicalizer_version text not null,
+  resolver_version text not null,
+  concept_id text not null references canonical_concepts(id),
+  package_quantity integer,
+  package_unit text,
+  package_volume text,       -- volumen del envase normalizado. NUNCA una concentración.
+  package_type text,
+  status text not null default 'active',
+  merged_into_id text references canonical_presentations(id),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists canonical_presentations_concept_idx
+  on canonical_presentations (concept_id);
+alter table canonical_presentations enable row level security;
+
+-- EDM-100 · Producto Medicinal Comercial. Pertenece a UN concepto, NO a una
+-- presentación. Único nivel donde marca y laboratorio participan de la
+-- identidad. `isp_registration` es EVIDENCIA, no fuente de verdad canónica
+-- mientras el issue #157 siga abierto (ADR-0005, sección "Fuente ISP").
+create table if not exists canonical_products (
+  id text primary key
+    default ('CFM-PRODUCT-' || lpad(nextval('canonical_product_seq')::text, 6, '0')),
+  canonical_signature text not null unique,
+  signature_version integer not null default 1,
+  canonicalizer_version text not null,
+  resolver_version text not null,
+  concept_id text not null references canonical_concepts(id),
+  brand text,
+  commercial_variant text,
+  administration_time text,
+  manufacturer text,
+  isp_registration text,
+  status text not null default 'active',
+  merged_into_id text references canonical_products(id),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists canonical_products_concept_idx on canonical_products (concept_id);
+alter table canonical_products enable row level security;
+
+-- La relación N:M. El PAR (producto, presentación) es la unidad comparable
+-- real: "Tapsin 500 mg del Lab. Maver, caja de 30". Una cadena lineal de FKs
+-- no puede representarla sin duplicar el producto una vez por caja.
+create table if not exists canonical_product_presentations (
+  product_id text not null references canonical_products(id),
+  presentation_id text not null references canonical_presentations(id),
+  concept_id text not null references canonical_concepts(id),
+  first_seen_at timestamptz not null default now(),
+  last_seen_at timestamptz not null default now(),
+  primary key (product_id, presentation_id)
+);
+create index if not exists canonical_product_presentations_presentation_idx
+  on canonical_product_presentations (presentation_id);
+alter table canonical_product_presentations enable row level security;
+
+-- Alias de firma -> identidad. Es el ÍNDICE DE BÚSQUEDA del registro y el
+-- mecanismo que impide que un ID rote: cuando una mejora del canonicalizador
+-- cambia la firma de un concepto, se agrega una fila más apuntando al MISMO
+-- entity_id y la firma anterior queda como alias histórico (is_current=false).
+-- Nunca se borra: borrarla rotaría el ID para cualquier observación que
+-- todavía produzca la firma vieja.
+--
+-- `bucket_keys` es el prefiltro barato de resolución (una clave por molécula
+-- nombrada, más el discriminante de identidad no resuelta). Sin él, resolver
+-- una observación exigiría escanear el registro entero en el camino de una
+-- búsqueda. GIN sobre text[] para el operador de solape.
+create table if not exists canonical_signature_aliases (
+  entity_kind text not null,                 -- 'concept' | 'presentation' | 'product'
+  signature text not null,
+  signature_version integer not null default 1,
+  entity_id text not null,
+  concept_id text,                           -- anclaje de presentación/producto
+  bucket_keys text[] not null default '{}',
+  canonicalizer_version text not null,
+  is_current boolean not null default true,
+  created_at timestamptz not null default now(),
+  primary key (entity_kind, signature_version, signature)
+);
+create index if not exists canonical_signature_aliases_entity_idx
+  on canonical_signature_aliases (entity_kind, entity_id);
+create index if not exists canonical_signature_aliases_concept_idx
+  on canonical_signature_aliases (entity_kind, signature_version, concept_id);
+create index if not exists canonical_signature_aliases_bucket_idx
+  on canonical_signature_aliases using gin (bucket_keys);
+alter table canonical_signature_aliases enable row level security;
+
+-- EDM-200 · Oferta — la OBSERVACIÓN de mercado.
+-- NO guarda precio ni stock: el precio ya vive en price_history y duplicarlo
+-- crearía una segunda fuente de verdad comercial. Este registro es de
+-- IDENTIDAD. Los tres enlaces son nullable a propósito.
+create table if not exists canonical_offer_observations (
+  id text primary key
+    default ('CFM-OFFER-' || lpad(nextval('canonical_offer_seq')::text, 6, '0')),
+  observation_key text not null unique,      -- 'farmacia|referencia-de-origen'
+  pharmacy_slug text not null,
+  source_product_id text not null,
+  raw_name text not null,
+  concept_id text references canonical_concepts(id),
+  presentation_id text references canonical_presentations(id),
+  product_id text references canonical_products(id),
+  first_seen_at timestamptz not null default now(),
+  last_seen_at timestamptz not null default now()
+);
+create index if not exists canonical_offer_observations_concept_idx
+  on canonical_offer_observations (concept_id);
+create index if not exists canonical_offer_observations_product_idx
+  on canonical_offer_observations (product_id);
+alter table canonical_offer_observations enable row level security;
+
+-- EDM-500 · Linaje. APPEND-ONLY: nunca se actualiza ni se borra.
+-- Una fila por (observación, nivel). Responde "¿por qué esta oferta fue
+-- asignada a este Concepto?" sin reconstruir el código histórico: guarda las
+-- tres versiones, la firma cruda, la normalizada, los ejes desconocidos, los
+-- candidatos y el motivo legible.
+--
+-- SIN DATOS PERSONALES. Ninguna columna admite consulta de usuario, IP,
+-- sesión ni identificador de persona — es metadata de producto y de oferta.
+create table if not exists canonical_resolutions (
+  id bigint generated always as identity primary key,
+  offer_observation_id text not null,
+  entity_kind text not null,
+  outcome text not null,                     -- exact|created|subsumed|ambiguous|unresolved
+  entity_id text,
+  raw_signature text not null,
+  normalized_signature text not null,
+  signature_version integer not null default 1,
+  canonicalizer_version text not null,
+  resolver_version text not null,
+  unknown_axes text[] not null default '{}',
+  candidate_count integer not null default 0,
+  candidate_ids text[] not null default '{}',
+  reason text not null,
+  upstream_fields jsonb not null default '{}',
+  inferred_fields jsonb not null default '{}',
+  legacy_match_key text,                     -- solo trazabilidad v1<->v2
+  legacy_presentation_key text,              -- solo trazabilidad v1<->v2
+  resolved_at timestamptz not null default now()
+);
+create index if not exists canonical_resolutions_observation_idx
+  on canonical_resolutions (offer_observation_id);
+create index if not exists canonical_resolutions_entity_idx
+  on canonical_resolutions (entity_kind, entity_id);
+alter table canonical_resolutions enable row level security;
+
+-- Defensa en profundidad, mismo criterio que account_deletion_requests: no se
+-- depende solo de "no hay policy" para negar acceso a anon/authenticated.
+revoke all on table canonical_concepts               from anon, authenticated;
+revoke all on table canonical_presentations          from anon, authenticated;
+revoke all on table canonical_products               from anon, authenticated;
+revoke all on table canonical_product_presentations  from anon, authenticated;
+revoke all on table canonical_signature_aliases      from anon, authenticated;
+revoke all on table canonical_offer_observations     from anon, authenticated;
+revoke all on table canonical_resolutions            from anon, authenticated;
+
+grant all on table canonical_concepts               to service_role;
+grant all on table canonical_presentations          to service_role;
+grant all on table canonical_products               to service_role;
+grant all on table canonical_product_presentations  to service_role;
+grant all on table canonical_signature_aliases      to service_role;
+grant all on table canonical_offer_observations     to service_role;
+grant all on table canonical_resolutions            to service_role;
+
+-- Las secuencias son objetos de privilegios independientes de las tablas
+-- (mismo gotcha documentado en account_deletion_requests_id_seq): un INSERT
+-- que dependa del DEFAULT necesita USAGE sobre la sequence.
+revoke all on sequence canonical_concept_seq        from anon, authenticated;
+revoke all on sequence canonical_presentation_seq   from anon, authenticated;
+revoke all on sequence canonical_product_seq        from anon, authenticated;
+revoke all on sequence canonical_offer_seq          from anon, authenticated;
+revoke all on sequence canonical_resolutions_id_seq from anon, authenticated;
+
+grant usage, select on sequence canonical_concept_seq        to service_role;
+grant usage, select on sequence canonical_presentation_seq   to service_role;
+grant usage, select on sequence canonical_product_seq        to service_role;
+grant usage, select on sequence canonical_offer_seq          to service_role;
+grant usage, select on sequence canonical_resolutions_id_seq to service_role;
+
+-- Interruptor operativo del shadow, editable sin redeploy (mismo mecanismo
+-- que `disabled_pharmacies`). Se inserta APAGADO. Encenderlo es cambiar esta
+-- fila; apagarlo también. La env var SEARCH_V2_SHADOW_KILL=true anula esta
+-- fila y no depende de que Supabase responda.
+insert into app_config (key, value)
+values ('search_v2_shadow', '{"enabled": false, "sampleRate": 0}'::jsonb)
+on conflict (key) do nothing;
