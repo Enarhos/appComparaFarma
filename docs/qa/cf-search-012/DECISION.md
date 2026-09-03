@@ -1,5 +1,34 @@
 # CF-SEARCH-012 — Decisión de S1
 
+## 0. Ratificación explícita de CTO/Product (2026-09-03)
+
+Esta entrega dejó dos lecturas posibles del Gate A, con la misma prominencia,
+pidiendo ratificación explícita (§3). **Mario (Product Owner) ratificó la
+definición original de S0**: "Offer Coverage" significa que la oferta obtuvo
+una identidad canónica asignada (`CFM-CONCEPT-ID`), no que quedó representada
+en el registro con linaje completo.
+
+Bajo esa definición ratificada:
+
+```
+Gate A — Offer Coverage (definición S0) ... 428/839  51,01 %   umbral >= 99,5 %  FAIL
+```
+
+**Veredicto final de S1: `STOP_AND_REASSESS`.**
+
+Esto no invalida el trabajo de esta entrega — el registro persistente, la
+separación canonicalización/resolución/asignación, los Gates B/C/D y los 7
+tests de estabilidad quedan demostrados y son reutilizables tal cual. Lo que
+cambia es que **S2 no puede iniciarse todavía**: la prioridad pasa a ser,
+exclusivamente, ampliar `COMPOSITION_VOCABULARY` (§6, punto 1) hasta que la
+tasa de asignación de concepto supere el umbral de 99,5% bajo esta misma
+definición, y recién entonces reintentar el Gate A. El resto del análisis de
+este documento (secciones 1-7) se conserva sin editar como evidencia técnica
+de la corrida original — léase con el veredicto de esta sección como el que
+gobierna, no "PASS_S1" de la sección 1.
+
+---
+
 **Corpus:** 16 consultas congeladas, 1.364 filas upstream, **839 observaciones
 únicas**, 8 de 9 farmacias, capturado 2026-09-03 (UTC).
 **Base:** `origin/main` @ `38ac1e8b7cd1ef557cd9f5df45993316c6153b97`.

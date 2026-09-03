@@ -45,12 +45,17 @@ Gate C — False Merge Rate .......... 0/202 pares           umbral = 0        P
 Gate D — Concept Semantic Collision  0/2.024 pares         umbral = 0        PASS
 Persistent ID Instability .......... 0 rotaciones          umbral = 0        PASS
 
-VEREDICTO: PASS_S1
+VEREDICTO (medido bajo la lectura "linaje completo" del Gate A): PASS_S1
 ```
 
-**Con una condición que no se disimula:** solo el **51,01 %** de las observaciones
-llega a tener un `CFM-CONCEPT-ID`. El detalle, su causa medida y por qué es
-condición de bloqueo para S2 están en `DECISION.md` §3 y `S1_FAILURES.md`.
+**Actualización — ratificación de CTO/Product (2026-09-03):** Mario ratificó la
+definición ORIGINAL de S0 para el Gate A (identidad canónica asignada, no solo
+linaje completo). Bajo esa definición, Gate A = **51,01 %** contra un umbral de
+99,5 % → **FAIL**, y el **veredicto final de S1 es `STOP_AND_REASSESS`**, no
+`PASS_S1`. Ver `DECISION.md` §0 para el detalle de la ratificación y qué sigue
+(ampliar `COMPOSITION_VOCABULARY` antes de reintentar el gate). Las cifras de
+arriba y el resto de este documento se conservan sin editar como evidencia
+técnica de la corrida original.
 
 ---
 
