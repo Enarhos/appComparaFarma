@@ -7,6 +7,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./searchV2": {
+      "types": "./dist/searchV2/index.d.ts",
+      "import": "./dist/searchV2/index.js"
     }
   },
   "main": "./dist/index.js",

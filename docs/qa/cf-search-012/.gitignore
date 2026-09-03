@@ -1,0 +1,6 @@
+# Dumps regenerables (mismo criterio que CF-SEARCH-011): se producen con los
+# scripts de `scripts/` y no se versionan. Lo que sí vive en el repositorio es
+# el script, el corpus congelado de consultas (`scripts/queries.json`), el
+# resultado agregado (`analysis/*.json`) y la evidencia de los casos de control.
+raw/
+analysis/observations-s1.csv
