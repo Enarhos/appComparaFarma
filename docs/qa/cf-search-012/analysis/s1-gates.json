@@ -1,0 +1,39 @@
+{
+  "verdict": "PASS_S1",
+  "gates": {
+    "A_offerCoverage": {
+      "value": 1,
+      "threshold": 0.995,
+      "pass": true,
+      "definition": "observaciones representadas en el registro con linaje completo / observaciones de entrada"
+    },
+    "B_splitLost": {
+      "value": 0,
+      "threshold": 0,
+      "pass": true,
+      "definition": "pares que v1 separaba, v2 fusiona en la misma unidad comparable, y que se contradicen"
+    },
+    "C_falseMergeRate": {
+      "value": 0,
+      "threshold": 0,
+      "pass": true,
+      "denominator": 202,
+      "definition": "pares dentro de la misma unidad comparable que se contradicen"
+    },
+    "D_conceptSemanticCollisionRate": {
+      "value": 0,
+      "threshold": 0,
+      "pass": true,
+      "denominator": 2024,
+      "byType": {},
+      "definition": "pares dentro del mismo Concepto Farmacéutico que se contradicen (8 clases)"
+    }
+  },
+  "persistentIdInstability": 0,
+  "rotations": 0,
+  "reassignments": {
+    "lateResolutions": 14,
+    "deResolutions": 41
+  },
+  "convergencePasses": 2
+}

@@ -1,0 +1,100 @@
+{
+  "corpus": {
+    "capturedFrom": "GET /api/search (producción, público, read-only)",
+    "queries": 16,
+    "upstreamRows": 1364,
+    "uniqueObservations": 839,
+    "pharmaciesPresent": [
+      "ahumada",
+      "cruz-verde",
+      "dr-simi",
+      "easyfarma",
+      "ecofarmacias",
+      "farmex",
+      "salcobrand",
+      "sermecoop"
+    ],
+    "pharmacyCount": 8,
+    "v1Cards": 1220
+  },
+  "versions": {
+    "canonicalizer": "v2.1.0",
+    "resolver": "v2.1.0",
+    "signature": 1
+  },
+  "registry": {
+    "concepts": 76,
+    "presentations": 87,
+    "products": 271,
+    "productPresentationPairs": 227,
+    "observations": 839,
+    "provenanceRows": 7551,
+    "signatureAliases": 434,
+    "comparableUnits": 210
+  },
+  "coverage": {
+    "offerCoverage": 1,
+    "conceptAssignmentRate": 0.5101311084624554,
+    "comparableUnitRate": 0.3778307508939213,
+    "withoutConcept": 411
+  },
+  "resolution": {
+    "conceptFirstPass": {
+      "exact": 314,
+      "created": 76,
+      "subsumed": 65,
+      "ambiguous": 29,
+      "unresolved": 355
+    },
+    "allLevels": {
+      "exact": 1127,
+      "created": 0,
+      "subsumed": 46,
+      "ambiguous": 76,
+      "unresolved": 1268
+    },
+    "conceptLevel": {
+      "exact": 390,
+      "created": 0,
+      "subsumed": 38,
+      "ambiguous": 75,
+      "unresolved": 336
+    }
+  },
+  "grouping": {
+    "fragmentation": 0.5833333333333334,
+    "fragmentedPresentations": 49,
+    "presentationsWithUnits": 84,
+    "singlePharmacyUnits": 151,
+    "singlePharmacyRate": 0.719047619047619,
+    "falseSplits": 0
+  },
+  "convergence": {
+    "passes": 2,
+    "rotations": 0,
+    "lateResolutions": 14,
+    "deResolutions": 41,
+    "note": "un registro persistente crece: la primera pasada sobre un registro vacío es su primer minuto de vida, no su estado"
+  },
+  "shadow": {
+    "enabledInProduction": false,
+    "runs": 16,
+    "observationsProcessed": 1364,
+    "successRate": 1,
+    "errorRate": 0,
+    "p50Ms": 7.189799999999877,
+    "p95Ms": 13.912700000000086,
+    "p99Ms": 13.912700000000086,
+    "note": "corrida por consulta contra el registro ya convergido, en memoria; sin red, sin Supabase y sin arranque en frío de una función serverless"
+  },
+  "latencyMs": {
+    "p50": 0.05930000000000746,
+    "p95": 0.15460000000000207,
+    "p99": 0.2711000000000041,
+    "total": 57.35890000000013,
+    "note": "medición offline contra el registro en memoria; sin retrieval, sin red y sin arranque en frío"
+  },
+  "databaseWrites": {
+    "estimatedRows": 9485
+  }
+}
