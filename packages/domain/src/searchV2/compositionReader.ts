@@ -272,6 +272,21 @@ export interface IngredientComposition {
    * distingue una lectura COMPLETA de una PARCIAL en la firma del concepto.
    */
   isComplete: boolean;
+  /**
+   * Moléculas que el nombre declara AUSENTES ("Tapsin Puro **SIN** Cafeína"),
+   * ordenadas alfabéticamente. Ya se usaban internamente para no afirmarlas como
+   * presentes; CF-SEARCH-012 las PUBLICA porque son evidencia positiva de
+   * ausencia y sin ellas la clase 7 del Gate D (componente explícitamente negado
+   * frente a componente presente) no es detectable — el detector no puede
+   * distinguir "el nombre no menciona cafeína" de "el nombre dice que no lleva
+   * cafeína".
+   *
+   * NO PARTICIPA DE NINGUNA FIRMA DE IDENTIDAD. Es un campo aditivo de evidencia:
+   * el comportamiento de agrupamiento de S0 es idéntico con y sin él. La
+   * protección contra fusionar "sin cafeína" con "con cafeína" la siguen dando
+   * los ejes `ing` y `disc`, que no cambian.
+   */
+  negatedComponents: string[];
 }
 
 // ---------------------------------------------------------------------------
@@ -754,6 +769,7 @@ export function readIngredientComposition(name: string): IngredientComposition {
     declaredComponentCount,
     isAssociation: declaredComponentCount > 1,
     isComplete: components.length > 0 && components.length >= declaredComponentCount,
+    negatedComponents: [...negated].sort(),
   };
 }
 

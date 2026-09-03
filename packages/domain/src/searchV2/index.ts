@@ -98,3 +98,70 @@ export {
   presentationSignature,
   productSignature,
 } from "./canonicalize.js";
+
+// -------------------------------------------------------------------------
+// CF-SEARCH-012 (S1) — registro canónico PERSISTENTE.
+//
+// Sigue sin reexportarse desde el barrel raíz de `@comparafarma/domain`: v2
+// continúa siendo shadow, apagado por defecto. `api/` importa este subcamino
+// (`@comparafarma/domain/searchV2`) exclusivamente para el runtime de shadow;
+// `web/` y `mobile/` no lo importan y no cambian de superficie.
+// -------------------------------------------------------------------------
+
+export {
+  CANONICALIZER_VERSION,
+  CANONICAL_ID_PREFIX,
+  RESOLVER_VERSION,
+  SIGNATURE_VERSION,
+  formatCanonicalId,
+  isCanonicalId,
+  type AssignedIdentity,
+  type CanonicalConceptRecord,
+  type CanonicalEntityKind,
+  type CanonicalEntityStatus,
+  type CanonicalOfferObservationRecord,
+  type CanonicalPresentationRecord,
+  type CanonicalProductPresentationRecord,
+  type CanonicalProductRecord,
+  type CanonicalRegistryRepository,
+  type CanonicalResolutionOutcome,
+  type CanonicalResolutionRecord,
+  type CanonicalSignatureAliasRecord,
+  type ConceptDraft,
+  type ObservationInput,
+  type OfferObservationDraft,
+  type PresentationDraft,
+  type ProductDraft,
+  type RegistryCandidate,
+  type RegistryResolution,
+} from "./registryTypes.js";
+
+export {
+  isCompleteSignature,
+  parseSignatureText,
+  resolveAgainstRegistry,
+  subsumesSignatureText,
+  type ResolveOptions,
+} from "./canonicalResolver.js";
+
+export {
+  assignIdentity,
+  canMintConcept,
+  conceptBucketKeys,
+  isMintableConceptSignature,
+  isMintablePresentationSignature,
+  isMintableProductSignature,
+  observationKey,
+  registryProductSignature,
+} from "./canonicalIdentityAssigner.js";
+
+export { InMemoryCanonicalRegistry } from "./registryMemory.js";
+
+export {
+  auditConceptCollisions,
+  detectConceptCollisions,
+  type ConceptCollision,
+  type ConceptCollisionReport,
+  type ConceptCollisionType,
+  type ConceptMember,
+} from "./conceptCollision.js";
