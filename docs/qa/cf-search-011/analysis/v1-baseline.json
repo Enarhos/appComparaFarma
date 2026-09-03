@@ -1,0 +1,28 @@
+{
+  "capturedQueries": 16,
+  "totalCards": 1447,
+  "edmApproximation": {
+    "concepts": 292,
+    "presentations": 372,
+    "presentationsSplitAcrossCards": 277,
+    "presentationSplitRate": 0.7446,
+    "cardsPerConcept": 4.96
+  },
+  "totalOffers": 1633,
+  "uniqueUpstreamNames": 975,
+  "pharmaciesCovered": 9,
+  "matchKeyCardinality": 442,
+  "presentationKeyCardinality": 867,
+  "approximatePresentations": 993,
+  "multiPharmacyCards": 149,
+  "singlePharmacyCards": 1298,
+  "singlePharmacyCardRate": 0.897,
+  "intraCardPairs": 230,
+  "falseMerges": 0,
+  "falseMergeRate": 0,
+  "falseMergeSamples": [],
+  "fragmentedIdentityGroups": 235,
+  "fragmentedCards": 683,
+  "fragmentationRate": 0.2367,
+  "lostComparisonGroups": 179
+}

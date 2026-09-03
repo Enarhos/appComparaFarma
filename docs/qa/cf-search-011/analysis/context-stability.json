@@ -1,0 +1,48 @@
+{
+  "offersEvaluated": 1633,
+  "rawSignatureStable": 1633,
+  "rawSignatureStabilityRate": 1,
+  "resolvedKeyStable": 1631,
+  "resolvedKeyStabilityRate": 0.998775,
+  "contextDependentIdentities": 2,
+  "detail": [
+    {
+      "query": "tapsin",
+      "pharmacy": "easyfarma",
+      "rawName": "Paracetamol inf. suposit. x 6",
+      "rawSignature": "ing=paracetamol|disc=none|conc=conc:?|form=supositorio|route=rectal|unit=?",
+      "fullCorpus": {
+        "key": "PROV-C-3w3war58rzl4qlbu96jrgbfec",
+        "resolvedSignature": "ing=paracetamol|disc=none|conc=conc:mass:125mg|form=supositorio|route=rectal|unit=supositorio",
+        "kind": "subsumed",
+        "candidateCount": 1
+      },
+      "isolatedQuery": {
+        "key": "PROV-C-9iufjbudm38xuj7vzgl9dmfwi",
+        "resolvedSignature": "ing=paracetamol|disc=none|conc=conc:?|form=supositorio|route=rectal|unit=?",
+        "kind": "isolated",
+        "candidateCount": 0
+      },
+      "reason": "subsumption-host-availability: la firma parcial encuentra 1 anfitriona(s) en el corpus completo y 0 en la consulta aislada"
+    },
+    {
+      "query": "tapsin",
+      "pharmacy": "easyfarma",
+      "rawName": "Alividol 1000 mg 20...",
+      "rawSignature": "ing=?|disc=alividol|conc=conc:mass:1000mg|form=?|route=?|unit=?",
+      "fullCorpus": {
+        "key": "PROV-C-f24gonenxtzhvhsyatv32nuc0",
+        "resolvedSignature": "ing=?|disc=alividol|conc=conc:mass:1000mg|form=comprimido|route=oral|unit=comprimido",
+        "kind": "subsumed",
+        "candidateCount": 1
+      },
+      "isolatedQuery": {
+        "key": "PROV-C-7fnmhcs0vb0zol81wkrj8eve7",
+        "resolvedSignature": "ing=?|disc=alividol|conc=conc:mass:1000mg|form=?|route=?|unit=?",
+        "kind": "isolated",
+        "candidateCount": 0
+      },
+      "reason": "subsumption-host-availability: la firma parcial encuentra 1 anfitriona(s) en el corpus completo y 0 en la consulta aislada"
+    }
+  ]
+}

@@ -320,3 +320,65 @@ export function concentrationKey(concentration: Concentration): string {
   const head = `${numerator.value}${numerator.unit}`;
   return denominator ? `${head}/${denominator.value}${denominator.unit}` : head;
 }
+
+/**
+ * CF-SEARCH-011 (S0) — AGREGADO PURO, NO MODIFICA NINGUNA FUNCIÓN EXISTENTE.
+ *
+ * Valor NUMÉRICO de una concentración, expresado en las unidades base de su
+ * familia (`mg` para masa, `ml` para volumen), junto con la etiqueta de esas
+ * unidades.
+ *
+ * POR QUÉ EXISTE
+ * --------------
+ * `concentrationKey()` es una representación LITERAL: `600mg/100ml` y
+ * `30mg/5ml` producen dos cadenas distintas aunque `isSameConcentration()` las
+ * declare —correctamente— la misma concentración. Eso alcanza para una clave de
+ * caché, pero no para derivar un identificador canónico estable: el motor v2
+ * necesita que dos escrituras equivalentes de la misma potencia deriven el MISMO
+ * `conceptId` (regla explícita de CF-SEARCH-011 §7 y de
+ * `docs/qa/cf-search-010/CANONICAL_IDENTITY_MODEL.md` §3.2 R1).
+ *
+ * Se implementa acá, y no en `searchV2/`, por la regla de no duplicar reglas de
+ * negocio (`CLAUDE.md` §7): la tabla de familias y factores (`UNIT_DIMENSIONS`)
+ * es privada de este módulo, y copiarla en la capa v2 garantizaría que las dos
+ * copias divergieran. La función es de solo lectura, no la llama ningún camino
+ * de v1, y ninguna función preexistente cambió una línea.
+ *
+ * Devuelve `null` cuando alguna de las dos magnitudes usa una unidad fuera de
+ * las familias convertibles (`ui`, `%`, y cualquiera que se agregue): en ese
+ * caso no existe un valor numérico comparable y el llamador debe caer a la
+ * comparación literal, nunca inventar una conversión.
+ */
+export function concentrationRatio(
+  concentration: Concentration
+): { value: number; unit: string } | null {
+  const { numerator, denominator } = concentration;
+  const numeratorSpec = UNIT_DIMENSIONS[numerator.unit];
+  if (!numeratorSpec) return null;
+
+  if (denominator === null) {
+    return { value: baseValue(numerator), unit: baseUnitOf(numeratorSpec.dimension) };
+  }
+
+  const denominatorSpec = UNIT_DIMENSIONS[denominator.unit];
+  if (!denominatorSpec) return null;
+
+  const denominatorBase = baseValue(denominator);
+  if (denominatorBase === 0) return null;
+
+  const value = baseValue(numerator) / denominatorBase;
+  if (!Number.isFinite(value)) return null;
+
+  return {
+    value,
+    unit: `${baseUnitOf(numeratorSpec.dimension)}/${baseUnitOf(denominatorSpec.dimension)}`,
+  };
+}
+
+/** Unidad base de una familia convertible: la que tiene `factor === 1`. */
+function baseUnitOf(dimension: string): string {
+  for (const [unit, spec] of Object.entries(UNIT_DIMENSIONS)) {
+    if (spec.dimension === dimension && spec.factor === 1) return unit;
+  }
+  return dimension;
+}
