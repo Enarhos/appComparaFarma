@@ -215,7 +215,13 @@ describe("monofármacos", () => {
     ["Paracetamol 500 mg x 16 comprimidos", ["paracetamol"]],
     ["Ibuprofeno 400 mg x 20 Comprimidos Recubiertos", ["ibuprofeno"]],
     ["Ambroxol 30mg/5ml Jarabe Adulto 100ml (Andromaco)", ["ambroxol"]],
-    ["Omeprazol 20 mg x 30 cápsulas", []],
+    // CF-DATA-007: antes esperaba `[]`. `omeprazol` no estaba en ningún
+    // vocabulario porque se vende como genérico —la molécula ES la cabecera del
+    // nombre— y la regla de derivación por frecuencia de CF-DATA-001, que exige
+    // >= 2 cabeceras de marca acompañando al token, no puede descubrir esa
+    // clase de producto. Ahora entra por la evidencia (E2) de
+    // `V2_MOLECULE_VOCABULARY`. Ver el bloque 7 al final de este archivo.
+    ["Omeprazol 20 mg x 30 cápsulas", ["omeprazol"]],
   ])("%s conserva su composición propia", (name, expected) => {
     expect(tokens(name)).toEqual(expected);
   });
@@ -490,5 +496,191 @@ describe("identidad de concepto: asociación ≠ monofármaco", () => {
     expect(keys.get("Paracetamol 500 mg x 16 comprimidos")).toBe(
       keys.get("Paracetamol 500mg 16 Comprimidos")
     );
+  });
+});
+
+// ---------------------------------------------------------------------------
+// 7. CF-DATA-007 — VOCABULARIO v2 AMPLIADO POR EVIDENCIA (E2)
+// ---------------------------------------------------------------------------
+
+/**
+ * `omeprazol` y `esomeprazol` entran a `V2_MOLECULE_VOCABULARY` por la evidencia
+ * (E2): ya están declarados principio activo por `KNOWN_ACTIVE_INGREDIENTS`
+ * (commercialIdentity.ts, auditoría de producción FASE P1) y por
+ * `COMPOSITION_TOKENS` (productIdentity.ts, 9 búsquedas de producción), dos
+ * vocabularios que hoy sostienen comportamiento de v1 en producción.
+ *
+ * La regla de derivación por frecuencia de CF-DATA-001 NO puede descubrirlos:
+ * exige >= 2 CABECERAS DE MARCA distintas acompañando al token, y estos se
+ * venden como GENÉRICO con su propio nombre, donde la molécula ES la cabecera y
+ * por construcción no acompaña a ninguna. Medido sobre el corpus congelado de
+ * S1: `omeprazol` en 24 observaciones de 7 de las 9 farmacias, `esomeprazol` en
+ * 11 observaciones de 4 farmacias.
+ */
+describe("CF-DATA-007 — omeprazol y esomeprazol", () => {
+  it("lee omeprazol cuando la molécula ES el nombre del producto (genérico)", () => {
+    expect(tokens("Omeprazol 20 mg x 30 Cápsulas Opko Cenabast DESCUENTO")).toEqual([
+      "omeprazol",
+    ]);
+    expect(tokens("Omeprazol (B) 20mg 30 Cápsulas")).toEqual(["omeprazol"]);
+  });
+
+  it("lee omeprazol cuando aparece detrás de una marca", () => {
+    expect(tokens("Lomex (B) Omeprazol 20mg 28 Capsulas Prolongadas")).toEqual(["omeprazol"]);
+    expect(tokens("LOMEX Omeprazol 20 mg 28 cápsulas")).toEqual(["omeprazol"]);
+  });
+
+  it("lee esomeprazol y NO lo confunde con omeprazol", () => {
+    // El escaneo tokeniza por palabra completa, así que la inclusión de
+    // substring que provoca el caso QA-02 de `relevance.ts` no puede ocurrir.
+    expect(tokens("Esomeprazol 20 mg x 30 Cápsulas gránulos Recubrimiento Entérico")).toEqual([
+      "esomeprazol",
+    ]);
+    expect(tokens("Omeprazol 20 mg x 30 cápsulas")).not.toContain("esomeprazol");
+    expect(tokens("Esomeprazol 40 mg x 30 comprimidos")).not.toContain("omeprazol");
+  });
+
+  it("omeprazol y esomeprazol NO comparten Concepto Farmacéutico", () => {
+    const keys = conceptKeys([
+      "Omeprazol 20 mg x 30 cápsulas",
+      "Esomeprazol 20 mg x 30 cápsulas",
+    ]);
+    expect(keys.get("Omeprazol 20 mg x 30 cápsulas")).not.toBe(
+      keys.get("Esomeprazol 20 mg x 30 cápsulas")
+    );
+  });
+
+  it("la asociación naproxeno+esomeprazol no cae en ninguno de sus monofármacos", () => {
+    const NAPRO_ESO =
+      "Flectane naproxeno 500 mg esomeprazol 20 mg 30 comprimidos con recubrimiento entérico";
+    expect(tokens(NAPRO_ESO)).toEqual(["esomeprazol", "naproxeno"]);
+    const keys = conceptKeys([
+      NAPRO_ESO,
+      "Naproxeno 500 mg x 30 comprimidos",
+      "Esomeprazol 20 mg x 30 comprimidos",
+    ]);
+    expect(keys.get(NAPRO_ESO)).not.toBe(keys.get("Naproxeno 500 mg x 30 comprimidos"));
+    expect(keys.get(NAPRO_ESO)).not.toBe(keys.get("Esomeprazol 20 mg x 30 comprimidos"));
+  });
+
+  it("el genérico de omeprazol de varias farmacias sigue agrupando entre sí", () => {
+    const keys = conceptKeys([
+      "Omeprazol 20 mg x 30 Cápsulas",
+      "Omeprazol 20mg 30 Cápsulas con Gránulos",
+    ]);
+    expect(keys.get("Omeprazol 20 mg x 30 Cápsulas")).toBe(
+      keys.get("Omeprazol 20mg 30 Cápsulas con Gránulos")
+    );
+  });
+});
+
+/**
+ * Clases de riesgo que CF-DATA-007 midió sobre el residual y RECHAZÓ. Cada una
+ * es un token que aparece junto a una dosis en el corpus real y que, de haberse
+ * aprobado solo por esa cercanía, habría inventado una molécula. Son la prueba
+ * de que ampliar el vocabulario no aflojó la regla de honestidad.
+ */
+describe("CF-DATA-007 — tokens rechazados por clase de riesgo", () => {
+  it("MARCA y variante comercial nunca son principio activo", () => {
+    for (const name of [
+      "Tapsin 160 mg x 16 Comprimidos Masticables",
+      "Panadol Advance 500mg x 12 Comprimidos",
+      "Actron 400 mg x 10 cápsulas",
+      "Ibuprofeno Actron  200 mg RA (R) 10 Cápsulas Blandas",
+      "Paracetamol Gesidol 1gr x 20 Comprimidos",
+      "Trelegy Ellipta 92 mcg Polvo Para Inhalacion Oral 30 Dosis",
+    ]) {
+      for (const marca of ["tapsin", "panadol", "advance", "actron", "gesidol", "ellipta"]) {
+        expect(tokens(name)).not.toContain(marca);
+      }
+    }
+  });
+
+  it("LABORATORIO y etiqueta comercial nunca son principio activo", () => {
+    const leidos = tokens("Omeprazol 20 mg x 30 Cápsulas Opko Cenabast DESCUENTO");
+    for (const ruido of ["opko", "cenabast", "descuento", "curaspring", "maver", "chile"]) {
+      expect(leidos).not.toContain(ruido);
+    }
+  });
+
+  it("DESCRIPTOR de forma, envase y fabricación nunca es principio activo", () => {
+    const leidos = tokens("Flectane 500 mg/20 mg x 30 Comprimidos con Recubrimiento Entérico");
+    for (const desc of [
+      "comprimido", "comprimidos", "recubrimiento", "enterico", "capsula",
+      "jarabe", "crema", "gel", "sobre", "frasco", "blister", "prolongadas",
+    ]) {
+      expect(leidos).not.toContain(desc);
+    }
+  });
+
+  it("SABORIZANTE nunca es principio activo", () => {
+    for (const name of [
+      "Tapsin Noche Polvo - Sabor Limón, Miel y Jengibre - Sobre de 5 g",
+      "Tapsin Infantil 120 mg/ 5 mL Suspensión Oral Sabor Frambuesa 100 mL",
+    ]) {
+      for (const sabor of ["limon", "miel", "jengibre", "frambuesa", "fresa", "sabor"]) {
+        expect(tokens(name)).not.toContain(sabor);
+      }
+    }
+  });
+
+  it("RÉGIMEN posológico y marca no entran por el separador", () => {
+    const ZOMEL = "Zomel HP Triterapia 1 g/500 mg/20 mg 14 Blister";
+    expect(tokens(ZOMEL)).not.toContain("triterapia");
+    expect(tokens(ZOMEL)).not.toContain("zomel");
+  });
+
+  it("SAL y calificador químico nunca son un segundo principio activo", () => {
+    const casos: [string, string[]][] = [
+      ["Losartan Potasico 50 mg x 30 comprimidos", ["losartan"]],
+      ["Naproxeno Sodico 550 mg 20 Comprimidos", ["naproxeno"]],
+      ["Ambroxol Clorhidrato 30 mg/5 mL Jarabe 100 mL", ["ambroxol"]],
+      ["Flector Diclofenaco Epolamina 50 mg 10 Sobres", ["diclofenaco"]],
+      ["Merpal Diclofenaco Resinato 15mg/5ml Oral Gotas 20ml", ["diclofenaco"]],
+    ];
+    for (const [name, esperado] of casos) {
+      expect(tokens(name)).toEqual(esperado);
+    }
+  });
+
+  it("`acido` nunca es una molécula independiente", () => {
+    const AMOXI = "Amoxicilina + Ácido Clavulánico 500 mg / 125 mg";
+    expect(tokens(AMOXI)).toEqual(["amoxicilina", "clavulanico"]);
+    expect(tokens(AMOXI)).not.toContain("acido");
+  });
+
+  it("ERRATA de escritura no crea una molécula fantasma", () => {
+    // "Parcetamol"/"Potsico"/"clauvuláncio" son erratas de las farmacias. Si
+    // entraran al vocabulario partirían en dos el mismo medicamento.
+    expect(tokens("Kitadol Parcetamol Infantil 16 Comprimidos")).not.toContain("parcetamol");
+    expect(tokens("Losartan Potsico 50 mg x 30...")).not.toContain("potsico");
+    expect(tokens("Synulox (Amoxicilina 200mg-Ácido clauvuláncio 50mg)")).not.toContain(
+      "clauvulancio"
+    );
+  });
+
+  it("molécula con UNA sola observación y sin vocabulario NO se promueve", () => {
+    // Ninguna de las dos evidencias las sostiene: una observación, una farmacia,
+    // ningún vocabulario del proyecto. `UNKNOWN` es mejor que inventar.
+    expect(
+      tokens("Combodart 0,5/0,4 Dutasteride 0,5 mg Tamsulosina 0,4 mg 30 Cápsulas Blandas")
+    ).toEqual([]);
+    expect(tokens("Lirex Tibolona 2,5 mg 30 Comprimidos")).not.toContain("tibolona");
+    expect(tokens("Tapsin Periodo Pamabrom 25 mg 12 Comprimidos")).not.toContain("pamabrom");
+    expect(tokens("Uroplus Fosfomicina 3 gr Granulos para Solucion Oral 1 Sobre")).not.toContain(
+      "fosfomicina"
+    );
+  });
+
+  it("la negación sigue significando AUSENCIA después de ampliar el vocabulario", () => {
+    const conParacetamol = readIngredientComposition(
+      "Tapsin Puro Sin Cafeina Paracetamol 500 mg 16 Comprimidos"
+    );
+    expect(conParacetamol.components.map((c) => c.token)).toEqual(["paracetamol"]);
+    expect(conParacetamol.negatedComponents).toEqual(["cafeina"]);
+    expect(
+      readIngredientComposition("Tapsin Puro Sin Cafeina 500 mg x 24 Comprimidos")
+        .negatedComponents
+    ).toEqual(["cafeina"]);
   });
 });

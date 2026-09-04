@@ -131,17 +131,41 @@ export const ION_AND_SALT_TOKENS: ReadonlySet<string> = new Set([
 ]);
 
 /**
- * Clase (A), segunda fuente de vocabulario: moléculas que el PROPIO CORPUS
- * demuestra como principio activo a través de una convención de escritura
- * distinta, y que `COMPOSITION_VOCABULARY` no contiene.
+ * Clase (A), segunda fuente de vocabulario: moléculas que el proyecto ya
+ * demuestra como principio activo y que `COMPOSITION_VOCABULARY` no contiene.
  *
- * EL CRITERIO ES REPRODUCIBLE, NO UNA LISTA DE AUTOR. Se admite un token si y
- * solo si `combinationKey()` —una función de v1, que no se modifica— lo devuelve
- * como segundo principio activo en al menos un nombre del corpus congelado, es
- * decir si alguna farmacia ya lo escribió con separador explícito entre
- * moléculas. Es la misma clase de evidencia que sostiene a `COMPOSITION_VOCABULARY`
- * (medición sobre ofertas reales), aplicada a la parte del catálogo que la
- * medición por frecuencia de CF-DATA-001 no alcanzó.
+ * EL CRITERIO ES REPRODUCIBLE, NO UNA LISTA DE AUTOR. Un token entra acá si y
+ * solo si lo sostiene UNA de estas dos evidencias, y en el comentario de cada
+ * entrada se dice cuál:
+ *
+ *   (E1) SEPARADOR EXPLÍCITO EN EL CORPUS — `combinationKey()` —una función de
+ *        v1, que no se modifica— lo devuelve como segundo principio activo en al
+ *        menos un nombre del corpus congelado, es decir alguna farmacia ya lo
+ *        escribió con separador entre moléculas. Es la misma clase de evidencia
+ *        que sostiene a `COMPOSITION_VOCABULARY` (medición sobre ofertas
+ *        reales), aplicada a la parte del catálogo que la medición por
+ *        frecuencia de CF-DATA-001 no alcanzó.
+ *
+ *   (E2) VOCABULARIO FARMACOLÓGICO YA VALIDADO EN EL PROYECTO — el token ya está
+ *        declarado principio activo por un vocabulario que este repositorio
+ *        derivó de auditorías de producción y que HOY sostiene comportamiento
+ *        productivo de v1: `KNOWN_ACTIVE_INGREDIENTS` (commercialIdentity.ts,
+ *        auditoría FASE P1 del 2026-08-19, guardia "un principio activo no es
+ *        marca") y su superset `COMPOSITION_TOKENS` (productIdentity.ts, 9
+ *        búsquedas de producción del 2026-08-27). No es una lista importada ni
+ *        una farmacopea: es evidencia interna, medida, ya en producción.
+ *
+ * POR QUÉ HIZO FALTA (E2), Y POR QUÉ NO AFLOJA NADA (CF-DATA-007). La regla de
+ * derivación de CF-DATA-001 exige que el token acompañe a >= 2 CABECERAS DE
+ * MARCA distintas. Esa regla tiene un punto ciego ESTRUCTURAL: no puede
+ * descubrir jamás una molécula que se vende como GENÉRICO con su propio nombre,
+ * porque ahí la molécula ES la cabecera y por construcción no acompaña a
+ * ninguna. `omeprazol` es exactamente ese caso —7 de las 9 farmacias publican
+ * "Omeprazol 20 mg x 30 cápsulas", donde el token ocupa la posición de cabecera—
+ * y por eso la regla lo puntúa con 1 sola cabecera pese a estar en 24
+ * observaciones de 7 farmacias. (E2) no baja el umbral de (E1): aporta una
+ * evidencia DISTINTA e independiente, ya validada, para la clase de producto que
+ * (E1) no puede ver.
  *
  * Tokens que `combinationKey()` produce sobre el corpus y que NO entran acá, con
  * su motivo — la lista de exclusiones importa tanto como la de inclusiones:
@@ -156,18 +180,43 @@ export const ION_AND_SALT_TOKENS: ReadonlySet<string> = new Set([
  * `clavulanico`, `ibuprofeno`, `paracetamol`, `losartan`) ya están en
  * `COMPOSITION_VOCABULARY` y no hace falta repetirlos.
  *
- * NO se amplía con moléculas que el corpus no demuestre. `dutasteride` y
- * `tamsulosina` aparecen en "Combodart 0,5/0,4 Dutasteride 0,5 mg Tamsulosina
- * 0,4 mg", pero ninguna farmacia las escribe con separador entre moléculas, así
- * que no hay evidencia independiente y ese producto queda —correctamente— con
- * identidad no resuelta en vez de con dos moléculas afirmadas por posición.
+ * NO se amplía con moléculas que ninguna de las dos evidencias sostenga.
+ * `dutasteride` y `tamsulosina` aparecen en "Combodart 0,5/0,4 Dutasteride
+ * 0,5 mg Tamsulosina 0,4 mg", pero ninguna farmacia las escribe con separador
+ * entre moléculas y ningún vocabulario del proyecto las declara, así que no hay
+ * evidencia independiente y ese producto queda —correctamente— con identidad no
+ * resuelta en vez de con dos moléculas afirmadas por posición. Lo mismo con
+ * `flurbiprofeno`, `tibolona`, `pamabrom`, `fosfomicina` y `colecalciferol`: una
+ * observación cada uno, una sola farmacia, ningún vocabulario que los respalde.
+ * Ver `docs/qa/cf-data-007/REJECTED_TOKENS.md`.
+ *
+ * POR QUÉ NO SE AGREGAN A `COMPOSITION_VOCABULARY` (v1). Medido sobre el corpus
+ * congelado: hacerlo cambiaría el campo publicado `activeIngredient` en 35
+ * ofertas (32 por la guardia G1 de `brandFromName`, 3 por G2) y podría descartar
+ * marcas estructuradas por la guardia de `resolveBrandIdentity`. Son campos que
+ * `mobile` y `web` muestran hoy, y moverlos exigiría además subir `CACHE_PREFIX`.
+ * `presentationKey` NO se movería —`legacyLaboratoryValue()` lee los campos
+ * crudos, no la marca saneada—, pero el cambio de presentación queda igual fuera
+ * del alcance de este ticket. En la capa v2 el impacto medido sobre v1 es 0.
  */
 export const V2_MOLECULE_VOCABULARY: ReadonlySet<string> = new Set([
-  // "Diclofenaco Sodico/Tramadol Clorhidrato", "Dolodrin Diclofenaco 25 Mg /
+  // (E1) "Diclofenaco Sodico/Tramadol Clorhidrato", "Dolodrin Diclofenaco 25 Mg /
   // Tramadol 25 Mg", "Tramadol Clorhidrato/Paracetamol" — 10 nombres del corpus.
   "tramadol",
-  // "Ácido Acetilsalicílico + Cafeína", "Paracetamol / Cafeína".
+  // (E1) "Ácido Acetilsalicílico + Cafeína", "Paracetamol / Cafeína".
   "cafeina",
+  // (E2) `KNOWN_ACTIVE_INGREDIENTS` + `COMPOSITION_TOKENS`. Corroborado por el
+  // corpus congelado: 24 observaciones en 7 de las 9 farmacias (ahumada,
+  // cruz-verde, dr-simi, easyfarma, ecofarmacias, farmex, salcobrand), la
+  // mayoría como genérico donde el token es la cabecera del nombre.
+  "omeprazol",
+  // (E2) `KNOWN_ACTIVE_INGREDIENTS` + `COMPOSITION_TOKENS`. Corroborado por el
+  // corpus: 11 observaciones en 4 farmacias. Es una MOLÉCULA DISTINTA de
+  // `omeprazol` (enantiómero S) y debe seguir siéndolo: el escaneo tokeniza por
+  // palabra completa (`[a-z]+`), así que "esomeprazol" nunca coincide con
+  // "omeprazol" por substring — es el mismo error simétrico que `relevance.ts`
+  // documenta como QA-02 y que acá no puede ocurrir por construcción.
+  "esomeprazol",
 ]);
 
 /**
@@ -272,6 +321,21 @@ export interface IngredientComposition {
    * distingue una lectura COMPLETA de una PARCIAL en la firma del concepto.
    */
   isComplete: boolean;
+  /**
+   * Moléculas que el nombre declara AUSENTES ("Tapsin Puro **SIN** Cafeína"),
+   * ordenadas alfabéticamente. Ya se usaban internamente para no afirmarlas como
+   * presentes; CF-SEARCH-012 las PUBLICA porque son evidencia positiva de
+   * ausencia y sin ellas la clase 7 del Gate D (componente explícitamente negado
+   * frente a componente presente) no es detectable — el detector no puede
+   * distinguir "el nombre no menciona cafeína" de "el nombre dice que no lleva
+   * cafeína".
+   *
+   * NO PARTICIPA DE NINGUNA FIRMA DE IDENTIDAD. Es un campo aditivo de evidencia:
+   * el comportamiento de agrupamiento de S0 es idéntico con y sin él. La
+   * protección contra fusionar "sin cafeína" con "con cafeína" la siguen dando
+   * los ejes `ing` y `disc`, que no cambian.
+   */
+  negatedComponents: string[];
 }
 
 // ---------------------------------------------------------------------------
@@ -754,6 +818,7 @@ export function readIngredientComposition(name: string): IngredientComposition {
     declaredComponentCount,
     isAssociation: declaredComponentCount > 1,
     isComplete: components.length > 0 && components.length >= declaredComponentCount,
+    negatedComponents: [...negated].sort(),
   };
 }
 

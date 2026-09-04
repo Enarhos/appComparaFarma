@@ -1,0 +1,42 @@
+{
+  "queryIndependence": {
+    "pass": true,
+    "observationsInMultipleQueries": 397,
+    "violations": 0
+  },
+  "pharmacyIndependence": {
+    "pass": true,
+    "crossPharmacySignatures": 101,
+    "violations": 0
+  },
+  "orderIndependence": {
+    "pass": true,
+    "groups": 77,
+    "reversedGroups": 77
+  },
+  "corpusIndependence": {
+    "pass": true,
+    "observationsChecked": 419,
+    "rotated": 0,
+    "reassigned": 0
+  },
+  "partialObservation": {
+    "pass": true,
+    "conceptsAudited": 76,
+    "mintedInFirstPass": 76,
+    "illegalMints": 0,
+    "illegalSamples": []
+  },
+  "concurrentCreation": {
+    "pass": true,
+    "parallelObservations": 30,
+    "distinctIds": 1,
+    "conceptsCreated": 0
+  },
+  "canonicalizerVersionChange": {
+    "pass": true,
+    "identitiesRebound": 76,
+    "conceptsAfter": 76,
+    "rotated": 0
+  }
+}

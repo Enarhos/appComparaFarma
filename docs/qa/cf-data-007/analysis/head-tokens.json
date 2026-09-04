@@ -1,0 +1,1262 @@
+[
+  {
+    "token": "tapsin",
+    "count": 62,
+    "pharmacies": [
+      "ahumada",
+      "cruz-verde",
+      "dr-simi",
+      "ecofarmacias",
+      "farmex",
+      "salcobrand",
+      "sermecoop"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg",
+      "tapsin"
+    ],
+    "names": [
+      "farmex: Tapsin Forte x 20 comprimidos",
+      "ahumada: Tapsin 160 mg x 16 Comprimidos Masticables",
+      "ahumada: Tapsin 1g Efervescente X 20 Sobres",
+      "ecofarmacias: Tapsin X 6 comprimidos Noche (Maver)",
+      "ecofarmacias: Tapsin X 6 Comprimidos (Maver)",
+      "ecofarmacias: Tapsin Forte X 6 comprimidos recubiertos"
+    ]
+  },
+  {
+    "token": "actron",
+    "count": 8,
+    "pharmacies": [
+      "ahumada",
+      "easyfarma"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "easyfarma: Actron 400 mg x 10 cápsulas...",
+      "ahumada: Actron 400 mg x 10 Cápsulas Blandas",
+      "ahumada: Actron 400mg X 20 Capsulas Blandas",
+      "easyfarma: Actron RA 200 mg. 10...",
+      "ahumada: Actron RA 200 mg x 10 Cápsulas Blandas",
+      "easyfarma: Actron 600 Mg 10 Cap blandas"
+    ]
+  },
+  {
+    "token": "broncot",
+    "count": 6,
+    "pharmacies": [
+      "ahumada",
+      "easyfarma",
+      "farmex"
+    ],
+    "queries": [
+      "ambroxol",
+      "ambroxol 30mg",
+      "ambroxol 30mg/5ml",
+      "ambroxol 30mg/5ml jarabe 100ml"
+    ],
+    "names": [
+      "farmex: Broncot Forte G.T.F. Jarabe 30 mg / 5 mL x 120 mL",
+      "ahumada: Broncot Fte G.F.T. S/Azu. 30mg/5ml 120ml",
+      "easyfarma: Broncot Pediatrico GFT...",
+      "easyfarma: Broncot Gotas 7,5 mg/ml x...",
+      "ahumada: Broncot GFT 15 mg/5 mL x 120 mL Jarabe",
+      "ahumada: Broncot 7.5 mg/ml Gotas Fco. 30ml"
+    ]
+  },
+  {
+    "token": "amoval",
+    "count": 6,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "names": [
+      "ahumada: Amoval 250 mg/5 mL x 100 mL Polvo Para Suspensión Oral",
+      "ahumada: Amoval Duo 1000 mg/5 mL x 50 mL Polvo Para Suspensión Oral Con Solvente",
+      "farmex: Amoval 1 g x 14 comprimidos",
+      "ahumada: Amoval Duo  400 mg/5mL x 70 mL Polvo Para Suspensión Oral",
+      "ahumada: Amoval Duo 1000 mg/5 mL x 90 mL Polvo Para Suspensión Oral Con Solvente",
+      "ahumada: Amoval Duo 1000 mg/5ml x 120 ml Polvo para Suspensión Oral con Solvente"
+    ]
+  },
+  {
+    "token": "rigotax",
+    "count": 6,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "ahumada: Rigotax 10 mg x 10 Comprimidos",
+      "ahumada: Rigotax 10 mg x 30 Comprimidos",
+      "farmex: Rigotax D x 30 cápsulas",
+      "farmex: Rigotax Gotas 10 mg / mL x 15 mL",
+      "ahumada: Rigotax 5 mg/5 mL x 60 mL Solución Oral",
+      "ahumada: Rigotax 10 mg/mL x 15 mL Solución Oral Para Gotas"
+    ]
+  },
+  {
+    "token": "kitadol",
+    "count": 6,
+    "pharmacies": [
+      "ahumada",
+      "salcobrand"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "ahumada: Kitadol 500 mg x 24 Comprimidos",
+      "salcobrand: Kitadol Parcetamol Infantil 16 Comprimidos Masticables",
+      "ahumada: Kitadol 160 mg x 16 Comprimidos Masticables",
+      "salcobrand: Kitadol Parcetamol Infantil Gotas 15ml",
+      "ahumada: Kitadol 120 mg/5 mL x 60 mL Jarabe",
+      "ahumada: Kitadol Infantil 120 mg/5 mL x 100 mL Jarabe"
+    ]
+  },
+  {
+    "token": "remitex",
+    "count": 5,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "farmex: Remitex 10 mg x 30 comprimidos",
+      "ahumada: Remitex 10 mg x 30 Comprimidos Recubiertos",
+      "farmex: Remitex Jarabe 5 mg / 5 mL x 100 mL",
+      "ahumada: Remitex 5 mg/5 mL x 100 mL Jarabe",
+      "ahumada: Remitex 10 mg/mL x 15 mL Solución Oral Para Gotas"
+    ]
+  },
+  {
+    "token": "panadol",
+    "count": 5,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "ahumada: Panadol Advance 500mg x 12 Comprimidos",
+      "ahumada: Panadol Advance 500mg x 48 Comprimidos",
+      "ahumada: Panadol 80 mg x 20 Comprimidos Masticables",
+      "ahumada: Panadol Niños 100mg/Ml Gotas 15ml",
+      "ahumada: Panadol Niños 160mg/5ml Jarabe 90ml"
+    ]
+  },
+  {
+    "token": "ambilan",
+    "count": 4,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "names": [
+      "ahumada: Ambilan Bid 875/125 14 Comprimidos Recubiertos",
+      "ahumada: Ambilan Bid 875/125 20 Comprimidos Recubiertos",
+      "ahumada: Ambilan Bid 400/57 Suspensión Oral 70 mL",
+      "ahumada: Ambilan Bid Forte 800 mg/57 mg x 90 mL Polvo Para Suspensión Oral"
+    ]
+  },
+  {
+    "token": "ibupirac",
+    "count": 4,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "ahumada: Ibupirac LC 400 mg x 20 Cápsulas Blandas",
+      "ahumada: Ibupirac LC 600 mg x 10 Cápsulas Blandas",
+      "farmex: Ibupirac Forte Suspensión Oral 200 mg / 5 mL x 100 mL",
+      "ahumada: Ibupirac Forte 200 mg/5 mL x 100 mL Suspensión Oral"
+    ]
+  },
+  {
+    "token": "dolorub",
+    "count": 4,
+    "pharmacies": [
+      "ahumada",
+      "cruz-verde",
+      "easyfarma"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "cruz-verde: Dolorub Parche Dérmico 18x13 cm 1 Parche",
+      "ahumada: Dolorub 5 % x 45 g Crema Topica",
+      "easyfarma: Dolorub 5% Crema Topica Con...",
+      "ahumada: Dolorub 5% x 60 g Gel Dermico"
+    ]
+  },
+  {
+    "token": "muxol",
+    "count": 3,
+    "pharmacies": [
+      "easyfarma",
+      "farmex"
+    ],
+    "queries": [
+      "ambroxol",
+      "ambroxol 30mg",
+      "ambroxol 30mg/5ml",
+      "ambroxol 30mg/5ml jarabe 100ml"
+    ],
+    "names": [
+      "easyfarma: Muxol Adulto Jarabe...",
+      "easyfarma: Muxol Pediatrico Jarabe x...",
+      "farmex: Muxol 30 mg x 20 comprimidos"
+    ]
+  },
+  {
+    "token": "coolips",
+    "count": 3,
+    "pharmacies": [
+      "easyfarma",
+      "farmex"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "farmex: Coolips 10 mg x 10 comprimidos",
+      "farmex: Coolips 10 mg x 30 comprimidos",
+      "easyfarma: Coolips 10 mg x 30 Comprimidos"
+    ]
+  },
+  {
+    "token": "rigotaxd",
+    "count": 3,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "ahumada: Rigotax-D x 10 Cápsulas con Gránulos de Liberación Prolongada",
+      "ahumada: Rigotax-D x 30 Cápsulas con Gránulos de Liberación Prolongada",
+      "ahumada: Rigotax-D 5/120 mg Caja 30 Comprimidos Liberación Prolongada"
+    ]
+  },
+  {
+    "token": "merpal",
+    "count": 3,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Merpal 1,16 % x 110 mL Spray Solucion Topica",
+      "ahumada: Merpal 1,16 % x 60 g Gel Topico",
+      "ahumada: Merpal 15 mg/mL x 20 mL Suspensión Oral Para Gotas"
+    ]
+  },
+  {
+    "token": "lertus",
+    "count": 3,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "farmex: Lertus Gel 1% x 60 g",
+      "ahumada: Lertus 15 mg/mL x 25 mL Suspensión Oral Para Gotas",
+      "ahumada: Lertus Retard 100 mg x 10 Comprimidos Recubiertos de Liberación Prolongada"
+    ]
+  },
+  {
+    "token": "rumada",
+    "count": 3,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Rumada 5 mg / 10 mg, 30 comprimidos",
+      "ahumada: Rumada 10 mg / 10 mg, 30 comprimidos",
+      "ahumada: Rumada 20 mg / 10 mg, 30 comprimidos"
+    ]
+  },
+  {
+    "token": "simpertend",
+    "count": 3,
+    "pharmacies": [
+      "ahumada",
+      "easyfarma"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Simperten-D 50 mg/12.5 mg x 30 Comprimidos Recubiertos",
+      "ahumada: Simperten-D 100 mg/25 mg x 30 Comprimidos Recubiertos",
+      "easyfarma: Simperten-D 100/25 mg. 30..."
+    ]
+  },
+  {
+    "token": "hyzaar",
+    "count": 3,
+    "pharmacies": [
+      "ahumada",
+      "easyfarma"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Hyzaar 50 mg/12.5 mg x 30 Comprimidos Recubiertos",
+      "easyfarma: Hyzaar Forte 100/25 mg 30...",
+      "ahumada: Hyzaar Forte 100 mg/25 mg x 30 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "losapresd",
+    "count": 3,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Losapres-D 50 mg/12.5 mg x 30 Comprimidos Recubiertos",
+      "farmex: Losapres-D 100 / 25 mg x 30 comprimidos",
+      "ahumada: Losapres-D 100 mg/25 mg x 30 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "losapres",
+    "count": 3,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Losapres 50 mg x 30 Comprimidos Recubiertos",
+      "farmex: Losapres 100 mg x 30 comprimidos",
+      "ahumada: Losapres 100 mg x 30 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "tocalm",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "ambroxol",
+      "ambroxol 30mg",
+      "ambroxol 30mg/5ml",
+      "ambroxol 30mg/5ml jarabe 100ml"
+    ],
+    "names": [
+      "ahumada: Tocalm Adulto 30 mg/5 mL x 100 mL Jarabe",
+      "ahumada: Tocalm Pediatrico 15 mg/5 mL x 100 mL Jarabe"
+    ]
+  },
+  {
+    "token": "clavam",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "names": [
+      "ahumada: Clavam Duo 875 mg/125 mg x 14 Comprimidos Recubiertos",
+      "ahumada: Clavam Duo 875 mg/125 mg x 20 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "optamox",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "names": [
+      "ahumada: Optamox 875 mg x 21 Comprimidos Recubiertos",
+      "ahumada: Optamox 875 mg x 14 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "amobiotic",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "names": [
+      "ahumada: Amobiotic 1 g x 14 Comprimidos Dispersables",
+      "ahumada: Amobiotic BID 1000 mg/5 mL x 90 mL Polvo para Suspensión Oral con Solvente"
+    ]
+  },
+  {
+    "token": "findaler",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "ahumada: Findaler 10 mg x 30 Comprimidos",
+      "ahumada: Findaler 5 mg/5 ml x 100 ml Jarabe"
+    ]
+  },
+  {
+    "token": "zyrtec",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "ahumada: Zyrtec 10 mg x 30 Comprimidos Recubiertos",
+      "ahumada: Zyrtec 1 mg/ml x 60 ml Solución Oral"
+    ]
+  },
+  {
+    "token": "remitexd",
+    "count": 2,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "farmex: Remitex-D x 20 comprimidos",
+      "ahumada: Remitex-D x 20 Comprimidos de Liberación Prolongada"
+    ]
+  },
+  {
+    "token": "alerpriv",
+    "count": 2,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "easyfarma: Alerpriv 5mg/ml 20  ml",
+      "easyfarma: Alerpriv 2.5/5ml 100 ml"
+    ]
+  },
+  {
+    "token": "flector",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Flector 50 mg x 10 Sobres Polvo Granulado Para Solucion Oral",
+      "ahumada: Flector 1,29 % x 60 g Gel Tópico"
+    ]
+  },
+  {
+    "token": "diclac",
+    "count": 2,
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "farmex: Diclac Gel Tópico 1,16 x 60 g",
+      "ahumada: Diclac 1,16 % x 60 g Gel Tópico"
+    ]
+  },
+  {
+    "token": "doraliv",
+    "count": 2,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "easyfarma: DorAliv 600 mg x 10...",
+      "easyfarma: DorAliv 600 Mg 20 Caps...."
+    ]
+  },
+  {
+    "token": "ipson",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "ahumada: Ipson 100 mg/5 mL x 120 mL Suspensión Oral",
+      "ahumada: Ipson Forte 200 mg/5 mL x 120 mL Suspensión Oral"
+    ]
+  },
+  {
+    "token": "cozaar",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Cozaar 50 mg x 30 Comprimidos Recubiertos",
+      "ahumada: Cozaar 100 mg x 30 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "iltuxam",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Iltuxam HCT 40/5/25 mg (28 comprimidos)",
+      "ahumada: Iltuxam HCT 20/5/12,5 mg (28 comprimidos)"
+    ]
+  },
+  {
+    "token": "brevex",
+    "count": 2,
+    "pharmacies": [
+      "easyfarma",
+      "farmex"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg",
+      "tapsin"
+    ],
+    "names": [
+      "farmex: Brevex x 20 comprimidos",
+      "easyfarma: Brevex 20 comprimidos"
+    ]
+  },
+  {
+    "token": "alividol",
+    "count": 2,
+    "pharmacies": [
+      "easyfarma",
+      "farmex"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg",
+      "tapsin"
+    ],
+    "names": [
+      "farmex: Alividol 1000 mg x 20 comprimidos",
+      "easyfarma: Alividol 1000 mg 20..."
+    ]
+  },
+  {
+    "token": "gesidol",
+    "count": 2,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "ahumada: Gesidol Infantil 100 mg/mL x 15 mL Solución Oral Para Gotas",
+      "ahumada: Gesidol Infantil 120 mg/5 mL x 100 mL Jarabe"
+    ]
+  },
+  {
+    "token": "sales",
+    "count": 2,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "cruz-verde: Sales para Rehidratación 90 Cloruro de Sodio 3,5 gr Polvo para Suspensión Oral 4 Sobres Sabor Limón",
+      "cruz-verde: Sales para Rehidratación 60 Cloruro de Sodio 3,5 gr Polvo para Suspensión Oral 8 Sobres Sabor Fresa"
+    ]
+  },
+  {
+    "token": "amrodil",
+    "count": 1,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "ambroxol",
+      "ambroxol 30mg",
+      "ambroxol 30mg/5ml",
+      "ambroxol 30mg/5ml jarabe 100ml"
+    ],
+    "names": [
+      "easyfarma: Amrodil 30 Mg/5ml 100 Ml"
+    ]
+  },
+  {
+    "token": "mintamox",
+    "count": 1,
+    "pharmacies": [
+      "farmex"
+    ],
+    "queries": [
+      "ambroxol",
+      "ambroxol 30mg",
+      "ambroxol 30mg/5ml",
+      "ambroxol 30mg/5ml jarabe 100ml"
+    ],
+    "names": [
+      "farmex: Mintamox 15 mg / 5 mL x 100 mL"
+    ]
+  },
+  {
+    "token": "mucosolvandual",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "ambroxol",
+      "ambroxol 30mg",
+      "ambroxol 30mg/5ml",
+      "ambroxol 30mg/5ml jarabe 100ml"
+    ],
+    "names": [
+      "cruz-verde: Mucosolvan-Dual Infantil 120Ml"
+    ]
+  },
+  {
+    "token": "novamox",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "names": [
+      "ahumada: Novamox 1 g x 20 Comprimidos Dispersables"
+    ]
+  },
+  {
+    "token": "clavinex",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "names": [
+      "ahumada: Clavinex Duo CD 875 mg/125 mg x 14 Comprimidos Dispersables"
+    ]
+  },
+  {
+    "token": "zomel",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "names": [
+      "ahumada: Zomel HP Triterapia 1 g/500 mg/20 mg 14 Blister"
+    ]
+  },
+  {
+    "token": "cetirex",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "ahumada: Cetirex 10 mg x 30 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "zotaban",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "ahumada: Zotaban 10 mg 28 comprimidos"
+    ]
+  },
+  {
+    "token": "degraler",
+    "count": 1,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "names": [
+      "easyfarma: Degraler comprimidos 5 mg x 40"
+    ]
+  },
+  {
+    "token": "dolomerpal",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Dolomerpal x 20 Cápsulas Blandas"
+    ]
+  },
+  {
+    "token": "dicogel",
+    "count": 1,
+    "pharmacies": [
+      "farmex"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "farmex: Dicogel 1,16% x 30 g"
+    ]
+  },
+  {
+    "token": "promerpal",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Promerpal 140 mg x 10 Cápsulas de Liberación Prolongada"
+    ]
+  },
+  {
+    "token": "flexfull",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Flexfull Gel 35Gr"
+    ]
+  },
+  {
+    "token": "dolodrops",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: DoloDrops 1,5 % x 25 mL Suspensión Oral Para Gotas"
+    ]
+  },
+  {
+    "token": "coxidol",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Coxidol 90 mg x 14 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "flectane",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Flectane 500 mg/20 mg x 30 Comprimidos con Recubrimiento Entérico"
+    ]
+  },
+  {
+    "token": "oftic",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "names": [
+      "ahumada: Oftic 1 mg/mL x 10 mL Solucion Oftalmica"
+    ]
+  },
+  {
+    "token": "pyriped",
+    "count": 1,
+    "pharmacies": [
+      "farmex"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "farmex: Pyriped 400 mg x 20 cápsulas"
+    ]
+  },
+  {
+    "token": "finagrip",
+    "count": 1,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "easyfarma: Finagrip 10 Comp. Recubiertos"
+    ]
+  },
+  {
+    "token": "algiasol",
+    "count": 1,
+    "pharmacies": [
+      "farmex"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "farmex: Algiasol Forte Susp. Oral 200 mg / 5 mL x 100 mL"
+    ]
+  },
+  {
+    "token": "strepfen",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "cruz-verde: Strepfen Miel y Limon Flurbiprofeno 8,75 mg 8 Pastillas de Disolución Bucal"
+    ]
+  },
+  {
+    "token": "ibufren",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "ahumada: Ibufren Fte 200Mg/5Ml Suspención Oral 100Ml Frasco"
+    ]
+  },
+  {
+    "token": "deucodol",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "ahumada: Deucodol Forte 200 mg/5 mL x 120 mL Suspension Oral"
+    ]
+  },
+  {
+    "token": "niofen",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "names": [
+      "ahumada: Niofen Forte 200 mg/5 mL x 120 mL Suspensión Oral"
+    ]
+  },
+  {
+    "token": "corodin",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Corodin 50 mg x 30 Comprimidos Recubiertos"
+    ]
+  },
+  {
+    "token": "simperten",
+    "count": 1,
+    "pharmacies": [
+      "farmex"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "farmex: Simperten D 100 mg / 25 mg x 30 comprimidos"
+    ]
+  },
+  {
+    "token": "cordiax",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Cordiax AM 80 mg/10 mg x 40 Comprimidos"
+    ]
+  },
+  {
+    "token": "tellmi",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "names": [
+      "ahumada: Tellmi Am 80/10 Mg 30 Comprimidos"
+    ]
+  },
+  {
+    "token": "lomex",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "omeprazol",
+      "omeprazol 20mg"
+    ],
+    "names": [
+      "cruz-verde: Lomex 20 Mg X 28 Caps"
+    ]
+  },
+  {
+    "token": "obexol",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "omeprazol",
+      "omeprazol 20mg"
+    ],
+    "names": [
+      "ahumada: Obexol 37,7 mg x 30 Cápsulas"
+    ]
+  },
+  {
+    "token": "anacin",
+    "count": 1,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg",
+      "tapsin"
+    ],
+    "names": [
+      "easyfarma: Anacin Max 8 Comp"
+    ]
+  },
+  {
+    "token": "cortigrip",
+    "count": 1,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg",
+      "tapsin"
+    ],
+    "names": [
+      "easyfarma: Cortigrip Dia y Noche 15..."
+    ]
+  },
+  {
+    "token": "cronus",
+    "count": 1,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg",
+      "tapsin"
+    ],
+    "names": [
+      "easyfarma: Cronus x 30 comprimidos"
+    ]
+  },
+  {
+    "token": "algiafin",
+    "count": 1,
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg",
+      "tapsin"
+    ],
+    "names": [
+      "easyfarma: Algiafin Jarabe x 60 ml"
+    ]
+  },
+  {
+    "token": "bromhexina",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "cruz-verde: Bromhexina 4 mg/5mL Jarabe 100 mL"
+    ]
+  },
+  {
+    "token": "winasorb",
+    "count": 1,
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "ahumada: Winasorb 150 mg/5 mL x 60 mL Jarabe"
+    ]
+  },
+  {
+    "token": "xumadol",
+    "count": 1,
+    "pharmacies": [
+      "farmex"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "farmex: Xumadol 1 g x 20 comprimidos"
+    ]
+  },
+  {
+    "token": "ipratropio",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "cruz-verde: Ipratropio Bromuro 0,025% Solución para Inhalación 20 mL"
+    ]
+  },
+  {
+    "token": "bonavid",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "cruz-verde: Bonavid Colecalciferol 300.000 UI Solución Oral para Gotas 2 mL"
+    ]
+  },
+  {
+    "token": "lirex",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "cruz-verde: Lirex Tibolona 2,5 mg 30 Comprimidos"
+    ]
+  },
+  {
+    "token": "uroplus",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "cruz-verde: Uroplus Fosfomicina 3 gr Granulos para Solucion Oral 1 Sobre"
+    ]
+  },
+  {
+    "token": "combodart",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "cruz-verde: Combodart 0,5/0,4 Dutasteride 0,5 mg Tamsulosina 0,4 mg 30 Cápsulas Blandas"
+    ]
+  },
+  {
+    "token": "trelegy",
+    "count": 1,
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "names": [
+      "cruz-verde: Trelegy Ellipta 92 mcg Polvo Para Inhalacion Oral 30 Dosis"
+    ]
+  },
+  {
+    "token": "tapsi",
+    "count": 1,
+    "pharmacies": [
+      "salcobrand"
+    ],
+    "queries": [
+      "tapsin"
+    ],
+    "names": [
+      "salcobrand: Tapsí­n Instaflu DN 18 Comprimidos"
+    ]
+  }
+]

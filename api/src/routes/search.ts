@@ -13,6 +13,7 @@ import { getClientIp, getHeader, getSearchParam, json, type RequestLike, type Re
 import { withTrackedUrls } from "../lib/clickTracking.js";
 import { parseQueryIntent, queryIntentCacheKey, rankByRelevance, type QueryIntent } from "@comparafarma/domain";
 import { searchMedications, searchMedicationsDetailed } from "../services/searchService.js";
+import { scheduleSearchV2Shadow } from "../services/searchV2Shadow.js";
 
 function getOrigin(req: RequestLike): string {
   const host = getHeader(req, "x-forwarded-host") ?? getHeader(req, "host") ?? "comparafarma-api.vercel.app";
@@ -156,6 +157,22 @@ export async function handleSearchRoute(reqLike: unknown, resLike: unknown): Pro
       results: results.length,
     }));
     json(res, 200, withTrackedUrls(results, origin), req);
+
+    // CF-SEARCH-012 (S1) — SHADOW DE SEARCH ENGINE v2. APAGADO POR DEFECTO.
+    //
+    // Va DESPUÉS de `json(...)`: la respuesta ya salió y nada de lo que ocurra
+    // acá puede alterarla. `scheduleSearchV2Shadow` devuelve `void` a propósito
+    // —no hay promesa que esperar por accidente— y encapsula el interruptor, el
+    // muestreo, el timeout y el aislamiento de errores.
+    //
+    // Solo en el camino de MISS: una respuesta servida desde caché no trae
+    // observaciones nuevas, y reprocesarla sería escritura sin información.
+    // Tampoco corre en `debug=1` ni cuando la ruta devuelve un error.
+    //
+    // `results` se pasa por lectura. v1 sigue siendo la única fuente de verdad
+    // visible: v2 no participa del payload, del orden, de los precios ni de los
+    // slugs.
+    scheduleSearchV2Shadow({ samplingKey: retrievalCacheKey, requestId, results });
   } catch (error) {
     if (error instanceof HttpError) {
       console.warn(JSON.stringify({

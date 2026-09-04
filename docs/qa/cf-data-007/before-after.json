@@ -1,0 +1,113 @@
+{
+  "ticket": "CF-DATA-007",
+  "gateADefinition": "assigned canonical identity / total offers (ratificada por Mario, docs/qa/cf-search-012/DECISION.md §0)",
+  "gateAThreshold": 0.995,
+  "corpus": {
+    "source": "docs/qa/cf-search-012/raw",
+    "queries": 16,
+    "upstreamRows": 1364,
+    "uniqueObservations": 839,
+    "pharmacies": 8
+  },
+  "before": {
+    "totalObservations": 839,
+    "canonicalIdentityAssigned": 428,
+    "canonicalIdentityUnassigned": 411,
+    "canonicalIdentityAssignmentCoverage": 0.510131,
+    "activeIngredientDemonstrated": 579,
+    "activeIngredientUnknown": 260,
+    "pharmacologicalCoverage": 0.690107,
+    "ambiguous": 75,
+    "unresolved": 336,
+    "conceptCount": 76,
+    "presentationCount": 87,
+    "productCount": 271,
+    "comparableUnits": 210,
+    "pipelineCoverage": 1,
+    "gates": {
+      "B_splitLost": 0,
+      "C_falseMergeRate": 0,
+      "D_conceptSemanticCollisionRate": 0,
+      "persistentIdInstability": 0
+    },
+    "residualByCategory": {
+      "E": 49,
+      "C": 150,
+      "H": 46,
+      "G": 58,
+      "D": 15,
+      "I": 1,
+      "A": 87,
+      "F": 5
+    },
+    "residualClassified": 411
+  },
+  "after": {
+    "totalObservations": 839,
+    "canonicalIdentityAssigned": 458,
+    "canonicalIdentityUnassigned": 381,
+    "canonicalIdentityAssignmentCoverage": 0.545888,
+    "activeIngredientDemonstrated": 613,
+    "activeIngredientUnknown": 226,
+    "pharmacologicalCoverage": 0.730632,
+    "ambiguous": 78,
+    "unresolved": 303,
+    "conceptCount": 81,
+    "presentationCount": 94,
+    "productCount": 283,
+    "comparableUnits": 225,
+    "pipelineCoverage": 1,
+    "gates": {
+      "B_splitLost": 0,
+      "C_falseMergeRate": 0,
+      "D_conceptSemanticCollisionRate": 0,
+      "persistentIdInstability": 0
+    },
+    "residualByCategory": {
+      "E": 49,
+      "C": 139,
+      "H": 39,
+      "G": 58,
+      "D": 15,
+      "I": 1,
+      "A": 75,
+      "F": 5
+    },
+    "residualClassified": 381
+  },
+  "change": {
+    "newVocabularyTokens": [
+      "omeprazol",
+      "esomeprazol"
+    ],
+    "newVocabularyTokenCount": 2,
+    "parserFixes": 0,
+    "fixedByVocabulary": 30,
+    "fixedByParser": 0,
+    "fixedByRegistryResolution": 0,
+    "stillUnresolved": 381,
+    "candidateVerdicts": {
+      "APPROVE": 16,
+      "REJECT": 15,
+      "REVIEW": 8
+    },
+    "mandatoryNegativeLeaks": 0,
+    "positiveControlsPassed": 11,
+    "positiveControlsTotal": 11,
+    "observationsThatGainedAnIngredient": 34,
+    "lostAssignment": 0,
+    "note": "34 observaciones ganaron un principio activo; 30 de ellas alcanzaron identidad canonica. Las otras 4 siguen bloqueadas por otro eje (concentracion o forma). Ninguna observacion perdio identidad."
+  },
+  "gateA": {
+    "before": 0.510131,
+    "after": 0.545888,
+    "threshold": 0.995,
+    "result": "FAIL"
+  },
+  "ceilingOfIngredientOnlyFix": {
+    "observations": 142,
+    "resultingGateA": 0.67938,
+    "note": "techo teorico de un arreglo perfecto del eje ingrediente sobre el censo BEFORE; sigue por debajo de 0.995"
+  },
+  "verdict": "MORE_DATA_REQUIRED"
+}

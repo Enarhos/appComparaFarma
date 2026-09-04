@@ -565,6 +565,7 @@ export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
       token,
       strength,
     })),
+    negatedComponents: composition.negatedComponents,
     unresolvedIdentityDiscriminator,
     concentration,
     canonicalDosageForm,
@@ -592,6 +593,9 @@ export function canonicalizeOffer(offer: RawOfferInput): CanonicalAttributes {
           .filter((c) => c.strength !== null)
           .map((c) => `${c.token}:${c.strength!.value}${c.strength!.unit}`)
           .join(",") || null,
+      // Evidencia positiva de AUSENCIA. `null` cuando el nombre no niega nada —
+      // que es distinto de negar una lista vacía.
+      negatedComponents: composition.negatedComponents.join(",") || null,
       unresolvedIdentityDiscriminator,
       concentration: formatConcentration(concentration),
       canonicalDosageForm,

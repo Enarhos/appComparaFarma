@@ -498,6 +498,13 @@ export interface CanonicalAttributes {
   /** Dosis por componente. Evidencia conservada, nunca un eje de identidad. */
   ingredientStrengths: IngredientStrength[];
   /**
+   * Moléculas que el nombre declara AUSENTES ("Tapsin Puro SIN Cafeína").
+   * Evidencia conservada para el Gate D de S1 (clase 7: componente explícitamente
+   * negado frente a presente). NUNCA es un eje de identidad — ver
+   * `IngredientComposition.negatedComponents`.
+   */
+  negatedComponents: string[];
+  /**
    * DISCRIMINANTE DE IDENTIDAD NO RESUELTA — la corrección del punto 2 de la
    * revisión CTO del PR #159.
    *

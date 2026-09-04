@@ -1,0 +1,1147 @@
+[
+  {
+    "token": "paracetamol",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 15,
+    "distinctPharmacies": 7,
+    "offers": 64,
+    "heads": [
+      "algiafin",
+      "brevex",
+      "bufferin",
+      "desdol",
+      "dolsom",
+      "dropol",
+      "geniol",
+      "gesidol",
+      "kitadol",
+      "panadol",
+      "tapsin",
+      "tapsn",
+      "tral",
+      "winasorb",
+      "xumadol"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "cruz-verde",
+      "dr-simi",
+      "ecofarmacias",
+      "farmex",
+      "salcobrand",
+      "sermecoop"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg",
+      "paracetamol",
+      "paracetamol 500mg",
+      "tapsin"
+    ],
+    "strengths": [
+      "1000mg",
+      "100mg",
+      "120mg",
+      "150mg",
+      "15ml",
+      "160mg",
+      "1g",
+      "1gr",
+      "300mg",
+      "325mg",
+      "400mg",
+      "500mg",
+      "5g",
+      "650mg",
+      "80mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "dr-simi: Tapsin Duo paracetamol 300 mg ibuprofeno 200 mg 12 comprimidos recubiertos",
+      "ecofarmacias: Kitadol, paracetamol, 500Mg X 24 comp.(LCh) DESCUENTO caja arrugada",
+      "cruz-verde: Geniol Adultos Paracetamol 500 mg 20 Comprimidos",
+      "sermecoop: Geniol (paracetamol) 500mg 20 Comprimidos",
+      "salcobrand: Kitadol (B) Paracetamol 500mg 24 Comprimidos",
+      "dr-simi: Tapsin InstaFLU día paracetamol 500 mg pseudoefedrina 60 mg 1 sobre polvo para solución oral 5 g",
+      "dr-simi: Tapsin paracetamol 500 mg 24 comprimidos",
+      "cruz-verde: Tapsin Puro Sin Cafeina Paracetamol 500 mg 16 Comprimidos"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "ibuprofeno",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 10,
+    "distinctPharmacies": 6,
+    "offers": 41,
+    "heads": [
+      "actron",
+      "deucodol",
+      "doraliv",
+      "ibualiv",
+      "ibucalm",
+      "ibupirac",
+      "ipson",
+      "niofen",
+      "pyriped",
+      "triofeno"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "cruz-verde",
+      "dr-simi",
+      "ecofarmacias",
+      "salcobrand",
+      "sermecoop"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "strengths": [
+      "100mg",
+      "120ml",
+      "200mg",
+      "400mg",
+      "600mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "cruz-verde: Pyriped Ibuprofeno 400Mg 10 Cápsulas Blandas",
+      "ahumada: Ibucalm Ibuprofeno 400 Mg 10 Cap Blandas",
+      "ecofarmacias: Ibucalm Ibuprofeno 400 Mg X 10 Capsulas blandas (Opko)",
+      "salcobrand: Actron (R) Ibuprofeno 400mg 10 Cápsulas Blandas",
+      "salcobrand: DorAliv (B) Ibuprofeno 400mg 10 Cápsulas Blandas",
+      "cruz-verde: Actron 400 Ibuprofeno 400 mg 10 Cápsulas Blandas",
+      "dr-simi: Ibupirac LC ibuprofeno 400 mg 20 cápsulas blandas",
+      "cruz-verde: Ibucalm Ibuprofeno 400 mg 10 Cápsulas blandas"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "amoxicilina",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 9,
+    "distinctPharmacies": 7,
+    "offers": 47,
+    "heads": [
+      "amobiotic",
+      "amoval",
+      "clavam",
+      "clavinex",
+      "maximox",
+      "moxivulan",
+      "novamox",
+      "optamox",
+      "zolimax"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "cruz-verde",
+      "dr-simi",
+      "ecofarmacias",
+      "farmex",
+      "salcobrand",
+      "sermecoop"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "strengths": [
+      "1000mg",
+      "1g",
+      "1gr",
+      "250mg",
+      "400mg",
+      "500mg",
+      "57mg",
+      "70ml",
+      "750mg",
+      "800mg",
+      "875mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "sermecoop: Amoval (amoxicilina) 500mg 21 Comprimidos",
+      "cruz-verde: Amoval Amoxicilina 500 mg 21 Comprimidos",
+      "ecofarmacias: Novamox amoxicilina 1gr 14 comprimidos dispersables Pasteur DESCUENTO",
+      "dr-simi: Novamox amoxicilina 1 g 14 comprimidos dispersables",
+      "farmex: Optamox Amoxicilina 875 mg x 14 comprimidos",
+      "sermecoop: Amoval (amoxicilina) 250mg/5ml Suspensión Oral 100ml",
+      "sermecoop: Amoval Duo 400 (amoxicilina) 400mg/5ml Susp Oral 70ml",
+      "ecofarmacias: Amobiotic Amoxicilina 1g x 14 comprimidos dispersables Lab Chile DESCUENTO"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "cetirizina",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 7,
+    "distinctPharmacies": 4,
+    "offers": 27,
+    "heads": [
+      "cetirex",
+      "coolips",
+      "findaler",
+      "remitex",
+      "rigotax",
+      "rigotaxd",
+      "zyrtec"
+    ],
+    "pharmacies": [
+      "cruz-verde",
+      "dr-simi",
+      "farmex",
+      "salcobrand"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "strengths": [
+      "10mg",
+      "120mg",
+      "1mg",
+      "5mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "farmex: Cetirex Cetirizina 10 Mg 30 Comprimidos Recubiertos",
+      "dr-simi: Rigotax cetirizina 10 mg 30 comprimidos recubiertos",
+      "salcobrand: Cetirex (B) Cetirizina 10mg 30 Comprimidos Recubiertos",
+      "cruz-verde: Cetirex Cetirizina 10 mg 30 Comprimidos Recubiertos",
+      "cruz-verde: Coolips Cetirizina 10 mg 10 Comprimidos Recubiertos",
+      "cruz-verde: Coolips Cetirizina 10 mg 30 Comprimidos",
+      "salcobrand: Rigotax (B) Cetirizina 10mg 10 Comprimidos",
+      "salcobrand: Findaler (B) Cetirizina 10mg 30 Comprimidos Recubiertos"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "diclofenaco",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 7,
+    "distinctPharmacies": 4,
+    "offers": 19,
+    "heads": [
+      "adorlan",
+      "dolo",
+      "dolodrin",
+      "lertus",
+      "lertussr",
+      "merpal",
+      "promerpal"
+    ],
+    "pharmacies": [
+      "cruz-verde",
+      "dr-simi",
+      "ecofarmacias",
+      "salcobrand"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "strengths": [
+      "100mg",
+      "140mg",
+      "15mg",
+      "25mg",
+      "50mg",
+      "75mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ecofarmacias: Dolo Merpal Diclofenaco 50 mg x 20 Capsulas Capsulas con Microgranulos (Prater)",
+      "cruz-verde: Dolo Merpal Diclofenaco 50 mg 20 Cápsulas",
+      "cruz-verde: Dolo Neurobionta Diclofenaco 50 mg 20 Comprimidos Recubiertos",
+      "dr-simi: Merpal diclofenaco 15 mg/mL suspensión para gotas orales 20 mL",
+      "dr-simi: ProMerpal diclofenaco 140 mg 10 cápsulas de liberación prolongada",
+      "salcobrand: Promerpal Diclofenaco 140mg 10 Cápsulas Prolongadas",
+      "dr-simi: Adorlan 25/25 diclofenaco 25 mg tramadol 25 mg 10 comprimidos",
+      "ecofarmacias: Dolodrin Diclofenaco 25 Mg / Tramadol 25 Mg x 10 Comprimidos"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "losartan",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 7,
+    "distinctPharmacies": 3,
+    "offers": 18,
+    "heads": [
+      "corodin",
+      "cozaar",
+      "hyzaar",
+      "lopren",
+      "losapres",
+      "losapresd",
+      "simpertend"
+    ],
+    "pharmacies": [
+      "cruz-verde",
+      "dr-simi",
+      "salcobrand"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "strengths": [
+      "100mg",
+      "50mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "cruz-verde: Lopren Losartan Potasico 50 mg 30 Comprimidos Recubiertos",
+      "cruz-verde: Simperten-D Losartan 50 mg 30 Comprimidos Recubierto",
+      "cruz-verde: Cozaar Losartan Potasico 50 mg 30 Comprimidos",
+      "salcobrand: Corodin (B) Losartán Potásico 50mg 30 Comprimidos Recubiertos",
+      "salcobrand: Losapres (B) Losartán 50mg 30 Comprimidos Recubiertos",
+      "cruz-verde: Corodin Losartan Potasico 50 mg 30 Comprimidos",
+      "cruz-verde: Losapres Losartán Potásico 50 mg 30 Comprimidos Recubiertos",
+      "salcobrand: Cozaar (R) Losartán 50mg 30 Comprimidos Recubiertos"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "ambroxol",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 5,
+    "distinctPharmacies": 7,
+    "offers": 16,
+    "heads": [
+      "broncot",
+      "mintamox",
+      "muxol",
+      "pazbronq",
+      "tocalm"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "cruz-verde",
+      "dr-simi",
+      "ecofarmacias",
+      "farmex",
+      "salcobrand",
+      "sermecoop"
+    ],
+    "queries": [
+      "ambroxol",
+      "ambroxol 30mg",
+      "ambroxol 30mg/5ml",
+      "ambroxol 30mg/5ml jarabe 100ml"
+    ],
+    "strengths": [
+      "15mg",
+      "300mg",
+      "30mg",
+      "600mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ecofarmacias: Pazbronq Ambroxol Clorhidrato 30 Mg/ 5 Ml Jarabe 100 Ml",
+      "cruz-verde: Mintamox Adulto Ambroxol 30 mg / 5 mL Jarabe 100 mL",
+      "cruz-verde: Muxol Jarabe Adulto Ambroxol 600 mg / 100 ml",
+      "farmex: Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL.",
+      "farmex: Muxol Jarabe adulto Ambroxol 30 mg / 5 mL x 100 mL",
+      "salcobrand: Broncot Ambroxol 30mg/5ml 120ml",
+      "cruz-verde: Tocalm Adulto Ambroxol 30 mg/5mL Jarabe 100 mL",
+      "dr-simi: Tocalm ambroxol 15 mg/5 mL jarabe pediátrico 100 mL"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "diclorhidrato",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": true,
+    "inManufacturerField": false,
+    "distinctHeads": 4,
+    "distinctPharmacies": 3,
+    "offers": 8,
+    "heads": [
+      "cetirizina",
+      "findaler",
+      "levocetirizina",
+      "rigotax"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "cruz-verde",
+      "ecofarmacias"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "strengths": [
+      "10mg",
+      "5mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ecofarmacias: Cetirizina Diclorhidrato 10 mg x 30 Comp. Recubiertos",
+      "ahumada: Cetirizina Diclorhidrato 10 mg x 30 Comprimidos Recubiertos",
+      "cruz-verde: Rigotax Cetirizina Diclorhidrato 10 mg 10 Comprimidos",
+      "cruz-verde: Rigotax Cetirizina Diclorhidrato 10 mg 30 Comprimidos",
+      "ecofarmacias: Cetirizina Diclorhidrato 5 mg / 5 ml Solución Oral 60 ml",
+      "ecofarmacias: Findaler Cetirizina Diclorhidrato 10mg /ml 15 mL (Eurofarma)",
+      "ecofarmacias: Findaler Cetirizina Diclorhidrato 5mg/5ml x 100 mL (Eurofarma)",
+      "ecofarmacias: Levocetirizina Diclorhidrato 5 mg x 30 comp. (cenabast)"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "levocetirizina",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 3,
+    "distinctPharmacies": 2,
+    "offers": 5,
+    "heads": [
+      "levorigotax",
+      "neoalertop",
+      "xuzal"
+    ],
+    "pharmacies": [
+      "dr-simi",
+      "ecofarmacias"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "strengths": [
+      "5mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "dr-simi: Levorigotax levocetirizina 5 mg 30 comprimidos recubiertos",
+      "ecofarmacias: Xuzal Levocetirizina 5mg x 30 Com. Rec",
+      "ecofarmacias: Neoalertop Levocetirizina 5 mg Gotas 20 Ml (Lab Chile)",
+      "dr-simi: Levorigotax levocetirizina 5 mg/mL solución oral para gotas 20 mL",
+      "dr-simi: Levorigotax Forte levocetirizina 5 mg/5 mL jarabe 120 mL"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "clavulanico",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 2,
+    "distinctPharmacies": 3,
+    "offers": 5,
+    "heads": [
+      "amoxicilina",
+      "moxivulan"
+    ],
+    "pharmacies": [
+      "ecofarmacias",
+      "farmex",
+      "salcobrand"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "strengths": [
+      "125mg",
+      "500mg",
+      "875mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "farmex: Amoxicilina + Ácido Clavulánico 500 mg / 125 mg x 20 comprimidos",
+      "farmex: Amoxicilina + Ácido Clavulánico 875 mg / 125 mg x 20 comprimidos",
+      "ecofarmacias: Amoxicilina+ácido Clavulánico 875mg 125mg por 20 comprimidos Ascend (Cenabast)",
+      "farmex: Amoxicilina + Ác. Clavulánico 875 mg / 125 mg x 20 comprimidos",
+      "salcobrand: Moxivulan Ácido Clavulánico 125mg Amoxicilina 875mg 14 Comprimidos Recubiertos"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "hidroclorotiazida",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 2,
+    "distinctPharmacies": 4,
+    "offers": 5,
+    "heads": [
+      "hyzaar",
+      "losartan"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "cruz-verde",
+      "ecofarmacias",
+      "farmex"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "strengths": [
+      "50mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "farmex: Losartan Potásico + Hidroclorotiazida 50 mg / 12.5 mg x 30 comprimidos",
+      "ecofarmacias: Losartan Potásico + Hidroclorotiazida 50 mg/12.5 mg x 30 comp.",
+      "ahumada: Losartan/Hidroclorotiazida 50 mg/12.5 mg x 30 Comprimidos Recubiertos ASCEND",
+      "farmex: Losartán Potásico / Hidroclorotiazida 50 mg / 12,5 mg x 30 comprimidos",
+      "cruz-verde: Hyzaar Losartan / Hidroclorotiazida 50 mg / 12,5 mg 30 Comprimidos"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "colestiramina",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 2,
+    "distinctPharmacies": 2,
+    "offers": 4,
+    "heads": [
+      "prolertus",
+      "promerpal"
+    ],
+    "pharmacies": [
+      "cruz-verde",
+      "salcobrand"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "strengths": [
+      "140mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "cruz-verde: Promerpal Diclofenaco Colestiramina 140 mg 10 Cápsulas",
+      "salcobrand: Pro-Lertus Diclofenaco Colestiramina 140mg 10 Cápsulas Prolongadas",
+      "cruz-verde: Pro-Lertus Diclofenaco Colestiramina 140 mg 10 Cápsulas",
+      "salcobrand: Pro-Lertus Diclofenaco Colestiramina 140mg 20 Cápsulas Prolongadas"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "retard",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 2,
+    "distinctPharmacies": 2,
+    "offers": 2,
+    "heads": [
+      "diclofenaco",
+      "lertus"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "ecofarmacias"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "strengths": [
+      "100mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ecofarmacias: Diclofenaco Retard 100 mg x 8 cápsulas Opko",
+      "ahumada: Lertus Retard 100 mg x 10 Comprimidos Recubiertos de Liberación Prolongada"
+    ],
+    "passesCfData001Rule": true
+  },
+  {
+    "token": "pseudoefedrina",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 2,
+    "offers": 3,
+    "heads": [
+      "rigotaxd"
+    ],
+    "pharmacies": [
+      "cruz-verde",
+      "salcobrand"
+    ],
+    "queries": [
+      "cetirizina 10mg"
+    ],
+    "strengths": [
+      "120mg",
+      "5mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "salcobrand: Rigotax-D Cetirizina / Pseudoefedrina 5mg/120mg 10 Cápsulas Prolongadas",
+      "salcobrand: Rigotax-D Cetirizina / Pseudoefedrina 5mg/120mg 30 Cápsulas Prolongadas",
+      "cruz-verde: Rigotax-D  Pseudoefedrina 120 mg 30 Cápsulas Liberación Prolongada"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "advance",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 2,
+    "heads": [
+      "panadol"
+    ],
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ahumada: Panadol Advance 500mg x 12 Comprimidos",
+      "ahumada: Panadol Advance 500mg x 48 Comprimidos"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "cafeina",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 2,
+    "offers": 2,
+    "heads": [
+      "tapsin"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "farmex"
+    ],
+    "queries": [
+      "tapsin"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "farmex: Tapsin Puro Sin Cafeina 500 mg x 24 comprimidos",
+      "ahumada: Tapsin Puro Sin Cafeina 500 mg x 24 Comprimidos"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "ninos",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 2,
+    "heads": [
+      "panadol"
+    ],
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "strengths": [
+      "100mg",
+      "160mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ahumada: Panadol Niños 100mg/Ml Gotas 15ml",
+      "ahumada: Panadol Niños 160mg/5ml Jarabe 90ml"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "omeprazol",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 2,
+    "offers": 2,
+    "heads": [
+      "lomex"
+    ],
+    "pharmacies": [
+      "ahumada",
+      "salcobrand"
+    ],
+    "queries": [
+      "omeprazol",
+      "omeprazol 20mg"
+    ],
+    "strengths": [
+      "20mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "salcobrand: Lomex (B) Omeprazol 20mg 28 Capsulas Prolongadas",
+      "ahumada: LOMEX Omeprazol 20 mg 28 cápsulas"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "actron",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "ibuprofeno"
+    ],
+    "pharmacies": [
+      "salcobrand"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "strengths": [
+      "200mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "salcobrand: Ibuprofeno Actron  200 mg RA (R) 10 Cápsulas Blandas"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "clauvulancio",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "synulox"
+    ],
+    "pharmacies": [
+      "ecofarmacias"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "strengths": [
+      "50mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ecofarmacias: Synulox (Amoxicilina 200mg-Ácido clauvuláncio 50mg) **Uso Veterinario**"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "efervecente",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "tapsin"
+    ],
+    "pharmacies": [
+      "farmex"
+    ],
+    "queries": [
+      "tapsin"
+    ],
+    "strengths": [
+      "1g"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "farmex: Tapsin Efervecente 1 g x 20 sobres"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "ellipta",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "trelegy"
+    ],
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "strengths": [
+      "92mcg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "cruz-verde: Trelegy Ellipta 92 mcg Polvo Para Inhalacion Oral 30 Dosis"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "epolamina",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "flector"
+    ],
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "strengths": [
+      "50mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "cruz-verde: Flector Diclofenaco Epolamina 50 mg 10 Sobres"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "fosfomicina",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "uroplus"
+    ],
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "strengths": [
+      "3gr"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "cruz-verde: Uroplus Fosfomicina 3 gr Granulos para Solucion Oral 1 Sobre"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "gesidol",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "paracetamol"
+    ],
+    "pharmacies": [
+      "ecofarmacias"
+    ],
+    "queries": [
+      "paracetamol",
+      "paracetamol 500mg"
+    ],
+    "strengths": [
+      "1gr"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ecofarmacias: Paracetamol Gesidol 1gr x 20 Comprimidos"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "naproxeno",
+    "alreadyKnown": true,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "flectane"
+    ],
+    "pharmacies": [
+      "dr-simi"
+    ],
+    "queries": [
+      "omeprazol",
+      "omeprazol 20mg"
+    ],
+    "strengths": [
+      "500mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "dr-simi: Flectane naproxeno 500 mg esomeprazol 20 mg 30 comprimidos con recubrimiento entérico"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "oftalmologica",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "oftic"
+    ],
+    "pharmacies": [
+      "ecofarmacias"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "strengths": [
+      "25ml"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ecofarmacias: Oftic Gotas Diclofenaco Sodico 0,1% Solución Oftalmológica  25ml"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "pamabrom",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "tapsin"
+    ],
+    "pharmacies": [
+      "cruz-verde"
+    ],
+    "queries": [
+      "tapsin"
+    ],
+    "strengths": [
+      "25mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "cruz-verde: Tapsin Periodo Pamabrom 25 mg 12 Comprimidos"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "potsico",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "losartan"
+    ],
+    "pharmacies": [
+      "easyfarma"
+    ],
+    "queries": [
+      "losartan",
+      "losartan 50mg"
+    ],
+    "strengths": [
+      "50mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "easyfarma: Losartan Potsico 50 mg x 30..."
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "pseudofedrina",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "ipsond"
+    ],
+    "pharmacies": [
+      "ecofarmacias"
+    ],
+    "queries": [
+      "ibuprofeno",
+      "ibuprofeno 400mg"
+    ],
+    "strengths": [
+      "100mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ecofarmacias: Ipson-D Ibuprofeno Pseudofedrina Clorhidrato 100 mg &#8211; 15 mg / 5 ml 120 Ml"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "resinato",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "merpal"
+    ],
+    "pharmacies": [
+      "salcobrand"
+    ],
+    "queries": [
+      "diclofenaco 50mg"
+    ],
+    "strengths": [
+      "15mg"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "salcobrand: Merpal Diclofenaco Resinato 15mg/5ml Oral Gotas 20ml"
+    ],
+    "passesCfData001Rule": false
+  },
+  {
+    "token": "triterapia",
+    "alreadyKnown": false,
+    "isSaltOrQualifier": false,
+    "inManufacturerField": false,
+    "distinctHeads": 1,
+    "distinctPharmacies": 1,
+    "offers": 1,
+    "heads": [
+      "zomel"
+    ],
+    "pharmacies": [
+      "ahumada"
+    ],
+    "queries": [
+      "amoxicilina 500mg"
+    ],
+    "strengths": [
+      "1g"
+    ],
+    "positions": [
+      "descriptive-segment"
+    ],
+    "names": [
+      "ahumada: Zomel HP Triterapia 1 g/500 mg/20 mg 14 Blister"
+    ],
+    "passesCfData001Rule": false
+  }
+]
