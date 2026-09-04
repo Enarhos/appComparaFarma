@@ -330,17 +330,40 @@ describe("regresiones semánticas de S0, verificadas sobre el registro PERSISTEN
   });
 
   it("LÍMITE MEDIDO DE S1 — sin molécula demostrable no se acuña identidad", async () => {
-    // `omeprazol` NO está en el vocabulario de moléculas (limitación conocida y
-    // medida de S0: 36,5 % de las ofertas sin principio activo demostrable).
-    // La consecuencia en S1 es explícita y no se disimula: el nombre no puede
-    // fundar un Concepto Farmacéutico permanente, porque acuñarlo sería crear
-    // conocimiento científico donde no lo hay.
-    const attributes = attributesOf("Omeprazol 20 mg x 30 Comprimidos");
+    // El límite sigue vigente y se sigue midiendo: tras CF-DATA-007 quedan 226
+    // de 839 observaciones del corpus congelado (26,94 %) sin principio activo
+    // demostrable. La consecuencia en S1 es explícita y no se disimula: el
+    // nombre no puede fundar un Concepto Farmacéutico permanente, porque
+    // acuñarlo sería crear conocimiento científico donde no lo hay.
+    //
+    // El ejemplo era `omeprazol` hasta CF-DATA-007, que lo incorporó al
+    // vocabulario v2 con evidencia (E2). Se reemplaza por `tibolona` —misma
+    // situación estructural, molécula real del corpus ("Lirex Tibolona 2,5 mg
+    // 30 Comprimidos", Cruz Verde), una sola observación en una sola farmacia y
+    // ningún vocabulario del proyecto que la respalde— para que el test siga
+    // caracterizando EL LÍMITE y no una molécula ya resuelta.
+    const attributes = attributesOf("Tibolona 2,5 mg x 30 Comprimidos");
     expect(attributes.activeIngredients).toHaveLength(0);
-    expect(attributes.unresolvedIdentityDiscriminator).toBe("omeprazol");
+    expect(attributes.unresolvedIdentityDiscriminator).toBe("tibolona");
 
-    const { conceptByName } = await assignAll([["Omeprazol 20 mg x 30 Comprimidos", "cruz-verde"]]);
+    const { conceptByName } = await assignAll([["Tibolona 2,5 mg x 30 Comprimidos", "cruz-verde"]]);
     expect([...conceptByName.values()][0]).toBeNull();
+  });
+
+  it("CF-DATA-007 — omeprazol SÍ acuña ahora, y no colisiona con esomeprazol", async () => {
+    const omeprazol = attributesOf("Omeprazol 20 mg x 30 Comprimidos");
+    expect(omeprazol.activeIngredients.map((i) => i.token)).toEqual(["omeprazol"]);
+    expect(omeprazol.unresolvedIdentityDiscriminator).toBeNull();
+
+    const { conceptByName } = await assignAll([
+      ["Omeprazol 20 mg x 30 Comprimidos", "cruz-verde"],
+      ["Esomeprazol 20 mg x 30 Comprimidos", "salcobrand"],
+    ]);
+    const ids = [...conceptByName.values()];
+    expect(ids[0]).not.toBeNull();
+    expect(ids[1]).not.toBeNull();
+    // Son enantiómeros distintos: nunca el mismo Concepto Farmacéutico.
+    expect(ids[0]).not.toBe(ids[1]);
   });
 
   it("VÍA — óvulo=vaginal y gotas óticas=otic, nunca rectal ni oftálmica", () => {
